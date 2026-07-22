@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_8473361",
+  "pmid": "8473361",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ismail",
+  "year": "1993",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_8473361_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/ismail-1994-8473361.pdf",
+    "sha256": "3fd41b501bd86c63af73ff0f5b52a77d82ba7305b3ae86a0a8015c6e20e8e7d7"
+  },
+  "metadata_source": ""
+}

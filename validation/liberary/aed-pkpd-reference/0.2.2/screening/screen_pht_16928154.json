@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_16928154",
+  "pmid": "16928154",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/johnson-2006-16928154.pdf",
+    "sha256": "1c56a12fed94163a3946c88fb7834f34c61f30eeac63b8a4a1df0b930150eb86"
+  }
+}

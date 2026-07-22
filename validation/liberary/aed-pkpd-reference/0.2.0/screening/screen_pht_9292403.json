@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_9292403",
+  "pmid": "9292403",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/chan-1997-9292403.pdf",
+    "sha256": "c19e3f0cccd60a81428d65fb5037ec68e4ee334ac0d38a2f29f1e4b188472b83"
+  }
+}

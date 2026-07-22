@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_11497340_m01",
+  "article_id": "pmid_11497340",
+  "pmid": "11497340",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_11497340",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 24,
+      "model_table": 2,
+      "model_row": 26
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/deleu-2001-11497340.pdf",
+      "sha256": "b03cc578d2577002609c6dc8cd276e5b042d6258e1867021d45f3c847b20ebb8"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Deleu 2001 11497340",
+    "population": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+    "model_type": "PK",
+    "objective": "“to characterise the population pharmacokinetics of CBZ, using F-CBZ serum concentration data from routine monitoring of adult Omani patients suffering from epilepsy and receiving chronic CBZ in monotherapy. These data may help to provide optimal and safe therapy to individual patients based on Bayesian forecasting.”",
+    "covariates": "Dose on CL",
+    "observations": "Vd/F values supra-physiologic (525 ± 44 L), probably due to fixing Ka to very high value (“approximating intravenous bolus dosing”). Sparse samples on sporadic monitoring. Omani ethnicity patients. Very small validation dataset. Unorthodox model used, which does not allow easy comparison with other findings. No other predictors for clearance than dose, which does not allow individualised treatment.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment, linear absorption and elimination",
+    "equations": "Ka=theta1 CL=theta2*Css*(1+eta1) Vd=theta3*(1+eta2) Cobs=Cipred*(1+eps1) Css= steady state concentration",
+    "parameter_values": "theta1=100 (Guestimate based on “set to a large value approximating intravenous bolus dosing”) theta2=8.41 theta3=525 omega1=0.156 omega2=0.024 sigma1=0.0153",
+    "validation": "No / Yes (population of 13 patients)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "CBZ",
+      "population": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+      "route": "oral",
+      "n_subjects": 48,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment, linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 100,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL",
+            "typical": 8.41,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd",
+            "typical": 525,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Ka",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.156,
+            "reported_metric": "variance",
+            "value": 0.156,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "CL",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.024,
+            "reported_metric": "variance",
+            "value": 0.024,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.0153,
+            "reported_metric": "variance",
+            "value": 0.0153,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "Ka=theta1 CL=theta2*Css*(1+eta1) Vd=theta3*(1+eta2) Cobs=Cipred*(1+eps1) Css= steady state concentration",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Deleu",
+      "year": "2001",
+      "dose": "Steady-state oral doses in patients",
+      "population": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+      "objective": "“to characterise the population pharmacokinetics of CBZ, using F-CBZ serum concentration data from routine monitoring of adult Omani patients suffering from epilepsy and receiving chronic CBZ in monotherapy. These data may help to provide optimal and safe therapy to individual patients based on Bayesian forecasting.”"
+    },
+    "covariates": {
+      "tested": "Dose on CL",
+      "included": [],
+      "raw": "Dose on CL"
+    },
+    "validation": {
+      "raw": "No / Yes (population of 13 patients)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:24:53.428Z"
+}

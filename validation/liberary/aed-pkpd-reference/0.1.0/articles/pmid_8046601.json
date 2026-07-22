@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_8046601",
+  "pmid": "8046601",
+  "title": "",
+  "abstract": "",
+  "first_author": "Sheyer",
+  "year": "1994",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_8046601_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/scheyer-1994-8046601.pdf",
+    "sha256": "ac079302e246e7aba243d2ca89b57394d6b8c88f5f85a2ec8524a775752aa97a"
+  },
+  "metadata_source": ""
+}

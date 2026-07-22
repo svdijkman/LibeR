@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_19756559",
+  "pmid": "19756559",
+  "title": "",
+  "abstract": "",
+  "first_author": "Jiang",
+  "year": "2009",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_19756559_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/jiang-2009-19756559.pdf",
+    "sha256": "5b071a58ffc9240ca8d1392cf738071a35bfd99c5a104f81f1260b98312dc988"
+  },
+  "metadata_source": ""
+}

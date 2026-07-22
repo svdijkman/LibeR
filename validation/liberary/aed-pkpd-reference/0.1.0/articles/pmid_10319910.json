@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_10319910",
+  "pmid": "10319910",
+  "title": "Valproate population pharmacokinetics in children.",
+  "abstract": "",
+  "first_author": "Blanco-Serrano",
+  "year": "1999",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_10319910_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/blanco-serranol-1999-10319910.pdf",
+    "sha256": "2fa35211e138aa9393f4023cf7b8d1655d680531ad3a7c7787c8b405aaa07411"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_17433926",
+  "pmid": "17433926",
+  "compound_group": "PHT",
+  "partition": "validation",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/birnbaum-2007-17433926.pdf",
+    "sha256": "4cd81c590b439de9a8e2ac2e2a308b63bfb82b85565c9df8aef3afbfbdd5980b"
+  }
+}

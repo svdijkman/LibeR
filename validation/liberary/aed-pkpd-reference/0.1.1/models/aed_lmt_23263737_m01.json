@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_23263737_m01",
+  "article_id": "pmid_23263737",
+  "pmid": "23263737",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_23263737",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 10,
+      "model_table": 2,
+      "model_row": 8
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/singkham-2013-23263737.pdf",
+      "sha256": "c6ad70c9f3e8bb0063acedbb3497b96c5f05272b35f06401a0de788f4213b33a"
+    },
+    "metadata_csv": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+  },
+  "raw": {
+    "citation": "Singkham 2013 23263737",
+    "population": "N: 75 (Thai) Age:48 (18-82) WT:63 (36-98) UGT1A4 142T>G: TT:39, TG:30, GG:6 UGT1A4 70C>T: CC:75, CT:0, TT:0 UGT2B7 372A>G: AA:50, AG:23, GG:2 UGT2B7 -161C>T: CC:41, CT:30, TT:4",
+    "model_type": "PK",
+    "objective": "“to investigate the influence of specific genetic variants of UGT1A4 and UGT2B7, along with non-genetic factors, including age, weight, co-medications, gender, liver function, and renal function, on lamotrigine pharmacokinetics”",
+    "covariates": "Tested: AGE, WT, COMEDS, SEX, genotype on CL Included: enzyme inducers, VPA, UGT genotype",
+    "observations": "UGT2B7 genotype accounted for part of variability in clearance.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "CL/F=theta1*(1+theta2*IDC)*(1+theta3*VPA)*(1+theta4*UGT2B7161CT) *exp(eta1) Ka=theta1 Vd/F=theta2 Cobs=Cipred*(1+eps1)+eps2 IDC is 0 for no inducing comedication and 1 for use of inducing comedication (CBZ, PHT, oral contraceptives) VPA: comedication with valproate (yes =1, no=0) UGT2B7161CT is 0 for UGT2B7-161CT or TT genotype and 1 for UGT2B7-161CC genotype",
+    "parameter_values": "theta1=2.49 theta2=1.04 theta3=-0.41 theta4=-0.18 theta5=1.3 theta6=156 omega1=0.04904 sigma1=0.06817 sigma2=0.18",
+    "validation": "Yes (bootstrap of 1000)/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Influence of the UGT2B7 -161C>T polymorphism on the population pharmacokinetics of lamotrigine in Thai patients.",
+      "compound": "LMT",
+      "population": "N: 75 (Thai) Age:48 (18-82) WT:63 (36-98) UGT1A4 142T>G: TT:39, TG:30, GG:6 UGT1A4 70C>T: CC:75, CT:0, TT:0 UGT2B7 372A>G: AA:50, AG:23, GG:2 UGT2B7 -161C>T: CC:41, CT:30, TT:4",
+      "route": "oral",
+      "n_subjects": 75,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 2.49,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 1.04,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": -0.41,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": -0.18,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 156,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04904,
+            "reported_metric": "variance",
+            "value": 0.04904,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.06817,
+            "reported_metric": "variance",
+            "value": 0.06817,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 0.18,
+            "reported_metric": "variance",
+            "value": 0.18,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["enzyme inducers", "VPA", "UGT genotype"],
+      "residual_error": "CL/F=theta1*(1+theta2*IDC)*(1+theta3*VPA)*(1+theta4*UGT2B7161CT) *exp(eta1) Ka=theta1 Vd/F=theta2 Cobs=Cipred*(1+eps1)+eps2 IDC is 0 for no inducing comedication and 1 for use of inducing comedication (CBZ, PHT, oral contraceptives) VPA: comedication with valproate (yes =1, no=0) UGT2B7161CT is 0 for UGT2B7-161CT or TT genotype and 1 for UGT2B7-161CC genotype",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Singkham",
+      "year": "2013",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 75 (Thai) Age:48 (18-82) WT:63 (36-98) UGT1A4 142T>G: TT:39, TG:30, GG:6 UGT1A4 70C>T: CC:75, CT:0, TT:0 UGT2B7 372A>G: AA:50, AG:23, GG:2 UGT2B7 -161C>T: CC:41, CT:30, TT:4",
+      "objective": "“to investigate the influence of specific genetic variants of UGT1A4 and UGT2B7, along with non-genetic factors, including age, weight, co-medications, gender, liver function, and renal function, on lamotrigine pharmacokinetics”"
+    },
+    "covariates": {
+      "tested": ["AGE", "WT", "COMEDS", "SEX", "genotype on CL"],
+      "included": ["enzyme inducers", "VPA", "UGT genotype"],
+      "raw": "Tested: AGE, WT, COMEDS, SEX, genotype on CL Included: enzyme inducers, VPA, UGT genotype"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000)/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:54.702Z"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_22239287",
+  "pmid": "22239287",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/ponnala-2012-22239287.pdf",
+    "sha256": "a1e4a0d2c4999116bca4339a768e033197e497549450df7d975ae7916d556472"
+  }
+}

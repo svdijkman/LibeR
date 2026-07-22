@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2337967",
+  "pmid": "2337967",
+  "title": "Phenytoin dosage adjustment method using population clearance.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/yukawa-1990-2337967.pdf",
+    "sha256": "b4f944ddebf397c53d399ae50d69881c93b3c87660f873c806b680b056474d50"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

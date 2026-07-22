@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_12235444",
+  "pmid": "12235444",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/fisher-2002-12235444.pdf",
+    "sha256": "3d5c85042fe15cbea97b61c832ff9996888b1c6a4b2c4a7149fdcd231699e81c"
+  }
+}

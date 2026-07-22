@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_19730280",
+  "pmid": "19730280",
+  "title": "",
+  "abstract": "",
+  "first_author": "dos Santos",
+  "year": "2009",
+  "compounds": "CLNZ",
+  "model_ids": "aed_clnz_19730280_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/CLNZ/articles/dossantos-2009-19730280.pdf",
+    "sha256": "6aafddfce4b8df6282037162b9816804a635ecfaf7b7c90fb76c38fbd7ce0692"
+  },
+  "metadata_source": ""
+}

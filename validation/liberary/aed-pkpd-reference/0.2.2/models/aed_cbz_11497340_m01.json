@@ -1,0 +1,550 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_11497340_m01",
+  "article_id": "pmid_11497340",
+  "pmid": "11497340",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_11497340",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 24,
+      "model_table": 2,
+      "model_row": 26
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/deleu-2001-11497340.pdf",
+      "sha256": "b03cc578d2577002609c6dc8cd276e5b042d6258e1867021d45f3c847b20ebb8"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Deleu 2001 11497340",
+    "population": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+    "model_type": "PK",
+    "objective": "“to characterise the population pharmacokinetics of CBZ, using F-CBZ serum concentration data from routine monitoring of adult Omani patients suffering from epilepsy and receiving chronic CBZ in monotherapy. These data may help to provide optimal and safe therapy to individual patients based on Bayesian forecasting.”",
+    "covariates": "Dose on CL",
+    "observations": "Vd/F values supra-physiologic (525 ± 44 L), probably due to fixing Ka to very high value (“approximating intravenous bolus dosing”). Sparse samples on sporadic monitoring. Omani ethnicity patients. Very small validation dataset. Unorthodox model used, which does not allow easy comparison with other findings. No other predictors for clearance than dose, which does not allow individualised treatment.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment, linear absorption and elimination",
+    "equations": "Ka=theta1 CL=theta2*Css*(1+eta1) Vd=theta3*(1+eta2) Cobs=Cipred*(1+eps1) Css= steady state concentration",
+    "parameter_values": "theta1=100 (Guestimate based on “set to a large value approximating intravenous bolus dosing”) theta2=8.41 theta3=525 omega1=0.156 omega2=0.024 sigma1=0.0153",
+    "validation": "No / Yes (population of 13 patients)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "CBZ",
+      "population": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+      "route": "oral",
+      "n_subjects": 61,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+        "n_total": 61,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Index",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 48
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 27.8,
+                    "sd": 13
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 72
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "27.8±13 (18-72)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 60.8,
+                    "sd": 14.4
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 35,
+                    "maximum": 120
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "60.8±14.4 (35-120)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 24",
+              "evidence": "N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120)",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "Validation",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 13
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 26.8,
+                    "sd": 8.8
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 51
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "26.8±8.8 (18-51)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 57.2,
+                    "sd": 13.3
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 31,
+                    "maximum": 79
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "57.2±13.3 (31-79)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 24",
+              "evidence": "N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 24",
+          "evidence": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 26",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment, linear absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["KA", "CL", "VD"]
+          },
+          "description": "1 compartment, linear absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment, linear absorption and elimination Steady-state oral doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 100,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL",
+            "typical": 8.41,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd",
+            "typical": 525,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Ka",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.156,
+            "reported_metric": "variance",
+            "value": 0.156,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "CL",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.024,
+            "reported_metric": "variance",
+            "value": 0.024,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.0153,
+            "reported_metric": "variance",
+            "value": 0.0153,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "Ka=theta1 CL=theta2*Css*(1+eta1) Vd=theta3*(1+eta2) Cobs=Cipred*(1+eps1) Css= steady state concentration",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Deleu",
+      "year": "2001",
+      "dose": "Steady-state oral doses in patients",
+      "population": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+      "population_details": {
+        "raw": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+        "n_total": 61,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Index",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 48
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 27.8,
+                    "sd": 13
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 72
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "27.8±13 (18-72)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 60.8,
+                    "sd": 14.4
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 35,
+                    "maximum": 120
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "60.8±14.4 (35-120)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 24",
+              "evidence": "N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120)",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "Validation",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 13
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 26.8,
+                    "sd": 8.8
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 51
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "26.8±8.8 (18-51)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 57.2,
+                    "sd": 13.3
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 31,
+                    "maximum": 79
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "57.2±13.3 (31-79)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 24",
+              "evidence": "N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 24",
+          "evidence": "Index N: 48 (Omani) Age: 27.8±13 (18-72) WT: 60.8±14.4 (35-120) Validation N: 13 (Omani) Age: 26.8±8.8 (18-51) WT: 57.2±13.3 (31-79)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 26",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to characterise the population pharmacokinetics of CBZ, using F-CBZ serum concentration data from routine monitoring of adult Omani patients suffering from epilepsy and receiving chronic CBZ in monotherapy. These data may help to provide optimal and safe therapy to individual patients based on Bayesian forecasting.”"
+    },
+    "covariates": {
+      "tested": "Dose on CL",
+      "included": [],
+      "raw": "Dose on CL"
+    },
+    "validation": {
+      "raw": "No / Yes (population of 13 patients)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:22:52.333Z"
+}

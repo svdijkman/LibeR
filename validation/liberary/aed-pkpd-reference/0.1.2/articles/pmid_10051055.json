@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_10051055",
+  "pmid": "10051055",
+  "title": "",
+  "abstract": "",
+  "first_author": "Valodia",
+  "year": "1999",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_10051055_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/valodia-1999-10051055.pdf",
+    "sha256": "0fce5a7b40e1e8694267c83ba588e62c8fa504162fd672a414f57db06b44fe79"
+  },
+  "metadata_source": ""
+}

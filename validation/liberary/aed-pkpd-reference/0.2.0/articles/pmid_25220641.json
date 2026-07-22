@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_25220641",
+  "pmid": "25220641",
+  "title": "Population pharmacokinetics modeling of oxcarbazepine to characterize drug interactions in Chinese children with epilepsy.",
+  "abstract": "",
+  "first_author": "Wang",
+  "year": "2014",
+  "compounds": "OXC",
+  "model_ids": "aed_oxc_25220641_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/OXC/articles/wang-2014-25220641.pdf",
+    "sha256": "f87656e9536d3c12eee472bcfbfddd19ffabb991976dc7b09b177c9178857a3b"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

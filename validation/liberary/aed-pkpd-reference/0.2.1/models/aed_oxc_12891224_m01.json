@@ -1,0 +1,466 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_oxc_12891224_m01",
+  "article_id": "pmid_12891224",
+  "pmid": "12891224",
+  "model_index": 1,
+  "compound_group": "OXC",
+  "family_id": "pmid_12891224",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/OXC/Supplement_OXC_v2.docx",
+      "sha256": "c156583a67670c2213136103c9fc483539ef7a0eedbffe74feb604b091947894",
+      "study_table": 1,
+      "study_row": 11,
+      "model_table": 2,
+      "model_row": 8
+    },
+    "publication_pdf": {
+      "path": "Supplements/OXC/articles/sallas-2003-12891224.pdf",
+      "sha256": "f682a10f37121fa5fde08ce6bfff9e92f38535b92a2fafffb81772b9406aea09"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Sallas 2003 12891224",
+    "population": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+    "model_type": "PK",
+    "objective": "“to examine the drug-drug interaction potential of oxcarbazepine and 7 coadministered antiepileptic drugs and to investigate the effect of other covariates on the pharmacokinetics of MHD in pediatric patients”",
+    "covariates": "Tested: - Included: BSA, CBZ, PHB, PHT on CL; HT on Vd",
+    "observations": "CL and Vd correlated to BSA and HT respectively, which may make it slightly less practical. Impact of CBZ, PHB and PHT on CL roughly the same, which could be simplified.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "BSA=exp(-3.751)*((HT*100)**0.422)*(WT**0.515) TVCL=theta1*((BSA/1.3)**theta4)*(theta6**CBZ)*(theta7**PHB)*(theta8**PHT) CL/F=TVCL*exp(eta1) TVV=theta2*((HT/1.45)**theta5) Vd/F=TVV*exp(eta2) Ka=theta3 Cobs=Cipred*(1+eps2)+eps1 HT is height in meters",
+    "parameter_values": "theta1=2.33 theta2=177 theta3=0.598 theta4=0.902 theta5=3.54 theta6=1.31 theta7=1.33 theta8=1.35 omega1=0.0409 omega2=8.49 covariance omega1/omega2=0.293 sigma1=0.787 sigma2=0.0298",
+    "validation": "No / Yes (in Northam et al. 2005)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Pharmacokinetic drug interactions in children taking oxcarbazepine.",
+      "compound": "OXC",
+      "population": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+      "route": "oral",
+      "n_subjects": 109,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+        "n_total": 109,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 109
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 11,
+                    "sd": 3.9
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 3,
+                    "maximum": 17
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 11",
+                  "evidence": "11±3.9 (3-17)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 43.3,
+                    "sd": 20.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 15.9,
+                    "maximum": 134.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 11",
+                  "evidence": "43.3±20.7 (15.9-134.5)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 11",
+              "evidence": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 11",
+          "evidence": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 8",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["TVCL", "TVV", "KA", "THETA4", "THETA5", "THETA6", "THETA7", "THETA8"]
+          },
+          "description": "1 compartment with linear absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment with linear absorption and elimination Steady-state oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "TVCL",
+            "typical": 2.33,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "TVV",
+            "typical": 177,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.598,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.902,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 3.54,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.31,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 1.33,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 1.35,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "TVCL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0409,
+            "reported_metric": "variance",
+            "value": 0.0409,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "TVV",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 8.49,
+            "reported_metric": "variance",
+            "value": 8.49,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "TVV",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.293,
+            "reported_metric": "variance",
+            "value": 0.293,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.787,
+            "reported_metric": "variance",
+            "value": 0.787,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 0.0298,
+            "reported_metric": "variance",
+            "value": 0.0298,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["BSA", "CBZ", "PHB", "PHT on CL", "HT on Vd"],
+      "residual_error": "BSA=exp(-3.751)*((HT*100)**0.422)*(WT**0.515) TVCL=theta1*((BSA/1.3)**theta4)*(theta6**CBZ)*(theta7**PHB)*(theta8**PHT) CL/F=TVCL*exp(eta1) TVV=theta2*((HT/1.45)**theta5) Vd/F=TVV*exp(eta2) Ka=theta3 Cobs=Cipred*(1+eps2)+eps1 HT is height in meters",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Sallas",
+      "year": "2003",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+      "population_details": {
+        "raw": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+        "n_total": 109,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 109
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 11,
+                    "sd": 3.9
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 3,
+                    "maximum": 17
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 11",
+                  "evidence": "11±3.9 (3-17)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 43.3,
+                    "sd": 20.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 15.9,
+                    "maximum": 134.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 11",
+                  "evidence": "43.3±20.7 (15.9-134.5)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 11",
+              "evidence": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 11",
+          "evidence": "N: 109 (USA) Age: 11±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 8",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to examine the drug-drug interaction potential of oxcarbazepine and 7 coadministered antiepileptic drugs and to investigate the effect of other covariates on the pharmacokinetics of MHD in pediatric patients”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["BSA", "CBZ", "PHB", "PHT on CL", "HT on Vd"],
+      "raw": "Tested: - Included: BSA, CBZ, PHB, PHT on CL; HT on Vd"
+    },
+    "validation": {
+      "raw": "No / Yes (in Northam et al. 2005)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:05:24.206Z"
+}

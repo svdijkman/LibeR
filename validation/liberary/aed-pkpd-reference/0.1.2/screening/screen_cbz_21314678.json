@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_cbz_21314678",
+  "pmid": "21314678",
+  "compound_group": "CBZ",
+  "partition": "validation",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/CBZ/articles/exclude/0_bockbrader-2011-21314678.pdf",
+    "sha256": "75dbea212fe161ef44c8673011161a65843c0df2c628c98519f000e70e4047d8"
+  }
+}

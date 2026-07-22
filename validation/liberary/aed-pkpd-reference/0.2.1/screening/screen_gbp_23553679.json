@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_gbp_23553679",
+  "pmid": "23553679",
+  "compound_group": "GBP",
+  "partition": "test",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/GBP/articles/excluded/blau-2013-23553679.pdf",
+    "sha256": "9518e1a4247d3f76babdb94f8f2c649f4d2b28c40686b365a316ec85c2f49670"
+  }
+}

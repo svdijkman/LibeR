@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_8641326",
+  "pmid": "8641326",
+  "title": "Determination of phenobarbitone population clearance values for South African children.",
+  "abstract": "",
+  "first_author": "Botha",
+  "year": "1995",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_8641326_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/botha-1995-8641326.pdf",
+    "sha256": "48ced5d3a81f62065fd337a4606bd942883b115ef95d21fbc283462e964408c5"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

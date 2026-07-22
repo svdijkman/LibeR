@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_11253616",
+  "pmid": "11253616",
+  "title": "",
+  "abstract": "",
+  "first_author": "Reith",
+  "year": "2001",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_11253616_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/reith-2001-11253616.pdf",
+    "sha256": "ef61053a668ede3e871bfb10da4836b78a4132621241ba3ded1b2037b7f05668"
+  },
+  "metadata_source": ""
+}

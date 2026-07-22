@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_oxc_24359313",
+  "pmid": "24359313",
+  "compound_group": "OXC",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/OXC/articles/excluded/french-2014-24359313.pdf",
+    "sha256": "1205c55438358e71bd9cae0cd5cf6d991321fd92e657619a3e245ea2ec7144f5"
+  }
+}

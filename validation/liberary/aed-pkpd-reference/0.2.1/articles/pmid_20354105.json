@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_20354105",
+  "pmid": "20354105",
+  "title": "Quantitative prediction of intestinal metabolism in humans from a simplified intestinal availability model and empirical scaling factor.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "CLNZ",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CLNZ/articles/exclude/kadono-2010-20354105.pdf",
+    "sha256": "1d3c2f47d2c5538edaecdfd7757a6e678d08de93c9e4c72a16051e5f874b9031"
+  },
+  "metadata_source": "Supplements/CLNZ/pubmed_result_eval_CLNZ.csv"
+}

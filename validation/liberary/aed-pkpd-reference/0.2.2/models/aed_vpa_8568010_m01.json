@@ -1,0 +1,406 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_8568010_m01",
+  "article_id": "pmid_8568010",
+  "pmid": "8568010",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_8568010",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 31,
+      "model_table": 2,
+      "model_row": 38
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/botha-1995-8568010.pdf",
+      "sha256": "a7278ba2f6822e9893a1b82a3923609f210612471ff2d421425bcf0291aaffd6"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Botha 1995 8568010",
+    "population": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+    "model_type": "PK",
+    "objective": "“to use NONMEM to derive a model describing valproate clearance in terms of individual patient characteristics. Such an individualized clearance could then be used to predict the maintenance dose required to achieve a target mean steady-state serum concentration”",
+    "covariates": "Tested: SEX, RACE, AGE, Comedication (CBZ, PHT, PHB, Included: WT and comedication CBZ",
+    "observations": "PHB and PHT were expected to increase VPA CL, but was not proven, likely due to sample N taking comedication. Ka was fixed; Vd was excluded as variance was very small and did not alter parameter values. With increasing age the weight-adjusted VPA CL decreased. No PRED vs DV plots are made to ensure accuracy of model.",
+    "dose": "Steady state, oral doses in patients",
+    "structure": "One-compartment model, first-order absorption and elimination",
+    "equations": "CL=(exp((theta1*WT)-theta2)*(theta4**(1-M)))*(1+eta1) V = theta5*WT KA=theta3 Cobs=Cipred +eps1 M: Scaling factor for comedication (1:VPA/VPA+PHB/PHT, 1.61:VPA+CMZ) Value of V based on VPA PK model by Dutta et al.",
+    "parameter_values": "theta1= 0.022 theta2= 1.38 theta3=1.9 theta4=1.61 theta6=1.81 omega1=0.0265 sigma1 = 0.0605",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "A model for estimating individualized valproate clearance values in children.",
+      "compound": "VPA",
+      "population": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+      "route": "oral",
+      "n_subjects": 52,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+        "n_total": 52,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 52
+            },
+            "health_status": "patients",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 7.6,
+                    "sd": 4.2
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 1.2,
+                    "maximum": 16
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 31",
+                  "evidence": "7.6 ±4.2 (1.2-16)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 24.2,
+                    "sd": 12.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 31",
+                  "evidence": "24.2 ±12.5",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 31",
+              "evidence": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 31",
+          "evidence": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 38",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "One-compartment model, first-order absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "KA", "THETA4", "THETA6"]
+          },
+          "description": "One-compartment model, first-order absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "One-compartment model, first-order absorption and elimination Steady state, oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.022,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 1.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1.9,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.61,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.81,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0265,
+            "reported_metric": "variance",
+            "value": 0.0265,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 0.0605,
+            "reported_metric": "variance",
+            "value": 0.0605,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": "WT and comedication CBZ",
+      "residual_error": "CL=(exp((theta1*WT)-theta2)*(theta4**(1-M)))*(1+eta1) V = theta5*WT KA=theta3 Cobs=Cipred +eps1 M: Scaling factor for comedication (1:VPA/VPA+PHB/PHT, 1.61:VPA+CMZ) Value of V based on VPA PK model by Dutta et al.",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Botha",
+      "year": "1995",
+      "dose": "Steady state, oral doses in patients",
+      "population": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+      "population_details": {
+        "raw": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+        "n_total": 52,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 52
+            },
+            "health_status": "patients",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 7.6,
+                    "sd": 4.2
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 1.2,
+                    "maximum": 16
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 31",
+                  "evidence": "7.6 ±4.2 (1.2-16)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 24.2,
+                    "sd": 12.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 31",
+                  "evidence": "24.2 ±12.5",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 31",
+              "evidence": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 31",
+          "evidence": "N: 52 (45% from African/Indian patients) Sex: m=73%, f=55% Age: 7.6 ±4.2 (1.2-16) WT: 24.2 ±12.5",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 38",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to use NONMEM to derive a model describing valproate clearance in terms of individual patient characteristics. Such an individualized clearance could then be used to predict the maintenance dose required to achieve a target mean steady-state serum concentration”"
+    },
+    "covariates": {
+      "tested": ["SEX", "RACE", "AGE", "Comedication (CBZ", "PHT", "PHB"],
+      "included": "WT and comedication CBZ",
+      "raw": "Tested: SEX, RACE, AGE, Comedication (CBZ, PHT, PHB, Included: WT and comedication CBZ"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:22:59.271Z"
+}

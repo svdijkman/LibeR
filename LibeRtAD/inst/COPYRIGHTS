@@ -1,0 +1,30 @@
+LibeRtAD bundles the CppAD C++ algorithmic differentiation headers.
+
+Component: CppAD
+Version: cppad-20260000.0
+Source commit: 5d51b2aa6d6874c8d561da298a90b3721550d45d
+Upstream: https://github.com/coin-or/CppAD
+Copyright: Copyright (C) 2003-2025 Bradley M. Bell and contributors
+Licence: Eclipse Public License 2.0 OR GNU General Public License 2.0 or later
+
+The bundled header contents, after normalising line endings, match the official
+upstream release tag. The generated cppad/configure.hpp retains the settings
+used by the previously validated build; the upstream configuration template
+changed only in comments. The full EPL-2.0 text is installed at
+LICENSES/EPL-2.0.txt.
+
+LibeRtAD also bundles the Eigen C++ linear-algebra headers required by the
+native AD and pharmacometric engines.
+
+Component: Eigen
+Version: 5.0.1
+Source commit: bc3b39870ecb690a623a3f49149a358b95c5781d
+Source archive SHA-256: e9c326dc8c05cd1e044c71f30f1b2e34a6161a3b6ecf445d56b53ff1669e3dec
+Upstream: https://gitlab.com/libeigen/eigen
+Copyright: Copyright (C) Eigen contributors
+Licence: Mozilla Public License 2.0 and compatible third-party component licences
+
+The bundled Eigen/Core tree and the MatrixFunctions unsupported module are
+copied without source modifications from the official 5.0.1 release archive.
+The MPL-2.0, BSD, Apache-2.0, and MINPACK licence texts are installed under
+LICENSES/.

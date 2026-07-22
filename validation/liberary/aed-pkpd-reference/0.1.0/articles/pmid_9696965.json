@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9696965",
+  "pmid": "9696965",
+  "title": "A model for the determination of carbamazepine clearance in children on mono- and polytherapy.",
+  "abstract": "",
+  "first_author": "Gray",
+  "year": "1998",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_9696965_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/gray-1998-9696965.pdf",
+    "sha256": "472814bba84e801b09cec88b9299aae7147382b0640e12f0d3e837b08bd831b4"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

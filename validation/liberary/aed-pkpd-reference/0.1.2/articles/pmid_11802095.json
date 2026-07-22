@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_11802095",
+  "pmid": "11802095",
+  "title": "Population pharmacokinetics of lamotrigine.",
+  "abstract": "",
+  "first_author": "Chan",
+  "year": "2001",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_11802095_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/chan-2001-11802095.pdf",
+    "sha256": "5c63c9fb90aab46120a1f78c690a3ff0568e96607e5b53e00e72583ba240b6e5"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

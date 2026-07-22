@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_zns_18641551_m01",
+  "article_id": "pmid_18641551",
+  "pmid": "18641551",
+  "model_index": 1,
+  "compound_group": "ZNS",
+  "family_id": "pmid_18641551",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/ZNS/Supplement_ZNS_v2.docx",
+      "sha256": "d30c569d64a40b0421082c6bce8d57eca6862b8ee25455a6fc6bee0f1c766bd7",
+      "study_table": 1,
+      "study_row": 3,
+      "model_table": 2,
+      "model_row": 2
+    },
+    "publication_pdf": {
+      "path": "Supplements/ZNS/articles/okada-2008-18641551.pdf",
+      "sha256": "43f1e86f7c0ecf6b763c71542699a4eb214b6e7b59b5878adb5984a97eb0633e"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Okada 2008 18641551",
+    "population": "N:99 (Japan) Age: 14.3±8.0 (1.36–39.24) WT: 40.7± 20.2 (10–117)",
+    "model_type": "PK",
+    "objective": "To evaluate the effects of cytochrome P450 (CYP) 2C19, CYP3A5 polymorphisms, co-administration of AED on zonisamide (ZNS) clearance.",
+    "covariates": "Tested: CYP2C19 and CYP3A5 polymorphisms, WT, dose, comedication with CBZ, PHT, PHB, VPA, CLBZ, CLNZ on CL Included: CYP2C19, body weight, CBZ, PHT, PB, dose.",
+    "observations": "Only one-compartment open pharmacokinetic model with first-order elimination characterised for ZNS. Lack of goodness-of-fit plots. Autoinduction (clearance dependent on dose) was found. Comedication with CBZ, PHT or PHB gives a 24-29% increase in ZNS clearance.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1-compartment model with first order absorption and elimination",
+    "equations": "CL/F=theta1*((WT/44)**theta2)*(DOSE**theta3)*(theta4**CYP2C19_HEM)*(theta5**CYP2C19_PM)*(theta6**CBZ)*(theta7**PHT)*(theta8**PHB)*exp(eta1) Vd/F=theta9 Ka=theta10 Cobs=Cipred*(1+eps1) CYP2C19_HEM=CYP2C19 heterozygous extensive metabolizer: 1 if true, 0 if not true. CYP2C19_PM=CYP2C19 poor metabolizer: 1 if true, 0 if not true. Carbamazepine (CBZ), phenytoin (PHT), or phenobarbital (PB) is equal to 1 if co-administered, otherwise, it is 0. Parameter values for Ka and Vd were omitted from the paper.",
+    "parameter_values": "theta1=1.22 theta2=0.77 theta3=-0.17 theta4=0.84 theta5=0.70 theta6=1.24 theta7=1.28 theta8=1.29 theta9=NA theta10=NA omega1=0.076 sigma1=0.050",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population estimation regarding the effects of cytochrome P450 2C19 and 3A5 polymorphisms on zonisamide clearance.",
+      "compound": "ZNS",
+      "population": "N:99 (Japan) Age: 14.3±8.0 (1.36–39.24) WT: 40.7± 20.2 (10–117)",
+      "route": "oral",
+      "n_subjects": 99,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1-compartment model with first order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 1.22,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.77,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": -0.17,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.84,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.24,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 1.28,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 1.29,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.076,
+            "reported_metric": "variance",
+            "value": 0.076,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.05,
+            "reported_metric": "variance",
+            "value": 0.05,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["CYP2C19", "body weight", "CBZ", "PHT", "PB", "dose."],
+      "residual_error": "CL/F=theta1*((WT/44)**theta2)*(DOSE**theta3)*(theta4**CYP2C19_HEM)*(theta5**CYP2C19_PM)*(theta6**CBZ)*(theta7**PHT)*(theta8**PHB)*exp(eta1) Vd/F=theta9 Ka=theta10 Cobs=Cipred*(1+eps1) CYP2C19_HEM=CYP2C19 heterozygous extensive metabolizer: 1 if true, 0 if not true. CYP2C19_PM=CYP2C19 poor metabolizer: 1 if true, 0 if not true. Carbamazepine (CBZ), phenytoin (PHT), or phenobarbital (PB) is equal to 1 if co-administered, otherwise, it is 0. Parameter values for Ka and Vd were omitted from the paper.",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Okada",
+      "year": "2008",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N:99 (Japan) Age: 14.3±8.0 (1.36–39.24) WT: 40.7± 20.2 (10–117)",
+      "objective": "To evaluate the effects of cytochrome P450 (CYP) 2C19, CYP3A5 polymorphisms, co-administration of AED on zonisamide (ZNS) clearance."
+    },
+    "covariates": {
+      "tested": ["CYP2C19 and CYP3A5 polymorphisms", "WT", "dose", "comedication with CBZ", "PHT", "PHB", "VPA", "CLBZ", "CLNZ on CL"],
+      "included": ["CYP2C19", "body weight", "CBZ", "PHT", "PB", "dose."],
+      "raw": "Tested: CYP2C19 and CYP3A5 polymorphisms, WT, dose, comedication with CBZ, PHT, PHB, VPA, CLBZ, CLNZ on CL Included: CYP2C19, body weight, CBZ, PHT, PB, dose."
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:50.277Z"
+}

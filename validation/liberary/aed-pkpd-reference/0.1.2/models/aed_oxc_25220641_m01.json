@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_oxc_25220641_m01",
+  "article_id": "pmid_25220641",
+  "pmid": "25220641",
+  "model_index": 1,
+  "compound_group": "OXC",
+  "family_id": "pmid_25220641",
+  "partition": "test",
+  "source": {
+    "appendix": {
+      "path": "Supplements/OXC/Supplement_OXC_v2.docx",
+      "sha256": "c156583a67670c2213136103c9fc483539ef7a0eedbffe74feb604b091947894",
+      "study_table": 1,
+      "study_row": 7,
+      "model_table": 2,
+      "model_row": 4
+    },
+    "publication_pdf": {
+      "path": "Supplements/OXC/articles/wang-2014-25220641.pdf",
+      "sha256": "f87656e9536d3c12eee472bcfbfddd19ffabb991976dc7b09b177c9178857a3b"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Wang 2014 25220641",
+    "population": "[PPK model group] N: 573 Age (months): 88.46±43.17 (2-216) WT: 27.64±12.93 (4-90) [Valid group] N: 115 Age (months): 85.35±41.83 (7-192) WT: 25.49±11.25 (8-73)",
+    "model_type": "PK",
+    "objective": "“to develop a population pharmacokinetics (PPK) model of OXC in Chinese children with epilepsy and to investigate the pharmacokinetic characteristics of OXC including the influence of other antiepileptic drugs on the pharmacokinetic parameters of OXC in these subpopulations, which will facilitate individualized dosage regimens”",
+    "covariates": "Tested: SEX, AGE, WT, BSA, comedication Included: WT, comedication on CL; WT on Vd",
+    "observations": "GOF seems decent, individual predictions follow observations perfectly, which could be the result of over fitting, or simply very predictable kinetics. Parameters CL and Vd modelled as linear functions of WT, which may lead to issues when predicting for heavier patients. Bootstrap ranges show very good agreement with analysis results",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with first order absorption and elimination",
+    "equations": "Ka=theta1*exp(eta1) Vd/F=theta2*WT*exp(eta2) CL/F=theta3*WT*exp(theta4*NEWAED)*exp(theta5*VPA)*exp(theta6*EIAED)*exp(eta3) Cobs=Cipred+eps1 NEWAED is coadministration of newer AEDs such as LVT, LMT, and/or TPM (yes=1, no=0) VPA is coadministration of VPA (yes=1, no=0) EIAED is coadministration of enzyme-inducing AEDs such as CBZ and/or PHB (yes=1, no=0)",
+    "parameter_values": "theta1=0.83 theta2=0.67 theta3=0.035 theta4=0.10 theta5=-0.03 theta6=0.16 omega1=0.1472 omega2=0.03698 omega3=0.00420 sigma1=0.93",
+    "validation": "Yes (bootstrap of 1000) / Yes"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics modeling of oxcarbazepine to characterize drug interactions in Chinese children with epilepsy.",
+      "compound": "OXC",
+      "population": "[PPK model group] N: 573 Age (months): 88.46±43.17 (2-216) WT: 27.64±12.93 (4-90) [Valid group] N: 115 Age (months): 85.35±41.83 (7-192) WT: 25.49±11.25 (8-73)",
+      "route": "oral",
+      "n_subjects": 573,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with first order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 0.83,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 0.67,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 0.035,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": -0.03,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.16,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Ka",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.1472,
+            "reported_metric": "variance",
+            "value": 0.1472,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Vd/F",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.03698,
+            "reported_metric": "variance",
+            "value": 0.03698,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "CL/F",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0042,
+            "reported_metric": "variance",
+            "value": 0.0042,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 0.93,
+            "reported_metric": "variance",
+            "value": 0.93,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "comedication on CL", "WT on Vd"],
+      "residual_error": "Ka=theta1*exp(eta1) Vd/F=theta2*WT*exp(eta2) CL/F=theta3*WT*exp(theta4*NEWAED)*exp(theta5*VPA)*exp(theta6*EIAED)*exp(eta3) Cobs=Cipred+eps1 NEWAED is coadministration of newer AEDs such as LVT, LMT, and/or TPM (yes=1, no=0) VPA is coadministration of VPA (yes=1, no=0) EIAED is coadministration of enzyme-inducing AEDs such as CBZ and/or PHB (yes=1, no=0)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Wang",
+      "year": "2014",
+      "dose": "Steady-state oral doses in patients",
+      "population": "[PPK model group] N: 573 Age (months): 88.46±43.17 (2-216) WT: 27.64±12.93 (4-90) [Valid group] N: 115 Age (months): 85.35±41.83 (7-192) WT: 25.49±11.25 (8-73)",
+      "objective": "“to develop a population pharmacokinetics (PPK) model of OXC in Chinese children with epilepsy and to investigate the pharmacokinetic characteristics of OXC including the influence of other antiepileptic drugs on the pharmacokinetic parameters of OXC in these subpopulations, which will facilitate individualized dosage regimens”"
+    },
+    "covariates": {
+      "tested": ["SEX", "AGE", "WT", "BSA", "comedication"],
+      "included": ["WT", "comedication on CL", "WT on Vd"],
+      "raw": "Tested: SEX, AGE, WT, BSA, comedication Included: WT, comedication on CL; WT on Vd"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000) / Yes"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:47.342Z"
+}

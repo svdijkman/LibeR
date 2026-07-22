@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_26681081",
+  "pmid": "26681081",
+  "title": "Effect of co-medication on the pharmacokinetic parameters of phenobarbital in asphyxiated newborns.",
+  "abstract": "",
+  "first_author": "Šíma",
+  "year": "2015",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_26681081_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/sima-2015-26681081.pdf",
+    "sha256": "65350f7b285009c972083f567615999e11292e7abae9d497a872a6347abc8180"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

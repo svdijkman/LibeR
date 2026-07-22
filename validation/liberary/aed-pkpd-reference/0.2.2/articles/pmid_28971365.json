@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_28971365",
+  "pmid": "28971365",
+  "title": "",
+  "abstract": "",
+  "first_author": "Kohlmann",
+  "year": "2017",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_28971365_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/0-kohlmann-2017-28971365.pdf",
+    "sha256": "6d8ea2f95d869e1a399aeda41aafc03c25e2e5d737e0003b3a553c952486f774"
+  },
+  "metadata_source": ""
+}

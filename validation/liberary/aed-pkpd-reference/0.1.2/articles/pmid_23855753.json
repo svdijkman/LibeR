@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23855753",
+  "pmid": "23855753",
+  "title": "",
+  "abstract": "",
+  "first_author": "Marsot",
+  "year": "2014",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_23855753_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/marsot-2014-23855753.pdf",
+    "sha256": "19d0022cf6ca2bee263d31f656da28f1078114afa0f960c77bf9b0aab74f7013"
+  },
+  "metadata_source": ""
+}

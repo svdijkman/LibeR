@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_2659322",
+  "pmid": "2659322",
+  "title": "Predictive performance of pharmacokinetic methods for phenytoin dosing: a multi-center evaluation in 282 patients with epilepsy.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/zaccara-1989-2659322.pdf",
+    "sha256": "c36bf7074a01e01ffa7948326544067f250388e798d89ca8774822bed6f9d9a0"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

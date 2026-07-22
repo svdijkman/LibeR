@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_25010262",
+  "pmid": "25010262",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ogungbenro",
+  "year": "2014",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_25010262_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/ogungbenro-2014-25010262.pdf",
+    "sha256": "40c8a86f63b57ffdbff1db4bf12dcc83a40d6b2dcf71dba59cdcbb7bcf96f096"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_15068399",
+  "pmid": "15068399",
+  "title": "",
+  "abstract": "",
+  "first_author": "Bondareva",
+  "year": "2004",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_15068399_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/bondareva-2004-15068399.pdf",
+    "sha256": "99413f1b94cc76a72be0538d74f58b990ac8a7293d6174bd6d284d5816d7920b"
+  },
+  "metadata_source": ""
+}

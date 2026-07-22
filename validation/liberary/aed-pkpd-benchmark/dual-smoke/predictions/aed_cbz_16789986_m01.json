@@ -1,0 +1,700 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_cbz_16789986_m01",
+  "screening_id": null,
+  "article_id": "pmid_16789986",
+  "pmid": "16789986",
+  "source_pdf_sha256": "ccecfece501888a7263eaebb02a73a242453bdbbe60721f1868c2563f4f82e01",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "text=ollama/qwen2.5:7b-instruct; vision=ollama/qwen3.5:9b; adjudication=ollama/qwen3.5:9b",
+  "created_at": "2026-07-16T17:51:30.455Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population pharmacokinetic modelling of carbamazepine in epileptic elderly patients: implications for dosage",
+    "compound": "carbamazepine",
+    "population": "elderly patients on chronic monotherapy",
+    "route": "oral",
+    "n_subjects": 72,
+    "software": "NPEM program in the USC*PACK collection of PC programs",
+    "estimation_method": "non-parametric expectation maximization (NPEM)",
+    "model_type": "one-compartment model with first-order absorption and elimination",
+    "structural_model": {
+      "advan": 1,
+      "trans": 0,
+      "compartments": 1,
+      "description": "Linear one-compartment PK model with firstorder oral absorption"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "K_a",
+          "typical": 0.61,
+          "se": 0.5,
+          "unit": "h^-1"
+        },
+        {
+          "name": "V_S1",
+          "typical": 0.81,
+          "se": 0.5,
+          "unit": "L/kg"
+        },
+        {
+          "name": "K_i",
+          "typical": 0.04,
+          "se": 0.016,
+          "unit": "h^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Variance of K_a",
+          "parameter": "K_a",
+          "eta_index": 1,
+          "eta_distribution": "log_normal",
+          "eta_expression": "log(K_a) = ETA(1)",
+          "variability_level": "iiv",
+          "reported_value": 0.82,
+          "reported_metric": "cv_percent",
+          "value": 62.34,
+          "conversion": "log(1 + (0.6234^2)) = 0.795"
+        },
+        {
+          "description": "Variance of V_S1",
+          "parameter": "V_S1",
+          "eta_index": 2,
+          "eta_distribution": "log_normal",
+          "eta_expression": "log(V_S1) = ETA(2)",
+          "variability_level": "iiv",
+          "reported_value": 0.617,
+          "reported_metric": "cv_percent",
+          "value": 61.74,
+          "conversion": "log(1 + (0.6174^2)) = 0.753"
+        },
+        {
+          "description": "Variance of K_i",
+          "parameter": "K_i",
+          "eta_index": 3,
+          "eta_distribution": "log_normal",
+          "eta_expression": "log(K_i) = ETA(3)",
+          "variability_level": "iiv",
+          "reported_value": 0.154,
+          "reported_metric": "cv_percent",
+          "value": 27.86,
+          "conversion": "log(1 + (0.2786^2)) = 0.319"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "correlation",
+          "value": null,
+          "conversion": "null"
+        },
+        {
+          "row_eta": 1,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "correlation",
+          "value": null,
+          "conversion": "null"
+        },
+        {
+          "row_eta": 2,
+          "col_eta": 3,
+          "reported_value": -0.546,
+          "reported_metric": "correlation",
+          "value": -0.546,
+          "conversion": "log(1 + (-0.546^2)) = 0.798"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error for K_a",
+          "error_model": "proportional",
+          "reported_value": 0.2,
+          "reported_metric": "sd",
+          "value": 0.2,
+          "conversion": "log(1 + (0.2^2)) = 0.408"
+        },
+        {
+          "description": "Residual error for V_S1",
+          "error_model": "proportional",
+          "reported_value": 0.1,
+          "reported_metric": "sd",
+          "value": 0.1,
+          "conversion": "log(1 + (0.1^2)) = 0.101"
+        },
+        {
+          "description": "Residual error for K_i",
+          "error_model": "proportional",
+          "reported_value": 0.168,
+          "reported_metric": "sd",
+          "value": 0.168,
+          "conversion": "log(1 + (0.168^2)) = 0.345"
+        }
+      ]
+    },
+    "covariates": [
+      "age"
+    ],
+    "residual_error": "proportional",
+    "confidence": {
+      "overall": 0.9,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.75,
+        "population": 0.92,
+        "software": 0.88
+      }
+    },
+    "evidence_quotes": [
+      "A poor correlation was found between daily CBZ dose and serum concentrations in the elderly patients ( r = 0 Æ 2, P = 0 Æ 25).",
+      "Probably statistically significant difference in the median values of the CBZ metabolic rate constant ( K i ) ( P &lt; 0 Æ 001) between the elderly and relatively young epileptic patients was found.",
+      "Our results showed that age-related influences in CBZ pharmacokinetics in elderly patients should be considered in the optimal planning of CBZ dosage regimens."
+    ],
+    "notes": "The model is based on a non-parametric expectation maximization (NPEM) program and uses a one-compartment PK model with first-order absorption. The parameter estimates are reported as typical values, standard errors, and variability levels. The residual error is assumed to be proportional. The model includes individual variability in the parameters K_a, V_S1, and K_i. There is no direct evidence for covariate effects on these parameters."
+  },
+  "variants": {
+    "text": {
+      "title": "Population pharmacokinetic modelling of carbamazepine in epileptic elderly patients: implications for dosage",
+      "compound": "carbamazepine",
+      "population": "elderly patients on chronic monotherapy",
+      "route": "oral",
+      "n_subjects": 72,
+      "software": "NPEM program in the USC*PACK collection of PC programs",
+      "estimation_method": "non-parametric expectation maximization (NPEM)",
+      "model_type": "one-compartment model with first-order absorption and elimination",
+      "structural_model": {
+        "advan": 1,
+        "trans": 0,
+        "compartments": 1,
+        "description": "Linear one-compartment PK model with firstorder oral absorption"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "K_a",
+            "typical": 0.61,
+            "se": 0.5,
+            "unit": "h^-1"
+          },
+          {
+            "name": "V_S1",
+            "typical": 0.81,
+            "se": 0.5,
+            "unit": "L/kg"
+          },
+          {
+            "name": "K_i",
+            "typical": 0.04,
+            "se": 0.016,
+            "unit": "h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Variance of K_a",
+            "parameter": "K_a",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "log(K_a) = ETA(1)",
+            "variability_level": "iiv",
+            "reported_value": 0.82,
+            "reported_metric": "cv_percent",
+            "value": 62.34,
+            "conversion": "log(1 + (0.6234^2)) = 0.795"
+          },
+          {
+            "description": "Variance of V_S1",
+            "parameter": "V_S1",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "log(V_S1) = ETA(2)",
+            "variability_level": "iiv",
+            "reported_value": 0.617,
+            "reported_metric": "cv_percent",
+            "value": 61.74,
+            "conversion": "log(1 + (0.6174^2)) = 0.753"
+          },
+          {
+            "description": "Variance of K_i",
+            "parameter": "K_i",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "log(K_i) = ETA(3)",
+            "variability_level": "iiv",
+            "reported_value": 0.154,
+            "reported_metric": "cv_percent",
+            "value": 27.86,
+            "conversion": "log(1 + (0.2786^2)) = 0.319"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "correlation",
+            "value": null,
+            "conversion": "null"
+          },
+          {
+            "row_eta": 1,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "correlation",
+            "value": null,
+            "conversion": "null"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 3,
+            "reported_value": -0.546,
+            "reported_metric": "correlation",
+            "value": -0.546,
+            "conversion": "log(1 + (-0.546^2)) = 0.798"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error for K_a",
+            "error_model": "proportional",
+            "reported_value": 0.2,
+            "reported_metric": "sd",
+            "value": 0.2,
+            "conversion": "log(1 + (0.2^2)) = 0.408"
+          },
+          {
+            "description": "Residual error for V_S1",
+            "error_model": "proportional",
+            "reported_value": 0.1,
+            "reported_metric": "sd",
+            "value": 0.1,
+            "conversion": "log(1 + (0.1^2)) = 0.101"
+          },
+          {
+            "description": "Residual error for K_i",
+            "error_model": "proportional",
+            "reported_value": 0.168,
+            "reported_metric": "sd",
+            "value": 0.168,
+            "conversion": "log(1 + (0.168^2)) = 0.345"
+          }
+        ]
+      },
+      "covariates": [
+        "age"
+      ],
+      "residual_error": "proportional",
+      "confidence": {
+        "overall": 0.9,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.75,
+          "population": 0.92,
+          "software": 0.88
+        }
+      },
+      "evidence_quotes": [
+        "A poor correlation was found between daily CBZ dose and serum concentrations in the elderly patients ( r = 0 Æ 2, P = 0 Æ 25).",
+        "Probably statistically significant difference in the median values of the CBZ metabolic rate constant ( K i ) ( P &lt; 0 Æ 001) between the elderly and relatively young epileptic patients was found.",
+        "Our results showed that age-related influences in CBZ pharmacokinetics in elderly patients should be considered in the optimal planning of CBZ dosage regimens."
+      ],
+      "notes": "The model is based on a non-parametric expectation maximization (NPEM) program and uses a one-compartment PK model with first-order absorption. The parameter estimates are reported as typical values, standard errors, and variability levels. The residual error is assumed to be proportional. The model includes individual variability in the parameters K_a, V_S1, and K_i. There is no direct evidence for covariate effects on these parameters."
+    },
+    "vision": {
+      "title": "Population pharmacokinetic modelling of carbamazepine in epileptic elderly patients: implications for dosage",
+      "compound": null,
+      "population": "elderly and young adult epileptic patients on chronic CBZ monotherapy (groups A, B)",
+      "route": "oral",
+      "n_subjects": 72,
+      "software": "USC*PACK collection of PC programs; NONMEM computer program",
+      "estimation_method": "non-parametric expectation maximization (NPEM) algorithm and iterative Bayesian (IT2B)",
+      "model_type": null,
+      "structural_model": {
+        "advan": 103,
+        "trans": null,
+        "compartments": 2,
+        "description": "The study utilized a two-compartment model for carbamazepine (CBZ) pharmacokinetics. The structural equation is not explicitly provided in the text or figures."
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": null,
+            "se": 47,
+            "unit": "mL/h/kg"
+          },
+          {
+            "name": "V1/F",
+            "typical": null,
+            "se": 682,
+            "unit": "mL"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Inter-individual variability (IIV) for CL/F and V1/F were estimated using the NPEM algorithm.",
+            "parameter": "CL/F",
+            "eta_index": null,
+            "eta_distribution": "normal",
+            "eta_expression": null,
+            "variability_level": "unknown",
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "not_applicable"
+          },
+          {
+            "description": "Inter-individual variability (IIV) for CL/F and V1/F were estimated using the NPEM algorithm.",
+            "parameter": "V1/F",
+            "eta_index": null,
+            "eta_distribution": "normal",
+            "eta_expression": null,
+            "variability_level": "unknown",
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "not_applicable"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "not_applicable"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual variability (RV) was estimated using the NPEM algorithm.",
+            "error_model": "additive",
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "not_applicable"
+          }
+        ]
+      },
+      "covariates": [
+        "age (years)",
+        "body weight (kg)"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.612,
+        "fields": {
+          "structure": 0.891,
+          "parameters": 0.412,
+          "population": 0.789,
+          "software": 0.501
+        }
+      },
+      "evidence_quotes": [
+        "\"The present population model is also uniquely well suited for use with the new multiple model design of dosage regimens to achieve desired therapeutic target goals with maximum precision (23; 24).\"",
+        "\"Our results show that age-related influences in CBZ pharmacokinetics in elderly patients should be considered in the optimal planning of CBZ dosage regimens. Most elderly patients described in the epilepsy will usually need CBZ dosages lower than those based on the median population PK parameter values obtained from younger patients.\" (p213)"
+      ],
+      "notes": "The paper discusses modeling approaches but does not report a fully specified, recoverable model with all parameters and their distributions. The structural equation is described as two-compartmental in text but never explicitly written out."
+    },
+    "reconciled": {
+      "title": "Population pharmacokinetic modelling of carbamazepine in epileptic elderly patients: implications for dosage",
+      "compound": "carbamazepine",
+      "population": "elderly patients on chronic monotherapy",
+      "route": "oral",
+      "n_subjects": 72,
+      "software": "NPEM program in the USC*PACK collection of PC programs",
+      "estimation_method": "non-parametric expectation maximization (NPEM)",
+      "model_type": "one-compartment model with first-order absorption and elimination",
+      "structural_model": {
+        "advan": 1,
+        "trans": 0,
+        "compartments": 1,
+        "description": "Linear one-compartment PK model with firstorder oral absorption"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "K_a",
+            "typical": 0.61,
+            "se": 0.5,
+            "unit": "h^-1"
+          },
+          {
+            "name": "V_S1",
+            "typical": 0.81,
+            "se": 0.5,
+            "unit": "L/kg"
+          },
+          {
+            "name": "K_i",
+            "typical": 0.04,
+            "se": 0.016,
+            "unit": "h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Variance of K_a",
+            "parameter": "K_a",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "log(K_a) = ETA(1)",
+            "variability_level": "iiv",
+            "reported_value": 0.82,
+            "reported_metric": "cv_percent",
+            "value": 62.34,
+            "conversion": "log(1 + (0.6234^2)) = 0.795"
+          },
+          {
+            "description": "Variance of V_S1",
+            "parameter": "V_S1",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "log(V_S1) = ETA(2)",
+            "variability_level": "iiv",
+            "reported_value": 0.617,
+            "reported_metric": "cv_percent",
+            "value": 61.74,
+            "conversion": "log(1 + (0.6174^2)) = 0.753"
+          },
+          {
+            "description": "Variance of K_i",
+            "parameter": "K_i",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "log(K_i) = ETA(3)",
+            "variability_level": "iiv",
+            "reported_value": 0.154,
+            "reported_metric": "cv_percent",
+            "value": 27.86,
+            "conversion": "log(1 + (0.2786^2)) = 0.319"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "correlation",
+            "value": null,
+            "conversion": "null"
+          },
+          {
+            "row_eta": 1,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "correlation",
+            "value": null,
+            "conversion": "null"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 3,
+            "reported_value": -0.546,
+            "reported_metric": "correlation",
+            "value": -0.546,
+            "conversion": "log(1 + (-0.546^2)) = 0.798"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error for K_a",
+            "error_model": "proportional",
+            "reported_value": 0.2,
+            "reported_metric": "sd",
+            "value": 0.2,
+            "conversion": "log(1 + (0.2^2)) = 0.408"
+          },
+          {
+            "description": "Residual error for V_S1",
+            "error_model": "proportional",
+            "reported_value": 0.1,
+            "reported_metric": "sd",
+            "value": 0.1,
+            "conversion": "log(1 + (0.1^2)) = 0.101"
+          },
+          {
+            "description": "Residual error for K_i",
+            "error_model": "proportional",
+            "reported_value": 0.168,
+            "reported_metric": "sd",
+            "value": 0.168,
+            "conversion": "log(1 + (0.168^2)) = 0.345"
+          }
+        ]
+      },
+      "covariates": [
+        "age"
+      ],
+      "residual_error": "proportional",
+      "confidence": {
+        "overall": 0.9,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.75,
+          "population": 0.92,
+          "software": 0.88
+        }
+      },
+      "evidence_quotes": [
+        "A poor correlation was found between daily CBZ dose and serum concentrations in the elderly patients ( r = 0 Æ 2, P = 0 Æ 25).",
+        "Probably statistically significant difference in the median values of the CBZ metabolic rate constant ( K i ) ( P &lt; 0 Æ 001) between the elderly and relatively young epileptic patients was found.",
+        "Our results showed that age-related influences in CBZ pharmacokinetics in elderly patients should be considered in the optimal planning of CBZ dosage regimens."
+      ],
+      "notes": "The model is based on a non-parametric expectation maximization (NPEM) program and uses a one-compartment PK model with first-order absorption. The parameter estimates are reported as typical values, standard errors, and variability levels. The residual error is assumed to be proportional. The model includes individual variability in the parameters K_a, V_S1, and K_i. There is no direct evidence for covariate effects on these parameters."
+    }
+  },
+  "pipeline": {
+    "mode": "dual",
+    "status": "needs_review",
+    "model_present": true,
+    "comparison": {
+      "comparable": true,
+      "consistent": false,
+      "agreement": 0.0869565217391304,
+      "compared_fields": 23,
+      "difference_count": 21,
+      "major_difference_count": 16,
+      "differences": [
+        {
+          "field": "compound",
+          "text": "carbamazepine",
+          "vision": null,
+          "impact": "minor"
+        },
+        {
+          "field": "covariates",
+          "text": "age",
+          "vision": ["age (years)", "body weight (kg)"],
+          "impact": "major"
+        },
+        {
+          "field": "estimation_method",
+          "text": "non-parametric expectation maximization (NPEM)",
+          "vision": "non-parametric expectation maximization (NPEM) algorithm and iterative Bayesian (IT2B)",
+          "impact": "minor"
+        },
+        {
+          "field": "model_present",
+          "text": true,
+          "vision": false,
+          "impact": "major"
+        },
+        {
+          "field": "model_type",
+          "text": "one-compartment model with first-order absorption and elimination",
+          "vision": null,
+          "impact": "minor"
+        },
+        {
+          "field": "omega.VARIANCE OF K_A",
+          "text": 62.34,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "omega.VARIANCE OF K_I",
+          "text": 27.86,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "omega.VARIANCE OF V_S1",
+          "text": 61.74,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "population",
+          "text": "elderly patients on chronic monotherapy",
+          "vision": "elderly and young adult epileptic patients on chronic CBZ monotherapy (groups A, B)",
+          "impact": "minor"
+        },
+        {
+          "field": "residual_error",
+          "text": "proportional",
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "sigma.RESIDUAL ERROR FOR K_A",
+          "text": 0.2,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "sigma.RESIDUAL ERROR FOR K_I",
+          "text": 0.168,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "sigma.RESIDUAL ERROR FOR V_S1",
+          "text": 0.1,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "software",
+          "text": "NPEM program in the USC*PACK collection of PC programs",
+          "vision": "USC*PACK collection of PC programs; NONMEM computer program",
+          "impact": "minor"
+        },
+        {
+          "field": "structural.advan",
+          "text": 1,
+          "vision": 103,
+          "impact": "major"
+        },
+        {
+          "field": "structural.compartments",
+          "text": 1,
+          "vision": 2,
+          "impact": "major"
+        },
+        {
+          "field": "structural.description",
+          "text": "Linear one-compartment PK model with firstorder oral absorption",
+          "vision": "The study utilized a two-compartment model for carbamazepine (CBZ) pharmacokinetics. The structural equation is not explicitly provided in the text or figures.",
+          "impact": "major"
+        },
+        {
+          "field": "structural.trans",
+          "text": 0,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "theta.K_A",
+          "text": 0.61,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "theta.K_I",
+          "text": 0.04,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "theta.V_S1",
+          "text": 0.81,
+          "vision": null,
+          "impact": "major"
+        }
+      ]
+    },
+    "independent_models": true,
+    "warning": ""
+  }
+}

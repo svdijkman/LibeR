@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_24240511",
+  "pmid": "24240511",
+  "title": "Pharmacokinetics of lamotrigine in paediatric and young adult epileptic patients--nonlinear mixed effects modelling approach.",
+  "abstract": "",
+  "first_author": "Brzakovic",
+  "year": "2014",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_24240511_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/brzakovic-2014-24240511.pdf",
+    "sha256": "be49191424cdd9b74a5526c9a015c2362be28a94c02a4e8987d86738dbea7090"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

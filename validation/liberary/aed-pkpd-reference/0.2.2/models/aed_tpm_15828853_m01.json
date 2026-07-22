@@ -1,0 +1,756 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_tpm_15828853_m01",
+  "article_id": "pmid_15828853",
+  "pmid": "15828853",
+  "model_index": 1,
+  "compound_group": "TPM",
+  "family_id": "pmid_15828853",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/TPM/Supplement_TPM_v2.docx",
+      "sha256": "787967aa7c3412e38a96b3241a229e30daf1c8716a94187beb4eddc72e2c29d1",
+      "study_table": 1,
+      "study_row": 13,
+      "model_table": 2,
+      "model_row": 14
+    },
+    "publication_pdf": {
+      "path": "Supplements/TPM/articles/battino-2005-15828853 .pdf",
+      "sha256": "2fb709a8e9aa59eccf48d97fa350cbaa40222c776f4a6daa22c6c236b33d2892"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Battino 2005 15828853",
+    "population": "[Children not receiving enzyme inducers] N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers] N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers] N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers] N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+    "model_type": "PK",
+    "objective": "“To compare the steady-state pharmacokinetics of topiramate in a large population of children and adults with epilepsy in a therapeutic drug monitoring setting”",
+    "covariates": "Tested: Age, topiramate dose, sex and enzyme inducer comedication Included: Age, topiramate dose, enzyme inducer comedication",
+    "observations": "Topiramate CL/F is highest in young children and decreases progressively with age until puberty, presumably due to age-dependent changes in the rate of drug metabolism. Younger patients require higher dosages to achieve serum topiramate concentrations comparable with those found in older children and adults. Enzyme-inducing comedication decreases serum topiramate concentration by approximately one-half and one-third in children and adults, respectively. The multiple regression models applied do not allow the quantification of inter-individual variability but still provide a good understanding of parameter-covariate relationships.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "CL/F derived from Css Multiple regression model to quantify the relative contribution of each covariate to variability in topiramate CL/F",
+    "equations": "CL/F was derived as follows: CL/F (mL/h/kg) = Topiramate daily dose (mg/kg)/[Css (mg/mL) × 24h] Multiple regression models: Pooled data: CL/F = theta1 + theta2 × comedication – theta3 × age + theta4 × dose CL/F = 33.8 + 28.6 × comedication − 0.61 × age + 3.0 × dose Children: CL/F = theta1 + theta2 × comedication – theta3 × age + theta4 × dose CL/F = 41.6 + 42.0 × comedication − 2.5 × age + 4.1 × dose Adults: CL/F = theta1 + theta2 × comedication CL/F = 28.4 + 17.7 × comedication",
+    "parameter_values": "Pooled data: Theta1 = 33.8 Theta2 = 28.6 Theta3 = 0.61 Theta4 = 3.0 Children: Theta1 = 41.6 Theta2 = 42.0 Theta3 = 2.5 Theta4 = 4.1 Adults: Theta1 = 28.4 Theta2 = 17.7",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "TPM",
+      "population": "[Children not receiving enzyme inducers] N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers] N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers] N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers] N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+      "route": "oral",
+      "n_subjects": 140,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "[Children not receiving enzyme inducers] N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers] N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers] N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers] N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+        "n_total": 140,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "cohort_1",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 38
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 9.3,
+                    "sd": 4.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "9.3 ± 4.5",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 34.3,
+                    "sd": 16.7
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "34.3 ± 16.7 [Children receiving enzyme inducers]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 32
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 10.4,
+                    "sd": 5.4
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "10.4 ± 5.4",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 37.3,
+                    "sd": 21.3
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "37.3 ± 21.3 [Adults not receiving enzyme inducers]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_3",
+            "label": "cohort_3",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 38
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 35.8,
+                    "sd": 12.2
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "35.8 ± 12.2",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 67.8,
+                    "sd": 16.3
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "67.8 ± 16.3 [Adults receiving enzyme inducers]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_4",
+            "label": "cohort_4",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 32
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 37,
+                    "sd": 11.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "37.0 ± 11.5",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 67.6,
+                    "sd": 15
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "67.6 ± 15.0",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 13",
+          "evidence": "[Children not receiving enzyme inducers] N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers] N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers] N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers] N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 14",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "CL/F derived from Css Multiple regression model to quantify the relative contribution of each covariate to variability in topiramate CL/F",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["CL/F", "THETA2", "THETA3", "THETA4"]
+          },
+          "description": "CL/F derived from Css Multiple regression model to quantify the relative contribution of each covariate to variability in topiramate CL/F"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "CL/F derived from Css Multiple regression model to quantify the relative contribution of each covariate to variability in topiramate CL/F Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 33.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 41.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 28.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 28.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 42,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 17.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.61,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 2.5,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 4.1,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["Age", "topiramate dose", "enzyme inducer comedication"],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Battino",
+      "year": "2005",
+      "dose": "Steady-state oral doses in patients",
+      "population": "[Children not receiving enzyme inducers] N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers] N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers] N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers] N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+      "population_details": {
+        "raw": "[Children not receiving enzyme inducers] N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers] N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers] N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers] N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+        "n_total": 140,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "cohort_1",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 38
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 9.3,
+                    "sd": 4.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "9.3 ± 4.5",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 34.3,
+                    "sd": 16.7
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "34.3 ± 16.7 [Children receiving enzyme inducers]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 32
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 10.4,
+                    "sd": 5.4
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "10.4 ± 5.4",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 37.3,
+                    "sd": 21.3
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "37.3 ± 21.3 [Adults not receiving enzyme inducers]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_3",
+            "label": "cohort_3",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 38
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 35.8,
+                    "sd": 12.2
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "35.8 ± 12.2",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 67.8,
+                    "sd": 16.3
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "67.8 ± 16.3 [Adults receiving enzyme inducers]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_4",
+            "label": "cohort_4",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 32
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 37,
+                    "sd": 11.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "37.0 ± 11.5",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 67.6,
+                    "sd": 15
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "67.6 ± 15.0",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 13",
+          "evidence": "[Children not receiving enzyme inducers] N: 38 AGE: 9.3 ± 4.5 WT: 34.3 ± 16.7 [Children receiving enzyme inducers] N: 32 AGE: 10.4 ± 5.4 WT: 37.3 ± 21.3 [Adults not receiving enzyme inducers] N: 38 AGE: 35.8 ± 12.2 WT: 67.8 ± 16.3 [Adults receiving enzyme inducers] N: 32 AGE: 37.0 ± 11.5 WT: 67.6 ± 15.0",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 14",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“To compare the steady-state pharmacokinetics of topiramate in a large population of children and adults with epilepsy in a therapeutic drug monitoring setting”"
+    },
+    "covariates": {
+      "tested": ["Age", "topiramate dose", "sex and enzyme inducer comedication"],
+      "included": ["Age", "topiramate dose", "enzyme inducer comedication"],
+      "raw": "Tested: Age, topiramate dose, sex and enzyme inducer comedication Included: Age, topiramate dose, enzyme inducer comedication"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:22:57.856Z"
+}

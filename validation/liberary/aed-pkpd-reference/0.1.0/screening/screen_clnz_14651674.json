@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_clnz_14651674",
+  "pmid": "14651674",
+  "compound_group": "CLNZ",
+  "partition": "train",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/CLNZ/Supplement_CLNZ_v2.docx",
+    "sha256": "8a86ad372678a0af7df31d49c867ac3bf54f743a07e499c4b8f66af913fb314c"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_8877681_m01",
+  "article_id": "pmid_8877681",
+  "pmid": "8877681",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_8877681",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 31,
+      "model_table": 2,
+      "model_row": 35
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/yukawa-1996-8877681.pdf",
+      "sha256": "a2190e03b5563c237e755b93d8618465bf6f94621bb7910f452092ea35f70c91"
+    },
+    "metadata_csv": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+  },
+  "raw": {
+    "citation": "Yukawa 1996 8877681",
+    "population": "N: 466 (Japan) Age: 15±9.2 (0.3-72.9) WT: 41.3±17.7 (4.5-90)",
+    "model_type": "PK",
+    "objective": "“to detect the effects of other antiepileptic drugs on the population estimates of relative clearance of carbamazepine”",
+    "covariates": "WT, Dose, comedication of VPA, PHB or polytherapy with more than 2 antiepileptics on CL",
+    "observations": "No (i)pred vs observed concentrations given, making it difficult to judge the quality of the model fit. Assuming the fit is decent, this model will allow to adjust dosing for comedication use and weight",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK based on Css",
+    "equations": "CL/F=theta1*(WT**theta2)*(Dose**theta3)*(theta4**VPA)*(theta5**PHB)*(theta6**POLY)*(1+eta1) Css-ij=(Dij/(CLij*Tij))+eps1 Css-ij=’i’-th measured steady state concentration in the ‘j’-th patient Dij= dose of CBZ for ‘i’-th Css in the ‘j’-th patient CLj=clearance in the ‘j’-th patient Tij=dosing interval in hours for the ‘i’-th dosage in the ‘j’-th patient Dose=CBZ dose in mg/day VPA= comedication with valproic acid alone (yes =1, no=0) PHB= comedication with phenobarbital alone (yes =1, no=0) POLY= comedication with more than 2 other anticonvulsants (yes =1, no=0)",
+    "parameter_values": "theta1=0.064 theta2=0.199 theta3=0.465 theta4=1.07 theta5=1.16 theta6=1.27 omega1=0.0262 sigma1=1.05",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Detection of carbamazepine drug interaction by multiple peak approach screening using routine clinical pharmacokinetic data.",
+      "compound": "CBZ",
+      "population": "N: 466 (Japan) Age: 15±9.2 (0.3-72.9) WT: 41.3±17.7 (4.5-90)",
+      "route": "oral",
+      "n_subjects": 466,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "Simplified PK based on Css"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 0.064,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.199,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.465,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.07,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.16,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.27,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0262,
+            "reported_metric": "variance",
+            "value": 0.0262,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 1.05,
+            "reported_metric": "variance",
+            "value": 1.05,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "CL/F=theta1*(WT**theta2)*(Dose**theta3)*(theta4**VPA)*(theta5**PHB)*(theta6**POLY)*(1+eta1) Css-ij=(Dij/(CLij*Tij))+eps1 Css-ij=’i’-th measured steady state concentration in the ‘j’-th patient Dij= dose of CBZ for ‘i’-th Css in the ‘j’-th patient CLj=clearance in the ‘j’-th patient Tij=dosing interval in hours for the ‘i’-th dosage in the ‘j’-th patient Dose=CBZ dose in mg/day VPA= comedication with valproic acid alone (yes =1, no=0) PHB= comedication with phenobarbital alone (yes =1, no=0) POLY= comedication with more than 2 other anticonvulsants (yes =1, no=0)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Yukawa",
+      "year": "1996",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 466 (Japan) Age: 15±9.2 (0.3-72.9) WT: 41.3±17.7 (4.5-90)",
+      "objective": "“to detect the effects of other antiepileptic drugs on the population estimates of relative clearance of carbamazepine”"
+    },
+    "covariates": {
+      "tested": ["WT", "Dose", "comedication of VPA", "PHB or polytherapy with more than 2 antiepileptics on CL"],
+      "included": [],
+      "raw": "WT, Dose, comedication of VPA, PHB or polytherapy with more than 2 antiepileptics on CL"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:23:10.621Z"
+}

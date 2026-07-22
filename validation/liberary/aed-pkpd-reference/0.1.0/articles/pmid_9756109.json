@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9756109",
+  "pmid": "9756109",
+  "title": "",
+  "abstract": "",
+  "first_author": "Sanchez-Alcaraz",
+  "year": "1998",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_9756109_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/sanchez-alcaraz-1998-9756109.pdf",
+    "sha256": "1f8de65603b6b8bac4b033fa2a2aa51f4f42e51937acdd9ef129d9c59fd256ae"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_lmt_10930965_m01",
+  "screening_id": null,
+  "article_id": "pmid_10930965",
+  "pmid": "10930965",
+  "source_pdf_sha256": "10639b367dcc7afb0fec0933eb723890919cd61726dde2b37eba8e44f12d3ce3",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:38:03.428Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Validation of a population pharmacokinetic model for adjunctive lamotrigine therapy in children",
+    "compound": "lamotrigine",
+    "population": null,
+    "route": null,
+    "n_subjects": 508,
+    "software": "NONMEM",
+    "estimation_method": "nonlinear mixed-effect modeling",
+    "model_type": "popPK model",
+    "structural_model": {
+      "advan": 1,
+      "trans": 1,
+      "compartments": 1,
+      "description": "One-compartment open model with first-order absorption and elimination"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "CLpop",
+          "typical": 39.8,
+          "se": 2.12,
+          "unit": "ml/min/kg"
+        },
+        {
+          "name": "Vpop",
+          "typical": 42.7,
+          "se": 2.45,
+          "unit": "L/kg"
+        },
+        {
+          "name": "ka",
+          "typical": 1.09,
+          "se": 0.163,
+          "unit": "h^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Intravenous clearance (CL) interindividual variability",
+          "parameter": "CLpop",
+          "eta_index": 1,
+          "eta_distribution": "log_normal",
+          "eta_expression": "log(1 + H1 * WT + H2 * BAL + H3 * VPA + H4 * SEX)",
+          "variability_level": "iiv",
+          "reported_value": 0.968,
+          "reported_metric": "variance",
+          "value": 0.936,
+          "conversion": "sqrt"
+        },
+        {
+          "description": "Volume of distribution (V) interindividual variability",
+          "parameter": "Vpop",
+          "eta_index": 2,
+          "eta_distribution": "log_normal",
+          "eta_expression": "H6 * WT",
+          "variability_level": "iiv",
+          "reported_value": 0.994,
+          "reported_metric": "variance",
+          "value": 0.259,
+          "conversion": "sqrt"
+        },
+        {
+          "description": "Absorption rate constant (ka) interindividual variability",
+          "parameter": "ka",
+          "eta_index": 3,
+          "eta_distribution": "log_normal",
+          "eta_expression": "H7",
+          "variability_level": "iiv",
+          "reported_value": 1.04,
+          "reported_metric": "variance",
+          "value": 0.163,
+          "conversion": "sqrt"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 1,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 2,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error for clearance (CL)",
+          "error_model": "additive",
+          "reported_value": 0.0641,
+          "reported_metric": "sd",
+          "value": 0.0583,
+          "conversion": "unknown"
+        },
+        {
+          "description": "Residual error for volume of distribution (V)",
+          "error_model": "additive",
+          "reported_value": 0.126,
+          "reported_metric": "sd",
+          "value": 0.117,
+          "conversion": "unknown"
+        },
+        {
+          "description": "Residual error for absorption rate constant (ka)",
+          "error_model": "additive",
+          "reported_value": 0.245,
+          "reported_metric": "sd",
+          "value": 0.231,
+          "conversion": "unknown"
+        }
+      ]
+    },
+    "covariates": [
+      "WT",
+      "BAL",
+      "VPA",
+      "SEX"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.952,
+      "fields": {
+        "structure": 0.873,
+        "parameters": 0.941,
+        "population": 0.968,
+        "software": 0.98
+      }
+    },
+    "evidence_quotes": [
+      "The objective of the current analysis was to validate a previously developed paediatric population pharmacokinetic model in order to establish a basis for dosage recommendations in adjunctive therapies.",
+      "Prediction performance of the final pharmacostatistical model was superior to that of the initial model."
+    ],
+    "notes": "The paper does not provide explicit values for covariance between parameters or residual error correlations. The reported CVs are based on the NONMEM variance estimates and transformed into SDs where necessary."
+  },
+  "variants": {
+    "text": {
+      "title": "Validation of a population pharmacokinetic model for adjunctive lamotrigine therapy in children",
+      "compound": "lamotrigine",
+      "population": null,
+      "route": null,
+      "n_subjects": 508,
+      "software": "NONMEM",
+      "estimation_method": "nonlinear mixed-effect modeling",
+      "model_type": "popPK model",
+      "structural_model": {
+        "advan": 1,
+        "trans": 1,
+        "compartments": 1,
+        "description": "One-compartment open model with first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CLpop",
+            "typical": 39.8,
+            "se": 2.12,
+            "unit": "ml/min/kg"
+          },
+          {
+            "name": "Vpop",
+            "typical": 42.7,
+            "se": 2.45,
+            "unit": "L/kg"
+          },
+          {
+            "name": "ka",
+            "typical": 1.09,
+            "se": 0.163,
+            "unit": "h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Intravenous clearance (CL) interindividual variability",
+            "parameter": "CLpop",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "log(1 + H1 * WT + H2 * BAL + H3 * VPA + H4 * SEX)",
+            "variability_level": "iiv",
+            "reported_value": 0.968,
+            "reported_metric": "variance",
+            "value": 0.936,
+            "conversion": "sqrt"
+          },
+          {
+            "description": "Volume of distribution (V) interindividual variability",
+            "parameter": "Vpop",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "H6 * WT",
+            "variability_level": "iiv",
+            "reported_value": 0.994,
+            "reported_metric": "variance",
+            "value": 0.259,
+            "conversion": "sqrt"
+          },
+          {
+            "description": "Absorption rate constant (ka) interindividual variability",
+            "parameter": "ka",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "H7",
+            "variability_level": "iiv",
+            "reported_value": 1.04,
+            "reported_metric": "variance",
+            "value": 0.163,
+            "conversion": "sqrt"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 1,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error for clearance (CL)",
+            "error_model": "additive",
+            "reported_value": 0.0641,
+            "reported_metric": "sd",
+            "value": 0.0583,
+            "conversion": "unknown"
+          },
+          {
+            "description": "Residual error for volume of distribution (V)",
+            "error_model": "additive",
+            "reported_value": 0.126,
+            "reported_metric": "sd",
+            "value": 0.117,
+            "conversion": "unknown"
+          },
+          {
+            "description": "Residual error for absorption rate constant (ka)",
+            "error_model": "additive",
+            "reported_value": 0.245,
+            "reported_metric": "sd",
+            "value": 0.231,
+            "conversion": "unknown"
+          }
+        ]
+      },
+      "covariates": [
+        "WT",
+        "BAL",
+        "VPA",
+        "SEX"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.952,
+        "fields": {
+          "structure": 0.873,
+          "parameters": 0.941,
+          "population": 0.968,
+          "software": 0.98
+        }
+      },
+      "evidence_quotes": [
+        "The objective of the current analysis was to validate a previously developed paediatric population pharmacokinetic model in order to establish a basis for dosage recommendations in adjunctive therapies.",
+        "Prediction performance of the final pharmacostatistical model was superior to that of the initial model."
+      ],
+      "notes": "The paper does not provide explicit values for covariance between parameters or residual error correlations. The reported CVs are based on the NONMEM variance estimates and transformed into SDs where necessary."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

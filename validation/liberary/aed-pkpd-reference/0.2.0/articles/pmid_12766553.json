@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_12766553",
+  "pmid": "12766553",
+  "title": "Population pharmacokinetics of carbamazepine in Chinese epilepsy patients.",
+  "abstract": "",
+  "first_author": "Jiao",
+  "year": "2003",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_12766553_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/jiao-2003-12766553.pdf",
+    "sha256": "fe10a5ce39b4c3762577869df770a84265b4e0580018a0b9a639e007d2f467bd"
+  },
+  "metadata_source": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+}

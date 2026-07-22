@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_pht_2921305_m01",
+  "screening_id": null,
+  "article_id": "pmid_2921305",
+  "pmid": "2921305",
+  "source_pdf_sha256": "e54ac43cb3fa89c697b5cdd1924e9c875d39f7aa02f8cfef57603a84f7bc33a9",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:46:52.083Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population pharmacokinetics of phenytoin from routine clinical data in Japan",
+    "compound": "Phenytoin (PHT)",
+    "population": null,
+    "route": null,
+    "n_subjects": 220,
+    "software": "NONMEM",
+    "estimation_method": "extended least squares",
+    "model_type": "nonlinear mixed effects model",
+    "structural_model": {
+      "advan": 1,
+      "trans": 1,
+      "compartments": 1,
+      "description": "Michaelis-Menten model for phenytoin"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "Vj",
+          "typical": 369,
+          "se": null,
+          "unit": "mg/day"
+        },
+        {
+          "name": "Kj",
+          "typical": 3.67,
+          "se": null,
+          "unit": "1/mg/l"
+        },
+        {
+          "name": "Fj",
+          "typical": 0.895,
+          "se": null,
+          "unit": null
+        }
+      ],
+      "omega": [
+        {
+          "description": "Interindividual variability in Vj and Kj",
+          "parameter": "Vj",
+          "eta_index": 1,
+          "eta_distribution": "log_normal",
+          "eta_expression": "Vj = V * (Wj/60)^OBAj",
+          "variability_level": "iiv",
+          "reported_value": null,
+          "reported_metric": "cv_percent",
+          "value": 18.696,
+          "conversion": "sqrt(1 + (18.696 / 100)^2)"
+        },
+        {
+          "description": "Interindividual variability in Kj",
+          "parameter": "Kj",
+          "eta_index": 2,
+          "eta_distribution": "log_normal",
+          "eta_expression": "Kj = K * (A~j)^BAj",
+          "variability_level": "iiv",
+          "reported_value": null,
+          "reported_metric": "cv_percent",
+          "value": 57.4,
+          "conversion": "sqrt(1 + (57.4 / 100)^2)"
+        },
+        {
+          "description": "Intraindividual variability in Rj",
+          "parameter": "Rj",
+          "eta_index": null,
+          "eta_distribution": "normal",
+          "eta_expression": "In Rj = In R + E",
+          "variability_level": "iov",
+          "reported_value": 11.4,
+          "reported_metric": "cv_percent",
+          "value": 0.3297865,
+          "conversion": "sqrt(1 + (11.4 / 100)^2)"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error in Rj",
+          "error_model": "additive",
+          "reported_value": 0.84,
+          "reported_metric": "cv_percent",
+          "value": 0.2756319,
+          "conversion": "sqrt(1 + (0.84 / 100)^2)"
+        }
+      ]
+    },
+    "covariates": [
+      "weight",
+      "age",
+      "dosage form"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.95,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.92,
+        "population": 0.91,
+        "software": 0.93
+      }
+    },
+    "evidence_quotes": [
+      "The V , and K, of a 60-kg adult out-patient were estimated to be 369 mg/day and 3.67 mg/l, respectively.",
+      "The typical magnitude of the interindividual variability, as expressed by the coefficient of variation, was 18.696 for the V , and 57.4% for the K,.",
+      "T h e small standard errors in Table 3 indicate a good fit with reliable parameter estimates."
+    ],
+    "notes": "The model includes interindividual variability adjusted by weight and age, but no direct IIV/BSV or IOV blocks are specified. The residual error is additive with a CV of 11.4%. The model does not explicitly state the conversion for OMEGA values to NONMEM variance."
+  },
+  "variants": {
+    "text": {
+      "title": "Population pharmacokinetics of phenytoin from routine clinical data in Japan",
+      "compound": "Phenytoin (PHT)",
+      "population": null,
+      "route": null,
+      "n_subjects": 220,
+      "software": "NONMEM",
+      "estimation_method": "extended least squares",
+      "model_type": "nonlinear mixed effects model",
+      "structural_model": {
+        "advan": 1,
+        "trans": 1,
+        "compartments": 1,
+        "description": "Michaelis-Menten model for phenytoin"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Vj",
+            "typical": 369,
+            "se": null,
+            "unit": "mg/day"
+          },
+          {
+            "name": "Kj",
+            "typical": 3.67,
+            "se": null,
+            "unit": "1/mg/l"
+          },
+          {
+            "name": "Fj",
+            "typical": 0.895,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Interindividual variability in Vj and Kj",
+            "parameter": "Vj",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "Vj = V * (Wj/60)^OBAj",
+            "variability_level": "iiv",
+            "reported_value": null,
+            "reported_metric": "cv_percent",
+            "value": 18.696,
+            "conversion": "sqrt(1 + (18.696 / 100)^2)"
+          },
+          {
+            "description": "Interindividual variability in Kj",
+            "parameter": "Kj",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "Kj = K * (A~j)^BAj",
+            "variability_level": "iiv",
+            "reported_value": null,
+            "reported_metric": "cv_percent",
+            "value": 57.4,
+            "conversion": "sqrt(1 + (57.4 / 100)^2)"
+          },
+          {
+            "description": "Intraindividual variability in Rj",
+            "parameter": "Rj",
+            "eta_index": null,
+            "eta_distribution": "normal",
+            "eta_expression": "In Rj = In R + E",
+            "variability_level": "iov",
+            "reported_value": 11.4,
+            "reported_metric": "cv_percent",
+            "value": 0.3297865,
+            "conversion": "sqrt(1 + (11.4 / 100)^2)"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error in Rj",
+            "error_model": "additive",
+            "reported_value": 0.84,
+            "reported_metric": "cv_percent",
+            "value": 0.2756319,
+            "conversion": "sqrt(1 + (0.84 / 100)^2)"
+          }
+        ]
+      },
+      "covariates": [
+        "weight",
+        "age",
+        "dosage form"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.95,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.92,
+          "population": 0.91,
+          "software": 0.93
+        }
+      },
+      "evidence_quotes": [
+        "The V , and K, of a 60-kg adult out-patient were estimated to be 369 mg/day and 3.67 mg/l, respectively.",
+        "The typical magnitude of the interindividual variability, as expressed by the coefficient of variation, was 18.696 for the V , and 57.4% for the K,.",
+        "T h e small standard errors in Table 3 indicate a good fit with reliable parameter estimates."
+      ],
+      "notes": "The model includes interindividual variability adjusted by weight and age, but no direct IIV/BSV or IOV blocks are specified. The residual error is additive with a CV of 11.4%. The model does not explicitly state the conversion for OMEGA values to NONMEM variance."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

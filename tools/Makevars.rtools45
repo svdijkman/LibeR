@@ -1,0 +1,5 @@
+# Compatibility shim for validating this checkout with the installed Rtools45
+# toolchain under R 4.6 development builds. Official release CI uses the
+# Rtools version selected by r-lib/actions for its R release.
+PATH := /x86_64-w64-mingw32.static.posix/bin:/usr/bin:$(PATH)
+BINPREF = C:/rtools45/x86_64-w64-mingw32.static.posix/bin/

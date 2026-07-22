@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_17304159",
+  "pmid": "17304159",
+  "title": "Population estimation of the effects of cytochrome P450 2C9 and 2C19 polymorphisms on phenobarbital clearance in Japanese.",
+  "abstract": "",
+  "first_author": "Goto",
+  "year": "2007",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_17304159_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/goto-2007-17304159.pdf",
+    "sha256": "4bf24aeb4d362b7d1e35c7dda9c49266a47809cda293d902af1d27568be4e5be"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

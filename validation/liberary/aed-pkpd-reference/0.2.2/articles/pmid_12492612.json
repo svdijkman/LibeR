@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_12492612",
+  "pmid": "12492612",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ogutu",
+  "year": "2002",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_12492612_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/ogutu-2002-12492612.pdf",
+    "sha256": "afb46391e53d58ff10beefb02a8206f6800dbce7cdaee441c490508e03a7026e"
+  },
+  "metadata_source": ""
+}

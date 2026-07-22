@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_24125961",
+  "pmid": "24125961",
+  "title": "Effects of EPHX1, SCN1A and CYP3A4 genetic polymorphisms on plasma carbamazepine concentrations and pharmacoresistance in Chinese patients with epilepsy.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "CBZ",
+  "model_ids": [],
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/exclude/yun-2013-24125961.pdf",
+    "sha256": "5d6a9890b0d3b19dde6124525cbab5e019bfdf318063456498fe48195a0021db"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

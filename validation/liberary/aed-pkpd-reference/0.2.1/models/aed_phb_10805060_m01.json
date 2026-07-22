@@ -1,0 +1,426 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_phb_10805060_m01",
+  "article_id": "pmid_10805060",
+  "pmid": "10805060",
+  "model_index": 1,
+  "compound_group": "PHB",
+  "family_id": "pmid_10805060",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHB/Supplement_PHB_v2.docx",
+      "sha256": "39bb55d9429e37117ffc07563feb43f6c8dd7efc1640282803c2fed77f0ba449",
+      "study_table": 1,
+      "study_row": 13,
+      "model_table": 2,
+      "model_row": 15
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHB/articles/mamiya-2000-10805060.pdf",
+      "sha256": "cda8bae5f5deae2f2ca77d18f17f2b0ae8f11ceca5d52162ce72e6abebb9c82d"
+    },
+    "metadata_csv": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+  },
+  "raw": {
+    "citation": "Mamiya 2000 10805060",
+    "population": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+    "model_type": "PK",
+    "objective": "“to clarify using population pharmacokinetic analysis whether CYP2C19 polymorphism affects PB pharmacokinetics”",
+    "covariates": "Tested: WT, CYP2C19 on CL Included: WT, CYP2C19 on CL",
+    "observations": "Poor metabolisers show a PHB CL reduced by 19.8%. No goodness of fit or other measures to judge the model quality by.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK",
+    "equations": "G1=0 if(CYP2C19==11 | CYP2C19==22 | CYP2C19==23†) G1=1 CL/F=theta1*((WT/60)**theta2)*(1+theta3**G1)*(1+eta1) Css=D/(CL*Tau) Cobs=Css*(1+eps1) † if CYP2C19 is one of *1/*1, *2/*2 or *2/*3, the individual is a poor metabolizer Theta1 converted from mL/kg/h as reported in the article to L/h Theta2 converted due to CL conversion",
+    "parameter_values": "theta1=0.2802 theta2=0.367 theta3=0.812 omega1=0.052 sigma1=0.022",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "CYP2C19 polymorphism effect on phenobarbitone. Pharmacokinetics in Japanese patients with epilepsy: analysis by population pharmacokinetics.",
+      "compound": "PHB",
+      "population": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+      "route": "oral",
+      "n_subjects": 74,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+        "n_total": 74,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 74
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 50.5,
+                    "sd": 13.4
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "50.5±13.4",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 59,
+                    "sd": 11
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [
+              {
+                "gene": "CYP2C19",
+                "variant": null,
+                "diplotype": null,
+                "phenotype": null,
+                "n": null,
+                "proportion": null,
+                "assay": null,
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+                  "confidence": 0.7
+                }
+              }
+            ],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 13",
+          "evidence": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 15",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["CL/F", "THETA2", "THETA3"]
+          },
+          "description": "Simplified PK"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 0.2802,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.367,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.812,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.052,
+            "reported_metric": "variance",
+            "value": 0.052,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.022,
+            "reported_metric": "variance",
+            "value": 0.022,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "CYP2C19 on CL"],
+      "residual_error": "G1=0 if(CYP2C19==11 | CYP2C19==22 | CYP2C19==23†) G1=1 CL/F=theta1*((WT/60)**theta2)*(1+theta3**G1)*(1+eta1) Css=D/(CL*Tau) Cobs=Css*(1+eps1) † if CYP2C19 is one of *1/*1, *2/*2 or *2/*3, the individual is a poor metabolizer Theta1 converted from mL/kg/h as reported in the article to L/h Theta2 converted due to CL conversion",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Mamiya",
+      "year": "2000",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+      "population_details": {
+        "raw": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+        "n_total": 74,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 74
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 50.5,
+                    "sd": 13.4
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "50.5±13.4",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 59,
+                    "sd": 11
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [
+              {
+                "gene": "CYP2C19",
+                "variant": null,
+                "diplotype": null,
+                "phenotype": null,
+                "n": null,
+                "proportion": null,
+                "assay": null,
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+                  "confidence": 0.7
+                }
+              }
+            ],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 13",
+          "evidence": "N: 74 (Japanese) Age: 50.5±13.4 WT: 59.0±11.0 [CYP2C19] *1/*1: 33 *1/*2/3: 35 *2/*2/3: 6",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 15",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to clarify using population pharmacokinetic analysis whether CYP2C19 polymorphism affects PB pharmacokinetics”"
+    },
+    "covariates": {
+      "tested": ["WT", "CYP2C19 on CL"],
+      "included": ["WT", "CYP2C19 on CL"],
+      "raw": "Tested: WT, CYP2C19 on CL Included: WT, CYP2C19 on CL"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:05:24.664Z"
+}

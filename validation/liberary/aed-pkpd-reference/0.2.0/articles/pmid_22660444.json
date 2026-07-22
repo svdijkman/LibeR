@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_22660444",
+  "pmid": "22660444",
+  "title": "Population pharmacokinetics of lamotrigine in Indian epileptic patients.",
+  "abstract": "",
+  "first_author": "Mallaysamy",
+  "year": "2013",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_22660444_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/mallaysamy-2013-22660444.pdf",
+    "sha256": "7eb0cb3db4c52ade5fbbb42d0a73afe3ee92139e14122f502fdbdf146f40a79b"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

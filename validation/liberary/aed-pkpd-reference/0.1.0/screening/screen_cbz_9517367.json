@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_cbz_9517367",
+  "pmid": "9517367",
+  "compound_group": "CBZ",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/CBZ/articles/exclude/mahmood-1998-9517367.pdf",
+    "sha256": "f83ddf6257533735df5a41c30790ab925b108e50756e8844deb5fa00650c318a"
+  }
+}

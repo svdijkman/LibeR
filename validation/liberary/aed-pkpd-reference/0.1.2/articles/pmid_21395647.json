@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_21395647",
+  "pmid": "21395647",
+  "title": "Trimethoprim/sulfamethoxazole-induced phenytoin toxicity in the elderly: a population-based study.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/tony-2011-21395647.pdf",
+    "sha256": "ad847b8b23628d845bba52d47165ea079a50623ef59ea815cdb9f2029831a262"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

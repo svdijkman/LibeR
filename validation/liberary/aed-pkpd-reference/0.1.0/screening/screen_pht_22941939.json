@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_22941939",
+  "pmid": "22941939",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/kiang-2012-22941939.pdf",
+    "sha256": "f03f1ebaaf3b1b78b212f596c73b0d815ace5c6879675364098f1ea8bacfac24"
+  }
+}

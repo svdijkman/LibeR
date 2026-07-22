@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_16243221",
+  "pmid": "16243221",
+  "title": "Oxcarbazepine in infants and young children with partial seizures.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "OXC",
+  "model_ids": [],
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/OXC/articles/excluded/northam-2005-16243221.pdf",
+    "sha256": "7bcf1e677e2932f5f66cd235007feff20ff374d18d9df3cf604a44cd03489e14"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

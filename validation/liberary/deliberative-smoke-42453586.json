@@ -1,0 +1,514 @@
+{
+  "pmid": "42453586",
+  "available": true,
+  "model_present": true,
+  "model_probability": 1,
+  "title": "Optimization of linezolid infusion duration in critically ill patients: a population pharmacokinetic analysis of the trade-off between efficacy and toxicity.",
+  "compound": "Linezolid",
+  "model_type": "One-compartment model with covariate-adjusted V and CL",
+  "claims": 45,
+  "open_questions": 29,
+  "checks": {
+    "ready": false,
+    "coverage": {
+      "structure": true,
+      "theta": true,
+      "omega": true,
+      "sigma": true,
+      "covariates": true,
+      "population": true,
+      "dosing": true,
+      "reproduction": false
+    },
+    "coverage_fraction": 0.875,
+    "final_model_identified": true,
+    "skeptical_review_ready": false,
+    "unresolved_high_priority_questions": [
+      {
+        "id": "reconnaissance::Q1",
+        "field": "model validation",
+        "question": "How does the final model perform in terms of goodness-of-fit, stability, and predictive accuracy?",
+        "priority": "high",
+        "search_terms": [
+          "GOF plots",
+          "Bootstrap analysis",
+          "VPC"
+        ],
+        "investigation_stage": "reconnaissance"
+      },
+      {
+        "id": "reconnaissance::Q3",
+        "field": "composite target attainment",
+        "question": "How does the PTA vary across different infusion durations and doses under the defined composite efficacy-safety targets?",
+        "priority": "high",
+        "search_terms": [
+          "Monte Carlo simulation",
+          "dosing matrix",
+          "virtual pathogens"
+        ],
+        "investigation_stage": "reconnaissance"
+      },
+      {
+        "id": "theta_covariates::reconnaissance::Claim_24_residual_unexplained_variability",
+        "field": "final residual unexplained variability for V and CL with covariates",
+        "question": "What is the final residual unexplained variability for V and CL with covariates in the model?",
+        "priority": "high",
+        "search_terms": [
+          "residual unexplained variability",
+          "V",
+          "CL",
+          "covariates"
+        ],
+        "investigation_stage": "omega_iov"
+      },
+      {
+        "id": "theta_covariates::reconnaissance::Claim_25_residual_unexplained_variability",
+        "field": "final residual unexplained variability for V and CL without covariates (base model)",
+        "question": "What is the final residual unexplained variability for V and CL without covariates in the base model?",
+        "priority": "high",
+        "search_terms": [
+          "residual unexplained variability",
+          "V",
+          "CL",
+          "base model"
+        ],
+        "investigation_stage": "omega_iov"
+      },
+      {
+        "id": "reconnaissance::Question_1",
+        "field": "What were the key covariates identified in the model?",
+        "question": "WT, age, sex, ALB, and CLcr were evaluated as covariates.",
+        "priority": "high",
+        "search_terms": [
+          "covariates",
+          "model evaluation"
+        ],
+        "investigation_stage": "reproduction_data"
+      },
+      {
+        "id": "reconnaissance::Question_2",
+        "field": "How did the model validate its predictive accuracy?",
+        "question": "The final model's stability and predictive performance were assessed using a multi-faceted approach.",
+        "priority": "high",
+        "search_terms": [
+          "model validation",
+          "predictive accuracy"
+        ],
+        "investigation_stage": "reproduction_data"
+      },
+      {
+        "id": "falsification_1::6",
+        "field": "Data availability statement and ethics statement",
+        "question": "Is there any missing critical information in the data availability statement or ethics statement?",
+        "priority": "high",
+        "search_terms": [
+          "data sharing",
+          "patient consent",
+          "ethics approval"
+        ],
+        "investigation_stage": "falsification_1"
+      },
+      {
+        "id": "reconnaissance::Claim_2",
+        "field": "covariates evaluated",
+        "question": "Were all five covariates (WT, age, sex, ALB, CLcr) included in the final model or only a subset?",
+        "priority": "high",
+        "search_terms": [
+          "covariate selection",
+          "SCM results"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "theta_covariates::reconnaissance::Claim_10_final_theta",
+        "field": "final THETAs for V and CL with covariates",
+        "question": "What are the exact equations used in the final model, including exponents and typical values?",
+        "priority": "high",
+        "search_terms": [
+          "V equation",
+          "CL equation"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "reconnaissance::Claim_1",
+        "field": "patient characteristics",
+        "question": "How many patients were initially enrolled versus how many completed the study, and what was the final sample size?",
+        "priority": "high",
+        "search_terms": [
+          "enrollment numbers",
+          "exclusion criteria"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "reconnaissance::Question_1",
+        "field": "What were the key covariates identified in the model?",
+        "question": "Which of the five candidate covariates made it into the final model, and why?",
+        "priority": "high",
+        "search_terms": [
+          "covariate significance",
+          "SCM output"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "reconnaissance::Question_2",
+        "field": "How did the model validate its predictive accuracy?",
+        "question": "What specific metrics were used to assess goodness-of-fit, bootstrap success rate, and VPC performance?",
+        "priority": "high",
+        "search_terms": [
+          "validation metrics",
+          "GOF statistics"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "reconnaissance::Question_3",
+        "field": "What was the optimal infusion duration for different dose levels?",
+        "question": "For each dose level (e.g., 600 mg, 900 mg), what infusion durations were tested and which yielded highest PTA?",
+        "priority": "high",
+        "search_terms": [
+          "dose-duration matrix",
+          "PTA results"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "theta_covariates::reconnaissance::Claim_24_residual_unexplained_variability",
+        "field": "final residual unexplained variability for V and CL with covariates",
+        "question": "What is the overall residual error (e.g., additive, proportional) reported in the final model?",
+        "priority": "high",
+        "search_terms": [
+          "residual error",
+          "omega sigma"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "theta_covariates::reconnaissance::Claim_25_residual_unexplained_variability",
+        "field": "final residual unexplained variability for V and CL without covariates (base model)",
+        "question": "What is the overall residual error in the base model before covariate adjustment?",
+        "priority": "high",
+        "search_terms": [
+          "residual error",
+          "omega sigma"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "falsification_1::6",
+        "field": "Data availability statement and ethics statement",
+        "question": "Is there an explicit data sharing policy or IRB approval number listed in the manuscript?",
+        "priority": "high",
+        "search_terms": [
+          "ethics approval",
+          "data sharing"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "falsification_1::7",
+        "field": "Model validation and robustness",
+        "question": "What specific statistical metrics were reported for model stability (e.g., bootstrap success rate, shrinkage values)?",
+        "priority": "high",
+        "search_terms": [
+          "bootstrap results",
+          "shrinkage"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "visual_verification::Q1",
+        "field": "covariate selection process",
+        "question": "Were all five covariates (WT, age, sex, ALB, CLcr) included in the final model or only a subset? If so, which ones and why?",
+        "priority": "high",
+        "search_terms": [
+          "covariate significance",
+          "SCM output"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "visual_verification::Q2",
+        "field": "final parameter equations",
+        "question": "What are the exact equations used in the final model for V and CL, including exponents and typical values?",
+        "priority": "high",
+        "search_terms": [
+          "V equation",
+          "CL equation"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "visual_verification::Q3",
+        "field": "patient enrollment numbers",
+        "question": "How many patients were initially enrolled versus how many completed the study, and what was the final sample size used for modeling?",
+        "priority": "high",
+        "search_terms": [
+          "enrollment numbers",
+          "exclusion criteria"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "visual_verification::Q4",
+        "field": "validation metrics",
+        "question": "What specific statistical metrics were reported for model stability (e.g., bootstrap success rate, shrinkage values) and predictive performance?",
+        "priority": "high",
+        "search_terms": [
+          "bootstrap results",
+          "shrinkage"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "visual_verification::Q5",
+        "field": "residual error structure",
+        "question": "What is the overall residual error (e.g., additive, proportional) reported in both base and final models?",
+        "priority": "high",
+        "search_terms": [
+          "omega sigma",
+          "residual error"
+        ],
+        "investigation_stage": "visual_verification"
+      },
+      {
+        "id": "visual_verification::Q6",
+        "field": "ethics statement details",
+        "question": "Is there an explicit data sharing policy or IRB approval number listed in the manuscript, along with patient consent procedures?",
+        "priority": "high",
+        "search_terms": [
+          "ethics approval",
+          "data sharing"
+        ],
+        "investigation_stage": "visual_verification"
+      }
+    ],
+    "unresolved_major_contradictions": [],
+    "reported_claims_without_evidence": [],
+    "conflicting_claims": [],
+    "errors": ["High-priority evidence questions remain unresolved.", "The latest skeptical review did not find the record ready for synthesis."],
+    "warnings": []
+  },
+  "stages": {
+    "reconnaissance": {
+      "stage": "reconnaissance",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 93.4186,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/reconnaissance.json"
+    },
+    "investigate_structure": {
+      "stage": "investigate_structure",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 70.5141,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/investigate_structure.json"
+    },
+    "investigate_theta_covariates": {
+      "stage": "investigate_theta_covariates",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 35.8711,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/investigate_theta_covariates.json"
+    },
+    "investigate_omega_iov": {
+      "stage": "investigate_omega_iov",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 97.9722,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/investigate_omega_iov.json"
+    },
+    "investigate_sigma_observation": {
+      "stage": "investigate_sigma_observation",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 37.3188,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/investigate_sigma_observation.json"
+    },
+    "investigate_population_dosing": {
+      "stage": "investigate_population_dosing",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 43.2145,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/investigate_population_dosing.json"
+    },
+    "investigate_reproduction_data": {
+      "stage": "investigate_reproduction_data",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 64.3504,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/investigate_reproduction_data.json"
+    },
+    "falsification_1": {
+      "stage": "falsification_1",
+      "role": "assessment",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 29.9627,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/falsification_1.json"
+    },
+    "gap_search_1": {
+      "stage": "gap_search_1",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 41.1411,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/gap_search_1.json"
+    },
+    "falsification_2": {
+      "stage": "falsification_2",
+      "role": "assessment",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 23.7138,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5024964934,
+        "size_vram_bytes": 5024964934,
+        "context_length": 16384
+      },
+      "retry_count": 0,
+      "cached": true,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/falsification_2.json"
+    },
+    "visual_verification": {
+      "stage": "visual_verification",
+      "role": "vision",
+      "provider": "ollama",
+      "model": "qwen3.5:9b",
+      "elapsed_seconds": 209.683,
+      "runtime": {
+        "processor": "78% GPU / 22% CPU",
+        "gpu_percent": 78,
+        "cpu_percent": 22,
+        "size_bytes": 6969863694,
+        "size_vram_bytes": 5443231414,
+        "context_length": 32768
+      },
+      "retry_count": 0,
+      "cached": false,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/visual_verification.json"
+    },
+    "synthesis": {
+      "stage": "synthesis",
+      "role": "indexing",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "elapsed_seconds": 67.9443,
+      "runtime": {
+        "processor": "100% GPU / 0% CPU",
+        "gpu_percent": 100,
+        "cpu_percent": 0,
+        "size_bytes": 5540864326,
+        "size_vram_bytes": 5540864326,
+        "context_length": 32768
+      },
+      "retry_count": 1,
+      "cached": false,
+      "cache_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/stages/synthesis.json"
+    }
+  },
+  "elapsed_seconds": 602.0232,
+  "ledger_path": "C:/Users/svdijkman.DESKTOP-4OG10M4/Documents/LibeR/library/documents/42453586/c67fe8aa1a43c585/investigation/evidence-ledger.json"
+}

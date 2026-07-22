@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_oxc_25700977_m01",
+  "article_id": "pmid_25700977",
+  "pmid": "25700977",
+  "model_index": 1,
+  "compound_group": "OXC",
+  "family_id": "pmid_25700977",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/OXC/Supplement_OXC_v2.docx",
+      "sha256": "c156583a67670c2213136103c9fc483539ef7a0eedbffe74feb604b091947894",
+      "study_table": 1,
+      "study_row": 5,
+      "model_table": 2,
+      "model_row": 3
+    },
+    "publication_pdf": {
+      "path": "Supplements/OXC/articles/yu-2015-25700977.pdf",
+      "sha256": "09b07525cd3a9dfeaf16d9cb86e79f511f80326bd354336874da36a098066bb0"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Yu 2015 25700977",
+    "population": "N: 78 (Chinese) Age: 37±21 (4-81) WT: -",
+    "model_type": "PK",
+    "objective": "“to describe the interindividual pharmacokinetics variability of MHD by means of a population pharmacokinetic approach in order to identify the most important factors that may influence the pharmacokinetic parameters of oxcarbazepine administered to Chinese epilepsy patients”",
+    "covariates": "Tested: AGE, SEX, RBC, HCT, HGB, ALT, AST, BUN, CLCr Included: ALT, SEX on CL; BUN, HGB on Vd",
+    "observations": "Weight was not included as a covariate for either CL or Vd. Markers related to liver function and protein binding were included, which resulted in a good fit, but are often not measured routinely, making individualised dosing with this model less practical.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with first order absorption and elimination",
+    "equations": "CL/F=theta1*(theta5**SEX)*((ALT/30)**theta7)*exp(eta1) Vd/F=theta2*((BUN/4.76)**theta8)*((HGB/140)**theta9)*exp(eta2) Ka=theta3*exp(eta3) ALAG1=theta4*((AGE/37)**theta6)*exp(eta4) Cobs=Cipred+eps1 SEX is gender (1=male, 0=female) ALT/BUN/HGB as continuous variables of physiological markers alanine aminotransferase / blood urea nitrogen / hemoglobin respectively The relationship between ALAG1 (Tlag) and age was not mathematically described in the paper and thus deduced from the manner in which other continuous covariate relationships were modelled, which may not be a correct assumption. No value for eps1 could be found in the paper, but presumably this value was not very large.",
+    "parameter_values": "theta1=2.38 theta2=14.2 theta3=0.0833 theta4=0.0904 theta5=0.0794 theta6=-0.144 theta7=0.181 theta8=-0.00691 theta9=-0.00103 omega1=0.0501 omega2=1.09 omega3=0.00684 omega4=2.49 sigma1=Unreported",
+    "validation": "Yes (bootstrap of 1000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetic modeling of oxcarbazepine active metabolite in Chinese patients with epilepsy.",
+      "compound": "OXC",
+      "population": "N: 78 (Chinese) Age: 37±21 (4-81) WT: -",
+      "route": "oral",
+      "n_subjects": 78,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with first order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 2.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 14.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.0833,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "ALAG1",
+            "typical": 0.0904,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.0794,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": -0.144,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 0.181,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": -0.00691,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA9",
+            "typical": -0.00103,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0501,
+            "reported_metric": "variance",
+            "value": 0.0501,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Vd/F",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.09,
+            "reported_metric": "variance",
+            "value": 1.09,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "Ka",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.00684,
+            "reported_metric": "variance",
+            "value": 0.00684,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "ALAG1",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 2.49,
+            "reported_metric": "variance",
+            "value": 2.49,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["ALT", "SEX on CL", "BUN", "HGB on Vd"],
+      "residual_error": "CL/F=theta1*(theta5**SEX)*((ALT/30)**theta7)*exp(eta1) Vd/F=theta2*((BUN/4.76)**theta8)*((HGB/140)**theta9)*exp(eta2) Ka=theta3*exp(eta3) ALAG1=theta4*((AGE/37)**theta6)*exp(eta4) Cobs=Cipred+eps1 SEX is gender (1=male, 0=female) ALT/BUN/HGB as continuous variables of physiological markers alanine aminotransferase / blood urea nitrogen / hemoglobin respectively The relationship between ALAG1 (Tlag) and age was not mathematically described in the paper and thus deduced from the manner in which other continuous covariate relationships were modelled, which may not be a correct assumption. No value for eps1 could be found in the paper, but presumably this value was not very large.",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Yu",
+      "year": "2015",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 78 (Chinese) Age: 37±21 (4-81) WT: -",
+      "objective": "“to describe the interindividual pharmacokinetics variability of MHD by means of a population pharmacokinetic approach in order to identify the most important factors that may influence the pharmacokinetic parameters of oxcarbazepine administered to Chinese epilepsy patients”"
+    },
+    "covariates": {
+      "tested": ["AGE", "SEX", "RBC", "HCT", "HGB", "ALT", "AST", "BUN", "CLCr"],
+      "included": ["ALT", "SEX on CL", "BUN", "HGB on Vd"],
+      "raw": "Tested: AGE, SEX, RBC, HCT, HGB, ALT, AST, BUN, CLCr Included: ALT, SEX on CL; BUN, HGB on Vd"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:47.324Z"
+}

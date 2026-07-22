@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_25331445",
+  "pmid": "25331445",
+  "title": "",
+  "abstract": "",
+  "first_author": "Hennig",
+  "year": "2015",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_25331445_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/hennig-2015-25331445.pdf",
+    "sha256": "792edeb9694a3fed8b0d982ecf186846a7b249b7008e3d2b10c3c9cded92b116"
+  },
+  "metadata_source": ""
+}

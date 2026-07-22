@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_16871388_m01",
+  "article_id": "pmid_16871388",
+  "pmid": "16871388",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_16871388",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 19,
+      "model_table": 2,
+      "model_row": 15
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/almeida-2006-16871388.pdf",
+      "sha256": "491294be0032b5e20ffa163b67f04e69bf72264b679b5f4b44ec829396c214e5"
+    },
+    "metadata_csv": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+  },
+  "raw": {
+    "citation": "Almeida 2006 16871388",
+    "population": "Index: N: 90 (Portugal) Age:31.4±12.2 (12-64) WT:67.4±13.7 (41-105) Validation: N: 42 (Portugal) Age: 29.5±10.9 (12-53) WT:67.2±17.6",
+    "model_type": "PK",
+    "objective": "“(1) to estimate LTG pharmacokinetic parameters, (2) to validate this estimation by using prediction performance analysis and (3) to further investigate the influence of concomitant AEDs on LTG kinetics by assessing the concentration-to-dose (C/D) ratio”",
+    "covariates": "WT (indirectly), comedication group on CL",
+    "observations": "No goodness-of-fit plots provided, making it difficult to determine model performance.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "CL/F=((GRP1*theta1*(1+eta1))+ (GRP2*theta2*(1+eta2))+ (GRP3*theta3*(1+eta3))+ (GRP4*theta4*(1+eta4)))*WT Vd/F=((GRP1*theta5*(1+eta5))+ (GRP2*theta6*(1+eta6))+ (GRP3*theta7*(1+eta7))+ (GRP4*theta8*(1+eta8)))*WT Ka=(GRP1*theta9*(1+eta9))+ (GRP2*theta10*(1+eta10))+ (GRP3*theta11*(1+eta11))+ (GRP4*theta12*(1+eta12)) GRP1=lamotrigine + inducers (this group=1, not this group=0) GRP2=lamotrigine + valproic acid (this group=1, not this group=0) GRP3=lamotrigine +valproic acid + inducers (this group=1, not this group=0) GRP4=lamotrigine + AEDs not known to be inducers (this group=1, not this group=0)",
+    "parameter_values": "theta1=0.075 theta2=0.014 theta3=0.025 theta4=0.044 theta5=1.02 theta6=0.86 theta7=0.90 theta8=1.08 theta9=1.28 theta10=1.67 theta11=1.55 theta12=1.82 omega1= 0.150 omega2= 0.128 omega3= 0.102 omega4= 0.0625 omega5= 0.0808 omega6= 0.0986 omega7= 0.119 omega8= 0.0991 omega9= 0.725 omega10= 0.744 omega11= 0.468 omega12= 0.812",
+    "validation": "No / Yes"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Lamotrigine pharmacokinetic evaluation in epileptic patients submitted to VEEG monitoring.",
+      "compound": "LMT",
+      "population": "Index: N: 90 (Portugal) Age:31.4±12.2 (12-64) WT:67.4±13.7 (41-105) Validation: N: 42 (Portugal) Age: 29.5±10.9 (12-53) WT:67.2±17.6",
+      "route": "oral",
+      "n_subjects": 90,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.075,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.014,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.025,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.044,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.02,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.86,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 0.9,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 1.08,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA9",
+            "typical": 1.28,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA10",
+            "typical": 1.67,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA11",
+            "typical": 1.55,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA12",
+            "typical": 1.82,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.15,
+            "reported_metric": "variance",
+            "value": 0.15,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.128,
+            "reported_metric": "variance",
+            "value": 0.128,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "",
+            "eta_index": 3,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.102,
+            "reported_metric": "variance",
+            "value": 0.102,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "",
+            "eta_index": 4,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0625,
+            "reported_metric": "variance",
+            "value": 0.0625,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "",
+            "eta_index": 5,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0808,
+            "reported_metric": "variance",
+            "value": 0.0808,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 6",
+            "parameter": "",
+            "eta_index": 6,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(6) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0986,
+            "reported_metric": "variance",
+            "value": 0.0986,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 7",
+            "parameter": "",
+            "eta_index": 7,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(7) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.119,
+            "reported_metric": "variance",
+            "value": 0.119,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 8",
+            "parameter": "",
+            "eta_index": 8,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(8) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0991,
+            "reported_metric": "variance",
+            "value": 0.0991,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 9",
+            "parameter": "",
+            "eta_index": 9,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(9) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.725,
+            "reported_metric": "variance",
+            "value": 0.725,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 10",
+            "parameter": "",
+            "eta_index": 10,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(10) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.744,
+            "reported_metric": "variance",
+            "value": 0.744,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 11",
+            "parameter": "",
+            "eta_index": 11,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(11) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.468,
+            "reported_metric": "variance",
+            "value": 0.468,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 12",
+            "parameter": "",
+            "eta_index": 12,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(12) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.812,
+            "reported_metric": "variance",
+            "value": 0.812,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": [],
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Almeida",
+      "year": "2006",
+      "dose": "Steady-state oral doses in patients",
+      "population": "Index: N: 90 (Portugal) Age:31.4±12.2 (12-64) WT:67.4±13.7 (41-105) Validation: N: 42 (Portugal) Age: 29.5±10.9 (12-53) WT:67.2±17.6",
+      "objective": "“(1) to estimate LTG pharmacokinetic parameters, (2) to validate this estimation by using prediction performance analysis and (3) to further investigate the influence of concomitant AEDs on LTG kinetics by assessing the concentration-to-dose (C/D) ratio”"
+    },
+    "covariates": {
+      "tested": ["WT (indirectly)", "comedication group on CL"],
+      "included": [],
+      "raw": "WT (indirectly), comedication group on CL"
+    },
+    "validation": {
+      "raw": "No / Yes"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:54.931Z"
+}

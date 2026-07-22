@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_6804223",
+  "pmid": "6804223",
+  "title": "The pharmacokinetics of valproic acid after oral and parenteral administration in healthy volunteers.",
+  "abstract": "",
+  "first_author": "Nitsche",
+  "year": "1982",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_6804223_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/nitsche-1982-6804223.pdf",
+    "sha256": "2de6380351777dc79d87b5aa5b19019538e1426d50ec5cf2678745296095ba02"
+  },
+  "metadata_source": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_24168107",
+  "pmid": "24168107",
+  "title": "Effect of mushroom diet on pharmacokinetics of gabapentin in healthy Chinese subjects.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "GBP",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/GBP/articles/excluded/toh-2014-24168107.pdf",
+    "sha256": "58d832d14c310b8ae4f5df7f6dfcf66f44596eac0c8b23254066f7ecd75ae399"
+  },
+  "metadata_source": "Supplements/GBP/pubmed_result_eval_GBP.csv"
+}

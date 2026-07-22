@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_phb_3409842",
+  "pmid": "3409842",
+  "compound_group": "PHB",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHB/articles/excluded/peiris-1988-3409842.pdf",
+    "sha256": "a351748ac9803f3e87069f7ccaeed31f0ca76a6b61873f48e445c72be8c31bf3"
+  }
+}

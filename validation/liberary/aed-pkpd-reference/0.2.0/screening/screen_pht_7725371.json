@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_7725371",
+  "pmid": "7725371",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/nakashima-1995-7725371.pdf",
+    "sha256": "190fe49481d87872fd4dc0b46190357ec4ad93f690ae407807a71cdae2360de2"
+  }
+}

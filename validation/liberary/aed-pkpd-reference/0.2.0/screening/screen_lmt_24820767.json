@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_lmt_24820767",
+  "pmid": "24820767",
+  "compound_group": "LMT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/LMT/articles/excluded/chang-2014-24820767.pdf",
+    "sha256": "b60ab1eb36fa06f9fcd9c79feb93f8469f5b531898db9d8445ec044e6a9382c0"
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_lvt_22669118_m01",
+  "screening_id": null,
+  "article_id": "pmid_22669118",
+  "pmid": "22669118",
+  "source_pdf_sha256": "888fc33c448c724292f4188ee2ad4e21ebb511fb5936f671e46976f3636ad356",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:40:28.137Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population pharmacokinetics modeling of levetiracetam in Chinese children with epilepsy",
+    "compound": "levetiracetam",
+    "population": "Chinese children with epilepsy",
+    "route": null,
+    "n_subjects": 361,
+    "software": "NONMEM, version 7, level 1.2",
+    "estimation_method": "first-order conditional estimation (FOCE)",
+    "model_type": "nonlinear mixed effects model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 1,
+      "description": "One-compartment model with first-order absorption and elimination"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "CL/F",
+          "typical": 1.04,
+          "se": 0.14,
+          "unit": "L/h"
+        },
+        {
+          "name": "V/F",
+          "typical": 12.1,
+          "se": 5.6,
+          "unit": "L"
+        },
+        {
+          "name": "Ka",
+          "typical": 1.56,
+          "se": 14.3,
+          "unit": "h^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Inter-individual variability in CL/F",
+          "parameter": "CL/F",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "exp(ηCL/F)",
+          "variability_level": "iiv",
+          "reported_value": 0.195,
+          "reported_metric": "cv_percent",
+          "value": 0.204836,
+          "conversion": "sqrt((1 + (0.195^2)))"
+        },
+        {
+          "description": "Inter-individual variability in V/F",
+          "parameter": "V/F",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "exp(ηV/F)",
+          "variability_level": "iiv",
+          "reported_value": 0.163,
+          "reported_metric": "cv_percent",
+          "value": 0.284795,
+          "conversion": "sqrt((1 + (0.163^2)))"
+        },
+        {
+          "description": "Intra-individual variability in CL/F, V/F, and Ka",
+          "parameter": "CL/F, V/F, Ka",
+          "eta_index": null,
+          "eta_distribution": "normal",
+          "eta_expression": "ε",
+          "variability_level": "other",
+          "reported_value": 0.028,
+          "reported_metric": "sd",
+          "value": 0.028,
+          "conversion": "unknown"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 1,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 2,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error variance for CL/F, V/F, and Ka",
+          "error_model": "additive",
+          "reported_value": 0.028,
+          "reported_metric": "sd",
+          "value": 0.028,
+          "conversion": "unknown"
+        }
+      ]
+    },
+    "covariates": [
+      "WEIG"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 1,
+      "fields": {
+        "structure": 1,
+        "parameters": 0.985714285714286,
+        "population": 1,
+        "software": 1
+      }
+    },
+    "evidence_quotes": [
+      "A one-compartment model with first-order absorption adequately described the levetiracetam concentrations.",
+      "Body weight was identified as a significant covariate for levetiracetam clearance in this study."
+    ],
+    "notes": "The model includes inter-individual variability (IIV) and intra-individual variability (IOV). The residual error is not explicitly defined. The model does not include covariance blocks or correlations between parameters."
+  },
+  "variants": {
+    "text": {
+      "title": "Population pharmacokinetics modeling of levetiracetam in Chinese children with epilepsy",
+      "compound": "levetiracetam",
+      "population": "Chinese children with epilepsy",
+      "route": null,
+      "n_subjects": 361,
+      "software": "NONMEM, version 7, level 1.2",
+      "estimation_method": "first-order conditional estimation (FOCE)",
+      "model_type": "nonlinear mixed effects model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One-compartment model with first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 1.04,
+            "se": 0.14,
+            "unit": "L/h"
+          },
+          {
+            "name": "V/F",
+            "typical": 12.1,
+            "se": 5.6,
+            "unit": "L"
+          },
+          {
+            "name": "Ka",
+            "typical": 1.56,
+            "se": 14.3,
+            "unit": "h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Inter-individual variability in CL/F",
+            "parameter": "CL/F",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "exp(ηCL/F)",
+            "variability_level": "iiv",
+            "reported_value": 0.195,
+            "reported_metric": "cv_percent",
+            "value": 0.204836,
+            "conversion": "sqrt((1 + (0.195^2)))"
+          },
+          {
+            "description": "Inter-individual variability in V/F",
+            "parameter": "V/F",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "exp(ηV/F)",
+            "variability_level": "iiv",
+            "reported_value": 0.163,
+            "reported_metric": "cv_percent",
+            "value": 0.284795,
+            "conversion": "sqrt((1 + (0.163^2)))"
+          },
+          {
+            "description": "Intra-individual variability in CL/F, V/F, and Ka",
+            "parameter": "CL/F, V/F, Ka",
+            "eta_index": null,
+            "eta_distribution": "normal",
+            "eta_expression": "ε",
+            "variability_level": "other",
+            "reported_value": 0.028,
+            "reported_metric": "sd",
+            "value": 0.028,
+            "conversion": "unknown"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 1,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error variance for CL/F, V/F, and Ka",
+            "error_model": "additive",
+            "reported_value": 0.028,
+            "reported_metric": "sd",
+            "value": 0.028,
+            "conversion": "unknown"
+          }
+        ]
+      },
+      "covariates": [
+        "WEIG"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 0.985714285714286,
+          "population": 1,
+          "software": 1
+        }
+      },
+      "evidence_quotes": [
+        "A one-compartment model with first-order absorption adequately described the levetiracetam concentrations.",
+        "Body weight was identified as a significant covariate for levetiracetam clearance in this study."
+      ],
+      "notes": "The model includes inter-individual variability (IIV) and intra-individual variability (IOV). The residual error is not explicitly defined. The model does not include covariance blocks or correlations between parameters."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_20880232",
+  "pmid": "20880232",
+  "title": "",
+  "abstract": "",
+  "first_author": "Girgis",
+  "year": "2010",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_20880232_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/girgis-2010-20880232.pdf",
+    "sha256": "55061acc9b4d384d08aa54c76865080f57281c1d604c84c8746e9edb7e4f6e90"
+  },
+  "metadata_source": ""
+}

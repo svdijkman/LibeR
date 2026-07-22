@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_10197296",
+  "pmid": "10197296",
+  "title": "Population pharmacokinetics of lamotrigine adjunctive therapy in adults with epilepsy.",
+  "abstract": "",
+  "first_author": "Grasela",
+  "year": "1999",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_10197296_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/grasela-1999-10197296.pdf",
+    "sha256": "69263de76067d29a6493456c5dcc2fdda9ad627b1af55139d0236d7987b72f57"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

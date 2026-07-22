@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_oxc_22246398_m01",
+  "article_id": "pmid_22246398",
+  "pmid": "22246398",
+  "model_index": 1,
+  "compound_group": "OXC",
+  "family_id": "pmid_22246398",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/OXC/Supplement_OXC_v2.docx",
+      "sha256": "c156583a67670c2213136103c9fc483539ef7a0eedbffe74feb604b091947894",
+      "study_table": 1,
+      "study_row": 9,
+      "model_table": 2,
+      "model_row": 6
+    },
+    "publication_pdf": {
+      "path": "Supplements/OXC/articles/park-2012-22246398.pdf",
+      "sha256": "41ebaa649c47d55df98b1bb800d796fb55ff22be266ec23e6ec52ca31d88cc4d"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Park 2012 22246398",
+    "population": "N: 199 (Korean) Age: 29 (3-80) WT: 62,8 (10.1-95.0)",
+    "model_type": "PK",
+    "objective": "“to determine first whether there was a clear relationship between the concentration of the active metabolite of oxcarbazepine (OXC), 10-hydroxycarbamazepine (OHC) and dose adjusted for weight, and second, whether the clearance of OHC was influenced by comedication with EIAEDs”",
+    "covariates": "Tested: AGE WT, SEX, comedications Included: WT, inducers on CL; WT on Vd",
+    "observations": "Variability on CL decreased from 42 to 27.7 % with relatively simple model. GOF plots look good. Coadministration of enzyme inducing AEDs increased OXC CL by 31.2%",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "Ka=theta1 CL/F=theta2*((WT/62.8)**theta4)*(1+theta5*EIAED)*exp(eta1) Vd/F=theta3*(WT/62.8) Cobs=Cipred*(1+eps1)+eps2 EIAED: coadministration of at least one enzyme-inducing AED such as PHT, PHB, or CBZ (yes=1, no=0)",
+    "parameter_values": "theta1=0.598 theta2=2.13 theta3=49 theta4=0.666 theta5=0.312 omega1=0.0767 sigma1=0.0571 sigma2=2.83",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Drug interaction and pharmacokinetic modeling of oxcarbazepine in korean patients with epilepsy.",
+      "compound": "OXC",
+      "population": "N: 199 (Korean) Age: 29 (3-80) WT: 62,8 (10.1-95.0)",
+      "route": "oral",
+      "n_subjects": 199,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 0.598,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 2.13,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 49,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.666,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.312,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Ka",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0767,
+            "reported_metric": "variance",
+            "value": 0.0767,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.0571,
+            "reported_metric": "variance",
+            "value": 0.0571,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 2.83,
+            "reported_metric": "variance",
+            "value": 2.83,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "inducers on CL", "WT on Vd"],
+      "residual_error": "Ka=theta1 CL/F=theta2*((WT/62.8)**theta4)*(1+theta5*EIAED)*exp(eta1) Vd/F=theta3*(WT/62.8) Cobs=Cipred*(1+eps1)+eps2 EIAED: coadministration of at least one enzyme-inducing AED such as PHT, PHB, or CBZ (yes=1, no=0)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Park",
+      "year": "2012",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 199 (Korean) Age: 29 (3-80) WT: 62,8 (10.1-95.0)",
+      "objective": "“to determine first whether there was a clear relationship between the concentration of the active metabolite of oxcarbazepine (OXC), 10-hydroxycarbamazepine (OHC) and dose adjusted for weight, and second, whether the clearance of OHC was influenced by comedication with EIAEDs”"
+    },
+    "covariates": {
+      "tested": ["AGE WT", "SEX", "comedications"],
+      "included": ["WT", "inducers on CL", "WT on Vd"],
+      "raw": "Tested: AGE WT, SEX, comedications Included: WT, inducers on CL; WT on Vd"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:55.815Z"
+}

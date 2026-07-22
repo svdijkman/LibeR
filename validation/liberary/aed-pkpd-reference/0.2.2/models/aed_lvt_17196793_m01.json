@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lvt_17196793_m01",
+  "article_id": "pmid_17196793",
+  "pmid": "17196793",
+  "model_index": 1,
+  "compound_group": "LVT",
+  "family_id": "pmid_17196793",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LVT/Supplement_LVT_v2.docx",
+      "sha256": "366f9c59b71d28cdbc53b4e37282f611af800ea34a400f4eb82946c22c5dd24b",
+      "study_table": 1,
+      "study_row": 16,
+      "model_table": 2,
+      "model_row": 13
+    },
+    "publication_pdf": {
+      "path": "Supplements/LVT/articles/snoeck-2007-17196793.pdf",
+      "sha256": "cf80eb5a304850e7e28641ee94614a5c658d97248a07899419afdf2ecc18d40e"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Snoeck 2007 17196793",
+    "population": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+    "model_type": "PD",
+    "objective": "“to identify a dose-response relationship for add-on treatment with levetiracetam based on the data obtained in the four above-mentioned clinical trials, and to identify factors that might influence this dose-response relationship”",
+    "covariates": "Included: Differences in baseline, placebo, and dose-dependent treatment effect in probability of seizures occurring.",
+    "observations": "Two separate populations modelled: deteriorating and improving patients, which could not be identified using mixture modelling. A clear dose-response relationship could be identified in the improving patients, whereas in the deteriorating patients, such a relationship was not found, as expected. Goodness of fit plot shows good predictability of the seizures, although it is unclear if the population predictions are unbiased, as such a plot is lacking.",
+    "dose": "Single and multiple oral doses in patients",
+    "structure": "Poisson model of seizure counts",
+    "equations": "FPlacebo=theta1 Emax=theta2 ED50=theta3 FDrug=(Emax*DOSE)/(ED50+DOSE) delta=theta4 if(RESP>0 & DOSE>0) lambda=Base*(1-FPlacebo)*(1-FDrug)*exp(eta1) else if(RESP>0 & DOSE==0) lambda=Base*(1-FPlacebo)*exp(eta2) else lambda=Base*(1-delta)*exp(eta3) endif P(x)=exp(-lambda)*((lambda**x)/factorial(x)) Base is number of seizures (presumably per day) at baseline, which was not reported, but for simulations could be provided as a column in the input dataset. FPlacebo is placebo effect, FDrug is drug effect P(x) is the probability of number of seizures x occurring RESP is 0 for non-responder patient and 1 for responder patient DOSE is levetiracetam daily dose in mg Delta is the change in seizure frequency in non-responders, compared to baseline",
+    "parameter_values": "theta1=0.11 theta2=0.69 theta3=1408 theta4=-0.45 omega1=0.35 omega2=0.16 omega3=0.081",
+    "validation": "Yes (VPC of 100000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "LVT",
+      "population": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+      "route": "oral",
+      "n_subjects": 958,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PD",
+      "population_details": {
+        "raw": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+        "n_total": 958,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 958
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 16,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 16",
+                  "evidence": "- (~16-70)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 1,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 16",
+                  "evidence": "- Seizures: ≥1 - ≥0.167/week",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 16",
+              "evidence": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 16",
+          "evidence": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single and multiple oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 13",
+            "evidence": "Single and multiple oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Poisson model of seizure counts",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["FPLACEBO", "EMAX", "ED50", "DELTA"]
+          },
+          "description": "Poisson model of seizure counts"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Poisson model of seizure counts Single and multiple oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "FPlacebo",
+            "typical": 0.11,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Emax",
+            "typical": 0.69,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "ED50",
+            "typical": 1408,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "delta",
+            "typical": -0.45,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "FPlacebo",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.35,
+            "reported_metric": "variance",
+            "value": 0.35,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Emax",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.16,
+            "reported_metric": "variance",
+            "value": 0.16,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "ED50",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.081,
+            "reported_metric": "variance",
+            "value": 0.081,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["Differences in baseline", "placebo", "and dose-dependent treatment effect in probability of seizures occurring."],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Snoeck",
+      "year": "2007",
+      "dose": "Single and multiple oral doses in patients",
+      "population": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+      "population_details": {
+        "raw": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+        "n_total": 958,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 958
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 16,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 16",
+                  "evidence": "- (~16-70)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 1,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 16",
+                  "evidence": "- Seizures: ≥1 - ≥0.167/week",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 16",
+              "evidence": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 16",
+          "evidence": "N: 958 Age: - (~16-70) WT: - Seizures: ≥1 - ≥0.167/week",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single and multiple oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 13",
+            "evidence": "Single and multiple oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to identify a dose-response relationship for add-on treatment with levetiracetam based on the data obtained in the four above-mentioned clinical trials, and to identify factors that might influence this dose-response relationship”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["Differences in baseline", "placebo", "and dose-dependent treatment effect in probability of seizures occurring."],
+      "raw": "Included: Differences in baseline, placebo, and dose-dependent treatment effect in probability of seizures occurring."
+    },
+    "validation": {
+      "raw": "Yes (VPC of 100000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:22:54.707Z"
+}

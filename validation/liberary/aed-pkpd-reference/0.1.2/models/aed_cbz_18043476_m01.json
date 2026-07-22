@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_18043476_m01",
+  "article_id": "pmid_18043476",
+  "pmid": "18043476",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_18043476",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 15,
+      "model_table": 2,
+      "model_row": 16
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/vucicevic-2007-18043476.pdf",
+      "sha256": "0c6627e1621e4f03a7a205251c158a44f80a056b764ec0a376911dda3d5e99da"
+    },
+    "metadata_csv": "Supplements/LMT/pubmed_result_eval_LMT.csv"
+  },
+  "raw": {
+    "citation": "Vucićević 2007 18043476",
+    "population": "Learning dataset N: 265 (Serbian) Age: 37±16 WT: 71±16 Validation set N: 46 (Serbian) Age: 35±16 WT: 73±17",
+    "model_type": "PK",
+    "objective": "“to evaluate the influence of total body weight (WT), age, gender, TOB, presence of any kind of allergy, daily CBZ dose (DCBZ), CBZ tablet formulation (TF), and cotherapy on PK of CBZ.”",
+    "covariates": "Tested: total body weight (WT), age, gender, TOB, presence of any kind of allergy, daily CBZ dose (DCBZ), CBZ tablet formulation (TF), and cotherapy of lamotrigine, valproic acid, phenobarbital, diazepam Included: CBZ dose, PHB dose, WT, use of VPA on CL. WT on Vd. Formulation on Ka.",
+    "observations": "Ka and Vd fixed to literature values. A clear bias was found both the description of the learning dataset and prediction of the validation set, undermining the value of the model for individualised predictions in new patients. Consistent with previous studies, CBZ daily dose, and VPA / PHB influenced clearance significantly. No relative difference found in bioavailability between IR and CR",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment, linear absorption and elimination",
+    "equations": "CL/F=theta1*((DCBZ/15)**theta2)*(1+theta2*(DPB/2))*((WT/70)**theta3)*(1+theta4*VPA) Vd/F=theta5*WT Ka=theta6 (IR) or theta7 (CR) Cobs=Cipred+eps1 DCBZ=daily dose of carbamazepine in mg/kg/day DPB=daily dose of phenobarbital in mg/kg/day VPA=comedication with valproic acid (yes =1, no=0) IR=immediate release formulation CR=continuous release formulation",
+    "parameter_values": "theta1=5.35 theta2=0.591 theta3=0.414 theta4=0.564 theta5=1.4 theta6=0.224 theta7=0.077 omega1=0.604 sigma1=1.18",
+    "validation": "No / Yes (population of 46)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetic model of carbamazepine derived from routine therapeutic drug monitoring data.",
+      "compound": "CBZ",
+      "population": "Learning dataset N: 265 (Serbian) Age: 37±16 WT: 71±16 Validation set N: 46 (Serbian) Age: 35±16 WT: 73±17",
+      "route": "oral",
+      "n_subjects": 265,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment, linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 5.35,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.591,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.414,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.564,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 1.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.224,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 0.077,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "unknown",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.604,
+            "reported_metric": "variance",
+            "value": 0.604,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 1.18,
+            "reported_metric": "variance",
+            "value": 1.18,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["CBZ dose", "PHB dose", "WT", "use of VPA on CL. WT on Vd. Formulation on Ka."],
+      "residual_error": "CL/F=theta1*((DCBZ/15)**theta2)*(1+theta2*(DPB/2))*((WT/70)**theta3)*(1+theta4*VPA) Vd/F=theta5*WT Ka=theta6 (IR) or theta7 (CR) Cobs=Cipred+eps1 DCBZ=daily dose of carbamazepine in mg/kg/day DPB=daily dose of phenobarbital in mg/kg/day VPA=comedication with valproic acid (yes =1, no=0) IR=immediate release formulation CR=continuous release formulation",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Vucićević",
+      "year": "2007",
+      "dose": "Steady-state oral doses in patients",
+      "population": "Learning dataset N: 265 (Serbian) Age: 37±16 WT: 71±16 Validation set N: 46 (Serbian) Age: 35±16 WT: 73±17",
+      "objective": "“to evaluate the influence of total body weight (WT), age, gender, TOB, presence of any kind of allergy, daily CBZ dose (DCBZ), CBZ tablet formulation (TF), and cotherapy on PK of CBZ.”"
+    },
+    "covariates": {
+      "tested": ["total body weight (WT)", "age", "gender", "TOB", "presence of any kind of allergy", "daily CBZ dose (DCBZ)", "CBZ tablet formulation (TF)", "and cotherapy of lamotrigine", "valproic acid", "phenobarbital", "diazepam"],
+      "included": ["CBZ dose", "PHB dose", "WT", "use of VPA on CL. WT on Vd. Formulation on Ka."],
+      "raw": "Tested: total body weight (WT), age, gender, TOB, presence of any kind of allergy, daily CBZ dose (DCBZ), CBZ tablet formulation (TF), and cotherapy of lamotrigine, valproic acid, phenobarbital, diazepam Included: CBZ dose, PHB dose, WT, use of VPA on CL. WT on Vd. Formulation on Ka."
+    },
+    "validation": {
+      "raw": "No / Yes (population of 46)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:45.474Z"
+}

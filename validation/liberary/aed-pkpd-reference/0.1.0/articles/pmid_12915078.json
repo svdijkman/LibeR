@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_12915078",
+  "pmid": "12915078",
+  "title": "A comparison of central brain (cerebrospinal and extracellular fluids) and peripheral blood kinetics of phenytoin after intravenous phenytoin and fosphenytoin.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/wang-2003-12915078.pdf",
+    "sha256": "3c40ad506b476520e5b738f2fd5d84dd465c280b51dbb1048bcc36a79441743c"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_16918714_m01",
+  "article_id": "pmid_16918714",
+  "pmid": "16918714",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_16918714",
+  "partition": "test",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 12,
+      "model_table": 2,
+      "model_row": 13
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/joerger-2006-16918714.pdf",
+      "sha256": "3b52f598f843decafaa06a673378de1b3169e9e29839aedcb882697205829a51"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Joerger 2006 16918714",
+    "population": "N: 165 (Netherlands) Age: 48.7 (22.5-85) WT: 71.6 (43-138)",
+    "model_type": "PK",
+    "objective": "“…to assess the pharmacokinetic variability and determinants of phenytoin fu and plasma concentrations in cancer patients by using a population approach. Our special interest was on the influence of dexamethasone, antiepileptic and anticancer drugs on phenytoin protein binding patterns and plasma concentrations”",
+    "covariates": "Tested: albumin, total protein concentration, comedications with CBZ, VPA or dexamethasone (DEX); SEX, total bilirubin, and serum creatinine Included: albumin, comedications with CBZ, VPA",
+    "observations": "A model able to predict total and unbound phenytoin concentrations. Much variability was explained with the few covariates included.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1-compartment model with first-order absorption and first-order elimination, and a free fraction equation",
+    "equations": "V=theta1*exp(eta1) VM=theta2 KM=0.4 KA=theta3 fu=(theta4*(ALB-40.8)+theta5*VPA+theta6*CBZ)*exp(eta2) C=A(2)/V Cu=(fu/100)*C KE=((VM*C)/(KM+C)) dA(1)/dt=-KA*A(1) dA(2)/dt=KA*A(1) –KE if(FLAG==1)Y=Cu*exp(eps1) if(FLAG==2)Y=(C-Cu)*exp(eps2) if(FLAG==3)Y=fu*exp(eps3) FLAG: a dataset flag, determining the type of observation (1=free phenytoin, 2=protein-bound phenytoin, 3=free phenytoin ratio) C: total phenytoin concentration Cu: unbound phenytoin concentration fu: fraction of unbound phenytoin",
+    "parameter_values": "theta1=10.4 theta2=23.7 theta3=1.55 theta4=1.51 theta5=52.5 theta6=38.5 omega1=0.261 omega2=0.0129 sigma1=0.0432 sigma2=0.0305 sigma3=0.0272",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Interactions of serum albumin, valproic acid and carbamazepine with the pharmacokinetics of phenytoin in cancer patients.",
+      "compound": "PHT",
+      "population": "N: 165 (Netherlands) Age: 48.7 (22.5-85) WT: 71.6 (43-138)",
+      "route": "oral",
+      "n_subjects": 165,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1-compartment model with first-order absorption and first-order elimination, and a free fraction equation"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "V",
+            "typical": 10.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "VM",
+            "typical": 23.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1.55,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.51,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 52.5,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 38.5,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "V",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.261,
+            "reported_metric": "variance",
+            "value": 0.261,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "VM",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0129,
+            "reported_metric": "variance",
+            "value": 0.0129,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 0.0432,
+            "reported_metric": "variance",
+            "value": 0.0432,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "unknown",
+            "reported_value": 0.0305,
+            "reported_metric": "variance",
+            "value": 0.0305,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 3",
+            "error_model": "unknown",
+            "reported_value": 0.0272,
+            "reported_metric": "variance",
+            "value": 0.0272,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["albumin", "comedications with CBZ", "VPA"],
+      "residual_error": "V=theta1*exp(eta1) VM=theta2 KM=0.4 KA=theta3 fu=(theta4*(ALB-40.8)+theta5*VPA+theta6*CBZ)*exp(eta2) C=A(2)/V Cu=(fu/100)*C KE=((VM*C)/(KM+C)) dA(1)/dt=-KA*A(1) dA(2)/dt=KA*A(1) –KE if(FLAG==1)Y=Cu*exp(eps1) if(FLAG==2)Y=(C-Cu)*exp(eps2) if(FLAG==3)Y=fu*exp(eps3) FLAG: a dataset flag, determining the type of observation (1=free phenytoin, 2=protein-bound phenytoin, 3=free phenytoin ratio) C: total phenytoin concentration Cu: unbound phenytoin concentration fu: fraction of unbound phenytoin",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Joerger",
+      "year": "2006",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 165 (Netherlands) Age: 48.7 (22.5-85) WT: 71.6 (43-138)",
+      "objective": "“…to assess the pharmacokinetic variability and determinants of phenytoin fu and plasma concentrations in cancer patients by using a population approach. Our special interest was on the influence of dexamethasone, antiepileptic and anticancer drugs on phenytoin protein binding patterns and plasma concentrations”"
+    },
+    "covariates": {
+      "tested": ["albumin", "total protein concentration", "comedications with CBZ", "VPA or dexamethasone (DEX)", "SEX", "total bilirubin", "and serum creatinine"],
+      "included": ["albumin", "comedications with CBZ", "VPA"],
+      "raw": "Tested: albumin, total protein concentration, comedications with CBZ, VPA or dexamethasone (DEX); SEX, total bilirubin, and serum creatinine Included: albumin, comedications with CBZ, VPA"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:57.161Z"
+}

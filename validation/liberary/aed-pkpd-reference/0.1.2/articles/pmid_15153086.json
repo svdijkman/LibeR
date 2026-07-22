@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_15153086",
+  "pmid": "15153086",
+  "title": "Population pharmacokinetic modeling of steady state clearance of carbamazepine and its epoxide metabolite from sparse routine clinical data.",
+  "abstract": "",
+  "first_author": "Jiao",
+  "year": "2004",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_15153086_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/jiao-2004-15153086.pdf",
+    "sha256": "d9470e631e8cf1ba5aa48705c9046af358aeb5f5affe17f04046bf620b9bdd5d"
+  },
+  "metadata_source": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+}

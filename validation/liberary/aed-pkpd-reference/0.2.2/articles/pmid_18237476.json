@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_18237476",
+  "pmid": "18237476",
+  "title": "Potential relationships between transaminase abnormality and valproic acid clearance or serum carnitine concentrations in Japanese epileptic patients.",
+  "abstract": "",
+  "first_author": "Goto",
+  "year": "2008",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_18237476_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/goto-2008-18237476.pdf",
+    "sha256": "98625cccd2b48183105941738b5bd159b5c64364bf297a7093cbc3cd551f468f"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_26395889",
+  "pmid": "26395889",
+  "title": "",
+  "abstract": "",
+  "first_author": "Lim",
+  "year": "2016",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_26395889_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/lim-2016-26395889.pdf",
+    "sha256": "9ab833d3955ef56e1d3a7fea85de71e4bee0e9b7bf878708455ff30f9f8bdf63"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_tpm_23891703",
+  "pmid": "23891703",
+  "compound_group": "TPM",
+  "partition": "train",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/TPM/Supplement_TPM_v2.docx",
+    "sha256": "787967aa7c3412e38a96b3241a229e30daf1c8716a94187beb4eddc72e2c29d1"
+  }
+}

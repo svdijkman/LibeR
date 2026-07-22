@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_21416779",
+  "pmid": "21416779",
+  "title": "Effect of treatment and additional disease on pharmacokinetic of valproic acid in children with epilepsy.",
+  "abstract": "",
+  "first_author": "Juarez",
+  "year": "2010",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_21416779_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/juarez-2010-21416779.pdf",
+    "sha256": "79956b02e8305d3dfa9890cf8c2b0c6cef23759bf0f0358cd5efc07ef5cc0564"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

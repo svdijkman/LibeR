@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_3132550",
+  "pmid": "3132550",
+  "title": "PEDA: a microcomputer program for parameter estimation and dosage adjustment in clinical practice.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/higuchi-1987-3132550.pdf",
+    "sha256": "e6172a50aaa3ea6203c524a991dfbbc628124d6458f7a7d97a1681ccc079b1f8"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

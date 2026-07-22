@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_1485365",
+  "pmid": "1485365",
+  "title": "A within-subject analysis of carbamazepine disposition related to development in children with epilepsy.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "CBZ",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/exclude/albani-1992-1485365.pdf",
+    "sha256": "80998732bda0a6d2edff9d4da2d9af4b659df6351b32c6ed959fc79d30cfad0d"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

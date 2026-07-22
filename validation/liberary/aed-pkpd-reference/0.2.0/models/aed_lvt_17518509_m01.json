@@ -1,0 +1,596 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lvt_17518509_m01",
+  "article_id": "pmid_17518509",
+  "pmid": "17518509",
+  "model_index": 1,
+  "compound_group": "LVT",
+  "family_id": "pmid_17518509",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LVT/Supplement_LVT_v2.docx",
+      "sha256": "366f9c59b71d28cdbc53b4e37282f611af800ea34a400f4eb82946c22c5dd24b",
+      "study_table": 1,
+      "study_row": 15,
+      "model_table": 2,
+      "model_row": 11
+    },
+    "publication_pdf": {
+      "path": "Supplements/LVT/articles/pigeolet-2007-17518509.pdf",
+      "sha256": "ddaaa38c30f72062eee5ca4d78592edf0fb8834809fcbd8654b2b4fe7300c4b5"
+    },
+    "metadata_csv": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+  },
+  "raw": {
+    "citation": "Pigeolet 2007 17518509",
+    "population": "[Japanese] N:213 Age: 29 (16-55) WT: 60 (40-107) [Western] N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+    "model_type": "PK",
+    "objective": "“to assess the sensitivity of levetiracetam pharmacokinetics to ethnicity and other demographic characteristics using two sets of similar studies performed in Japanese and Western subjects”",
+    "covariates": "Tested: WT, HT, BMI, BSA, SEX, ethnicity, concomitant AEDs, AED classes, benzodiazepine use, health status, CLcr and serum creatinine Included: WT, SEX, inhibitors, inducers, CLcr on CL; WT, health status, inhibitors on Vd",
+    "observations": "GOF plots show large improvement of final model over basic model. No differences found between ethnicities",
+    "dose": "Single and multiple oral doses in patients and healthy volunteers",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "Ka=(theta1*(FED-1))*(theta2*FED)*exp(eta1)*exp(eta2*OCC) CL/F=theta3*((WT/70)**theta4)*((CLcr/110)**theta5)* (theta6**(1-SEX))*(theta7**IND)*(theta8**VPA)*exp(eta3) Vd/F=theta9*((WT/70)**theta10)* (theta11**VPA)* (theta12**(1-PAT))*exp(eta4) Cobs=Cipred*(1+eps1*PAT) *(1+eps2*(1-PAT))",
+    "parameter_values": "theta1=4.80 theta2=2.44 theta3=4.02 theta4=0.268 theta5=0.122 theta6=0.896 theta7=1.09 theta8=0.812 theta9=52.7 theta10=0.952 theta11=0.766 theta12=0.861 omega1=0.773 omega2=1.19 omega3=0.0373 omega4=0.0138 sigma1=0.0756 sigma2=0.0276",
+    "validation": "Yes (VPC-like simulations of 2000 subjects) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of levetiracetam in Japanese and Western adults.",
+      "compound": "LVT",
+      "population": "[Japanese] N:213 Age: 29 (16-55) WT: 60 (40-107) [Western] N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+      "route": "oral",
+      "n_subjects": 524,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "[Japanese] N:213 Age: 29 (16-55) WT: 60 (40-107) [Western] N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+        "n_total": 524,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "[Japanese]",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 213
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 16,
+                    "maximum": 55
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 15",
+                  "evidence": "29 (16-55)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 40,
+                    "maximum": 107
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 15",
+                  "evidence": "60 (40-107) [Western]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 15",
+              "evidence": "N:213 Age: 29 (16-55) WT: 60 (40-107) [Western]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 311
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 16,
+                    "maximum": 71
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 15",
+                  "evidence": "38 (16-71)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 42,
+                    "maximum": 141
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 15",
+                  "evidence": "77 (42-141)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 15",
+              "evidence": "N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 15",
+          "evidence": "[Japanese] N:213 Age: 29 (16-55) WT: 60 (40-107) [Western] N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single and multiple oral doses in patients and healthy volunteers",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 11",
+            "evidence": "Single and multiple oral doses in patients and healthy volunteers",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["THETA1", "THETA2", "CL/F", "THETA4", "THETA5", "THETA6", "THETA7", "THETA8", "VD/F", "THETA10", "THETA11", "THETA12"]
+          },
+          "description": "1 compartment with linear absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment with linear absorption and elimination Single and multiple oral doses in patients and healthy volunteers",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 4.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 2.44,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 4.02,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.268,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.122,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.896,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 1.09,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 0.812,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 52.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA10",
+            "typical": 0.952,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA11",
+            "typical": 0.766,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA12",
+            "typical": 0.861,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.773,
+            "reported_metric": "variance",
+            "value": 0.773,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "unknown",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 1.19,
+            "reported_metric": "variance",
+            "value": 1.19,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "CL/F",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0373,
+            "reported_metric": "variance",
+            "value": 0.0373,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0138,
+            "reported_metric": "variance",
+            "value": 0.0138,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.0756,
+            "reported_metric": "variance",
+            "value": 0.0756,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "proportional",
+            "reported_value": 0.0276,
+            "reported_metric": "variance",
+            "value": 0.0276,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "SEX", "inhibitors", "inducers", "CLcr on CL", "health status", "inhibitors on Vd"],
+      "residual_error": "Ka=(theta1*(FED-1))*(theta2*FED)*exp(eta1)*exp(eta2*OCC) CL/F=theta3*((WT/70)**theta4)*((CLcr/110)**theta5)* (theta6**(1-SEX))*(theta7**IND)*(theta8**VPA)*exp(eta3) Vd/F=theta9*((WT/70)**theta10)* (theta11**VPA)* (theta12**(1-PAT))*exp(eta4) Cobs=Cipred*(1+eps1*PAT) *(1+eps2*(1-PAT))",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Pigeolet",
+      "year": "2007",
+      "dose": "Single and multiple oral doses in patients and healthy volunteers",
+      "population": "[Japanese] N:213 Age: 29 (16-55) WT: 60 (40-107) [Western] N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+      "population_details": {
+        "raw": "[Japanese] N:213 Age: 29 (16-55) WT: 60 (40-107) [Western] N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+        "n_total": 524,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "[Japanese]",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 213
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 16,
+                    "maximum": 55
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 15",
+                  "evidence": "29 (16-55)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 40,
+                    "maximum": 107
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 15",
+                  "evidence": "60 (40-107) [Western]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 15",
+              "evidence": "N:213 Age: 29 (16-55) WT: 60 (40-107) [Western]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 311
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 16,
+                    "maximum": 71
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 15",
+                  "evidence": "38 (16-71)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 42,
+                    "maximum": 141
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 15",
+                  "evidence": "77 (42-141)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 15",
+              "evidence": "N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 15",
+          "evidence": "[Japanese] N:213 Age: 29 (16-55) WT: 60 (40-107) [Western] N: 311 Age: 38 (16-71) WT: 77 (42-141)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single and multiple oral doses in patients and healthy volunteers",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 11",
+            "evidence": "Single and multiple oral doses in patients and healthy volunteers",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to assess the sensitivity of levetiracetam pharmacokinetics to ethnicity and other demographic characteristics using two sets of similar studies performed in Japanese and Western subjects”"
+    },
+    "covariates": {
+      "tested": ["WT", "HT", "BMI", "BSA", "SEX", "ethnicity", "concomitant AEDs", "AED classes", "benzodiazepine use", "health status", "CLcr and serum creatinine"],
+      "included": ["WT", "SEX", "inhibitors", "inducers", "CLcr on CL", "health status", "inhibitors on Vd"],
+      "raw": "Tested: WT, HT, BMI, BSA, SEX, ethnicity, concomitant AEDs, AED classes, benzodiazepine use, health status, CLcr and serum creatinine Included: WT, SEX, inhibitors, inducers, CLcr on CL; WT, health status, inhibitors on Vd"
+    },
+    "validation": {
+      "raw": "Yes (VPC-like simulations of 2000 subjects) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:10.157Z"
+}

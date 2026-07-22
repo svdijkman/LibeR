@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_10996503",
+  "pmid": "10996503",
+  "title": "Lack of an effect of valproate concentration on lamotrigine pharmacokinetics in developmentally disabled patients with epilepsy.",
+  "abstract": "",
+  "first_author": "Gidal",
+  "year": "2000",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_10996503_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/gidal-2000-10996503.pdf",
+    "sha256": "31a8977877a994b058e002cf6dda58b86d70adec414d7286293dfe4c6e352d90"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

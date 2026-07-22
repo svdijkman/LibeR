@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_2036750",
+  "pmid": "2036750",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/costeff-1991-2036750.pdf",
+    "sha256": "6e2721f202e9eca47dfeb3b9f7c6b1c99fc0893582307087634f4a7569c97b29"
+  }
+}

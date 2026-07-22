@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_22087867",
+  "pmid": "22087867",
+  "title": "Application of a systems approach to the bottom-up assessment of pharmacokinetics in obese patients: expected variations in clearance.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/ghobadi-2011-22087867.pdf",
+    "sha256": "f1da005dcd70b146a986b2fea59b11e6031818ed2c0a7b23dcbe673af222aef6"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

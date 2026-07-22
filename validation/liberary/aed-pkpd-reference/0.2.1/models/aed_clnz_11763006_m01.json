@@ -1,0 +1,394 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_clnz_11763006_m01",
+  "article_id": "pmid_11763006",
+  "pmid": "11763006",
+  "model_index": 1,
+  "compound_group": "CLNZ",
+  "family_id": "pmid_11763006",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CLNZ/Supplement_CLNZ_v2.docx",
+      "sha256": "8a86ad372678a0af7df31d49c867ac3bf54f743a07e499c4b8f66af913fb314c",
+      "study_table": 1,
+      "study_row": 5,
+      "model_table": 2,
+      "model_row": 6
+    },
+    "publication_pdf": {
+      "path": "Supplements/CLNZ/articles/yukawa-2001-11763006.pdf",
+      "sha256": "41eb8ef853799e9825a99091dbd0ad46779706993b40998f2aaf7ece4822c83e"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Yukawa 2001 11763006",
+    "population": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+    "model_type": "PK",
+    "objective": "To examine “the ability to detect a pharmacokinetic interaction between clonazepam and carbamazepine on the applicability and performance of pharmacokinetic screening using a population approach”",
+    "covariates": "Tested: ? Included: WT, comedication of CBZ on CL, WT on Vd",
+    "observations": "Simplified PK model only characterises Css, which does not allow absorption/distribution phases.",
+    "dose": "Steady state oral doses in patients",
+    "structure": "Simplified PK model",
+    "equations": "CL=theta1*(WT**theta2)*(theta3**CBZ)*(1+eta1) Cssipred=D/(CL*Tau) Cssobs=Cssipred*(1+eps1) Css=steady state concentrations D=CLNZ dose Tau=dosing interval CBZ= comedication with CBZ (1=yes, 0=no)",
+    "parameter_values": "theta1=0.179 theta2=-0.231 theta3=1.22 omega1= 0.0605 sigma1= 0.0289",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Pharmacoepidemiologic investigation of a clonazepam-carbamazepine interaction by mixed effect modeling using routine clinical pharmacokinetic data in Japanese patients.",
+      "compound": "CLNZ",
+      "population": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+      "route": "oral",
+      "n_subjects": 58,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+        "n_total": 58,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 58
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 0.3,
+                    "maximum": 21
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 5",
+                  "evidence": "~10±~4.5 (0.3-21)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 5.5,
+                    "maximum": 66.8
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 5",
+                  "evidence": "~30±~15 (5.5-66.8)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 5",
+              "evidence": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 5",
+          "evidence": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 6",
+            "evidence": "Steady state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK model",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["CL", "THETA2", "THETA3"]
+          },
+          "description": "Simplified PK model"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK model Steady state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.179,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": -0.231,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 1.22,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0605,
+            "reported_metric": "variance",
+            "value": 0.0605,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 0.0289,
+            "reported_metric": "variance",
+            "value": 0.0289,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "comedication of CBZ on CL", "WT on Vd"],
+      "residual_error": "CL=theta1*(WT**theta2)*(theta3**CBZ)*(1+eta1) Cssipred=D/(CL*Tau) Cssobs=Cssipred*(1+eps1) Css=steady state concentrations D=CLNZ dose Tau=dosing interval CBZ= comedication with CBZ (1=yes, 0=no)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Yukawa",
+      "year": "2001",
+      "dose": "Steady state oral doses in patients",
+      "population": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+      "population_details": {
+        "raw": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+        "n_total": 58,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 58
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 0.3,
+                    "maximum": 21
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 5",
+                  "evidence": "~10±~4.5 (0.3-21)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 5.5,
+                    "maximum": 66.8
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 5",
+                  "evidence": "~30±~15 (5.5-66.8)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 5",
+              "evidence": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 5",
+          "evidence": "N: 58 (Japan) Age: ~10±~4.5 (0.3-21) WT: ~30±~15 (5.5-66.8)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 6",
+            "evidence": "Steady state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "To examine “the ability to detect a pharmacokinetic interaction between clonazepam and carbamazepine on the applicability and performance of pharmacokinetic screening using a population approach”"
+    },
+    "covariates": {
+      "tested": "?",
+      "included": ["WT", "comedication of CBZ on CL", "WT on Vd"],
+      "raw": "Tested: ? Included: WT, comedication of CBZ on CL, WT on Vd"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:05:22.191Z"
+}

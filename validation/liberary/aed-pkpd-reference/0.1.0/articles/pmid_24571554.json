@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_24571554",
+  "pmid": "24571554",
+  "title": "Effect of oral contraceptives on lamotrigine levels depends on comedication.",
+  "abstract": "",
+  "first_author": "Wegner",
+  "year": "2014",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_24571554_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/wegner-2014-24571554.pdf",
+    "sha256": "00adcc0abaaeea7fdd2d506347f2275b232f1707ab30567aa161ac8d91fb69cb"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lvt_19054418_m01",
+  "article_id": "pmid_19054418",
+  "pmid": "19054418",
+  "model_index": 1,
+  "compound_group": "LVT",
+  "family_id": "pmid_19054418",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LVT/Supplement_LVT_v2.docx",
+      "sha256": "366f9c59b71d28cdbc53b4e37282f611af800ea34a400f4eb82946c22c5dd24b",
+      "study_table": 1,
+      "study_row": 11,
+      "model_table": 2,
+      "model_row": 8
+    },
+    "publication_pdf": {
+      "path": "Supplements/LVT/articles/uges-2009-19054418.pdf",
+      "sha256": "19831c51cb3147e1500fb418d912527ac3198857e9696a88f86379808b0ccde0"
+    },
+    "metadata_csv": "Supplements/CLNZ/pubmed_result_eval_CLNZ.csv"
+  },
+  "raw": {
+    "citation": "Uges 2009 19054418",
+    "population": "N: 11 (Netherlands) Age: 60±9.7 (45-75) WT: 85±27 (45-125)",
+    "model_type": "PK",
+    "objective": "“to evaluate the feasibility and safety of the administration of 2,500 mg add-on ivLEV in adult patients with SE. The secondary objective was to assess an ivLEV pharmacokinetic (PK) population model of patients with SE to support safety data and future studies”",
+    "covariates": "Included: WT on CL and Vd",
+    "observations": "Not much information is provided regarding the model building and evaluation. Parameters CL and Vd in per kg, but not clear if this was decided on beforehand or found as significant covariate during model building. Error model not reported. No goodness-of-fit plots",
+    "dose": "Single IV doses in patients",
+    "structure": "2 compartment with linear elimination and no absorption (IV)",
+    "equations": "CL=theta1* WT* (1+eta1) V1=theta2*WT* (1+eta2) K12=theta3*(1+eta3) K21=theta4*(1+eta4) Cobs=Cipred",
+    "parameter_values": "theta1=0.0476 theta2=0.45 theta3=0.24 theta4=0.70 omega1= 0.0954 omega2=0.035 omega3=0.25 omega4=0.099",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Safety and pharmacokinetics of intravenous levetiracetam infusion as add-on in status epilepticus.",
+      "compound": "LVT",
+      "population": "N: 11 (Netherlands) Age: 60±9.7 (45-75) WT: 85±27 (45-125)",
+      "route": null,
+      "n_subjects": 11,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 2,
+        "description": "2 compartment with linear elimination and no absorption (IV)"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.0476,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V1",
+            "typical": 0.45,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K12",
+            "typical": 0.24,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K21",
+            "typical": 0.7,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0954,
+            "reported_metric": "variance",
+            "value": 0.0954,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "V1",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.035,
+            "reported_metric": "variance",
+            "value": 0.035,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "K12",
+            "eta_index": 3,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.25,
+            "reported_metric": "variance",
+            "value": 0.25,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "K21",
+            "eta_index": 4,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.099,
+            "reported_metric": "variance",
+            "value": 0.099,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": "WT on CL and Vd",
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Uges",
+      "year": "2009",
+      "dose": "Single IV doses in patients",
+      "population": "N: 11 (Netherlands) Age: 60±9.7 (45-75) WT: 85±27 (45-125)",
+      "objective": "“to evaluate the feasibility and safety of the administration of 2,500 mg add-on ivLEV in adult patients with SE. The secondary objective was to assess an ivLEV pharmacokinetic (PK) population model of patients with SE to support safety data and future studies”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": "WT on CL and Vd",
+      "raw": "Included: WT on CL and Vd"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:47.115Z"
+}

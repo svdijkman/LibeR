@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_590316",
+  "pmid": "590316",
+  "title": "",
+  "abstract": "",
+  "first_author": "Heimann",
+  "year": "1977",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_590316_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/heimann-1977-590316.pdf",
+    "sha256": "78c48dbe1f5d72aaadc7e8b5e8da2c0ea91f4fbc8ea552b7db1543dab80e54da"
+  },
+  "metadata_source": ""
+}

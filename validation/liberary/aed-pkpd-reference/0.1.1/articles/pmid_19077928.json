@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_19077928",
+  "pmid": "19077928",
+  "title": "Dose adjustment of phenytoin for comedication in Japanese patients with epilepsy.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/fukuoka-2009-19077928.pdf",
+    "sha256": "fef91d0408052d8b6ac21de7f97c78379411c578fbdd65749c72385f1a09462a"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

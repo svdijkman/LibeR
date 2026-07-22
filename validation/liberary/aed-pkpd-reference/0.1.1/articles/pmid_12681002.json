@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_12681002",
+  "pmid": "12681002",
+  "title": "",
+  "abstract": "",
+  "first_author": "Lardizabal",
+  "year": "2003",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_12681002_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/lardizabal-2003-12681002.pdf",
+    "sha256": "357348f585fa51a97ad9be051531c16358ec6f511e0b9ff78948a908faaacb78"
+  },
+  "metadata_source": ""
+}

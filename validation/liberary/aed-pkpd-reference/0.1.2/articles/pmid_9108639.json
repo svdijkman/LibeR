@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9108639",
+  "pmid": "9108639",
+  "title": "Carbamazepine population pharmacokinetics in children: mixed-effect models.",
+  "abstract": "",
+  "first_author": "Delgado-Iribanegaray",
+  "year": "1997",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_9108639_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/delgado-1997-9108639.pdf",
+    "sha256": "13fd72de568b101f556b5927e098f79c5ae14bb8fe84a6e63a30651af36aca3c"
+  },
+  "metadata_source": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+}

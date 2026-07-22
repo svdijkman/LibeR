@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_9506012_m01",
+  "article_id": "pmid_9506012",
+  "pmid": "9506012",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_9506012",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 29,
+      "model_table": 2,
+      "model_row": 36
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/yukawa-1997-9506012.pdf",
+      "sha256": "90d322604d19b85e0d0bdf86def7baded49533d1a708838cce845e9b97efe1b8"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Yukawa 1997 9506012",
+    "population": "N: 400 Sex: 50:50 Age: 11.2±7.2 (0.3-54.8) WT:34.6±16.9 (5.2-93)",
+    "model_type": "PK",
+    "objective": "“the applicability and performance of pharmacokinetic screening in detecting pharmacokinetic interactions between valproic acid and carbamazepine”",
+    "covariates": "Tested: WT, AGE, DDVPA, SEX, Comedication (PHB, CBZ) Included: WT, DDVPA, SEX, PHB, CBZ",
+    "observations": "The paper describes a simplified PK model. A nonlinear relationship between CL and patient characteristic is found. WT is most important covariate, females show lower VPA CL than males, comedication results in an increase in relative CL. VPA CL is large in younger children but decreases as patients mature, a non-linear relation between and maturing, decreasing CL.",
+    "dose": "Steady-state, Multiple- oral doses in patients",
+    "structure": "Simplified PK model",
+    "equations": "CL = (theta1*(WT**theta2)*(DMGKG**theta3)*(theta4**(1-SEX))*(theta7**PHB)*(theta5**CBZ))*(1+eta1) Cobs=Cipred*(1+eps1) DMGKG: VPA dose in mg/kg/day WT: Total body weight (kg) SEX: gender (1: female, 0: male) PHB : comedication phenobarbital (1 :yes, 0:no) CBZ: comedication carbamazepine (1: yes, 0:no)",
+    "parameter_values": "theta1= 15.6/1000 theta2= 0.748 theta3= 0.183 theta4= 0.898 theta5= 0.769 theta6= 0.179 theta7= 1.1 omega1= 0.021 sigma1=0.034",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population-based investigation of valproic acid relative clearance using nonlinear mixed effects modeling: influence of drug-drug interaction and patient characteristics.",
+      "compound": "VPA",
+      "population": "N: 400 Sex: 50:50 Age: 11.2±7.2 (0.3-54.8) WT:34.6±16.9 (5.2-93)",
+      "route": "oral",
+      "n_subjects": 400,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "Simplified PK model"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 15.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.748,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.183,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.898,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.769,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.179,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 1.1,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.021,
+            "reported_metric": "variance",
+            "value": 0.021,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.034,
+            "reported_metric": "variance",
+            "value": 0.034,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "DDVPA", "SEX", "PHB", "CBZ"],
+      "residual_error": "CL = (theta1*(WT**theta2)*(DMGKG**theta3)*(theta4**(1-SEX))*(theta7**PHB)*(theta5**CBZ))*(1+eta1) Cobs=Cipred*(1+eps1) DMGKG: VPA dose in mg/kg/day WT: Total body weight (kg) SEX: gender (1: female, 0: male) PHB : comedication phenobarbital (1 :yes, 0:no) CBZ: comedication carbamazepine (1: yes, 0:no)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Yukawa",
+      "year": "1997",
+      "dose": "Steady-state, Multiple- oral doses in patients",
+      "population": "N: 400 Sex: 50:50 Age: 11.2±7.2 (0.3-54.8) WT:34.6±16.9 (5.2-93)",
+      "objective": "“the applicability and performance of pharmacokinetic screening in detecting pharmacokinetic interactions between valproic acid and carbamazepine”"
+    },
+    "covariates": {
+      "tested": ["WT", "AGE", "DDVPA", "SEX", "Comedication (PHB", "CBZ)"],
+      "included": ["WT", "DDVPA", "SEX", "PHB", "CBZ"],
+      "raw": "Tested: WT, AGE, DDVPA, SEX, Comedication (PHB, CBZ) Included: WT, DDVPA, SEX, PHB, CBZ"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:50.170Z"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_17442002",
+  "pmid": "17442002",
+  "title": "Pharmacokinetics of levetiracetam in infants and young children with epilepsy.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "LVT",
+  "model_ids": [],
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/excluded/glauser-2007-17442002.pdf",
+    "sha256": "823f9da2a28b736924f96898d86b9845566c659486946519c2c70fa4fd2fc6cf"
+  },
+  "metadata_source": "Supplements/LVT/pubmed_result_eval_LVT.csv"
+}

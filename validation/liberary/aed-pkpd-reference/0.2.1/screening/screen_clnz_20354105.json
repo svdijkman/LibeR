@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_clnz_20354105",
+  "pmid": "20354105",
+  "compound_group": "CLNZ",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/CLNZ/articles/exclude/kadono-2010-20354105.pdf",
+    "sha256": "1d3c2f47d2c5538edaecdfd7757a6e678d08de93c9e4c72a16051e5f874b9031"
+  }
+}

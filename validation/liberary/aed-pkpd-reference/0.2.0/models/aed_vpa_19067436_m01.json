@@ -1,0 +1,468 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_19067436_m01",
+  "article_id": "pmid_19067436",
+  "pmid": "19067436",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_19067436",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 14,
+      "model_table": 2,
+      "model_row": 17
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/correa-2008-19067436.pdf",
+      "sha256": "58013896f095477a6e9c262496f4f11e72b3f2052414208d2fceb3a33f99df6d"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Correa 2008 19067436",
+    "population": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+    "model_type": "PK",
+    "objective": "“to determine the factors that influence valproate clearance (CL) in Mexican epileptic pediatric patients using a mixed-effect model and sparse data of serum concentrations of valproic acid (VPA) collected during routine clinical care of patients.”",
+    "covariates": "Tested: WT, HT, AGE, BSA, DDVPA, SEX, Comedication (PHB or CBZ) Included: WT, DDVPA, PHB",
+    "observations": "Final regression model reduced inter-individual variability by 31%. A high residual variability may due to fixed Ka, F and Vd values, chosen from literature. Covariates found to influence VPA-PK are WT, DDVPA, and comedication with PHB. WT is evaluated as a better indicator of physiological conditions and metabolic capacity than age. DDVPA has linear relationship with VPA CL. PHB, a known enzyme inducer, enhances biotransformation of VPA. CBZ did not show significant influence on CL. Also gender did not improve fitting of the model. Limitation: Model only included comedication PHB and CBZ.",
+    "dose": "Steady state, oral doses in patients",
+    "structure": "one-compartment model with first-order absorption and elimination.",
+    "equations": "CL = ((theta1+(theta2*WT)+(theta3*DOSE))*(1+(theta4*PHB))) *exp(eta1) KA = theta5 V = theta6*WT Cobs=Cipred+eps1 WT: total body weight (kg) DOSE: daily dose of VPA (mg/day) PHB: comedication phenobarbital (1: yes, 0:no)",
+    "parameter_values": "theta1= 0.0466 theta2= 0.00363 theta3= 0.000282 theta4= 0.236 theta5=1.2 theta6=0.24 omega1= 0.02 sigma1=17.3",
+    "validation": "Yes (bootstrap of 150) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of valproate in Mexican children with epilepsy.",
+      "compound": "VPA",
+      "population": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+      "route": "oral",
+      "n_subjects": 110,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+        "n_total": 110,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 110
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 7,
+                    "sd": 4.5
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.5,
+                    "maximum": 17
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "7.0±4.5 (0.5-17)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 27.1,
+                    "sd": 16.5
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 8,
+                    "maximum": 68.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "27.1±16.5 (8-68.5)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "height",
+                "unit": "cm",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 118.6,
+                    "sd": 26.8
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 66,
+                    "maximum": 174
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "118.6±26.8 (66-174)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 14",
+              "evidence": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 14",
+          "evidence": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 17",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "one-compartment model with first-order absorption and elimination.",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "THETA3", "THETA4", "KA", "V"]
+          },
+          "description": "one-compartment model with first-order absorption and elimination."
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "one-compartment model with first-order absorption and elimination. Steady state, oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.0466,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.00363,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.000282,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.236,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 0.24,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.02,
+            "reported_metric": "variance",
+            "value": 0.02,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 17.3,
+            "reported_metric": "variance",
+            "value": 17.3,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "DDVPA", "PHB"],
+      "residual_error": "CL = ((theta1+(theta2*WT)+(theta3*DOSE))*(1+(theta4*PHB))) *exp(eta1) KA = theta5 V = theta6*WT Cobs=Cipred+eps1 WT: total body weight (kg) DOSE: daily dose of VPA (mg/day) PHB: comedication phenobarbital (1: yes, 0:no)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Correa",
+      "year": "2008",
+      "dose": "Steady state, oral doses in patients",
+      "population": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+      "population_details": {
+        "raw": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+        "n_total": 110,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 110
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 7,
+                    "sd": 4.5
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.5,
+                    "maximum": 17
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "7.0±4.5 (0.5-17)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 27.1,
+                    "sd": 16.5
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 8,
+                    "maximum": 68.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "27.1±16.5 (8-68.5)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "height",
+                "unit": "cm",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 118.6,
+                    "sd": 26.8
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 66,
+                    "maximum": 174
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "118.6±26.8 (66-174)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 14",
+              "evidence": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 14",
+          "evidence": "N: 110 (Mexican) Sex: m=63, f=47 Age:7.0±4.5 (0.5-17) WT:27.1±16.5 (8-68.5) HT:118.6±26.8 (66-174) BSA (m2) : 0.93±0.37 (0.37-1.79)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 17",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to determine the factors that influence valproate clearance (CL) in Mexican epileptic pediatric patients using a mixed-effect model and sparse data of serum concentrations of valproic acid (VPA) collected during routine clinical care of patients.”"
+    },
+    "covariates": {
+      "tested": ["WT", "HT", "AGE", "BSA", "DDVPA", "SEX", "Comedication (PHB or CBZ)"],
+      "included": ["WT", "DDVPA", "PHB"],
+      "raw": "Tested: WT, HT, AGE, BSA, DDVPA, SEX, Comedication (PHB or CBZ) Included: WT, DDVPA, PHB"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 150) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:15.256Z"
+}

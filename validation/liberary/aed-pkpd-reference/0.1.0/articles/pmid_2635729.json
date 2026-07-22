@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_2635729",
+  "pmid": "2635729",
+  "title": "",
+  "abstract": "",
+  "first_author": "Fujita",
+  "year": "1989",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_2635729_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/fujita-1989-2635729.pdf",
+    "sha256": "08784d6b3935b338b36b4d73e0e0d0e51f15c40052fe8d84e64c967758fc890b"
+  },
+  "metadata_source": ""
+}

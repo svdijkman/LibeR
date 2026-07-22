@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_10368078",
+  "pmid": "10368078",
+  "title": "",
+  "abstract": "",
+  "first_author": "Aweeka",
+  "year": "1999",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_10368078_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/aweeka-1999-10368078.pdf",
+    "sha256": "918006e3dae452db207c1baa6e043d66310ef3583b608bb55de5862657a58e4f"
+  },
+  "metadata_source": ""
+}

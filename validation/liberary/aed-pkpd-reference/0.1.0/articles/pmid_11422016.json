@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_11422016",
+  "pmid": "11422016",
+  "title": "Population pharmacokinetics of carbamazepine in Singapore epileptic patients.",
+  "abstract": "",
+  "first_author": "Chan",
+  "year": "2001",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_11422016_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/chan-2001-11422016.pdf",
+    "sha256": "b1d5ec756b7ad72c6c22051f1edabdcc4a15c5d09c372e768dd7ac167e170209"
+  },
+  "metadata_source": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+}

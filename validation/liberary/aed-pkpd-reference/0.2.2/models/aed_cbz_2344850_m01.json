@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_2344850_m01",
+  "article_id": "pmid_2344850",
+  "pmid": "2344850",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_2344850",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 35,
+      "model_table": 2,
+      "model_row": 40
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/gerardin-1990-2344850.pdf",
+      "sha256": "974dabf458cd4dbbe544b474c8fa50b9126ac8444e9daae9501f48f201c939bb"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Gérardin 1990 2344850",
+    "population": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+    "model_type": "PK",
+    "objective": "To provide “an additional insight into CBZ pharmacokinetics and determination of absolute bioavailability after administration of an oral suspension”",
+    "covariates": "Not possible due to only 2 subjects being analysed",
+    "observations": "In the case of rapid absorption formula of CBZ, a two-compartment model might have to be taken into account, in opposition to the usual one-compartment model used. Only two subjects were included, and thus the results are not necessarily useful for population predictions",
+    "dose": "Single oral dose and single iv infusion concurrently in two healthy subjects",
+    "structure": "2 compartment, first order absorption and elimination",
+    "equations": "alpha=theta1 beta=theta2 CL=theta3 K10=theta4 K12=theta5 K21=theta6 V1=theta7 Vss=theta8",
+    "parameter_values": "Values reported for subject1/subject2: theta1=3.09/1.68 theta2=0.018/0.015 theta3=1.38/1.17 theta4=0.032/0.026 theta5=1.35/0.72 theta6=1.73/0.95 theta7=0.57/0.51 theta8=1.02/0.89",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "CBZ",
+      "population": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+      "route": "oral",
+      "n_subjects": 2,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+        "n_total": 2,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 2
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 43,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 35",
+                  "evidence": "43/59",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 76,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 35",
+                  "evidence": "76/89",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 35",
+              "evidence": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 35",
+          "evidence": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "infusion",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single oral dose and single iv infusion concurrently in two healthy subjects",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 40",
+            "evidence": "Single oral dose and single iv infusion concurrently in two healthy subjects",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 4,
+        "trans": 1,
+        "compartments": 2,
+        "description": "2 compartment, first order absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 2,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "micro_rate_constants",
+            "parameters": ["ALPHA", "BETA", "CL", "K10", "K12", "K21", "V1", "VSS"]
+          },
+          "description": "2 compartment, first order absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 4,
+            "trans": 1,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "2-compartment extravascular input with linear elimination and micro_rate_constants parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "2 compartment, first order absorption and elimination Single oral dose and single iv infusion concurrently in two healthy subjects",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "alpha",
+            "typical": 3.09,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "beta",
+            "typical": 0.018,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL",
+            "typical": 1.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K10",
+            "typical": 0.032,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K12",
+            "typical": 1.35,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K21",
+            "typical": 1.73,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V1",
+            "typical": 0.57,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vss",
+            "typical": 1.02,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": [],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Gérardin",
+      "year": "1990",
+      "dose": "Single oral dose and single iv infusion concurrently in two healthy subjects",
+      "population": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+      "population_details": {
+        "raw": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+        "n_total": 2,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 2
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 43,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 35",
+                  "evidence": "43/59",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 76,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 35",
+                  "evidence": "76/89",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 35",
+              "evidence": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 35",
+          "evidence": "N: 2 (France/Switzerland) Age: 43/59 WT: 76/89",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "infusion",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single oral dose and single iv infusion concurrently in two healthy subjects",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 40",
+            "evidence": "Single oral dose and single iv infusion concurrently in two healthy subjects",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "To provide “an additional insight into CBZ pharmacokinetics and determination of absolute bioavailability after administration of an oral suspension”"
+    },
+    "covariates": {
+      "tested": "Not possible due to only 2 subjects being analysed",
+      "included": [],
+      "raw": "Not possible due to only 2 subjects being analysed"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:22:52.648Z"
+}

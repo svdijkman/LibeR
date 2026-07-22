@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_vpa_6804223_m01",
+  "screening_id": null,
+  "article_id": "pmid_6804223",
+  "pmid": "6804223",
+  "source_pdf_sha256": "2de6380351777dc79d87b5aa5b19019538e1426d50ec5cf2678745296095ba02",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:47:17.945Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "The pharmacokinetics of valproic acid after oral and parenteral administration in healthy volunteers",
+    "compound": "valproic acid (VPA)",
+    "population": null,
+    "route": "oral, intravenous",
+    "n_subjects": 6,
+    "software": "NONMEM",
+    "estimation_method": "maximum likelihood estimation",
+    "model_type": "open two-compartment model",
+    "structural_model": {
+      "advan": 2,
+      "trans": 1,
+      "compartments": 2,
+      "description": "Open two-compartment model with first-order absorption and elimination"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "Vc",
+          "typical": 9.967,
+          "se": null,
+          "unit": "L"
+        },
+        {
+          "name": "Vd",
+          "typical": 12.628,
+          "se": null,
+          "unit": "L"
+        },
+        {
+          "name": "VdB",
+          "typical": 18.23,
+          "se": null,
+          "unit": "L"
+        },
+        {
+          "name": "Clb",
+          "typical": 51.5,
+          "se": 11.9,
+          "unit": "ml/min"
+        },
+        {
+          "name": "ka",
+          "typical": null,
+          "se": null,
+          "unit": "h^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Inter-subject variability in Vc",
+          "parameter": "Vc",
+          "eta_index": 0,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 4.27,
+          "reported_metric": "cv_percent",
+          "value": 1.39685,
+          "conversion": "sqrt(1 + (0.0427/100)^2)"
+        },
+        {
+          "description": "Inter-subject variability in Vd",
+          "parameter": "Vd",
+          "eta_index": 1,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 6.25,
+          "reported_metric": "cv_percent",
+          "value": 0.89443,
+          "conversion": "sqrt(1 + (0.0625/100)^2)"
+        },
+        {
+          "description": "Inter-subject variability in VdB",
+          "parameter": "VdB",
+          "eta_index": 2,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 6.25,
+          "reported_metric": "cv_percent",
+          "value": 0.89443,
+          "conversion": "sqrt(1 + (0.0625/100)^2)"
+        },
+        {
+          "description": "Inter-subject variability in Clb",
+          "parameter": "Clb",
+          "eta_index": 3,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 11.9,
+          "reported_metric": "cv_percent",
+          "value": 0.24586,
+          "conversion": "sqrt(1 + (0.119/100)^2)"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 0,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": -0.0457689,
+          "conversion": "covariance"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error variance for oral data",
+          "error_model": "proportional",
+          "reported_value": 266.8,
+          "reported_metric": "sd",
+          "value": 10.34579,
+          "conversion": "sqrt(266.8)"
+        },
+        {
+          "description": "Residual error variance for intravenous data",
+          "error_model": "proportional",
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": 10.34579,
+          "conversion": "sqrt(266.8)"
+        }
+      ]
+    },
+    "covariates": [
+      "age",
+      "weight"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.9,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.92,
+        "population": 0.78,
+        "software": 0.9
+      }
+    },
+    "evidence_quotes": [
+      "The pharmacokinetics of valproic acid were investigated in six healthy volunteers.",
+      "After a single intravenous dose of 1,000 mg valproic acid, the pharmacokinetic parameters were determined according to the open two-compartment model."
+    ],
+    "notes": "The paper does not provide specific values for ka and other parameters. The model is based on an open two-compartment structure with first-order absorption and elimination. Inter-subject variability was considered for Vc, Vd, VdB, and Clb. A correlation between the inter-individual variabilities of Vc and Clb was reported."
+  },
+  "variants": {
+    "text": {
+      "title": "The pharmacokinetics of valproic acid after oral and parenteral administration in healthy volunteers",
+      "compound": "valproic acid (VPA)",
+      "population": null,
+      "route": "oral, intravenous",
+      "n_subjects": 6,
+      "software": "NONMEM",
+      "estimation_method": "maximum likelihood estimation",
+      "model_type": "open two-compartment model",
+      "structural_model": {
+        "advan": 2,
+        "trans": 1,
+        "compartments": 2,
+        "description": "Open two-compartment model with first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Vc",
+            "typical": 9.967,
+            "se": null,
+            "unit": "L"
+          },
+          {
+            "name": "Vd",
+            "typical": 12.628,
+            "se": null,
+            "unit": "L"
+          },
+          {
+            "name": "VdB",
+            "typical": 18.23,
+            "se": null,
+            "unit": "L"
+          },
+          {
+            "name": "Clb",
+            "typical": 51.5,
+            "se": 11.9,
+            "unit": "ml/min"
+          },
+          {
+            "name": "ka",
+            "typical": null,
+            "se": null,
+            "unit": "h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Inter-subject variability in Vc",
+            "parameter": "Vc",
+            "eta_index": 0,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 4.27,
+            "reported_metric": "cv_percent",
+            "value": 1.39685,
+            "conversion": "sqrt(1 + (0.0427/100)^2)"
+          },
+          {
+            "description": "Inter-subject variability in Vd",
+            "parameter": "Vd",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 6.25,
+            "reported_metric": "cv_percent",
+            "value": 0.89443,
+            "conversion": "sqrt(1 + (0.0625/100)^2)"
+          },
+          {
+            "description": "Inter-subject variability in VdB",
+            "parameter": "VdB",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 6.25,
+            "reported_metric": "cv_percent",
+            "value": 0.89443,
+            "conversion": "sqrt(1 + (0.0625/100)^2)"
+          },
+          {
+            "description": "Inter-subject variability in Clb",
+            "parameter": "Clb",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 11.9,
+            "reported_metric": "cv_percent",
+            "value": 0.24586,
+            "conversion": "sqrt(1 + (0.119/100)^2)"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 0,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": -0.0457689,
+            "conversion": "covariance"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error variance for oral data",
+            "error_model": "proportional",
+            "reported_value": 266.8,
+            "reported_metric": "sd",
+            "value": 10.34579,
+            "conversion": "sqrt(266.8)"
+          },
+          {
+            "description": "Residual error variance for intravenous data",
+            "error_model": "proportional",
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": 10.34579,
+            "conversion": "sqrt(266.8)"
+          }
+        ]
+      },
+      "covariates": [
+        "age",
+        "weight"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.9,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.92,
+          "population": 0.78,
+          "software": 0.9
+        }
+      },
+      "evidence_quotes": [
+        "The pharmacokinetics of valproic acid were investigated in six healthy volunteers.",
+        "After a single intravenous dose of 1,000 mg valproic acid, the pharmacokinetic parameters were determined according to the open two-compartment model."
+      ],
+      "notes": "The paper does not provide specific values for ka and other parameters. The model is based on an open two-compartment structure with first-order absorption and elimination. Inter-subject variability was considered for Vc, Vd, VdB, and Clb. A correlation between the inter-individual variabilities of Vc and Clb was reported."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

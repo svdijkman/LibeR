@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_21416779_m01",
+  "article_id": "pmid_21416779",
+  "pmid": "21416779",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_21416779",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 11,
+      "model_table": 2,
+      "model_row": 14
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/juarez-2010-21416779.pdf",
+      "sha256": "79956b02e8305d3dfa9890cf8c2b0c6cef23759bf0f0358cd5efc07ef5cc0564"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Juarez 2010 21416779",
+    "population": "N:108 Sex: 44F, 64M Age: 4.6 (1-16) WT: 17.5 (5.2 -50)",
+    "model_type": "PK",
+    "objective": "“to estimate population based pharmacokinetic of valproic acid (VPA) and to determine the effect of treatment and additional disease on its performance in children with epilepsy” AND “to describe the pharmacokinetic of valproic acid in a population of epileptic children using bayesian program of analysis.”",
+    "covariates": "Tested: WT, AGE, Comedication (CBZ, DHP, PHB), additional disease. Included: WT, AGE",
+    "observations": "The final model has a higher predictive performance in prediction of the serum concentration than the basic model. The estimates were significantly affected by weight, age, CBZ and gastroesophageal reflux (GER). But only age and weight are included in the model. A relationship is observed between observed and predicted plasma VPA concentration, which is poor at high concentrations.",
+    "dose": "Steady state, oral doses in patients",
+    "structure": "One compartment model with first-order absorption and elimination",
+    "equations": "CL= (theta1+(theta2*AGE)+(theta3*WT))*(1+eta1) V = (theta4+(theta5*AGE)+(theta6*WT))*(1+eta2) Ka = theta 7 (Value taken from from Correa et al.) Cobs=Cipred*(1+eps1)",
+    "parameter_values": "theta1= 0.0696 theta2= 0.0031 theta3= 0.0075 theta4= 0.674 theta5= 0.0308 theta6= 0.0756 theta7= 1.2 omega1 = 0.0225 omega2 = 0.361 sigma1=0.00504",
+    "validation": "Yes, 30 samples."
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Effect of treatment and additional disease on pharmacokinetic of valproic acid in children with epilepsy.",
+      "compound": "VPA",
+      "population": "N:108 Sex: 44F, 64M Age: 4.6 (1-16) WT: 17.5 (5.2 -50)",
+      "route": "oral",
+      "n_subjects": 108,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One compartment model with first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.0696,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.0031,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.0075,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.674,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.0308,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.0756,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0225,
+            "reported_metric": "variance",
+            "value": 0.0225,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.361,
+            "reported_metric": "variance",
+            "value": 0.361,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.00504,
+            "reported_metric": "variance",
+            "value": 0.00504,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "AGE"],
+      "residual_error": "CL= (theta1+(theta2*AGE)+(theta3*WT))*(1+eta1) V = (theta4+(theta5*AGE)+(theta6*WT))*(1+eta2) Ka = theta 7 (Value taken from from Correa et al.) Cobs=Cipred*(1+eps1)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Juarez",
+      "year": "2010",
+      "dose": "Steady state, oral doses in patients",
+      "population": "N:108 Sex: 44F, 64M Age: 4.6 (1-16) WT: 17.5 (5.2 -50)",
+      "objective": "“to estimate population based pharmacokinetic of valproic acid (VPA) and to determine the effect of treatment and additional disease on its performance in children with epilepsy” AND “to describe the pharmacokinetic of valproic acid in a population of epileptic children using bayesian program of analysis.”"
+    },
+    "covariates": {
+      "tested": ["WT", "AGE", "Comedication (CBZ", "DHP", "PHB)", "additional disease."],
+      "included": ["WT", "AGE"],
+      "raw": "Tested: WT, AGE, Comedication (CBZ, DHP, PHB), additional disease. Included: WT, AGE"
+    },
+    "validation": {
+      "raw": "Yes, 30 samples."
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:49.832Z"
+}

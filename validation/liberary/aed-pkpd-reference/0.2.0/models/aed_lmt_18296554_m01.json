@@ -1,0 +1,404 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_18296554_m01",
+  "article_id": "pmid_18296554",
+  "pmid": "18296554",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_18296554",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 16,
+      "model_table": 2,
+      "model_row": 13
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/punyawudho-2008-18296554.pdf",
+      "sha256": "327f323f78ba49ba17d1d8871624cc70053a70ed6a6bd69593a5254d4726aee1"
+    },
+    "metadata_csv": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+  },
+  "raw": {
+    "citation": "Punyawudho 2008 18296554",
+    "population": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+    "model_type": "PK",
+    "objective": "“to estimate the population pharmacokinetic parameters of LTG and their variability in an elderly population and to describe the relationship between patient-specific covariates, including age, weight, race ,renal function, liver function, PHT use, smoking, and alcohol use, and pharmacokinetic parameters”",
+    "covariates": "Tested: AGE, WT (in different types of measures), RACE (white/non-white), albumin, blood urea nitrogen (BUN), BUN/CrCL (BUN/CR), serum creatinine (CR), creatinine clearance (CrCL), PHT, smoking, alcohol use Included: BUN/CR, WT, PHT on CL",
+    "observations": "Age not found significant as a covariate on CL, probably because the organ deterioration is already taken into account by BUN/CR, although BUN/CR represents renal function, while LMT is cleared hepatically. Perhaps deterioration in both organs follow a similar profile. The authors do not touch on this subject.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "CL/F=(theta1*BUNCR+theta2*WT)*( theta3**PHT)*exp(eta1) Vd/F=theta4 Ka=theta5 F1=1 Cobs=Cipred*(1+eps1)+eps2 PHT=comedication with phenytoin (yes =1, no=0) BUNCR=blood urea nitrogen/serum creatinine ratio",
+    "parameter_values": "theta1=0.0332 theta2=0.0268 theta3=1.59 theta4=115 theta5=3.5 omega1=0.111 sigma1= 0.0392 sigma2=0.308",
+    "validation": "Yes (bootstrap of 1000, ppc of 200) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of lamotrigine in elderly patients.",
+      "compound": "LMT",
+      "population": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+      "route": "oral",
+      "n_subjects": 148,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+        "n_total": 148,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 148
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 59,
+                    "maximum": 92
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 16",
+                  "evidence": "70.64 (59-92)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 40,
+                    "maximum": 123
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 16",
+                  "evidence": "80.88 (40-123)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 16",
+              "evidence": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 16",
+          "evidence": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 13",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "THETA3", "VD/F", "KA"]
+          },
+          "description": "1 compartment with linear absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment with linear absorption and elimination Steady-state oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.0332,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.0268,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 1.59,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 115,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 3.5,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.111,
+            "reported_metric": "variance",
+            "value": 0.111,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.0392,
+            "reported_metric": "variance",
+            "value": 0.0392,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 0.308,
+            "reported_metric": "variance",
+            "value": 0.308,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["BUN/CR", "WT", "PHT on CL"],
+      "residual_error": "CL/F=(theta1*BUNCR+theta2*WT)*( theta3**PHT)*exp(eta1) Vd/F=theta4 Ka=theta5 F1=1 Cobs=Cipred*(1+eps1)+eps2 PHT=comedication with phenytoin (yes =1, no=0) BUNCR=blood urea nitrogen/serum creatinine ratio",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Punyawudho",
+      "year": "2008",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+      "population_details": {
+        "raw": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+        "n_total": 148,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 148
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 59,
+                    "maximum": 92
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 16",
+                  "evidence": "70.64 (59-92)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 40,
+                    "maximum": 123
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 16",
+                  "evidence": "80.88 (40-123)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 16",
+              "evidence": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 16",
+          "evidence": "N: 148 (USA) American Indian:3 Black: 37 Hispanic:9 White:99 Age:70.64 (59-92) WT:80.88 (40-123)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 13",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to estimate the population pharmacokinetic parameters of LTG and their variability in an elderly population and to describe the relationship between patient-specific covariates, including age, weight, race ,renal function, liver function, PHT use, smoking, and alcohol use, and pharmacokinetic parameters”"
+    },
+    "covariates": {
+      "tested": ["AGE", "WT (in different types of measures)", "RACE (white/non-white)", "albumin", "blood urea nitrogen (BUN)", "BUN/CrCL (BUN/CR)", "serum creatinine (CR)", "creatinine clearance (CrCL)", "PHT", "smoking", "alcohol use"],
+      "included": ["BUN/CR", "WT", "PHT on CL"],
+      "raw": "Tested: AGE, WT (in different types of measures), RACE (white/non-white), albumin, blood urea nitrogen (BUN), BUN/CrCL (BUN/CR), serum creatinine (CR), creatinine clearance (CrCL), PHT, smoking, alcohol use Included: BUN/CR, WT, PHT on CL"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000, ppc of 200) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:09.114Z"
+}

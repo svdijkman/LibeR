@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_11763006",
+  "pmid": "11763006",
+  "title": "Pharmacoepidemiologic investigation of a clonazepam-carbamazepine interaction by mixed effect modeling using routine clinical pharmacokinetic data in Japanese patients.",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "2001",
+  "compounds": "CLNZ",
+  "model_ids": "aed_clnz_11763006_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CLNZ/articles/yukawa-2001-11763006.pdf",
+    "sha256": "41eb8ef853799e9825a99091dbd0ad46779706993b40998f2aaf7ece4822c83e"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

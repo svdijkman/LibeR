@@ -1,0 +1,434 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_24831653_m01",
+  "article_id": "pmid_24831653",
+  "pmid": "24831653",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_24831653",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 3,
+      "model_table": 2,
+      "model_row": 4
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/lin-2015-24831653.pdf",
+      "sha256": "db714ceb93e4544faec22b60e5e7a2adbb0e6aec5d122098ae45f54a01bf6631"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Lin 2015 24831653",
+    "population": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+    "model_type": "PK",
+    "objective": "“to establish a PPK model for VPA in Chinese adult epileptic patients and to demonstrate its use in dose individualization.”",
+    "covariates": "Tested: SEX, AGE, WT, DDVPA, formulation, comedication (CBZ, PHT, PHB, TPM) Included: WT, DOSE, CBZ, PHT, PHB",
+    "observations": "A nonlinear relationship between DDVPA and CLVPA, as reported in other studies, may be result of VPA protein binding increasing CL as the daily dose of VPA increases. A nonlinear relationship between WT and VPA CL, agreement with other studies. May be due to body size and the development/functionality of organs in elimination. Comedication increases VPA CL in model The goodness-of-fit plots obtained from the basic and final model show significant improvement in the final model with the inclusion of covariates for observed (DV) versus population prediction (PRED). Limitations possible due to model generalization.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment model, first-order absorption and elimination",
+    "equations": "CL=theta1*((WT/60)**theta2)*(DOSE**theta3)*(theta4**CBZ)*(theta5**PHT)*(theta6**PHB)*exp(eta1) V = theta7*WT KA = theta8 Cobs=Cipred+eps1 DOSE: VPA dose in mg/day CBZ: comedication with carbamazepine (1: yes, 0: no) PHT: comedication with phenytoin (1: yes, 0: no) PHB: comedication with phenobarbital (1: yes, 0: no)",
+    "parameter_values": "theta1= 0.1 theta2= 0.7 theta3= 0.2 theta4= 1.36 theta5= 1.25 theta6= 1.11 theta7= 0.14 theta8= 1.9 omega1=0.0319 sigma1= 8.5",
+    "validation": "Yes (bootstrap of 1000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of valproic acid in adult Chinese epileptic patients and its application in an individualized dosage regimen.",
+      "compound": "VPA",
+      "population": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+      "route": "oral",
+      "n_subjects": 199,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+        "n_total": 199,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 199
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 26.6,
+                    "sd": 11.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 14,
+                    "maximum": 66
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 3",
+                  "evidence": "26.6 ± 11.7 (14-66)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 60.2,
+                    "sd": 12.5
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 21,
+                    "maximum": 101
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 3",
+                  "evidence": "60.2 ± 12.5 (21-101)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 3",
+              "evidence": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 3",
+          "evidence": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 4",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment model, first-order absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["CL", "THETA2", "THETA3", "THETA4", "THETA5", "THETA6", "V", "KA"]
+          },
+          "description": "1 compartment model, first-order absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment model, first-order absorption and elimination Steady-state oral doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.36,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.11,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 0.14,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1.9,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0319,
+            "reported_metric": "variance",
+            "value": 0.0319,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 8.5,
+            "reported_metric": "variance",
+            "value": 8.5,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "DOSE", "CBZ", "PHT", "PHB"],
+      "residual_error": "CL=theta1*((WT/60)**theta2)*(DOSE**theta3)*(theta4**CBZ)*(theta5**PHT)*(theta6**PHB)*exp(eta1) V = theta7*WT KA = theta8 Cobs=Cipred+eps1 DOSE: VPA dose in mg/day CBZ: comedication with carbamazepine (1: yes, 0: no) PHT: comedication with phenytoin (1: yes, 0: no) PHB: comedication with phenobarbital (1: yes, 0: no)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Lin",
+      "year": "2015",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+      "population_details": {
+        "raw": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+        "n_total": 199,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 199
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 26.6,
+                    "sd": 11.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 14,
+                    "maximum": 66
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 3",
+                  "evidence": "26.6 ± 11.7 (14-66)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 60.2,
+                    "sd": 12.5
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 21,
+                    "maximum": 101
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 3",
+                  "evidence": "60.2 ± 12.5 (21-101)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 3",
+              "evidence": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 3",
+          "evidence": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 4",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to establish a PPK model for VPA in Chinese adult epileptic patients and to demonstrate its use in dose individualization.”"
+    },
+    "covariates": {
+      "tested": ["SEX", "AGE", "WT", "DDVPA", "formulation", "comedication (CBZ", "PHT", "PHB", "TPM)"],
+      "included": ["WT", "DOSE", "CBZ", "PHT", "PHB"],
+      "raw": "Tested: SEX, AGE, WT, DDVPA, formulation, comedication (CBZ, PHT, PHB, TPM) Included: WT, DOSE, CBZ, PHT, PHB"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:14.681Z"
+}

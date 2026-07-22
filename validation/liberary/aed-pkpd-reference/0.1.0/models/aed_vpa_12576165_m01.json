@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_12576165_m01",
+  "article_id": "pmid_12576165",
+  "pmid": "12576165",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_12576165",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 23,
+      "model_table": 2,
+      "model_row": 30
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/dutta-2003-12576165.pdf",
+      "sha256": "1c4e213760829704e7409fce7f1bee067345c425b0045f9ade00e6def980b9b7"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Dutta 2003 12576165",
+    "population": "[ADULT] UNKNOWN [CHILD] N: 48 Sex: m=21, f=27 Age: 7 ±3 (1.9 – 14) WT: 24.2 ±11.4 (9.1-57) (Cloyd et al. 1993)",
+    "model_type": "PK",
+    "objective": "“to determine optimal intravenous (i.v.) loading dose, and i.v. and oral VPA maintenance regimens”",
+    "covariates": "Tested: AGE, Induction status, formulation. Included: AGE, Induction status, formulation.",
+    "observations": "A 5 min, 15mg/kg dose result in total and free plasma [VPA]: CHILD= ~65, 7.5 mg/l ADULT= ~80 and 11 mg/l Induction status had little effect. Study shows a two-fold higher IV and oral dose may be required in induced patients. The simulation shows a total [VPA] increasing less than proportionally with dose, while unbound [VPA] increase linearly with dose, this may be due to nonlinear protein binding.",
+    "dose": "Steady state, IV and oral doses in patients",
+    "structure": "One-compartment model with first-order absorption and elimination; 2-binding site model for relation between total and bound/unbound concentrations",
+    "equations": "N1= theta1*exp(eta1) N2= theta2*exp(eta2) K1= theta3*exp(eta3) K2= theta4*exp(eta4) ---ADULT--- KA= theta5 V =theta6*WT CL= (theta7*WT)/1000 #Uninduced, converted from mL/h/kg to L/h CL= (theta8*WT)/1000 #Induced, converted from mL/h/kg to L/h ---CHILD--- KA=theta5 V= theta6*WT CL=(theta7*WT)/1000 #Uninduced, converted from mL/h/kg to L/h CL=(theta8*WT)/1000 #Induced, converted from mL/h/kg to L/h ALAG1=2 CB=(N1*K1*CU*ALB)/(1+(K1*CU))+((N2*K2*CU*ALB)/(1+(K2*CU)) CTOTAL=CU+CB Cipred=CTOTAL Cobs=Cipred #no error model reported CU: unbound VPA concentrations CB: bound VPA concentrations N1/2: number of binding sites K1/2: binding affinity constants ALB: albumin concentration",
+    "parameter_values": "[ADULT] theta1=1.54 theta2=0.194 theta3=11.9 theta4=164 theta5=0.1 theta6=1.31 theta7=65 theta8=110 omega1=0.0049 omega2=0.1629 omega3=0.0279 omega4=0.7392 [CHILD] theta1=1.54 theta2=0.194 theta3=11.9 theta4=164 theta5=0.1 theta6=1.81 theta7=130 theta8=220 omega1=0.0049 omega2=0.1629 omega3=0.0279 omega4=0.7392",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "VPA",
+      "population": "[ADULT] UNKNOWN [CHILD] N: 48 Sex: m=21, f=27 Age: 7 ±3 (1.9 – 14) WT: 24.2 ±11.4 (9.1-57) (Cloyd et al. 1993)",
+      "route": "oral",
+      "n_subjects": 48,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One-compartment model with first-order absorption and elimination; 2-binding site model for relation between total and bound/unbound concentrations"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "N1",
+            "typical": 1.54,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "N1",
+            "typical": 1.54,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "N2",
+            "typical": 0.194,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "N2",
+            "typical": 0.194,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K1",
+            "typical": 11.9,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K1",
+            "typical": 11.9,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K2",
+            "typical": 164,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K2",
+            "typical": 164,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 1.31,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 1.81,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 65,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 130,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 110,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 220,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "N1",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0049,
+            "reported_metric": "variance",
+            "value": 0.0049,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "N1",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0049,
+            "reported_metric": "variance",
+            "value": 0.0049,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "N2",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.1629,
+            "reported_metric": "variance",
+            "value": 0.1629,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "N2",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.1629,
+            "reported_metric": "variance",
+            "value": 0.1629,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "K1",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0279,
+            "reported_metric": "variance",
+            "value": 0.0279,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "K1",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0279,
+            "reported_metric": "variance",
+            "value": 0.0279,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "K2",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.7392,
+            "reported_metric": "variance",
+            "value": 0.7392,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "K2",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.7392,
+            "reported_metric": "variance",
+            "value": 0.7392,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["AGE", "Induction status", "formulation."],
+      "residual_error": "N1= theta1*exp(eta1) N2= theta2*exp(eta2) K1= theta3*exp(eta3) K2= theta4*exp(eta4) ---ADULT--- KA= theta5 V =theta6*WT CL= (theta7*WT)/1000 #Uninduced, converted from mL/h/kg to L/h CL= (theta8*WT)/1000 #Induced, converted from mL/h/kg to L/h ---CHILD--- KA=theta5 V= theta6*WT CL=(theta7*WT)/1000 #Uninduced, converted from mL/h/kg to L/h CL=(theta8*WT)/1000 #Induced, converted from mL/h/kg to L/h ALAG1=2 CB=(N1*K1*CU*ALB)/(1+(K1*CU))+((N2*K2*CU*ALB)/(1+(K2*CU)) CTOTAL=CU+CB Cipred=CTOTAL Cobs=Cipred #no error model reported CU: unbound VPA concentrations CB: bound VPA concentrations N1/2: number of binding sites K1/2: binding affinity constants ALB: albumin concentration",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Dutta",
+      "year": "2003",
+      "dose": "Steady state, IV and oral doses in patients",
+      "population": "[ADULT] UNKNOWN [CHILD] N: 48 Sex: m=21, f=27 Age: 7 ±3 (1.9 – 14) WT: 24.2 ±11.4 (9.1-57) (Cloyd et al. 1993)",
+      "objective": "“to determine optimal intravenous (i.v.) loading dose, and i.v. and oral VPA maintenance regimens”"
+    },
+    "covariates": {
+      "tested": ["AGE", "Induction status", "formulation."],
+      "included": ["AGE", "Induction status", "formulation."],
+      "raw": "Tested: AGE, Induction status, formulation. Included: AGE, Induction status, formulation."
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:23:14.726Z"
+}

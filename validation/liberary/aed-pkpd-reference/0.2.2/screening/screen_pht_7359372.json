@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_7359372",
+  "pmid": "7359372",
+  "compound_group": "PHT",
+  "partition": "test",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/bowdle-1980-7359372.pdf",
+    "sha256": "b92ed805b054f4c6cd0a5493ce434fa7608cab6d97ce75bb84346964de62e109"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_21241069",
+  "pmid": "21241069",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/fagiolino-2011-21241069.pdf",
+    "sha256": "d6ccb67795f7668316d3e4e2f1b02d21bbaaea15191d759ab8861834b361b621"
+  }
+}

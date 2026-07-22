@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_25372290",
+  "pmid": "25372290",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ogusu",
+  "year": "2014",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_25372290_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/ogusu-2014-25372290.pdf",
+    "sha256": "ff52e481545741f20c880b4cf481fc1955c628be4e8fe0ae149b5a9286b6f503"
+  },
+  "metadata_source": ""
+}

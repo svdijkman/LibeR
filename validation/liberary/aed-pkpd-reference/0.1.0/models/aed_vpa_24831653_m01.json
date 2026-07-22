@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_24831653_m01",
+  "article_id": "pmid_24831653",
+  "pmid": "24831653",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_24831653",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 3,
+      "model_table": 2,
+      "model_row": 4
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/lin-2015-24831653.pdf",
+      "sha256": "db714ceb93e4544faec22b60e5e7a2adbb0e6aec5d122098ae45f54a01bf6631"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Lin 2015 24831653",
+    "population": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+    "model_type": "PK",
+    "objective": "“to establish a PPK model for VPA in Chinese adult epileptic patients and to demonstrate its use in dose individualization.”",
+    "covariates": "Tested: SEX, AGE, WT, DDVPA, formulation, comedication (CBZ, PHT, PHB, TPM) Included: WT, DOSE, CBZ, PHT, PHB",
+    "observations": "A nonlinear relationship between DDVPA and CLVPA, as reported in other studies, may be result of VPA protein binding increasing CL as the daily dose of VPA increases. A nonlinear relationship between WT and VPA CL, agreement with other studies. May be due to body size and the development/functionality of organs in elimination. Comedication increases VPA CL in model The goodness-of-fit plots obtained from the basic and final model show significant improvement in the final model with the inclusion of covariates for observed (DV) versus population prediction (PRED). Limitations possible due to model generalization.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment model, first-order absorption and elimination",
+    "equations": "CL=theta1*((WT/60)**theta2)*(DOSE**theta3)*(theta4**CBZ)*(theta5**PHT)*(theta6**PHB)*exp(eta1) V = theta7*WT KA = theta8 Cobs=Cipred+eps1 DOSE: VPA dose in mg/day CBZ: comedication with carbamazepine (1: yes, 0: no) PHT: comedication with phenytoin (1: yes, 0: no) PHB: comedication with phenobarbital (1: yes, 0: no)",
+    "parameter_values": "theta1= 0.1 theta2= 0.7 theta3= 0.2 theta4= 1.36 theta5= 1.25 theta6= 1.11 theta7= 0.14 theta8= 1.9 omega1=0.0319 sigma1= 8.5",
+    "validation": "Yes (bootstrap of 1000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of valproic acid in adult Chinese epileptic patients and its application in an individualized dosage regimen.",
+      "compound": "VPA",
+      "population": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+      "route": "oral",
+      "n_subjects": 199,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment model, first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.36,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.11,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 0.14,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1.9,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0319,
+            "reported_metric": "variance",
+            "value": 0.0319,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 8.5,
+            "reported_metric": "variance",
+            "value": 8.5,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "DOSE", "CBZ", "PHT", "PHB"],
+      "residual_error": "CL=theta1*((WT/60)**theta2)*(DOSE**theta3)*(theta4**CBZ)*(theta5**PHT)*(theta6**PHB)*exp(eta1) V = theta7*WT KA = theta8 Cobs=Cipred+eps1 DOSE: VPA dose in mg/day CBZ: comedication with carbamazepine (1: yes, 0: no) PHT: comedication with phenytoin (1: yes, 0: no) PHB: comedication with phenobarbital (1: yes, 0: no)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Lin",
+      "year": "2015",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 199 (Chinese) Sex: m=114, f=85 Age: 26.6 ± 11.7 (14-66) WT: 60.2 ± 12.5 (21-101)",
+      "objective": "“to establish a PPK model for VPA in Chinese adult epileptic patients and to demonstrate its use in dose individualization.”"
+    },
+    "covariates": {
+      "tested": ["SEX", "AGE", "WT", "DDVPA", "formulation", "comedication (CBZ", "PHT", "PHB", "TPM)"],
+      "included": ["WT", "DOSE", "CBZ", "PHT", "PHB"],
+      "raw": "Tested: SEX, AGE, WT, DDVPA, formulation, comedication (CBZ, PHT, PHB, TPM) Included: WT, DOSE, CBZ, PHT, PHB"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:23:14.324Z"
+}

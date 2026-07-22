@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_9506012",
+  "pmid": "9506012",
+  "title": "Population-based investigation of valproic acid relative clearance using nonlinear mixed effects modeling: influence of drug-drug interaction and patient characteristics.",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "1997",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_9506012_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/yukawa-1997-9506012.pdf",
+    "sha256": "90d322604d19b85e0d0bdf86def7baded49533d1a708838cce845e9b97efe1b8"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

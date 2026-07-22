@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_15981957_m01",
+  "article_id": "pmid_15981957",
+  "pmid": "15981957",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_15981957",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 18,
+      "model_table": 2,
+      "model_row": 19
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/romano-moreno-2005-15981957.pdf",
+      "sha256": "7baf547c01fb1d86de456cd1e322db2d8f38fb6cb738c7a5c93b62cd079c20e7"
+    },
+    "metadata_csv": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+  },
+  "raw": {
+    "citation": "Romano-Moreno 2005 15981957",
+    "population": "N: 104 (Mexican) Age: 30±10.71 (18 – 63) WT: 62.3±12.5",
+    "model_type": "PK",
+    "objective": "“to determine the population mixed-effects model that describes compartmental PK and clearance of CBZ in adult epileptic patients using TDM” (translated from spanish)",
+    "covariates": "Included: BSA, daily dose in mg and use of phenytoin or primidone on CL",
+    "observations": "Ka, F, and Vd fixed on literature values. Strong bias in the final model. Dose recommendations are given in the discussion. A large amount of variability remains unexplained.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment, linear absorption and elimination",
+    "equations": "Ka=theta1 Vd/F=theta2*WT CL/F=(theta3*SC+theta4*DCBZ)*(1+theta5*PHT)*(1+theta6*PRIM)*(1+eta3) F=0.85 Cobs=Cipred+eps1 BSA=body surface area DCBZ=daily dose of carbamazepine in mg/day PHT=comedication with phenytoin (yes =1, no=0) PRIM=comedication with primidone (yes =1, no=0)",
+    "parameter_values": "theta1=0.65 theta2=1.76 theta3=0.614 theta4=0.0016 theta5=0.278 theta6=0.326 omega1=0.171 sigma1=1.74",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "[Population pharmacokinetics of carbamazepine in adults with epilepsy].",
+      "compound": "CBZ",
+      "population": "N: 104 (Mexican) Age: 30±10.71 (18 – 63) WT: 62.3±12.5",
+      "route": "oral",
+      "n_subjects": 104,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment, linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 0.65,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 1.76,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.614,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.0016,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.278,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.326,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Ka",
+            "eta_index": 1,
+            "eta_distribution": "unknown",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.171,
+            "reported_metric": "variance",
+            "value": 0.171,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 1.74,
+            "reported_metric": "variance",
+            "value": 1.74,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["BSA", "daily dose in mg and use of phenytoin or primidone on CL"],
+      "residual_error": "Ka=theta1 Vd/F=theta2*WT CL/F=(theta3*SC+theta4*DCBZ)*(1+theta5*PHT)*(1+theta6*PRIM)*(1+eta3) F=0.85 Cobs=Cipred+eps1 BSA=body surface area DCBZ=daily dose of carbamazepine in mg/day PHT=comedication with phenytoin (yes =1, no=0) PRIM=comedication with primidone (yes =1, no=0)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Romano-Moreno",
+      "year": "2005",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 104 (Mexican) Age: 30±10.71 (18 – 63) WT: 62.3±12.5",
+      "objective": "“to determine the population mixed-effects model that describes compartmental PK and clearance of CBZ in adult epileptic patients using TDM” (translated from spanish)"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["BSA", "daily dose in mg and use of phenytoin or primidone on CL"],
+      "raw": "Included: BSA, daily dose in mg and use of phenytoin or primidone on CL"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:53.265Z"
+}

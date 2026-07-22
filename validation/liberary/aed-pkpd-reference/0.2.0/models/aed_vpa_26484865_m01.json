@@ -1,0 +1,538 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_26484865_m01",
+  "article_id": "pmid_26484865",
+  "pmid": "26484865",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_26484865",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 2,
+      "model_table": 2,
+      "model_row": 2
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/nakashima-2016-26484865.pdf",
+      "sha256": "40e71200c1349be3764a12e36608670a109a0cc83b0d8e35d7e8ff4c276a2a35"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Nakashima 2015 26484865",
+    "population": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+    "model_type": "PKPD",
+    "objective": "“to evaluate the impact of the clinical characteristics of patients, including the SCN1A rs3812718 polymorphism, on the relationship between the serum VPA concentration and the control of seizures during long-term VPA therapy”",
+    "covariates": "Tested: AGE, SEX, seizure locus, seizure type, complication with intellectual disability, co-administration with CBZ, CLNZ, CLBZ, GBP, LMT, PHB, PHT, TPM, ZNS, dose, predicted trough VPA concentration (CVPA) Included: dose on Vd; dose, SEX, CBZ, PHB, PHT, CLBZ on CL; CBZ, PHB, SCN1A genotype, PHT and CVPA on Pr",
+    "observations": "The probability (Pr) of achieving at least a 50% reduction in seizure frequency was predicted by the model at a sensitivity of 71.8% and specificity of 80.4%. Given the large variability in patient outcome, these levels of sensitivity and specificity may aid in predicting outcome in the clinic. Co-administration of multiple AEDs had a significant effect on Pr.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "[PK] 1 compartment model, first-order absorption and elimination [PD] Logit regression of probability of attaining more than 50% reduction in seizure frequency",
+    "equations": "[PK] ALAG1=theta1*exp(eta1) Ka=theta2*exp(eta2) Vd/F=theta3*((DOSE/1000)**theta4)*exp(eta3) CL/F=theta5*((DOSE/1000)**theta6) *(theta7**SEX)*(theta8**CBZ) *(theta9*PHB)*(theta10**PHT) *(theta11**CLBZ) *exp(eta4) Cobs=Cipred*(1+eps1) DOSE is the VPA dose in mg/day SEX is male/female (0/1 respectively) CBZ is co-administration with carbamazepine (0=no,1=yes) PHB is co-administration with phenobarbital (0=no,1=yes) PHT is co-administration with phenytoin (0=no,1=yes) CLBZ is co-administration with clobazam (0=no,1=yes) N.b. only thetas for PK parameters Vd and CL were given in the current publication, others were not given and thus those reported here were taken from their referenced earlier publication Ogusu et al 2014, PMID 25372290 also reported further in the table [PD] logit(Pr)=theta1+(AGE/10)*theta2+theta3**CBZ+theta4**CLNZ+theta5**SCN1A_GA-theta6**SCN1A_AA-(theta7+theta8**PHT+theta9**TPM-theta10**POS-theta11**SCN1A_GA+theta12**SCN1A_AA)*CVPA Pr is the probability of attaining a 50% seizure frequency reduction SCN1A_AA/GA are polymorphisms of gene SCN1A (0=not present, 1=present) CVPA is the predicted trough VPA concentration AGE is age in years CLNZ is co-administration with clonazepam (0=no,1=yes) TPM is co-administration with topiramate (0=no,1=yes) POS is 1 if the patient has partial-onset seizures, otherwise 0",
+    "parameter_values": "[PK] theta1=3.00 theta2=0.109 theta3=110 theta4=1.51 theta5=0.577 theta6=0.535 theta7=0.875 theta8=1.22 theta9=1.10 theta10=1.40 theta11=0.915 omega1=4.48*10-9 omega2=7.77*10-7 omega3=1.83*10-7 omega4=0.0587 sigma1=0.0617 [PD] theta1=6.1 theta2=1.0 theta3=-1.8 theta4=-1.2 theta5=5.9 theta6=4.9 theta7=13.3 theta8=3.6 theta9=1.7 theta10=2.4 theta11=10.1 theta12=-9.5",
+    "validation": "Yes (bootstrap of 1000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Determination of the Optimal Concentration of Valproic Acid in Patients with Epilepsy: A Population Pharmacokinetic-Pharmacodynamic Analysis.",
+      "compound": "VPA",
+      "population": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+      "route": "oral",
+      "n_subjects": 77,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PKPD",
+      "population_details": {
+        "raw": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+        "n_total": 77,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 77
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 15.2,
+                    "sd": 8.2
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.8,
+                    "maximum": 36.9
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "15.2±8.2 (0.8-36.9)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 2",
+              "evidence": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 2",
+          "evidence": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 2",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "[PK] 1 compartment model, first-order absorption and elimination [PD] Logit regression of probability of attaining more than 50% reduction in seizure frequency",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["ALAG1", "KA", "VD/F", "THETA4", "CL/F", "THETA6", "THETA7", "THETA8", "THETA9", "THETA10", "THETA11", "THETA12"]
+          },
+          "description": "[PK] 1 compartment model, first-order absorption and elimination [PD] Logit regression of probability of attaining more than 50% reduction in seizure frequency"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "[PK] 1 compartment model, first-order absorption and elimination [PD] Logit regression of probability of attaining more than 50% reduction in seizure frequency Steady-state oral doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "ALAG1",
+            "typical": 3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "ALAG1",
+            "typical": 6.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.109,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 110,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": -1.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.51,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": -1.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 0.577,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 5.9,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.535,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 4.9,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 0.875,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 13.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 1.22,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 3.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA9",
+            "typical": 1.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA9",
+            "typical": 1.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA10",
+            "typical": 1.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA10",
+            "typical": 2.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA11",
+            "typical": 0.915,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA11",
+            "typical": 10.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA12",
+            "typical": -9.5,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "ALAG1",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 4.48,
+            "reported_metric": "variance",
+            "value": 4.48,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Ka",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 7.77,
+            "reported_metric": "variance",
+            "value": 7.77,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "Vd/F",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.83,
+            "reported_metric": "variance",
+            "value": 1.83,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0587,
+            "reported_metric": "variance",
+            "value": 0.0587,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.0617,
+            "reported_metric": "variance",
+            "value": 0.0617,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["dose on Vd", "dose", "SEX", "CBZ", "PHB", "PHT", "CLBZ on CL", "SCN1A genotype", "PHT and CVPA on Pr"],
+      "residual_error": "[PK] ALAG1=theta1*exp(eta1) Ka=theta2*exp(eta2) Vd/F=theta3*((DOSE/1000)**theta4)*exp(eta3) CL/F=theta5*((DOSE/1000)**theta6) *(theta7**SEX)*(theta8**CBZ) *(theta9*PHB)*(theta10**PHT) *(theta11**CLBZ) *exp(eta4) Cobs=Cipred*(1+eps1) DOSE is the VPA dose in mg/day SEX is male/female (0/1 respectively) CBZ is co-administration with carbamazepine (0=no,1=yes) PHB is co-administration with phenobarbital (0=no,1=yes) PHT is co-administration with phenytoin (0=no,1=yes) CLBZ is co-administration with clobazam (0=no,1=yes) N.b. only thetas for PK parameters Vd and CL were given in the current publication, others were not given and thus those reported here were taken from their referenced earlier publication Ogusu et al 2014, PMID 25372290 also reported further in the table [PD] logit(Pr)=theta1+(AGE/10)*theta2+theta3**CBZ+theta4**CLNZ+theta5**SCN1A_GA-theta6**SCN1A_AA-(theta7+theta8**PHT+theta9**TPM-theta10**POS-theta11**SCN1A_GA+theta12**SCN1A_AA)*CVPA Pr is the probability of attaining a 50% seizure frequency reduction SCN1A_AA/GA are polymorphisms of gene SCN1A (0=not present, 1=present) CVPA is the predicted trough VPA concentration AGE is age in years CLNZ is co-administration with clonazepam (0=no,1=yes) TPM is co-administration with topiramate (0=no,1=yes) POS is 1 if the patient has partial-onset seizures, otherwise 0",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Nakashima",
+      "year": "2015",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+      "population_details": {
+        "raw": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+        "n_total": 77,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 77
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 15.2,
+                    "sd": 8.2
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.8,
+                    "maximum": 36.9
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "15.2±8.2 (0.8-36.9)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 2",
+              "evidence": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 2",
+          "evidence": "N: 77 (Japanese) Age: 15.2±8.2 (0.8-36.9) WT: -",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 2",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to evaluate the impact of the clinical characteristics of patients, including the SCN1A rs3812718 polymorphism, on the relationship between the serum VPA concentration and the control of seizures during long-term VPA therapy”"
+    },
+    "covariates": {
+      "tested": ["AGE", "SEX", "seizure locus", "seizure type", "complication with intellectual disability", "co-administration with CBZ", "CLNZ", "CLBZ", "GBP", "LMT", "PHB", "PHT", "TPM", "ZNS", "dose", "predicted trough VPA concentration (CVPA)"],
+      "included": ["dose on Vd", "dose", "SEX", "CBZ", "PHB", "PHT", "CLBZ on CL", "SCN1A genotype", "PHT and CVPA on Pr"],
+      "raw": "Tested: AGE, SEX, seizure locus, seizure type, complication with intellectual disability, co-administration with CBZ, CLNZ, CLBZ, GBP, LMT, PHB, PHT, TPM, ZNS, dose, predicted trough VPA concentration (CVPA) Included: dose on Vd; dose, SEX, CBZ, PHB, PHT, CLBZ on CL; CBZ, PHB, SCN1A genotype, PHT and CVPA on Pr"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:14.640Z"
+}

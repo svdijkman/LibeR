@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_3235481",
+  "pmid": "3235481",
+  "title": "",
+  "abstract": "",
+  "first_author": "Garcia",
+  "year": "1988",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_3235481_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/garcia-1988-3235481.pdf",
+    "sha256": "0bf9153d37cfb8a9fc4561a81ae00746e279b3194c28421328c65bd3ae6bf189"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2053118",
+  "pmid": "2053118",
+  "title": "Sensitivity analysis of the effect of bioavailability or dosage form content on mean steady state phenytoin concentration.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/ludden-1991-2053118.pdf",
+    "sha256": "493ef6ed0b7ad2e9c68b585595dce83d0e5a40f00ad5caa1acd2cc36df3a4a2f"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

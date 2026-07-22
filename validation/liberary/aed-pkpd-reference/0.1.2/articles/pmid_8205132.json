@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_8205132",
+  "pmid": "8205132",
+  "title": "Population analysis of the dose-dependent pharmacokinetics of zonisamide in epileptic patients.",
+  "abstract": "",
+  "first_author": "Hashimoto",
+  "year": "1994",
+  "compounds": "ZNS",
+  "model_ids": "aed_zns_8205132_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/ZNS/articles/hashimoto-1994-8205132.pdf",
+    "sha256": "c38409bdbfc5a1a04acbae5da2228acfb5092124b8b6cb2bd72f321bf7cc91c8"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

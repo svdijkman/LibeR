@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_10594867",
+  "pmid": "10594867",
+  "title": "Population estimation of valproic acid clearance in adult patients using routine clinical pharmacokinetic data.",
+  "abstract": "",
+  "first_author": "Blanco-Serrano",
+  "year": "1999",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_10594867_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/blanco-serrano-1999-10594867.pdf",
+    "sha256": "2c4164f5cd7dd31eaee8eb1c208f0470f1e951f02d509d415b9e33770b9807e9"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

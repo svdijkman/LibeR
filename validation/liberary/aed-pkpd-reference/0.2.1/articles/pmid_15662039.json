@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_15662039",
+  "pmid": "15662039",
+  "title": "Phenytoin exposure is associated with functional and cognitive disability after subarachnoid hemorrhage.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/naidech-2005-15662039.pdf",
+    "sha256": "328307604c1c303059643d2ca89522fa2147119f1d8133f82339f0e8ccd5b3ec"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

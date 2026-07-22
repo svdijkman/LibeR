@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_19566114",
+  "pmid": "19566114",
+  "title": "",
+  "abstract": "",
+  "first_author": "Punyawudho",
+  "year": "2009",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_19566114_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/punyawudho-2009-19566114.pdf",
+    "sha256": "08abef3b57898ba11de31897c3259937b955d0aad294aa8a90660867c5cb1ccb"
+  },
+  "metadata_source": ""
+}

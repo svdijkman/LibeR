@@ -1,0 +1,595 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_oxc_25989891_m01",
+  "article_id": "pmid_25989891",
+  "pmid": "25989891",
+  "model_index": 1,
+  "compound_group": "OXC",
+  "family_id": "pmid_25989891",
+  "partition": "test",
+  "source": {
+    "appendix": {
+      "path": "Supplements/OXC/Supplement_OXC_v2.docx",
+      "sha256": "c156583a67670c2213136103c9fc483539ef7a0eedbffe74feb604b091947894",
+      "study_table": 1,
+      "study_row": 4,
+      "model_table": 2,
+      "model_row": 2
+    },
+    "publication_pdf": {
+      "path": "Supplements/OXC/articles/sugiyama-2015-25989891.pdf",
+      "sha256": "0aae12777df6e0f1a741cc4d98c6fbf33e99468100b33e238ac1b024fdb0e97d"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Sugiyama 2015 25989891",
+    "population": "[Japanese] N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese] N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+    "model_type": "PK",
+    "objective": "“to evaluate the pharmacokinetic (PK) profiles of MHD in pediatric patients and to assess a possible ethnic difference in the PK parameters of MHD using pooled data from a study in Japanese pediatric patients and a preceding study in non-Japanese pediatric patients”",
+    "covariates": "Tested: BSA, WT, HT, AST, ALT, serum creatinine, comedication with PHB, CBZ or PHT Included: WT and comedications (PHB, CBZ, PHT) on CL; WT on Vd",
+    "observations": "CBZ, PHB and PHT each resulted in roughly a 30% increase in MHD clearance. No significant differences between Japanese and non-Japanese subjects was found",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with first order absorption and elimination",
+    "equations": "CL/F=theta1*((WT/41.57)**theta2)*(theta3**CBZ)*(theta4**PHB)*(theta5**PHT)*exp(eta1) Vd/F=theta6*((WT/41.57)**theta7)*exp(eta2) Ka=theta8 Cobs=Cipred+sqrt(theta9*(Cipred**2))*eps1",
+    "parameter_values": "theta1=2.31 theta2=0.555 theta3=1.33 theta4=1.34 theta5=1.25 theta6=102 theta7=1.70 theta8=0.406 theta9=0.0336 omega1=0.0442 omega2=1.03 omega1,2=0.125 sigma1=1",
+    "validation": "Yes (VPC, N=-)/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetic analysis for 10-monohydroxy derivative of oxcarbazepine in pediatric epileptic patients shows no difference between Japanese and other ethnicities.",
+      "compound": "OXC",
+      "population": "[Japanese] N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese] N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+      "route": "oral",
+      "n_subjects": 136,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "[Japanese] N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese] N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+        "n_total": 136,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "[Japanese]",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 27
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 10.33,
+                    "sd": 2.631
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 5,
+                    "maximum": 14
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "10.33±2.631 (5-14)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 34.46,
+                    "sd": 12.44
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 15.3,
+                    "maximum": 67.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "34.46±12.44 (15.3-67.5) [Non-Japanese]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 4",
+              "evidence": "N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 109
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 11,
+                    "sd": 3.9
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 3,
+                    "maximum": 17
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "11.0±3.9 (3-17)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 43.3,
+                    "sd": 20.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 15.9,
+                    "maximum": 134.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "43.3±20.7 (15.9-134.5)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 4",
+              "evidence": "N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 4",
+          "evidence": "[Japanese] N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese] N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 2",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment with first order absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["CL/F", "THETA2", "THETA3", "THETA4", "THETA5", "VD/F", "THETA7", "KA", "THETA9"]
+          },
+          "description": "1 compartment with first order absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment with first order absorption and elimination Steady-state oral doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 2.31,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.555,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 1.33,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.34,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 102,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 1.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.406,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA9",
+            "typical": 0.0336,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0442,
+            "reported_metric": "variance",
+            "value": 0.0442,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.03,
+            "reported_metric": "variance",
+            "value": 1.03,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 2,
+            "col_eta": 1,
+            "reported_value": 0.125,
+            "reported_metric": "covariance",
+            "value": 0.125,
+            "conversion": "Appendix covariance retained verbatim; source-paper verification pending"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 1,
+            "reported_metric": "variance",
+            "value": 1,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT and comedications (PHB", "CBZ", "PHT) on CL", "WT on Vd"],
+      "residual_error": "CL/F=theta1*((WT/41.57)**theta2)*(theta3**CBZ)*(theta4**PHB)*(theta5**PHT)*exp(eta1) Vd/F=theta6*((WT/41.57)**theta7)*exp(eta2) Ka=theta8 Cobs=Cipred+sqrt(theta9*(Cipred**2))*eps1",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Sugiyama",
+      "year": "2015",
+      "dose": "Steady-state oral doses in patients",
+      "population": "[Japanese] N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese] N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+      "population_details": {
+        "raw": "[Japanese] N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese] N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+        "n_total": 136,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "[Japanese]",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 27
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 10.33,
+                    "sd": 2.631
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 5,
+                    "maximum": 14
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "10.33±2.631 (5-14)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 34.46,
+                    "sd": 12.44
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 15.3,
+                    "maximum": 67.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "34.46±12.44 (15.3-67.5) [Non-Japanese]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 4",
+              "evidence": "N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 109
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 11,
+                    "sd": 3.9
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 3,
+                    "maximum": 17
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "11.0±3.9 (3-17)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 43.3,
+                    "sd": 20.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 15.9,
+                    "maximum": 134.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "43.3±20.7 (15.9-134.5)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 4",
+              "evidence": "N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 4",
+          "evidence": "[Japanese] N: 27 Age: 10.33±2.631 (5-14) WT: 34.46±12.44 (15.3-67.5) [Non-Japanese] N: 109 Age: 11.0±3.9 (3-17) WT: 43.3±20.7 (15.9-134.5)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 2",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to evaluate the pharmacokinetic (PK) profiles of MHD in pediatric patients and to assess a possible ethnic difference in the PK parameters of MHD using pooled data from a study in Japanese pediatric patients and a preceding study in non-Japanese pediatric patients”"
+    },
+    "covariates": {
+      "tested": ["BSA", "WT", "HT", "AST", "ALT", "serum creatinine", "comedication with PHB", "CBZ or PHT"],
+      "included": ["WT and comedications (PHB", "CBZ", "PHT) on CL", "WT on Vd"],
+      "raw": "Tested: BSA, WT, HT, AST, ALT, serum creatinine, comedication with PHB, CBZ or PHT Included: WT and comedications (PHB, CBZ, PHT) on CL; WT on Vd"
+    },
+    "validation": {
+      "raw": "Yes (VPC, N=-)/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:10.340Z"
+}

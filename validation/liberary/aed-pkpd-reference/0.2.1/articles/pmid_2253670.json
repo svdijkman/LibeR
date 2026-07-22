@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2253670",
+  "pmid": "2253670",
+  "title": "",
+  "abstract": "",
+  "first_author": "Chan",
+  "year": "1990",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_2253670_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/chan-1990-2253670.pdf",
+    "sha256": "e824a3fe601bbc42de55e4dd3d44d7950a23972e99311378c10d10da1d76d3cd"
+  },
+  "metadata_source": ""
+}

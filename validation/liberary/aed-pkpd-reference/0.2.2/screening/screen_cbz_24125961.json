@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_cbz_24125961",
+  "pmid": "24125961",
+  "compound_group": "CBZ",
+  "partition": "validation",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/CBZ/articles/exclude/yun-2013-24125961.pdf",
+    "sha256": "5d6a9890b0d3b19dde6124525cbab5e019bfdf318063456498fe48195a0021db"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_21314678",
+  "pmid": "21314678",
+  "title": "Pregabalin effect on steady-state pharmacokinetics of carbamazepine, lamotrigine, phenobarbital, phenytoin, topiramate, valproate, and tiagabine.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": ["CBZ", "LMT", "PHB", "PHT"],
+  "model_ids": [],
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/exclude/0_bockbrader-2011-21314678.pdf",
+    "sha256": "75dbea212fe161ef44c8673011161a65843c0df2c628c98519f000e70e4047d8"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

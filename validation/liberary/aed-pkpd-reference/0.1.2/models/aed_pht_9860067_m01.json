@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_9860067_m01",
+  "article_id": "pmid_9860067",
+  "pmid": "9860067",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_9860067",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 26,
+      "model_table": 2,
+      "model_row": 29
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/mamiya-1998-9860067.pdf",
+      "sha256": "c5c87569989832e4db2255eef97eabaa58d785f7241cd9b797157f19c7069000"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Mamiya 1998 9860067",
+    "population": "N: 134 (Japanese) Age: 47.1±13.2 (18-76) WT: 59.2±10.6 G1 [CYP2C9*1/*1 & CYP2C19*1/*1 or*1/*2 or *1/*2] N: 52 G2 [CYP2C9*1/*1 & CYP2C19*1/*2 or *1/*3] N: 64 G3 [CYP2C9*1/*1 & CYP2C19*2/*2 or *3/*3 or *2/*3] N: 15 G4 [CYP2C9*1/*3 & CYP2C19*1/*1 or *1/*2 or *1/*3] N: 3",
+    "model_type": "PK",
+    "objective": "“In this study, we examined the effect of CYP2C9/19 mutations on the stereoselective hydroxylation of PHT and performed a population pharmacokinetic analysis in medium-sized Japanese adult patients with epilepsy who were receiving long-term PHT therapy”",
+    "covariates": "Tested: WT, comedications, genotype (CYP2C9/19) on Vm and Km Included: WT, comedications, genotype (CYP2C9/19) on Vm",
+    "observations": "CYP2C9 and CYP2C19 have significant impacts on Vm and Km.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK",
+    "equations": "GTVm = theta4**G4 GTKm = theta5**G2+theta6**G3 Vm = theta1*((WT/60)**theta3)*GTVm*(1+eta1) Km = theta2*GTKm*(1+eta2) DD=(Vm*Css)/(F*(Km+Css))*(1+eps1) G2 is belonging to genetic group 2 (0=no; 1=yes) G3 is belonging to genetic group 3 (0=no; 1=yes) G4 is belonging to genetic group 4 (0=no; 1=yes) F is bioavailability (fixed to 1 here) Formulae were converted from mg/day/kg to mg/day for ease of use. The additive error term eps1 was also converted, using the typical Vm, Km, and Css (6.07, 4.0, and 7.8 respectively)",
+    "parameter_values": "theta1= 6.07 theta2= 4.0 theta3= 0.584 theta4= 0.582 theta5= 1.22 theta6= 1.54 omega1=0.0123 omega2=0.0520 sigma1=0.00752",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "N: 134 (Japanese) Age: 47.1±13.2 (18-76) WT: 59.2±10.6 G1 [CYP2C9*1/*1 & CYP2C19*1/*1 or*1/*2 or *1/*2] N: 52 G2 [CYP2C9*1/*1 & CYP2C19*1/*2 or *1/*3] N: 64 G3 [CYP2C9*1/*1 & CYP2C19*2/*2 or *3/*3 or *2/*3] N: 15 G4 [CYP2C9*1/*3 & CYP2C19*1/*1 or *1/*2 or *1/*3] N: 3",
+      "route": "oral",
+      "n_subjects": 134,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "Simplified PK"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Vm",
+            "typical": 6.07,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Km",
+            "typical": 4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.584,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "GTVm",
+            "typical": 0.582,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "GTKm",
+            "typical": 1.22,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.54,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Vm",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0123,
+            "reported_metric": "variance",
+            "value": 0.0123,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Km",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.052,
+            "reported_metric": "variance",
+            "value": 0.052,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 0.00752,
+            "reported_metric": "variance",
+            "value": 0.00752,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "comedications", "genotype (CYP2C9/19) on Vm"],
+      "residual_error": "GTVm = theta4**G4 GTKm = theta5**G2+theta6**G3 Vm = theta1*((WT/60)**theta3)*GTVm*(1+eta1) Km = theta2*GTKm*(1+eta2) DD=(Vm*Css)/(F*(Km+Css))*(1+eps1) G2 is belonging to genetic group 2 (0=no; 1=yes) G3 is belonging to genetic group 3 (0=no; 1=yes) G4 is belonging to genetic group 4 (0=no; 1=yes) F is bioavailability (fixed to 1 here) Formulae were converted from mg/day/kg to mg/day for ease of use. The additive error term eps1 was also converted, using the typical Vm, Km, and Css (6.07, 4.0, and 7.8 respectively)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Mamiya",
+      "year": "1998",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 134 (Japanese) Age: 47.1±13.2 (18-76) WT: 59.2±10.6 G1 [CYP2C9*1/*1 & CYP2C19*1/*1 or*1/*2 or *1/*2] N: 52 G2 [CYP2C9*1/*1 & CYP2C19*1/*2 or *1/*3] N: 64 G3 [CYP2C9*1/*1 & CYP2C19*2/*2 or *3/*3 or *2/*3] N: 15 G4 [CYP2C9*1/*3 & CYP2C19*1/*1 or *1/*2 or *1/*3] N: 3",
+      "objective": "“In this study, we examined the effect of CYP2C9/19 mutations on the stereoselective hydroxylation of PHT and performed a population pharmacokinetic analysis in medium-sized Japanese adult patients with epilepsy who were receiving long-term PHT therapy”"
+    },
+    "covariates": {
+      "tested": ["WT", "comedications", "genotype (CYP2C9/19) on Vm and Km"],
+      "included": ["WT", "comedications", "genotype (CYP2C9/19) on Vm"],
+      "raw": "Tested: WT, comedications, genotype (CYP2C9/19) on Vm and Km Included: WT, comedications, genotype (CYP2C9/19) on Vm"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:31:48.636Z"
+}

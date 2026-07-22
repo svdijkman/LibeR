@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_vpa_10594867_m01",
+  "screening_id": null,
+  "article_id": "pmid_10594867",
+  "pmid": "10594867",
+  "source_pdf_sha256": "2c4164f5cd7dd31eaee8eb1c208f0470f1e951f02d509d415b9e33770b9807e9",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:37:33.785Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population Estimation of Valproic Acid Clearance in Adult Patients using Routine Clinical Pharmacokinetic Data",
+    "compound": "Valproic acid",
+    "population": "Adult patients with epilepsy",
+    "route": null,
+    "n_subjects": 208,
+    "software": "NONMEM (version IV, level 2.0)",
+    "estimation_method": "Population pharmacokinetic analysis using NONMEM",
+    "model_type": "Population PK model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 1,
+      "description": "One-compartment open kinetic model with first order absorption and elimination"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "Cl",
+          "typical": 0.653,
+          "se": null,
+          "unit": "L/h"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Inter-individual variability in VPA clearance, described using a proportional error model",
+          "parameter": "Cl",
+          "eta_index": 1,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.373,
+          "reported_metric": "cv_percent",
+          "value": 0.2456,
+          "conversion": "OMEGA = log(1 + (0.373^2))"
+        },
+        {
+          "description": "Residual variability in VPA concentrations, described using an additive error model",
+          "parameter": "Cv_res",
+          "eta_index": null,
+          "eta_distribution": "unknown",
+          "eta_expression": null,
+          "variability_level": "other",
+          "reported_value": 11.4,
+          "reported_metric": "sd",
+          "value": 0.1136,
+          "conversion": "SIGMA = 0.1136"
+        }
+      ],
+      "omega_covariance": [],
+      "sigma": [
+        {
+          "description": "Residual variability in VPA concentrations, described using an additive error model",
+          "error_model": "additive",
+          "reported_value": 11.4,
+          "reported_metric": "sd",
+          "value": 0.1136,
+          "conversion": "SIGMA = 0.1136"
+        }
+      ]
+    },
+    "covariates": [
+      "TBW",
+      "Dose (mg/kg/day)",
+      "CBZ (Yes/No)",
+      "PHT (Yes/No)",
+      "PB (Yes/No)"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.95,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.92,
+        "population": 0.94,
+        "software": 0.91
+      }
+    },
+    "evidence_quotes": [
+      "The final regression model for VPA clearance (Cl) was: Cl(L/h)=0.004×TBW×Dose0.304 ×1.363 CBZ× 1.541 PHT×1.397 PB"
+    ],
+    "notes": "The model includes a one-compartment open kinetic model with first order absorption and elimination, and uses a proportional error model for inter-individual variability and an additive error model for residual variability."
+  },
+  "variants": {
+    "text": {
+      "title": "Population Estimation of Valproic Acid Clearance in Adult Patients using Routine Clinical Pharmacokinetic Data",
+      "compound": "Valproic acid",
+      "population": "Adult patients with epilepsy",
+      "route": null,
+      "n_subjects": 208,
+      "software": "NONMEM (version IV, level 2.0)",
+      "estimation_method": "Population pharmacokinetic analysis using NONMEM",
+      "model_type": "Population PK model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One-compartment open kinetic model with first order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Cl",
+            "typical": 0.653,
+            "se": null,
+            "unit": "L/h"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Inter-individual variability in VPA clearance, described using a proportional error model",
+            "parameter": "Cl",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.373,
+            "reported_metric": "cv_percent",
+            "value": 0.2456,
+            "conversion": "OMEGA = log(1 + (0.373^2))"
+          },
+          {
+            "description": "Residual variability in VPA concentrations, described using an additive error model",
+            "parameter": "Cv_res",
+            "eta_index": null,
+            "eta_distribution": "unknown",
+            "eta_expression": null,
+            "variability_level": "other",
+            "reported_value": 11.4,
+            "reported_metric": "sd",
+            "value": 0.1136,
+            "conversion": "SIGMA = 0.1136"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Residual variability in VPA concentrations, described using an additive error model",
+            "error_model": "additive",
+            "reported_value": 11.4,
+            "reported_metric": "sd",
+            "value": 0.1136,
+            "conversion": "SIGMA = 0.1136"
+          }
+        ]
+      },
+      "covariates": [
+        "TBW",
+        "Dose (mg/kg/day)",
+        "CBZ (Yes/No)",
+        "PHT (Yes/No)",
+        "PB (Yes/No)"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.95,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.92,
+          "population": 0.94,
+          "software": 0.91
+        }
+      },
+      "evidence_quotes": [
+        "The final regression model for VPA clearance (Cl) was: Cl(L/h)=0.004×TBW×Dose0.304 ×1.363 CBZ× 1.541 PHT×1.397 PB"
+      ],
+      "notes": "The model includes a one-compartment open kinetic model with first order absorption and elimination, and uses a proportional error model for inter-individual variability and an additive error model for residual variability."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_gbp_23018586",
+  "pmid": "23018586",
+  "compound_group": "GBP",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/GBP/articles/excluded/bockbrader-2013-23018586.pdf",
+    "sha256": "e00098ce0c4c3a3a0ff2e9970b6184ba7b2d8efdc1dec0c6876f49cca9c979c9"
+  }
+}

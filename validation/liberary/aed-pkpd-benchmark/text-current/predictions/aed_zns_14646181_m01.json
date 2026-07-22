@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_zns_14646181_m01",
+  "screening_id": null,
+  "article_id": "pmid_14646181",
+  "pmid": "14646181",
+  "source_pdf_sha256": "c72ffa5a14f1bc3854c79bca30bd2ff9ca90b88e22651c373bedb2244957ab27",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:38:24.590Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Influence of Coadministered Antiepileptic Drugs on Serum Zonisamide Concentrations in Epileptic Patients: Quantitative Analysis Based on Suitable Transforming Factor",
+    "compound": "Zonisamide (ZNS)",
+    "population": null,
+    "route": null,
+    "n_subjects": null,
+    "software": null,
+    "estimation_method": null,
+    "model_type": "nonlinear mixed effects model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": null,
+      "description": "Ct = theta0 * (D / VECW)^theta1"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "theta0",
+          "typical": 0.6043,
+          "se": null,
+          "unit": "(mg/ml)/(mg/l·d)"
+        },
+        {
+          "name": "theta1",
+          "typical": 1,
+          "se": null,
+          "unit": null
+        }
+      ],
+      "omega": [
+        {
+          "description": "Intravenous infusion of zonisamide (ZNS) with VECW as a transforming factor.",
+          "parameter": "theta0",
+          "eta_index": 1,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.2569,
+          "reported_metric": "cv_percent",
+          "value": 0.003874,
+          "conversion": "sqrt(1 + (0.2569 / 100)^2)"
+        },
+        {
+          "description": "Intravenous infusion of zonisamide (ZNS) with VECW as a transforming factor.",
+          "parameter": "theta1",
+          "eta_index": null,
+          "eta_distribution": "normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.2569,
+          "reported_metric": "cv_percent",
+          "value": 0.003874,
+          "conversion": "sqrt(1 + (0.2569 / 100)^2)"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 1,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "NA"
+        },
+        {
+          "row_eta": 2,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "NA"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error of the model.",
+          "error_model": "additive",
+          "reported_value": 0.1267,
+          "reported_metric": "sd",
+          "value": 0.1267,
+          "conversion": "NA"
+        }
+      ]
+    },
+    "covariates": [
+      "VECW"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.95,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.92,
+        "population": 0.94,
+        "software": 0.93
+      }
+    },
+    "evidence_quotes": [
+      "The relationship between Ct and D9ECW showed a better correlation than that obtained from the other D9 values and Ct could be expressed approximately as a function of D9ECW."
+    ],
+    "notes": "The model is based on the assumption that each Ri value was independent from one another and multiplicative. The analysis clarified that phenobarbital, valproic acid, carbamazepine, and phenytoin significantly lowered the L/D ratio to 0.849, 0.865, 0.846, and 0.804, respectively."
+  },
+  "variants": {
+    "text": {
+      "title": "Influence of Coadministered Antiepileptic Drugs on Serum Zonisamide Concentrations in Epileptic Patients: Quantitative Analysis Based on Suitable Transforming Factor",
+      "compound": "Zonisamide (ZNS)",
+      "population": null,
+      "route": null,
+      "n_subjects": null,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "nonlinear mixed effects model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "Ct = theta0 * (D / VECW)^theta1"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "theta0",
+            "typical": 0.6043,
+            "se": null,
+            "unit": "(mg/ml)/(mg/l·d)"
+          },
+          {
+            "name": "theta1",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Intravenous infusion of zonisamide (ZNS) with VECW as a transforming factor.",
+            "parameter": "theta0",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.2569,
+            "reported_metric": "cv_percent",
+            "value": 0.003874,
+            "conversion": "sqrt(1 + (0.2569 / 100)^2)"
+          },
+          {
+            "description": "Intravenous infusion of zonisamide (ZNS) with VECW as a transforming factor.",
+            "parameter": "theta1",
+            "eta_index": null,
+            "eta_distribution": "normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.2569,
+            "reported_metric": "cv_percent",
+            "value": 0.003874,
+            "conversion": "sqrt(1 + (0.2569 / 100)^2)"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 1,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "NA"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "NA"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error of the model.",
+            "error_model": "additive",
+            "reported_value": 0.1267,
+            "reported_metric": "sd",
+            "value": 0.1267,
+            "conversion": "NA"
+          }
+        ]
+      },
+      "covariates": [
+        "VECW"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.95,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.92,
+          "population": 0.94,
+          "software": 0.93
+        }
+      },
+      "evidence_quotes": [
+        "The relationship between Ct and D9ECW showed a better correlation than that obtained from the other D9 values and Ct could be expressed approximately as a function of D9ECW."
+      ],
+      "notes": "The model is based on the assumption that each Ri value was independent from one another and multiplicative. The analysis clarified that phenobarbital, valproic acid, carbamazepine, and phenytoin significantly lowered the L/D ratio to 0.849, 0.865, 0.846, and 0.804, respectively."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

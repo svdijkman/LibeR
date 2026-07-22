@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_7359372",
+  "pmid": "7359372",
+  "title": "Phenytoin pharmacokinetics in burned rats and plasma protein binding of phenytoin in burned patients.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/bowdle-1980-7359372.pdf",
+    "sha256": "b92ed805b054f4c6cd0a5493ce434fa7608cab6d97ce75bb84346964de62e109"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

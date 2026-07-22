@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_phb_9616196",
+  "pmid": "9616196",
+  "compound_group": "PHB",
+  "partition": "train",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/PHB/Supplement_PHB_v2.docx",
+    "sha256": "39bb55d9429e37117ffc07563feb43f6c8dd7efc1640282803c2fed77f0ba449"
+  }
+}

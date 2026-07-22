@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_1577995",
+  "pmid": "1577995",
+  "title": "",
+  "abstract": "",
+  "first_author": "Aarons",
+  "year": "2005",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_1577995_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "",
+    "sha256": ""
+  },
+  "metadata_source": ""
+}

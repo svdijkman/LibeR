@@ -1,0 +1,3 @@
+"engine","workload","method","repeats","median_end_to_end_seconds","min_end_to_end_seconds","max_end_to_end_seconds","median_core_seconds","median_noncore_overhead_seconds","median_fit_seconds","median_covariance_seconds","optimizer_backend","objective_backend","median_population_parameter_evaluations","median_population_shared_state_hits","median_objective_evaluations","median_gradient_evaluations","median_conditional_evaluations","median_tape_retapes"
+"LibeRation","estimation","FO",3,0.91,0.890000000000001,0.920000000000002,0.58,0.310000000000002,0.47,0.11,"r-l-bfgs-b-cpp-objective","persistent-cpp-batched-fo-population-objective",48,48,48,48,4875,0
+"NONMEM","estimation","FO",3,4.77,4.67,4.83,0.25,4.52,0.17,0.07,"","",,,,,,

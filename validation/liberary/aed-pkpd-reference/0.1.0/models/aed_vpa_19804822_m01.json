@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_19804822_m01",
+  "article_id": "pmid_19804822",
+  "pmid": "19804822",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_19804822",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 12,
+      "model_table": 2,
+      "model_row": 15
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/vucicevic-2009-19804822.pdf",
+      "sha256": "5ca75585ca0977ad70b5e97d5f36c611c3bb76e6dbf8099b9f041662dae6498d"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Vucicevik 2009 19804822",
+    "population": "N: 129 Sex: M=72, F=57 Age: 34.3±11.6 WT:72.1±14.2",
+    "model_type": "PK",
+    "objective": "“to develop a population PK model of VPA, and determine the factors that influence its clearance (CL/F).”",
+    "covariates": "Tested: (continuous) WT, AGE, DDVPA, CBZ, PHB, (categorical) GEN, TOB, LTG, BDZ, TPR Included: WT, DDVPA, TPR,",
+    "observations": "Model reports several covariates and their relation to VPA CL. CL seems dependent on VPA daily dose in a mechanistic manner resulting in nonlinear PK. DDVPA may be a false covariate with TDM comedication. Interaction of VPA and TPR is confirmed, presumably dependent on VPA dose. CL increases significantly with DVPA <1000mg/day, similar to results by different studies. Also high WT increases VPA CL and lowers CL with comedication of TPR. Other studies have reported that CBZ or PHB increases VPA CL, in contrast this model shows no influences of LTG, CBZ, PHB, and BDZ. The model reports independence of AGE and GENDER, similar to previous reporting.",
+    "dose": "Steady state, oral doses in patients",
+    "structure": "One compartment model, with first-order absorption and elimination",
+    "equations": "CL=(theta1*((WT/70)**theta2)*(theta3**DVPA)*(theta4**TPR))* exp(eta1) V = theta5 KA= theta6 Cobs=Cipred*(1+eps1) + eps2 DVPA: if DMG is >1000mg/day (1: yes, 0: no) TPR: comedication Topiramate (1: yes, 0: no)",
+    "parameter_values": "theta1= 0.517 theta2= 0.556 theta3= 1.43 theta4= 0.765 theta5=0.14 theta6=0.67 omega1= 0.0969 sigma1=0.0566 sigma2=13.2",
+    "validation": "Yes (bootstrap of 2000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "The influence of drug-drug interaction and patients' characteristics on valproic acid's clearance in adults with epilepsy using nonlinear mixed effects modeling.",
+      "compound": "VPA",
+      "population": "N: 129 Sex: M=72, F=57 Age: 34.3±11.6 WT:72.1±14.2",
+      "route": "oral",
+      "n_subjects": 129,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One compartment model, with first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.517,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.556,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 1.43,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.765,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 0.14,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.67,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0969,
+            "reported_metric": "variance",
+            "value": 0.0969,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.0566,
+            "reported_metric": "variance",
+            "value": 0.0566,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 13.2,
+            "reported_metric": "variance",
+            "value": 13.2,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "DDVPA", "TPR"],
+      "residual_error": "CL=(theta1*((WT/70)**theta2)*(theta3**DVPA)*(theta4**TPR))* exp(eta1) V = theta5 KA= theta6 Cobs=Cipred*(1+eps1) + eps2 DVPA: if DMG is >1000mg/day (1: yes, 0: no) TPR: comedication Topiramate (1: yes, 0: no)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Vucicevik",
+      "year": "2009",
+      "dose": "Steady state, oral doses in patients",
+      "population": "N: 129 Sex: M=72, F=57 Age: 34.3±11.6 WT:72.1±14.2",
+      "objective": "“to develop a population PK model of VPA, and determine the factors that influence its clearance (CL/F).”"
+    },
+    "covariates": {
+      "tested": ["(continuous) WT", "AGE", "DDVPA", "CBZ", "PHB", "(categorical) GEN", "TOB", "LTG", "BDZ", "TPR"],
+      "included": ["WT", "DDVPA", "TPR"],
+      "raw": "Tested: (continuous) WT, AGE, DDVPA, CBZ, PHB, (categorical) GEN, TOB, LTG, BDZ, TPR Included: WT, DDVPA, TPR,"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 2000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:23:14.502Z"
+}

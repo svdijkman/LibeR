@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_26135114",
+  "pmid": "26135114",
+  "title": "Quantification of Dynamic 11C-Phenytoin PET Studies.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/mansor-2015-26135114.pdf",
+    "sha256": "44f03603ed21d0cd35cc420b21d4a665cba2050dc913fe9cd4e57f25276198c6"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

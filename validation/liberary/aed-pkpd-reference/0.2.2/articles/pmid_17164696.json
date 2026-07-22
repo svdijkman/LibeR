@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_17164696",
+  "pmid": "17164696",
+  "title": "",
+  "abstract": "",
+  "first_author": "Alza’abi",
+  "year": "2006",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_17164696_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/alzaabi-2006-17164696.pdf",
+    "sha256": "fa36e40e1d4a083ae9d12252debceb4ad647564f94322c7d879441656dc2f2a0"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_9379350_m01",
+  "article_id": "pmid_9379350",
+  "pmid": "9379350",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_9379350",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 30,
+      "model_table": 2,
+      "model_row": 37
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/yukawa-1997-9379350.pdf",
+      "sha256": "bb6466c847d2f358e40fef40f55bc7e800e95486528171974db4d0e399a86c19"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Yukawa 1997 9379350",
+    "population": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+    "model_type": "PK",
+    "objective": "“to estimate the pharmacokinetic parameters of a population by using sparse data collected during routine clinical care. It can also be used to establish the extent to which patient characteristics influence the pharmacokinetics of the drug.”",
+    "covariates": "Tested: AGE, WT, Dose, SEX, Comedication(CBZ) Included: WT, DOSE, CBZDOSE, SEX, CO",
+    "observations": "The paper describes a simplified PK model. Results suggest a non-linear relationship between comedication of VPA +CBZ, where VPA CL decreases with increasing WT. CL in females was less than in males A nonlinear increase in VPA CL with increasing CBZ dose. is also suggested. Thus comedication causes an increase in VPA CL (10%).",
+    "dose": "Steady state, oral doses in patients",
+    "structure": "Simplified PK model",
+    "equations": "CL=(((theta1/1000)*(WT**theta2))*(DMGKG**theta3)*((CBZDOSE*WT)**theta4)*(theta5**(1-SEX))*(theta6**CO))*(1+eta1) CBZDOSE = theta7*exp(eta2) Cobs=Cipred*(1+eps1) DMGKG: VPA dose (mg/kg/day) CBZDOSE: dose of carbamazepine (mg/kg/day) WT: total body weight (kg) SEX: gender (1:females, 0:males) CO: comedication (0:VPA+CBZ, 1:VPA+CBZ+’AED’)",
+    "parameter_values": "theta1= 6.06 theta2= 0.832 theta3= 0.414 theta4= 0.095 theta5= 0.943 theta6= 1.10 theta7=10.14 omega1= 0.0249 omega2=0.1303 sigma1= 0.0265",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Detection of carbamazepine-induced changes in valproic acid relative clearance in man by simple pharmacokinetic screening.",
+      "compound": "VPA",
+      "population": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+      "route": "oral",
+      "n_subjects": 207,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+        "n_total": 207,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 207
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 15.7,
+                    "sd": 8.2
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.3,
+                    "maximum": 54.8
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "15.7±8.2 (0.3-54.8)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 42.6,
+                    "sd": 18
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 4.5,
+                    "maximum": 86
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "42.6±18 (4.5-86)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 30",
+              "evidence": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 30",
+          "evidence": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 37",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK model",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "THETA3", "THETA4", "THETA5", "THETA6", "CBZDOSE"]
+          },
+          "description": "Simplified PK model"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK model Steady state, oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 6.06,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.832,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.414,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.095,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.943,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CBZDOSE",
+            "typical": 10.14,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0249,
+            "reported_metric": "variance",
+            "value": 0.0249,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.1303,
+            "reported_metric": "variance",
+            "value": 0.1303,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.0265,
+            "reported_metric": "variance",
+            "value": 0.0265,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "DOSE", "CBZDOSE", "SEX", "CO"],
+      "residual_error": "CL=(((theta1/1000)*(WT**theta2))*(DMGKG**theta3)*((CBZDOSE*WT)**theta4)*(theta5**(1-SEX))*(theta6**CO))*(1+eta1) CBZDOSE = theta7*exp(eta2) Cobs=Cipred*(1+eps1) DMGKG: VPA dose (mg/kg/day) CBZDOSE: dose of carbamazepine (mg/kg/day) WT: total body weight (kg) SEX: gender (1:females, 0:males) CO: comedication (0:VPA+CBZ, 1:VPA+CBZ+’AED’)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Yukawa",
+      "year": "1997",
+      "dose": "Steady state, oral doses in patients",
+      "population": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+      "population_details": {
+        "raw": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+        "n_total": 207,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 207
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 15.7,
+                    "sd": 8.2
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.3,
+                    "maximum": 54.8
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "15.7±8.2 (0.3-54.8)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 42.6,
+                    "sd": 18
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 4.5,
+                    "maximum": 86
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "42.6±18 (4.5-86)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 30",
+              "evidence": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 30",
+          "evidence": "N: 207 Sex: m=0.53 Age: 15.7±8.2 (0.3-54.8) WT: 42.6±18 (4.5-86)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 37",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to estimate the pharmacokinetic parameters of a population by using sparse data collected during routine clinical care. It can also be used to establish the extent to which patient characteristics influence the pharmacokinetics of the drug.”"
+    },
+    "covariates": {
+      "tested": ["AGE", "WT", "Dose", "SEX", "Comedication(CBZ)"],
+      "included": ["WT", "DOSE", "CBZDOSE", "SEX", "CO"],
+      "raw": "Tested: AGE, WT, Dose, SEX, Comedication(CBZ) Included: WT, DOSE, CBZDOSE, SEX, CO"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:16.000Z"
+}

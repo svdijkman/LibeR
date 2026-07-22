@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_25989891",
+  "pmid": "25989891",
+  "title": "Population pharmacokinetic analysis for 10-monohydroxy derivative of oxcarbazepine in pediatric epileptic patients shows no difference between Japanese and other ethnicities.",
+  "abstract": "",
+  "first_author": "Sugiyama",
+  "year": "2015",
+  "compounds": "OXC",
+  "model_ids": "aed_oxc_25989891_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/OXC/articles/sugiyama-2015-25989891.pdf",
+    "sha256": "0aae12777df6e0f1a741cc4d98c6fbf33e99468100b33e238ac1b024fdb0e97d"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

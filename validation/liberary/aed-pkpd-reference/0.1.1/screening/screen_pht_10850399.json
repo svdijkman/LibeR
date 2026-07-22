@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_10850399",
+  "pmid": "10850399",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+    "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_lmt_8800632",
+  "pmid": "8800632",
+  "compound_group": "LMT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/LMT/articles/excluded/walton-1996-8800632.pdf",
+    "sha256": "c27e057f7cca743ba8bd48a6876f98e3631d15111264dcb1de6705b0266445f5"
+  }
+}

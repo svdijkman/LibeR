@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_11808828",
+  "pmid": "11808828",
+  "title": "Pharmacoepidemiologic investigation of clonazepam relative clearance by mixed-effect modeling using routine clinical pharmacokinetic data in Japanese patients.",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "2002",
+  "compounds": "CLNZ",
+  "model_ids": "aed_clnz_11808828_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CLNZ/articles/yukawa-2002-11808828.pdf",
+    "sha256": "ae7f591f64a69ba58deffebd9b17247bed3933be2cb8e637f2d21597335ac863"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

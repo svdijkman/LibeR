@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_9159559",
+  "pmid": "9159559",
+  "title": "",
+  "abstract": "",
+  "first_author": "Hussein",
+  "year": "1997",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_9159559_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/hussein-1997-9159559.pdf",
+    "sha256": "621c5ccfb72a1ee349aee4ecce51872833c08b29f2d2975baece9056b7ffd70c"
+  },
+  "metadata_source": ""
+}

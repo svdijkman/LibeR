@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_9725496",
+  "pmid": "9725496",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/gaulier-1998-9725496.pdf",
+    "sha256": "929b52598909701f4ecc69247fe4a98d2be2a3730c8548f71a0f00e1cea44c85"
+  }
+}

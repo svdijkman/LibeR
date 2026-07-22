@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_11497340",
+  "pmid": "11497340",
+  "title": "",
+  "abstract": "",
+  "first_author": "Deleu",
+  "year": "2001",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_11497340_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/deleu-2001-11497340.pdf",
+    "sha256": "b03cc578d2577002609c6dc8cd276e5b042d6258e1867021d45f3c847b20ebb8"
+  },
+  "metadata_source": ""
+}

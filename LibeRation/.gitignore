@@ -1,0 +1,12 @@
+*.Rcheck/
+*.tar.gz
+src/*.o
+src/*.obj
+src/*.so
+src/*.dll
+src/*.a
+.Rhistory
+.RData
+.Rproj.user/
+workspace/
+validation/benchmark/results/

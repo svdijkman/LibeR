@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_tpm_25403343_m01",
+  "article_id": "pmid_25403343",
+  "pmid": "25403343",
+  "model_index": 1,
+  "compound_group": "TPM",
+  "family_id": "pmid_25403343",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/TPM/Supplement_TPM_v2.docx",
+      "sha256": "787967aa7c3412e38a96b3241a229e30daf1c8716a94187beb4eddc72e2c29d1",
+      "study_table": 1,
+      "study_row": 5,
+      "model_table": 2,
+      "model_row": 6
+    },
+    "publication_pdf": {
+      "path": "Supplements/TPM/articles/ahmed-2015-25403343.pdf",
+      "sha256": "ac0d39af83fc381ee7278ad69c0da2366048c5233db1cda44d4405edf65a77b1"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Ahmed 2015 25403343",
+    "population": "N: 32 Age: 26.5 (19-55) WT: 77.3 (54.7-112.3)",
+    "model_type": "PKPD",
+    "objective": "“to develop a quantitative approach that characterizes the magnitude of and variability in phonemic generative fluency scores as measured by the Controlled Oral Word Association (COWA) test in healthy volunteers after administration of an oral and a novel intravenous (IV) formulation of topiramate (TPM)”",
+    "covariates": "PK Tested: Age, Sex, WT, Race Included: all PK parameters were scaled allometrically by WT (fixed exponents) PKPD NCOWA≥4 (Number of times the COWA test was administered to the volunteers) included on baseline parameter",
+    "observations": "This analysis quantified the effect of TPM exposure on generative verbal fluency as measured by COWA. The model predicts a 27% reduction in the COWA score at the average observed maximal plasma concentration after a 100 mg dose of TPM. The single-dose administration of relatively low TPM doses and narrow range of resultant concentrations limits the extrapolation of the PK-PD relationship to higher TPM exposures",
+    "dose": "Multiple oral and IV doses in healthy subjects",
+    "structure": "PK: 2-compartment linear model with first-order absorption and elimination PKPD: exponential decline function",
+    "equations": "PK: CL = theta1*((WT/70)**0.75)*exp(eta1) Vc = theta2*((WT/70)**1)*exp(eta3) Q = theta3*(WT/70)**0.75 Vp = theta4*(WT/70)**1 Ka = theta5*exp(eta3) F1 = theta6 Cobs = Cipred*(1+eps1) If (ROUTE==0) Cobs = Cipred*(1+eps2) PKPD: COWAij = BLi * exp(-KE*Cij) BL = theta1*(theta2** NCOWA≥4)*exp(eta1) KE = theta3 Cobs = Cipred + eps1 ROUTE is route of administration (0=IV, 1=oral)",
+    "parameter_values": "[PK] theta1 = 1.21 theta2 = 59.3 theta3 = 1.02 theta4 = 12.1 theta5 = 2.38 theta6 = 1.08 omega1 = 0.037 omega2 = 0.058 omega3 = 0.25 sigma1 = 0.033 sigma2 = 0.005 [PKPD] theta1 = 42.5 theta2 = 1.12 theta3 = 0.157 omega1 = 0.028 sigma1 = 7.1",
+    "validation": "Yes (VPC) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "TPM",
+      "population": "N: 32 Age: 26.5 (19-55) WT: 77.3 (54.7-112.3)",
+      "route": "oral",
+      "n_subjects": 32,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PKPD",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 2,
+        "description": "PK: 2-compartment linear model with first-order absorption and elimination PKPD: exponential decline function"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 1.21,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL",
+            "typical": 42.5,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vc",
+            "typical": 59.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vc",
+            "typical": 1.12,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q",
+            "typical": 1.02,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q",
+            "typical": 0.157,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vp",
+            "typical": 12.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 2.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "F1",
+            "typical": 1.08,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.037,
+            "reported_metric": "variance",
+            "value": 0.037,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.028,
+            "reported_metric": "variance",
+            "value": 0.028,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Vc",
+            "eta_index": 2,
+            "eta_distribution": "unknown",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.058,
+            "reported_metric": "variance",
+            "value": 0.058,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "Q",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.25,
+            "reported_metric": "variance",
+            "value": 0.25,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.033,
+            "reported_metric": "variance",
+            "value": 0.033,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 7.1,
+            "reported_metric": "variance",
+            "value": 7.1,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 0.005,
+            "reported_metric": "variance",
+            "value": 0.005,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": "all PK parameters were scaled allometrically by WT (fixed exponents) PKPD NCOWA≥4 (Number of times the COWA test was administered to the volunteers) included on baseline parameter",
+      "residual_error": "PK: CL = theta1*((WT/70)**0.75)*exp(eta1) Vc = theta2*((WT/70)**1)*exp(eta3) Q = theta3*(WT/70)**0.75 Vp = theta4*(WT/70)**1 Ka = theta5*exp(eta3) F1 = theta6 Cobs = Cipred*(1+eps1) If (ROUTE==0) Cobs = Cipred*(1+eps2) PKPD: COWAij = BLi * exp(-KE*Cij) BL = theta1*(theta2** NCOWA≥4)*exp(eta1) KE = theta3 Cobs = Cipred + eps1 ROUTE is route of administration (0=IV, 1=oral)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Ahmed",
+      "year": "2015",
+      "dose": "Multiple oral and IV doses in healthy subjects",
+      "population": "N: 32 Age: 26.5 (19-55) WT: 77.3 (54.7-112.3)",
+      "objective": "“to develop a quantitative approach that characterizes the magnitude of and variability in phonemic generative fluency scores as measured by the Controlled Oral Word Association (COWA) test in healthy volunteers after administration of an oral and a novel intravenous (IV) formulation of topiramate (TPM)”"
+    },
+    "covariates": {
+      "tested": ["Age", "Sex", "WT", "Race"],
+      "included": "all PK parameters were scaled allometrically by WT (fixed exponents) PKPD NCOWA≥4 (Number of times the COWA test was administered to the volunteers) included on baseline parameter",
+      "raw": "PK Tested: Age, Sex, WT, Race Included: all PK parameters were scaled allometrically by WT (fixed exponents) PKPD NCOWA≥4 (Number of times the COWA test was administered to the volunteers) included on baseline parameter"
+    },
+    "validation": {
+      "raw": "Yes (VPC) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:24:58.111Z"
+}

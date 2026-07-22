@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_lmt_18046009",
+  "pmid": "18046009",
+  "compound_group": "LMT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/LMT/articles/excluded/pennell-2008-18046009.pdf",
+    "sha256": "c18aa61c1931f91521887b5cedd656cfed42edf0952cb70f38819e6d41fcdb2e"
+  }
+}

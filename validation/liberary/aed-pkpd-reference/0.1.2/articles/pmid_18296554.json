@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_18296554",
+  "pmid": "18296554",
+  "title": "Population pharmacokinetics of lamotrigine in elderly patients.",
+  "abstract": "",
+  "first_author": "Punyawudho",
+  "year": "2008",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_18296554_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/punyawudho-2008-18296554.pdf",
+    "sha256": "327f323f78ba49ba17d1d8871624cc70053a70ed6a6bd69593a5254d4726aee1"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

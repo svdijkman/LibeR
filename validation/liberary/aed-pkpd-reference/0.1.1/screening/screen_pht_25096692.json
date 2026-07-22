@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_25096692",
+  "pmid": "25096692",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/chung-2014-25096692.pdf",
+    "sha256": "c66be8e8f70a3965e0b0e93670ba1a3d1737cd492f3561a180bea1a13a8ef8e4"
+  }
+}

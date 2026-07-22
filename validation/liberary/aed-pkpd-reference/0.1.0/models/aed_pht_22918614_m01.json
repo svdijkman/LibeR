@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_22918614_m01",
+  "article_id": "pmid_22918614",
+  "pmid": "22918614",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_22918614",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 7,
+      "model_table": 2,
+      "model_row": 8
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/tanaka-2013-22918614.pdf",
+      "sha256": "2490c0b747521f85d0783d07f78e56c2144aee58e131c75bda4ab315b948d596"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Tanaka 2013 22918614",
+    "population": "N: 71 (Japan) Age: 19.6±15.6 (2-86) WT: 43.8±21.3 (7.8-74.4)",
+    "model_type": "PK",
+    "objective": "“We performed a population pharmacokinetic analysis of phenytoin after intravenous administration of fosphenytoin sodium in healthy, neurosurgical, and epileptic subjects, including pediatric patients, and determined the optimal dose and infusion rate for achieving the therapeutic range”",
+    "covariates": "Tested: WT AGE< SEX< and trial patient type on all parameters Included: WT on CL, V2, V3",
+    "observations": "Simulations are provided that show the impact of dosing regimen and thereby allow optimisation of target achievement. Atypical allometry was used, possibly due to the inclusion of young children, for which otherwise a maturation function may be needed",
+    "dose": "Steady-state IV doses in healthy subjects and patients",
+    "structure": "2-compartment model with zero-order infusion of fosphenytoin sodium into a compartment with first-order absorption (transformation to phenytoin) and first-order elimination of phenytoin",
+    "equations": "CL = theta1*((WT/60)**theta2)*exp(eta1) V2 = theta3*(WT/60) *exp(eta2) Q = theta4*exp(eta3) V3 = theta5*((WT/60)**theta6)*exp(eta4) K12 = theta7*exp(eta5) Cobs=Cipred*exp(eps1)+eps2",
+    "parameter_values": "theta1=1.61 theta2=0.569 theta3=20.8 theta4=53 theta5=26 theta6=0.584 theta7=5.02 omega1=0.194 omega2=0.161 omega3=0.271 omega4=0.0430 omega5=0.106 sigma1=0.00148 sigma2=0.317",
+    "validation": "Yes (bootstrap of unknown number of resamples) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "N: 71 (Japan) Age: 19.6±15.6 (2-86) WT: 43.8±21.3 (7.8-74.4)",
+      "route": null,
+      "n_subjects": 71,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 2,
+        "description": "2-compartment model with zero-order infusion of fosphenytoin sodium into a compartment with first-order absorption (transformation to phenytoin) and first-order elimination of phenytoin"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 1.61,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.569,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V2",
+            "typical": 20.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q",
+            "typical": 53,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V3",
+            "typical": 26,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.584,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K12",
+            "typical": 5.02,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.194,
+            "reported_metric": "variance",
+            "value": 0.194,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.161,
+            "reported_metric": "variance",
+            "value": 0.161,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "V2",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.271,
+            "reported_metric": "variance",
+            "value": 0.271,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "Q",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.043,
+            "reported_metric": "variance",
+            "value": 0.043,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "V3",
+            "eta_index": 5,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.106,
+            "reported_metric": "variance",
+            "value": 0.106,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 0.00148,
+            "reported_metric": "variance",
+            "value": 0.00148,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "additive",
+            "reported_value": 0.317,
+            "reported_metric": "variance",
+            "value": 0.317,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT on CL", "V2", "V3"],
+      "residual_error": "CL = theta1*((WT/60)**theta2)*exp(eta1) V2 = theta3*(WT/60) *exp(eta2) Q = theta4*exp(eta3) V3 = theta5*((WT/60)**theta6)*exp(eta4) K12 = theta7*exp(eta5) Cobs=Cipred*exp(eps1)+eps2",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Tanaka",
+      "year": "2013",
+      "dose": "Steady-state IV doses in healthy subjects and patients",
+      "population": "N: 71 (Japan) Age: 19.6±15.6 (2-86) WT: 43.8±21.3 (7.8-74.4)",
+      "objective": "“We performed a population pharmacokinetic analysis of phenytoin after intravenous administration of fosphenytoin sodium in healthy, neurosurgical, and epileptic subjects, including pediatric patients, and determined the optimal dose and infusion rate for achieving the therapeutic range”"
+    },
+    "covariates": {
+      "tested": "WT AGE< SEX< and trial patient type on all parameters",
+      "included": ["WT on CL", "V2", "V3"],
+      "raw": "Tested: WT AGE< SEX< and trial patient type on all parameters Included: WT on CL, V2, V3"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of unknown number of resamples) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:23:13.091Z"
+}

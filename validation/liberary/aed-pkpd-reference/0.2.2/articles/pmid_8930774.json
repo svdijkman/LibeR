@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_8930774",
+  "pmid": "8930774",
+  "title": "",
+  "abstract": "",
+  "first_author": "Doose",
+  "year": "1996",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_8930774_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/doose-1996-8930774.pdf",
+    "sha256": "9d5375d47037687730cd5ce3cf45aae55c8bb548f6bf1e4d161be1927aeb0d99"
+  },
+  "metadata_source": ""
+}

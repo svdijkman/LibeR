@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_zns_14646181",
+  "pmid": "14646181",
+  "compound_group": "ZNS",
+  "partition": "test",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/ZNS/Supplement_ZNS_v2.docx",
+    "sha256": "d30c569d64a40b0421082c6bce8d57eca6862b8ee25455a6fc6bee0f1c766bd7"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_23996245",
+  "pmid": "23996245",
+  "title": "Estimation and comparison of carbamazepine population pharmacokinetics using dried blood spot and plasma concentrations from people with epilepsy: the clinical implication.",
+  "abstract": "",
+  "first_author": "Kong",
+  "year": "2014",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_23996245_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/kong-2014-23996245.pdf",
+    "sha256": "a308992c2f40c662b9d5255cf064e783ee05b5c441c090f37aac8131673dbe70"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

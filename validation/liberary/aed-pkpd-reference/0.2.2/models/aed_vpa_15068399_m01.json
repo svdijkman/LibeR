@@ -1,0 +1,891 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_15068399_m01",
+  "article_id": "pmid_15068399",
+  "pmid": "15068399",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_15068399",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 20,
+      "model_table": 2,
+      "model_row": 26
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/bondareva-2004-15068399.pdf",
+      "sha256": "99413f1b94cc76a72be0538d74f58b990ac8a7293d6174bd6d284d5816d7920b"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Bondareva 2004 15068399",
+    "population": "Sustained Release VPA ADULTS N:121 Sex: m=65, f=56 Age: 22 ±8.8 CHILDREN N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12 Enteric Coated VPA ADULTS N:89 Sex: m=40, f=49 Age: 24.1 ±8.5 CHILDREN N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA – monotherapy VERY YOUNG PATIENT N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+    "model_type": "PK",
+    "objective": "“To evaluate the ability of therapeutic drug monitoring (TDM) using model-based, goal-oriented Bayesian adaptive control for help in planning, monitoring, and adjusting individualized VAL dosing regimens.”",
+    "covariates": "Tested: DDVPA Included: DDVPA",
+    "observations": "The model, based on only central tendencies, is not a good predictor of inter-individual variability in patient response. But allows for VAL dosage prediction and adjustment without having to wait for steady-state. High average age in the EC group may explain more ‘adult-like’ distribution of volume in child group. No clear evidence of any nonlinear increase in VAL clearance with increasing daily dose in our adult populations. Also the model had no tendency to overestimate or underestimate the measured total concentrations of VAL found after increases in dosage. The simple model does not consider absorptive time delay of EC tablet, and the apparent increase in CL for total VPA at high doses. The observed nonlinear CL to DDVPA relationship may be explained by higher doses prescribed in clinical practice to individuals with higher drug CL.",
+    "dose": "Steady state, oral doses in patients",
+    "structure": "one-compartment model with first-order absorption and elimination",
+    "equations": "--- EC --- ADULT Kel= theta1*exp(eta1) V= (theta2*WT)*exp(eta2) CL=Kel * V KA= theta3*exp(eta3) CHILD Kel= theta4*exp(eta4) V= (theta5*WT)*exp(eta5) CL=Kel * V KA=theta6*exp(eta6) --- SR --- ADULT Kel= theta7*exp(eta7) V= (theta8*WT)*exp(eta8) CL=Kel * V KA=theta9*exp(eta9) CHILD Kel= theta10*exp(eta10) V= (theta11*WT)*exp(eta11) CL=Kel * V KA=theta12*exp(eta12) --- MONO --- INFANT Kel= theta13*exp(eta13) V= (theta14*WT)*exp(eta14) CL=Kel * V KA=theta15*exp(eta15) #no error model reported Cobs=Cipred",
+    "parameter_values": "theta1= 0.069 theta2= 0.14 theta3= 0.78 theta4= 0.096 theta5= 0.13 theta6= 0.66 theta7= 0.061 theta8= 0.16 theta9= 0.3 theta10= 0.087 theta11= 0.18 theta12= 0.24 theta13= 0.085 theta14= 0.20 theta15= 0.67 omega1= 0.3360 omega2= 0.360 omega3= 0.7378 omega4= 0.802 omega5= 0.852 omega6= 1.157 omega7= 0.9355 omega8= 0.5625 omega9= 1.44 omega10= 0.444 omega11= 0.694 omega12= 1.46 omega13= 0.498 omega14= 0.36 omega15= 1.219",
+    "validation": "Yes, external validation in two cohorts: N=25, N=44"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "VPA",
+      "population": "Sustained Release VPA ADULTS N:121 Sex: m=65, f=56 Age: 22 ±8.8 CHILDREN N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12 Enteric Coated VPA ADULTS N:89 Sex: m=40, f=49 Age: 24.1 ±8.5 CHILDREN N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA – monotherapy VERY YOUNG PATIENT N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+      "route": "oral",
+      "n_subjects": 474,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "Sustained Release VPA ADULTS N:121 Sex: m=65, f=56 Age: 22 ±8.8 CHILDREN N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12 Enteric Coated VPA ADULTS N:89 Sex: m=40, f=49 Age: 24.1 ±8.5 CHILDREN N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA – monotherapy VERY YOUNG PATIENT N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+        "n_total": 474,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Sustained Release VPA ADULTS",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 121
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 22,
+                    "sd": 8.8
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "22 ±8.8",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N:121 Sex: m=65, f=56 Age: 22 ±8.8",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "CHILDREN",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 112
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 9.15,
+                    "sd": 3.12
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "9.15 ±3.12",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_3",
+            "label": "Enteric Coated VPA ADULTS",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 89
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 24.1,
+                    "sd": 8.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "24.1 ±8.5",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N:89 Sex: m=40, f=49 Age: 24.1 ±8.5",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_4",
+            "label": "CHILDREN",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 110
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 9.53,
+                    "sd": 3.1
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "9.53 ±3.1 VPA –",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA –",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_5",
+            "label": "monotherapy VERY YOUNG PATIENT",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 42
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 1.21,
+                    "sd": 0.54
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "1.21 ±0.54",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 20",
+          "evidence": "Sustained Release VPA ADULTS N:121 Sex: m=65, f=56 Age: 22 ±8.8 CHILDREN N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12 Enteric Coated VPA ADULTS N:89 Sex: m=40, f=49 Age: 24.1 ±8.5 CHILDREN N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA – monotherapy VERY YOUNG PATIENT N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 26",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "one-compartment model with first-order absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["KEL", "THETA2", "KA", "THETA5", "THETA8", "THETA11", "THETA14"]
+          },
+          "description": "one-compartment model with first-order absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "one-compartment model with first-order absorption and elimination Steady state, oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Kel",
+            "typical": 0.069,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.14,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.78,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kel",
+            "typical": 0.096,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.13,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.66,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kel",
+            "typical": 0.061,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 0.16,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kel",
+            "typical": 0.087,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA11",
+            "typical": 0.18,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.24,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kel",
+            "typical": 0.085,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA14",
+            "typical": 0.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.67,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Kel",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.336,
+            "reported_metric": "variance",
+            "value": 0.336,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.36,
+            "reported_metric": "variance",
+            "value": 0.36,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "KA",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.7378,
+            "reported_metric": "variance",
+            "value": 0.7378,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "Kel",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.802,
+            "reported_metric": "variance",
+            "value": 0.802,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "",
+            "eta_index": 5,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.852,
+            "reported_metric": "variance",
+            "value": 0.852,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 6",
+            "parameter": "KA",
+            "eta_index": 6,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(6) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.157,
+            "reported_metric": "variance",
+            "value": 1.157,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 7",
+            "parameter": "Kel",
+            "eta_index": 7,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(7) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.9355,
+            "reported_metric": "variance",
+            "value": 0.9355,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 8",
+            "parameter": "",
+            "eta_index": 8,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(8) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.5625,
+            "reported_metric": "variance",
+            "value": 0.5625,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 9",
+            "parameter": "KA",
+            "eta_index": 9,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(9) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.44,
+            "reported_metric": "variance",
+            "value": 1.44,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 10",
+            "parameter": "Kel",
+            "eta_index": 10,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(10) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.444,
+            "reported_metric": "variance",
+            "value": 0.444,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 11",
+            "parameter": "",
+            "eta_index": 11,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(11) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.694,
+            "reported_metric": "variance",
+            "value": 0.694,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 12",
+            "parameter": "KA",
+            "eta_index": 12,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(12) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.46,
+            "reported_metric": "variance",
+            "value": 1.46,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 13",
+            "parameter": "Kel",
+            "eta_index": 13,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(13) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.498,
+            "reported_metric": "variance",
+            "value": 0.498,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 14",
+            "parameter": "",
+            "eta_index": 14,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(14) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.36,
+            "reported_metric": "variance",
+            "value": 0.36,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 15",
+            "parameter": "KA",
+            "eta_index": 15,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(15) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.219,
+            "reported_metric": "variance",
+            "value": 1.219,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": "DDVPA",
+      "residual_error": "--- EC --- ADULT Kel= theta1*exp(eta1) V= (theta2*WT)*exp(eta2) CL=Kel * V KA= theta3*exp(eta3) CHILD Kel= theta4*exp(eta4) V= (theta5*WT)*exp(eta5) CL=Kel * V KA=theta6*exp(eta6) --- SR --- ADULT Kel= theta7*exp(eta7) V= (theta8*WT)*exp(eta8) CL=Kel * V KA=theta9*exp(eta9) CHILD Kel= theta10*exp(eta10) V= (theta11*WT)*exp(eta11) CL=Kel * V KA=theta12*exp(eta12) --- MONO --- INFANT Kel= theta13*exp(eta13) V= (theta14*WT)*exp(eta14) CL=Kel * V KA=theta15*exp(eta15) #no error model reported Cobs=Cipred",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Bondareva",
+      "year": "2004",
+      "dose": "Steady state, oral doses in patients",
+      "population": "Sustained Release VPA ADULTS N:121 Sex: m=65, f=56 Age: 22 ±8.8 CHILDREN N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12 Enteric Coated VPA ADULTS N:89 Sex: m=40, f=49 Age: 24.1 ±8.5 CHILDREN N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA – monotherapy VERY YOUNG PATIENT N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+      "population_details": {
+        "raw": "Sustained Release VPA ADULTS N:121 Sex: m=65, f=56 Age: 22 ±8.8 CHILDREN N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12 Enteric Coated VPA ADULTS N:89 Sex: m=40, f=49 Age: 24.1 ±8.5 CHILDREN N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA – monotherapy VERY YOUNG PATIENT N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+        "n_total": 474,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Sustained Release VPA ADULTS",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 121
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 22,
+                    "sd": 8.8
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "22 ±8.8",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N:121 Sex: m=65, f=56 Age: 22 ±8.8",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "CHILDREN",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 112
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 9.15,
+                    "sd": 3.12
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "9.15 ±3.12",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_3",
+            "label": "Enteric Coated VPA ADULTS",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 89
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 24.1,
+                    "sd": 8.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "24.1 ±8.5",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N:89 Sex: m=40, f=49 Age: 24.1 ±8.5",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_4",
+            "label": "CHILDREN",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 110
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 9.53,
+                    "sd": 3.1
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "9.53 ±3.1 VPA –",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA –",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_5",
+            "label": "monotherapy VERY YOUNG PATIENT",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 42
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 1.21,
+                    "sd": 0.54
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 20",
+                  "evidence": "1.21 ±0.54",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 20",
+              "evidence": "N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 20",
+          "evidence": "Sustained Release VPA ADULTS N:121 Sex: m=65, f=56 Age: 22 ±8.8 CHILDREN N: 112 Sex: m=53, f=59 Age: 9.15 ±3.12 Enteric Coated VPA ADULTS N:89 Sex: m=40, f=49 Age: 24.1 ±8.5 CHILDREN N: 110 Sex: m=52, f=58 Age: 9.53 ±3.1 VPA – monotherapy VERY YOUNG PATIENT N: 42 Sex: m=23, f=19 Age: 1.21 ±0.54",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 26",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“To evaluate the ability of therapeutic drug monitoring (TDM) using model-based, goal-oriented Bayesian adaptive control for help in planning, monitoring, and adjusting individualized VAL dosing regimens.”"
+    },
+    "covariates": {
+      "tested": "DDVPA",
+      "included": "DDVPA",
+      "raw": "Tested: DDVPA Included: DDVPA"
+    },
+    "validation": {
+      "raw": "Yes, external validation in two cohorts: N=25, N=44"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:22:58.927Z"
+}

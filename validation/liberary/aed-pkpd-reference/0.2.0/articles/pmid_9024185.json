@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_9024185",
+  "pmid": "9024185",
+  "title": "Colonic absorption of antiepileptic agents.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/stevenson-1997-9024185.pdf",
+    "sha256": "13a105792fdd9c731d26132a35f510154eadaafe96eff359a1d7ef27c65008a7"
+  },
+  "metadata_source": "Supplements/GBP/pubmed_result_eval_GBP.csv"
+}

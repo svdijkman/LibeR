@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_1587057",
+  "pmid": "1587057",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/thomson-1992-1587057.pdf",
+    "sha256": "10e4b50ca2a0238fcc64ab22369178ee982e16c8f69818162b160b83c1dd83c2"
+  }
+}

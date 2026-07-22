@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_10217344",
+  "pmid": "10217344",
+  "title": "",
+  "abstract": "",
+  "first_author": "Falcão",
+  "year": "1999",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_10217344_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "",
+    "sha256": ""
+  },
+  "metadata_source": ""
+}

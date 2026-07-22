@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_28064419_m01",
+  "article_id": "pmid_28064419",
+  "pmid": "28064419",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_28064419",
+  "partition": "test",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 3,
+      "model_table": 2,
+      "model_row": 3
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/0-djordjevic-2017-28064419.pdf",
+      "sha256": "c55ed83c969c3047bf8ff8c947f8167099d1c777659ebc08bdc6abfcc6b3685f"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Djordjevic 2017 28064419 ",
+    "population": "",
+    "model_type": "",
+    "objective": "",
+    "covariates": "Tested: Included:",
+    "observations": "",
+    "dose": "",
+    "structure": "",
+    "equations": "",
+    "parameter_values": "",
+    "validation": ""
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Pharmacokinetics and Pharmacogenetics of Carbamazepine in Children.",
+      "compound": "CBZ",
+      "population": null,
+      "route": null,
+      "n_subjects": null,
+      "software": null,
+      "estimation_method": null,
+      "model_type": null,
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": ""
+      },
+      "parameters": {
+        "theta": [],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": [],
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Djordjevic",
+      "year": "2017",
+      "dose": "",
+      "population": "",
+      "objective": ""
+    },
+    "covariates": {
+      "tested": [],
+      "included": [],
+      "raw": "Tested: Included:"
+    },
+    "validation": {
+      "raw": ""
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "D",
+      "structure": "D",
+      "theta": "D",
+      "omega": "D",
+      "sigma": "D",
+      "covariates": "D",
+      "validation": "D"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "D",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": ["model_equations_missing", "parameter_values_missing"]
+  },
+  "created_at": "2026-07-16T17:23:10.151Z"
+}

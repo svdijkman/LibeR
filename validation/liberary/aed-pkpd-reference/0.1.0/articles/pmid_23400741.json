@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23400741",
+  "pmid": "23400741",
+  "title": "",
+  "abstract": "",
+  "first_author": "Lal",
+  "year": "2013",
+  "compounds": "GBP",
+  "model_ids": "aed_gbp_23400741_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/GBP/articles/lal-2013-23400741.pdf",
+    "sha256": "33f425e1ac0b437e8e0f938d226c861e0c0b8feaedc19857306f0af73366ec10"
+  },
+  "metadata_source": ""
+}

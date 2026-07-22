@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_22239287",
+  "pmid": "22239287",
+  "title": "Role of MDR1 C3435T and GABRG2 C588T gene polymorphisms in seizure occurrence and MDR1 effect on anti-epileptic drug (phenytoin) absorption.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/ponnala-2012-22239287.pdf",
+    "sha256": "a1e4a0d2c4999116bca4339a768e033197e497549450df7d975ae7916d556472"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

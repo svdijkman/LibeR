@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_21256717",
+  "pmid": "21256717",
+  "title": "",
+  "abstract": "",
+  "first_author": "Bouillon",
+  "year": "2011",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_21256717_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/bouillon-2011-21256717.pdf",
+    "sha256": "16b9689072f186d5535252802562616ff22d303f327e899077793dd9ac43f12b"
+  },
+  "metadata_source": ""
+}

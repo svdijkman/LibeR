@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_3662159",
+  "pmid": "3662159",
+  "title": "",
+  "abstract": "",
+  "first_author": "Mauro",
+  "year": "1987",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_3662159_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/mauro-1987-3662159.pdf",
+    "sha256": "3ab10b5d44d71a9069b5cd1aaf36d28e0d3ebe192cfdf64cdded4a0a82bbbad2"
+  },
+  "metadata_source": ""
+}

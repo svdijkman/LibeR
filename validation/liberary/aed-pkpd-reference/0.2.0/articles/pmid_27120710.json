@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_27120710",
+  "pmid": "27120710",
+  "title": "An investigation of the influence of patient-related factors and comedications on lamotrigine clearance in patients with epilepsy.",
+  "abstract": "",
+  "first_author": "Baldoni",
+  "year": "2016",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_27120710_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/baldoni-2016-27120710.pdf",
+    "sha256": "a550b372f55c9f795bc3a09c1de04d1d4574c8c906fbd3dc2ceec5ee5f7bcef2"
+  },
+  "metadata_source": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+}

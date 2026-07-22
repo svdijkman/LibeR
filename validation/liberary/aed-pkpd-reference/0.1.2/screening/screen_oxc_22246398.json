@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_oxc_22246398",
+  "pmid": "22246398",
+  "compound_group": "OXC",
+  "partition": "train",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/OXC/Supplement_OXC_v2.docx",
+    "sha256": "c156583a67670c2213136103c9fc483539ef7a0eedbffe74feb604b091947894"
+  }
+}

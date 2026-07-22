@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_26409125",
+  "pmid": "26409125",
+  "title": "",
+  "abstract": "",
+  "first_author": "Brittain",
+  "year": "2015",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_26409125_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/brittain-2015-26409125.pdf",
+    "sha256": "9d1437571d14b8b19be03b28cdcbc9b2cd16b476a786c4d3c84ae2ff2b3d36be"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9055139",
+  "pmid": "9055139",
+  "title": "",
+  "abstract": "",
+  "first_author": "Mckindley",
+  "year": "1997",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_9055139_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/mckindley-1997-9055139.pdf",
+    "sha256": "b8ec39c4e920061456de85348683f19a0e2ab79cab60596b525356f3b1bb5a05"
+  },
+  "metadata_source": ""
+}

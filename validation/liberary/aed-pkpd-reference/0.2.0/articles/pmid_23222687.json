@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_23222687",
+  "pmid": "23222687",
+  "title": "",
+  "abstract": "",
+  "first_author": "Lee",
+  "year": "2013",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_23222687_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/lee-2013-23222687.pdf",
+    "sha256": "f73704c657ccaa675c8ea06ef7e7d137829d4c71b47c53542bddeae0d167748a"
+  },
+  "metadata_source": ""
+}

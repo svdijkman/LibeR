@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_16871388",
+  "pmid": "16871388",
+  "title": "Lamotrigine pharmacokinetic evaluation in epileptic patients submitted to VEEG monitoring.",
+  "abstract": "",
+  "first_author": "Almeida",
+  "year": "2006",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_16871388_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/almeida-2006-16871388.pdf",
+    "sha256": "491294be0032b5e20ffa163b67f04e69bf72264b679b5f4b44ec829396c214e5"
+  },
+  "metadata_source": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+}

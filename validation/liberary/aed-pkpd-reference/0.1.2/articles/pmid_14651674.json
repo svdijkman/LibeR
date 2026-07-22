@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_14651674",
+  "pmid": "14651674",
+  "title": "",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "2003",
+  "compounds": ["CLNZ", "VPA"],
+  "model_ids": ["aed_clnz_14651674_m01", "aed_vpa_14651674_m01"],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/yukawa-2003-14651674.pdf",
+    "sha256": "cb7f207ac0c6f6f122ad5b897d46964c2ecba1e1fc89fb5a4829aa95fce68f17"
+  },
+  "metadata_source": ""
+}

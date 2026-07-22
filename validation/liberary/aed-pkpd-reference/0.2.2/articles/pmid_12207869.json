@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_12207869",
+  "pmid": "12207869",
+  "title": "",
+  "abstract": "",
+  "first_author": "Konsil",
+  "year": "2002",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_12207869_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/konsil-2002-12207869.pdf",
+    "sha256": "0c7ec802c5e6167aafd86bf0dd71025683ff52741bb5d2eca0737d7a1dd211d2"
+  },
+  "metadata_source": ""
+}

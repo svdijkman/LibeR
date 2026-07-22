@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "version": "0.2.1",
+  "status": "silver_reference",
+  "created_at": "2026-07-16T22:05:32.692Z",
+  "source": {
+    "name": "AED_PKPD",
+    "source_hash_digest": "e90c6aba589b3d13de6bc6bb7ffd010a3ba2a7558e448565c8b5acd2307481c6",
+    "documents": ["Supplements/CBZ/Supplement_CBZ_v2.docx", "Supplements/CLNZ/Supplement_CLNZ_v2.docx", "Supplements/GBP/Supplement_GBP_v2.docx", "Supplements/LMT/Supplement_LMT_v2.docx", "Supplements/LVT/Supplement_LVT_v2.docx", "Supplements/OXC/Supplement_OXC_v2.docx", "Supplements/PHB/Supplement_PHB_v2.docx", "Supplements/PHT/Supplement_PHT_v2.docx", "Supplements/TPM/Supplement_TPM_v2.docx", "Supplements/VPA/Supplement_VPA_v2.docx", "Supplements/ZNS/Supplement_ZNS_v2.docx"]
+  },
+  "partitioning": {
+    "unit": "PMID/article",
+    "seed": "20260716",
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.15,
+    "locked_test": true
+  },
+  "counts": {
+    "models": 182,
+    "articles": 248,
+    "screening": 257,
+    "tiers": {
+      "C": 179,
+      "D": 3
+    },
+    "partitions": {
+      "train": 132,
+      "validation": 28,
+      "test": 22
+    }
+  },
+  "safeguards": {
+    "live_catalog_isolated": true,
+    "test_must_not_be_indexed_or_exported_for_training": true,
+    "appendix_raw_preserved": true,
+    "strict_scoring_requires_tier_a_or_b": true,
+    "training_requires_explicit_eligibility": true
+  },
+  "limitations": ["The v2 appendices are a silver reference and explicitly contain reconstructions and assumptions.", "One appendix row is currently represented as one model unless multiple keyed rows exist.", "Exclusion reasons are unavailable for some explicitly excluded PDFs.", "Publication titles and abstracts are present only where recoverable from local CSV metadata."],
+  "warnings": []
+}

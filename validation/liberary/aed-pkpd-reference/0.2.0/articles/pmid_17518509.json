@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_17518509",
+  "pmid": "17518509",
+  "title": "Population pharmacokinetics of levetiracetam in Japanese and Western adults.",
+  "abstract": "",
+  "first_author": "Pigeolet",
+  "year": "2007",
+  "compounds": "LVT",
+  "model_ids": "aed_lvt_17518509_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/pigeolet-2007-17518509.pdf",
+    "sha256": "ddaaa38c30f72062eee5ca4d78592edf0fb8834809fcbd8654b2b4fe7300c4b5"
+  },
+  "metadata_source": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+}

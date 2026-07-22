@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23553679",
+  "pmid": "23553679",
+  "title": "Validation of a novel approach for dose individualization in pharmacotherapy using gabapentin in a proof of principles study.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "GBP",
+  "model_ids": [],
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/GBP/articles/excluded/blau-2013-23553679.pdf",
+    "sha256": "9518e1a4247d3f76babdb94f8f2c649f4d2b28c40686b365a316ec85c2f49670"
+  },
+  "metadata_source": "Supplements/GBP/pubmed_result_eval_GBP.csv"
+}

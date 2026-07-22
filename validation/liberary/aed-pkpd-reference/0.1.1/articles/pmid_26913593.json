@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_26913593",
+  "pmid": "26913593",
+  "title": "Population Pharmacokinetic Modeling of Levetiracetam in Pediatric and Adult Patients With Epilepsy by Using Routinely Monitored Data.",
+  "abstract": "",
+  "first_author": "Ito",
+  "year": "2016",
+  "compounds": "LVT",
+  "model_ids": "aed_lvt_26913593_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/ito-2016-26913593.pdf",
+    "sha256": "048d6cefa7f72e0e2fc5856927f103cf3dd95c867f916a264637bfda3b03586a"
+  },
+  "metadata_source": "Supplements/LVT/pubmed_result_eval_LVT.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_15828853",
+  "pmid": "15828853",
+  "title": "",
+  "abstract": "",
+  "first_author": "Battino",
+  "year": "2005",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_15828853_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/battino-2005-15828853 .pdf",
+    "sha256": "2fb709a8e9aa59eccf48d97fa350cbaa40222c776f4a6daa22c6c236b33d2892"
+  },
+  "metadata_source": ""
+}

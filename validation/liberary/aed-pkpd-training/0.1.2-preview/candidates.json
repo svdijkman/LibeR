@@ -1,0 +1,3098 @@
+[
+  {
+    "reference_id": "aed_cbz_10217344_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_11253616_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_11422016_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_11422606_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_11497340_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_11846622_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_12207869_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_12766553_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_15153086_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_15978311_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_15981957_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_18043476_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_19566114_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_21062333_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_23408495_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_2344850_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_23995050_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_2805552_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_3235481_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_3446773_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_8046601_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_8473361_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_8491236_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_8877681_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_9108639_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_9696965_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_clnz_11763006_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_clnz_11808828_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_clnz_1233263_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_clnz_14651674_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_gbp_19077930_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_gbp_22544471_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_gbp_23743781_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_11802095_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_12681002_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_16012277_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_17497143_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_18296554_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_18641550_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_18662287_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_22660444_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_23263737_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_23995050_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_24240511_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_24571554_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_27096250_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_27120710_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_9159559_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lvt_17196793_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lvt_17518509_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lvt_19054418_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lvt_1917500_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lvt_22495532_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lvt_23877106_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lvt_26913593_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_oxc_12891224_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_oxc_22246398_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_oxc_23995050_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_oxc_25700977_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_10805060_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_16789993_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_17304159_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_19160725_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_22023343_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_22331680_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_23018530_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_23254984_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_25380628_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_26681081_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_590316_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_8641326_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_9591934_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_9616196_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_10368078_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_10850399_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_11185666_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_11714214_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_12492612_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_15385837_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_1577995_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_16789993_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_17164696_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_18591503_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_22149258_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_2268899_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_2318914_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_23222687_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_23606544_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_25331445_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_3197366_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_6617043_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_7989403_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_8924916_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_9055139_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_9094065_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_9333104_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_9712466_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_9860067_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_15828853_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_20606310_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_20880232_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_21256717_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_23891703_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_25403343_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_26409125_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_26670371_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_26908152_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_10319910_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_11565626_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_12472981_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_12576165_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_14651674_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_14673555_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_15068399_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_15569400_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_16216031_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_17883957_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_18211614_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_19067436_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_19756559_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_19804822_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_21416779_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_21805207_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_22167565_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_24831653_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_26484865_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_8568010_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_9379350_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_9506012_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_9756109_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_zns_18641551_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_zns_8205132_m01",
+    "task": "extraction",
+    "partition": "train",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_17711537_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_22406657_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_24210059_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_26762380_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_cbz_28971365_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "D",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_clnz_19730280_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_gbp_11738930_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_gbp_23400741_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_10197296_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_10996503_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_16871388_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_1817959_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lmt_23103620_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_lvt_18399714_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_oxc_16197654_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_phb_23855753_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_10051055_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_2253670_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_22918614_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_2635729_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_3359738_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_3662159_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_6547663_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_pht_7229908_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_tpm_8930774_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_18237476_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_25010262_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "aed_vpa_25372290_m01",
+    "task": "extraction",
+    "partition": "validation",
+    "tier": "C",
+    "eligible": false,
+    "reason": "tier_not_selected"
+  },
+  {
+    "reference_id": "screen_cbz_10217344",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_11253616",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_11401423",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_cbz_11422016",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_11422606",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_11497340",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_11846622",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_12207869",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_12766553",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_1485365",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_cbz_15153086",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_15978311",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_15981957",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_18043476",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_19566114",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_21062333",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_22171585",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_cbz_23408495",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_2344850",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_23995050",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_2609045",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_cbz_2805552",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_3235481",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_3446773",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_8046601",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_8473361",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_8491236",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_8877681",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_9108639",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_9517367",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_cbz_9696965",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_clnz_11763006",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_clnz_11808828",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_clnz_1233263",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_clnz_14651674",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_clnz_20354105",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_gbp_19077930",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_gbp_19434502",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_gbp_22544471",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_gbp_23018586",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_gbp_23743781",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_gbp_24168107",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_lmt_11802095",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_12681002",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_16012277",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_17497143",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_18046009",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_lmt_18296554",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_18641550",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_18662287",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_22660444",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_23263737",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_23503444",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_lmt_23995050",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_24240511",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_24571554",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_24820767",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_lmt_27096250",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_27120710",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_8800632",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_lmt_9159559",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lvt_17196793",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lvt_17518509",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lvt_19054418",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lvt_1917500",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lvt_22495532",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lvt_23877106",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lvt_26913593",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_oxc_12891224",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_oxc_22246398",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_oxc_23995050",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_oxc_24359313",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_oxc_25700977",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_10805060",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_16789993",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_17304159",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_19160725",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_22023343",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_22331680",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_23018530",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_23254984",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_25380628",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_26681081",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_3409842",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_phb_590316",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_8641326",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_9591934",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_phb_9616196",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_10368078",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_10466903",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_10850399",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_11185666",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_11714214",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_12235444",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_12492612",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_12915078",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_15385837",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_15662039",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_1577995",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_1587057",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_16789993",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_16885794",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_16928154",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_17164696",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_17240061",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_18463199",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_18490437",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_18521585",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_18591503",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_18783295",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_19077928",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_1969339",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_20012173",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2036750",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2053118",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2079659",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_21241069",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_21395647",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_22149258",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_22239287",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2268899",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_22941939",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2318914",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_23222687",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_2337967",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_23606544",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_23834474",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_23943382",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_24700271",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_25096692",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_25331445",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_26135114",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2632085",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_26517379",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2659322",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_27236639",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2741195",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2795428",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_3132550",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_3197366",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_3409842",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_6617043",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_7104175",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_7324088",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_7725371",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_7989403",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_8924916",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_9024185",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_9055139",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_9094065",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_9292403",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_9333104",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_9712466",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_9725496",
+    "task": "triage",
+    "partition": "train",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_9860067",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_15828853",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_20606310",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_20880232",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_21256717",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_23891703",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_25403343",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_26409125",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_26670371",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_26908152",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_10319910",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_11565626",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_12472981",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_12576165",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_14651674",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_14673555",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_15068399",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_15569400",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_16216031",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_17883957",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_18211614",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_19067436",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_19756559",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_19804822",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_21416779",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_21805207",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_22167565",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_24831653",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_26484865",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_8568010",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_9379350",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_9506012",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_9756109",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_zns_18641551",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_zns_8205132",
+    "task": "triage",
+    "partition": "train",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_17711537",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_21314678",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_cbz_22406657",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_24125961",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_cbz_24210059",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_26762380",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_cbz_28971365",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_clnz_19730280",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_gbp_11738930",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_gbp_22206794",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_gbp_23400741",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_10197296",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_10996503",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_16871388",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_1817959",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lmt_21314678",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_lmt_23103620",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_lvt_18399714",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_oxc_16197654",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_oxc_16243221",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_phb_21314678",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_phb_23855753",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_10051055",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_10586395",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_17433926",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_21314678",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2253670",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_22918614",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_25061162",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "explicit_exclusion",
+    "eligible": false,
+    "reason": "ambiguous_or_query_specific_label"
+  },
+  {
+    "reference_id": "screen_pht_2635729",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_3359738",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_3662159",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_6547663",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_pht_7229908",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_tpm_8930774",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_18237476",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_25010262",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  },
+  {
+    "reference_id": "screen_vpa_25372290",
+    "task": "triage",
+    "partition": "validation",
+    "tier": "included_appendix_model",
+    "eligible": false,
+    "reason": "abstract_missing"
+  }
+]

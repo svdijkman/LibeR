@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_vpa_25010262",
+  "pmid": "25010262",
+  "compound_group": "VPA",
+  "partition": "validation",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+    "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b"
+  }
+}

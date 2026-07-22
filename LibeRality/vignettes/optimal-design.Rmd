@@ -1,0 +1,111 @@
+---
+title: "Optimal trial design with LibeRality"
+author: "Sven C. van Dijkman"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Optimal trial design with LibeRality}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(LibeRality)
+```
+
+LibeRality connects a clinically recognisable trial description to the same
+NONMEM-compatible model and C++ numerical engine used by LibeRation. A design
+contains arm schedules, endpoint definitions, population strata, uncertainty
+scenarios, design variables, constraints, and optional prior information.
+
+## Build or open a design
+
+The included example is an oral population-PK study with rich and sparse arms.
+
+```{r example}
+example <- lity_example()
+design <- example$design
+design
+lity_validate(design)
+```
+
+`lity_schedule()` uses familiar event columns (`TIME`, `EVID`, `AMT`, `RATE`,
+`II`, `ADDL`, `SS`, `CMT`, and `DVID`). This allows doses, infusions, repeated
+doses, steady state, covariates, and multiple outcomes to retain their
+LibeRation/NONMEM meaning.
+
+## Information and precision
+
+```{r information}
+information <- lity_information(design)
+information
+head(data.frame(
+  parameter = names(information$se),
+  se = information$se,
+  rse = information$rse
+))
+```
+
+For continuous observations, LibeRality uses the multivariate-normal
+population expected information, including parameter effects on the mean and
+the observation covariance. Prediction derivatives come from LibeRation's
+CppAD-backed engine. OMEGA derivatives are analytic; residual covariance
+derivatives retain the declared error model. Binary, ordinal, count, recurrent,
+and event-time designs use distribution-aware counting-process or working-
+moment information.
+
+## Evaluate competing objectives
+
+```{r criteria}
+evaluation <- lity_evaluate(design, list(
+  local_D = lity_criterion_D(),
+  robust_D = lity_criterion_robust(lity_criterion_D()),
+  max_rse = lity_criterion_rse(summary = "max"),
+  cost = lity_criterion_cost(),
+  burden = lity_criterion_burden()
+))
+evaluation
+```
+
+Every criterion declares whether it is maximised or minimised. Compound
+criteria require explicit weights and reference scales. `lity_criterion_pareto()`
+keeps objectives separate and `lity_pareto()` returns the non-dominated set.
+
+## Optimise and verify
+
+The example mixes sampling-time and integer arm-size variables, so the hybrid
+algorithm is appropriate. The shortened run below is illustrative; real work
+should use convergence checks, multiple seeds, and adequate iteration limits.
+
+```{r optimise, eval=FALSE}
+criterion <- lity_criterion_compound(
+  list(information = lity_criterion_D(), cost = lity_criterion_cost()),
+  weights = c(0.8, 0.2),
+  reference = c(1, 100000)
+)
+result <- lity_optimise(
+  design, criterion, method = "hybrid",
+  control = list(maxit = 60, particles = 30)
+)
+
+verification <- lity_simulate_trials(result$design, n = 250)
+lity_report(result, "optimal-design-report.html")
+```
+
+The empirical simulation can include dropout, non-adherence, missed samples,
+random effects, residual error, and scenario sampling. Set `fit = TRUE` to
+re-estimate each trial with a chosen LibeRation algorithm; this is substantially
+more expensive but provides empirical bias, RMSE, convergence, and coverage
+checks against theoretical precision.
+
+## Ecosystem hand-off
+
+- `lity_model_from_liberary()` imports a reviewed catalogue model.
+- `lity_endpoint_from_liberator()` preserves a therapeutic endpoint definition.
+- `lity_to_liberation()` produces an exact event template or simulated dataset.
+- `lity_job()` sends evaluation, optimisation, simulation, or Pareto work to a
+  LibeRties queue.
+
+Use `liberality_gui()` for the React workbench. Long optimisations should be
+queued, checkpointed, and accompanied by scenario and simulation sensitivity
+analyses.

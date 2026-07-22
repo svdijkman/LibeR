@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_27096250",
+  "pmid": "27096250",
+  "title": "",
+  "abstract": "",
+  "first_author": "Milosheska",
+  "year": "2016",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_27096250_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/milosheska-2016-27096250.pdf",
+    "sha256": "de4dec7714aeda87eb0c28d8670f792fad8a8b0be1c3f5e0b131aad9fe4437c6"
+  },
+  "metadata_source": ""
+}

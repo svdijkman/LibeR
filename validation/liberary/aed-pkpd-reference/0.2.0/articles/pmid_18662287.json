@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_18662287",
+  "pmid": "18662287",
+  "title": "",
+  "abstract": "",
+  "first_author": "Dixon",
+  "year": "2008",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_18662287_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/dixon-2008-18662287.pdf",
+    "sha256": "87ff709116c8f5fd920f76468e637617d55bb741e289494d346135c2e73c4254"
+  },
+  "metadata_source": ""
+}

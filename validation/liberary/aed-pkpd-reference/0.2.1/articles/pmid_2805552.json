@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2805552",
+  "pmid": "2805552",
+  "title": "",
+  "abstract": "",
+  "first_author": "Summers",
+  "year": "1989",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_2805552_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/summers-1989-2805552.pdf",
+    "sha256": "8c3efd127444bcadbb409db1ace184196992249b2fb1f54b080a33b21433b4c0"
+  },
+  "metadata_source": ""
+}

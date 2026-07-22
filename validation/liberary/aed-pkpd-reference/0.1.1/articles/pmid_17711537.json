@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_17711537",
+  "pmid": "17711537",
+  "title": "",
+  "abstract": "",
+  "first_author": "Tothfalusi",
+  "year": "2008",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_17711537_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/tothfalusi-2008-17711537.pdf",
+    "sha256": "2a77943a8ffac4ce383402d26c1190eab45633aa2cdc236cbdf0f6721ee69b6d"
+  },
+  "metadata_source": ""
+}

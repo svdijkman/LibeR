@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_19067436",
+  "pmid": "19067436",
+  "title": "Population pharmacokinetics of valproate in Mexican children with epilepsy.",
+  "abstract": "",
+  "first_author": "Correa",
+  "year": "2008",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_19067436_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/correa-2008-19067436.pdf",
+    "sha256": "58013896f095477a6e9c262496f4f11e72b3f2052414208d2fceb3a33f99df6d"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

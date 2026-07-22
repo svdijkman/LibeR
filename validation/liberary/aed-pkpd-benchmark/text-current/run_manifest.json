@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "partition": "test",
+  "corpus_version": "0.1.2",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "extraction_mode": "text",
+  "started_from_target_free_source_manifest": true,
+  "completed": 22,
+  "failed": 0,
+  "updated_at": "2026-07-16T17:47:17.956Z"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_21805207",
+  "pmid": "21805207",
+  "title": "",
+  "abstract": "",
+  "first_author": "Popovic",
+  "year": "2011",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_21805207_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/popovic-2011-21805207.pdf",
+    "sha256": "24894084568b6a08dc9ae115184c8d928e51aa8d2c76a665ae010e461d351e22"
+  },
+  "metadata_source": ""
+}

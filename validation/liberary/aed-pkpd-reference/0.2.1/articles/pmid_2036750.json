@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2036750",
+  "pmid": "2036750",
+  "title": "Covariance analysis of laboratory variance in steady-state serum phenytoin concentrations.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/costeff-1991-2036750.pdf",
+    "sha256": "6e2721f202e9eca47dfeb3b9f7c6b1c99fc0893582307087634f4a7569c97b29"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

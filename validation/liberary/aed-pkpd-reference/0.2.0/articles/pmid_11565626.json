@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_11565626",
+  "pmid": "11565626",
+  "title": "",
+  "abstract": "",
+  "first_author": "Vasudev",
+  "year": "2001",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_11565626_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/vasudev-2001-11565626.pdf",
+    "sha256": "1a332d2d5ba3765c1e8d96e1fe263fe878684e2184dcc8f107ad65069197278e"
+  },
+  "metadata_source": ""
+}

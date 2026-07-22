@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_23670246_m01",
+  "article_id": "pmid_23670246",
+  "pmid": "23670246",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_23670246",
+  "partition": "test",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 4,
+      "model_table": 2,
+      "model_row": 4
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/terheine-2014-23670246.pdf",
+      "sha256": "ecb7c2dc4e0b2d38459e4bdfeedcff4980df640f3152aa4159d130b2a5ba883e"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Ter heine 2014 23670246",
+    "population": "N: 186 (Dutch) Age: 3.81 (0.01-17.9) WT: -",
+    "model_type": "PK",
+    "objective": "“to quantify important covariates influencing the unbound phenytoin fraction in children in routine clinical practice and to propose an equation for calculating the covariates-adjusted total phenytoin concentration”",
+    "covariates": "Tested: triglycerides, urea, VPA, CBZ albumin, bilirubin, creatinine Included: albumin, urea, VPA",
+    "observations": "The proposed model allows the prediction of free PHT concentrations to a fairly accurate degree, thereby side-stepping the need for separate measurements of free PHT",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Unbound to bound PHT correlation",
+    "equations": "Pfu=theta1-theta2*(ALB-42)+theta3*(UREA-7)+theta4*VPA UPC=Pfu*TPC Pfu is percentage (%) of free unbound phenytoin UPC is unbound phenytoin concentration (mg/L) TPC is total phenytoin concentration (mg/L)",
+    "parameter_values": "theta1=10.2 theta2=0.24 theta3=0.067 theta4=2.53",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "The quantitative effect of serum albumin, serum urea, and valproic acid on unbound phenytoin concentrations in children.",
+      "compound": "PHT",
+      "population": "N: 186 (Dutch) Age: 3.81 (0.01-17.9) WT: -",
+      "route": "oral",
+      "n_subjects": 186,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "Unbound to bound PHT correlation"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Pfu",
+            "typical": 10.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.24,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.067,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 2.53,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["albumin", "urea", "VPA"],
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Ter heine",
+      "year": "2014",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 186 (Dutch) Age: 3.81 (0.01-17.9) WT: -",
+      "objective": "“to quantify important covariates influencing the unbound phenytoin fraction in children in routine clinical practice and to propose an equation for calculating the covariates-adjusted total phenytoin concentration”"
+    },
+    "covariates": {
+      "tested": ["triglycerides", "urea", "VPA", "CBZ albumin", "bilirubin", "creatinine"],
+      "included": ["albumin", "urea", "VPA"],
+      "raw": "Tested: triglycerides, urea, VPA, CBZ albumin, bilirubin, creatinine Included: albumin, urea, VPA"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:56.990Z"
+}

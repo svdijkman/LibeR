@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_26484865",
+  "pmid": "26484865",
+  "title": "Determination of the Optimal Concentration of Valproic Acid in Patients with Epilepsy: A Population Pharmacokinetic-Pharmacodynamic Analysis.",
+  "abstract": "",
+  "first_author": "Nakashima",
+  "year": "2015",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_26484865_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/nakashima-2016-26484865.pdf",
+    "sha256": "40e71200c1349be3764a12e36608670a109a0cc83b0d8e35d7e8ff4c276a2a35"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

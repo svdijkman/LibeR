@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_lmt_27096250",
+  "pmid": "27096250",
+  "compound_group": "LMT",
+  "partition": "train",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+    "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc"
+  }
+}

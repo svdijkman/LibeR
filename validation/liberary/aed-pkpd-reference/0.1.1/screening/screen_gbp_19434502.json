@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_gbp_19434502",
+  "pmid": "19434502",
+  "compound_group": "GBP",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/GBP/articles/excluded/bolger-2009-19434502.pdf",
+    "sha256": "5b95cb4db19f8c73398959b464724eb10a3842a1d137b3d524a6296a418dd25d"
+  }
+}

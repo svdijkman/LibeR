@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_21062333",
+  "pmid": "21062333",
+  "title": "Predictability of individualized dosage regimens of carbamazepine and valproate mono- and combination therapy.",
+  "abstract": "",
+  "first_author": "Bondareva",
+  "year": "2011",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_21062333_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/bondareva-2011-21062333.pdf",
+    "sha256": "7521b11351d6368776f2de534f42f306b7ff7daa1fc60d1a484a893554ed9f8c"
+  },
+  "metadata_source": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+}

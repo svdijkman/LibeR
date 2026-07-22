@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_16885794",
+  "pmid": "16885794",
+  "title": "Total phenytoin concentrations do not accurately predict free phenytoin concentrations in critically ill children.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/wolf-2006-16885794.pdf",
+    "sha256": "58fbd12d00a1bb8df22a4d399d6083335f255831984d9add7d994d9882c37bf6"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

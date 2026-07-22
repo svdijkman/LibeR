@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_14646181",
+  "pmid": "14646181",
+  "title": "Influence of coadministered antiepileptic drugs on serum zonisamide concentrations in epileptic patients: quantitative analysis based on suitable transforming factor.",
+  "abstract": "",
+  "first_author": "Fukuoka",
+  "year": "2003",
+  "compounds": "ZNS",
+  "model_ids": "aed_zns_14646181_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/ZNS/articles/fukuoka-2003-14646181.pdf",
+    "sha256": "c72ffa5a14f1bc3854c79bca30bd2ff9ca90b88e22651c373bedb2244957ab27"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_23996245_m01",
+  "article_id": "pmid_23996245",
+  "pmid": "23996245",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_23996245",
+  "partition": "test",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 7,
+      "model_table": 2,
+      "model_row": 7
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/kong-2014-23996245.pdf",
+      "sha256": "a308992c2f40c662b9d5255cf064e783ee05b5c441c090f37aac8131673dbe70"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Kong 2014 23996245",
+    "population": "[index group] N: 72 (Singapore) Age: 42.7±11.2 (22.3-77.8) WT: 65.7±19 (39.5-107.4) [validation group] N: 26 (Singapore) Age: 42.6±10.6 (19.7-64.6) WT: 66.2±13.5 (40-96.1)",
+    "model_type": "PK",
+    "objective": "“we estimated the population pharmacokinetic parameters (PPK) in adult PWE. Simulateously, the PPK estimates obtained from both plasma and DBS were assessed. Thereafter, the potential of DBS as a surrogate to plasma for TDM could be established.” n.b. DBS = dried blood spot",
+    "covariates": "Tested: SEX, AGE, age of seizure onset,WT, ethnicity, drug response class, CBZ DD, comedication with VPA, AST< ALP, GT, albumin, bilirubin, haemoglobin, hematocrit Included: CBZ DD, WT, and SEX on CL.",
+    "observations": "Clearance estimated from dried blood spot testing accurately represented that estimated from regular plasma testing. However, DBS here was derived from EDTA anti-coagulated venous blood, which may allow far more accurate comparison than actual DBS where blood is coagulated and may be influenced by the milieu of the DBS retrieval location (e.g. finger prick)",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment model with linear absorption and elimination",
+    "equations": "[venous sampling] CL/F=theta1*((DD/(WT*15))**theta2)*(theta3**SEX)*exp(eta1) Vd/F=theta4 Ka=theta5 Cobs=Cipred+eps2 [DBS based on EDTA venous blood] CL=theta6*((DD/WT)**theta7)*exp(eta2) Vd=theta8 Ka=theta5 Cobs=Cipred+eps2 DD: daily dose of CBZ in mg/day SEX: gender (female: 0, male: 1)",
+    "parameter_values": "theta1=5.984 theta2=0.5199 theta3=0.773 theta4=66 theta5=0.47 theta6=0.9842 theta7=0.6152 theta8=88 omega1=0.003 omega2=0.003 sigma1=0.86 sigma2=0.26",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Estimation and comparison of carbamazepine population pharmacokinetics using dried blood spot and plasma concentrations from people with epilepsy: the clinical implication.",
+      "compound": "CBZ",
+      "population": "[index group] N: 72 (Singapore) Age: 42.7±11.2 (22.3-77.8) WT: 65.7±19 (39.5-107.4) [validation group] N: 26 (Singapore) Age: 42.6±10.6 (19.7-64.6) WT: 66.2±13.5 (40-96.1)",
+      "route": "oral",
+      "n_subjects": 72,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment model with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 5.984,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.5199,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.773,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 66,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.47,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL",
+            "typical": 0.9842,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 0.6152,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd",
+            "typical": 88,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.003,
+            "reported_metric": "variance",
+            "value": 0.003,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.003,
+            "reported_metric": "variance",
+            "value": 0.003,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 0.86,
+            "reported_metric": "variance",
+            "value": 0.86,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "additive",
+            "reported_value": 0.26,
+            "reported_metric": "variance",
+            "value": 0.26,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["CBZ DD", "WT", "and SEX on CL."],
+      "residual_error": "[venous sampling] CL/F=theta1*((DD/(WT*15))**theta2)*(theta3**SEX)*exp(eta1) Vd/F=theta4 Ka=theta5 Cobs=Cipred+eps2 [DBS based on EDTA venous blood] CL=theta6*((DD/WT)**theta7)*exp(eta2) Vd=theta8 Ka=theta5 Cobs=Cipred+eps2 DD: daily dose of CBZ in mg/day SEX: gender (female: 0, male: 1)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Kong",
+      "year": "2014",
+      "dose": "Steady-state oral doses in patients",
+      "population": "[index group] N: 72 (Singapore) Age: 42.7±11.2 (22.3-77.8) WT: 65.7±19 (39.5-107.4) [validation group] N: 26 (Singapore) Age: 42.6±10.6 (19.7-64.6) WT: 66.2±13.5 (40-96.1)",
+      "objective": "“we estimated the population pharmacokinetic parameters (PPK) in adult PWE. Simulateously, the PPK estimates obtained from both plasma and DBS were assessed. Thereafter, the potential of DBS as a surrogate to plasma for TDM could be established.” n.b. DBS = dried blood spot"
+    },
+    "covariates": {
+      "tested": ["SEX", "AGE", "age of seizure onset", "WT", "ethnicity", "drug response class", "CBZ DD", "comedication with VPA", "AST< ALP", "GT", "albumin", "bilirubin", "haemoglobin", "hematocrit"],
+      "included": ["CBZ DD", "WT", "and SEX on CL."],
+      "raw": "Tested: SEX, AGE, age of seizure onset,WT, ethnicity, drug response class, CBZ DD, comedication with VPA, AST< ALP, GT, albumin, bilirubin, haemoglobin, hematocrit Included: CBZ DD, WT, and SEX on CL."
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:52.963Z"
+}

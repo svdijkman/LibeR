@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_15662039",
+  "pmid": "15662039",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/naidech-2005-15662039.pdf",
+    "sha256": "328307604c1c303059643d2ca89522fa2147119f1d8133f82339f0e8ccd5b3ec"
+  }
+}

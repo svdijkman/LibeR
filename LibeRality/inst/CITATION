@@ -1,0 +1,14 @@
+citHeader("To cite LibeRality in publications, use:")
+
+citEntry(
+  entry = "Manual",
+  title = "LibeRality: Model-Informed Optimal Clinical Trial Design",
+  author = person("Sven C.", "van Dijkman"),
+  year = "2026",
+  note = "R package version 0.2.0",
+  textVersion = paste(
+    "van Dijkman SC (2026).",
+    "LibeRality: Model-Informed Optimal Clinical Trial Design.",
+    "R package version 0.2.0."
+  )
+)

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_9024185",
+  "pmid": "9024185",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/stevenson-1997-9024185.pdf",
+    "sha256": "13a105792fdd9c731d26132a35f510154eadaafe96eff359a1d7ef27c65008a7"
+  }
+}

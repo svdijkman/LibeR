@@ -1,0 +1,489 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_vpa_23784346_m01",
+  "screening_id": null,
+  "article_id": "pmid_23784346",
+  "pmid": "23784346",
+  "source_pdf_sha256": "80c43ada5a8ce50774a2d896304b37f5f22af276778806497c372f35f125877d",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:41:47.128Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Sex related differences on valproic acid pharmacokinetics after oral single dose",
+    "compound": "Valproic acid (VPA)",
+    "population": "Healthy adult subjects, both male and female",
+    "route": "Oral",
+    "n_subjects": 14,
+    "software": "NONMEM version VI, Icon Development Solutions",
+    "estimation_method": "First order conditional estimation (FOCE) algorithm without interaction",
+    "model_type": "Population PK model with EHC process",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 3,
+      "description": "Two-compartmental body model with an extra compartment for gall bladder (GB)"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "ka",
+          "typical": 2.91,
+          "se": 0.085,
+          "unit": "h^-1"
+        },
+        {
+          "name": "Vc",
+          "typical": 9.6,
+          "se": 0.473,
+          "unit": "L"
+        },
+        {
+          "name": "VP",
+          "typical": 4.95,
+          "se": 0.189,
+          "unit": "L"
+        },
+        {
+          "name": "CLD",
+          "typical": 0.559,
+          "se": 0.063,
+          "unit": "L/h"
+        },
+        {
+          "name": "CL",
+          "typical": 0.581,
+          "se": 0.074,
+          "unit": "L/h/kg"
+        },
+        {
+          "name": "FE",
+          "typical": 0.462,
+          "se": 0.039,
+          "unit": null
+        },
+        {
+          "name": "tlag",
+          "typical": 2.21,
+          "se": 0.578,
+          "unit": "h"
+        },
+        {
+          "name": "TEHC",
+          "typical": 8.27,
+          "se": 0.463,
+          "unit": "h"
+        },
+        {
+          "name": "kEHC",
+          "typical": 1.2,
+          "se": 0.295,
+          "unit": "h^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Interindividual variability in absorption rate constant (ka)",
+          "parameter": "ka",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h1 - h2 * BW",
+          "variability_level": "iiv",
+          "reported_value": 0.358,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        },
+        {
+          "description": "Interindividual variability in central compartment volume (Vc)",
+          "parameter": "Vc",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h3 - h4 * (BW / 70)",
+          "variability_level": "iiv",
+          "reported_value": 0.134,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        },
+        {
+          "description": "Interindividual variability in peripheral compartment volume (VP)",
+          "parameter": "VP",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h5",
+          "variability_level": "iiv",
+          "reported_value": 0.177,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        },
+        {
+          "description": "Interindividual variability in distribution clearance (CLD)",
+          "parameter": "CLD",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h6",
+          "variability_level": "iiv",
+          "reported_value": 0.172,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        },
+        {
+          "description": "Interindividual variability in elimination clearance (CL)",
+          "parameter": "CL",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h7 * (1 - S - CT) + h8 * (S ? CT)",
+          "variability_level": "iiv",
+          "reported_value": 0.296,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        },
+        {
+          "description": "Interindividual variability in reabsorbed fraction (FE)",
+          "parameter": "FE",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h9 * (1 - S - CT) + h10 * (S ? CT)",
+          "variability_level": "iiv",
+          "reported_value": 0.284,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        },
+        {
+          "description": "Interindividual variability in lag time (tlag)",
+          "parameter": "tlag",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h11 * (1 - S - CT) + h12 * (S ? CT)",
+          "variability_level": "iiv",
+          "reported_value": 0.377,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        },
+        {
+          "description": "Interindividual variability in time of reabsorption onset (TEHC)",
+          "parameter": "TEHC",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h13",
+          "variability_level": "iiv",
+          "reported_value": 0.189,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        },
+        {
+          "description": "Interindividual variability in reabsorption rate constant (kEHC)",
+          "parameter": "kEHC",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h14",
+          "variability_level": "iiv",
+          "reported_value": 0.387,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 2,
+          "col_eta": 9,
+          "reported_value": -0.358,
+          "reported_metric": "correlation",
+          "value": null,
+          "conversion": "r = OMEGA / (sqrt(OMEGA1) * sqrt(OMEGA2))"
+        },
+        {
+          "row_eta": 4,
+          "col_eta": 9,
+          "reported_value": -0.6,
+          "reported_metric": "correlation",
+          "value": null,
+          "conversion": "r = OMEGA / (sqrt(OMEGA1) * sqrt(OMEGA2))"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Intraindividual variability in VPA concentration",
+          "error_model": "proportional",
+          "reported_value": 0.0524,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = 100 * sqrt(OMEGA)"
+        }
+      ]
+    },
+    "covariates": [
+      "weight (BW)",
+      "sex (S, 0 for women, 1 for men)",
+      "contraceptive therapy (CT, 1 for comedicated women, 0 otherwise)"
+    ],
+    "residual_error": "Proportional error model",
+    "confidence": {
+      "overall": 0.9,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.75,
+        "population": 0.9,
+        "software": 0.9
+      }
+    },
+    "evidence_quotes": [
+      "Women without contraceptive therapy presented a longer lag time, a lower VPA hepatic output and a higher reabsorbed fraction than men.",
+      "Weight affected both volume of the central compartment and the absorption rate constant.",
+      "Women under contraceptive therapy showed similar disposition parameters to men."
+    ],
+    "notes": "The model includes an EHC process with two compartments: central, peripheral, and gall bladder. The structural model is a two-compartmental body model with an extra compartment for gall bladder (GB)."
+  },
+  "variants": {
+    "text": {
+      "title": "Sex related differences on valproic acid pharmacokinetics after oral single dose",
+      "compound": "Valproic acid (VPA)",
+      "population": "Healthy adult subjects, both male and female",
+      "route": "Oral",
+      "n_subjects": 14,
+      "software": "NONMEM version VI, Icon Development Solutions",
+      "estimation_method": "First order conditional estimation (FOCE) algorithm without interaction",
+      "model_type": "Population PK model with EHC process",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 3,
+        "description": "Two-compartmental body model with an extra compartment for gall bladder (GB)"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "ka",
+            "typical": 2.91,
+            "se": 0.085,
+            "unit": "h^-1"
+          },
+          {
+            "name": "Vc",
+            "typical": 9.6,
+            "se": 0.473,
+            "unit": "L"
+          },
+          {
+            "name": "VP",
+            "typical": 4.95,
+            "se": 0.189,
+            "unit": "L"
+          },
+          {
+            "name": "CLD",
+            "typical": 0.559,
+            "se": 0.063,
+            "unit": "L/h"
+          },
+          {
+            "name": "CL",
+            "typical": 0.581,
+            "se": 0.074,
+            "unit": "L/h/kg"
+          },
+          {
+            "name": "FE",
+            "typical": 0.462,
+            "se": 0.039,
+            "unit": null
+          },
+          {
+            "name": "tlag",
+            "typical": 2.21,
+            "se": 0.578,
+            "unit": "h"
+          },
+          {
+            "name": "TEHC",
+            "typical": 8.27,
+            "se": 0.463,
+            "unit": "h"
+          },
+          {
+            "name": "kEHC",
+            "typical": 1.2,
+            "se": 0.295,
+            "unit": "h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Interindividual variability in absorption rate constant (ka)",
+            "parameter": "ka",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h1 - h2 * BW",
+            "variability_level": "iiv",
+            "reported_value": 0.358,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          },
+          {
+            "description": "Interindividual variability in central compartment volume (Vc)",
+            "parameter": "Vc",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h3 - h4 * (BW / 70)",
+            "variability_level": "iiv",
+            "reported_value": 0.134,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          },
+          {
+            "description": "Interindividual variability in peripheral compartment volume (VP)",
+            "parameter": "VP",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h5",
+            "variability_level": "iiv",
+            "reported_value": 0.177,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          },
+          {
+            "description": "Interindividual variability in distribution clearance (CLD)",
+            "parameter": "CLD",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h6",
+            "variability_level": "iiv",
+            "reported_value": 0.172,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          },
+          {
+            "description": "Interindividual variability in elimination clearance (CL)",
+            "parameter": "CL",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h7 * (1 - S - CT) + h8 * (S ? CT)",
+            "variability_level": "iiv",
+            "reported_value": 0.296,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          },
+          {
+            "description": "Interindividual variability in reabsorbed fraction (FE)",
+            "parameter": "FE",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h9 * (1 - S - CT) + h10 * (S ? CT)",
+            "variability_level": "iiv",
+            "reported_value": 0.284,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          },
+          {
+            "description": "Interindividual variability in lag time (tlag)",
+            "parameter": "tlag",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h11 * (1 - S - CT) + h12 * (S ? CT)",
+            "variability_level": "iiv",
+            "reported_value": 0.377,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          },
+          {
+            "description": "Interindividual variability in time of reabsorption onset (TEHC)",
+            "parameter": "TEHC",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h13",
+            "variability_level": "iiv",
+            "reported_value": 0.189,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          },
+          {
+            "description": "Interindividual variability in reabsorption rate constant (kEHC)",
+            "parameter": "kEHC",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h14",
+            "variability_level": "iiv",
+            "reported_value": 0.387,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 2,
+            "col_eta": 9,
+            "reported_value": -0.358,
+            "reported_metric": "correlation",
+            "value": null,
+            "conversion": "r = OMEGA / (sqrt(OMEGA1) * sqrt(OMEGA2))"
+          },
+          {
+            "row_eta": 4,
+            "col_eta": 9,
+            "reported_value": -0.6,
+            "reported_metric": "correlation",
+            "value": null,
+            "conversion": "r = OMEGA / (sqrt(OMEGA1) * sqrt(OMEGA2))"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Intraindividual variability in VPA concentration",
+            "error_model": "proportional",
+            "reported_value": 0.0524,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = 100 * sqrt(OMEGA)"
+          }
+        ]
+      },
+      "covariates": [
+        "weight (BW)",
+        "sex (S, 0 for women, 1 for men)",
+        "contraceptive therapy (CT, 1 for comedicated women, 0 otherwise)"
+      ],
+      "residual_error": "Proportional error model",
+      "confidence": {
+        "overall": 0.9,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.75,
+          "population": 0.9,
+          "software": 0.9
+        }
+      },
+      "evidence_quotes": [
+        "Women without contraceptive therapy presented a longer lag time, a lower VPA hepatic output and a higher reabsorbed fraction than men.",
+        "Weight affected both volume of the central compartment and the absorption rate constant.",
+        "Women under contraceptive therapy showed similar disposition parameters to men."
+      ],
+      "notes": "The model includes an EHC process with two compartments: central, peripheral, and gall bladder. The structural model is a two-compartmental body model with an extra compartment for gall bladder (GB)."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

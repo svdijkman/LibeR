@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_3359738",
+  "pmid": "3359738",
+  "title": "",
+  "abstract": "",
+  "first_author": "Vozeh",
+  "year": "1988",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_3359738_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/vozeh-1988-3359738.pdf",
+    "sha256": "dd34843b03d6890f29ba1d33251418f3523ba4ea399b6e4a96116f230daef1e9"
+  },
+  "metadata_source": ""
+}

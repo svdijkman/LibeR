@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2921305",
+  "pmid": "2921305",
+  "title": "",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "1989",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_2921305_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/yukawa-1989-2921305.pdf",
+    "sha256": "e54ac43cb3fa89c697b5cdd1924e9c875d39f7aa02f8cfef57603a84f7bc33a9"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_cbz_2609045",
+  "pmid": "2609045",
+  "compound_group": "CBZ",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/CBZ/articles/exclude/racine-poon-1989-2609045.pdf",
+    "sha256": "df41bcb6906c8561cfa16ecbb1d7859c9e116ff5249b1e21fcf6f50290e533e0"
+  }
+}

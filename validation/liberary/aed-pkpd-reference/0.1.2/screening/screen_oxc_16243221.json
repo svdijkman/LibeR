@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_oxc_16243221",
+  "pmid": "16243221",
+  "compound_group": "OXC",
+  "partition": "validation",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/OXC/articles/excluded/northam-2005-16243221.pdf",
+    "sha256": "7bcf1e677e2932f5f66cd235007feff20ff374d18d9df3cf604a44cd03489e14"
+  }
+}

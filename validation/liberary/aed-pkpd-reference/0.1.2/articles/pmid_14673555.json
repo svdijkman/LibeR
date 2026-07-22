@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_14673555",
+  "pmid": "14673555",
+  "title": "Pharmacokinetic modelling of valproic acid from routine clinical data in Egyptian epileptic patients.",
+  "abstract": "",
+  "first_author": "El Desoky",
+  "year": "2004",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_14673555_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/eldesoky-2004-14673555.pdf",
+    "sha256": "c71b56d715b071f52b435b0e663ffbaaa3cf3f97906ca0dffb576b1b4e9f9a02"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

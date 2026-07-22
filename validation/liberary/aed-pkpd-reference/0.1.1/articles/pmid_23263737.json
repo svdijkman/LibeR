@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23263737",
+  "pmid": "23263737",
+  "title": "Influence of the UGT2B7 -161C>T polymorphism on the population pharmacokinetics of lamotrigine in Thai patients.",
+  "abstract": "",
+  "first_author": "Singkham",
+  "year": "2013",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_23263737_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/singkham-2013-23263737.pdf",
+    "sha256": "c6ad70c9f3e8bb0063acedbb3497b96c5f05272b35f06401a0de788f4213b33a"
+  },
+  "metadata_source": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+}

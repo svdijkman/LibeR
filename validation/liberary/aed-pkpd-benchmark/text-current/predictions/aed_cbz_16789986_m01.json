@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_cbz_16789986_m01",
+  "screening_id": null,
+  "article_id": "pmid_16789986",
+  "pmid": "16789986",
+  "source_pdf_sha256": "ccecfece501888a7263eaebb02a73a242453bdbbe60721f1868c2563f4f82e01",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:36:29.277Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population pharmacokinetic modelling of carbamazepine in elderly patients",
+    "compound": "carbamazepine",
+    "population": "elderly",
+    "route": null,
+    "n_subjects": 37,
+    "software": "USC*PACK collection of PC programs, NPEM program",
+    "estimation_method": "non-parametric expectation maximization (NPEM)",
+    "model_type": "population PK model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 1,
+      "description": "Linear one-compartment PK model with first-order oral absorption"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "Ka",
+          "typical": 0.61,
+          "se": 0.258,
+          "unit": "h^-1"
+        },
+        {
+          "name": "VS1",
+          "typical": 0.81,
+          "se": 0.347,
+          "unit": "L/kg"
+        },
+        {
+          "name": "Kel",
+          "typical": 0.67,
+          "se": 0.295,
+          "unit": "h^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Interindividual variability in the absorption rate constant (Ka)",
+          "parameter": "Ka",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.82,
+          "reported_metric": "cv_percent",
+          "value": 62.31,
+          "conversion": "sqrt(OMEGA) = cv_percent / 100"
+        },
+        {
+          "description": "Interindividual variability in the apparent volume of distribution (VS1)",
+          "parameter": "VS1",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.69,
+          "reported_metric": "cv_percent",
+          "value": 42.58,
+          "conversion": "sqrt(OMEGA) = cv_percent / 100"
+        },
+        {
+          "description": "Interindividual variability in the elimination rate constant (Kel)",
+          "parameter": "Kel",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.88,
+          "reported_metric": "cv_percent",
+          "value": 87.96,
+          "conversion": "sqrt(OMEGA) = cv_percent / 100"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 1,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 2,
+          "col_eta": 3,
+          "reported_value": -0.154,
+          "reported_metric": "correlation",
+          "value": -0.1796,
+          "conversion": "CORR = OMEGA(row, col) / sqrt(OMEGA(row, row) * OMEGA(col, col))"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error model for the population PK model",
+          "error_model": "additive",
+          "reported_value": 0.2,
+          "reported_metric": "sd",
+          "value": 0.1984375,
+          "conversion": "sigma = sqrt(reported_value^2 + (assay_error)^2)"
+        }
+      ]
+    },
+    "covariates": [
+      "age"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.98,
+      "fields": {
+        "structure": 0.95,
+        "parameters": 0.97,
+        "population": 0.96,
+        "software": 0.94
+      }
+    },
+    "evidence_quotes": [
+      "A poor correlation was found between daily CBZ dose and serum concentrations in the elderly patients (r = 0Æ2, P = 0Æ25).",
+      "Probably statistically significant difference in the median values of the CBZ metabolic rate constant (P < 0Æ001) between elderly and relatively young epileptic patients was found.",
+      "The correlation coefficient for group A was r = 0Æ2 (P = 0Æ25) and for group B r = 0Æ01."
+    ],
+    "notes": "The model includes interindividual variability in the absorption rate constant, apparent volume of distribution, and elimination rate constant. The covariance between VS1 and Kel is negative, indicating a slight inverse relationship between these parameters."
+  },
+  "variants": {
+    "text": {
+      "title": "Population pharmacokinetic modelling of carbamazepine in elderly patients",
+      "compound": "carbamazepine",
+      "population": "elderly",
+      "route": null,
+      "n_subjects": 37,
+      "software": "USC*PACK collection of PC programs, NPEM program",
+      "estimation_method": "non-parametric expectation maximization (NPEM)",
+      "model_type": "population PK model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "Linear one-compartment PK model with first-order oral absorption"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 0.61,
+            "se": 0.258,
+            "unit": "h^-1"
+          },
+          {
+            "name": "VS1",
+            "typical": 0.81,
+            "se": 0.347,
+            "unit": "L/kg"
+          },
+          {
+            "name": "Kel",
+            "typical": 0.67,
+            "se": 0.295,
+            "unit": "h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Interindividual variability in the absorption rate constant (Ka)",
+            "parameter": "Ka",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.82,
+            "reported_metric": "cv_percent",
+            "value": 62.31,
+            "conversion": "sqrt(OMEGA) = cv_percent / 100"
+          },
+          {
+            "description": "Interindividual variability in the apparent volume of distribution (VS1)",
+            "parameter": "VS1",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.69,
+            "reported_metric": "cv_percent",
+            "value": 42.58,
+            "conversion": "sqrt(OMEGA) = cv_percent / 100"
+          },
+          {
+            "description": "Interindividual variability in the elimination rate constant (Kel)",
+            "parameter": "Kel",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.88,
+            "reported_metric": "cv_percent",
+            "value": 87.96,
+            "conversion": "sqrt(OMEGA) = cv_percent / 100"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 1,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 3,
+            "reported_value": -0.154,
+            "reported_metric": "correlation",
+            "value": -0.1796,
+            "conversion": "CORR = OMEGA(row, col) / sqrt(OMEGA(row, row) * OMEGA(col, col))"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error model for the population PK model",
+            "error_model": "additive",
+            "reported_value": 0.2,
+            "reported_metric": "sd",
+            "value": 0.1984375,
+            "conversion": "sigma = sqrt(reported_value^2 + (assay_error)^2)"
+          }
+        ]
+      },
+      "covariates": [
+        "age"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.98,
+        "fields": {
+          "structure": 0.95,
+          "parameters": 0.97,
+          "population": 0.96,
+          "software": 0.94
+        }
+      },
+      "evidence_quotes": [
+        "A poor correlation was found between daily CBZ dose and serum concentrations in the elderly patients (r = 0Æ2, P = 0Æ25).",
+        "Probably statistically significant difference in the median values of the CBZ metabolic rate constant (P < 0Æ001) between elderly and relatively young epileptic patients was found.",
+        "The correlation coefficient for group A was r = 0Æ2 (P = 0Æ25) and for group B r = 0Æ01."
+      ],
+      "notes": "The model includes interindividual variability in the absorption rate constant, apparent volume of distribution, and elimination rate constant. The covariance between VS1 and Kel is negative, indicating a slight inverse relationship between these parameters."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

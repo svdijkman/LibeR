@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_18211614",
+  "pmid": "18211614",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ueshima",
+  "year": "2008",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_18211614_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/ueshima-2008-18211614.pdf",
+    "sha256": "5950bc6cd678ab3b050082406be0ba6d0519ca3878d7f2b06de27ff9f9cce4cf"
+  },
+  "metadata_source": ""
+}

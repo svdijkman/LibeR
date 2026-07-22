@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_oxc_25989891_m01",
+  "screening_id": null,
+  "article_id": "pmid_25989891",
+  "pmid": "25989891",
+  "source_pdf_sha256": "0aae12777df6e0f1a741cc4d98c6fbf33e99468100b33e238ac1b024fdb0e97d",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:44:43.103Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population pharmacokinetic analysis for 10-monohydroxy derivative of oxcarbazepine in pediatric epileptic patients shows no difference between Japanese and other ethnicities",
+    "compound": "oxcarbazepine 10-monohydroxy derivative (MHD)",
+    "population": "pediatric",
+    "route": "oral",
+    "n_subjects": 136,
+    "software": "NONMEM, version 7.2",
+    "estimation_method": "first order conditional estimation (FOCE)",
+    "model_type": "nonlinear mixed effects model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 1,
+      "description": "One-compartment model with first-order absorption and elimination"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "CL/F",
+          "typical": 2.31,
+          "se": 0.0968,
+          "unit": "L/h"
+        },
+        {
+          "name": "V/F",
+          "typical": 102,
+          "se": 42.7,
+          "unit": "L"
+        },
+        {
+          "name": "KA",
+          "typical": 0.406,
+          "se": 0.0494,
+          "unit": "1/h"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Between-subject variability in CL/F",
+          "parameter": "uCL/F",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "qBSA,CL/F * BSA + qweight,CL/F * weight",
+          "variability_level": "iiv",
+          "reported_value": 0.0442,
+          "reported_metric": "variance",
+          "value": 0.0442,
+          "conversion": "log(1 + (0.0442)^2)"
+        },
+        {
+          "description": "Between-subject variability in V/F",
+          "parameter": "uV/F",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "qHeight,V/F * height + qweight,V/F * weight",
+          "variability_level": "iiv",
+          "reported_value": 1.03,
+          "reported_metric": "variance",
+          "value": 1.03,
+          "conversion": "log(1 + (1.03)^2)"
+        },
+        {
+          "description": "Between-subject variability in CL/F and V/F covariance",
+          "parameter": "uCL/F_V/F",
+          "eta_index": null,
+          "eta_distribution": "normal",
+          "eta_expression": "hCLFV",
+          "variability_level": "iiv",
+          "reported_value": 0.125,
+          "reported_metric": "variance",
+          "value": 0.125,
+          "conversion": "log(1 + (0.125)^2)"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 2,
+          "reported_value": -0.364,
+          "reported_metric": "covariance",
+          "value": -0.364,
+          "conversion": "log(1 + (-0.364)^2)"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error model for MHD concentrations",
+          "error_model": "proportional",
+          "reported_value": 0.0336,
+          "reported_metric": "variance",
+          "value": 0.0336,
+          "conversion": "log(1 + (0.0336)^2)"
+        }
+      ]
+    },
+    "covariates": [
+      "body weight on CL/F: qweight,CL/F = (weight / 41.57) ^ 0.555",
+      "concomitant AEDs (carbamazepine, phenobarbital, phenytoin): qCBZ,CL/F, qPB,CL/F, qPHT,CL/F"
+    ],
+    "residual_error": "proportional",
+    "confidence": {
+      "overall": 0.98,
+      "fields": {
+        "structure": 0.97,
+        "parameters": 0.96,
+        "population": 0.95,
+        "software": 0.94
+      }
+    },
+    "evidence_quotes": [
+      "No clinically relevant differences were found for using body surface area or weight to explain between-patient variability, therefore the final model included the effects of body weight on apparent clearance (CL/F) and apparent volume of distribution (V/F) of MHD, and in addition, the effect of 3 concomitant anti-epileptic drugs (carbamazepine, phenobarbital and phenytoin) on CL/F of MHD.",
+      "In Step 2 and 3, the pooled data from the studies in Japanese and non-Japanese was used for the analysis. The final model included the effects of body weight on CL/F, 3 concomitant AEDs (carbamazepine, phenobarbital and phenytoin) on CL/F and body weight on V/F.",
+      "No significant change in OFV was observed after adding ethnicity on CL/F, which resulted in OFV changing from 3026.477 to 3026.362 (DOFV: -0.115, p = 0.735). The estimated ratio in CL/F between ethnicities was 1.01 (95% confidence interval: 0.931e1.09). Therefore, we concluded that there was no ethnic difference in CL/F of MHD between Japanese and non-Japanese pediatric patients."
+    ],
+    "notes": "The model is based on a one-compartment structure with first-order absorption and elimination. The final model includes the effects of body weight on clearance (CL/F) and volume of distribution (V/F), as well as the effect of concomitant AEDs on CL/F. Ethnicity was not found to significantly affect PK parameters."
+  },
+  "variants": {
+    "text": {
+      "title": "Population pharmacokinetic analysis for 10-monohydroxy derivative of oxcarbazepine in pediatric epileptic patients shows no difference between Japanese and other ethnicities",
+      "compound": "oxcarbazepine 10-monohydroxy derivative (MHD)",
+      "population": "pediatric",
+      "route": "oral",
+      "n_subjects": 136,
+      "software": "NONMEM, version 7.2",
+      "estimation_method": "first order conditional estimation (FOCE)",
+      "model_type": "nonlinear mixed effects model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One-compartment model with first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 2.31,
+            "se": 0.0968,
+            "unit": "L/h"
+          },
+          {
+            "name": "V/F",
+            "typical": 102,
+            "se": 42.7,
+            "unit": "L"
+          },
+          {
+            "name": "KA",
+            "typical": 0.406,
+            "se": 0.0494,
+            "unit": "1/h"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Between-subject variability in CL/F",
+            "parameter": "uCL/F",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "qBSA,CL/F * BSA + qweight,CL/F * weight",
+            "variability_level": "iiv",
+            "reported_value": 0.0442,
+            "reported_metric": "variance",
+            "value": 0.0442,
+            "conversion": "log(1 + (0.0442)^2)"
+          },
+          {
+            "description": "Between-subject variability in V/F",
+            "parameter": "uV/F",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "qHeight,V/F * height + qweight,V/F * weight",
+            "variability_level": "iiv",
+            "reported_value": 1.03,
+            "reported_metric": "variance",
+            "value": 1.03,
+            "conversion": "log(1 + (1.03)^2)"
+          },
+          {
+            "description": "Between-subject variability in CL/F and V/F covariance",
+            "parameter": "uCL/F_V/F",
+            "eta_index": null,
+            "eta_distribution": "normal",
+            "eta_expression": "hCLFV",
+            "variability_level": "iiv",
+            "reported_value": 0.125,
+            "reported_metric": "variance",
+            "value": 0.125,
+            "conversion": "log(1 + (0.125)^2)"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": -0.364,
+            "reported_metric": "covariance",
+            "value": -0.364,
+            "conversion": "log(1 + (-0.364)^2)"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error model for MHD concentrations",
+            "error_model": "proportional",
+            "reported_value": 0.0336,
+            "reported_metric": "variance",
+            "value": 0.0336,
+            "conversion": "log(1 + (0.0336)^2)"
+          }
+        ]
+      },
+      "covariates": [
+        "body weight on CL/F: qweight,CL/F = (weight / 41.57) ^ 0.555",
+        "concomitant AEDs (carbamazepine, phenobarbital, phenytoin): qCBZ,CL/F, qPB,CL/F, qPHT,CL/F"
+      ],
+      "residual_error": "proportional",
+      "confidence": {
+        "overall": 0.98,
+        "fields": {
+          "structure": 0.97,
+          "parameters": 0.96,
+          "population": 0.95,
+          "software": 0.94
+        }
+      },
+      "evidence_quotes": [
+        "No clinically relevant differences were found for using body surface area or weight to explain between-patient variability, therefore the final model included the effects of body weight on apparent clearance (CL/F) and apparent volume of distribution (V/F) of MHD, and in addition, the effect of 3 concomitant anti-epileptic drugs (carbamazepine, phenobarbital and phenytoin) on CL/F of MHD.",
+        "In Step 2 and 3, the pooled data from the studies in Japanese and non-Japanese was used for the analysis. The final model included the effects of body weight on CL/F, 3 concomitant AEDs (carbamazepine, phenobarbital and phenytoin) on CL/F and body weight on V/F.",
+        "No significant change in OFV was observed after adding ethnicity on CL/F, which resulted in OFV changing from 3026.477 to 3026.362 (DOFV: -0.115, p = 0.735). The estimated ratio in CL/F between ethnicities was 1.01 (95% confidence interval: 0.931e1.09). Therefore, we concluded that there was no ethnic difference in CL/F of MHD between Japanese and non-Japanese pediatric patients."
+      ],
+      "notes": "The model is based on a one-compartment structure with first-order absorption and elimination. The final model includes the effects of body weight on clearance (CL/F) and volume of distribution (V/F), as well as the effect of concomitant AEDs on CL/F. Ethnicity was not found to significantly affect PK parameters."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

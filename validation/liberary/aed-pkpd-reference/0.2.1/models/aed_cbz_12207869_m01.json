@@ -1,0 +1,518 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_12207869_m01",
+  "article_id": "pmid_12207869",
+  "pmid": "12207869",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_12207869",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 22,
+      "model_table": 2,
+      "model_row": 23
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/konsil-2002-12207869.pdf",
+      "sha256": "0c7ec802c5e6167aafd86bf0dd71025683ff52741bb5d2eca0737d7a1dd211d2"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Konsil 2002 12207869",
+    "population": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+    "model_type": "PK",
+    "objective": "“To model and re-evaluate the pharmacokinetics of carbamazepine (CBZ) and CBZ-10, 11epoxide (CBZ-E) after 5 day b.i.d. dosing with either Carbatrol® (extended-release beads) or Tegretol-XR (an osmotic pump tablet, an Oros® tablet) using compartmental method.”",
+    "covariates": "Michaelis menten (amount of drug in system as predictor of clearance) WT on volume for CBZ and CBZE, WT on Vmax",
+    "observations": "Michaelis menten kinetics of CBZ and CBZE, allowing to predict the time to stabilisation of PK. Formula for time to plateau given, thereby allowing uptitration optimisation. Unclear how much variability was explained by covariates.",
+    "dose": "Multiple oral doses in healthy subjects",
+    "structure": "2 compartment linear absorption and elimination for CBZ and CBZE, plus michaelis menten conversion CBZ to CBZE",
+    "equations": "lag time=theta1*(1+eta1) duration=theta2*(1+eta2) K10=theta3*(1+eta3) V2=theta4*WT*(1+eta4) Km=theta5*(1+eta5) Vmax=theta6*WT*(1+eta6) K30=theta7*(1+eta7) V3=theta8*WT*(1+eta8) n=theta9*(1+eta9) RATE=F*DOSE/duration dA1/dt=DOSE - RATE dA2/dt= RATE -(V2*Vmax*A2**n)/((V2*Km)**n+A2**n) –K20*A2 dA3/dt= (V2*Vmax*A2**n)/((V2*Km)**n+A2**n) –K30*A3 Compartment numbers were changed to make more physiological sense (absorption compartment was number 2 in original paper)",
+    "parameter_values": "theta1=0.02 theta2=12.1 theta3=0.024 theta4=1.119 theta5=28.639 theta6=0.085 theta7=0.128 theta8=0.728 theta9=4.50 omega1=0.25 omega2=0.00027 omega3=0.06 omega4=0.0294 omega5=0.1024 omega6=0.31 omega7=0.13 omega8=0.0533 omega9=0.180",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "CBZ",
+      "population": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+      "route": "oral",
+      "n_subjects": 15,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+        "n_total": 15,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 15
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 27.5,
+                    "sd": 7
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 22",
+                  "evidence": "27.5±7.0",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 71.4,
+                    "sd": 10.6
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 22",
+                  "evidence": "71.4±10.6",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 22",
+              "evidence": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 22",
+          "evidence": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Multiple oral doses in healthy subjects",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 23",
+            "evidence": "Multiple oral doses in healthy subjects",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 2,
+        "description": "2 compartment linear absorption and elimination for CBZ and CBZE, plus michaelis menten conversion CBZ to CBZE",
+        "canonical": {
+          "compartments": {
+            "count": 2,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "nonlinear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "micro_rate_constants",
+            "parameters": ["TIME", "DURATION", "K10", "V2", "KM", "VMAX", "K30", "V3", "N"]
+          },
+          "description": "2 compartment linear absorption and elimination for CBZ and CBZE, plus michaelis menten conversion CBZ to CBZE"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "2 compartment linear absorption and elimination for CBZ and CBZE, plus michaelis menten conversion CBZ to CBZE Multiple oral doses in healthy subjects",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "time",
+            "typical": 0.02,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "duration",
+            "typical": 12.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K10",
+            "typical": 0.024,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V2",
+            "typical": 1.119,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Km",
+            "typical": 28.639,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vmax",
+            "typical": 0.085,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K30",
+            "typical": 0.128,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V3",
+            "typical": 0.728,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "n",
+            "typical": 4.5,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "time",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.25,
+            "reported_metric": "variance",
+            "value": 0.25,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "duration",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.00027,
+            "reported_metric": "variance",
+            "value": 0.00027,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "K10",
+            "eta_index": 3,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.06,
+            "reported_metric": "variance",
+            "value": 0.06,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "V2",
+            "eta_index": 4,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0294,
+            "reported_metric": "variance",
+            "value": 0.0294,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "Km",
+            "eta_index": 5,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.1024,
+            "reported_metric": "variance",
+            "value": 0.1024,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 6",
+            "parameter": "Vmax",
+            "eta_index": 6,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(6) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.31,
+            "reported_metric": "variance",
+            "value": 0.31,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 7",
+            "parameter": "K30",
+            "eta_index": 7,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(7) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.13,
+            "reported_metric": "variance",
+            "value": 0.13,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 8",
+            "parameter": "V3",
+            "eta_index": 8,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(8) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0533,
+            "reported_metric": "variance",
+            "value": 0.0533,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 9",
+            "parameter": "n",
+            "eta_index": 9,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(9) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.18,
+            "reported_metric": "variance",
+            "value": 0.18,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": [],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Konsil",
+      "year": "2002",
+      "dose": "Multiple oral doses in healthy subjects",
+      "population": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+      "population_details": {
+        "raw": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+        "n_total": 15,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 15
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 27.5,
+                    "sd": 7
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 22",
+                  "evidence": "27.5±7.0",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 71.4,
+                    "sd": 10.6
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 22",
+                  "evidence": "71.4±10.6",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 22",
+              "evidence": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 22",
+          "evidence": "N: 15 (USA, 13 caucasian, 2 african-american) Age: 27.5±7.0 WT: 71.4±10.6",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Multiple oral doses in healthy subjects",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 23",
+            "evidence": "Multiple oral doses in healthy subjects",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“To model and re-evaluate the pharmacokinetics of carbamazepine (CBZ) and CBZ-10, 11epoxide (CBZ-E) after 5 day b.i.d. dosing with either Carbatrol® (extended-release beads) or Tegretol-XR (an osmotic pump tablet, an Oros® tablet) using compartmental method.”"
+    },
+    "covariates": {
+      "tested": ["Michaelis menten (amount of drug in system as predictor of clearance) WT on volume for CBZ and CBZE", "WT on Vmax"],
+      "included": [],
+      "raw": "Michaelis menten (amount of drug in system as predictor of clearance) WT on volume for CBZ and CBZE, WT on Vmax"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:05:21.517Z"
+}

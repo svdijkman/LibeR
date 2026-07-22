@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_23743781",
+  "pmid": "23743781",
+  "title": "",
+  "abstract": "",
+  "first_author": "Chen",
+  "year": "2013",
+  "compounds": "GBP",
+  "model_ids": "aed_gbp_23743781_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/GBP/articles/chen-2013-23743781.pdf",
+    "sha256": "60e6453d1fd0e15ea42436274795bc94aa2e7dbf1fa866ca738a79d080919537"
+  },
+  "metadata_source": ""
+}

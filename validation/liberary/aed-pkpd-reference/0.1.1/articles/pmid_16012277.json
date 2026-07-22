@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_16012277",
+  "pmid": "16012277",
+  "title": "Drug interactions between lamotrigine and psychoactive drugs: evidence from a therapeutic drug monitoring service.",
+  "abstract": "",
+  "first_author": "Reimers",
+  "year": "2005",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_16012277_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/reimers-2005-16012277.pdf",
+    "sha256": "f361387763d22e9b1db7c314eb0a3159dd2e3d338a66b12930eee03825a2a99d"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

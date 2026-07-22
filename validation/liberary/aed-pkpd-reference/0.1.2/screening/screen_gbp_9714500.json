@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_gbp_9714500",
+  "pmid": "9714500",
+  "compound_group": "GBP",
+  "partition": "test",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/GBP/articles/excluded/gidal-1998-9714500.pdf",
+    "sha256": "824175a2d25db7809cfb136b84b619b12721936d8a533d9d5c25126e465dc6ad"
+  }
+}

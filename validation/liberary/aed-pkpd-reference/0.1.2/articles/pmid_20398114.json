@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_20398114",
+  "pmid": "20398114",
+  "title": "Choice of initial antiepileptic drug for older veterans: possible pharmacokinetic drug interactions with existing medications.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/pugh-2010-20398114.pdf",
+    "sha256": "5eca4b76923dd5074653545c6bead35ee8d7cfab6952d0280ce67ca58b0c183a"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

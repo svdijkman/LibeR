@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_24240511_m01",
+  "article_id": "pmid_24240511",
+  "pmid": "24240511",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_24240511",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 8,
+      "model_table": 2,
+      "model_row": 5
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/brzakovic-2014-24240511.pdf",
+      "sha256": "be49191424cdd9b74a5526c9a015c2362be28a94c02a4e8987d86738dbea7090"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Brzakovic 2014 24240511",
+    "population": "N:53 (Serbia) Age:13.4±8.52 (3-35) WT:47.0±24.5",
+    "model_type": "PK",
+    "objective": "“to examine and describe add-on LTG oral clearance (CL/F) in paediatric and young adult patients treated with CBZ and/or VPA”",
+    "covariates": "Included: WT, VPA, CBZ on CL",
+    "observations": "Step-wise function for WT on CL seems like data-driven modelling and does not allow accurate interpolation nor is physiologically supportable. Only interactions of CBZ+VPA on CL, or only VPA on CL modelled.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "CL/F=theta1*(1+theta2**COTH1)*(1+theta3**COTH2)*(theta4**WT60)*(theta5**WT25)*exp(eta1) Ka=theta6 Vd/F=theta7*WT Cobs=Cipred*(1+eps1) COTH1: comedication with both carbamazepine and valproate (yes=1, no=0) COTH2: comedication with valproate alone (yes=1, no=0) WT60: weight at or above 60 kg (yes=1, no=0) WT25: weight at or below 25 kg (yes=1, no=0)",
+    "parameter_values": "theta1=4.23 theta2=-0.695 theta3=-0.876 theta4=1.69 theta5=0.775 theta6=3.5 theta7=1.2 omega1=0.178 sigma1=0.182",
+    "validation": "Yes (bootstrap of 1000, npc of 500)/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Pharmacokinetics of lamotrigine in paediatric and young adult epileptic patients--nonlinear mixed effects modelling approach.",
+      "compound": "LMT",
+      "population": "N:53 (Serbia) Age:13.4±8.52 (3-35) WT:47.0±24.5",
+      "route": "oral",
+      "n_subjects": 53,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 4.23,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": -0.695,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": -0.876,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.69,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.775,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 3.5,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.178,
+            "reported_metric": "variance",
+            "value": 0.178,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.182,
+            "reported_metric": "variance",
+            "value": 0.182,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "VPA", "CBZ on CL"],
+      "residual_error": "CL/F=theta1*(1+theta2**COTH1)*(1+theta3**COTH2)*(theta4**WT60)*(theta5**WT25)*exp(eta1) Ka=theta6 Vd/F=theta7*WT Cobs=Cipred*(1+eps1) COTH1: comedication with both carbamazepine and valproate (yes=1, no=0) COTH2: comedication with valproate alone (yes=1, no=0) WT60: weight at or above 60 kg (yes=1, no=0) WT25: weight at or below 25 kg (yes=1, no=0)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Brzakovic",
+      "year": "2014",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N:53 (Serbia) Age:13.4±8.52 (3-35) WT:47.0±24.5",
+      "objective": "“to examine and describe add-on LTG oral clearance (CL/F) in paediatric and young adult patients treated with CBZ and/or VPA”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["WT", "VPA", "CBZ on CL"],
+      "raw": "Included: WT, VPA, CBZ on CL"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000, npc of 500)/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:54.647Z"
+}

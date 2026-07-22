@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2268899",
+  "pmid": "2268899",
+  "title": "",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "1990",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_2268899_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/yukawa-1990-2268899.pdf",
+    "sha256": "fcfef6e7b8f3910b8f3dd01985aa992e290a39b52a901be8c0fd5f4eab9f7247"
+  },
+  "metadata_source": ""
+}

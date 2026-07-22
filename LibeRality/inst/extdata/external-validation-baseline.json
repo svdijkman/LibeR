@@ -1,0 +1,492 @@
+{
+  "schema": "liberality.external-validation",
+  "version": 1,
+  "created_at": "2026-07-18T23:49:54.018Z",
+  "passed": true,
+  "fixtures": {
+    "oral_proportional": {
+      "description": "One-compartment first-order absorption with proportional error",
+      "parameters": ["KA", "CL", "V", "OMEGA_KA", "OMEGA_CL", "OMEGA_V", "SIGMA_PROP"],
+      "values": [1.2, 4, 35, 0.20000000000000001, 0.10000000000000001, 0.14999999999999999, 0.022499999999999999],
+      "engines": {
+        "LibeRality": {
+          "engine": "LibeRality",
+          "se": [0.078340947017140228, 0.16653081429181071, 1.8175163728608936, 0.046492982553440379, 0.018951495567652948, 0.029281594177408662, 0.0020489194738535291],
+          "rse": [6.5284122514283522, 4.1632703572952678, 5.1929039224596965, 23.246491276720189, 18.951495567652945, 19.521062784939108, 9.1063087726823522],
+          "log_determinant": 41.016238366049073,
+          "setup_seconds": 0.022252082824707031,
+          "core_seconds": [0.0043609142303466797, 0.11103582382202148, 0.0039968490600585938, 0.0039489269256591797, 0.0040469169616699219, 0.0039720535278320312, 0.0039989948272705078, 0.0039849281311035156, 0.004241943359375, 0.0041539669036865234],
+          "cold_evaluation_seconds": 0.0085101127624511719,
+          "cold_end_to_end_seconds": 0.030762195587158203,
+          "end_to_end_seconds": [0.010480880737304688, 0.010849952697753906, 0.011775016784667969, 0.011818170547485352, 0.011863946914672852, 0.011680126190185547, 0.011605978012084961, 0.012232780456542969, 0.011925935745239258, 0.011451005935668945]
+        },
+        "PopED": {
+          "engine": "PopED",
+          "se": [0.078340947016025952, 0.166530814291004, 1.8175163727587462, 0.04649298255201359, 0.018951495567145139, 0.029281594173890972, 0.002048919473863312],
+          "rse": [6.5284122513354959, 4.1632703572751, 5.1929039221678464, 23.246491276006793, 18.951495567145137, 19.52106278259398, 9.1063087727258321],
+          "log_determinant": 41.016238366519289,
+          "setup_seconds": 0.008209228515625,
+          "core_seconds": [0.0056669712066650391, 0.0057830810546875, 0.0058279037475585938, 0.0058891773223876953, 0.0056807994842529297, 0.0057189464569091797, 0.0056831836700439453, 0.0058138370513916016, 0.0060260295867919922, 0.0056221485137939453],
+          "cold_evaluation_seconds": 0.0087361335754394531,
+          "cold_end_to_end_seconds": 0.016945362091064453,
+          "end_to_end_seconds": [0.0096731185913085938, 0.0091798305511474609, 0.0095548629760742188, 0.0097031593322753906, 0.013607978820800781, 0.0080409049987792969, 0.0080158710479736328, 0.0081419944763183594, 0.0080809593200683594, 0.0080718994140625]
+        },
+        "PFIM": {
+          "engine": "PFIM",
+          "se": [0.078340947017725759, 0.16653081429169772, 1.8175163728614911, 0.046492982554114486, 0.018951495567624925, 0.029281594177401941, 0.0020489194738507245],
+          "rse": [6.528412251477147, 4.1632703572924434, 5.1929039224614026, 23.246491277057242, 18.951495567624924, 19.521062784934628, 9.1063087726698857],
+          "log_determinant": 41.01623836601388,
+          "setup_seconds": 0.0049631595611572266,
+          "core_seconds": [0.19658184051513672, 0.048816919326782227, 0.047570943832397461, 0.050477981567382812, 0.048126935958862305, 0.048146963119506836, 0.047268867492675781, 0.050333023071289062, 0.048688173294067383, 0.047821044921875],
+          "cold_evaluation_seconds": 0.22662687301635742,
+          "cold_end_to_end_seconds": 0.23159003257751465,
+          "end_to_end_seconds": [0.050045967102050781, 0.053296089172363281, 0.052025079727172852, 0.049874782562255859, 0.053146123886108398, 0.053112030029296875, 0.05230712890625, 0.053056001663208008, 0.050750970840454102, 0.050692081451416016]
+        }
+      }
+    },
+    "bolus_additive": {
+      "description": "One-compartment IV bolus with additive error",
+      "parameters": ["CL", "V", "OMEGA_CL", "OMEGA_V", "SIGMA_ADD"],
+      "values": [4, 35, 0.10000000000000001, 0.14999999999999999, 0.25],
+      "engines": {
+        "LibeRality": {
+          "engine": "LibeRality",
+          "se": [0.18549439644000634, 1.9596637914542188, 0.021072139375826377, 0.030715610876717158, 0.020833302425091325],
+          "rse": [4.6373599110001589, 5.5990394041549107, 21.072139375826374, 20.477073917811438, 8.3333209700365298],
+          "log_determinant": 24.452068895194813,
+          "setup_seconds": 0.0062091350555419922,
+          "core_seconds": [0.0042579174041748047, 0.0040941238403320312, 0.003971099853515625, 0.0039520263671875, 0.0040049552917480469, 0.0039448738098144531, 0.0039370059967041016, 0.0039839744567871094, 0.0040719509124755859, 0.0040490627288818359],
+          "cold_evaluation_seconds": 0.0041468143463134766,
+          "cold_end_to_end_seconds": 0.010355949401855469,
+          "end_to_end_seconds": [0.010392904281616211, 0.014235019683837891, 0.01029205322265625, 0.010384082794189453, 0.010396957397460938, 0.010504007339477539, 0.010413885116577148, 0.010622024536132812, 0.010374069213867188, 0.010608911514282227]
+        },
+        "PopED": {
+          "engine": "PopED",
+          "se": [0.18549439644229523, 1.9596637914770063, 0.021072139375841733, 0.03071561087663904, 0.020833302424634461],
+          "rse": [4.6373599110573807, 5.5990394042200178, 21.072139375841729, 20.477073917759363, 8.3333209698537836],
+          "log_determinant": 24.452068895194799,
+          "setup_seconds": 0.003459930419921875,
+          "core_seconds": [0.0037930011749267578, 0.0034990310668945312, 0.0035128593444824219, 0.0034680366516113281, 0.0035121440887451172, 0.0034708976745605469, 0.0034520626068115234, 0.0035309791564941406, 0.0034768581390380859, 0.0035071372985839844],
+          "cold_evaluation_seconds": 0.003582000732421875,
+          "cold_end_to_end_seconds": 0.00704193115234375,
+          "end_to_end_seconds": [0.0068819522857666016, 0.0068478584289550781, 0.0067598819732666016, 0.0066320896148681641, 0.0066161155700683594, 0.0066981315612792969, 0.0068700313568115234, 0.0066998004913330078, 0.0068199634552001953, 0.010571956634521484]
+        },
+        "PFIM": {
+          "engine": "PFIM",
+          "se": [0.18549439643997312, 1.9596637914538868, 0.021072139375818835, 0.030715610876707346, 0.020833302425112159],
+          "rse": [4.6373599109993275, 5.5990394041539622, 21.072139375818832, 20.477073917804898, 8.3333209700448627],
+          "log_determinant": 24.452068895194859,
+          "setup_seconds": 0.0027420520782470703,
+          "core_seconds": [0.035727024078369141, 0.035219907760620117, 0.034846067428588867, 0.038180112838745117, 0.035390853881835938, 0.035557985305786133, 0.034946918487548828, 0.03470921516418457, 0.037873983383178711, 0.035589933395385742],
+          "cold_evaluation_seconds": 0.037158012390136719,
+          "cold_end_to_end_seconds": 0.039900064468383789,
+          "end_to_end_seconds": [0.037834882736206055, 0.038589000701904297, 0.037665843963623047, 0.040359973907470703, 0.037797927856445312, 0.037606000900268555, 0.037069082260131836, 0.0403289794921875, 0.038169145584106445, 0.037695884704589844]
+        }
+      }
+    },
+    "oral_combined": {
+      "description": "One-compartment first-order absorption with combined error",
+      "parameters": ["KA", "CL", "V", "OMEGA_KA", "OMEGA_CL", "OMEGA_V", "SIGMA_PROP", "SIGMA_ADD"],
+      "values": [1.2, 4, 35, 0.20000000000000001, 0.10000000000000001, 0.14999999999999999, 0.022499999999999999, 0.25],
+      "engines": {
+        "LibeRality": {
+          "engine": "LibeRality",
+          "se": [0.083432778823531117, 0.17158832411319491, 1.8736382151625157, 0.052069797702484648, 0.020189670116601777, 0.03063251665923589, 0.0031559690896396484, 0.073035163871287834],
+          "rse": [6.9527315686275939, 4.2897081028298727, 5.353252043321473, 26.034898851242321, 20.189670116601775, 20.421677772823926, 14.026529287287328, 29.214065548515133],
+          "log_determinant": 45.045457569320561,
+          "setup_seconds": 0.0063579082489013672,
+          "core_seconds": [0.0044028759002685547, 0.0044100284576416016, 0.0046720504760742188, 0.0044710636138916016, 0.0043849945068359375, 0.0043740272521972656, 0.0076661109924316406, 0.0046939849853515625, 0.0044410228729248047, 0.0045230388641357422],
+          "cold_evaluation_seconds": 0.0046429634094238281,
+          "cold_end_to_end_seconds": 0.011000871658325195,
+          "end_to_end_seconds": [0.01096796989440918, 0.010763883590698242, 0.011037111282348633, 0.011214017868041992, 0.010876178741455078, 0.011074066162109375, 0.011040925979614258, 0.011083126068115234, 0.010797023773193359, 0.010744094848632812]
+        },
+        "PopED": {
+          "engine": "PopED",
+          "se": [0.083432778822244508, 0.17158832411680416, 1.8736382149772144, 0.052069797701879944, 0.020189670116922156, 0.030632516653549852, 0.0031559690896942314, 0.073035163880438098],
+          "rse": [6.9527315685203757, 4.2897081029201045, 5.3532520427920405, 26.034898850939971, 20.189670116922155, 20.421677769033234, 14.026529287529918, 29.214065552175239],
+          "log_determinant": 45.045457569605091,
+          "setup_seconds": 0.003459930419921875,
+          "core_seconds": [0.0064311027526855469, 0.0063910484313964844, 0.0063080787658691406, 0.0062589645385742188, 0.0063750743865966797, 0.0064139366149902344, 0.0098471641540527344, 0.0064611434936523438, 0.0063440799713134766, 0.0063529014587402344],
+          "cold_evaluation_seconds": 0.0067880153656005859,
+          "cold_end_to_end_seconds": 0.010247945785522461,
+          "end_to_end_seconds": [0.010135889053344727, 0.010040998458862305, 0.0099148750305175781, 0.010117053985595703, 0.0099878311157226562, 0.0098080635070800781, 0.0100860595703125, 0.0098340511322021484, 0.0097360610961914062, 0.0096738338470458984]
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "fixture": "oral_proportional",
+      "reference": "LibeRality",
+      "candidate": "PopED",
+      "pass": true,
+      "max_absolute": 2.6786874514073133e-06,
+      "max_relative": 3.5293391794889287e-09,
+      "frobenius_relative": 1.2119269770323284e-11,
+      "rse_max_absolute": 2.3451285358078167e-09,
+      "log_determinant_absolute": 4.702158662439615e-10
+    },
+    {
+      "fixture": "oral_proportional",
+      "reference": "LibeRality",
+      "candidate": "PFIM",
+      "pass": true,
+      "max_absolute": 8.9037348516285419e-07,
+      "max_relative": 9.1382434500167005e-11,
+      "frobenius_relative": 3.7057880750147651e-12,
+      "rse_max_absolute": 3.3705305213516112e-10,
+      "log_determinant_absolute": 3.5193181702197762e-11
+    },
+    {
+      "fixture": "oral_proportional",
+      "reference": "PopED",
+      "candidate": "PFIM",
+      "pass": true,
+      "max_absolute": 3.5690609365701675e-06,
+      "max_relative": 3.5313556719422441e-09,
+      "frobenius_relative": 1.5546004244015584e-11,
+      "rse_max_absolute": 2.3406485638588492e-09,
+      "log_determinant_absolute": 5.0540904794615926e-10
+    },
+    {
+      "fixture": "bolus_additive",
+      "reference": "LibeRality",
+      "candidate": "PopED",
+      "pass": true,
+      "max_absolute": 1.0207168088527396e-07,
+      "max_relative": 4.9364167422678303e-08,
+      "frobenius_relative": 3.5410655676552387e-11,
+      "rse_max_absolute": 1.8274626256697957e-10,
+      "log_determinant_absolute": 1.4210854715202004e-14
+    },
+    {
+      "fixture": "bolus_additive",
+      "reference": "LibeRality",
+      "candidate": "PFIM",
+      "pass": true,
+      "max_absolute": 4.6175046009011567e-09,
+      "max_relative": 1.1997992209048919e-10,
+      "frobenius_relative": 1.4633461790286746e-12,
+      "rse_max_absolute": 8.3328899336265749e-12,
+      "log_determinant_absolute": 4.6185277824406512e-14
+    },
+    {
+      "fixture": "bolus_additive",
+      "reference": "PopED",
+      "candidate": "PFIM",
+      "pass": true,
+      "max_absolute": 1.0668918548617512e-07,
+      "max_relative": 4.9484147338846086e-08,
+      "frobenius_relative": 3.6659134440371801e-11,
+      "rse_max_absolute": 1.9107915250060614e-10,
+      "log_determinant_absolute": 6.0396132539608516e-14
+    },
+    {
+      "fixture": "oral_combined",
+      "reference": "LibeRality",
+      "candidate": "PopED",
+      "pass": true,
+      "max_absolute": 2.7711503207683563e-06,
+      "max_relative": 1.9640457629631654e-08,
+      "frobenius_relative": 2.093886967289285e-11,
+      "rse_max_absolute": 3.7906922045749525e-09,
+      "log_determinant_absolute": 2.8452973310777452e-10
+    }
+  ],
+  "timings": [
+    {
+      "fixture": "oral_proportional",
+      "engine": "LibeRality",
+      "setup_seconds": 0.022252082824707031,
+      "cold_evaluation_seconds": 0.0085101127624511719,
+      "cold_end_to_end_seconds": 0.030762195587158203,
+      "core_median_seconds": 0.0040229558944702148,
+      "core_min_seconds": 0.0039489269256591797,
+      "end_to_end_median_seconds": 0.011727571487426758,
+      "end_to_end_min_seconds": 0.010480880737304688,
+      "repetitions": 10,
+      "_row": "LibeRality"
+    },
+    {
+      "fixture": "oral_proportional",
+      "engine": "PopED",
+      "setup_seconds": 0.008209228515625,
+      "cold_evaluation_seconds": 0.0087361335754394531,
+      "cold_end_to_end_seconds": 0.016945362091064453,
+      "core_median_seconds": 0.0057510137557983398,
+      "core_min_seconds": 0.0056221485137939453,
+      "end_to_end_median_seconds": 0.0086609125137329102,
+      "end_to_end_min_seconds": 0.0080158710479736328,
+      "repetitions": 10,
+      "_row": "PopED"
+    },
+    {
+      "fixture": "oral_proportional",
+      "engine": "PFIM",
+      "setup_seconds": 0.0049631595611572266,
+      "cold_evaluation_seconds": 0.22662687301635742,
+      "cold_end_to_end_seconds": 0.23159003257751465,
+      "core_median_seconds": 0.048417568206787109,
+      "core_min_seconds": 0.047268867492675781,
+      "end_to_end_median_seconds": 0.052166104316711426,
+      "end_to_end_min_seconds": 0.049874782562255859,
+      "repetitions": 10,
+      "_row": "PFIM"
+    },
+    {
+      "fixture": "bolus_additive",
+      "engine": "LibeRality",
+      "setup_seconds": 0.0062091350555419922,
+      "cold_evaluation_seconds": 0.0041468143463134766,
+      "cold_end_to_end_seconds": 0.010355949401855469,
+      "core_median_seconds": 0.0039944648742675781,
+      "core_min_seconds": 0.0039370059967041016,
+      "end_to_end_median_seconds": 0.010405421257019043,
+      "end_to_end_min_seconds": 0.01029205322265625,
+      "repetitions": 10,
+      "_row": "LibeRality1"
+    },
+    {
+      "fixture": "bolus_additive",
+      "engine": "PopED",
+      "setup_seconds": 0.003459930419921875,
+      "cold_evaluation_seconds": 0.003582000732421875,
+      "cold_end_to_end_seconds": 0.00704193115234375,
+      "core_median_seconds": 0.0035030841827392578,
+      "core_min_seconds": 0.0034520626068115234,
+      "end_to_end_median_seconds": 0.0067899227142333984,
+      "end_to_end_min_seconds": 0.0066161155700683594,
+      "repetitions": 10,
+      "_row": "PopED1"
+    },
+    {
+      "fixture": "bolus_additive",
+      "engine": "PFIM",
+      "setup_seconds": 0.0027420520782470703,
+      "cold_evaluation_seconds": 0.037158012390136719,
+      "cold_end_to_end_seconds": 0.039900064468383789,
+      "core_median_seconds": 0.035474419593811035,
+      "core_min_seconds": 0.03470921516418457,
+      "end_to_end_median_seconds": 0.037816405296325684,
+      "end_to_end_min_seconds": 0.037069082260131836,
+      "repetitions": 10,
+      "_row": "PFIM1"
+    },
+    {
+      "fixture": "oral_combined",
+      "engine": "LibeRality",
+      "setup_seconds": 0.0063579082489013672,
+      "cold_evaluation_seconds": 0.0046429634094238281,
+      "cold_end_to_end_seconds": 0.011000871658325195,
+      "core_median_seconds": 0.0044560432434082031,
+      "core_min_seconds": 0.0043740272521972656,
+      "end_to_end_median_seconds": 0.011002540588378906,
+      "end_to_end_min_seconds": 0.010744094848632812,
+      "repetitions": 10,
+      "_row": "LibeRality2"
+    },
+    {
+      "fixture": "oral_combined",
+      "engine": "PopED",
+      "setup_seconds": 0.003459930419921875,
+      "cold_evaluation_seconds": 0.0067880153656005859,
+      "cold_end_to_end_seconds": 0.010247945785522461,
+      "core_median_seconds": 0.006383061408996582,
+      "core_min_seconds": 0.0062589645385742188,
+      "end_to_end_median_seconds": 0.0099513530731201172,
+      "end_to_end_min_seconds": 0.0096738338470458984,
+      "repetitions": 10,
+      "_row": "PopED2"
+    }
+  ],
+  "coverage": [
+    {
+      "fixture": "oral_proportional",
+      "engine": "PopED",
+      "status": "validated",
+      "reason": ""
+    },
+    {
+      "fixture": "oral_proportional",
+      "engine": "PFIM",
+      "status": "validated",
+      "reason": ""
+    },
+    {
+      "fixture": "bolus_additive",
+      "engine": "PopED",
+      "status": "validated",
+      "reason": ""
+    },
+    {
+      "fixture": "bolus_additive",
+      "engine": "PFIM",
+      "status": "validated",
+      "reason": ""
+    },
+    {
+      "fixture": "oral_combined",
+      "engine": "PopED",
+      "status": "validated",
+      "reason": ""
+    },
+    {
+      "fixture": "oral_combined",
+      "engine": "PFIM",
+      "status": "not supported by common convention",
+      "reason": "PFIM 7.0.3 implements Combined1 as (a + b*f)^2; the independent additive-plus-proportional variance a^2 + b^2*f^2 is not available."
+    }
+  ],
+  "design_search": {
+    "rows": [
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "LibeRality",
+        "candidate_time": 0.10000000000000001,
+        "log_determinant": 41.235049950404999,
+        "d_optimality": 361.66610397886302,
+        "end_to_end_seconds": 0.010335922241210938,
+        "is_best": true
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "PopED",
+        "candidate_time": 0.10000000000000001,
+        "log_determinant": 41.235049950644139,
+        "d_optimality": 361.66610399121862,
+        "end_to_end_seconds": 0.0083689689636230469,
+        "is_best": true
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "PFIM",
+        "candidate_time": 0.10000000000000001,
+        "log_determinant": 41.235049950334307,
+        "d_optimality": 361.66610397521072,
+        "end_to_end_seconds": 0.051164865493774414,
+        "is_best": true
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "LibeRality",
+        "candidate_time": 0.25,
+        "log_determinant": 41.15861938115281,
+        "d_optimality": 357.73867749884369,
+        "end_to_end_seconds": 0.014355897903442383,
+        "is_best": false
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "PopED",
+        "candidate_time": 0.25,
+        "log_determinant": 41.158619381594974,
+        "d_optimality": 357.73867752144071,
+        "end_to_end_seconds": 0.0085811614990234375,
+        "is_best": false
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "PFIM",
+        "candidate_time": 0.25,
+        "log_determinant": 41.158619381141378,
+        "d_optimality": 357.73867749825968,
+        "end_to_end_seconds": 0.054252862930297852,
+        "is_best": false
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "LibeRality",
+        "candidate_time": 0.5,
+        "log_determinant": 41.016238366049073,
+        "d_optimality": 350.53572381535696,
+        "end_to_end_seconds": 0.010723114013671875,
+        "is_best": false
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "PopED",
+        "candidate_time": 0.5,
+        "log_determinant": 41.016238366519289,
+        "d_optimality": 350.53572383890349,
+        "end_to_end_seconds": 0.008502960205078125,
+        "is_best": false
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "PFIM",
+        "candidate_time": 0.5,
+        "log_determinant": 41.01623836601388,
+        "d_optimality": 350.53572381359447,
+        "end_to_end_seconds": 0.054199934005737305,
+        "is_best": false
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "LibeRality",
+        "candidate_time": 0.75,
+        "log_determinant": 40.862771299508893,
+        "d_optimality": 342.93425659939902,
+        "end_to_end_seconds": 0.010699033737182617,
+        "is_best": false
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "PopED",
+        "candidate_time": 0.75,
+        "log_determinant": 40.862771299717757,
+        "d_optimality": 342.93425660963129,
+        "end_to_end_seconds": 0.0082890987396240234,
+        "is_best": false
+      },
+      {
+        "fixture": "oral_proportional_grid",
+        "engine": "PFIM",
+        "candidate_time": 0.75,
+        "log_determinant": 40.862771299412344,
+        "d_optimality": 342.93425659466908,
+        "end_to_end_seconds": 0.051466941833496094,
+        "is_best": false
+      }
+    ],
+    "best": [
+      {
+        "engine": "LibeRality",
+        "candidate_time": 0.10000000000000001,
+        "log_determinant": 41.235049950404999,
+        "d_optimality": 361.66610397886302
+      },
+      {
+        "engine": "PopED",
+        "candidate_time": 0.10000000000000001,
+        "log_determinant": 41.235049950644139,
+        "d_optimality": 361.66610399121862
+      },
+      {
+        "engine": "PFIM",
+        "candidate_time": 0.10000000000000001,
+        "log_determinant": 41.235049950334307,
+        "d_optimality": 361.66610397521072
+      }
+    ],
+    "pass": true
+  },
+  "tolerance": {
+    "absolute": 1.0000000000000001e-05,
+    "relative": 0.0001,
+    "rse": 0.01
+  },
+  "versions": ["0.1.1", "0.7.0", "7.0.3"],
+  "platform": {
+    "R": "R version 4.6.0 (2026-04-24 ucrt)",
+    "os": "Windows",
+    "release": "10 x64",
+    "machine": "x86-64"
+  },
+  "method": {
+    "canonical_parameters": "fixed effects, OMEGA variances, residual variances",
+    "information": "block-diagonal population FO",
+    "PFIM_transform": "residual SD information transformed to residual variance scale",
+    "timing": "elapsed wall-clock; median and minimum reported"
+  },
+  "output_dir": null
+}

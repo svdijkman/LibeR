@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_1587057",
+  "pmid": "1587057",
+  "title": "Bayesian parameter estimation and population pharmacokinetics.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/thomson-1992-1587057.pdf",
+    "sha256": "10e4b50ca2a0238fcc64ab22369178ee982e16c8f69818162b160b83c1dd83c2"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

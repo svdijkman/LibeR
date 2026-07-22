@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_12891224",
+  "pmid": "12891224",
+  "title": "Pharmacokinetic drug interactions in children taking oxcarbazepine.",
+  "abstract": "",
+  "first_author": "Sallas",
+  "year": "2003",
+  "compounds": "OXC",
+  "model_ids": "aed_oxc_12891224_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/OXC/articles/sallas-2003-12891224.pdf",
+    "sha256": "f682a10f37121fa5fde08ce6bfff9e92f38535b92a2fafffb81772b9406aea09"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

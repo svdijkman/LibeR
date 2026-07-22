@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_7104175",
+  "pmid": "7104175",
+  "title": "OPT: a package of computer programs for parameter optimisation in clinical pharmacokinetics.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/kelman-1982-7104175.pdf",
+    "sha256": "684d3bf301dc05a36c03c59e08f36602b566d62c3a4e9bd3c1a99c39831a90fe"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

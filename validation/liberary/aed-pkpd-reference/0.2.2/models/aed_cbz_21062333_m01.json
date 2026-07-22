@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_21062333_m01",
+  "article_id": "pmid_21062333",
+  "pmid": "21062333",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_21062333",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 13,
+      "model_table": 2,
+      "model_row": 13
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/bondareva-2011-21062333.pdf",
+      "sha256": "7521b11351d6368776f2de534f42f306b7ff7daa1fc60d1a484a893554ed9f8c"
+    },
+    "metadata_csv": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+  },
+  "raw": {
+    "citation": "Bondareva 2011 21062333",
+    "population": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+    "model_type": "PK",
+    "objective": "“to evaluate the predictability of individualized dosage regimens for monotherapy with CBZ in the post-induction period or with VPA, as well as for CBZ and VPA given as combination therapy based on TDM data of epileptic patients and the earlier developed population models”",
+    "covariates": "No covariate analysis performed",
+    "observations": "Existing models were used to predict concentrations using Bayesian simulations. Concentrations were predicted without significant bias, showing that such predictions in the clinic are feasible.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment, linear absorption and elimination",
+    "equations": "No parameters estimated, literature values used",
+    "parameter_values": "",
+    "validation": "Bayesian predictions (first two samples used for individual parameter estimation, then concentration prediction)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Predictability of individualized dosage regimens of carbamazepine and valproate mono- and combination therapy.",
+      "compound": "CBZ",
+      "population": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+      "route": "oral",
+      "n_subjects": 958,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+        "n_total": 958,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 958
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 67
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "~25 (18-67)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 48,
+                    "maximum": 122
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "~75 (48-122)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 13",
+          "evidence": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 13",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment, linear absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": []
+          },
+          "description": "1 compartment, linear absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment, linear absorption and elimination Steady-state oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": [],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Bondareva",
+      "year": "2011",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+      "population_details": {
+        "raw": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+        "n_total": 958,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 958
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 67
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "~25 (18-67)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 48,
+                    "maximum": 122
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 13",
+                  "evidence": "~75 (48-122)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 13",
+              "evidence": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 13",
+          "evidence": "N: 958 (Russian) Age: ~25 (18-67) WT: ~75 (48-122)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 13",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to evaluate the predictability of individualized dosage regimens for monotherapy with CBZ in the post-induction period or with VPA, as well as for CBZ and VPA given as combination therapy based on TDM data of epileptic patients and the earlier developed population models”"
+    },
+    "covariates": {
+      "tested": "No covariate analysis performed",
+      "included": [],
+      "raw": "No covariate analysis performed"
+    },
+    "validation": {
+      "raw": "Bayesian predictions (first two samples used for individual parameter estimation, then concentration prediction)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "parameter_values_missing"
+  },
+  "created_at": "2026-07-16T22:22:52.009Z"
+}

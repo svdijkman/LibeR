@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_25388986_m01",
+  "article_id": "pmid_25388986",
+  "pmid": "25388986",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_25388986",
+  "partition": "test",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 5,
+      "model_table": 2,
+      "model_row": 5
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/ding-2015-25388986.pdf",
+      "sha256": "99b0540d502f6fe3d0d9c347750b8ad1e3b9e77b9e0a2857ce20c365ee82ffb6"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Ding 2014 25388986",
+    "population": "N: 902 Sex: m=187, f=120 Age: 5.3 [5.7±3.8] (3wk – 14.0) WT: 19.0 [21.6±11.9] (2.6 – 70)",
+    "model_type": "PK",
+    "objective": "“to develop a population pharmacokinetic model for VPA based on protein-binding saturation in pediatric patients with epilepsy.”",
+    "covariates": "Tested: SEX, AGE, WT, Formulation (Syrup, Conventional tablet or SR tablet), comedication. Included: CBZ, WT, AGE, TDD",
+    "observations": "Model supports age-dependent PK reflecting maturation of UGR enzymes in children. Dose-dependent maximum effect (DDE) model best fitted for aim of the study. The non-linear correlation between DDVPA and CL can be due to concentration-dependent protein binding of VPA. A nonlinear effect of TDM and protein-binding on CL, implies a TDM effect which decreased as dose increases. The model supports a fixed Emax=2.8. Carbamazepine identified as important covariate increasing VPA CL/F by 43%. Clonazepam, Topiramate or Sex were not significant covariates, consistent with previous reports.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment model, first-order absorption and elimination",
+    "equations": "kmax= theta4 k50= theta6 gam1= theta5 kage= (kmax*(AGE**gam1))/((k50**gam1)+(AGE**gam1)) k0=theta3 k1=k0-kage gam2=theta8 TDD50= theta9 TDDmax=theta7 TDD=1+(TDDmax*(DOSE**gam2))/((TDD50**gam2)+(DOSE**gam2)) CL = theta1*(theta2**CBZ)*((WT/70)**k1)*TDD*exp(eta1) V = theta10*(WT/70)*WT if(FORM==1) KA = theta11 #Syrup if(FORM==2) KA = theta12 #Tablets if(FORM==3) KA = theta13 #SR Tablets Cobs=Cipred+eps1 DOSE: VPA dose in mg/day CBZ: comedication with carbamazepine (1: yes, 0: no) WT: total body weight (kg) AGE: age (years) FORM is formulation type, with a value of 1 for syrup, 2 for regular tablets and 3 for slow-release tablets",
+    "parameter_values": "theta1= 0.300 theta2= 1.43 theta3= 0.791 theta4= 0.096 theta5= 8.63 theta6=0.802 theta7= 2.8 theta8= 1.68 theta9= 37.4 theta10= 22.2 theta11= 2.64 theta12= 1.57 theta13= 0.46 omega1= 0.04752 sigma1=13.3",
+    "validation": "Yes (bootstrap of 2000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "A population pharmacokinetic model of valproic acid in pediatric patients with epilepsy: a non-linear pharmacokinetic model based on protein-binding saturation.",
+      "compound": "VPA",
+      "population": "N: 902 Sex: m=187, f=120 Age: 5.3 [5.7±3.8] (3wk – 14.0) WT: 19.0 [21.6±11.9] (2.6 – 70)",
+      "route": "oral",
+      "n_subjects": 902,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment model, first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 1.43,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "k0",
+            "typical": 0.791,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "kmax",
+            "typical": 0.096,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "gam1",
+            "typical": 8.63,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "k50",
+            "typical": 0.802,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "TDDmax",
+            "typical": 2.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "gam2",
+            "typical": 1.68,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "TDD50",
+            "typical": 37.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 22.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 2.64,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1.57,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.46,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04752,
+            "reported_metric": "variance",
+            "value": 0.04752,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 13.3,
+            "reported_metric": "variance",
+            "value": 13.3,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["CBZ", "WT", "AGE", "TDD"],
+      "residual_error": "kmax= theta4 k50= theta6 gam1= theta5 kage= (kmax*(AGE**gam1))/((k50**gam1)+(AGE**gam1)) k0=theta3 k1=k0-kage gam2=theta8 TDD50= theta9 TDDmax=theta7 TDD=1+(TDDmax*(DOSE**gam2))/((TDD50**gam2)+(DOSE**gam2)) CL = theta1*(theta2**CBZ)*((WT/70)**k1)*TDD*exp(eta1) V = theta10*(WT/70)*WT if(FORM==1) KA = theta11 #Syrup if(FORM==2) KA = theta12 #Tablets if(FORM==3) KA = theta13 #SR Tablets Cobs=Cipred+eps1 DOSE: VPA dose in mg/day CBZ: comedication with carbamazepine (1: yes, 0: no) WT: total body weight (kg) AGE: age (years) FORM is formulation type, with a value of 1 for syrup, 2 for regular tablets and 3 for slow-release tablets",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Ding",
+      "year": "2014",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 902 Sex: m=187, f=120 Age: 5.3 [5.7±3.8] (3wk – 14.0) WT: 19.0 [21.6±11.9] (2.6 – 70)",
+      "objective": "“to develop a population pharmacokinetic model for VPA based on protein-binding saturation in pediatric patients with epilepsy.”"
+    },
+    "covariates": {
+      "tested": ["SEX", "AGE", "WT", "Formulation (Syrup", "Conventional tablet or SR tablet)", "comedication."],
+      "included": ["CBZ", "WT", "AGE", "TDD"],
+      "raw": "Tested: SEX, AGE, WT, Formulation (Syrup, Conventional tablet or SR tablet), comedication. Included: CBZ, WT, AGE, TDD"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 2000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:23:14.345Z"
+}

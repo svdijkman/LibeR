@@ -1,0 +1,420 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_11422016_m01",
+  "article_id": "pmid_11422016",
+  "pmid": "11422016",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_11422016",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 26,
+      "model_table": 2,
+      "model_row": 28
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/chan-2001-11422016.pdf",
+      "sha256": "b1d5ec756b7ad72c6c22051f1edabdcc4a15c5d09c372e768dd7ac167e170209"
+    },
+    "metadata_csv": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+  },
+  "raw": {
+    "citation": "Chan 2001 11422016",
+    "population": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+    "model_type": "PK",
+    "objective": "“to determine the population clearance values of CBZ in epileptic patients living in Singapore”",
+    "covariates": "Tested:Age, WT, gender, race, formulation, comedication of phenytoin, phenobarbitone, nonanticonvulsants on CL Included: Age, WT, Phenobarbitone comedication on CL",
+    "observations": "Formulation differences did not show sufficient impact on serum concentrations. No impact of dose on CL",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK",
+    "equations": "CL/F=theta1*(Age**theta2)*(WT**theta3)*(theta4**PHB)*exp(eta1) Css=Rij/CLj * exp(eps1) Css= steady state concentration (in this case all observed concentrations) PHB=comedication with phenobarbital (yes =1, no=0) Rij=’i’-th body weight adjusted dosing rate of CBZ (mg/kg/day) in ‘j’-th patient CLj=CL of the ’j’-th patient",
+    "parameter_values": "theta1=40.7 theta2=0.494 theta3=-1.17 theta4=1.44 omega1=0.0458 sigma1=0.0331",
+    "validation": "Yes (Bayesian predictions) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of carbamazepine in Singapore epileptic patients.",
+      "compound": "CBZ",
+      "population": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+      "route": "oral",
+      "n_subjects": 193,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+        "n_total": 193,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 193
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 12.48,
+                    "sd": 10.08
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.3,
+                    "maximum": 51
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "12.48±10.08 (0.3–51)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 34.9,
+                    "sd": 20.52
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 4.84,
+                    "maximum": 84.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "34.90±20.52 (4.84-84.5)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 26",
+              "evidence": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 26",
+          "evidence": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 28",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["CL/F", "THETA2", "THETA3", "THETA4"]
+          },
+          "description": "Simplified PK"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 40.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.494,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": -1.17,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.44,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0458,
+            "reported_metric": "variance",
+            "value": 0.0458,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 0.0331,
+            "reported_metric": "variance",
+            "value": 0.0331,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["Age", "WT", "Phenobarbitone comedication on CL"],
+      "residual_error": "CL/F=theta1*(Age**theta2)*(WT**theta3)*(theta4**PHB)*exp(eta1) Css=Rij/CLj * exp(eps1) Css= steady state concentration (in this case all observed concentrations) PHB=comedication with phenobarbital (yes =1, no=0) Rij=’i’-th body weight adjusted dosing rate of CBZ (mg/kg/day) in ‘j’-th patient CLj=CL of the ’j’-th patient",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Chan",
+      "year": "2001",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+      "population_details": {
+        "raw": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+        "n_total": 193,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 193
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 12.48,
+                    "sd": 10.08
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.3,
+                    "maximum": 51
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "12.48±10.08 (0.3–51)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 34.9,
+                    "sd": 20.52
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 4.84,
+                    "maximum": 84.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "34.90±20.52 (4.84-84.5)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 26",
+              "evidence": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 26",
+          "evidence": "N: 193 (Singapore/Chinese) Age: 12.48±10.08 (0.3–51) WT: 34.90±20.52 (4.84-84.5)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 28",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to determine the population clearance values of CBZ in epileptic patients living in Singapore”"
+    },
+    "covariates": {
+      "tested": ["Age", "WT", "gender", "race", "formulation", "comedication of phenytoin", "phenobarbitone", "nonanticonvulsants on CL"],
+      "included": ["Age", "WT", "Phenobarbitone comedication on CL"],
+      "raw": "Tested:Age, WT, gender, race, formulation, comedication of phenytoin, phenobarbitone, nonanticonvulsants on CL Included: Age, WT, Phenobarbitone comedication on CL"
+    },
+    "validation": {
+      "raw": "Yes (Bayesian predictions) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:07.171Z"
+}

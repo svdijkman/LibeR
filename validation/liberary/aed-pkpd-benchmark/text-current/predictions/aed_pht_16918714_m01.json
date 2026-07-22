@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_pht_16918714_m01",
+  "screening_id": null,
+  "article_id": "pmid_16918714",
+  "pmid": "16918714",
+  "source_pdf_sha256": "3b52f598f843decafaa06a673378de1b3169e9e29839aedcb882697205829a51",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:39:14.307Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Interactions of Serum Albumin, Valproic Acid and Carbamazepine with the Pharmacokinetics of Phenytoin in Cancer Patients",
+    "compound": "Phenytoin",
+    "population": "Cancer patients",
+    "route": null,
+    "n_subjects": 155,
+    "software": "NONMEM",
+    "estimation_method": "Non-linear mixed-effect modeling",
+    "model_type": "Population PK/PD model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 3,
+      "description": "Three-compartment model with first-order absorption and non-linear elimination"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "V",
+          "typical": 10.4,
+          "se": null,
+          "unit": "l"
+        },
+        {
+          "name": "VMEL",
+          "typical": 23.7,
+          "se": null,
+          "unit": "mg/hr"
+        },
+        {
+          "name": "Ka",
+          "typical": 1.55,
+          "se": null,
+          "unit": "hr^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Interindividual variability in V",
+          "parameter": "V",
+          "eta_index": 2,
+          "eta_distribution": "log_normal",
+          "eta_expression": "q * exp(hi)",
+          "variability_level": "iiv",
+          "reported_value": null,
+          "reported_metric": "cv_percent",
+          "value": 54.6,
+          "conversion": "sqrt(1 + (0.546^2))"
+        },
+        {
+          "description": "Interindividual variability in VMEL",
+          "parameter": "VMEL",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": null,
+          "reported_metric": "cv_percent",
+          "value": 3.33,
+          "conversion": "sqrt(1 + (0.0333^2))"
+        },
+        {
+          "description": "Interindividual variability in Ka",
+          "parameter": "Ka",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": null,
+          "reported_metric": "cv_percent",
+          "value": 1.28,
+          "conversion": "sqrt(1 + (0.0128^2))"
+        },
+        {
+          "description": "Intraindividual variability in free phenytoin ratio",
+          "parameter": "free phenytoin ratio",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "eij",
+          "variability_level": "iov",
+          "reported_value": 16.6,
+          "reported_metric": "cv_percent",
+          "value": 0.166,
+          "conversion": "sqrt(1 + (0.166^2))"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 2,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "covariance",
+          "value": -0.0457,
+          "conversion": "sqrt(1 + (0.0457^2))"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual variability in free phenytoin ratio",
+          "error_model": "additive",
+          "reported_value": 13,
+          "reported_metric": "cv_percent",
+          "value": 0.21,
+          "conversion": "sqrt(1 + (0.21^2))"
+        },
+        {
+          "description": "Residual variability in protein-bound phenytoin ratio",
+          "error_model": "additive",
+          "reported_value": 10.7,
+          "reported_metric": "cv_percent",
+          "value": 0.176,
+          "conversion": "sqrt(1 + (0.176^2))"
+        },
+        {
+          "description": "Residual variability in free phenytoin ratio",
+          "error_model": "additive",
+          "reported_value": 7.9,
+          "reported_metric": "cv_percent",
+          "value": 0.166,
+          "conversion": "sqrt(1 + (0.166^2))"
+        }
+      ]
+    },
+    "covariates": [
+      "Albumin",
+      "Valproic acid",
+      "Carbamazepine",
+      "Dexamethasone"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.95,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.92,
+        "population": 0.97,
+        "software": 0.9
+      }
+    },
+    "evidence_quotes": [
+      "Phenytoin dosing is particularly critical in cancer patients as to frequent hypoalbuminaemia, organ dysfunction and drug-drug interactions.",
+      "The free fraction of phenytoin was ⬍1 mg/l on 132 occasions (51.2%) and ⬎2 mg/l on 37 occasions (14.3%).",
+      "Total and free phenytoin were significantly correlated (rSΩ0.827, P⬍0.01)."
+    ],
+    "notes": "The model does not include a direct estimate of the VMEL parameter due to difficulties in independently estimating it."
+  },
+  "variants": {
+    "text": {
+      "title": "Interactions of Serum Albumin, Valproic Acid and Carbamazepine with the Pharmacokinetics of Phenytoin in Cancer Patients",
+      "compound": "Phenytoin",
+      "population": "Cancer patients",
+      "route": null,
+      "n_subjects": 155,
+      "software": "NONMEM",
+      "estimation_method": "Non-linear mixed-effect modeling",
+      "model_type": "Population PK/PD model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 3,
+        "description": "Three-compartment model with first-order absorption and non-linear elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "V",
+            "typical": 10.4,
+            "se": null,
+            "unit": "l"
+          },
+          {
+            "name": "VMEL",
+            "typical": 23.7,
+            "se": null,
+            "unit": "mg/hr"
+          },
+          {
+            "name": "Ka",
+            "typical": 1.55,
+            "se": null,
+            "unit": "hr^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Interindividual variability in V",
+            "parameter": "V",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "q * exp(hi)",
+            "variability_level": "iiv",
+            "reported_value": null,
+            "reported_metric": "cv_percent",
+            "value": 54.6,
+            "conversion": "sqrt(1 + (0.546^2))"
+          },
+          {
+            "description": "Interindividual variability in VMEL",
+            "parameter": "VMEL",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": null,
+            "reported_metric": "cv_percent",
+            "value": 3.33,
+            "conversion": "sqrt(1 + (0.0333^2))"
+          },
+          {
+            "description": "Interindividual variability in Ka",
+            "parameter": "Ka",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": null,
+            "reported_metric": "cv_percent",
+            "value": 1.28,
+            "conversion": "sqrt(1 + (0.0128^2))"
+          },
+          {
+            "description": "Intraindividual variability in free phenytoin ratio",
+            "parameter": "free phenytoin ratio",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "eij",
+            "variability_level": "iov",
+            "reported_value": 16.6,
+            "reported_metric": "cv_percent",
+            "value": 0.166,
+            "conversion": "sqrt(1 + (0.166^2))"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 2,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "covariance",
+            "value": -0.0457,
+            "conversion": "sqrt(1 + (0.0457^2))"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual variability in free phenytoin ratio",
+            "error_model": "additive",
+            "reported_value": 13,
+            "reported_metric": "cv_percent",
+            "value": 0.21,
+            "conversion": "sqrt(1 + (0.21^2))"
+          },
+          {
+            "description": "Residual variability in protein-bound phenytoin ratio",
+            "error_model": "additive",
+            "reported_value": 10.7,
+            "reported_metric": "cv_percent",
+            "value": 0.176,
+            "conversion": "sqrt(1 + (0.176^2))"
+          },
+          {
+            "description": "Residual variability in free phenytoin ratio",
+            "error_model": "additive",
+            "reported_value": 7.9,
+            "reported_metric": "cv_percent",
+            "value": 0.166,
+            "conversion": "sqrt(1 + (0.166^2))"
+          }
+        ]
+      },
+      "covariates": [
+        "Albumin",
+        "Valproic acid",
+        "Carbamazepine",
+        "Dexamethasone"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.95,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.92,
+          "population": 0.97,
+          "software": 0.9
+        }
+      },
+      "evidence_quotes": [
+        "Phenytoin dosing is particularly critical in cancer patients as to frequent hypoalbuminaemia, organ dysfunction and drug-drug interactions.",
+        "The free fraction of phenytoin was ⬍1 mg/l on 132 occasions (51.2%) and ⬎2 mg/l on 37 occasions (14.3%).",
+        "Total and free phenytoin were significantly correlated (rSΩ0.827, P⬍0.01)."
+      ],
+      "notes": "The model does not include a direct estimate of the VMEL parameter due to difficulties in independently estimating it."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

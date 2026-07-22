@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_15981957",
+  "pmid": "15981957",
+  "title": "[Population pharmacokinetics of carbamazepine in adults with epilepsy].",
+  "abstract": "",
+  "first_author": "Romano-Moreno",
+  "year": "2005",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_15981957_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/romano-moreno-2005-15981957.pdf",
+    "sha256": "7baf547c01fb1d86de456cd1e322db2d8f38fb6cb738c7a5c93b62cd079c20e7"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

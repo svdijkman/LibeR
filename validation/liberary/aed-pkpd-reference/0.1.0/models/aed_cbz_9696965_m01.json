@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_9696965_m01",
+  "article_id": "pmid_9696965",
+  "pmid": "9696965",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_9696965",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 29,
+      "model_table": 2,
+      "model_row": 32
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/gray-1998-9696965.pdf",
+      "sha256": "472814bba84e801b09cec88b9299aae7147382b0640e12f0d3e837b08bd831b4"
+    },
+    "metadata_csv": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+  },
+  "raw": {
+    "citation": "Gray 1998 9696965",
+    "population": "N: 72 (South Africa: 64% african, 36% indian) Age: 8.7±3.8 (2.3-16.3) WT: 29.5±13.7 (9-80)",
+    "model_type": "PK",
+    "objective": "“To derive a model describing carbamazepine (CBZ) clearance in children, in terms of individual patient characteristics.”",
+    "covariates": "WT, comedication with phenobarbitone or phenytoin on CL",
+    "observations": "F assumed to be complete. No differences between ethnicities. The lack of predicted vs observed concentration plots do not allow us to determine the quality of the model and its predictions",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment, linear absorption and elimination",
+    "equations": "CL/F=theta1*(WT**theta2)*(theta4**IND)+eta1 Vd/F=theta5*WT Ka=theta6 Cobs=Cipred + eps1 IND=comedication with one or more inducers (phenobarbitone or phenytoin), (Yes=1, No=0)",
+    "parameter_values": "theta1=0.70 theta2=0.40 theta4=1.43 theta5=Taken from Mackichan 1986, probably=1.5 theta6=0.34 omega1=0.0204 sigma1=0.0942",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "A model for the determination of carbamazepine clearance in children on mono- and polytherapy.",
+      "compound": "CBZ",
+      "population": "N: 72 (South Africa: 64% african, 36% indian) Age: 8.7±3.8 (2.3-16.3) WT: 29.5±13.7 (9-80)",
+      "route": "oral",
+      "n_subjects": 72,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment, linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 0.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.43,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.34,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0204,
+            "reported_metric": "variance",
+            "value": 0.0204,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 0.0942,
+            "reported_metric": "variance",
+            "value": 0.0942,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "CL/F=theta1*(WT**theta2)*(theta4**IND)+eta1 Vd/F=theta5*WT Ka=theta6 Cobs=Cipred + eps1 IND=comedication with one or more inducers (phenobarbitone or phenytoin), (Yes=1, No=0)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Gray",
+      "year": "1998",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 72 (South Africa: 64% african, 36% indian) Age: 8.7±3.8 (2.3-16.3) WT: 29.5±13.7 (9-80)",
+      "objective": "“To derive a model describing carbamazepine (CBZ) clearance in children, in terms of individual patient characteristics.”"
+    },
+    "covariates": {
+      "tested": ["WT", "comedication with phenobarbitone or phenytoin on CL"],
+      "included": [],
+      "raw": "WT, comedication with phenobarbitone or phenytoin on CL"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:23:10.588Z"
+}

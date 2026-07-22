@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_24210059_m01",
+  "article_id": "pmid_24210059",
+  "pmid": "24210059",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_24210059",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 9,
+      "model_table": 2,
+      "model_row": 9
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/panomyana-2013-24210059.pdf",
+      "sha256": "7eced5744bdeed9448ed1dbae8f59f578e00c1273af93c15907fd5079ab9e6b1"
+    },
+    "metadata_csv": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+  },
+  "raw": {
+    "citation": "Panomvana 2013 24210059",
+    "population": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+    "model_type": "PK",
+    "objective": "“To determine the effects of CYP3A5 polymorphism on CBZ pharmacokinetic parameters when CBZ was used either as monotherapy or co-administered with PHT, PB or VPA”",
+    "covariates": "Tested: CYP3A5, WT, BMI Included: None",
+    "observations": "No statistical significance found for any covariates, possibly due to simplification of PK",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified 1 compartment with no absorption or volume",
+    "equations": "Css-avg=(Dose*S)/(Tau*CL/F) (CL/F = S*Dose/Tau*Css-avg) S=Salt factor Css-avg= average steady state concentration Tau=dosing interval (hours)",
+    "parameter_values": "S for CBZ =1 CL/F=4.23±1.52",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Effect of CYP3A5 genotypes on the pharmacokinetics of carbamazepine when used as monotherapy or co-administered with phenytoin, phenobarbital or valproic acid in Thai patients.",
+      "compound": "CBZ",
+      "population": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+      "route": "oral",
+      "n_subjects": 70,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+        "n_total": 70,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 70
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 50.96,
+                    "sd": 20.61
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 16.53,
+                    "maximum": 82.05
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "50.96±20.61 (16.53-82.05)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 40.1,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "40.1-104",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [
+              {
+                "gene": "CYP3A5",
+                "variant": null,
+                "diplotype": null,
+                "phenotype": null,
+                "n": null,
+                "proportion": null,
+                "assay": null,
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+                  "confidence": 0.7
+                }
+              }
+            ],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 9",
+              "evidence": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 9",
+          "evidence": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 9",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "Simplified 1 compartment with no absorption or volume",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": []
+          },
+          "description": "Simplified 1 compartment with no absorption or volume"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "Simplified 1 compartment with no absorption or volume Steady-state oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": [],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Panomvana",
+      "year": "2013",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+      "population_details": {
+        "raw": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+        "n_total": 70,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 70
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 50.96,
+                    "sd": 20.61
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 16.53,
+                    "maximum": 82.05
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "50.96±20.61 (16.53-82.05)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 40.1,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "40.1-104",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [
+              {
+                "gene": "CYP3A5",
+                "variant": null,
+                "diplotype": null,
+                "phenotype": null,
+                "n": null,
+                "proportion": null,
+                "assay": null,
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+                  "confidence": 0.7
+                }
+              }
+            ],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 9",
+              "evidence": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 9",
+          "evidence": "N: 70 (Thai) Age: 50.96±20.61 (16.53-82.05) WT: 40.1-104 CYP3A5*1/*1: 8 CYP3A5*1/*3: 28 CYP3A5*3/*3: 34",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 9",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“To determine the effects of CYP3A5 polymorphism on CBZ pharmacokinetic parameters when CBZ was used either as monotherapy or co-administered with PHT, PB or VPA”"
+    },
+    "covariates": {
+      "tested": ["CYP3A5", "WT", "BMI"],
+      "included": [],
+      "raw": "Tested: CYP3A5, WT, BMI Included: None"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:05:21.110Z"
+}

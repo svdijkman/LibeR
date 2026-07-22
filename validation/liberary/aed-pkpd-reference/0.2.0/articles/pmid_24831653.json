@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_24831653",
+  "pmid": "24831653",
+  "title": "Population pharmacokinetics of valproic acid in adult Chinese epileptic patients and its application in an individualized dosage regimen.",
+  "abstract": "",
+  "first_author": "Lin",
+  "year": "2015",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_24831653_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/lin-2015-24831653.pdf",
+    "sha256": "db714ceb93e4544faec22b60e5e7a2adbb0e6aec5d122098ae45f54a01bf6631"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

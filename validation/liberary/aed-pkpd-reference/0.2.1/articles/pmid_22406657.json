@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_22406657",
+  "pmid": "22406657",
+  "title": "Population pharmacokinetics of carbamazepine in elderly patients.",
+  "abstract": "",
+  "first_author": "Punyawudho",
+  "year": "2012",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_22406657_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/punyawudho-2012-22406657.pdf",
+    "sha256": "804c86c18c67e06b374aadc6845e281deabcb8643e070a28f38484d0cff570e9"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

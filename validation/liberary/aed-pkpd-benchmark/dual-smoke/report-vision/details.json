@@ -1,0 +1,549 @@
+[
+  {
+    "reference_id": "aed_cbz_16789986_m01",
+    "article_id": "pmid_16789986",
+    "pmid": "16789986",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 9,
+    "scalar_covered": 6,
+    "scalar_coverage": 0.666666666666667,
+    "scalar_score": 0.131687242798354,
+    "numeric_expected": 6,
+    "numeric_covered": 4,
+    "numeric_correct": 0,
+    "numeric_coverage": 0.666666666666667,
+    "numeric_accuracy": 0,
+    "unverified_numeric_extras": 2,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": false,
+          "score": 0
+        },
+        "population": {
+          "covered": true,
+          "score": 0.111111111111111
+        },
+        "route": {
+          "covered": true,
+          "score": 1
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": false,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.0740740740740741
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:3": {
+          "covered": false,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_cbz_21883329_m01",
+    "article_id": "pmid_21883329",
+    "pmid": "21883329",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_cbz_23996245_m01",
+    "article_id": "pmid_23996245",
+    "pmid": "23996245",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_cbz_27038098_m01",
+    "article_id": "pmid_27038098",
+    "pmid": "27038098",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_cbz_27785404_m01",
+    "article_id": "pmid_27785404",
+    "pmid": "27785404",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "D",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_cbz_28064419_m01",
+    "article_id": "pmid_28064419",
+    "pmid": "28064419",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "D",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_lmt_10930965_m01",
+    "article_id": "pmid_10930965",
+    "pmid": "10930965",
+    "compound": "LMT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_lvt_17851036_m01",
+    "article_id": "pmid_17851036",
+    "pmid": "17851036",
+    "compound": "LVT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_lvt_22669118_m01",
+    "article_id": "pmid_22669118",
+    "pmid": "22669118",
+    "compound": "LVT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_oxc_25220641_m01",
+    "article_id": "pmid_25220641",
+    "pmid": "25220641",
+    "compound": "OXC",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_oxc_25989891_m01",
+    "article_id": "pmid_25989891",
+    "pmid": "25989891",
+    "compound": "OXC",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_phb_15811169_m01",
+    "article_id": "pmid_15811169",
+    "pmid": "15811169",
+    "compound": "PHB",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_pht_16918714_m01",
+    "article_id": "pmid_16918714",
+    "pmid": "16918714",
+    "compound": "PHT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_pht_23670246_m01",
+    "article_id": "pmid_23670246",
+    "pmid": "23670246",
+    "compound": "PHT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_pht_25162219_m01",
+    "article_id": "pmid_25162219",
+    "pmid": "25162219",
+    "compound": "PHT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_pht_2921305_m01",
+    "article_id": "pmid_2921305",
+    "pmid": "2921305",
+    "compound": "PHT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_tpm_26395889_m01",
+    "article_id": "pmid_26395889",
+    "pmid": "26395889",
+    "compound": "TPM",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_vpa_10594867_m01",
+    "article_id": "pmid_10594867",
+    "pmid": "10594867",
+    "compound": "VPA",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_vpa_23784346_m01",
+    "article_id": "pmid_23784346",
+    "pmid": "23784346",
+    "compound": "VPA",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_vpa_25388986_m01",
+    "article_id": "pmid_25388986",
+    "pmid": "25388986",
+    "compound": "VPA",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_vpa_6804223_m01",
+    "article_id": "pmid_6804223",
+    "pmid": "6804223",
+    "compound": "VPA",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  },
+  {
+    "reference_id": "aed_zns_14646181_m01",
+    "article_id": "pmid_14646181",
+    "pmid": "14646181",
+    "compound": "ZNS",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": false,
+    "scalar_expected": null,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": null,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": null,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "missing_prediction": true
+    }
+  }
+]

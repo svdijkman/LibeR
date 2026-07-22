@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_23943382",
+  "pmid": "23943382",
+  "title": "Incorporation of physiologically based pharmacokinetic modeling in the evaluation of solubility requirements for the salt selection process: a case study using phenytoin.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/chiang-2013-23943382.pdf",
+    "sha256": "23ea04f83148f5673db6f7509859ef3f3c16104878eae522714667306ff3134a"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

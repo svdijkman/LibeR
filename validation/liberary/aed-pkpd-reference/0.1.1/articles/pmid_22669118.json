@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_22669118",
+  "pmid": "22669118",
+  "title": "",
+  "abstract": "",
+  "first_author": "Wang",
+  "year": "2012",
+  "compounds": "LVT",
+  "model_ids": "aed_lvt_22669118_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/wang-2012-22669118.pdf",
+    "sha256": "888fc33c448c724292f4188ee2ad4e21ebb511fb5936f671e46976f3636ad356"
+  },
+  "metadata_source": ""
+}

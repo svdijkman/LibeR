@@ -1,0 +1,630 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_10197296_m01",
+  "article_id": "pmid_10197296",
+  "pmid": "10197296",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_10197296",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 26,
+      "model_table": 2,
+      "model_row": 23
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/grasela-1999-10197296.pdf",
+      "sha256": "69263de76067d29a6493456c5dcc2fdda9ad627b1af55139d0236d7987b72f57"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Grasela 1999 10197296",
+    "population": "Matsuo: N:216 Age:33 (18-63) WT:- Messenheimer e.a.: N: 85 Age: 35 (18-64) WT:- Schachter e.a.: N:314 Age:35 (18-64) WT:-",
+    "model_type": "PK",
+    "objective": "“to explore the population pharmacokinetics of lamotrigine under clinical conditions of use and to validate the results of initial formal pharmacokinetic studies” and “to investigate the factors that may result in variability in lamotrigine pharmacokinetics”",
+    "covariates": "Tested: WT, HT, AGE, SEX, race, duration of treatment, concomitant antiepileptic medication, and use of oral contraceptives Included: WT, RACE, comedication, SEX on CL",
+    "observations": "Variance of CL after inclusion of covariates was relatively low, which should result in accurate model-based dosing guidance, although visually comparing observed vs predicted concentrations for base and final model does not reveal significant differences.",
+    "dose": "Steady-state and non-steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "CL/F=(theta1+theta2*WT)*(1+theta3*RACE)*(1+theta4*NAED)*(1+eta1) Vd/F=theta5*(1+theta6*(1-SEX))*(1+eta2) Ka=theta7*(1+eta3) F=1+theta8*TAB Cobs=Cipred*(1+eps1) RACE=ethnicity (1=Caucasian, 0=non-caucasian) NAED=categorical; number of concomitant AEDs out of: CBZ, PHT, PRM, PHB SEX=gender (1=male,0=female), converted from (1=female,0=male) TAB=Tablet formulation (1=yes, 0=no)",
+    "parameter_values": "theta1=2.43 theta2=0.0257 theta3=-0.254 theta4=0.131 theta5=132 theta6=-0.265 theta7=1.30 theta8=0.91 omega1= 0.104 omega2= 0.196 omega3= 0.601 sigma1= 0.0538",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of lamotrigine adjunctive therapy in adults with epilepsy.",
+      "compound": "LMT",
+      "population": "Matsuo: N:216 Age:33 (18-63) WT:- Messenheimer e.a.: N: 85 Age: 35 (18-64) WT:- Schachter e.a.: N:314 Age:35 (18-64) WT:-",
+      "route": "oral",
+      "n_subjects": 615,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "Matsuo: N:216 Age:33 (18-63) WT:- Messenheimer e.a.: N: 85 Age: 35 (18-64) WT:- Schachter e.a.: N:314 Age:35 (18-64) WT:-",
+        "n_total": 615,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "cohort_1",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 216
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 63
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "33 (18-63)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "- Messenheimer e.a.:",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 26",
+              "evidence": "N:216 Age:33 (18-63) WT:- Messenheimer e.a.:",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 85
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 64
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "35 (18-64)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "- Schachter e.a.:",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 26",
+              "evidence": "N: 85 Age: 35 (18-64) WT:- Schachter e.a.:",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_3",
+            "label": "cohort_3",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 314
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 64
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "35 (18-64)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 26",
+              "evidence": "N:314 Age:35 (18-64) WT:-",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 26",
+          "evidence": "Matsuo: N:216 Age:33 (18-63) WT:- Messenheimer e.a.: N: 85 Age: 35 (18-64) WT:- Schachter e.a.: N:314 Age:35 (18-64) WT:-",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state and non-steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 23",
+            "evidence": "Steady-state and non-steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "THETA3", "THETA4", "VD/F", "THETA6", "KA", "THETA8"]
+          },
+          "description": "1 compartment with linear absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment with linear absorption and elimination Steady-state and non-steady-state oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 2.43,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.0257,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": -0.254,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.131,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 132,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": -0.265,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 1.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": 0.91,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.104,
+            "reported_metric": "variance",
+            "value": 0.104,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.196,
+            "reported_metric": "variance",
+            "value": 0.196,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "",
+            "eta_index": 3,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.601,
+            "reported_metric": "variance",
+            "value": 0.601,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.0538,
+            "reported_metric": "variance",
+            "value": 0.0538,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "RACE", "comedication", "SEX on CL"],
+      "residual_error": "CL/F=(theta1+theta2*WT)*(1+theta3*RACE)*(1+theta4*NAED)*(1+eta1) Vd/F=theta5*(1+theta6*(1-SEX))*(1+eta2) Ka=theta7*(1+eta3) F=1+theta8*TAB Cobs=Cipred*(1+eps1) RACE=ethnicity (1=Caucasian, 0=non-caucasian) NAED=categorical; number of concomitant AEDs out of: CBZ, PHT, PRM, PHB SEX=gender (1=male,0=female), converted from (1=female,0=male) TAB=Tablet formulation (1=yes, 0=no)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Grasela",
+      "year": "1999",
+      "dose": "Steady-state and non-steady-state oral doses in patients",
+      "population": "Matsuo: N:216 Age:33 (18-63) WT:- Messenheimer e.a.: N: 85 Age: 35 (18-64) WT:- Schachter e.a.: N:314 Age:35 (18-64) WT:-",
+      "population_details": {
+        "raw": "Matsuo: N:216 Age:33 (18-63) WT:- Messenheimer e.a.: N: 85 Age: 35 (18-64) WT:- Schachter e.a.: N:314 Age:35 (18-64) WT:-",
+        "n_total": 615,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "cohort_1",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 216
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 63
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "33 (18-63)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "- Messenheimer e.a.:",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 26",
+              "evidence": "N:216 Age:33 (18-63) WT:- Messenheimer e.a.:",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 85
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 64
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "35 (18-64)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "- Schachter e.a.:",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 26",
+              "evidence": "N: 85 Age: 35 (18-64) WT:- Schachter e.a.:",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_3",
+            "label": "cohort_3",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 314
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 18,
+                    "maximum": 64
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "35 (18-64)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 26",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 26",
+              "evidence": "N:314 Age:35 (18-64) WT:-",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 26",
+          "evidence": "Matsuo: N:216 Age:33 (18-63) WT:- Messenheimer e.a.: N: 85 Age: 35 (18-64) WT:- Schachter e.a.: N:314 Age:35 (18-64) WT:-",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state and non-steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 23",
+            "evidence": "Steady-state and non-steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to explore the population pharmacokinetics of lamotrigine under clinical conditions of use and to validate the results of initial formal pharmacokinetic studies” and “to investigate the factors that may result in variability in lamotrigine pharmacokinetics”"
+    },
+    "covariates": {
+      "tested": ["WT", "HT", "AGE", "SEX", "race", "duration of treatment", "concomitant antiepileptic medication", "and use of oral contraceptives"],
+      "included": ["WT", "RACE", "comedication", "SEX on CL"],
+      "raw": "Tested: WT, HT, AGE, SEX, race, duration of treatment, concomitant antiepileptic medication, and use of oral contraceptives Included: WT, RACE, comedication, SEX on CL"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:22:54.124Z"
+}

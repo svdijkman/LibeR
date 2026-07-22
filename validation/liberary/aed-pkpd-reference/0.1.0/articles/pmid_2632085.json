@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_2632085",
+  "pmid": "2632085",
+  "title": "Clinical evaluation of population pharmacokinetic parameters in phenytoin dosage adjustment.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/yukawa-1989-2632085.pdf",
+    "sha256": "2106c587f5b6ff6e0cfc033b18486134ecf6ca564a2570bee2e745b7f2bb5833"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

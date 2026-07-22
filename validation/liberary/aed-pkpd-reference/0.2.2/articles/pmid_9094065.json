@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_9094065",
+  "pmid": "9094065",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ratanakorn",
+  "year": "1997",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_9094065_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/ratanakorn-1997-9094065.pdf",
+    "sha256": "9caa6b3641d64bc321d1eaab8ec668fabca0151c0777dee5c1d64b81f21333b1"
+  },
+  "metadata_source": ""
+}

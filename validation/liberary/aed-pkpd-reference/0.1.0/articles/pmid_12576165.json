@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_12576165",
+  "pmid": "12576165",
+  "title": "",
+  "abstract": "",
+  "first_author": "Dutta",
+  "year": "2003",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_12576165_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/dutta-2003-12576165.pdf",
+    "sha256": "1c4e213760829704e7409fce7f1bee067345c425b0045f9ade00e6def980b9b7"
+  },
+  "metadata_source": ""
+}

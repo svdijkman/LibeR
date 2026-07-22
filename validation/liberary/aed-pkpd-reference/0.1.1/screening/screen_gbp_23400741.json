@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_gbp_23400741",
+  "pmid": "23400741",
+  "compound_group": "GBP",
+  "partition": "validation",
+  "relevant_model": true,
+  "recoverable_model": true,
+  "exclusion_reason": null,
+  "label_quality": "included_appendix_model",
+  "source": {
+    "path": "Supplements/GBP/Supplement_GBP_v2.docx",
+    "sha256": "922652c49918dc87e50b709d515c179623d4472d610c7b4fa1f19f199a26ba5d"
+  }
+}

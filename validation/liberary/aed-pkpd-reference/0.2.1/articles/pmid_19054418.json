@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_19054418",
+  "pmid": "19054418",
+  "title": "Safety and pharmacokinetics of intravenous levetiracetam infusion as add-on in status epilepticus.",
+  "abstract": "",
+  "first_author": "Uges",
+  "year": "2009",
+  "compounds": "LVT",
+  "model_ids": "aed_lvt_19054418_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/uges-2009-19054418.pdf",
+    "sha256": "19831c51cb3147e1500fb418d912527ac3198857e9696a88f86379808b0ccde0"
+  },
+  "metadata_source": "Supplements/CLNZ/pubmed_result_eval_CLNZ.csv"
+}

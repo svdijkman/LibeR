@@ -1,0 +1,26 @@
+* text=auto
+
+*.R text eol=lf
+*.Rmd text eol=lf
+*.md text eol=lf
+*.Rd text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.h text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.svg text eol=lf
+*.dat text eol=lf
+*.mod text eol=lf
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+
+*.rds binary
+*.pdf binary
+*.png binary
+*.pptx binary
+*.potx binary

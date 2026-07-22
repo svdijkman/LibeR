@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_26670371",
+  "pmid": "26670371",
+  "title": "Application of Counter-propagation Artificial Neural Networks in Prediction of Topiramate Concentration in Patients with Epilepsy.",
+  "abstract": "",
+  "first_author": "Jovanovic",
+  "year": "2016",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_26670371_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/jovanovic-2016-26670371.pdf",
+    "sha256": "fd0d75c4884c0935e9c1ae11a0a46942c8fefc8c14cc458a138204fe95c8e8a9"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

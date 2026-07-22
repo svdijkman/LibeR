@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_16928154",
+  "pmid": "16928154",
+  "title": "Prediction of the clearance of eleven drugs and associated variability in neonates, infants and children.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/johnson-2006-16928154.pdf",
+    "sha256": "1c56a12fed94163a3946c88fb7834f34c61f30eeac63b8a4a1df0b930150eb86"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_25700977",
+  "pmid": "25700977",
+  "title": "Population pharmacokinetic modeling of oxcarbazepine active metabolite in Chinese patients with epilepsy.",
+  "abstract": "",
+  "first_author": "Yu",
+  "year": "2015",
+  "compounds": "OXC",
+  "model_ids": "aed_oxc_25700977_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/OXC/articles/yu-2015-25700977.pdf",
+    "sha256": "09b07525cd3a9dfeaf16d9cb86e79f511f80326bd354336874da36a098066bb0"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

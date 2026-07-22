@@ -1,0 +1,410 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_10996503_m01",
+  "article_id": "pmid_10996503",
+  "pmid": "10996503",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_10996503",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 24,
+      "model_table": 2,
+      "model_row": 20
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/gidal-2000-10996503.pdf",
+      "sha256": "31a8977877a994b058e002cf6dda58b86d70adec414d7286293dfe4c6e352d90"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Gidal 2000 10996503",
+    "population": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+    "model_type": "PK",
+    "objective": "“to assess population specific parameters for institutionalized developmentally disabled patients receiving LTG. Specifically, we sought to evaluate the pharmacokinetic interaction between VPA and LTG in these patients, and to determine if there is an effect of VPA concentration on the extent of the pharmacokinetic interaction”",
+    "covariates": "Tested: Age, gender, body weight, presence of tube feeding, VPA, inducers and multiple inducers. VPA/CBZ/PHT/PHB plasma concentrations. Included:WT, VPA, inducers and multiple inducers on CL",
+    "observations": "No relation found between comedication plasma concentration and extent of interaction with LMT clearance. No goodness of fit plots.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK",
+    "equations": "TVF1=theta1 if(VPA>0) TVF1=theta2 CL/F=(TVF1+theta3*IND+theta4*POLY)*(1+eta1) Css-ipred=(Dose/Tau)/(CL/F) Cobs=Css-ipred*(1+eps1) VPA: comedication with valproate (in mg/day) IND: comedication with 1 inducer (CBZ/PHT/PHB) (yes=1, no=0) POLY: comedication with more than 1 inducer (yes=1,no=0)",
+    "parameter_values": "theta1=0.176 theta2=0.063 theta3=2.19 theta4=3.20 omega1=0.058 sigma1=0.59",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Lack of an effect of valproate concentration on lamotrigine pharmacokinetics in developmentally disabled patients with epilepsy.",
+      "compound": "LMT",
+      "population": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+      "route": "oral",
+      "n_subjects": 26,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+        "n_total": 26,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 26
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 33.6,
+                    "sd": 11.3
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 10,
+                    "maximum": 61
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "33.6±11.3 (10-61)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 47,
+                    "sd": 9.9
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "47±9.9",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 24",
+              "evidence": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 24",
+          "evidence": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 20",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["TVF1", "THETA3", "THETA4"]
+          },
+          "description": "Simplified PK"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "TVF1",
+            "typical": 0.176,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "TVF1",
+            "typical": 0.063,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 2.19,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 3.2,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "TVF1",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.058,
+            "reported_metric": "variance",
+            "value": 0.058,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.59,
+            "reported_metric": "variance",
+            "value": 0.59,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "VPA", "inducers and multiple inducers on CL"],
+      "residual_error": "TVF1=theta1 if(VPA>0) TVF1=theta2 CL/F=(TVF1+theta3*IND+theta4*POLY)*(1+eta1) Css-ipred=(Dose/Tau)/(CL/F) Cobs=Css-ipred*(1+eps1) VPA: comedication with valproate (in mg/day) IND: comedication with 1 inducer (CBZ/PHT/PHB) (yes=1, no=0) POLY: comedication with more than 1 inducer (yes=1,no=0)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Gidal",
+      "year": "2000",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+      "population_details": {
+        "raw": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+        "n_total": 26,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 26
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 33.6,
+                    "sd": 11.3
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 10,
+                    "maximum": 61
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "33.6±11.3 (10-61)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 47,
+                    "sd": 9.9
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 24",
+                  "evidence": "47±9.9",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 24",
+              "evidence": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 24",
+          "evidence": "N: 26 (USA) Age: 33.6±11.3 (10-61) WT: 47±9.9",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 20",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to assess population specific parameters for institutionalized developmentally disabled patients receiving LTG. Specifically, we sought to evaluate the pharmacokinetic interaction between VPA and LTG in these patients, and to determine if there is an effect of VPA concentration on the extent of the pharmacokinetic interaction”"
+    },
+    "covariates": {
+      "tested": ["Age", "gender", "body weight", "presence of tube feeding", "VPA", "inducers and multiple inducers. VPA/CBZ/PHT/PHB plasma concentrations."],
+      "included": ["WT", "VPA", "inducers and multiple inducers on CL"],
+      "raw": "Tested: Age, gender, body weight, presence of tube feeding, VPA, inducers and multiple inducers. VPA/CBZ/PHT/PHB plasma concentrations. Included:WT, VPA, inducers and multiple inducers on CL"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:09.369Z"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_12235444",
+  "pmid": "12235444",
+  "title": "Evaluation of potential losartan-phenytoin drug interactions in healthy volunteers.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/fisher-2002-12235444.pdf",
+    "sha256": "3d5c85042fe15cbea97b61c832ff9996888b1c6a4b2c4a7149fdcd231699e81c"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

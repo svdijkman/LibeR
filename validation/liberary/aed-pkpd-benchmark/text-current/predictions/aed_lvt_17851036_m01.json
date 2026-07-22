@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_lvt_17851036_m01",
+  "screening_id": null,
+  "article_id": "pmid_17851036",
+  "pmid": "17851036",
+  "source_pdf_sha256": "96b88719c1d430afdf131309c59aad77661a7b22b0557e5215ef5220089df1d7",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:39:49.621Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Modeling and simulation of intravenous levetiracetam pharmacokinetic profiles in children to evaluate dose adaptation rules",
+    "compound": "levetiracetam",
+    "population": "children, adults",
+    "route": "intravenous",
+    "n_subjects": null,
+    "software": "NONMEM V level 1.1, Trial Simulator TS2 version 2.1.2",
+    "estimation_method": "First Order Conditional Estimation (FOCE) with INTERACTION option",
+    "model_type": "two-compartment model for intravenous administration",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 2,
+      "description": "Two-compartment intravenous model"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "CL",
+          "typical": 4.16,
+          "se": 0.112,
+          "unit": "L/h"
+        },
+        {
+          "name": "CLCR exponent",
+          "typical": 0.857,
+          "se": 0.276,
+          "unit": null
+        },
+        {
+          "name": "Dose exponent",
+          "typical": -0.185,
+          "se": 0.0737,
+          "unit": null
+        },
+        {
+          "name": "Vdss",
+          "typical": 43.6,
+          "se": 1.03,
+          "unit": "L"
+        },
+        {
+          "name": "BW exponent",
+          "typical": 1.07,
+          "se": 0.152,
+          "unit": null
+        },
+        {
+          "name": "K12",
+          "typical": 1.09,
+          "se": 0.229,
+          "unit": "h^-1"
+        },
+        {
+          "name": "K21",
+          "typical": 1.92,
+          "se": 0.161,
+          "unit": "h^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Inter-compartment rate constant K12 and K21 variability",
+          "parameter": "K12, K21",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.843,
+          "reported_metric": "cv_percent",
+          "value": 104,
+          "conversion": "sqrt(OMEGA) = log(1 + (0.843^2))"
+        },
+        {
+          "description": "Steady-state volume of distribution Vdss variability",
+          "parameter": "Vdss",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.19,
+          "reported_metric": "cv_percent",
+          "value": 2.4,
+          "conversion": "sqrt(OMEGA) = log(1 + (0.19^2))"
+        },
+        {
+          "description": "Clearance CL variability",
+          "parameter": "CL",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "iiv",
+          "reported_value": 0.125,
+          "reported_metric": "cv_percent",
+          "value": 2.7,
+          "conversion": "sqrt(OMEGA) = log(1 + (0.125^2))"
+        },
+        {
+          "description": "Residual error variability for Ctrough, Cmax and AUC",
+          "parameter": "sigma",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": null,
+          "variability_level": "other",
+          "reported_value": 0.147,
+          "reported_metric": "cv_percent",
+          "value": 15,
+          "conversion": "sqrt(OMEGA) = log(1 + (0.147^2))"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 3,
+          "col_eta": 4,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error for Ctrough, Cmax and AUC",
+          "error_model": "log_additive",
+          "reported_value": 0.147,
+          "reported_metric": "cv_percent",
+          "value": 15,
+          "conversion": "sqrt(OMEGA) = log(1 + (0.147^2))"
+        }
+      ]
+    },
+    "covariates": [
+      "BW exponent",
+      "CLCR exponent",
+      "Dose exponent"
+    ],
+    "residual_error": "log_additive",
+    "confidence": {
+      "overall": 0.95,
+      "fields": {
+        "structure": 0.95,
+        "parameters": 0.95,
+        "population": 0.95,
+        "software": 0.95
+      }
+    },
+    "evidence_quotes": [
+      "The population pharmacokinetic two-compartment model successfully described intravenous levetiracetam pharmacokinetics in healthy adults.",
+      "After combination with the oral pediatric population model, steady-state concentrations at the end of 15-, 30- and 60 min b.i.d. levetiracetam intravenous infusions in children were predicted to be 29—41, 17—24 and 6—13% higher than those observed after oral dosing of 30 mg/kg b.i.d.",
+      "The combined model predicted that steady-state peak plasma concentrations and AUC␶ in children receiving 30 mg/kg twice daily as 15 min intravenous infusions were within the range of predicted and observed Cmax,ss and AUC␶ values of adults receiving 15 min intravenous infusions of 1500 mg levetiracetam."
+    ],
+    "notes": "The model was developed based on adult intravenous data and pediatric oral data. The two-compartment intravenous model parameterization allowed combining it with the one-compartment pediatric model of oral levetiracetam. The model was successfully qualified in children, as the predicted steady-state pharmacokinetic parameters matched those observed in adults."
+  },
+  "variants": {
+    "text": {
+      "title": "Modeling and simulation of intravenous levetiracetam pharmacokinetic profiles in children to evaluate dose adaptation rules",
+      "compound": "levetiracetam",
+      "population": "children, adults",
+      "route": "intravenous",
+      "n_subjects": null,
+      "software": "NONMEM V level 1.1, Trial Simulator TS2 version 2.1.2",
+      "estimation_method": "First Order Conditional Estimation (FOCE) with INTERACTION option",
+      "model_type": "two-compartment model for intravenous administration",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 2,
+        "description": "Two-compartment intravenous model"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 4.16,
+            "se": 0.112,
+            "unit": "L/h"
+          },
+          {
+            "name": "CLCR exponent",
+            "typical": 0.857,
+            "se": 0.276,
+            "unit": null
+          },
+          {
+            "name": "Dose exponent",
+            "typical": -0.185,
+            "se": 0.0737,
+            "unit": null
+          },
+          {
+            "name": "Vdss",
+            "typical": 43.6,
+            "se": 1.03,
+            "unit": "L"
+          },
+          {
+            "name": "BW exponent",
+            "typical": 1.07,
+            "se": 0.152,
+            "unit": null
+          },
+          {
+            "name": "K12",
+            "typical": 1.09,
+            "se": 0.229,
+            "unit": "h^-1"
+          },
+          {
+            "name": "K21",
+            "typical": 1.92,
+            "se": 0.161,
+            "unit": "h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Inter-compartment rate constant K12 and K21 variability",
+            "parameter": "K12, K21",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.843,
+            "reported_metric": "cv_percent",
+            "value": 104,
+            "conversion": "sqrt(OMEGA) = log(1 + (0.843^2))"
+          },
+          {
+            "description": "Steady-state volume of distribution Vdss variability",
+            "parameter": "Vdss",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.19,
+            "reported_metric": "cv_percent",
+            "value": 2.4,
+            "conversion": "sqrt(OMEGA) = log(1 + (0.19^2))"
+          },
+          {
+            "description": "Clearance CL variability",
+            "parameter": "CL",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.125,
+            "reported_metric": "cv_percent",
+            "value": 2.7,
+            "conversion": "sqrt(OMEGA) = log(1 + (0.125^2))"
+          },
+          {
+            "description": "Residual error variability for Ctrough, Cmax and AUC",
+            "parameter": "sigma",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": null,
+            "variability_level": "other",
+            "reported_value": 0.147,
+            "reported_metric": "cv_percent",
+            "value": 15,
+            "conversion": "sqrt(OMEGA) = log(1 + (0.147^2))"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 3,
+            "col_eta": 4,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error for Ctrough, Cmax and AUC",
+            "error_model": "log_additive",
+            "reported_value": 0.147,
+            "reported_metric": "cv_percent",
+            "value": 15,
+            "conversion": "sqrt(OMEGA) = log(1 + (0.147^2))"
+          }
+        ]
+      },
+      "covariates": [
+        "BW exponent",
+        "CLCR exponent",
+        "Dose exponent"
+      ],
+      "residual_error": "log_additive",
+      "confidence": {
+        "overall": 0.95,
+        "fields": {
+          "structure": 0.95,
+          "parameters": 0.95,
+          "population": 0.95,
+          "software": 0.95
+        }
+      },
+      "evidence_quotes": [
+        "The population pharmacokinetic two-compartment model successfully described intravenous levetiracetam pharmacokinetics in healthy adults.",
+        "After combination with the oral pediatric population model, steady-state concentrations at the end of 15-, 30- and 60 min b.i.d. levetiracetam intravenous infusions in children were predicted to be 29—41, 17—24 and 6—13% higher than those observed after oral dosing of 30 mg/kg b.i.d.",
+        "The combined model predicted that steady-state peak plasma concentrations and AUC␶ in children receiving 30 mg/kg twice daily as 15 min intravenous infusions were within the range of predicted and observed Cmax,ss and AUC␶ values of adults receiving 15 min intravenous infusions of 1500 mg levetiracetam."
+      ],
+      "notes": "The model was developed based on adult intravenous data and pediatric oral data. The two-compartment intravenous model parameterization allowed combining it with the one-compartment pediatric model of oral levetiracetam. The model was successfully qualified in children, as the predicted steady-state pharmacokinetic parameters matched those observed in adults."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

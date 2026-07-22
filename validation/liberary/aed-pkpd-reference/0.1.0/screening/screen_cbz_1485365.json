@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_cbz_1485365",
+  "pmid": "1485365",
+  "compound_group": "CBZ",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/CBZ/articles/exclude/albani-1992-1485365.pdf",
+    "sha256": "80998732bda0a6d2edff9d4da2d9af4b659df6351b32c6ed959fc79d30cfad0d"
+  }
+}

@@ -1,0 +1,11 @@
+# Project-local compiler prefix for the installed Rtools toolchain.
+# Set R_MAKEVARS_USER to this file when building from a non-interactive shell.
+PATH := /usr/bin:/x86_64-w64-mingw32.static.posix/bin:$(PATH)
+export PATH
+
+RTOOLS_BIN = C:/rtools45/x86_64-w64-mingw32.static.posix/bin
+BINPREF = $(RTOOLS_BIN)/
+CC = $(RTOOLS_BIN)/gcc.exe -B $(RTOOLS_BIN)/
+CXX17 = $(RTOOLS_BIN)/g++.exe -B $(RTOOLS_BIN)/
+FC = $(RTOOLS_BIN)/gfortran.exe -B $(RTOOLS_BIN)/
+F77 = $(RTOOLS_BIN)/gfortran.exe -B $(RTOOLS_BIN)/

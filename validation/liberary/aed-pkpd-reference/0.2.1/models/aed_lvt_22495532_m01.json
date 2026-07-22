@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lvt_22495532_m01",
+  "article_id": "pmid_22495532",
+  "pmid": "22495532",
+  "model_index": 1,
+  "compound_group": "LVT",
+  "family_id": "pmid_22495532",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LVT/Supplement_LVT_v2.docx",
+      "sha256": "366f9c59b71d28cdbc53b4e37282f611af800ea34a400f4eb82946c22c5dd24b",
+      "study_table": 1,
+      "study_row": 9,
+      "model_table": 2,
+      "model_row": 5
+    },
+    "publication_pdf": {
+      "path": "Supplements/LVT/articles/sharpe-2012-22495532.pdf",
+      "sha256": "dfad3b3caf341cbf6d347e7f9018d602422de68c147c70c8fe4d91333c172b41"
+    },
+    "metadata_csv": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+  },
+  "raw": {
+    "citation": "Sharpe 2012 22495532",
+    "population": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+    "model_type": "PK",
+    "objective": "To describe LVT pharmacokinetics in neonates",
+    "covariates": "Included: WT on CL and Vd, AGE on CL",
+    "observations": "Due to the mathematical description of clearance increase due to age in days, it is unsure if the clearance keeps rising in that manner after 5 days after being born. The model seems to work well for their specific population, but may not predict as well for older neonates, let alone infants and older patients. The statistical and covariate model are not fully described, which makes our description of the model in the next table only an approximation.",
+    "dose": "Intravenous multiple doses in patients",
+    "structure": "1 compartment with linear elimination and no absorption (IV)",
+    "equations": "Vd/F=theta1*WT CL/F=theta2*WT*((AGE/5)**theta3)* (1+eta1) Cobs=Cipred *The exact covariate model was not described, we have aimed to approximate as best as possible using the available information in the paper. Furthermore, no information on the statistical model was given, other than that eta was only estimated for CL AGE is in days after being born",
+    "parameter_values": "theta1=0.979 theta2=1.35 theta3=0.399 omega1= 0.14",
+    "validation": "Yes (bootstrap of 1000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "A seven-day study of the pharmacokinetics of intravenous levetiracetam in neonates: marked changes in pharmacokinetics occur during the first week of life.",
+      "compound": "LVT",
+      "population": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+      "route": "intravenous",
+      "n_subjects": 18,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+        "n_total": 18,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 18
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 2.4,
+                    "sd": 1.4
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "(days): 2.4±1.4 (1-5)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 3.24,
+                    "sd": 0.471
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 2.55,
+                    "maximum": 4.65
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "(kg): 3.24±0.471 (2.55-4.65)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 9",
+              "evidence": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 9",
+          "evidence": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "intravenous",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Intravenous multiple doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 5",
+            "evidence": "Intravenous multiple doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment with linear elimination and no absorption (IV)",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "intravenous",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["VD/F", "CL/F", "THETA3"]
+          },
+          "description": "1 compartment with linear elimination and no absorption (IV)"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment with linear elimination and no absorption (IV) Intravenous multiple doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Vd/F",
+            "typical": 0.979,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 1.35,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.399,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Vd/F",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.14,
+            "reported_metric": "variance",
+            "value": 0.14,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["WT on CL and Vd", "AGE on CL"],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Sharpe",
+      "year": "2012",
+      "dose": "Intravenous multiple doses in patients",
+      "population": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+      "population_details": {
+        "raw": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+        "n_total": 18,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 18
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 2.4,
+                    "sd": 1.4
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "(days): 2.4±1.4 (1-5)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 3.24,
+                    "sd": 0.471
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 2.55,
+                    "maximum": 4.65
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 9",
+                  "evidence": "(kg): 3.24±0.471 (2.55-4.65)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 9",
+              "evidence": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 9",
+          "evidence": "N: 18 (USA) Neonates AGE (days): 2.4±1.4 (1-5) WT (kg): 3.24±0.471 (2.55-4.65)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "intravenous",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Intravenous multiple doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 5",
+            "evidence": "Intravenous multiple doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "To describe LVT pharmacokinetics in neonates"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["WT on CL and Vd", "AGE on CL"],
+      "raw": "Included: WT on CL and Vd, AGE on CL"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:05:23.692Z"
+}

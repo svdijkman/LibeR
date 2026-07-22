@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_phb_17304159_m01",
+  "article_id": "pmid_17304159",
+  "pmid": "17304159",
+  "model_index": 1,
+  "compound_group": "PHB",
+  "family_id": "pmid_17304159",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHB/Supplement_PHB_v2.docx",
+      "sha256": "39bb55d9429e37117ffc07563feb43f6c8dd7efc1640282803c2fed77f0ba449",
+      "study_table": 1,
+      "study_row": 10,
+      "model_table": 2,
+      "model_row": 11
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHB/articles/goto-2007-17304159.pdf",
+      "sha256": "4bf24aeb4d362b7d1e35c7dda9c49266a47809cda293d902af1d27568be4e5be"
+    },
+    "metadata_csv": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+  },
+  "raw": {
+    "citation": "Goto 2007 17304159",
+    "population": "N: 70 (Japanese) Age: ~13±~8 (0.8-43.8) WT: ~34±~16 (8.5-80.2) [CYP2C19] Homozygous EM: 33 Heterozygous EM: 30 PM: 16 [CYP2C9] *1/*1: 74 *1/*3: 5",
+    "model_type": "PK",
+    "objective": "“to clarify whether CYP2C9 and/or CYP2C19 polymorphisms affect the pharmacokinetics of PB”",
+    "covariates": "Tested: WT, AGE, SEX, PHB daily dose, CYP2C9 and CYP2C19 genotypes, AED coadministration, severe or profound mental retardation (SMID) Included: WT, CYP2C9 genotype, VPA and PHT coadministration, SMID",
+    "observations": "Mental retardation is correlated with a 15% drop in clearance. CYP2C9 does, but CYP2C19 does not influence PHB clearance. No GOF plots given, making evaluation of their fit difficult.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with first order absorption and elimination",
+    "equations": "CL/F=theta2*((WT/40)**theta3)*(theta4**CYP2C9)*(theta5**VPA)*(theta6**PHT) *(theta7**SMID)*(1+eta2) Vd/F=theta1*(1+eta1) KA=theta3 Cobs=Cipred+eps1 KA was not reported, here set to 2 /hour CYP2C9 is genetic polymorphism (CYP2C9*1*3=1, other=0) VPA is comedication with valproic acid (yes=1, no=0) PHT is comedication with phenytoin (yes=1, no=0) SMID is 1 if complications of severe or profound mental retardation with a signiﬁcant behavior impairment are presented, otherwise it is 0",
+    "parameter_values": "theta1=14.78 theta2=0.23 theta3=0.21 theta4=0.53 theta5=0.68 theta6=0.85 theta7=0.85 omega1=2.93 omega2=0.03 sigma1=12.2",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population estimation of the effects of cytochrome P450 2C9 and 2C19 polymorphisms on phenobarbital clearance in Japanese.",
+      "compound": "PHB",
+      "population": "N: 70 (Japanese) Age: ~13±~8 (0.8-43.8) WT: ~34±~16 (8.5-80.2) [CYP2C19] Homozygous EM: 33 Heterozygous EM: 30 PM: 16 [CYP2C9] *1/*1: 74 *1/*3: 5",
+      "route": "oral",
+      "n_subjects": 70,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with first order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Vd/F",
+            "typical": 14.78,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 0.23,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.21,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.53,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.68,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.85,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 0.85,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Vd/F",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 2.93,
+            "reported_metric": "variance",
+            "value": 2.93,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "CL/F",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.03,
+            "reported_metric": "variance",
+            "value": 0.03,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 12.2,
+            "reported_metric": "variance",
+            "value": 12.2,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "CYP2C9 genotype", "VPA and PHT coadministration", "SMID"],
+      "residual_error": "CL/F=theta2*((WT/40)**theta3)*(theta4**CYP2C9)*(theta5**VPA)*(theta6**PHT) *(theta7**SMID)*(1+eta2) Vd/F=theta1*(1+eta1) KA=theta3 Cobs=Cipred+eps1 KA was not reported, here set to 2 /hour CYP2C9 is genetic polymorphism (CYP2C9*1*3=1, other=0) VPA is comedication with valproic acid (yes=1, no=0) PHT is comedication with phenytoin (yes=1, no=0) SMID is 1 if complications of severe or profound mental retardation with a signiﬁcant behavior impairment are presented, otherwise it is 0",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Goto",
+      "year": "2007",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 70 (Japanese) Age: ~13±~8 (0.8-43.8) WT: ~34±~16 (8.5-80.2) [CYP2C19] Homozygous EM: 33 Heterozygous EM: 30 PM: 16 [CYP2C9] *1/*1: 74 *1/*3: 5",
+      "objective": "“to clarify whether CYP2C9 and/or CYP2C19 polymorphisms affect the pharmacokinetics of PB”"
+    },
+    "covariates": {
+      "tested": ["WT", "AGE", "SEX", "PHB daily dose", "CYP2C9 and CYP2C19 genotypes", "AED coadministration", "severe or profound mental retardation (SMID)"],
+      "included": ["WT", "CYP2C9 genotype", "VPA and PHT coadministration", "SMID"],
+      "raw": "Tested: WT, AGE, SEX, PHB daily dose, CYP2C9 and CYP2C19 genotypes, AED coadministration, severe or profound mental retardation (SMID) Included: WT, CYP2C9 genotype, VPA and PHT coadministration, SMID"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:56.286Z"
+}

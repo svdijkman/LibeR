@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_16197654",
+  "pmid": "16197654",
+  "title": "Carbamazepine extended-release capsules vs. oxcarbazepine: computer simulations of the effect of missed doses on drug plasma concentrations.",
+  "abstract": "",
+  "first_author": "Ahmad",
+  "year": "2005",
+  "compounds": "OXC",
+  "model_ids": "aed_oxc_16197654_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/OXC/articles/ahmad-2005-16197654.pdf",
+    "sha256": "cc2a4ad9bfac85c1e45ec8a8a62b6cc6345b0842066e51066aee51920a6ad84d"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

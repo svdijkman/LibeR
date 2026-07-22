@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23670246",
+  "pmid": "23670246",
+  "title": "The quantitative effect of serum albumin, serum urea, and valproic acid on unbound phenytoin concentrations in children.",
+  "abstract": "",
+  "first_author": "Ter heine",
+  "year": "2014",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_23670246_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/terheine-2014-23670246.pdf",
+    "sha256": "ecb7c2dc4e0b2d38459e4bdfeedcff4980df640f3152aa4159d130b2a5ba883e"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

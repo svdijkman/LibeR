@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_1969339",
+  "pmid": "1969339",
+  "title": "Phenytoin protein binding in pediatric patients with acute traumatic injury.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/griebel-1990-1969339.pdf",
+    "sha256": "de493b6a6f43c980e306600e6029fc89a94c9b4970f2a992d2c10c8428c7d941"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

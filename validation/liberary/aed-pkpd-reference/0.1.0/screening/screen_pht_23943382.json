@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_23943382",
+  "pmid": "23943382",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/chiang-2013-23943382.pdf",
+    "sha256": "23ea04f83148f5673db6f7509859ef3f3c16104878eae522714667306ff3134a"
+  }
+}

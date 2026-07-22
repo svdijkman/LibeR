@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_11714214_m01",
+  "article_id": "pmid_11714214",
+  "pmid": "11714214",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_11714214",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 18,
+      "model_table": 2,
+      "model_row": 21
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/spruill-2001-11714214.pdf",
+      "sha256": "d38b27debd6d2e1632016a95f2d1ccd96d2023ad6c346485d02ef7fa6b636aa3"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Spruill 2001 11714214",
+    "population": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+    "model_type": "PK",
+    "objective": "“we compared predicted phenytoin serum concentrations using three Michaelis-Menten pharmacokinetic dosing methods with actual concentrations obtained from physician dosing in an outpatient neurology practice”",
+    "covariates": "Tested: - Included: -",
+    "observations": "Population-based parameter values were used to calculate doses and compared to those calculated by physicians. In general, a Bayesian method that takes into account the previous information seems to perform more optimally. The impact of the time of sampling was not taken into account by applying time dependent kinetics, thereby possibly reducing the accuracy of the calculated dosing algorithm.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK",
+    "equations": "Km=(dose1-dose2)/((dose1/conc1)-(dose2/conc2)) Vm=(dose2*(Km+conc2))/conc2 PD=(Vm*NTC)/(Km+NTC) The above requires 2 concentrations (conc1/2) being measured over 2 separate dosing events (dose1/2). Based on this algorithm, the predicted dose (PD) in mg/day to reach a normal therapeutic concentration (NTC, for example 15 mg/L) can be calculated.",
+    "parameter_values": "-",
+    "validation": "No/Yes (validated on 16 subjects)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+      "route": "oral",
+      "n_subjects": 40,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+        "n_total": 40,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 40
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 12,
+                    "maximum": 85
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 18",
+                  "evidence": "43.4 (12-85)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 73,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 18",
+                  "evidence": "~73±~44",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 18",
+              "evidence": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 18",
+          "evidence": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 21",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": []
+          },
+          "description": "Simplified PK"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": [],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Spruill",
+      "year": "2001",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+      "population_details": {
+        "raw": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+        "n_total": 40,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 40
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 12,
+                    "maximum": 85
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 18",
+                  "evidence": "43.4 (12-85)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 73,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 18",
+                  "evidence": "~73±~44",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 18",
+              "evidence": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 18",
+          "evidence": "N: 40 (USA) Age: 43.4 (12-85) WT: ~73±~44",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 21",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“we compared predicted phenytoin serum concentrations using three Michaelis-Menten pharmacokinetic dosing methods with actual concentrations obtained from physician dosing in an outpatient neurology practice”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": [],
+      "raw": "Tested: - Included: -"
+    },
+    "validation": {
+      "raw": "No/Yes (validated on 16 subjects)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:05:25.705Z"
+}

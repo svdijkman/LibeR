@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_8491236",
+  "pmid": "8491236",
+  "title": "",
+  "abstract": "",
+  "first_author": "Miller",
+  "year": "1993",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_8491236_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/miller-1993-8491236.pdf",
+    "sha256": "47a066972e1000c83bba3249c92ccc7e6ffd3ad1391df6a1180c200c5f7432c7"
+  },
+  "metadata_source": ""
+}

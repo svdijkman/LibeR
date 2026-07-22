@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_22660444_m01",
+  "article_id": "pmid_22660444",
+  "pmid": "22660444",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_22660444",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 12,
+      "model_table": 2,
+      "model_row": 10
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/mallaysamy-2013-22660444.pdf",
+      "sha256": "7eb0cb3db4c52ade5fbbb42d0a73afe3ee92139e14122f502fdbdf146f40a79b"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Mallaysamy 2013 22660444 Bockbrader 2011 21314678",
+    "population": "N: 95 (Indian) Age: 35 (18-60) WT: 62 (38-82)",
+    "model_type": "PK",
+    "objective": "“to characterize the population PK in Indian epileptic patients, and to confirm known (e,g, valproate and carbamazepine) and identify potential new predictors of IIV in LTG PK.”, “to investigate the need for dose adjustments based on identified covariates and to compare the PK of LTG between Indian and Caucasian patients”",
+    "covariates": "Included: WT, CBZ, VPA on CL",
+    "observations": "Typical clearance of Indian patients similar to Caucasian reported values.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "CL/F=theta1*(1+theta4*CBZ)*(1+theta5*VPA)*(1+theta6*(WT-62))*exp(eta1) Vd/F=theta2*exp(eta2) Ka=theta3 Cobs=Cipred*(1+eps1)+eps2 Although the covariate effect of WT on CL was given as ((1+theta6)*(WT-62)), this would not make sense. Here it was converted to what the authors probably meant.",
+    "parameter_values": "theta1=2.27 theta2=56.3 theta3=0.380 theta4=0.466 theta5=-0.383 theta6=0.0124 omega1= 0.174 omega2= 0.0895 sigma1= 0.00334 sigma2=0.122",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of lamotrigine in Indian epileptic patients.",
+      "compound": "LMT",
+      "population": "N: 95 (Indian) Age: 35 (18-60) WT: 62 (38-82)",
+      "route": "oral",
+      "n_subjects": 95,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 2.27,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 56.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.466,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": -0.383,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.0124,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.174,
+            "reported_metric": "variance",
+            "value": 0.174,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Vd/F",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0895,
+            "reported_metric": "variance",
+            "value": 0.0895,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.00334,
+            "reported_metric": "variance",
+            "value": 0.00334,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 0.122,
+            "reported_metric": "variance",
+            "value": 0.122,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "CBZ", "VPA on CL"],
+      "residual_error": "CL/F=theta1*(1+theta4*CBZ)*(1+theta5*VPA)*(1+theta6*(WT-62))*exp(eta1) Vd/F=theta2*exp(eta2) Ka=theta3 Cobs=Cipred*(1+eps1)+eps2 Although the covariate effect of WT on CL was given as ((1+theta6)*(WT-62)), this would not make sense. Here it was converted to what the authors probably meant.",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Mallaysamy",
+      "year": "2013",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 95 (Indian) Age: 35 (18-60) WT: 62 (38-82)",
+      "objective": "“to characterize the population PK in Indian epileptic patients, and to confirm known (e,g, valproate and carbamazepine) and identify potential new predictors of IIV in LTG PK.”, “to investigate the need for dose adjustments based on identified covariates and to compare the PK of LTG between Indian and Caucasian patients”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["WT", "CBZ", "VPA on CL"],
+      "raw": "Included: WT, CBZ, VPA on CL"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:54.761Z"
+}

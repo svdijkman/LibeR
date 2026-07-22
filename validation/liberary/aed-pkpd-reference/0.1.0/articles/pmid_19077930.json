@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_19077930",
+  "pmid": "19077930",
+  "title": "",
+  "abstract": "",
+  "first_author": "Carlsson",
+  "year": "2009",
+  "compounds": "GBP",
+  "model_ids": "aed_gbp_19077930_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/GBP/articles/carlsson-2009-19077930.pdf",
+    "sha256": "270c2f40ad8d3b7be4c045b0cf092f6674febf3fbe8a90f09179767d22576e5a"
+  },
+  "metadata_source": ""
+}

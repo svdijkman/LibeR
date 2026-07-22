@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_17497143",
+  "pmid": "17497143",
+  "title": "Lamotrigine in children and adolescents: the impact of age on its serum concentrations and on the extent of drug interactions.",
+  "abstract": "",
+  "first_author": "Reimers",
+  "year": "2007",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_17497143_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/reimers-2007-17497143.pdf",
+    "sha256": "91a10fc202a9cd4ffb921ee8e266e43158074326f5c5f40189adba841090a76f"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

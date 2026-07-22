@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lvt_26913593_m01",
+  "article_id": "pmid_26913593",
+  "pmid": "26913593",
+  "model_index": 1,
+  "compound_group": "LVT",
+  "family_id": "pmid_26913593",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LVT/Supplement_LVT_v2.docx",
+      "sha256": "366f9c59b71d28cdbc53b4e37282f611af800ea34a400f4eb82946c22c5dd24b",
+      "study_table": null,
+      "study_row": null,
+      "model_table": 2,
+      "model_row": 2
+    },
+    "publication_pdf": {
+      "path": "Supplements/LVT/articles/ito-2016-26913593.pdf",
+      "sha256": "048d6cefa7f72e0e2fc5856927f103cf3dd95c867f916a264637bfda3b03586a"
+    },
+    "metadata_csv": "Supplements/LVT/pubmed_result_eval_LVT.csv"
+  },
+  "raw": {
+    "citation": "Ito 2016 26913593",
+    "population": "",
+    "model_type": "",
+    "objective": "",
+    "covariates": "",
+    "observations": "",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "Ka=theta1*exp(eta1) DOS=(DD/WT)**0.75 CL/F=theta2*((WT/70)**0.75)*((eGFR/100)**theta3)*(1+theta4*(DOS/59.3))*exp(eta2) Vd/F=0.753*WT Cobs=Cipred*(1+eps1) DD=daily dose of LVT in mg/day eGFR=estimated glomular filtrition rate",
+    "parameter_values": "theta1=0.384 theta2=4.33 theta3=0.638 theta4=0.175 omega1=0.10 omega2=0.13 sigma1=0.10",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population Pharmacokinetic Modeling of Levetiracetam in Pediatric and Adult Patients With Epilepsy by Using Routinely Monitored Data.",
+      "compound": "LVT",
+      "population": null,
+      "route": "oral",
+      "n_subjects": null,
+      "software": null,
+      "estimation_method": null,
+      "model_type": null,
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 0.384,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 4.33,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.638,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.175,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Ka",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.1,
+            "reported_metric": "variance",
+            "value": 0.1,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "CL/F",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.13,
+            "reported_metric": "variance",
+            "value": 0.13,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.1,
+            "reported_metric": "variance",
+            "value": 0.1,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "Ka=theta1*exp(eta1) DOS=(DD/WT)**0.75 CL/F=theta2*((WT/70)**0.75)*((eGFR/100)**theta3)*(1+theta4*(DOS/59.3))*exp(eta2) Vd/F=0.753*WT Cobs=Cipred*(1+eps1) DD=daily dose of LVT in mg/day eGFR=estimated glomular filtrition rate",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Ito",
+      "year": "2016",
+      "dose": "Steady-state oral doses in patients",
+      "population": "",
+      "objective": ""
+    },
+    "covariates": {
+      "tested": [],
+      "included": [],
+      "raw": ""
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:47.029Z"
+}

@@ -1,0 +1,402 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_27038098_m01",
+  "article_id": "pmid_27038098",
+  "pmid": "27038098",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_27038098",
+  "partition": "test",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 5,
+      "model_table": 2,
+      "model_row": 5
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/majid-2016-27038098.pdf",
+      "sha256": "cea1db6fca38f751f15a4524b4b2b4942e69b5c94a2b0c49cbf984230154f50d"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Majid 2016 27038098",
+    "population": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+    "model_type": "PK",
+    "objective": "“to confirm the expectation that perampanel has no perpetrator effects on other AEDs, and this was addressed via population-based modelling of data”",
+    "covariates": "Tested: CBZ daily dose, comedication with other AEDs (and PRMP) on CL Included: CBZ daily dose, comedication with VPA and PRMP on CL",
+    "observations": "Perampanel has a small statistically relevant, yet clinically irrelevant (<5%) impact on CBZ CL. Due to the focus on comedication, WT and age were not included as covariates.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified 1 compartment with no absorption",
+    "equations": "if(OCC==1) et1=exp(eta1) if(OCC==2) et1=exp(eta1+eta2) CL/F=(theta1+theta2*CBZD+theta3*VPA+theta4*PRMPD)*et1 Cobs=(R0/(CL/F))*(1+eps1) #reasonable assumptions were made on the manner in which covariates, IIV and IOV were described, as this information was not provided in the paper nor its supplement R0 is the total daily CBZ dose per 24 hours CBZD: daily dose of CBZ in mg/day PRMPD: daily perampanel dose in mg/day VPA: comedication with valproic acid (1: yes, 0: no) SEX: gender (female: 0, male: 1)",
+    "parameter_values": "theta1=0.375 theta2=0.00347 theta3=0.125 theta4=0.00357 omega1=0.0512 omega2=0.0246 sigma1=0.0167",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Impact of perampanel on pharmacokinetics of concomitant antiepileptics in patients with partial-onset seizures: pooled analysis of clinical trials.",
+      "compound": "CBZ",
+      "population": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+      "route": "oral",
+      "n_subjects": 379,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+        "n_total": 379,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 379
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 32.8,
+                    "sd": 12.8
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 5",
+                  "evidence": "32.8±12.8",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 68.2,
+                    "sd": 17.7
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 5",
+                  "evidence": "68.2±17.7",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 5",
+              "evidence": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 5",
+          "evidence": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 5",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "Simplified 1 compartment with no absorption",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "THETA3", "THETA4"]
+          },
+          "description": "Simplified 1 compartment with no absorption"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "Simplified 1 compartment with no absorption Steady-state oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.375,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.00347,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.125,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.00357,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0512,
+            "reported_metric": "variance",
+            "value": 0.0512,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0246,
+            "reported_metric": "variance",
+            "value": 0.0246,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.0167,
+            "reported_metric": "variance",
+            "value": 0.0167,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["CBZ daily dose", "comedication with VPA and PRMP on CL"],
+      "residual_error": "if(OCC==1) et1=exp(eta1) if(OCC==2) et1=exp(eta1+eta2) CL/F=(theta1+theta2*CBZD+theta3*VPA+theta4*PRMPD)*et1 Cobs=(R0/(CL/F))*(1+eps1) #reasonable assumptions were made on the manner in which covariates, IIV and IOV were described, as this information was not provided in the paper nor its supplement R0 is the total daily CBZ dose per 24 hours CBZD: daily dose of CBZ in mg/day PRMPD: daily perampanel dose in mg/day VPA: comedication with valproic acid (1: yes, 0: no) SEX: gender (female: 0, male: 1)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Majid",
+      "year": "2016",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+      "population_details": {
+        "raw": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+        "n_total": 379,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 379
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 32.8,
+                    "sd": 12.8
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 5",
+                  "evidence": "32.8±12.8",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 68.2,
+                    "sd": 17.7
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 5",
+                  "evidence": "68.2±17.7",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 5",
+              "evidence": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 5",
+          "evidence": "N: 379 (USA) Age: 32.8±12.8 WT: 68.2±17.7",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 5",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to confirm the expectation that perampanel has no perpetrator effects on other AEDs, and this was addressed via population-based modelling of data”"
+    },
+    "covariates": {
+      "tested": ["CBZ daily dose", "comedication with other AEDs (and PRMP) on CL"],
+      "included": ["CBZ daily dose", "comedication with VPA and PRMP on CL"],
+      "raw": "Tested: CBZ daily dose, comedication with other AEDs (and PRMP) on CL Included: CBZ daily dose, comedication with VPA and PRMP on CL"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:22:51.729Z"
+}

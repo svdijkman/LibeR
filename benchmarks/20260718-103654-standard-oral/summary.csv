@@ -1,0 +1,5 @@
+"engine","workload","method","repeats","median_end_to_end_seconds","min_end_to_end_seconds","max_end_to_end_seconds","median_core_seconds","median_noncore_overhead_seconds","median_fit_seconds","median_covariance_seconds","optimizer_backend","objective_backend","median_population_parameter_evaluations","median_population_shared_state_hits","median_objective_evaluations","median_gradient_evaluations","median_conditional_evaluations","median_tape_retapes"
+"LibeRation","estimation","FO",1,0.59,0.59,0.59,0.31,0.28,0.29,0.02,"r-l-bfgs-b-cpp-objective","persistent-cpp-population-objective",28,28,28,28,5147,0
+"LibeRation","estimation","FOCEI",1,0.76,0.76,0.76,0.48,0.28,0.37,0.11,"r-l-bfgs-b-cpp-objective","persistent-cpp-population-objective",11,11,11,11,61884,0
+"LibeRation","estimation","LAPLACE",1,0.87,0.87,0.87,0.59,0.28,0.4,0.19,"r-l-bfgs-b-cpp-objective","persistent-cpp-population-objective",10,10,10,10,60350,0
+"LibeRation","simulation","SIMULATION",1,1.19,1.19,1.19,0.9,0.29,,,"","",,,,,,

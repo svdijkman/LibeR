@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_17240061",
+  "pmid": "17240061",
+  "title": "Nimodipine restores the altered hippocampal phenytoin pharmacokinetics in a refractory epileptic model.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/hocht-2007-17240061.pdf",
+    "sha256": "c1c26856725e56f3bc3f107e8f8c8c17704b15c4264aec88fff39bf0f7bb51f4"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_3132550",
+  "pmid": "3132550",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/higuchi-1987-3132550.pdf",
+    "sha256": "e6172a50aaa3ea6203c524a991dfbbc628124d6458f7a7d97a1681ccc079b1f8"
+  }
+}

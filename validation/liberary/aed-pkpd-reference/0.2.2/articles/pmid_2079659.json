@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2079659",
+  "pmid": "2079659",
+  "title": "Application of the NONMEM method to evaluation of the bioavailability of drug products.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/kaniwa-1990-2079659.pdf",
+    "sha256": "f3c5bb5e431c6c71f254696f2ba89ff239cacb9261c0e57748942cc874e09bcd"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_25162219",
+  "pmid": "25162219",
+  "title": "",
+  "abstract": "",
+  "first_author": "Yamamoto",
+  "year": "2015",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_25162219_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/yamamoto-2015-25162219.pdf",
+    "sha256": "5bd7279b9299925084a73305e3b49b6d49cb7d64b02c73b2a15b2c2604a45b51"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2318914",
+  "pmid": "2318914",
+  "title": "",
+  "abstract": "",
+  "first_author": "Hudson",
+  "year": "1990",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_2318914_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/hudson-1990-2318914.pdf",
+    "sha256": "da59fcb0f5f422377c6f4cc574fda59d0bf13140c0d83c20dad17f386fca3b90"
+  },
+  "metadata_source": ""
+}

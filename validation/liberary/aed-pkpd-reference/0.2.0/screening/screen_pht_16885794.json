@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_16885794",
+  "pmid": "16885794",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/wolf-2006-16885794.pdf",
+    "sha256": "58fbd12d00a1bb8df22a4d399d6083335f255831984d9add7d994d9882c37bf6"
+  }
+}

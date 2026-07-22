@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_16789993",
+  "pmid": "16789993",
+  "title": "",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "2006",
+  "compounds": ["PHB", "PHT"],
+  "model_ids": ["aed_phb_16789993_m01", "aed_pht_16789993_m01"],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/yukawa-2006-16789993.pdf",
+    "sha256": "fb76af5a9b77eb0e0abc59304728760b4efda532ee6aad26f3a6d254d710ef15"
+  },
+  "metadata_source": ""
+}

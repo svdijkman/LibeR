@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_11714214",
+  "pmid": "11714214",
+  "title": "",
+  "abstract": "",
+  "first_author": "Spruill",
+  "year": "2001",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_11714214_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/spruill-2001-11714214.pdf",
+    "sha256": "d38b27debd6d2e1632016a95f2d1ccd96d2023ad6c346485d02ef7fa6b636aa3"
+  },
+  "metadata_source": ""
+}

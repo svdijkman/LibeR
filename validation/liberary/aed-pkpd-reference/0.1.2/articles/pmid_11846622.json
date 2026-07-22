@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_11846622",
+  "pmid": "11846622",
+  "title": "",
+  "abstract": "",
+  "first_author": "El Desoky",
+  "year": "2002",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_11846622_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/el desoky-2002-11846622.pdf",
+    "sha256": "5de70646662dd0f364af82c2a4f53c632161ecb208dead9d17bd7598b810261b"
+  },
+  "metadata_source": ""
+}

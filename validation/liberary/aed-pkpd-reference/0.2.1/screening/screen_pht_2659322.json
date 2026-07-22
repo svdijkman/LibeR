@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_2659322",
+  "pmid": "2659322",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/zaccara-1989-2659322.pdf",
+    "sha256": "c36bf7074a01e01ffa7948326544067f250388e798d89ca8774822bed6f9d9a0"
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_9108639_m01",
+  "article_id": "pmid_9108639",
+  "pmid": "9108639",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_9108639",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 30,
+      "model_table": 2,
+      "model_row": 33
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/delgado-1997-9108639.pdf",
+      "sha256": "13fd72de568b101f556b5927e098f79c5ae14bb8fe84a6e63a30651af36aca3c"
+    },
+    "metadata_csv": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+  },
+  "raw": {
+    "citation": "Delgado-Iribanegaray 1997 9108639",
+    "population": "Initial N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78) Validation N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+    "model_type": "PK",
+    "objective": "“evaluate the effects of sex, total body weight (TBW), age, polytherapy, and CBZ dose on CBZ clearance (CL) in children by using sparse data collected during routine clinical care.”",
+    "covariates": "WT, age, CBZ dose, phenobarbital comedication on CL . WT on Vd",
+    "observations": "Large residual variance, model seems accurate (unbiased) but imprecise. Although the model seems to predict well for the population, much unexplained variability remains. Dosing guidelines provided by the authors should probably be followed up with TDM and Bayesian dose adjustments",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment, linear absorption and elimination",
+    "equations": "CL/F=(theta1*WT + theta2*Dose)*(Age**theta3)*(1+theta4*PHB)*(1+eta1) Vd/F=theta5*WT Ka=theta6 F=0.85 Cobs=Cipred + eps1 Dose=CBZ dose (mg/kg/day) PHB= comedication with phenobarbital alone (yes =1, no=0)",
+    "parameter_values": "theta1=0.0122 theta2=0.0467 theta3=0.331 theta4=0.289 theta5=1.5 theta6=0.65 omega1=0.118 sigma1=1.52",
+    "validation": "No / Yes"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Carbamazepine population pharmacokinetics in children: mixed-effect models.",
+      "compound": "CBZ",
+      "population": "Initial N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78) Validation N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+      "route": "oral",
+      "n_subjects": 275,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "Initial N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78) Validation N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+        "n_total": 275,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Initial",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 201
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 14
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "9.5 (1 – 14)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 9,
+                    "maximum": 78
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "35 (9-78)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 30",
+              "evidence": "N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78)",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "Validation",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 74
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 14
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "9.8 (1-14)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 11,
+                    "maximum": 70
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "39.8 (11-70)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 30",
+              "evidence": "N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 30",
+          "evidence": "Initial N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78) Validation N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 33",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment, linear absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "THETA3", "THETA4", "VD/F", "KA"]
+          },
+          "description": "1 compartment, linear absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "1-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment, linear absorption and elimination Steady-state oral doses in patients",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.0122,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.0467,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.331,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.289,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 1.5,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.65,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.118,
+            "reported_metric": "variance",
+            "value": 0.118,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 1.52,
+            "reported_metric": "variance",
+            "value": 1.52,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "CL/F=(theta1*WT + theta2*Dose)*(Age**theta3)*(1+theta4*PHB)*(1+eta1) Vd/F=theta5*WT Ka=theta6 F=0.85 Cobs=Cipred + eps1 Dose=CBZ dose (mg/kg/day) PHB= comedication with phenobarbital alone (yes =1, no=0)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Delgado-Iribanegaray",
+      "year": "1997",
+      "dose": "Steady-state oral doses in patients",
+      "population": "Initial N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78) Validation N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+      "population_details": {
+        "raw": "Initial N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78) Validation N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+        "n_total": 275,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Initial",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 201
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 14
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "9.5 (1 – 14)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 9,
+                    "maximum": 78
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "35 (9-78)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 30",
+              "evidence": "N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78)",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "Validation",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 74
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 14
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "9.8 (1-14)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 11,
+                    "maximum": 70
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 30",
+                  "evidence": "39.8 (11-70)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 30",
+              "evidence": "N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 30",
+          "evidence": "Initial N: 201 (Spain) Age: 9.5 (1 – 14) WT: 35 (9-78) Validation N: 74 (Spain) Age: 9.8 (1-14) WT: 39.8 (11-70)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 33",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“evaluate the effects of sex, total body weight (TBW), age, polytherapy, and CBZ dose on CBZ clearance (CL) in children by using sparse data collected during routine clinical care.”"
+    },
+    "covariates": {
+      "tested": ["WT", "age", "CBZ dose", "phenobarbital comedication on CL . WT on Vd"],
+      "included": [],
+      "raw": "WT, age, CBZ dose, phenobarbital comedication on CL . WT on Vd"
+    },
+    "validation": {
+      "raw": "No / Yes"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:22:52.496Z"
+}

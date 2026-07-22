@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_12472981",
+  "pmid": "12472981",
+  "title": "",
+  "abstract": "",
+  "first_author": "Park",
+  "year": "2002",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_12472981_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/park-2002-12472981.pdf",
+    "sha256": "0a83efdf685657b114a88650e1310a2ddd0402275b65c1ba69742ba957df3292"
+  },
+  "metadata_source": ""
+}

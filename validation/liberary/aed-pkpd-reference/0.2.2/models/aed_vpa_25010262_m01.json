@@ -1,0 +1,781 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_25010262_m01",
+  "article_id": "pmid_25010262",
+  "pmid": "25010262",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_25010262",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 7,
+      "model_table": 2,
+      "model_row": 8
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/ogungbenro-2014-25010262.pdf",
+      "sha256": "40c8a86f63b57ffdbff1db4bf12dcc83a40d6b2dcf71dba59cdcbb7bcf96f096"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Ogungbenro 2014 25010262",
+    "population": "---Adult--- N=364 Age: 18-79 WT: 70 ---Children--- N= 7-21 Age: 1-17",
+    "model_type": "PBPK [10 CMPS]",
+    "objective": "“…to develop a physiologically based pharmacokinetic model for plasma and tissue/organ prediction in children and adults following intravenous and oral dosing of Valproic acid.”",
+    "covariates": "Tested: organ/tissue WT and volumes, CO, BSA, HT, WT, HCT Included: WT. HT",
+    "observations": "ADULTS Prediction following multiple oral doses show slight over prediction of data by PBPK model. VPA plasma concentration are 8-9 times higher than in tissue/organs of both adults and children.",
+    "dose": "Single intravenous doses and multiple oral doses",
+    "structure": "10 compartment PBPK model (gut lumen, enterocyte, gut tissue, systemic blood, kidney, liver, brain, spleen, muscle and rest of body)",
+    "equations": "#”Variability on organ/tissue volumes was introduced via BW. Variability was also introduced on drug specific parameters such as ka, CLint_gluc_int, CLint_gluc_ren, Clint_gluc_hep, Clint_4ene_VPA, Clint_40H_VPA, CLin_50H_VPA, Clint_beta_oxid, N1, N2, K1 and K2. A lognormal distribution was assumed for all parameter with a coefficient of variation of 20%” #scaling of the parameters is not included in the following formulations. These may be retrieved from the cited literature in Ogungbenro et al. MW=theta1 B_P=theta2 fa=theta3 ka=theta4*exp(eta1) Vss=theta5 CL=theta6*exp(eta2) CLint_gluc_int=theta7*exp(eta3) CLint_gluc_ren=theta8*exp(eta4) CLint_gluc_hep=theta9*exp(eta5) CLint_beta_oxid=theta10*exp(eta6) CLint_4ene_VPA=theta11*exp(eta7) CLint_40H_VPA=theta12*exp(eta8) CLint_50H_VPA=theta13*exp(eta9) CLliv_tot=CLint_gluc_hep+CLint_beta_oxid+CLint_4ene_VPA+CLint_40H_VPA+CLint_50H_VPA N1=theta14 K1=theta15 N2=theta16 K2=theta17 V_p=theta18 V_kid=theta19 V_liv=theta20 V_gut=theta21 V_ent=theta22 V_br=theta23 V_sp=theta24 V_mu=theta25 V_T=V_ent+V_gut+V_kid+V_liv+V_br+V_sp+V_mu V_re=70-V_T Q_p=theta26#Cardiac Output : CO Q_kid=theta27 Q_liv=theta28 Q_gut=theta29 Q_ent=theta30 Q_br=theta31 Q_sp=theta32 Q_mu=theta33 Q_T=Q_ent+Q_gut+Q_kid+Q_liv+Q_br+Q_sp+Q_mu Q_re=Q_p-Q_T Kp_kid=theta34 Kp_liv=theta35 Kp_gut=theta36 Kp_br=theta37 Kp_sp=theta38 Kp_mu=theta39 Kp_re=theta40 #Differential Equations C_ent=A2/V_ent C_gut=A3/V_gut C_p=A4/V_p C_kid=A5/V_kid C_liv=A6/V_liv C_br=A7/V_br C_sp=A8/V_sp C_mu=A9/V_mu C_re=A10/V_re # Gut dA1/dt=-ka_Alum*A1#Lumen dA2/dt= -ka_Alum*A1 -Q_ent*C_ent -CLint_gluc_int*C_ent#Enterocyte dA3/dt= (Q_gut+Q_ent)*(C_p-(C_gut/Kp_gut)) #Gut tissue # Systemic Blood dA4/dt=(((Q_he+Q_gut+Q_ent+Q_sp)*C_liv)/Kp_liv) +((Q_kid*C_kid)/Kp_kid) +((Q_mu*C_mu)/Kp_mu) +((Q_br*C_br)/Kp_br) +((Q_re*C_re)/Kp_re) +(Q_he+Q_gut+Q_ent+Q_kid+Q_mu+Q_br+Q_sp+Q_re)*C_p # Kidney dA5/dt=Q_kid*(C_p-(C_kid/Kp_kid)) –((CLin_gluc_ren*C_kid*f_ub)/Kp_kid) # Liver dA6/dt=(Q_he*(C_p-(C_liv/Kp_liv))) + ((Q_gut+Q_ent)*C_gut)/Kp_gut) -(((Q_gut+Q_ent)*C_liv)/Kp_liv) +((Q_sp*C_sp)/Kp_sp) -((Q_sp*C_liv)/Kp_liv) +Q_ent*C_ent -(CLliv_tot*C_liv*f_ub)/Kp_liv # Brain dA7/dt=Q_br*(C_p-(C_br/Kp_br)) # Spleen dA8/dt=Q_sp*(C_p-(C_sp/Kp_sp)) # Muscle dA9/dt=Q_mu*(C_p-(C_mu/Kp_mu)) # Rest of body dA10/dt=Q_re*(C_p-(C_re/Kp_re)) Cipred=C_p Cobs=Cipred#no error model reported",
+    "parameter_values": "theta1=144.21 theta2=0.55 theta3=1 theta4=2.0 theta5=10 theta6=0.53 theta7= 0.0091 theta8= 7.09 theta9= 1.25 theta10= 7.61 theta11= 0.043 theta12= 1.10 theta13= 0.82 theta14= 1.54 theta15= 11.9 theta16=0.194 theta17=164 theta18=5.3 theta19=0.31 theta20=1.8 theta21=1.7 theta22=0.12 theta23=1.45 theta24=0.15 theta25=29 theta26=356.31 theta27=79.5 theta28=25.38 theta29=54.6 theta30=21.38 theta31=46.8 theta32=11.7 theta33=66.3 theta34=0.32 theta35=0.23 theta36=0.36 theta37=0.17 theta38=0.25 theta39=0.52 theta40=0.40 omega1=0.04 omega2=0.04 omega3=0.04 omega4=0.04 omega5=0.04 omega6=0.04 omega7=0.04 omega8=0.04 omega9=0.04",
+    "validation": "Yes, extrapolated to children"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "VPA",
+      "population": "---Adult--- N=364 Age: 18-79 WT: 70 ---Children--- N= 7-21 Age: 1-17",
+      "route": "intravenous",
+      "n_subjects": 371,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PBPK [10 CMPS]",
+      "population_details": {
+        "raw": "---Adult--- N=364 Age: 18-79 WT: 70 ---Children--- N= 7-21 Age: 1-17",
+        "n_total": 371,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Adult---",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 364
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 18,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "18-79",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 70,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "70 ---",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 7",
+              "evidence": "N=364 Age: 18-79 WT: 70 ---",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "Children---",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 7
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 1,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "1-17",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 7",
+              "evidence": "N= 7-21 Age: 1-17",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 7",
+          "evidence": "---Adult--- N=364 Age: 18-79 WT: 70 ---Children--- N= 7-21 Age: 1-17",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "intravenous",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single intravenous doses and multiple oral doses",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 8",
+            "evidence": "Single intravenous doses and multiple oral doses",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "10 compartment PBPK model (gut lumen, enterocyte, gut tissue, systemic blood, kidney, liver, brain, spleen, muscle and rest of body)",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "intravenous",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["MW", "B_P", "FA", "KA", "VSS", "CL", "CLINT_GLUC_INT", "CLINT_GLUC_REN", "CLINT_GLUC_HEP", "CLINT_BETA_OXID", "CLINT_4ENE_VPA", "CLINT_40H_VPA", "CLINT_50H_VPA", "N1", "K1", "N2", "K2", "V_P", "V_KID", "V_LIV", "V_GUT", "V_ENT", "V_BR", "V_SP", "V_MU", "Q_P", "Q_KID", "Q_LIV", "Q_GUT", "Q_ENT", "Q_BR", "Q_SP", "Q_MU", "KP_KID", "KP_LIV", "KP_GUT", "KP_BR", "KP_SP", "KP_MU", "KP_RE"]
+          },
+          "description": "10 compartment PBPK model (gut lumen, enterocyte, gut tissue, systemic blood, kidney, liver, brain, spleen, muscle and rest of body)"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "10 compartment PBPK model (gut lumen, enterocyte, gut tissue, systemic blood, kidney, liver, brain, spleen, muscle and rest of body) Single intravenous doses and multiple oral doses",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "MW",
+            "typical": 144.21,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "B_P",
+            "typical": 0.55,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "fa",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "ka",
+            "typical": 2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vss",
+            "typical": 10,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL",
+            "typical": 0.53,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CLint_gluc_int",
+            "typical": 0.0091,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CLint_gluc_ren",
+            "typical": 7.09,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CLint_gluc_hep",
+            "typical": 1.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CLint_beta_oxid",
+            "typical": 7.61,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CLint_4ene_VPA",
+            "typical": 0.043,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CLint_40H_VPA",
+            "typical": 1.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CLint_50H_VPA",
+            "typical": 0.82,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "N1",
+            "typical": 1.54,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K1",
+            "typical": 11.9,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "N2",
+            "typical": 0.194,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K2",
+            "typical": 164,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V_p",
+            "typical": 5.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V_kid",
+            "typical": 0.31,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V_liv",
+            "typical": 1.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V_gut",
+            "typical": 1.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V_ent",
+            "typical": 0.12,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V_br",
+            "typical": 1.45,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V_sp",
+            "typical": 0.15,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V_mu",
+            "typical": 29,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q_p",
+            "typical": 356.31,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q_kid",
+            "typical": 79.5,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q_liv",
+            "typical": 25.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q_gut",
+            "typical": 54.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q_ent",
+            "typical": 21.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q_br",
+            "typical": 46.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q_sp",
+            "typical": 11.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q_mu",
+            "typical": 66.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kp_kid",
+            "typical": 0.32,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kp_liv",
+            "typical": 0.23,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kp_gut",
+            "typical": 0.36,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kp_br",
+            "typical": 0.17,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kp_sp",
+            "typical": 0.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kp_mu",
+            "typical": 0.52,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kp_re",
+            "typical": 0.4,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "MW",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "B_P",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "fa",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "ka",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "Vss",
+            "eta_index": 5,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 6",
+            "parameter": "CL",
+            "eta_index": 6,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(6) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 7",
+            "parameter": "CLint_gluc_int",
+            "eta_index": 7,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(7) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 8",
+            "parameter": "CLint_gluc_ren",
+            "eta_index": 8,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(8) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 9",
+            "parameter": "CLint_gluc_hep",
+            "eta_index": 9,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(9) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.04,
+            "reported_metric": "variance",
+            "value": 0.04,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": "WT. HT",
+      "residual_error": "#”Variability on organ/tissue volumes was introduced via BW. Variability was also introduced on drug specific parameters such as ka, CLint_gluc_int, CLint_gluc_ren, Clint_gluc_hep, Clint_4ene_VPA, Clint_40H_VPA, CLin_50H_VPA, Clint_beta_oxid, N1, N2, K1 and K2. A lognormal distribution was assumed for all parameter with a coefficient of variation of 20%” #scaling of the parameters is not included in the following formulations. These may be retrieved from the cited literature in Ogungbenro et al. MW=theta1 B_P=theta2 fa=theta3 ka=theta4*exp(eta1) Vss=theta5 CL=theta6*exp(eta2) CLint_gluc_int=theta7*exp(eta3) CLint_gluc_ren=theta8*exp(eta4) CLint_gluc_hep=theta9*exp(eta5) CLint_beta_oxid=theta10*exp(eta6) CLint_4ene_VPA=theta11*exp(eta7) CLint_40H_VPA=theta12*exp(eta8) CLint_50H_VPA=theta13*exp(eta9) CLliv_tot=CLint_gluc_hep+CLint_beta_oxid+CLint_4ene_VPA+CLint_40H_VPA+CLint_50H_VPA N1=theta14 K1=theta15 N2=theta16 K2=theta17 V_p=theta18 V_kid=theta19 V_liv=theta20 V_gut=theta21 V_ent=theta22 V_br=theta23 V_sp=theta24 V_mu=theta25 V_T=V_ent+V_gut+V_kid+V_liv+V_br+V_sp+V_mu V_re=70-V_T Q_p=theta26#Cardiac Output : CO Q_kid=theta27 Q_liv=theta28 Q_gut=theta29 Q_ent=theta30 Q_br=theta31 Q_sp=theta32 Q_mu=theta33 Q_T=Q_ent+Q_gut+Q_kid+Q_liv+Q_br+Q_sp+Q_mu Q_re=Q_p-Q_T Kp_kid=theta34 Kp_liv=theta35 Kp_gut=theta36 Kp_br=theta37 Kp_sp=theta38 Kp_mu=theta39 Kp_re=theta40 #Differential Equations C_ent=A2/V_ent C_gut=A3/V_gut C_p=A4/V_p C_kid=A5/V_kid C_liv=A6/V_liv C_br=A7/V_br C_sp=A8/V_sp C_mu=A9/V_mu C_re=A10/V_re # Gut dA1/dt=-ka_Alum*A1#Lumen dA2/dt= -ka_Alum*A1 -Q_ent*C_ent -CLint_gluc_int*C_ent#Enterocyte dA3/dt= (Q_gut+Q_ent)*(C_p-(C_gut/Kp_gut)) #Gut tissue # Systemic Blood dA4/dt=(((Q_he+Q_gut+Q_ent+Q_sp)*C_liv)/Kp_liv) +((Q_kid*C_kid)/Kp_kid) +((Q_mu*C_mu)/Kp_mu) +((Q_br*C_br)/Kp_br) +((Q_re*C_re)/Kp_re) +(Q_he+Q_gut+Q_ent+Q_kid+Q_mu+Q_br+Q_sp+Q_re)*C_p # Kidney dA5/dt=Q_kid*(C_p-(C_kid/Kp_kid)) –((CLin_gluc_ren*C_kid*f_ub)/Kp_kid) # Liver dA6/dt=(Q_he*(C_p-(C_liv/Kp_liv))) + ((Q_gut+Q_ent)*C_gut)/Kp_gut) -(((Q_gut+Q_ent)*C_liv)/Kp_liv) +((Q_sp*C_sp)/Kp_sp) -((Q_sp*C_liv)/Kp_liv) +Q_ent*C_ent -(CLliv_tot*C_liv*f_ub)/Kp_liv # Brain dA7/dt=Q_br*(C_p-(C_br/Kp_br)) # Spleen dA8/dt=Q_sp*(C_p-(C_sp/Kp_sp)) # Muscle dA9/dt=Q_mu*(C_p-(C_mu/Kp_mu)) # Rest of body dA10/dt=Q_re*(C_p-(C_re/Kp_re)) Cipred=C_p Cobs=Cipred#no error model reported",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Ogungbenro",
+      "year": "2014",
+      "dose": "Single intravenous doses and multiple oral doses",
+      "population": "---Adult--- N=364 Age: 18-79 WT: 70 ---Children--- N= 7-21 Age: 1-17",
+      "population_details": {
+        "raw": "---Adult--- N=364 Age: 18-79 WT: 70 ---Children--- N= 7-21 Age: 1-17",
+        "n_total": 371,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Adult---",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 364
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 18,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "18-79",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 70,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "70 ---",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 7",
+              "evidence": "N=364 Age: 18-79 WT: 70 ---",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "Children---",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 7
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 1,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "1-17",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 7",
+              "evidence": "N= 7-21 Age: 1-17",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 7",
+          "evidence": "---Adult--- N=364 Age: 18-79 WT: 70 ---Children--- N= 7-21 Age: 1-17",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "intravenous",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single intravenous doses and multiple oral doses",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 8",
+            "evidence": "Single intravenous doses and multiple oral doses",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“…to develop a physiologically based pharmacokinetic model for plasma and tissue/organ prediction in children and adults following intravenous and oral dosing of Valproic acid.”"
+    },
+    "covariates": {
+      "tested": ["organ/tissue WT and volumes", "CO", "BSA", "HT", "WT", "HCT"],
+      "included": "WT. HT",
+      "raw": "Tested: organ/tissue WT and volumes, CO, BSA, HT, WT, HCT Included: WT. HT"
+    },
+    "validation": {
+      "raw": "Yes, extrapolated to children"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:22:58.456Z"
+}

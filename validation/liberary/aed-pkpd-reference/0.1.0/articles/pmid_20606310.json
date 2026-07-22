@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_20606310",
+  "pmid": "20606310",
+  "title": "A nonlinear mixed effects modelling analysis of topiramate pharmacokinetics in patients with epilepsy.",
+  "abstract": "",
+  "first_author": "Vovk",
+  "year": "2010",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_20606310_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/vovk-2010-20606310.pdf",
+    "sha256": "9d6e3b1f7fdd08d1a3f6f72299c51bd59430adf2de6a2443df060cdf29c88e33"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

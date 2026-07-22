@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_7989403",
+  "pmid": "7989403",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ismail",
+  "year": "1994",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_7989403_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/ismail-1994-7989403.pdf",
+    "sha256": "0adbfef77fd8c6bf6185e9ae8522324a9cb6bbc4e8f74f1a81310ba1d2bb6866"
+  },
+  "metadata_source": ""
+}

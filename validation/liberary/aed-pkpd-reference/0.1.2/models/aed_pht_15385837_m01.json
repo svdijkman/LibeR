@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_15385837_m01",
+  "article_id": "pmid_15385837",
+  "pmid": "15385837",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_15385837",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 16,
+      "model_table": 2,
+      "model_row": 18
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/hung-2004-15385837.pdf",
+      "sha256": "19fea4c3daa8713033e9f1f5a7382f554f41d419cefff9946ef6959d21628eb7"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Hung 2004 15385837",
+    "population": "N: 169 (Taiwan) Age: 38.5±12.75 WT: 61.92±13.25",
+    "model_type": "PK",
+    "objective": "“To explore the effect of genetic polymorphisms of CYP2C9 and CYP2C19 on the pharmacokinetics of phenytoin in Taiwanese, we performed a population pharmacokinetic analysis in adult patients with epilepsy under long-term phenytoin treatment”",
+    "covariates": "Tested: WT, HT, AGE, SEX, comedications, AST, ALT, bilirubin, albumin, creatinine, genotype (CYP2C9, CYP2C19) Included: WT, genotype (CYP2C9, CYP2C19)",
+    "observations": "Major metabolic differences were found between genotype groups. This may explain the large inter-individual differences in phenytoin disposition when not taking into account CYP genotypes. Unfortunately, the amount of reduction in unexplained inter-individual variability by including genotype as a covariate was not reported. Due to missing values for many parameters, the model cannot be used by others for simulations",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "2-compartment model with first-order absorption and michaelis menten elimination",
+    "equations": "if(GROUP==1){ tvVm=theta1 tvKm=theta2 } if(GROUP==2){ tvVm=theta3 tvKm=theta4 } if(GROUP==3){ tvVm=theta5 tvKm=theta6 } if(GROUP==4){ tvVm=theta7 tvKm=theta8 } if(GROUP==5){ tvVm=theta9 tvKm=theta10 } Vmax=tvVm*((WT/60)**theta11)*(1+eta1) Km=tvKm * (1+eta2) C=A(2)/V ‡ dA(1)/dt=-KA*A(1) dA(2)/dt=KA*A(1) –((VM*Css)/(KM+Css)) ‡The model reported by Hung et al describes the differential equations that include absorption. To be able to use these equations for simulations, parameter values for the absorption rate constant and the volume of distribution are needed, which were not reported, but could be used from other sources if necessary (e.g. Joerger et al, above). Unfortunately, also the power (theta11) included in the weight-scaling of Vmax is missing, as are values for the variance of inter-individual variability of Vmax and Km, and the intra-individual variability.",
+    "parameter_values": "theta1=10.01 theta2=8.15 theta3=9.77 theta4=9.03 theta5=9.18 theta6=9.38 theta7=6.31 theta8=10.38 theta9=5.43 theta10=15.63 theta11=? omega1=? omega2=? sigma1=?",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "N: 169 (Taiwan) Age: 38.5±12.75 WT: 61.92±13.25",
+      "route": "oral",
+      "n_subjects": 169,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 2,
+        "description": "2-compartment model with first-order absorption and michaelis menten elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "tvVm",
+            "typical": 10.01,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvKm",
+            "typical": 8.15,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvVm",
+            "typical": 9.77,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvKm",
+            "typical": 9.03,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvVm",
+            "typical": 9.18,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvKm",
+            "typical": 9.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvVm",
+            "typical": 6.31,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvKm",
+            "typical": 10.38,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvVm",
+            "typical": 5.43,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "tvKm",
+            "typical": 15.63,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["WT", "genotype (CYP2C9", "CYP2C19)"],
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Hung",
+      "year": "2004",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 169 (Taiwan) Age: 38.5±12.75 WT: 61.92±13.25",
+      "objective": "“To explore the effect of genetic polymorphisms of CYP2C9 and CYP2C19 on the pharmacokinetics of phenytoin in Taiwanese, we performed a population pharmacokinetic analysis in adult patients with epilepsy under long-term phenytoin treatment”"
+    },
+    "covariates": {
+      "tested": ["WT", "HT", "AGE", "SEX", "comedications", "AST", "ALT", "bilirubin", "albumin", "creatinine", "genotype (CYP2C9", "CYP2C19)"],
+      "included": ["WT", "genotype (CYP2C9", "CYP2C19)"],
+      "raw": "Tested: WT, HT, AGE, SEX, comedications, AST, ALT, bilirubin, albumin, creatinine, genotype (CYP2C9, CYP2C19) Included: WT, genotype (CYP2C9, CYP2C19)"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:31:48.504Z"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_19804822",
+  "pmid": "19804822",
+  "title": "The influence of drug-drug interaction and patients' characteristics on valproic acid's clearance in adults with epilepsy using nonlinear mixed effects modeling.",
+  "abstract": "",
+  "first_author": "Vucicevik",
+  "year": "2009",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_19804822_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/vucicevic-2009-19804822.pdf",
+    "sha256": "5ca75585ca0977ad70b5e97d5f36c611c3bb76e6dbf8099b9f041662dae6498d"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

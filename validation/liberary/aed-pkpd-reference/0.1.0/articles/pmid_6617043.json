@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_6617043",
+  "pmid": "6617043",
+  "title": "",
+  "abstract": "",
+  "first_author": "Grasela",
+  "year": "1983",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_6617043_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/grasela-1983-6617043.pdf",
+    "sha256": "5f85a2f0497d49d8409cc106af9b6fb3ae09164eaeaeb035c3b2ffc21c692f88"
+  },
+  "metadata_source": ""
+}

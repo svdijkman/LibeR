@@ -1,0 +1,2058 @@
+[
+  {
+    "reference_id": "aed_cbz_16789986_m01",
+    "article_id": "pmid_16789986",
+    "pmid": "16789986",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 9,
+    "scalar_covered": 7,
+    "scalar_coverage": 0.777777777777778,
+    "scalar_score": 0.384259259259259,
+    "numeric_expected": 6,
+    "numeric_covered": 6,
+    "numeric_correct": 2,
+    "numeric_coverage": 1,
+    "numeric_accuracy": 0.333333333333333,
+    "unverified_numeric_extras": 4,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": true,
+          "score": 0.0833333333333333
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 1
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.375
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:3": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_cbz_21883329_m01",
+    "article_id": "pmid_21883329",
+    "pmid": "21883329",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 8,
+    "scalar_covered": 8,
+    "scalar_coverage": 1,
+    "scalar_score": 0.437631578947368,
+    "numeric_expected": 6,
+    "numeric_covered": 3,
+    "numeric_correct": 1,
+    "numeric_coverage": 0.5,
+    "numeric_accuracy": 0.333333333333333,
+    "unverified_numeric_extras": 0,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": true,
+          "score": 0.08
+        },
+        "route": {
+          "covered": true,
+          "score": 1
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.421052631578947
+        },
+        "residual_error": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_cbz_23996245_m01",
+    "article_id": "pmid_23996245",
+    "pmid": "23996245",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 10,
+    "scalar_covered": 8,
+    "scalar_coverage": 0.8,
+    "scalar_score": 0.294722222222222,
+    "numeric_expected": 12,
+    "numeric_covered": 8,
+    "numeric_correct": 1,
+    "numeric_coverage": 0.666666666666667,
+    "numeric_accuracy": 0.125,
+    "unverified_numeric_extras": 3,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 0
+        },
+        "population": {
+          "covered": true,
+          "score": 0.0555555555555556
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.625
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.266666666666667
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:7": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:8": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:2": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_cbz_27038098_m01",
+    "article_id": "pmid_27038098",
+    "pmid": "27038098",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 10,
+    "scalar_covered": 8,
+    "scalar_coverage": 0.8,
+    "scalar_score": 0.2375,
+    "numeric_expected": 7,
+    "numeric_covered": 5,
+    "numeric_correct": 0,
+    "numeric_coverage": 0.714285714285714,
+    "numeric_accuracy": 0,
+    "unverified_numeric_extras": 1,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": false,
+          "score": 0
+        },
+        "population": {
+          "covered": true,
+          "score": 0
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.375
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0
+        },
+        "residual_error": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_cbz_27785404_m01",
+    "article_id": "pmid_27785404",
+    "pmid": "27785404",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "D",
+    "prediction_available": true,
+    "scalar_expected": 3,
+    "scalar_covered": 3,
+    "scalar_coverage": 1,
+    "scalar_score": 0.666666666666667,
+    "numeric_expected": 0,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": "NA",
+    "numeric_accuracy": "NA",
+    "unverified_numeric_extras": 3,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": []
+    }
+  },
+  {
+    "reference_id": "aed_cbz_28064419_m01",
+    "article_id": "pmid_28064419",
+    "pmid": "28064419",
+    "compound": "CBZ",
+    "partition": "test",
+    "tier": "D",
+    "prediction_available": true,
+    "scalar_expected": 2,
+    "scalar_covered": 2,
+    "scalar_coverage": 1,
+    "scalar_score": 0.928571428571429,
+    "numeric_expected": 0,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": "NA",
+    "numeric_accuracy": "NA",
+    "unverified_numeric_extras": 12,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 0.857142857142857
+        },
+        "compound": {
+          "covered": true,
+          "score": 1
+        }
+      },
+      "parameters": []
+    }
+  },
+  {
+    "reference_id": "aed_lmt_10930965_m01",
+    "article_id": "pmid_10930965",
+    "pmid": "10930965",
+    "compound": "LMT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 10,
+    "scalar_covered": 7,
+    "scalar_coverage": 0.7,
+    "scalar_score": 0.415966386554622,
+    "numeric_expected": 10,
+    "numeric_covered": 7,
+    "numeric_correct": 1,
+    "numeric_coverage": 0.7,
+    "numeric_accuracy": 0.142857142857143,
+    "unverified_numeric_extras": 5,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": false,
+          "score": 0
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.588235294117647
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.571428571428572
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:3": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": true
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_lvt_17851036_m01",
+    "article_id": "pmid_17851036",
+    "pmid": "17851036",
+    "compound": "LVT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 9,
+    "scalar_covered": 8,
+    "scalar_coverage": 0.888888888888889,
+    "scalar_score": 0.291358024691358,
+    "numeric_expected": 11,
+    "numeric_covered": 11,
+    "numeric_correct": 7,
+    "numeric_coverage": 1,
+    "numeric_accuracy": 0.636363636363636,
+    "unverified_numeric_extras": 3,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": true,
+          "score": 0
+        },
+        "route": {
+          "covered": true,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": false,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.222222222222222
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.4
+        },
+        "residual_error": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:4": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:5": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:6": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:7": {
+          "covered": true,
+          "correct": true
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:3": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_lvt_22669118_m01",
+    "article_id": "pmid_22669118",
+    "pmid": "22669118",
+    "compound": "LVT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 9,
+    "scalar_covered": 7,
+    "scalar_coverage": 0.777777777777778,
+    "scalar_score": 0.299329501915709,
+    "numeric_expected": 7,
+    "numeric_covered": 6,
+    "numeric_correct": 2,
+    "numeric_coverage": 0.857142857142857,
+    "numeric_accuracy": 0.333333333333333,
+    "unverified_numeric_extras": 4,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": true,
+          "score": 0.0689655172413793
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.625
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": true
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_oxc_25220641_m01",
+    "article_id": "pmid_25220641",
+    "pmid": "25220641",
+    "compound": "OXC",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 10,
+    "scalar_covered": 9,
+    "scalar_coverage": 0.9,
+    "scalar_score": 0.39187675070028,
+    "numeric_expected": 10,
+    "numeric_covered": 7,
+    "numeric_correct": 4,
+    "numeric_coverage": 0.7,
+    "numeric_accuracy": 0.571428571428571,
+    "unverified_numeric_extras": 3,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 0
+        },
+        "population": {
+          "covered": true,
+          "score": 0.0952380952380952
+        },
+        "route": {
+          "covered": true,
+          "score": 1
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.823529411764706
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:3": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": true
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_oxc_25989891_m01",
+    "article_id": "pmid_25989891",
+    "pmid": "25989891",
+    "compound": "OXC",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 10,
+    "scalar_covered": 10,
+    "scalar_coverage": 1,
+    "scalar_score": 0.397167755991285,
+    "numeric_expected": 13,
+    "numeric_covered": 6,
+    "numeric_correct": 3,
+    "numeric_coverage": 0.461538461538462,
+    "numeric_accuracy": 0.5,
+    "unverified_numeric_extras": 2,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 0
+        },
+        "population": {
+          "covered": true,
+          "score": 0
+        },
+        "route": {
+          "covered": true,
+          "score": 1
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.823529411764706
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.148148148148148
+        },
+        "residual_error": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:7": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:8": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:9": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": true
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": true
+        },
+        "omega_covariance:2,1": {
+          "covered": false,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_phb_15811169_m01",
+    "article_id": "pmid_15811169",
+    "pmid": "15811169",
+    "compound": "PHB",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 8,
+    "scalar_covered": 7,
+    "scalar_coverage": 0.875,
+    "scalar_score": 0.448529411764706,
+    "numeric_expected": 7,
+    "numeric_covered": 5,
+    "numeric_correct": 2,
+    "numeric_coverage": 0.714285714285714,
+    "numeric_accuracy": 0.4,
+    "unverified_numeric_extras": 2,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": false,
+          "score": 0
+        },
+        "route": {
+          "covered": true,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 1
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.588235294117647
+        },
+        "residual_error": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": false,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_pht_16918714_m01",
+    "article_id": "pmid_16918714",
+    "pmid": "16918714",
+    "compound": "PHT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 10,
+    "scalar_covered": 8,
+    "scalar_coverage": 0.8,
+    "scalar_score": 0.286666666666667,
+    "numeric_expected": 11,
+    "numeric_covered": 7,
+    "numeric_correct": 3,
+    "numeric_coverage": 0.636363636363636,
+    "numeric_accuracy": 0.428571428571429,
+    "unverified_numeric_extras": 3,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": true,
+          "score": 0
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.666666666666667
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.2
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:2": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:3": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_pht_23670246_m01",
+    "article_id": "pmid_23670246",
+    "pmid": "23670246",
+    "compound": "PHT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 8,
+    "scalar_covered": 7,
+    "scalar_coverage": 0.875,
+    "scalar_score": 0.429086538461538,
+    "numeric_expected": 4,
+    "numeric_covered": 4,
+    "numeric_correct": 2,
+    "numeric_coverage": 1,
+    "numeric_accuracy": 0.5,
+    "unverified_numeric_extras": 9,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": true,
+          "score": 0
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 1
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.125
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.307692307692308
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": true,
+          "correct": true
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_pht_25162219_m01",
+    "article_id": "pmid_25162219",
+    "pmid": "25162219",
+    "compound": "PHT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 7,
+    "scalar_covered": 6,
+    "scalar_coverage": 0.857142857142857,
+    "scalar_score": 0.0714285714285714,
+    "numeric_expected": 6,
+    "numeric_covered": 5,
+    "numeric_correct": 0,
+    "numeric_coverage": 0.833333333333333,
+    "numeric_accuracy": 0,
+    "unverified_numeric_extras": 16,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 0
+        },
+        "population": {
+          "covered": true,
+          "score": 0.166666666666667
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.333333333333333
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_pht_2921305_m01",
+    "article_id": "pmid_2921305",
+    "pmid": "2921305",
+    "compound": "PHT",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 8,
+    "scalar_covered": 5,
+    "scalar_coverage": 0.625,
+    "scalar_score": 0.145833333333333,
+    "numeric_expected": 8,
+    "numeric_covered": 6,
+    "numeric_correct": 2,
+    "numeric_coverage": 0.75,
+    "numeric_accuracy": 0.333333333333333,
+    "unverified_numeric_extras": 2,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 0
+        },
+        "population": {
+          "covered": false,
+          "score": 0
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 1
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.166666666666667
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_tpm_26395889_m01",
+    "article_id": "pmid_26395889",
+    "pmid": "26395889",
+    "compound": "TPM",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 8,
+    "scalar_covered": 8,
+    "scalar_coverage": 1,
+    "scalar_score": 0.349404761904762,
+    "numeric_expected": 7,
+    "numeric_covered": 7,
+    "numeric_correct": 5,
+    "numeric_coverage": 1,
+    "numeric_accuracy": 0.714285714285714,
+    "unverified_numeric_extras": 6,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": true,
+          "score": 0.2
+        },
+        "route": {
+          "covered": true,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 1
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.0952380952380952
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.5
+        },
+        "residual_error": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:4": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:5": {
+          "covered": true,
+          "correct": true
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_vpa_10594867_m01",
+    "article_id": "pmid_10594867",
+    "pmid": "10594867",
+    "compound": "VPA",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 10,
+    "scalar_covered": 8,
+    "scalar_coverage": 0.8,
+    "scalar_score": 0.504444444444444,
+    "numeric_expected": 9,
+    "numeric_covered": 3,
+    "numeric_correct": 0,
+    "numeric_coverage": 0.333333333333333,
+    "numeric_accuracy": 0,
+    "unverified_numeric_extras": 1,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 1
+        },
+        "population": {
+          "covered": true,
+          "score": 0
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 1
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.777777777777778
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.266666666666667
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:2": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:7": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_vpa_23784346_m01",
+    "article_id": "pmid_23784346",
+    "pmid": "23784346",
+    "compound": "VPA",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 9,
+    "scalar_covered": 9,
+    "scalar_coverage": 1,
+    "scalar_score": 0.314864329570212,
+    "numeric_expected": 24,
+    "numeric_covered": 19,
+    "numeric_correct": 1,
+    "numeric_coverage": 0.791666666666667,
+    "numeric_accuracy": 0.0526315789473684,
+    "unverified_numeric_extras": 2,
+    "details": {
+      "fields": {
+        "compound": {
+          "covered": true,
+          "score": 0
+        },
+        "population": {
+          "covered": true,
+          "score": 0.181818181818182
+        },
+        "route": {
+          "covered": true,
+          "score": 1
+        },
+        "n_subjects": {
+          "covered": true,
+          "score": 1
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.416666666666667
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0.235294117647059
+        },
+        "residual_error": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:7": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:8": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:9": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:10": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:11": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:12": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:13": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:14": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:3": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:4": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:5": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:6": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:7": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:8": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:9": {
+          "covered": true,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": true,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_vpa_25388986_m01",
+    "article_id": "pmid_25388986",
+    "pmid": "25388986",
+    "compound": "VPA",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 10,
+    "scalar_covered": 0,
+    "scalar_coverage": 0,
+    "scalar_score": 0,
+    "numeric_expected": 15,
+    "numeric_covered": 0,
+    "numeric_correct": 0,
+    "numeric_coverage": 0,
+    "numeric_accuracy": "NA",
+    "unverified_numeric_extras": 0,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": false,
+          "score": 0
+        },
+        "compound": {
+          "covered": false,
+          "score": 0
+        },
+        "population": {
+          "covered": false,
+          "score": 0
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": false,
+          "score": 0
+        },
+        "model_type": {
+          "covered": false,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": false,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": false,
+          "score": 0
+        },
+        "covariates": {
+          "covered": false,
+          "score": 0
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:2": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:7": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:8": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:9": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:10": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:11": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:12": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:13": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": false,
+          "correct": false
+        },
+        "sigma:1": {
+          "covered": false,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_vpa_6804223_m01",
+    "article_id": "pmid_6804223",
+    "pmid": "6804223",
+    "compound": "VPA",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 6,
+    "scalar_covered": 5,
+    "scalar_coverage": 0.833333333333333,
+    "scalar_score": 0.481481481481481,
+    "numeric_expected": 17,
+    "numeric_covered": 8,
+    "numeric_correct": 0,
+    "numeric_coverage": 0.470588235294118,
+    "numeric_accuracy": 0,
+    "unverified_numeric_extras": 4,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 0
+        },
+        "route": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.compartments": {
+          "covered": true,
+          "score": 1
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0.888888888888889
+        },
+        "residual_error": {
+          "covered": false,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:6": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:7": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:8": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:9": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:1": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:2": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:3": {
+          "covered": true,
+          "correct": false
+        },
+        "omega:4": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:5": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:6": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:7": {
+          "covered": false,
+          "correct": false
+        },
+        "omega:8": {
+          "covered": false,
+          "correct": false
+        }
+      }
+    }
+  },
+  {
+    "reference_id": "aed_zns_14646181_m01",
+    "article_id": "pmid_14646181",
+    "pmid": "14646181",
+    "compound": "ZNS",
+    "partition": "test",
+    "tier": "C",
+    "prediction_available": true,
+    "scalar_expected": 8,
+    "scalar_covered": 5,
+    "scalar_coverage": 0.625,
+    "scalar_score": 0.125,
+    "numeric_expected": 5,
+    "numeric_covered": 2,
+    "numeric_correct": 1,
+    "numeric_coverage": 0.4,
+    "numeric_accuracy": 0.5,
+    "unverified_numeric_extras": 5,
+    "details": {
+      "fields": {
+        "title": {
+          "covered": true,
+          "score": 1
+        },
+        "compound": {
+          "covered": true,
+          "score": 0
+        },
+        "population": {
+          "covered": false,
+          "score": 0
+        },
+        "route": {
+          "covered": false,
+          "score": 0
+        },
+        "n_subjects": {
+          "covered": false,
+          "score": 0
+        },
+        "model_type": {
+          "covered": true,
+          "score": 0
+        },
+        "structural_model.description": {
+          "covered": true,
+          "score": 0
+        },
+        "covariates": {
+          "covered": true,
+          "score": 0
+        }
+      },
+      "parameters": {
+        "theta:1": {
+          "covered": true,
+          "correct": true
+        },
+        "theta:2": {
+          "covered": true,
+          "correct": false
+        },
+        "theta:3": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:4": {
+          "covered": false,
+          "correct": false
+        },
+        "theta:5": {
+          "covered": false,
+          "correct": false
+        }
+      }
+    }
+  }
+]

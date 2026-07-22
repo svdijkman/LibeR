@@ -1,0 +1,402 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_17497143_m01",
+  "article_id": "pmid_17497143",
+  "pmid": "17497143",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_17497143",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 17,
+      "model_table": 2,
+      "model_row": 14
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/reimers-2007-17497143.pdf",
+      "sha256": "91a10fc202a9cd4ffb921ee8e266e43158074326f5c5f40189adba841090a76f"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Reimers 2007 17497143",
+    "population": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+    "model_type": "Simplified PK",
+    "objective": "“to investigate the impact of age and drug interactions on the C/D ratio of lamotrigine”",
+    "covariates": "Included: AGE, VPA, CBZ, CLBZ, LVT, fluoxetine, CLNZ, ethinyl estradiol, Age*CBZ",
+    "observations": "Method of relating C/D ratio with covariates, after log transformation of C/D ratio. Does allow for dosing calculations, although the influence of weight is taken into account indirectly. No goodness-of-fit plots provided, making it difficult to determine model performance. Similar model to that reported by Reimers in 2005, but with focus on age.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK",
+    "equations": "Css=DOSE*exp(theta1+theta2*AGE+theta3*VPA+theta4*CBZ+ theta5*CLBZ+theta6*LVT+theta7*FLUOX+theta8*CLNZ+theta9*ESTR+theta10*CBZ*AGE) VPA/CBZ/CLBZ/LVT/FLUOX/CLNZ/ESTR=comedication (yes =1, no=0) with: valproate/carbamazepine/clobazam/levetiracetam/fluoxetine/clonazepam/ethinyl estradiol DOSE is in mg/d Css is in µmol/L, to convert to mg/L, do: Css*0.256091",
+    "parameter_values": "theta1=-1.694 theta2=-0.062 theta3=1.013 theta4=-1.138 theta5=-0.278 theta6=0.324 theta7=-0.522 theta8=-0.340 theta9=-0.416 theta10=0.039",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Lamotrigine in children and adolescents: the impact of age on its serum concentrations and on the extent of drug interactions.",
+      "compound": "LMT",
+      "population": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+      "route": "oral",
+      "n_subjects": 296,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "Simplified PK",
+      "population_details": {
+        "raw": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+        "n_total": 296,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 296
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 2.4,
+                    "maximum": 19.9
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 17",
+                  "evidence": "13.8 (2.4-19.9)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 17",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 17",
+              "evidence": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 17",
+          "evidence": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 14",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "THETA3", "THETA4", "THETA5", "THETA6", "THETA7", "THETA8", "THETA9", "THETA10"]
+          },
+          "description": "Simplified PK"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": -1.694,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": -0.062,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 1.013,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": -1.138,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": -0.278,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 0.324,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": -0.522,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA8",
+            "typical": -0.34,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA9",
+            "typical": -0.416,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA10",
+            "typical": 0.039,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["AGE", "VPA", "CBZ", "CLBZ", "LVT", "fluoxetine", "CLNZ", "ethinyl estradiol", "Age*CBZ"],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Reimers",
+      "year": "2007",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+      "population_details": {
+        "raw": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+        "n_total": 296,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 296
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 2.4,
+                    "maximum": 19.9
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 17",
+                  "evidence": "13.8 (2.4-19.9)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 17",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 17",
+              "evidence": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 17",
+          "evidence": "N: 296 (Norway) Age: 13.8 (2.4-19.9) WT:-",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 14",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to investigate the impact of age and drug interactions on the C/D ratio of lamotrigine”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["AGE", "VPA", "CBZ", "CLBZ", "LVT", "fluoxetine", "CLNZ", "ethinyl estradiol", "Age*CBZ"],
+      "raw": "Included: AGE, VPA, CBZ, CLBZ, LVT, fluoxetine, CLNZ, ethinyl estradiol, Age*CBZ"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:05:23.099Z"
+}

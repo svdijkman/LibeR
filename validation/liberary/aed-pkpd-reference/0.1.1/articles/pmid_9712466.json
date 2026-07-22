@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9712466",
+  "pmid": "9712466",
+  "title": "",
+  "abstract": "",
+  "first_author": "Frame",
+  "year": "1998",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_9712466_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/frame-1998-9712466.pdf",
+    "sha256": "2f3e9b132560779c08acf2bd69aac325b5285f4c8c99c26a34fa0e8369830991"
+  },
+  "metadata_source": ""
+}

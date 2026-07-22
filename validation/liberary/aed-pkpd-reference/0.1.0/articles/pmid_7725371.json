@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_7725371",
+  "pmid": "7725371",
+  "title": "Systematic approach to a dosage regimen for phenytoin based on one-point, steady-state plasma concentration.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/nakashima-1995-7725371.pdf",
+    "sha256": "190fe49481d87872fd4dc0b46190357ec4ad93f690ae407807a71cdae2360de2"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

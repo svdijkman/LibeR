@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_9591934",
+  "pmid": "9591934",
+  "title": "Detection of a drug-drug interaction on population-based phenobarbitone clearance using nonlinear mixed-effects modeling.",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "1998",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_9591934_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/yukawa-1998-9591934.pdf",
+    "sha256": "f081091c94313eb4db3db96485a7bdf1be1d099fc865360a833ec24ae15a8f30"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

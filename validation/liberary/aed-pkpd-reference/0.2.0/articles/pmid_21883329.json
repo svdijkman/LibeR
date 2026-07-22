@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_21883329",
+  "pmid": "21883329",
+  "title": "",
+  "abstract": "",
+  "first_author": "El Desoky",
+  "year": "2012",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_21883329_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/el desoky-2012-21883329.pdf",
+    "sha256": "cb9d8d2566221bf8171cd736ef9404d70f07ada48f47d5ac8ae008870db70d13"
+  },
+  "metadata_source": ""
+}

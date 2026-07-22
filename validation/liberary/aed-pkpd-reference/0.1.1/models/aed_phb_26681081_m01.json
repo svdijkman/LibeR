@@ -1,0 +1,142 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_phb_26681081_m01",
+  "article_id": "pmid_26681081",
+  "pmid": "26681081",
+  "model_index": 1,
+  "compound_group": "PHB",
+  "family_id": "pmid_26681081",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHB/Supplement_PHB_v2.docx",
+      "sha256": "39bb55d9429e37117ffc07563feb43f6c8dd7efc1640282803c2fed77f0ba449",
+      "study_table": 1,
+      "study_row": 2,
+      "model_table": 2,
+      "model_row": 2
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHB/articles/sima-2015-26681081.pdf",
+      "sha256": "65350f7b285009c972083f567615999e11292e7abae9d497a872a6347abc8180"
+    },
+    "metadata_csv": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+  },
+  "raw": {
+    "citation": "Šíma 2015 26681081",
+    "population": "N: 37 (Czech Republic) Gestational age (weeks): 39.32±1.36 WT: 3.24±0.65",
+    "model_type": "PK",
+    "objective": "“to describe possible effect of frequently co-administered medications (dopamine, dobutamine, norepinephrine, furosemide, phenytoin, midazolanm, sufentanil, and tramadol) on the PB pharmacokinetics in full-term newborns with HIE”",
+    "covariates": "Tested: comedication with dopamine, dobutamine, norepinephrine, furosemide, phenytoin, midazolanm, sufentanil, or tramadol on CL Included: WT and comedication (dopamine) on CL; WT on Vd",
+    "observations": "Only dopamine had a statistically significant effect on PHB clearance. The study only included 37 newborns, which may be too small a sample size to adequately determine statistically significant differences.",
+    "dose": "Multiple iv doses in patients",
+    "structure": "Simplified PK",
+    "equations": "CL=theta1*WT*(1+theta2*DOP) Vd=theta3*WT*(1+theta4*DOP)",
+    "parameter_values": "theta1=0.0044 theta2=-0.25 theta3=0.5389 theta4=-0.171",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Effect of co-medication on the pharmacokinetic parameters of phenobarbital in asphyxiated newborns.",
+      "compound": "PHB",
+      "population": "N: 37 (Czech Republic) Gestational age (weeks): 39.32±1.36 WT: 3.24±0.65",
+      "route": null,
+      "n_subjects": 37,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "Simplified PK"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.0044,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": -0.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd",
+            "typical": 0.5389,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": -0.171,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["WT and comedication (dopamine) on CL", "WT on Vd"],
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Šíma",
+      "year": "2015",
+      "dose": "Multiple iv doses in patients",
+      "population": "N: 37 (Czech Republic) Gestational age (weeks): 39.32±1.36 WT: 3.24±0.65",
+      "objective": "“to describe possible effect of frequently co-administered medications (dopamine, dobutamine, norepinephrine, furosemide, phenytoin, midazolanm, sufentanil, and tramadol) on the PB pharmacokinetics in full-term newborns with HIE”"
+    },
+    "covariates": {
+      "tested": ["comedication with dopamine", "dobutamine", "norepinephrine", "furosemide", "phenytoin", "midazolanm", "sufentanil", "or tramadol on CL"],
+      "included": ["WT and comedication (dopamine) on CL", "WT on Vd"],
+      "raw": "Tested: comedication with dopamine, dobutamine, norepinephrine, furosemide, phenytoin, midazolanm, sufentanil, or tramadol on CL Included: WT and comedication (dopamine) on CL; WT on Vd"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:56.061Z"
+}

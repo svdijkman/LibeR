@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_phb_25380628_m01",
+  "article_id": "pmid_25380628",
+  "pmid": "25380628",
+  "model_index": 1,
+  "compound_group": "PHB",
+  "family_id": "pmid_25380628",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHB/Supplement_PHB_v2.docx",
+      "sha256": "39bb55d9429e37117ffc07563feb43f6c8dd7efc1640282803c2fed77f0ba449",
+      "study_table": 1,
+      "study_row": 3,
+      "model_table": 2,
+      "model_row": 3
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHB/articles/vucicevic-2015-25380628.pdf",
+      "sha256": "2bc0da1e7c741b7f791f7dd1c5571cb6480b20b2eb6bb41323d679062231272e"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Vucicevic 2015 25380628",
+    "population": "N: 136 (Serbia) Age: 42.04±13.00 WT: 73.04±14.20",
+    "model_type": "PK",
+    "objective": "“to examine and quantify the magnitude of PB interactions with other, concomitantly used, antiepileptic drugs via establishing population pharmacokinetic model for PB in adult epilepsy patients and to consider its use in individualization of PB dosing regimen”",
+    "covariates": "Tested: SEX, comedication (LMT, TPM, CBZ, VPA), WT, AGE, serum creatinine, AST, ALT Included: VPA on CL; WT on Vd",
+    "observations": "Neither WT nor PHB daily dose effect on CL, which is uncommon for PHB. A bias seems visible in the PRED vs DV plot, which may be the result of missing WT as covariate on CL. A linear relationship between daily VPA dose and PHB clearance was found, which allows more finetuning of dosing compared to regular on/off covariate effects of comedication, even if a linear relationship is improbable as the reduction of PHB CL by VPA would probably top off at a certain dose.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with first order absorption and elimination",
+    "equations": "CL/F=theta1*(theta2*(DVPA/1000))*exp(eta1) Vd/F=theta3*WT Ka=theta4 Cobs=Cipred*(1+eps1) DVPA is daily dose of VPA in mg/day",
+    "parameter_values": "theta1=0.314 theta2=-0.248 theta3=0.6 theta4=3 omega1=0.199 sigma1=0.147",
+    "validation": "Yes (bootstrap of 1000, VPC) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Nonlinear mixed effects modelling approach in investigating phenobarbital pharmacokinetic interactions in epileptic patients.",
+      "compound": "PHB",
+      "population": "N: 136 (Serbia) Age: 42.04±13.00 WT: 73.04±14.20",
+      "route": "oral",
+      "n_subjects": 136,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with first order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 0.314,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": -0.248,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 0.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 3,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.199,
+            "reported_metric": "variance",
+            "value": 0.199,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.147,
+            "reported_metric": "variance",
+            "value": 0.147,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["VPA on CL", "WT on Vd"],
+      "residual_error": "CL/F=theta1*(theta2*(DVPA/1000))*exp(eta1) Vd/F=theta3*WT Ka=theta4 Cobs=Cipred*(1+eps1) DVPA is daily dose of VPA in mg/day",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Vucicevic",
+      "year": "2015",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 136 (Serbia) Age: 42.04±13.00 WT: 73.04±14.20",
+      "objective": "“to examine and quantify the magnitude of PB interactions with other, concomitantly used, antiepileptic drugs via establishing population pharmacokinetic model for PB in adult epilepsy patients and to consider its use in individualization of PB dosing regimen”"
+    },
+    "covariates": {
+      "tested": ["SEX", "comedication (LMT", "TPM", "CBZ", "VPA)", "WT", "AGE", "serum creatinine", "AST", "ALT"],
+      "included": ["VPA on CL", "WT on Vd"],
+      "raw": "Tested: SEX, comedication (LMT, TPM, CBZ, VPA), WT, AGE, serum creatinine, AST, ALT Included: VPA on CL; WT on Vd"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000, VPC) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:23:12.409Z"
+}

@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_23408495_m01",
+  "article_id": "pmid_23408495",
+  "pmid": "23408495",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_23408495",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 8,
+      "model_table": 2,
+      "model_row": 8
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/ahmed-2013-23408495.pdf",
+      "sha256": "8357dcedf83cf86ecbd98ad6e493e1df94a2de0548cee8afe70b9b3f2ab54f51"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Ahmed 2013 23408495",
+    "population": "N: 113 (USA) WT: 80.6±19.4 [young adults] Age: 42 (19-59) [elderly] Age: 66 (60-87)",
+    "model_type": "PK",
+    "objective": "“we investigated the population PK of total and unbound CBZ from a novel stable-labeled (SL) IV formulation.” and “to examine CBZ disposition in community-dwelling elderly and younger adult patients with epilepsy without interrupting therapy.”",
+    "covariates": "Tested: age, WT, BSA, IBW, LBW, race, sex, clinical centre, smoking, alcohol, grapefruit, AAG, albumin, total protein, unbound CBZ concentration Cu) Included: race on CL, WT on V1 and V2.",
+    "observations": "Bound and unbound CBZ concentrations were modelled side by side. WT did not influence CBZ CL. Only IV administration.",
+    "dose": "Steady-state IV doses in patients",
+    "structure": "2 comparment model for simultaneous bound and unbound drug, linear elimination, no absorption",
+    "equations": "[unbound CBZ PK] CL=theta1*(theta6**race)*exp(eta1) V1=theta3*WT*exp(eta2) Q=theta4*exp(eta3) V2=theta5*WT*exp(eta4) Fu=theta6*exp(eta5) if(TYPE==1) Cobs=Cipred*(1+eps1) #unbound concentrations if(TYPE==2) Cobs=(Cipred/Fu)*(1+eps2)+eps3 #correlation total to unbound concentrations",
+    "parameter_values": "theta1=11.2 theta2=142 theta3=444 theta4=175 theta5=0.25 theta6=1.30 omega1=0.104 omega2=0.046 omega3=1.78 omega4=0.055 omega5=0.036 sigma1=0.032 sigma2=0.024 sigma3=0.002",
+    "validation": "Yes (bootstrap of 1000, VPC of 1000)/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of unbound and total drug concentrations following intravenously administered carbamazepine in elderly and younger adult patients with epilepsy.",
+      "compound": "CBZ",
+      "population": "N: 113 (USA) WT: 80.6±19.4 [young adults] Age: 42 (19-59) [elderly] Age: 66 (60-87)",
+      "route": null,
+      "n_subjects": 113,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "2 comparment model for simultaneous bound and unbound drug, linear elimination, no absorption"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 11.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 142,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V1",
+            "typical": 444,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q",
+            "typical": 175,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V2",
+            "typical": 0.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Fu",
+            "typical": 1.3,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.104,
+            "reported_metric": "variance",
+            "value": 0.104,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.046,
+            "reported_metric": "variance",
+            "value": 0.046,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "V1",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.78,
+            "reported_metric": "variance",
+            "value": 1.78,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "Q",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.055,
+            "reported_metric": "variance",
+            "value": 0.055,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "V2",
+            "eta_index": 5,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.036,
+            "reported_metric": "variance",
+            "value": 0.036,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.032,
+            "reported_metric": "variance",
+            "value": 0.032,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 0.024,
+            "reported_metric": "variance",
+            "value": 0.024,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 3",
+            "error_model": "combined",
+            "reported_value": 0.002,
+            "reported_metric": "variance",
+            "value": 0.002,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["race on CL", "WT on V1 and V2."],
+      "residual_error": "[unbound CBZ PK] CL=theta1*(theta6**race)*exp(eta1) V1=theta3*WT*exp(eta2) Q=theta4*exp(eta3) V2=theta5*WT*exp(eta4) Fu=theta6*exp(eta5) if(TYPE==1) Cobs=Cipred*(1+eps1) #unbound concentrations if(TYPE==2) Cobs=(Cipred/Fu)*(1+eps2)+eps3 #correlation total to unbound concentrations",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Ahmed",
+      "year": "2013",
+      "dose": "Steady-state IV doses in patients",
+      "population": "N: 113 (USA) WT: 80.6±19.4 [young adults] Age: 42 (19-59) [elderly] Age: 66 (60-87)",
+      "objective": "“we investigated the population PK of total and unbound CBZ from a novel stable-labeled (SL) IV formulation.” and “to examine CBZ disposition in community-dwelling elderly and younger adult patients with epilepsy without interrupting therapy.”"
+    },
+    "covariates": {
+      "tested": ["age", "WT", "BSA", "IBW", "LBW", "race", "sex", "clinical centre", "smoking", "alcohol", "grapefruit", "AAG", "albumin", "total protein", "unbound CBZ concentration Cu)"],
+      "included": ["race on CL", "WT on V1 and V2."],
+      "raw": "Tested: age, WT, BSA, IBW, LBW, race, sex, clinical centre, smoking, alcohol, grapefruit, AAG, albumin, total protein, unbound CBZ concentration Cu) Included: race on CL, WT on V1 and V2."
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000, VPC of 1000)/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:31:45.358Z"
+}

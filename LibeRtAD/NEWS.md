@@ -1,0 +1,72 @@
+# LibeRtAD 0.7.5
+
+- Adds ecosystem compatibility metadata, continuous-integration coverage, and
+  reproducible release provenance for the consolidated LibeR release.
+- Retains the validated CppAD 20260000.0 and Eigen 5.0.1 numerical ABI; this is
+  an integration release and deliberately does not alter tape mathematics.
+
+# LibeRtAD 0.7.4
+
+- Corrects CppAD conditionals whose comparison operands are fixed parameters.
+  The selected AD expression is now retained instead of being collapsed to its
+  value at tape-recording time. Dynamic-parameter conditions remain replayable
+  without retaping. This restores exact emission gradients for categorical,
+  Markov, and hidden Markov likelihoods driven by fixed observed data.
+
+# LibeRtAD 0.7.3
+
+- Upgrades the bundled Eigen headers from 3.4.0 to the official Eigen 5.0.1
+  release, with pinned source provenance, release checksum, and installed
+  Apache-2.0/MPL-2.0/MINPACK licence texts.
+- Preserves exact derivatives through data-driven `ifelse()` branches when a
+  comparison contains only CppAD parameters. This fixes gradients for
+  categorical, Markov, and hidden Markov emissions that select a
+  parameter-dependent likelihood using an observed outcome.
+- Bundles CppAD's upstream Eigen scalar
+  adapter directly, with pinned source provenance and installed licence texts.
+- Removes the RcppEigen build dependency. A small explicit dense-vector and
+  dense-matrix R bridge replaces the handful of conversions used by LibeRation.
+- Exposes the bundled Eigen version and source commit through
+  `ad_engine_info()` and installs the public Eigen compatibility headers for
+  downstream packages using `LinkingTo: LibeRtAD`.
+
+# LibeRtAD 0.7.2
+
+- Installs the complete bundled CppAD header tree under `include/cppad`, so
+  downstream packages using `LinkingTo: LibeRtAD` can include
+  `<cppad/cppad.hpp>` without a separate system CppAD installation.
+
+# LibeRtAD 0.7.1
+
+- Added a C++ Golub--Welsch Gauss--Hermite rule and guarded tensor-grid
+  generator for deterministic marginal-likelihood integration in LibeRation,
+  plus consolidated signed-weight Smolyak sparse grids with odd-linear growth.
+
+- Replaced the archived RcppEigenAD build dependency with official CppAD
+  headers, owned and versioned directly by LibeRtAD, and advanced the bundled
+  release to CppAD 20260000.0.
+- Added explicit CppAD version and source-commit reporting to engine metadata.
+- Retained the established persistent-tape API and R-console output adapter.
+- Added CppAD dynamic parameters for recorded inputs outside the active
+  differentiation domain, including zero-to-nonzero updates without retaping.
+- Added portable optimized-graph caches with exact CppAD provenance checks via
+  `ADModel$save_tape()` and `ad_load_tape()`.
+- Added automatic dense multi-direction Forward and sparse subgraph-Reverse
+  Jacobian strategies with tape telemetry.
+- Added exact, nested-AD-safe `chkpoint_two` ADVAN1 and 2x2 matrix prototypes.
+  Benchmarks intentionally leave these outside the production path because
+  their overhead exceeds direct taping for the current small kernels.
+
+# LibeRtAD 0.6.0
+
+- Replaced the legacy R-level AD implementation with a persistent
+  RcppEigenAD/CppAD C++ engine.
+- Added a serializable, validated expression intermediate representation.
+- Added a light R6/external-pointer interface for values, gradients,
+  Jacobians, Hessians, and combined value/gradient evaluation.
+- Added conditional-expression support and strict rejection of unsupported
+  runtime constructs.
+- Added registered native routines and C++17 package integration for use by
+  LibeRation.
+
+This release is an architectural and API break from the 0.4.x series.

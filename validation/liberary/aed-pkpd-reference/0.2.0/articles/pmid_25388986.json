@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_25388986",
+  "pmid": "25388986",
+  "title": "A population pharmacokinetic model of valproic acid in pediatric patients with epilepsy: a non-linear pharmacokinetic model based on protein-binding saturation.",
+  "abstract": "",
+  "first_author": "Ding",
+  "year": "2014",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_25388986_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/ding-2015-25388986.pdf",
+    "sha256": "99b0540d502f6fe3d0d9c347750b8ad1e3b9e77b9e0a2857ce20c365ee82ffb6"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

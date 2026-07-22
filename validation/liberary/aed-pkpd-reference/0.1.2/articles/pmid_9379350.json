@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9379350",
+  "pmid": "9379350",
+  "title": "Detection of carbamazepine-induced changes in valproic acid relative clearance in man by simple pharmacokinetic screening.",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "1997",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_9379350_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/yukawa-1997-9379350.pdf",
+    "sha256": "bb6466c847d2f358e40fef40f55bc7e800e95486528171974db4d0e399a86c19"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

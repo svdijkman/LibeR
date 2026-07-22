@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_17851036",
+  "pmid": "17851036",
+  "title": "",
+  "abstract": "",
+  "first_author": "Snoeck",
+  "year": "2007",
+  "compounds": "LVT",
+  "model_ids": "aed_lvt_17851036_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/snoeck-2007-17851036.pdf",
+    "sha256": "96b88719c1d430afdf131309c59aad77661a7b22b0557e5215ef5220089df1d7"
+  },
+  "metadata_source": ""
+}

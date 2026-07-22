@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_17433926",
+  "pmid": "17433926",
+  "title": "Pharmacokinetics of antiepileptic drugs in elderly nursing home residents.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/birnbaum-2007-17433926.pdf",
+    "sha256": "4cd81c590b439de9a8e2ac2e2a308b63bfb82b85565c9df8aef3afbfbdd5980b"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_2609045",
+  "pmid": "2609045",
+  "title": "Predicting the range of plasma carbamazepine concentrations in patients with epilepsy.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "CBZ",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/exclude/racine-poon-1989-2609045.pdf",
+    "sha256": "df41bcb6906c8561cfa16ecbb1d7859c9e116ff5249b1e21fcf6f50290e533e0"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

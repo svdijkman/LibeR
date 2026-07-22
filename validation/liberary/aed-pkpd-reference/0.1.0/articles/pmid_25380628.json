@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_25380628",
+  "pmid": "25380628",
+  "title": "Nonlinear mixed effects modelling approach in investigating phenobarbital pharmacokinetic interactions in epileptic patients.",
+  "abstract": "",
+  "first_author": "Vucicevic",
+  "year": "2015",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_25380628_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/vucicevic-2015-25380628.pdf",
+    "sha256": "2bc0da1e7c741b7f791f7dd1c5571cb6480b20b2eb6bb41323d679062231272e"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

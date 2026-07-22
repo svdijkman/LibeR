@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_22331680",
+  "pmid": "22331680",
+  "title": "",
+  "abstract": "",
+  "first_author": "Lee",
+  "year": "2012",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_22331680_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/lee-2012-22331680.pdf",
+    "sha256": "25cc8daa178711cf7cebcc7492dda29ff1b3076c1f5034f6c197a1c4deb335d9"
+  },
+  "metadata_source": ""
+}

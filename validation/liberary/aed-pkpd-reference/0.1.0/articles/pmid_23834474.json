@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23834474",
+  "pmid": "23834474",
+  "title": "Expansion of a PBPK model to predict disposition in pregnant women of drugs cleared via multiple CYP enzymes, including CYP2B6, CYP2C9 and CYP2C19.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/ke-2014-23834474.pdf",
+    "sha256": "c312695d76b22d9eb8db5b6550d6e0db3ead18c3dade6a0ca1e0f72b5e9c7be9"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

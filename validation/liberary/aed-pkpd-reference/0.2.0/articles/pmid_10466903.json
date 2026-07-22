@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_10466903",
+  "pmid": "10466903",
+  "title": "Absorption of rectally administered phenytoin: a pilot study.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/chang-1999-10466903.pdf",
+    "sha256": "e2748c4f79ac38481ecdd19953ca0838fae123c805828f708e26938a4acb453d"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,467 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_tpm_26670371_m01",
+  "article_id": "pmid_26670371",
+  "pmid": "26670371",
+  "model_index": 1,
+  "compound_group": "TPM",
+  "family_id": "pmid_26670371",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/TPM/Supplement_TPM_v2.docx",
+      "sha256": "787967aa7c3412e38a96b3241a229e30daf1c8716a94187beb4eddc72e2c29d1",
+      "study_table": 1,
+      "study_row": 2,
+      "model_table": 2,
+      "model_row": 2
+    },
+    "publication_pdf": {
+      "path": "Supplements/TPM/articles/jovanovic-2016-26670371.pdf",
+      "sha256": "fd0d75c4884c0935e9c1ae11a0a46942c8fefc8c14cc458a138204fe95c8e8a9"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Jovanovic 2016 26670371",
+    "population": "[Training set] N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set] N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+    "model_type": "PK",
+    "objective": "“we explored the applicability of counter-propagation artificial neural networks (CPANNs) combined with genetic algorithm (GA) for prediction of TPM serum levels based on selected factors important for its prediction”",
+    "covariates": "Tested: smoking status, co-therapy with lamotrigine, levetiracetam, valproic acid,CBZ, benzodiazepines and risperidone; daily TPM dose, renal function (eGFR), liver enzymes (AST, ALP and cholinesterase), bilirubin, albumin, total protein concentration, daily CBZ dose Included: TPM dose, renal function (eGFR) and carbamazepine",
+    "observations": "TPM dose, renal function (eGFR) and carbamazepine dose significantly influenced TPM levels. Results indicate the feasibility of CPANNs combined with GA to predict TPM concentrations and to adjust relative importance of identified variability factors in population of adult epileptic patients. Results are in line with previous population PK analyses. CPANNs models can be useful to detect factors influencing drug levels even in the absence of prior knowledge on drug’s PK. The approach may be useful for initial covariate screening. Unfortunately neither structure nor parameter values were reported for the model (other than the number of neurons used).",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "CPANNs combined with GA",
+    "equations": "No structure reported, except for the use of 20 neurons",
+    "parameter_values": "No parameters reported",
+    "validation": "No / Yes (training and test datasets used for model building and validation)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Application of Counter-propagation Artificial Neural Networks in Prediction of Topiramate Concentration in Patients with Epilepsy.",
+      "compound": "TPM",
+      "population": "[Training set] N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set] N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+      "route": "oral",
+      "n_subjects": 118,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "[Training set] N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set] N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+        "n_total": 118,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "[Training set]",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 88
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 36.88,
+                    "sd": 10.48
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "36.88 ± 10.48",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 74.4,
+                    "sd": 14.56
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "74.4 ± 14.56 [Test set]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 2",
+              "evidence": "N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 30
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 38.9,
+                    "sd": 11.14
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "38.9 ± 11.14",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 78.48,
+                    "sd": 16.01
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "78.48 ± 16.01",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 2",
+              "evidence": "N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 2",
+          "evidence": "[Training set] N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set] N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 2",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "CPANNs combined with GA",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": []
+          },
+          "description": "CPANNs combined with GA"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "CPANNs combined with GA Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["TPM dose", "renal function (eGFR) and carbamazepine"],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Jovanovic",
+      "year": "2016",
+      "dose": "Steady-state oral doses in patients",
+      "population": "[Training set] N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set] N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+      "population_details": {
+        "raw": "[Training set] N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set] N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+        "n_total": 118,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "[Training set]",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 88
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 36.88,
+                    "sd": 10.48
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "36.88 ± 10.48",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 74.4,
+                    "sd": 14.56
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "74.4 ± 14.56 [Test set]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 2",
+              "evidence": "N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 30
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 38.9,
+                    "sd": 11.14
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "38.9 ± 11.14",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 78.48,
+                    "sd": 16.01
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 2",
+                  "evidence": "78.48 ± 16.01",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 2",
+              "evidence": "N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 2",
+          "evidence": "[Training set] N: 88 Age: 36.88 ± 10.48 WT: 74.4 ± 14.56 [Test set] N: 30 Age: 38.9 ± 11.14 WT: 78.48 ± 16.01",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 2",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“we explored the applicability of counter-propagation artificial neural networks (CPANNs) combined with genetic algorithm (GA) for prediction of TPM serum levels based on selected factors important for its prediction”"
+    },
+    "covariates": {
+      "tested": ["smoking status", "co-therapy with lamotrigine", "levetiracetam", "valproic acid", "CBZ", "benzodiazepines and risperidone", "daily TPM dose", "renal function (eGFR)", "liver enzymes (AST", "ALP and cholinesterase)", "bilirubin", "albumin", "total protein concentration", "daily CBZ dose"],
+      "included": ["TPM dose", "renal function (eGFR) and carbamazepine"],
+      "raw": "Tested: smoking status, co-therapy with lamotrigine, levetiracetam, valproic acid,CBZ, benzodiazepines and risperidone; daily TPM dose, renal function (eGFR), liver enzymes (AST, ALP and cholinesterase), bilirubin, albumin, total protein concentration, daily CBZ dose Included: TPM dose, renal function (eGFR) and carbamazepine"
+    },
+    "validation": {
+      "raw": "No / Yes (training and test datasets used for model building and validation)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:13.734Z"
+}

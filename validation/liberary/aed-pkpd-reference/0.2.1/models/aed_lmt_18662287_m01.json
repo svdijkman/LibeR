@@ -1,0 +1,353 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_18662287_m01",
+  "article_id": "pmid_18662287",
+  "pmid": "18662287",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_18662287",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 14,
+      "model_table": 2,
+      "model_row": 11
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/dixon-2008-18662287.pdf",
+      "sha256": "87ff709116c8f5fd920f76468e637617d55bb741e289494d346135c2e73c4254"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Dixon 2008 18662287",
+    "population": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+    "model_type": "PKPD",
+    "objective": "“To characterize the effects of lamotrigine on QT interval in healthy subjects”",
+    "covariates": "LMT concentration as a predictor for QT interval change",
+    "observations": "PK was not modelled, but actual concentrations were predictive of QT changes. The lack of reported parameter values and inadequate description of the model does not allow implementation of the model to, for example, run simulations",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "No PK; QT described as function of time and LMT concentration",
+    "equations": "CIRC=”a complex function that described the systematic variation in QT interval within the study day for an individual” QT=BL*((RR/1000)**a)*(1+(SLOPElmt*CONClmt)+(SLOPEmox*CONCmox))*(1+CIRC)+eps1 SLOPElmt=theta1 CONClmt=concentration of lamotrigine SLOPEmox=theta2 CONCmox=concentration of moxifloxacine RR=RR interval a= not specified",
+    "parameter_values": "No parameter values reported",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "LMT",
+      "population": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+      "route": "oral",
+      "n_subjects": 62,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PKPD",
+      "population_details": {
+        "raw": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+        "n_total": 62,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 62
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 18,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "18-55",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "bmi",
+                "unit": "kg/m2",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 18.5,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "18.5-29.9",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 14",
+              "evidence": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 14",
+          "evidence": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 11",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "No PK; QT described as function of time and LMT concentration",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": []
+          },
+          "description": "No PK; QT described as function of time and LMT concentration"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "No PK; QT described as function of time and LMT concentration Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": [],
+      "residual_error": "CIRC=”a complex function that described the systematic variation in QT interval within the study day for an individual” QT=BL*((RR/1000)**a)*(1+(SLOPElmt*CONClmt)+(SLOPEmox*CONCmox))*(1+CIRC)+eps1 SLOPElmt=theta1 CONClmt=concentration of lamotrigine SLOPEmox=theta2 CONCmox=concentration of moxifloxacine RR=RR interval a= not specified",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Dixon",
+      "year": "2008",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+      "population_details": {
+        "raw": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+        "n_total": 62,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 62
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 18,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "18-55",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "bmi",
+                "unit": "kg/m2",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 18.5,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "18.5-29.9",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 14",
+              "evidence": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 14",
+          "evidence": "N: 62 (UK) Age: 18-55 BMI: 18.5-29.9",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 11",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“To characterize the effects of lamotrigine on QT interval in healthy subjects”"
+    },
+    "covariates": {
+      "tested": "LMT concentration as a predictor for QT interval change",
+      "included": [],
+      "raw": "LMT concentration as a predictor for QT interval change"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:05:22.996Z"
+}

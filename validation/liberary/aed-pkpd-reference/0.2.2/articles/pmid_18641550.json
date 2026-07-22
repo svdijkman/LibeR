@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_18641550",
+  "pmid": "18641550",
+  "title": "Population pharmacokinetics of lamotrigine with data from therapeutic drug monitoring in German and Spanish patients with epilepsy.",
+  "abstract": "",
+  "first_author": "Rivas",
+  "year": "2008",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_18641550_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/rivas-2008-18641550.pdf",
+    "sha256": "f043b767951d3f2dac2586a6de3249033d6e145f18c04c90126a61202e95dba6"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

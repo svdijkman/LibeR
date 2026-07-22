@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_18783295",
+  "pmid": "18783295",
+  "title": "Influence of burns on pharmacokinetics and pharmacodynamics of drugs used in the care of burn patients.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/blanchet-2008-18783295.pdf",
+    "sha256": "1d1c72db837c6c52647132ceeb0a4fc5177a7c9228bc3fe424ef5e279c6ba6a3"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

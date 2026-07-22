@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_18521585",
+  "pmid": "18521585",
+  "title": "Pharmacokinetic-pharmacodynamic modeling of the influence of chronic phenytoin therapy on the rocuronium bromide response in patients undergoing brain surgery.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/fernandez-2008-18521585.pdf",
+    "sha256": "cc53d3cc1465cdcc8bfa5b8ec3bd54759e5a2c1e9ab01162b308727b90cb383b"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

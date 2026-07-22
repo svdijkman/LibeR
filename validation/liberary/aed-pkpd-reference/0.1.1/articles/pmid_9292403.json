@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9292403",
+  "pmid": "9292403",
+  "title": "Single-point phenytoin dosage predictions in Singapore Chinese.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/chan-1997-9292403.pdf",
+    "sha256": "c19e3f0cccd60a81428d65fb5037ec68e4ee334ac0d38a2f29f1e4b188472b83"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

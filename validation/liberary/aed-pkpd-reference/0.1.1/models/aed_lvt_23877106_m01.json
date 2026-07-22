@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lvt_23877106_m01",
+  "article_id": "pmid_23877106",
+  "pmid": "23877106",
+  "model_index": 1,
+  "compound_group": "LVT",
+  "family_id": "pmid_23877106",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LVT/Supplement_LVT_v2.docx",
+      "sha256": "366f9c59b71d28cdbc53b4e37282f611af800ea34a400f4eb82946c22c5dd24b",
+      "study_table": 1,
+      "study_row": 6,
+      "model_table": 2,
+      "model_row": 3
+    },
+    "publication_pdf": {
+      "path": "Supplements/LVT/articles/toublanc-2014-23877106.pdf",
+      "sha256": "6ed71f9cc763d912a1ec08e2c88adb4ee90ab32190f04048ec5aaee290fa0717"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Toublanc 2014 23877106",
+    "population": "N: 443 (Japan and North America) Age: 26.8±13.5 (4.3-55.4) WT: 59.8±12.6 (40.0-107)",
+    "model_type": "PK",
+    "objective": "“to characterize the pharmacokinetics of oral levetiracetam in Japanese children, to assess dose recommendations for Japanese children by comparing the pharmacokinetics in Japanese adults and children and to compare levetiracetam pharmacokinetics in Japanese and North American children”",
+    "covariates": "Tested: AGE, comedications, WT on CL, AGE and WT on Vd, formulation on Ka Included: WT on CL and Vd,",
+    "observations": "Model predicts the data well, with minimal covariates needed. No interaction between LVT and comedications. No differences between ethnicities described (but unclear if evaluated)",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "Ka=theta1*exp(eta1) CL/F=theta2*(theta3**IND)*((WT/32)**0.75)*exp(eta2) Vd/F=theta4*(WT/32)*exp(eta3) Cobs=Cipred*(1+eps1)",
+    "parameter_values": "theta1=2.56 theta2=2.10 theta3=1.22 theta4=20.4 omega1= 0.736 omega2= 0.0396 omega2,3= 0.00328 omega3= 0.0149 sigma1= 0.0357",
+    "validation": "Yes (vpc of 500) / Yes (externally validated on North American children)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "LVT",
+      "population": "N: 443 (Japan and North America) Age: 26.8±13.5 (4.3-55.4) WT: 59.8±12.6 (40.0-107)",
+      "route": "oral",
+      "n_subjects": 443,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 2.56,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL/F",
+            "typical": 2.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 1.22,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 20.4,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Ka",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.736,
+            "reported_metric": "variance",
+            "value": 0.736,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "CL/F",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0396,
+            "reported_metric": "variance",
+            "value": 0.0396,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0149,
+            "reported_metric": "variance",
+            "value": 0.0149,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 3,
+            "col_eta": 2,
+            "reported_value": 0.00328,
+            "reported_metric": "covariance",
+            "value": 0.00328,
+            "conversion": "Appendix covariance retained verbatim; source-paper verification pending"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.0357,
+            "reported_metric": "variance",
+            "value": 0.0357,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": "WT on CL and Vd",
+      "residual_error": "Ka=theta1*exp(eta1) CL/F=theta2*(theta3**IND)*((WT/32)**0.75)*exp(eta2) Vd/F=theta4*(WT/32)*exp(eta3) Cobs=Cipred*(1+eps1)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Toublanc",
+      "year": "2014",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 443 (Japan and North America) Age: 26.8±13.5 (4.3-55.4) WT: 59.8±12.6 (40.0-107)",
+      "objective": "“to characterize the pharmacokinetics of oral levetiracetam in Japanese children, to assess dose recommendations for Japanese children by comparing the pharmacokinetics in Japanese adults and children and to compare levetiracetam pharmacokinetics in Japanese and North American children”"
+    },
+    "covariates": {
+      "tested": ["AGE", "comedications", "WT on CL", "AGE and WT on Vd", "formulation on Ka"],
+      "included": "WT on CL and Vd",
+      "raw": "Tested: AGE, comedications, WT on CL, AGE and WT on Vd, formulation on Ka Included: WT on CL and Vd,"
+    },
+    "validation": {
+      "raw": "Yes (vpc of 500) / Yes (externally validated on North American children)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:24:55.369Z"
+}

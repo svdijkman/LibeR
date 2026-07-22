@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_22918614",
+  "pmid": "22918614",
+  "title": "",
+  "abstract": "",
+  "first_author": "Tanaka",
+  "year": "2013",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_22918614_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/tanaka-2013-22918614.pdf",
+    "sha256": "2490c0b747521f85d0783d07f78e56c2144aee58e131c75bda4ab315b948d596"
+  },
+  "metadata_source": ""
+}

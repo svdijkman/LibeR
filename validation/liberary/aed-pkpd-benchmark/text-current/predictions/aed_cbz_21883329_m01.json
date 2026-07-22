@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_cbz_21883329_m01",
+  "screening_id": null,
+  "article_id": "pmid_21883329",
+  "pmid": "21883329",
+  "source_pdf_sha256": "cb9d8d2566221bf8171cd736ef9404d70f07ada48f47d5ac8ae008870db70d13",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:40:03.606Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population pharmacokinetics of steady-state carbamazepine in Egyptian epilepsy patients",
+    "compound": "carbamazepine",
+    "population": "Egyptian adult and pediatric patients with epilepsy",
+    "route": "oral",
+    "n_subjects": 302,
+    "software": "NONMEM 6.2",
+    "estimation_method": "Bayesian Program of Abbott (PKS system)",
+    "model_type": "Population PK model",
+    "structural_model": {
+      "advan": 2,
+      "trans": 2,
+      "compartments": 1,
+      "description": "One-compartment model with first-order absorption and elimination for steady-state conditions"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "CL",
+          "typical": 3.5,
+          "se": null,
+          "unit": "L/h"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Intersubject variability on CL",
+          "parameter": "CL",
+          "eta_index": 1,
+          "eta_distribution": "log_normal",
+          "eta_expression": "ETA(1)",
+          "variability_level": "iiv",
+          "reported_value": 44.5,
+          "reported_metric": "cv_percent",
+          "value": null,
+          "conversion": "CV = sqrt(exp(OMEGA) - 1)"
+        }
+      ],
+      "omega_covariance": [],
+      "sigma": [
+        {
+          "description": "Residual error of CBZ concentration",
+          "error_model": "additive",
+          "reported_value": 7.8,
+          "reported_metric": "sd",
+          "value": null,
+          "conversion": "Variance = (SD)^2"
+        }
+      ]
+    },
+    "covariates": [],
+    "residual_error": "Additive error model with residual standard deviation of 7.8 (SD)",
+    "confidence": {
+      "overall": 0.95,
+      "fields": {
+        "structure": 0.95,
+        "parameters": 0.95,
+        "population": 0.95,
+        "software": 0.95
+      }
+    },
+    "evidence_quotes": [
+      "The POP PK model we have developed for CBZ shows good predictive performance in Egyptian adult and pediatric patients with epilepsy."
+    ],
+    "notes": "The study did not include covariates due to limited sample size per individual, which prevented precise covariate analysis. The model was validated by bootstrap resampling (1000 runs)."
+  },
+  "variants": {
+    "text": {
+      "title": "Population pharmacokinetics of steady-state carbamazepine in Egyptian epilepsy patients",
+      "compound": "carbamazepine",
+      "population": "Egyptian adult and pediatric patients with epilepsy",
+      "route": "oral",
+      "n_subjects": 302,
+      "software": "NONMEM 6.2",
+      "estimation_method": "Bayesian Program of Abbott (PKS system)",
+      "model_type": "Population PK model",
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "One-compartment model with first-order absorption and elimination for steady-state conditions"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 3.5,
+            "se": null,
+            "unit": "L/h"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Intersubject variability on CL",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1)",
+            "variability_level": "iiv",
+            "reported_value": 44.5,
+            "reported_metric": "cv_percent",
+            "value": null,
+            "conversion": "CV = sqrt(exp(OMEGA) - 1)"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Residual error of CBZ concentration",
+            "error_model": "additive",
+            "reported_value": 7.8,
+            "reported_metric": "sd",
+            "value": null,
+            "conversion": "Variance = (SD)^2"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "Additive error model with residual standard deviation of 7.8 (SD)",
+      "confidence": {
+        "overall": 0.95,
+        "fields": {
+          "structure": 0.95,
+          "parameters": 0.95,
+          "population": 0.95,
+          "software": 0.95
+        }
+      },
+      "evidence_quotes": [
+        "The POP PK model we have developed for CBZ shows good predictive performance in Egyptian adult and pediatric patients with epilepsy."
+      ],
+      "notes": "The study did not include covariates due to limited sample size per individual, which prevented precise covariate analysis. The model was validated by bootstrap resampling (1000 runs)."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

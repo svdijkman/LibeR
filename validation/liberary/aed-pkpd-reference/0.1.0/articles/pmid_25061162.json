@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_25061162",
+  "pmid": "25061162",
+  "title": "Pharmacoproteomics-based reconstruction of in vivo P-glycoprotein function at blood-brain barrier and brain distribution of substrate verapamil in pentylenetetrazole-kindled epilepsy, spontaneous epilepsy, and phenytoin treatment models.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/uchida-2014-25061162.pdf",
+    "sha256": "c50b937f8ceed9972f02d531bb91ae8e14cf60c66237dff4aabf3baf885409fa"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

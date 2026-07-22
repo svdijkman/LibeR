@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_3446773",
+  "pmid": "3446773",
+  "title": "",
+  "abstract": "",
+  "first_author": "Sumi",
+  "year": "1987",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_3446773_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/sumi-1987-3446773 .pdf",
+    "sha256": "6f17fe8c8c50ede9d7d0c69fa3078cb05f3d9a387a048ef73ed9ecacddbde77f"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_gbp_22544471_m01",
+  "article_id": "pmid_22544471",
+  "pmid": "22544471",
+  "model_index": 1,
+  "compound_group": "GBP",
+  "family_id": "pmid_22544471",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/GBP/Supplement_GBP_v2.docx",
+      "sha256": "922652c49918dc87e50b709d515c179623d4472d610c7b4fa1f19f199a26ba5d",
+      "study_table": 1,
+      "study_row": 8,
+      "model_table": 2,
+      "model_row": 5
+    },
+    "publication_pdf": {
+      "path": "Supplements/GBP/articles/delattre-2012-22544471.pdf",
+      "sha256": "299c3d05027bfb506112bd61e0c6b7f39318de311f2a128f35d71d9a5c9cba0d"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Delattre 2012 22544471",
+    "population": "[Overall] N: 788 (Multiple trials) [945-005] N: 301 Age: 34.87±10.20 WT: 76.82±17.57 [945-006] N: 268 Age: 32.24±11.92 WT: 68.79±13.97 [945-009] N: 43 Age: 37.53±10.85 WT: 68.93±12.81 [945-010] N: 42 Age: 37.40±12.20 WT: 68.86±14.19 [945-011] N: 9 Age: 30.82±12.03 WT: 67.10±16.86",
+    "model_type": "PD",
+    "objective": "“(i) to implement the mixed hidden Markov methodology using an SAEM algorithm for the wider use within an area of quantitative clinical pharmacology and (ii) to describe exposure response relationship of an antiepileptic agent CI 945 using the mixed HMM and to reveal additional insights in the mode of the drug action which the novel approach offers”",
+    "covariates": "Tested: dose on disease state transitions and disease activity Included: dose on disease activity",
+    "observations": "Modelling seizure activity using markovian poisson models was extended by describing the observed seizures using a hidden layer of disease states with transitions. The model was able to describe the data well and performed better compared to the standard poisson model and the mixture poisson model. No information on pharmacokinetics was used.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Hidden Markov model",
+    "equations": "beta1=theta1 beta2=theta2 log(lambda1)=theta3 log(alphaB)=theta4 delta1=theta5 delta2=theta6 delta3=theta7 delta4=theta8 gamma1=0 gamma2=0 gamma3=theta9 gamma4=theta10 Tau1=theta11 Tau2=theta12 logit(P11B)=beta1+eta1 logit(P21B)=beta2+eta2 log(lambda1B)=log(lambda1)+eta3 lambda2B=lambda1B+alpha*exp(eta4) logit(P11T)=logit(P11B)+(delta1+gamma1*Dose+eta5) logit(P21T)=logit(P21B)+(delta2+gamma2*Dose+eta6) log(lambda1T)=log(lambda1B)+(delta3+gamma3*Dose+eta7)*(1-2**(-t/Tau1)) log(alphaT)=log(alphaB)+(delta4+gamma4*Dose+eta8) *(1-2**(-t/Tau2)) lambda2T=lambda1T+alphaT The code above is merely parameter definitions and requires an algorithm like the Baum-Welch one to estimate. Subsequent individual parameter values can then be found using a separate algorithm (e.g. Viterbo)",
+    "parameter_values": "theta1=1.96 theta2=1.56 theta3=-2.01 theta4=-0.08 theta5=0.17 theta6=0.27 theta7=-0.05 theta8=0.07 theta9=-0.00016 theta10=-0.00020 theta11=1.70 theta12=15.65 omega1=0.72 omega2=0.78 omega3=1.95 omega4=1.5 omega5=0.09 omega6=0.07 omega7=0.41 omega8=0.37",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "GBP",
+      "population": "[Overall] N: 788 (Multiple trials) [945-005] N: 301 Age: 34.87±10.20 WT: 76.82±17.57 [945-006] N: 268 Age: 32.24±11.92 WT: 68.79±13.97 [945-009] N: 43 Age: 37.53±10.85 WT: 68.93±12.81 [945-010] N: 42 Age: 37.40±12.20 WT: 68.86±14.19 [945-011] N: 9 Age: 30.82±12.03 WT: 67.10±16.86",
+      "route": "oral",
+      "n_subjects": 788,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PD",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "Hidden Markov model"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "beta1",
+            "typical": 1.96,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "beta2",
+            "typical": 1.56,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": -2.01,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": -0.08,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "delta1",
+            "typical": 0.17,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "delta2",
+            "typical": 0.27,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "delta3",
+            "typical": -0.05,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "delta4",
+            "typical": 0.07,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "gamma3",
+            "typical": -0.00016,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "gamma4",
+            "typical": -0.0002,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Tau1",
+            "typical": 1.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Tau2",
+            "typical": 15.65,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "beta1",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.72,
+            "reported_metric": "variance",
+            "value": 0.72,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "beta2",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.78,
+            "reported_metric": "variance",
+            "value": 0.78,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "",
+            "eta_index": 3,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.95,
+            "reported_metric": "variance",
+            "value": 1.95,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.5,
+            "reported_metric": "variance",
+            "value": 1.5,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "delta1",
+            "eta_index": 5,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.09,
+            "reported_metric": "variance",
+            "value": 0.09,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 6",
+            "parameter": "delta2",
+            "eta_index": 6,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(6) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.07,
+            "reported_metric": "variance",
+            "value": 0.07,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 7",
+            "parameter": "delta3",
+            "eta_index": 7,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(7) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.41,
+            "reported_metric": "variance",
+            "value": 0.41,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 8",
+            "parameter": "delta4",
+            "eta_index": 8,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(8) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.37,
+            "reported_metric": "variance",
+            "value": 0.37,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": "dose on disease activity",
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Delattre",
+      "year": "2012",
+      "dose": "Steady-state oral doses in patients",
+      "population": "[Overall] N: 788 (Multiple trials) [945-005] N: 301 Age: 34.87±10.20 WT: 76.82±17.57 [945-006] N: 268 Age: 32.24±11.92 WT: 68.79±13.97 [945-009] N: 43 Age: 37.53±10.85 WT: 68.93±12.81 [945-010] N: 42 Age: 37.40±12.20 WT: 68.86±14.19 [945-011] N: 9 Age: 30.82±12.03 WT: 67.10±16.86",
+      "objective": "“(i) to implement the mixed hidden Markov methodology using an SAEM algorithm for the wider use within an area of quantitative clinical pharmacology and (ii) to describe exposure response relationship of an antiepileptic agent CI 945 using the mixed HMM and to reveal additional insights in the mode of the drug action which the novel approach offers”"
+    },
+    "covariates": {
+      "tested": "dose on disease state transitions and disease activity",
+      "included": "dose on disease activity",
+      "raw": "Tested: dose on disease state transitions and disease activity Included: dose on disease activity"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:31:46.199Z"
+}

@@ -1,0 +1,16 @@
+"engine","workload","method","repeats","median_end_to_end_seconds","min_end_to_end_seconds","max_end_to_end_seconds","median_core_seconds","median_noncore_overhead_seconds","median_fit_seconds","median_covariance_seconds","optimizer_backend","objective_backend","median_population_parameter_evaluations","median_population_shared_state_hits","median_objective_evaluations","median_gradient_evaluations","median_conditional_evaluations","median_tape_retapes"
+"LibeRation","estimation","FO",1,0.86,0.86,0.86,0.47,0.39,0.46,0.0099999999999999,"r-l-bfgs-b-cpp-objective","persistent-cpp-population-objective",28,28,28,28,5147,0
+"LibeRation","estimation","FOCEI",1,1.01,1.01,1.01,0.67,0.34,0.51,0.16,"r-l-bfgs-b-cpp-objective","persistent-cpp-population-objective",11,11,11,11,64229,10
+"LibeRation","estimation","IMP",1,6.00999999999999,6.00999999999999,6.00999999999999,5.67,0.33999999999999,4.47,1.2,"r-optim-gradient","r-orchestrated-population-objective",,,28,28,8708,4
+"LibeRation","estimation","ITS",1,1.08999999999999,1.08999999999999,1.08999999999999,0.74,0.349999999999989,0.71,0.03,"r-l-bfgs-b-cpp-objective","persistent-cpp-population-objective",29,22,25,25,189741,9
+"LibeRation","estimation","LAPLACE",1,1.14,1.14,1.14,0.78,0.360000000000001,0.55,0.23,"r-l-bfgs-b-cpp-objective","persistent-cpp-population-objective",10,10,10,10,57780,13
+"LibeRation","estimation","SAEM",1,4.88999999999999,4.88999999999999,4.88999999999999,4.58,0.309999999999986,4.58,,"saem+r-optim-gradient","r-orchestrated-population-objective",,,1036,1036,0,0
+"LibeRation","simulation","SIMULATION",1,1.42000000000002,1.42000000000002,1.42000000000002,1.07,0.350000000000016,,,"","",,,,,,
+"NONMEM","estimation","FO",1,4.63,4.63,4.63,0.26,4.37,0.17,0.09,"","",,,,,,
+"NONMEM","estimation","FOCE",1,5.64,5.64,5.64,1.41,4.23,1.41,,"","",,,,,,
+"NONMEM","estimation","FOCEI",1,6.69,6.69,6.69,2.41,4.28,1.27,1.14,"","",,,,,,
+"NONMEM","estimation","IMP",1,161.44,161.44,161.44,156.86,4.58000000000001,149.66,7.2,"","",,,,,,
+"NONMEM","estimation","ITS",1,47,47,47,42.78,4.22,42.77,0.01,"","",,,,,,
+"NONMEM","estimation","LAPLACE",1,5.59,5.59,5.59,2.17,3.42,2.17,,"","",,,,,,
+"NONMEM","estimation","SAEM",1,8.61000000000001,8.61000000000001,8.61000000000001,4.93,3.68000000000001,4.93,,"","",,,,,,
+"NONMEM","simulation","SIMULATION",1,15.19,15.19,15.19,9.844,5.34599999999997,,,"","",,,,,,

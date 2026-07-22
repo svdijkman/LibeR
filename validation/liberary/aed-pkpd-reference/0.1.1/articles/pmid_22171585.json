@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_22171585",
+  "pmid": "22171585",
+  "title": "Pharmacokinetics, drug interactions and exposure-response relationship of eslicarbazepine acetate in adult patients with partial-onset seizures: population pharmacokinetic and pharmacokinetic/pharmacodynamic analyses.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "CBZ",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/exclude/falcao-2012-22171585.pdf",
+    "sha256": "bc068815e7e987eb2bc2c5f4105eef9b50ebaabc4177333c97c636b4287ec571"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

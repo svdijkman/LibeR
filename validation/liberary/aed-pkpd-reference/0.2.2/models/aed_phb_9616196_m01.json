@@ -1,0 +1,510 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_phb_9616196_m01",
+  "article_id": "pmid_9616196",
+  "pmid": "9616196",
+  "model_index": 1,
+  "compound_group": "PHB",
+  "family_id": "pmid_9616196",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHB/Supplement_PHB_v2.docx",
+      "sha256": "39bb55d9429e37117ffc07563feb43f6c8dd7efc1640282803c2fed77f0ba449",
+      "study_table": 1,
+      "study_row": 14,
+      "model_table": 2,
+      "model_row": 16
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHB/articles/el-masri-1998-9616196.pdf",
+      "sha256": "bbf805674411da815aa0679cf816e218e1e29b5ca7331d28e33478f0550c0ccb"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "El-Masri 1998 9616196",
+    "population": "N: 3 (-) Age: - WT -",
+    "model_type": "PK",
+    "objective": "“to determine the metabolic profile of primidone among three human subjects, rats, and mice”",
+    "covariates": "Tested: - Included: WT, physiological parameters",
+    "observations": "The PBPK model described here may help predict from the preclinical to the clinical setting, but is not very pragmatic for clinical treatment dosing guidance. Although the predictions seem to correspond well with the observations, only three human subjects were included and thus the level of evidence is relatively scarce, especially given the amount of parameters needed for a PBPK model.",
+    "dose": "Single oral doses in healthy volunteers",
+    "structure": "24 compartment PBPK",
+    "equations": "hematocrit=0.45 Vplasma=44*WT**0.99 Vblood=Vplasma/(1-hematocrit) Vvns=0.71*Vblood Vart=0.29*Vblood Vbrnt=0.02*Vblood Vbrnc=0.033*Vbrnt Vgi=0.017*Vblood Vheart=0.0047*Vblood Vlung=0.0076*Vblood Vlvr=0.0275*Vblood Vmuscle=0.4*Vblood Vkidney=0.0044*Vblood Vskin=0.0371*Vblood Vfat=0.2342*Vblood Qbrn=8.64*Vbrnc #converted from min-1 to h-1 by multiplying with 60 minutes Qgi=10.8*Vgi Qheart=2.40*Vheart Qlung=60*Vlung Qlvr= 13.62*Vlvr Qmuscle=20.04*Vmuscle Qkidney=10.5*Vkidney Qskin=3.48*Vskin Qfat=3.12*Vfat Qtotal=sum(Qbrn,Qgi,Qheart,Qlung,Qlvr,Qmuscle,Qkidney,Qskin,Qfat) Plungpm=0.12 Pheartpm=1.26 Plvrpm=1.33 Pgipm=0.11 Pkidneypm=1.31 Pmusclepm=1.26 Pskinpm=1.54 Pfatpm=0.32 Plungph=0.12 Pheartph=1.12 Plvrph=2.25 Pgiph=1 Pkidneyph=2.05 Pmuscleph=1.12 Pskinph=2.11 Pfatph=1.00 Kabs=theta1 Vmaxph=theta2*WT Kmph=theta3 Vmaxpm=theta4*WT Kmpm=theta5 Vind=theta6 Kmind=theta7 Kmet=theta8 #the following parameters were only estimated in rats DR=theta9 FR=theta10 Bplasma=theta11 [DES] #primidone compartment concentrations Cgipm=A(2)/Vgi Clvrpm=A(3)/Vlvr Cbrncpm=A(4)/Vbrnc Cbrntpm=A(5)/Vbrnt Clungpm=A(6)/Vlung Cheartpm=A(7)/Vheart Ckidneypm=A(8)/Vkidney Cmusclepm=A(9)/Vmuscle Cskinpm=A(10)/Vskin Cfatpm=A(11)/Vfat Cartpm=A(12)/Vart Cvnspm=A(13)/Vvns #phenobarbital compartment concentrations Clvrph=A(14)/Vlvr Cbrncph=A(15)/Vbrnc Cbrntph=A(16)/Vbrnt Clungph=A(17)/Vlung Cheartph=A(18)/Vheart Ckidneyph=A(19)/Vkidney Cmuscleph=A(20)/Vmuscle Cskinph=A(21)/Vskin Cfatph=A(22)/Vfat Cartph=A(23)/Vart Cvnsph=A(24)/Vvns #induction of primidone by phenobarbital AMTph= sum(A(14),A(15),A(16),A(17),A(18),A(19),A(20),A(21),A(22),A(23),A(24)) Kind=(Vind*AMTph)/(Kmind+AMTph) #primidone compartments dA(1)/dt = -Kabs*A(1) #depot compartment of primidone dose dA(2)/dt = Kabs*A(1) + Qgi*(Cartpm - Cgipm/Pgipm) #GI lumen/tissue shared compartment dA(3)/dt = Qlvr*Cartpm + Qgi*Cgipm/Pgipm – (Qlvr+Qgi)*(Clvrph/Plvrph) – (Vmaxph*Clvrph)/(Kmph+Clvrph) – (Vmaxpm*(1+Kind)*Clvrpm)/(Kmpm+Clvrpm) #liver compartment dA(4)/dt = Vbrnt*DR*(Cbrntpm*FR-Cbrncpm/(1+Bplasma))+Qbrn*(Cartpm-Cbrncpm) #brain capillaries dA(5)/dt = Vbrnt*DR*(Cbrncpm/(1+Bplasma)-Cbrntpm*FR) #brain tissue dA(6)/dt = Qlung*(Cartpm-Clungpm/Plungpm) #lung dA(7)/dt = Qheart*(Cartpm-Cheartpm/Pheartpm) #heart dA(8)/dt = Qkidney*(Cartpm-Ckidneypm/Pkidneypm) #kidney dA(9)/dt = Qmuscle*(Cartpm-Cmusclepm/Pmusclepm) #muscle dA(10)/dt = Qskin*(Cartpm-Cskinpm/Pskinpm) #skin dA(11)/dt = Qfat*(Cartpm-Cfatpm/Pfatpm) #fat dA(12)/dt = Qtotal*(Clungpm/Plungpm-Cartpm) #arterial blood dA(13)/dt = Qbrn*Cbrncpm+sum(all tissues Qt*(Ct/Pt)) -Qtotal*Cvnspm #venous blood # phenobarbital compartments dA(14)/dt = Qlvr*Cartph+Qgi*Cgiph/Pgiph – (Qlvr+Qgi)*Clvrph/Plvrph + ((Vmaxph*Clvrph)/(Kmph+Clvrph)) – Kmet*Clvrph #liver cmt for PHB dA(15)/dt = Vbrnt*DR*(Cbrntph*FR-Cbrncph/(1+Bplasma))+Qbrn*(Cartph-Cbrncph) #PHB in brain capillaries dA(16)/dt = Vbrnt*DR*(Cbrncph/(1+Bplasma)-Cbrntph*FR) #PHB in brain tissue dA(17)/dt = Qlung*(Cartph-Clungph/Plungph) #PHB in lung dA(18)/dt = Qheart*(Cartph-Cheartph/Pheartph) #PHB in heart dA(19)/dt = Qkidney*(Cartph-Ckidneyph/Pkidneyph) #PHB in kidney dA(20)/dt = Qmuscle*(Cartph-Cmuscleph/Pmuscleph) #PHB in muscle dA(21)/dt = Qskin*(Cartph-Cskinph/Pskinph) #PHB in skin dA(22)/dt = Qfat*(Cartph-Cfatph/Pfatph) #PHB in fat dA(23)/dt = Qtotal*(Clungph/Plungph-Cartph) #PHB in arterial blood dA(24)/dt = Qbrn*Cbrncph+Qlung*(Clungph/Plungph) +Qheart*(Cheartph/Pheartph) +Qt*(Ckidneyph/Pkidneyph) +Qmuscle*(Cmuscleph/Pmuscleph) +Qskin*(Cskinph/Pskinph) +Qfat*(Cfatph/Pfatph)-Qtotal*Cvnsph #PHB in venous blood GA: Gestational age in weeks SEX: gender (1=male, 0=female)",
+    "parameter_values": "Subject A theta1=0.240 theta2=0.180 theta3=0.0001 theta4=0.156 theta5=0.00001 theta6=1 theta7=0.04 theta8=0.1884 theta9=1.20 theta10=1.75 theta11=0.438 Subject B theta1=4.8 theta2=0 theta3=NA theta4=1.20 theta5=0.00001 theta6=1 theta7=0.04 theta8=NA theta9=1.20 theta10=1.75 theta11=0.438 Subject C theta1=0.180 theta2=14.4 theta3=0.0001 theta4=0.6 theta5=0.00001 theta6=1 theta7=0.04 theta8=NA theta9=1.20 theta10=1.75 theta11=0.438",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHB",
+      "population": "N: 3 (-) Age: - WT -",
+      "route": "oral",
+      "n_subjects": 3,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 3 (-) Age: - WT -",
+        "n_total": 3,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 3
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 14",
+              "evidence": "N: 3 (-) Age: - WT -",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 14",
+          "evidence": "N: 3 (-) Age: - WT -",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single oral doses in healthy volunteers",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 16",
+            "evidence": "Single oral doses in healthy volunteers",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "24 compartment PBPK",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["KABS", "VMAXPH", "KMPH", "VMAXPM", "KMPM", "VIND", "KMIND", "KMET", "DR", "FR", "BPLASMA"]
+          },
+          "description": "24 compartment PBPK"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "24 compartment PBPK Single oral doses in healthy volunteers",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Kabs",
+            "typical": 0.24,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kabs",
+            "typical": 4.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kabs",
+            "typical": 0.18,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vmaxph",
+            "typical": 0.18,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vmaxph",
+            "typical": 0,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vmaxph",
+            "typical": 14.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmph",
+            "typical": 0.0001,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmph",
+            "typical": 0.0001,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vmaxpm",
+            "typical": 0.156,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vmaxpm",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vmaxpm",
+            "typical": 0.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmpm",
+            "typical": 1e-05,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmpm",
+            "typical": 1e-05,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmpm",
+            "typical": 1e-05,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vind",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vind",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vind",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmind",
+            "typical": 0.04,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmind",
+            "typical": 0.04,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmind",
+            "typical": 0.04,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kmet",
+            "typical": 0.1884,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "DR",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "DR",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "DR",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "FR",
+            "typical": 1.75,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "FR",
+            "typical": 1.75,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "FR",
+            "typical": 1.75,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Bplasma",
+            "typical": 0.438,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Bplasma",
+            "typical": 0.438,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Bplasma",
+            "typical": 0.438,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["WT", "physiological parameters"],
+      "residual_error": null,
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "El-Masri",
+      "year": "1998",
+      "dose": "Single oral doses in healthy volunteers",
+      "population": "N: 3 (-) Age: - WT -",
+      "population_details": {
+        "raw": "N: 3 (-) Age: - WT -",
+        "n_total": 3,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 3
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 14",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 14",
+              "evidence": "N: 3 (-) Age: - WT -",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 14",
+          "evidence": "N: 3 (-) Age: - WT -",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": "g",
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Single oral doses in healthy volunteers",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 16",
+            "evidence": "Single oral doses in healthy volunteers",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to determine the metabolic profile of primidone among three human subjects, rats, and mice”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["WT", "physiological parameters"],
+      "raw": "Tested: - Included: WT, physiological parameters"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:22:55.532Z"
+}

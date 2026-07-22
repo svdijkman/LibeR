@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_oxc_25220641_m01",
+  "screening_id": null,
+  "article_id": "pmid_25220641",
+  "pmid": "25220641",
+  "source_pdf_sha256": "f87656e9536d3c12eee472bcfbfddd19ffabb991976dc7b09b177c9178857a3b",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:43:36.865Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population pharmacokinetics modeling of oxcarbazepine to characterize drug interactions in Chinese children with epilepsy",
+    "compound": "oxcarbazepine (OXC)",
+    "population": "Chinese pediatric patients aged 2 months to 18 years",
+    "route": "oral",
+    "n_subjects": 688,
+    "software": "Phoenix NLME",
+    "estimation_method": "nonlinear mixed-effect modeling",
+    "model_type": "structural model with inter- and intra-individual variability, residual error model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 1,
+      "description": "One-compartment model with first-order absorption and elimination"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "Ka",
+          "typical": 0.83,
+          "se": 0.1115,
+          "unit": "h^-1"
+        },
+        {
+          "name": "Vd",
+          "typical": 0.67,
+          "se": 0.0441,
+          "unit": "L/kg"
+        },
+        {
+          "name": "CL",
+          "typical": 0.035,
+          "se": 0.0006,
+          "unit": "L·kg^-1·h^-1"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Inter-individual variability in Ka",
+          "parameter": "Ka",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "Exp(ηKa)",
+          "variability_level": "iiv",
+          "reported_value": 39.82,
+          "reported_metric": "cv_fraction",
+          "value": 7.25,
+          "conversion": "100 * sqrt(value)"
+        },
+        {
+          "description": "Inter-individual variability in Vd",
+          "parameter": "Vd",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "Exp(ηVd)",
+          "variability_level": "iiv",
+          "reported_value": 19.41,
+          "reported_metric": "cv_fraction",
+          "value": 2.83,
+          "conversion": "100 * sqrt(value)"
+        },
+        {
+          "description": "Inter-individual variability in CL",
+          "parameter": "CL",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "Exp(ηCL)",
+          "variability_level": "iiv",
+          "reported_value": 6.89,
+          "reported_metric": "cv_fraction",
+          "value": 1.3,
+          "conversion": "100 * sqrt(value)"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 1,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 2,
+          "col_eta": 3,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error model for MHD concentration",
+          "error_model": "additive",
+          "reported_value": 0.93,
+          "reported_metric": "sd",
+          "value": 0.92,
+          "conversion": "sqrt(value)"
+        }
+      ]
+    },
+    "covariates": [
+      "weight"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.857143,
+      "fields": {
+        "structure": 0.928571,
+        "parameters": 0.857143,
+        "population": 0.857143,
+        "software": 0.928571
+      }
+    },
+    "evidence_quotes": [
+      "The final model was as follows: Ka (h-1)=θKa·Exp(ηKa); Vd (L/kg) =θVd·Exp(ηVd); CL (L·kg-1·h-1)=θCL·Exp(θNEWAEDs)Exp(θVPA)·Exp(θEIAEDs)·Exp(ηCL)",
+      "The basic model was as follows: Ka (h-1)=0.46; Vd (L/kg)=0.98; CL (L·kg-1·h-1)=0.031",
+      "The final estimated MHD Ka of the subpopulations was 0.83 h-1; the Vd was 0.67 L/kg; the CL was 0.035 L·kg-1·h-1 and the corresponding half-life estimate in these subpopulations was 13.3 h"
+    ],
+    "notes": "The model includes enzyme-inducing AEDs (carbamazepine, phenytoin, phenobarbital) and newer generation AEDs (levetiracetam, lamotrigine, topiramate). The model also accounts for the effect of valproic acid as an enzyme-inhibiting AED. The model was validated using both internal and external data."
+  },
+  "variants": {
+    "text": {
+      "title": "Population pharmacokinetics modeling of oxcarbazepine to characterize drug interactions in Chinese children with epilepsy",
+      "compound": "oxcarbazepine (OXC)",
+      "population": "Chinese pediatric patients aged 2 months to 18 years",
+      "route": "oral",
+      "n_subjects": 688,
+      "software": "Phoenix NLME",
+      "estimation_method": "nonlinear mixed-effect modeling",
+      "model_type": "structural model with inter- and intra-individual variability, residual error model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One-compartment model with first-order absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Ka",
+            "typical": 0.83,
+            "se": 0.1115,
+            "unit": "h^-1"
+          },
+          {
+            "name": "Vd",
+            "typical": 0.67,
+            "se": 0.0441,
+            "unit": "L/kg"
+          },
+          {
+            "name": "CL",
+            "typical": 0.035,
+            "se": 0.0006,
+            "unit": "L·kg^-1·h^-1"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Inter-individual variability in Ka",
+            "parameter": "Ka",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "Exp(ηKa)",
+            "variability_level": "iiv",
+            "reported_value": 39.82,
+            "reported_metric": "cv_fraction",
+            "value": 7.25,
+            "conversion": "100 * sqrt(value)"
+          },
+          {
+            "description": "Inter-individual variability in Vd",
+            "parameter": "Vd",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "Exp(ηVd)",
+            "variability_level": "iiv",
+            "reported_value": 19.41,
+            "reported_metric": "cv_fraction",
+            "value": 2.83,
+            "conversion": "100 * sqrt(value)"
+          },
+          {
+            "description": "Inter-individual variability in CL",
+            "parameter": "CL",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "Exp(ηCL)",
+            "variability_level": "iiv",
+            "reported_value": 6.89,
+            "reported_metric": "cv_fraction",
+            "value": 1.3,
+            "conversion": "100 * sqrt(value)"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 1,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 3,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error model for MHD concentration",
+            "error_model": "additive",
+            "reported_value": 0.93,
+            "reported_metric": "sd",
+            "value": 0.92,
+            "conversion": "sqrt(value)"
+          }
+        ]
+      },
+      "covariates": [
+        "weight"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.857143,
+        "fields": {
+          "structure": 0.928571,
+          "parameters": 0.857143,
+          "population": 0.857143,
+          "software": 0.928571
+        }
+      },
+      "evidence_quotes": [
+        "The final model was as follows: Ka (h-1)=θKa·Exp(ηKa); Vd (L/kg) =θVd·Exp(ηVd); CL (L·kg-1·h-1)=θCL·Exp(θNEWAEDs)Exp(θVPA)·Exp(θEIAEDs)·Exp(ηCL)",
+        "The basic model was as follows: Ka (h-1)=0.46; Vd (L/kg)=0.98; CL (L·kg-1·h-1)=0.031",
+        "The final estimated MHD Ka of the subpopulations was 0.83 h-1; the Vd was 0.67 L/kg; the CL was 0.035 L·kg-1·h-1 and the corresponding half-life estimate in these subpopulations was 13.3 h"
+      ],
+      "notes": "The model includes enzyme-inducing AEDs (carbamazepine, phenytoin, phenobarbital) and newer generation AEDs (levetiracetam, lamotrigine, topiramate). The model also accounts for the effect of valproic acid as an enzyme-inhibiting AED. The model was validated using both internal and external data."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

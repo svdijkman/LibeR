@@ -1,0 +1,8 @@
+"workload","method","mapping","nonmem_end_to_end_seconds","liberation_end_to_end_seconds","end_to_end_ratio_nonmem_over_liberation","nonmem_core_seconds","liberation_core_seconds","core_ratio_nonmem_over_liberation","nonmem_noncore_overhead_seconds","liberation_noncore_overhead_seconds"
+"estimation","FO","direct",4.63,0.86,5.38372093023256,0.26,0.47,0.553191489361702,4.37,0.39
+"estimation","FOCEI","direct",6.69,1.01,6.62376237623763,2.41,0.67,3.59701492537313,4.28,0.34
+"estimation","LAPLACE","direct",5.59,1.14,4.90350877192982,2.17,0.78,2.78205128205128,3.42,0.360000000000001
+"estimation","ITS","approximately aligned controls",47,1.08999999999999,43.1192660550463,42.78,0.74,57.8108108108108,4.22,0.349999999999989
+"estimation","IMP","approximately aligned controls",161.44,6.00999999999999,26.8618968386024,156.86,5.67,27.6649029982363,4.58000000000001,0.33999999999999
+"estimation","SAEM","approximately aligned controls",8.61000000000001,4.88999999999999,1.76073619631903,4.93,4.58,1.0764192139738,3.68000000000001,0.309999999999986
+"simulation","SIMULATION","direct",15.19,1.42000000000002,10.6971830985914,9.844,1.07,9.2,5.34599999999997,0.350000000000016

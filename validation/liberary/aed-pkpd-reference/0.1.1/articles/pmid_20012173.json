@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_20012173",
+  "pmid": "20012173",
+  "title": "Selection between Michaelis-Menten and target-mediated drug disposition pharmacokinetic models.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/yan-2010-20012173.pdf",
+    "sha256": "c8aa94f0cdf17009a4c372c0ebc82f2a94e96d05f1069f5a546870ba1b9d17f7"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

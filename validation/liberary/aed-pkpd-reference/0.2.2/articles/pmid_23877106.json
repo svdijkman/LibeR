@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_23877106",
+  "pmid": "23877106",
+  "title": "",
+  "abstract": "",
+  "first_author": "Toublanc",
+  "year": "2014",
+  "compounds": "LVT",
+  "model_ids": "aed_lvt_23877106_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/toublanc-2014-23877106.pdf",
+    "sha256": "6ed71f9cc763d912a1ec08e2c88adb4ee90ab32190f04048ec5aaee290fa0717"
+  },
+  "metadata_source": ""
+}

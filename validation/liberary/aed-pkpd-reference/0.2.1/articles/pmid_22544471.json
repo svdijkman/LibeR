@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_22544471",
+  "pmid": "22544471",
+  "title": "",
+  "abstract": "",
+  "first_author": "Delattre",
+  "year": "2012",
+  "compounds": "GBP",
+  "model_ids": "aed_gbp_22544471_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/GBP/articles/delattre-2012-22544471.pdf",
+    "sha256": "299c3d05027bfb506112bd61e0c6b7f39318de311f2a128f35d71d9a5c9cba0d"
+  },
+  "metadata_source": ""
+}

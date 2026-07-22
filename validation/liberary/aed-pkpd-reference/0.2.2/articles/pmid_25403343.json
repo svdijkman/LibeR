@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_25403343",
+  "pmid": "25403343",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ahmed",
+  "year": "2015",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_25403343_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/ahmed-2015-25403343.pdf",
+    "sha256": "ac0d39af83fc381ee7278ad69c0da2366048c5233db1cda44d4405edf65a77b1"
+  },
+  "metadata_source": ""
+}

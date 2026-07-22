@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_7324088",
+  "pmid": "7324088",
+  "title": "Differences in single dose phenytoin kinetics between Greenland Eskimos and Danes.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/kromann-1981-7324088.pdf",
+    "sha256": "f86ed4794539f36d72d23e9137989b339fb90bb849ff722a69883d01f3a4d3ce"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_17240061",
+  "pmid": "17240061",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/hocht-2007-17240061.pdf",
+    "sha256": "c1c26856725e56f3bc3f107e8f8c8c17704b15c4264aec88fff39bf0f7bb51f4"
+  }
+}

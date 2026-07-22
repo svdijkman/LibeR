@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_25096692",
+  "pmid": "25096692",
+  "title": "Genetic variants associated with phenytoin-related severe cutaneous adverse reactions.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/chung-2014-25096692.pdf",
+    "sha256": "c66be8e8f70a3965e0b0e93670ba1a3d1737cd492f3561a180bea1a13a8ef8e4"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

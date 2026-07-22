@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_27038098",
+  "pmid": "27038098",
+  "title": "Impact of perampanel on pharmacokinetics of concomitant antiepileptics in patients with partial-onset seizures: pooled analysis of clinical trials.",
+  "abstract": "",
+  "first_author": "Majid",
+  "year": "2016",
+  "compounds": ["CBZ", "PHT"],
+  "model_ids": "aed_cbz_27038098_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/majid-2016-27038098.pdf",
+    "sha256": "cea1db6fca38f751f15a4524b4b2b4942e69b5c94a2b0c49cbf984230154f50d"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

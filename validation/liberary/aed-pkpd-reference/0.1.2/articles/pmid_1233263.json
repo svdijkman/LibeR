@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_1233263",
+  "pmid": "1233263",
+  "title": "",
+  "abstract": "",
+  "first_author": "Berlin",
+  "year": "1975",
+  "compounds": "CLNZ",
+  "model_ids": "aed_clnz_1233263_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CLNZ/articles/berlin-1975-1233263.pdf",
+    "sha256": "56138d832f64e13c5d516d2a99cc555e4834ab1020a9a8b1980f56bd055aa2cc"
+  },
+  "metadata_source": ""
+}

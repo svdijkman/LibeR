@@ -1,0 +1,7 @@
+"fixture","engine","status","reason"
+"oral_proportional","PopED","validated",""
+"oral_proportional","PFIM","validated",""
+"bolus_additive","PopED","validated",""
+"bolus_additive","PFIM","validated",""
+"oral_combined","PopED","validated",""
+"oral_combined","PFIM","not supported by common convention","PFIM 7.0.3 implements Combined1 as (a + b*f)^2; the independent additive-plus-proportional variance a^2 + b^2*f^2 is not available."

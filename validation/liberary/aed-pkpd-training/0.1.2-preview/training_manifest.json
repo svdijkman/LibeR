@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "corpus_version": "0.1.2",
+  "created_at": "2026-07-16T17:32:39.024Z",
+  "tasks": ["extraction", "triage"],
+  "partitions": ["train", "validation"],
+  "tiers": ["A", "B"],
+  "allow_silver": false,
+  "safeguards": {
+    "test_exported": false,
+    "appendix_text_in_inputs": false,
+    "training_eligibility_required": true
+  },
+  "files": {
+    "extraction_train.jsonl": 0,
+    "extraction_validation.jsonl": 0,
+    "triage_train.jsonl": 0,
+    "triage_validation.jsonl": 0
+  },
+  "candidate_count": 387,
+  "skipped_count": 387,
+  "note": "Adjudication training requires stored independent text/vision candidates and is intentionally not synthesized from the reference answer."
+}

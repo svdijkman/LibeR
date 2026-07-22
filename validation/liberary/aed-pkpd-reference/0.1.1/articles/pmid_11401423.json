@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_11401423",
+  "pmid": "11401423",
+  "title": "Time-dependent influence of pentoxifylline on the pharmacokinetics of orally administered carbamazepine in human subjects.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "CBZ",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/exclude/poondru-2001-11401423.pdf",
+    "sha256": "1defdd4415c118b5d594fccf2219f7df41c771bc533c53a67d2fd088a01b508b"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

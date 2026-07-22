@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_11738930",
+  "pmid": "11738930",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ouellet",
+  "year": "2001",
+  "compounds": "GBP",
+  "model_ids": "aed_gbp_11738930_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/GBP/articles/ouellet-2001-11738930.pdf",
+    "sha256": "86714aa998e752069159abd0317976645cc0836796b3ac331cc714991394f896"
+  },
+  "metadata_source": ""
+}

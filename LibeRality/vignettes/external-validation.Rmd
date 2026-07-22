@@ -1,0 +1,62 @@
+---
+title: "External validation against PopED and PFIM"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{External validation against PopED and PFIM}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+LibeRality includes an executable external-validation suite. It evaluates
+matched population PK designs in LibeRality, PopED and PFIM and compares the
+complete Fisher information matrices rather than only their determinants.
+
+## Harmonised convention
+
+The comparison uses fixed effects on their natural scale, OMEGA variances and
+residual variances. PFIM expresses residual-error parameters as standard
+deviations; its FIM is transformed with the corresponding Jacobian before any
+comparison. The `fo_block` LibeRality approximation implements the conventional
+block-diagonal population-FO form used by PopED and PFIM. LibeRality's default
+`full_gaussian` form remains unchanged.
+
+## Reproduce the validation
+
+From the ecosystem repository root:
+
+```{r, eval=FALSE}
+source("validation/liberality/external/install-dependencies.R")
+source("validation/liberality/external/run-validation.R")
+```
+
+Or run it directly from R:
+
+```{r, eval=FALSE}
+result <- lity_external_validate(
+  repetitions = 10,
+  output_dir = "validation/liberality/external/results/manual"
+)
+print(result)
+```
+
+Each run writes complete matrices, numerical deltas, RSE differences, cold and
+warm timings, a D-optimal grid-search result, a JSON manifest and an HTML
+report. The command-line runner exits with a failure status if any declared
+tolerance is exceeded.
+
+The runtime table distinguishes setup, first (cold) evaluation, repeated warm
+core evaluation, and repeated warm setup-plus-evaluation. Timings use a
+high-resolution wall clock. They are useful for detecting regressions on the
+same machine, but should not be interpreted as universal package rankings.
+
+## Scope limitation
+
+PFIM 7.0.3's `Combined1` residual model uses `(a + b*f)^2`. LibeRality and
+PopED's independent combined error uses `a^2 + b^2*f^2`. The combined-error
+fixture is therefore compared between LibeRality and PopED and explicitly
+marked unsupported for PFIM. This is a model-convention limitation, not a
+numerical discrepancy.

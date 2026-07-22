@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_23606544",
+  "pmid": "23606544",
+  "title": "",
+  "abstract": "",
+  "first_author": "Kane",
+  "year": "2013",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_23606544_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "",
+    "sha256": ""
+  },
+  "metadata_source": ""
+}

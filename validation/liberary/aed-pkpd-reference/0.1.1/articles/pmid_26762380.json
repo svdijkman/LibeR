@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_26762380",
+  "pmid": "26762380",
+  "title": "",
+  "abstract": "",
+  "first_author": "Djordjevic",
+  "year": "2016",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_26762380_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/djordjevic-2016-26762380.pdf",
+    "sha256": "cf5472d7afb2021348cf0381303acfdea8e14ed7838cb1bae28286b3570b32a9"
+  },
+  "metadata_source": ""
+}

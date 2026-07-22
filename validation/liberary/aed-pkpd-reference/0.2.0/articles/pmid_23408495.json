@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_23408495",
+  "pmid": "23408495",
+  "title": "Population pharmacokinetics of unbound and total drug concentrations following intravenously administered carbamazepine in elderly and younger adult patients with epilepsy.",
+  "abstract": "",
+  "first_author": "Ahmed",
+  "year": "2013",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_23408495_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/ahmed-2013-23408495.pdf",
+    "sha256": "8357dcedf83cf86ecbd98ad6e493e1df94a2de0548cee8afe70b9b3f2ab54f51"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

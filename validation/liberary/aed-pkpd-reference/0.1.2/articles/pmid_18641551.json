@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_18641551",
+  "pmid": "18641551",
+  "title": "Population estimation regarding the effects of cytochrome P450 2C19 and 3A5 polymorphisms on zonisamide clearance.",
+  "abstract": "",
+  "first_author": "Okada",
+  "year": "2008",
+  "compounds": "ZNS",
+  "model_ids": "aed_zns_18641551_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/ZNS/articles/okada-2008-18641551.pdf",
+    "sha256": "43f1e86f7c0ecf6b763c71542699a4eb214b6e7b59b5878adb5984a97eb0633e"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

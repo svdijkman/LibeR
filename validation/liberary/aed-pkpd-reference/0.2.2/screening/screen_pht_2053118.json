@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_2053118",
+  "pmid": "2053118",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/ludden-1991-2053118.pdf",
+    "sha256": "493ef6ed0b7ad2e9c68b585595dce83d0e5a40f00ad5caa1acd2cc36df3a4a2f"
+  }
+}

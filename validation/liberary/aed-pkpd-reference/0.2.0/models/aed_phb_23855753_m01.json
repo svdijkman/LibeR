@@ -1,0 +1,388 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_phb_23855753_m01",
+  "article_id": "pmid_23855753",
+  "pmid": "23855753",
+  "model_index": 1,
+  "compound_group": "PHB",
+  "family_id": "pmid_23855753",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHB/Supplement_PHB_v2.docx",
+      "sha256": "39bb55d9429e37117ffc07563feb43f6c8dd7efc1640282803c2fed77f0ba449",
+      "study_table": 1,
+      "study_row": 4,
+      "model_table": 2,
+      "model_row": 4
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHB/articles/marsot-2014-23855753.pdf",
+      "sha256": "19d0022cf6ca2bee263d31f656da28f1078114afa0f960c77bf9b0aab74f7013"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Marsot 2014 23855753",
+    "population": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+    "model_type": "PK",
+    "objective": "“to estimate phenobarbital absolute bioavailability from routine clinical data collected in neonates and young infants using a population pharmacokinetic approach”",
+    "covariates": "Tested: PNA, GA, SEX, WT, PHB dose Included: WT on CL and Vd",
+    "observations": "Bioavailability in neonates and infants seems to be reduced to less than 50%, while it is considered practically 100% in adults. The authors ascribe this difference to pH levels in infant stomachs. The model seems unbiased, but not very accurate.",
+    "dose": "Multiple IV and oral doses in patients",
+    "structure": "1 compartment with first order absorption and elimination",
+    "equations": "CL=theta1*((WT/70)**0.75)*exp(eta1) Vd=theta2*(WT/70)*exp(eta2) F=theta3*exp(eta3) Ka=theta4 Cobs=Cipred+eps1",
+    "parameter_values": "theta1=0.191 theta2=44.6 theta3=0.489 theta4=50 omega1=0.0273 omega2=0.219 omega3=0.144 sigma1=7.22",
+    "validation": "Yes (bootstrap of 1000) / Yes: validated in 35 neonates (PMID 28407406)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHB",
+      "population": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+      "route": "oral",
+      "n_subjects": 48,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+        "n_total": 48,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 48
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 4.26,
+                    "sd": 3.19
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.7,
+                    "maximum": 10
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "4.26±3.19 (0.7-10.0)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 4",
+              "evidence": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 4",
+          "evidence": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Multiple IV and oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 4",
+            "evidence": "Multiple IV and oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment with first order absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["CL", "VD", "F", "KA"]
+          },
+          "description": "1 compartment with first order absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment with first order absorption and elimination Multiple IV and oral doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.191,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd",
+            "typical": 44.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "F",
+            "typical": 0.489,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 50,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0273,
+            "reported_metric": "variance",
+            "value": 0.0273,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Vd",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.219,
+            "reported_metric": "variance",
+            "value": 0.219,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "F",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.144,
+            "reported_metric": "variance",
+            "value": 0.144,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 7.22,
+            "reported_metric": "variance",
+            "value": 7.22,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": "WT on CL and Vd",
+      "residual_error": "CL=theta1*((WT/70)**0.75)*exp(eta1) Vd=theta2*(WT/70)*exp(eta2) F=theta3*exp(eta3) Ka=theta4 Cobs=Cipred+eps1",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Marsot",
+      "year": "2014",
+      "dose": "Multiple IV and oral doses in patients",
+      "population": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+      "population_details": {
+        "raw": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+        "n_total": 48,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 48
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 4.26,
+                    "sd": 3.19
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 0.7,
+                    "maximum": 10
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 4",
+                  "evidence": "4.26±3.19 (0.7-10.0)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 4",
+              "evidence": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 4",
+          "evidence": "N: 48 (France) GA (weeks): 37.1±3.3 (27-42) PNA (days): 26.8±64 (0-206) WT: 4.26±3.19 (0.7-10.0)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Multiple IV and oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 4",
+            "evidence": "Multiple IV and oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to estimate phenobarbital absolute bioavailability from routine clinical data collected in neonates and young infants using a population pharmacokinetic approach”"
+    },
+    "covariates": {
+      "tested": ["PNA", "GA", "SEX", "WT", "PHB dose"],
+      "included": "WT on CL and Vd",
+      "raw": "Tested: PNA, GA, SEX, WT, PHB dose Included: WT on CL and Vd"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 1000) / Yes: validated in 35 neonates (PMID 28407406)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T21:55:10.919Z"
+}

@@ -1,0 +1,391 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_9756109_m01",
+  "article_id": "pmid_9756109",
+  "pmid": "9756109",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_9756109",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 28,
+      "model_table": 2,
+      "model_row": 35
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/sanchez-alcaraz-1998-9756109.pdf",
+      "sha256": "1f8de65603b6b8bac4b033fa2a2aa51f4f42e51937acdd9ef129d9c59fd256ae"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Sanchez-Alcaraz 1998 9756109",
+    "population": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+    "model_type": "PK",
+    "objective": "“To evaluate PPK and the relationship between plasma concentration and DDPVA in a homogeneous group of children with epilepsy”",
+    "covariates": "Tested: Age Included: Age",
+    "observations": "Model limited to estimate VPA CL in children of 8-72 months. The model describes an asymptotic relation of increased CL as age increases. A linear correlation is found between VPA plasma level and dose administered. Results show show that dose required to reach mean plasma [VPA] decreases with age. A level:dose ratio should be used with care as the inter-individual variation in children <2 yrs is 50%.",
+    "dose": "Steady state, oral doses in patients",
+    "structure": "Simplified PK model",
+    "equations": "if(AGE<24) CL = (((theta1/1000)*WT )*((AGE/12)**theta2))*exp(eta1) if(AGE>24 & AGE<48) CL = (((theta1/1000)*WT )*((AGE/12)**theta2))*exp(eta2) if(AGE>48) CL = (((theta1/1000)*WT )*((AGE/12)**theta2))*exp(eta3) Cipred=DOSE/(CL*Tau) Cobs=Cipred #no error model reported DOSE is VPA dose in mg Tau is dosing interval in hours AGE: in months CL is converted from mL/kg/h to L/h by dividing by 1000*WT",
+    "parameter_values": "theta1=47.6 theta2= 0.29 omega1=0.2561 omega2=0.0939 omega3=0.0558",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "VPA",
+      "population": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+      "route": "oral",
+      "n_subjects": 62,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+        "n_total": 62,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 62
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 8,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 28",
+                  "evidence": "8 month- 6 yrs",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 28",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 28",
+              "evidence": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 28",
+          "evidence": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 35",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK model",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2"]
+          },
+          "description": "Simplified PK model"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK model Steady state, oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 47.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.29,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.2561,
+            "reported_metric": "variance",
+            "value": 0.2561,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0939,
+            "reported_metric": "variance",
+            "value": 0.0939,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0558,
+            "reported_metric": "variance",
+            "value": 0.0558,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": "Age",
+      "residual_error": "if(AGE<24) CL = (((theta1/1000)*WT )*((AGE/12)**theta2))*exp(eta1) if(AGE>24 & AGE<48) CL = (((theta1/1000)*WT )*((AGE/12)**theta2))*exp(eta2) if(AGE>48) CL = (((theta1/1000)*WT )*((AGE/12)**theta2))*exp(eta3) Cipred=DOSE/(CL*Tau) Cobs=Cipred #no error model reported DOSE is VPA dose in mg Tau is dosing interval in hours AGE: in months CL is converted from mL/kg/h to L/h by dividing by 1000*WT",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Sanchez-Alcaraz",
+      "year": "1998",
+      "dose": "Steady state, oral doses in patients",
+      "population": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+      "population_details": {
+        "raw": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+        "n_total": 62,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 62
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 8,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 28",
+                  "evidence": "8 month- 6 yrs",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 28",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 28",
+              "evidence": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 28",
+          "evidence": "N:62 Sex: - Age: 8 month- 6 yrs WT: -",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady state, oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 35",
+            "evidence": "Steady state, oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“To evaluate PPK and the relationship between plasma concentration and DDPVA in a homogeneous group of children with epilepsy”"
+    },
+    "covariates": {
+      "tested": "Age",
+      "included": "Age",
+      "raw": "Tested: Age Included: Age"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T21:55:15.918Z"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_8568010",
+  "pmid": "8568010",
+  "title": "A model for estimating individualized valproate clearance values in children.",
+  "abstract": "",
+  "first_author": "Botha",
+  "year": "1995",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_8568010_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/botha-1995-8568010.pdf",
+    "sha256": "a7278ba2f6822e9893a1b82a3923609f210612471ff2d421425bcf0291aaffd6"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

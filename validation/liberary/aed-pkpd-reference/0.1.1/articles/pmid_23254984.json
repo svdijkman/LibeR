@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23254984",
+  "pmid": "23254984",
+  "title": "",
+  "abstract": "",
+  "first_author": "Shellhaas",
+  "year": "2013",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_23254984_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/shellhaas-2013-23254984.pdf",
+    "sha256": "a24c62c9369af1cf0f6771f7d4de5be56f47f2c22117eaab4f77d6067a15f464"
+  },
+  "metadata_source": ""
+}

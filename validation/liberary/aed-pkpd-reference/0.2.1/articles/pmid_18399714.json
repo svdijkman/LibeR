@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_18399714",
+  "pmid": "18399714",
+  "title": "",
+  "abstract": "",
+  "first_author": "Toublanc",
+  "year": "2008",
+  "compounds": "LVT",
+  "model_ids": "aed_lvt_18399714_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/toublanc-2008-18399714.pdf",
+    "sha256": "ad75db1e0c81fb07b71943c6d3e96aeaaf145002cdd7bae9bcc8ba2eae861552"
+  },
+  "metadata_source": ""
+}

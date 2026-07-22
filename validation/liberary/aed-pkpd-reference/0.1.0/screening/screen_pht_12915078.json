@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_12915078",
+  "pmid": "12915078",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/wang-2003-12915078.pdf",
+    "sha256": "3c40ad506b476520e5b738f2fd5d84dd465c280b51dbb1048bcc36a79441743c"
+  }
+}

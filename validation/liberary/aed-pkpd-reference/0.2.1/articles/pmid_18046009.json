@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_18046009",
+  "pmid": "18046009",
+  "title": "Lamotrigine in pregnancy: clearance, therapeutic drug monitoring, and seizure frequency.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "LMT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/excluded/pennell-2008-18046009.pdf",
+    "sha256": "c18aa61c1931f91521887b5cedd656cfed42edf0952cb70f38819e6d41fcdb2e"
+  },
+  "metadata_source": "Supplements/LMT/pubmed_result_eval_LMT.csv"
+}

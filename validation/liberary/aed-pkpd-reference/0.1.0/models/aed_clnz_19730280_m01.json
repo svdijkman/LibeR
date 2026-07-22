@@ -1,0 +1,342 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_clnz_19730280_m01",
+  "article_id": "pmid_19730280",
+  "pmid": "19730280",
+  "model_index": 1,
+  "compound_group": "CLNZ",
+  "family_id": "pmid_19730280",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CLNZ/Supplement_CLNZ_v2.docx",
+      "sha256": "8a86ad372678a0af7df31d49c867ac3bf54f743a07e499c4b8f66af913fb314c",
+      "study_table": 1,
+      "study_row": 2,
+      "model_table": 2,
+      "model_row": 2
+    },
+    "publication_pdf": {
+      "path": "Supplements/CLNZ/articles/dossantos-2009-19730280.pdf",
+      "sha256": "6aafddfce4b8df6282037162b9816804a635ecfaf7b7c90fb76c38fbd7ce0692"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "dos Santos 2009 19730280",
+    "population": "N: 23 (Brazil) Age: 28.6 (19-45) WT: -",
+    "model_type": "PKPD",
+    "objective": "“to mathematically characterize the relationship between clonazepam plasma concentrations and an adverse effect (impairment of the psychomotor skills)”",
+    "covariates": "Tested: - Included: None",
+    "observations": "No covariates taken into account, possibly due to small number of subjects",
+    "dose": "Single oral dose in healthy subjects",
+    "structure": "2 compartment PK with linear absorption and elimination. Sigmoidal PD inhibition with tolerance.",
+    "equations": "Tlag=theta1*exp(eta1) KA=theta2*exp(eta2) VC=theta3*exp(eta3) K10=theta4*exp(eta4) K12=theta5*exp(eta5) K21=theta6*exp(eta6) BSL=theta7*exp(eta7) EC50=theta8*exp(eta8) AC=theta9*exp(eta9) KT=theta10*exp(eta10) GA=theta11*exp(eta11) ALAG1 = Tlag if (t <Tlag) then C50 = EC50 else C50 = EC50 + AC*(1-exp(-KT*(t-Tlag))) endif dA1/dt = -KA*A1 dA2/dt = KA*A1+K21*A3 -(K10 + K12)*A2 dA3/dt = K12*A2-K21*A3 C = A2/VC E = BSL*(1-((C**GA)/((C50**GA)+(C**GA)))) Cobs=Cipred+eps1 Eobs=Eipred*(1+eps3)+eps2",
+    "parameter_values": "theta1=0.357 theta2=1.76 theta3=130 theta4=0.0214 theta5=0.108 theta6=0.258 theta7=66.4 theta8=9.33 theta9=15.4 theta10=0.0322 theta11=3.57 omega1=0.141 omega2=0.704 omega3=0.130 omega4=0.0193 omega5=0.14 omega6=0.178 omega7=0.053 omega8=0.259 omega9=0.102 omega10=0.181 omega11=0.0620 sigma1=1.15 sigma2=67.6 sigma3=0.000552",
+    "validation": "Yes (vpc of 100, not shown) /No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "CLNZ",
+      "population": "N: 23 (Brazil) Age: 28.6 (19-45) WT: -",
+      "route": "oral",
+      "n_subjects": 23,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PKPD",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 2,
+        "description": "2 compartment PK with linear absorption and elimination. Sigmoidal PD inhibition with tolerance."
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Tlag",
+            "typical": 0.357,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1.76,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "VC",
+            "typical": 130,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K10",
+            "typical": 0.0214,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K12",
+            "typical": 0.108,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "K21",
+            "typical": 0.258,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "BSL",
+            "typical": 66.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "EC50",
+            "typical": 9.33,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "AC",
+            "typical": 15.4,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KT",
+            "typical": 0.0322,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "GA",
+            "typical": 3.57,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Tlag",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.141,
+            "reported_metric": "variance",
+            "value": 0.141,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "KA",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.704,
+            "reported_metric": "variance",
+            "value": 0.704,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "VC",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.13,
+            "reported_metric": "variance",
+            "value": 0.13,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "K10",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0193,
+            "reported_metric": "variance",
+            "value": 0.0193,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "K12",
+            "eta_index": 5,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.14,
+            "reported_metric": "variance",
+            "value": 0.14,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 6",
+            "parameter": "K21",
+            "eta_index": 6,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(6) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.178,
+            "reported_metric": "variance",
+            "value": 0.178,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 7",
+            "parameter": "BSL",
+            "eta_index": 7,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(7) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.053,
+            "reported_metric": "variance",
+            "value": 0.053,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 8",
+            "parameter": "EC50",
+            "eta_index": 8,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(8) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.259,
+            "reported_metric": "variance",
+            "value": 0.259,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 9",
+            "parameter": "AC",
+            "eta_index": 9,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(9) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.102,
+            "reported_metric": "variance",
+            "value": 0.102,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 10",
+            "parameter": "KT",
+            "eta_index": 10,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(10) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.181,
+            "reported_metric": "variance",
+            "value": 0.181,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 11",
+            "parameter": "GA",
+            "eta_index": 11,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(11) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.062,
+            "reported_metric": "variance",
+            "value": 0.062,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 1.15,
+            "reported_metric": "variance",
+            "value": 1.15,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "combined",
+            "reported_value": 67.6,
+            "reported_metric": "variance",
+            "value": 67.6,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 3",
+            "error_model": "combined",
+            "reported_value": 0.000552,
+            "reported_metric": "variance",
+            "value": 0.000552,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "Tlag=theta1*exp(eta1) KA=theta2*exp(eta2) VC=theta3*exp(eta3) K10=theta4*exp(eta4) K12=theta5*exp(eta5) K21=theta6*exp(eta6) BSL=theta7*exp(eta7) EC50=theta8*exp(eta8) AC=theta9*exp(eta9) KT=theta10*exp(eta10) GA=theta11*exp(eta11) ALAG1 = Tlag if (t <Tlag) then C50 = EC50 else C50 = EC50 + AC*(1-exp(-KT*(t-Tlag))) endif dA1/dt = -KA*A1 dA2/dt = KA*A1+K21*A3 -(K10 + K12)*A2 dA3/dt = K12*A2-K21*A3 C = A2/VC E = BSL*(1-((C**GA)/((C50**GA)+(C**GA)))) Cobs=Cipred+eps1 Eobs=Eipred*(1+eps3)+eps2",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "dos Santos",
+      "year": "2009",
+      "dose": "Single oral dose in healthy subjects",
+      "population": "N: 23 (Brazil) Age: 28.6 (19-45) WT: -",
+      "objective": "“to mathematically characterize the relationship between clonazepam plasma concentrations and an adverse effect (impairment of the psychomotor skills)”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": [],
+      "raw": "Tested: - Included: None"
+    },
+    "validation": {
+      "raw": "Yes (vpc of 100, not shown) /No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:23:10.846Z"
+}

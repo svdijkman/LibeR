@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23503444",
+  "pmid": "23503444",
+  "title": "Assessing impact of real-world dosing irregularities with lamotrigine extended-release and immediate-release formulations by pharmacokinetic simulation.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "LMT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/excluded/chen-2013-23503444.pdf",
+    "sha256": "24ccc2e55ff286c1f8a9bcb8d4963a7e444092f0ceedc6da132f499c8f7ff271"
+  },
+  "metadata_source": "Supplements/LMT/pubmed_result_eval_LMT.csv"
+}

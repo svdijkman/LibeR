@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_18783295",
+  "pmid": "18783295",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/blanchet-2008-18783295.pdf",
+    "sha256": "1d1c72db837c6c52647132ceeb0a4fc5177a7c9228bc3fe424ef5e279c6ba6a3"
+  }
+}

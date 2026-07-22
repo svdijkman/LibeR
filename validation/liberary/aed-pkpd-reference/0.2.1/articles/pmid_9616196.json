@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_9616196",
+  "pmid": "9616196",
+  "title": "",
+  "abstract": "",
+  "first_author": "El-Masri",
+  "year": "1998",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_9616196_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/el-masri-1998-9616196.pdf",
+    "sha256": "bbf805674411da815aa0679cf816e218e1e29b5ca7331d28e33478f0550c0ccb"
+  },
+  "metadata_source": ""
+}

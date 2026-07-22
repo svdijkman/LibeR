@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "partition": "test",
+  "prediction_variant": "prediction",
+  "evaluated_at": "2026-07-16T17:54:47.102Z",
+  "predictions_found": 22,
+  "predictions_expected": 22,
+  "numeric_tolerance": {
+    "relative": 0.05,
+    "absolute": 1e-08
+  },
+  "run": {
+    "schema_version": "1.0.0",
+    "task": "extraction",
+    "partition": "test",
+    "corpus_version": "0.1.2",
+    "provider": "ollama",
+    "model": "qwen2.5:7b-instruct",
+    "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+    "extraction_mode": "text",
+    "started_from_target_free_source_manifest": true,
+    "completed": 22,
+    "failed": 0,
+    "updated_at": "2026-07-16T17:47:17.956Z"
+  },
+  "strict": {
+    "n": 0,
+    "scored": 0,
+    "scalar_coverage": "NA",
+    "scalar_score": "NA",
+    "numeric_coverage": "NA",
+    "numeric_accuracy": "NA",
+    "unverified_numeric_extras": 0
+  },
+  "silver": {
+    "n": 22,
+    "scored": 22,
+    "scalar_coverage": 0.815223665223665,
+    "scalar_score": 0.359172232480723,
+    "numeric_coverage": 0.676460230945525,
+    "numeric_accuracy": 0.310761652936168,
+    "unverified_numeric_extras": 90
+  },
+  "all": {
+    "n": 22,
+    "scored": 22,
+    "scalar_coverage": 0.815223665223665,
+    "scalar_score": 0.359172232480723,
+    "numeric_coverage": 0.676460230945525,
+    "numeric_accuracy": 0.310761652936168,
+    "unverified_numeric_extras": 90
+  },
+  "interpretation": "Tier C/D metrics are development signals, not gold-standard claims. Extras are unverified, not automatically hallucinated."
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_2741195",
+  "pmid": "2741195",
+  "title": "Bayesian regression analysis of non-steady-state phenytoin concentrations: evaluation of predictive performance.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/killilea-1989-2741195.pdf",
+    "sha256": "5267dc30850a542587f66974ad77e2e26a98af7945e9d159d24d84ec4eae5342"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_15811169",
+  "pmid": "15811169",
+  "title": "",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "2005",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_15811169_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/yukawa-2005-15811169.pdf",
+    "sha256": "f3054ccb5a7784deec90416eca5e58407ad9c42685590525a3e9733dfbecceb8"
+  },
+  "metadata_source": ""
+}

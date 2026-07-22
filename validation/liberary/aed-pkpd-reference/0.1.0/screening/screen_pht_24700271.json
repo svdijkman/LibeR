@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_24700271",
+  "pmid": "24700271",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/abduljalil-2014-24700271.pdf",
+    "sha256": "4337d658ba47da2009c0117483b9ec28a42e415e1210038889aaf74a6ef46929"
+  }
+}

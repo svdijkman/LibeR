@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_16789986",
+  "pmid": "16789986",
+  "title": "",
+  "abstract": "",
+  "first_author": "Bondareva",
+  "year": "2006",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_16789986_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/bondareva-2006-16789986.pdf",
+    "sha256": "ccecfece501888a7263eaebb02a73a242453bdbbe60721f1868c2563f4f82e01"
+  },
+  "metadata_source": ""
+}

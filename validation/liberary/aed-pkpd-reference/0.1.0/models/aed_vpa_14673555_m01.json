@@ -1,0 +1,188 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_14673555_m01",
+  "article_id": "pmid_14673555",
+  "pmid": "14673555",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_14673555",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 21,
+      "model_table": 2,
+      "model_row": 27
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/eldesoky-2004-14673555.pdf",
+      "sha256": "c71b56d715b071f52b435b0e663ffbaaa3cf3f97906ca0dffb576b1b4e9f9a02"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "El Desoky 2004 14673555",
+    "population": "N: 81 (Egyptian) Sex: m=52, f=29 Age: 20 (3-58) WT: 48.4 (15-75)",
+    "model_type": "PK",
+    "objective": "“This paper describes a developed pharmacokinetic model for the estimation of valproic acid (VPA) clearance (CL) calculated from routine clinical data taken from Egyptian epileptic patients.”",
+    "covariates": "Tested: AGE, WT. SEX, DDVPA, Comedication (CBZ, DDCBZ), INDI (indication) Included: AGE, DDVPA, CBZ, INDI",
+    "observations": "Model shows good predictive capacity in PRED scattergram. Model made with retrospective clinical data, backward deletion. No attempt was made to estimate relative F between formulations. They fitted a model with a bolus input and fixed the value of V at 0.22 l kg. A nonlinear relationship is found between CL and Age, WT, and DDVPA. In addition, VPA CL increased with comedication (CBZ) and in uncontrolled epilepsy patients.",
+    "dose": "Steady state, oral doses in patients",
+    "structure": "one-compartment model, first order elimination and absorption",
+    "equations": "CL = ((theta1+(theta2*CBZ)+(theta3*DOSE)+(theta4*(AGE/20))+ (theta5*INDI)))*(1+eta1) V = theta6 Kel = theta7 KA = theta8 CHILD: KA=4 (oral tablet) ADULT: KA=1 (EC tablet) Cobs=Cipred *(1+eps1 ) DOSE: VPA dose in mg/day AGE: Age in years CBZ: comedication carbamazepine (Yes:1, No:0) INDI: Indication uncontrolled epilepsy (Yes:1, No:0)",
+    "parameter_values": "theta1=0.105 theta2=0.151 theta3=0.000248 theta4=0.0968 theta5=0.0803 theta6=11.6 theta7=0.19 theta8=1 omega1=0.0529 sigma1=5.24",
+    "validation": "Qualification group of 20 children"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Pharmacokinetic modelling of valproic acid from routine clinical data in Egyptian epileptic patients.",
+      "compound": "VPA",
+      "population": "N: 81 (Egyptian) Sex: m=52, f=29 Age: 20 (3-58) WT: 48.4 (15-75)",
+      "route": "oral",
+      "n_subjects": 81,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "one-compartment model, first order elimination and absorption"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.105,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.151,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.000248,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.0968,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.0803,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 11.6,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kel",
+            "typical": 0.19,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0529,
+            "reported_metric": "variance",
+            "value": 0.0529,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 5.24,
+            "reported_metric": "variance",
+            "value": 5.24,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["AGE", "DDVPA", "CBZ", "INDI"],
+      "residual_error": "CL = ((theta1+(theta2*CBZ)+(theta3*DOSE)+(theta4*(AGE/20))+ (theta5*INDI)))*(1+eta1) V = theta6 Kel = theta7 KA = theta8 CHILD: KA=4 (oral tablet) ADULT: KA=1 (EC tablet) Cobs=Cipred *(1+eps1 ) DOSE: VPA dose in mg/day AGE: Age in years CBZ: comedication carbamazepine (Yes:1, No:0) INDI: Indication uncontrolled epilepsy (Yes:1, No:0)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "El Desoky",
+      "year": "2004",
+      "dose": "Steady state, oral doses in patients",
+      "population": "N: 81 (Egyptian) Sex: m=52, f=29 Age: 20 (3-58) WT: 48.4 (15-75)",
+      "objective": "“This paper describes a developed pharmacokinetic model for the estimation of valproic acid (VPA) clearance (CL) calculated from routine clinical data taken from Egyptian epileptic patients.”"
+    },
+    "covariates": {
+      "tested": ["AGE", "WT. SEX", "DDVPA", "Comedication (CBZ", "DDCBZ)", "INDI (indication)"],
+      "included": ["AGE", "DDVPA", "CBZ", "INDI"],
+      "raw": "Tested: AGE, WT. SEX, DDVPA, Comedication (CBZ, DDCBZ), INDI (indication) Included: AGE, DDVPA, CBZ, INDI"
+    },
+    "validation": {
+      "raw": "Qualification group of 20 children"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:23:14.690Z"
+}

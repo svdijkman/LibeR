@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_vpa_22167565_m01",
+  "article_id": "pmid_22167565",
+  "pmid": "22167565",
+  "model_index": 1,
+  "compound_group": "VPA",
+  "family_id": "pmid_22167565",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/VPA/Supplement_VPA_v2.docx",
+      "sha256": "aceb4d7288f39ada789bd3fed72c48f7852a5dd57f06970372e9ffe0737b946b",
+      "study_table": 1,
+      "study_row": 9,
+      "model_table": 2,
+      "model_row": 11
+    },
+    "publication_pdf": {
+      "path": "Supplements/VPA/articles/williams-2012-22167565.pdf",
+      "sha256": "f7a8c904efa77fdb9f79955b38b5aac699d8f18a747f9f257ca978b7c662badd"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Williams 2012 22167565",
+    "population": "N: 52 Sex: m=36, f=16 Age: 1- 17",
+    "model_type": "PK",
+    "objective": "“we characterize the population pharmacokinetics (PopPK) of VPA in pediatric patients with epilepsy, using a nonlinear mixed-effects model, and apply the final model to estimate pharmacokinetic (PK) parameters from data collected during a clinical trial in SMA using VPA.”",
+    "covariates": "Tested: AGE, WT Included: AGE, WT",
+    "observations": "CL values estimated by model are in agreement with reported values of paediatric patients. A bias in the prediction error of the final model remains. Protein binding indirectly affects the model, because hepatic metabolism is characterized as restrictive whilst elimination occurs here primarily. Intrinsic CL is not well described in model, CL effect due to WT/Age are expected due to metabolic change, not protein binding.",
+    "dose": "Single IV infusion and steady state oral doses in patients",
+    "structure": "2-compartment model, first-order absorption rate constant for solid oral dosing and zero-order absorption rate constant for liquid oral dosing",
+    "equations": "CL= theta1*((WT/70)**theta2)*exp(eta1) V1= theta3*((WT/70)**theta4)*((AGE/8.5)**theta5)*exp(eta2) V2= theta6*((WT/70)**theta4)*exp(eta3) Q= theta7*((WT/70)**theta2) KA=theta8 #for tablet KA=theta9 #for sprinkles KA=theta10 #for capsules Cobs=Cipred*(1+eps1) #for TDM data Cobs=Cipred*(1+eps2) #for trial data WT: total body weight (kg) AGE: age in years",
+    "parameter_values": "theta1= 0.854 theta2= 0.75 theta3= 10.3 theta4= 1.0 theta5= -0.267 theta6= 4.08 theta7= 5.34 theta8= 4.1 theta9= 1.2 theta10= 2 omega1= 0.129 omega2= 0.0384 omega3= 1.02 sigma1=0.121 sigma2=0.00214",
+    "validation": "Yes, (stratified nonparametric bootstrap of 500), and Monte Carlo simulations (n=1000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "VPA",
+      "population": "N: 52 Sex: m=36, f=16 Age: 1- 17",
+      "route": "oral",
+      "n_subjects": 52,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 2,
+        "description": "2-compartment model, first-order absorption rate constant for solid oral dosing and zero-order absorption rate constant for liquid oral dosing"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.854,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.75,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V1",
+            "typical": 10.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": -0.267,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V2",
+            "typical": 4.08,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q",
+            "typical": 5.34,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 4.1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 2,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.129,
+            "reported_metric": "variance",
+            "value": 0.129,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0384,
+            "reported_metric": "variance",
+            "value": 0.0384,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "V1",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.02,
+            "reported_metric": "variance",
+            "value": 1.02,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.121,
+            "reported_metric": "variance",
+            "value": 0.121,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix SIGMA 2",
+            "error_model": "proportional",
+            "reported_value": 0.00214,
+            "reported_metric": "variance",
+            "value": 0.00214,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["AGE", "WT"],
+      "residual_error": "CL= theta1*((WT/70)**theta2)*exp(eta1) V1= theta3*((WT/70)**theta4)*((AGE/8.5)**theta5)*exp(eta2) V2= theta6*((WT/70)**theta4)*exp(eta3) Q= theta7*((WT/70)**theta2) KA=theta8 #for tablet KA=theta9 #for sprinkles KA=theta10 #for capsules Cobs=Cipred*(1+eps1) #for TDM data Cobs=Cipred*(1+eps2) #for trial data WT: total body weight (kg) AGE: age in years",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Williams",
+      "year": "2012",
+      "dose": "Single IV infusion and steady state oral doses in patients",
+      "population": "N: 52 Sex: m=36, f=16 Age: 1- 17",
+      "objective": "“we characterize the population pharmacokinetics (PopPK) of VPA in pediatric patients with epilepsy, using a nonlinear mixed-effects model, and apply the final model to estimate pharmacokinetic (PK) parameters from data collected during a clinical trial in SMA using VPA.”"
+    },
+    "covariates": {
+      "tested": ["AGE", "WT"],
+      "included": ["AGE", "WT"],
+      "raw": "Tested: AGE, WT Included: AGE, WT"
+    },
+    "validation": {
+      "raw": "Yes, (stratified nonparametric bootstrap of 500), and Monte Carlo simulations (n=1000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:31:49.796Z"
+}

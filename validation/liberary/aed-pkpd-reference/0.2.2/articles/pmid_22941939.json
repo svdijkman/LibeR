@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_22941939",
+  "pmid": "22941939",
+  "title": "Therapeutic drug monitoring in interstitial fluid: a feasibility study using a comprehensive panel of drugs.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/kiang-2012-22941939.pdf",
+    "sha256": "f03f1ebaaf3b1b78b212f596c73b0d815ace5c6879675364098f1ea8bacfac24"
+  },
+  "metadata_source": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+}

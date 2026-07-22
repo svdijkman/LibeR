@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_3197366",
+  "pmid": "3197366",
+  "title": "",
+  "abstract": "",
+  "first_author": "Boucher",
+  "year": "1988",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_3197366_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/boucher-1988-3197366.pdf",
+    "sha256": "020c083aa41ce3ea087370bb31960efee26c799400f5d63dc4b403da01dda012"
+  },
+  "metadata_source": ""
+}

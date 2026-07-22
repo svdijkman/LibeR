@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "screening_id": "screen_pht_19077928",
+  "pmid": "19077928",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/fukuoka-2009-19077928.pdf",
+    "sha256": "fef91d0408052d8b6ac21de7f97c78379411c578fbdd65749c72385f1a09462a"
+  }
+}

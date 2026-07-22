@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_10930965",
+  "pmid": "10930965",
+  "title": "Validation of a population pharmacokinetic model for adjunctive lamotrigine therapy in children.",
+  "abstract": "",
+  "first_author": "Chen",
+  "year": "2000",
+  "compounds": "LMT",
+  "model_ids": "aed_lmt_10930965_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/chen-2000-10930965.pdf",
+    "sha256": "10639b367dcc7afb0fec0933eb723890919cd61726dde2b37eba8e44f12d3ce3"
+  },
+  "metadata_source": "Supplements/VPA/pubmed_result_eval_VPA.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_11185666",
+  "pmid": "11185666",
+  "title": "",
+  "abstract": "",
+  "first_author": "Stowe",
+  "year": "2000",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_11185666_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/stowe-2000-11185666.pdf",
+    "sha256": "95b27581c746d5ed44cde5572d6ad6cc6dc61348c82cb91674be4d267e1f84a7"
+  },
+  "metadata_source": ""
+}

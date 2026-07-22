@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_7229908",
+  "pmid": "7229908",
+  "title": "",
+  "abstract": "",
+  "first_author": "Sheiner",
+  "year": "1980",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_7229908_m01",
+  "partition": "validation",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/sheiner-1980-7229908.pdf",
+    "sha256": "bbdf9158f9f4c68bad403491df875348ca29a15481a5a23dcb6b46d0d6f6136e"
+  },
+  "metadata_source": ""
+}

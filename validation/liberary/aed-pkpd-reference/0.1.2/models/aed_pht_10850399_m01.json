@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_10850399_m01",
+  "article_id": "pmid_10850399",
+  "pmid": "10850399",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_10850399",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 21,
+      "model_table": 2,
+      "model_row": 24
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/valodia-2000-10850399.pdf",
+      "sha256": "45e8f67c37ef9dfadabfc3da4ef9918a72653034553646bba42cb65a8162d747"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Valodia 2000 10850399",
+    "population": "N: 332 (Black: 149; colored: 183) Age: 36.4±14.1 (15-82) WT: -",
+    "model_type": "PK",
+    "objective": "“to assess whether the MM+FO model provides a better fit to the phenytoin data than the Michaelis-Menten (MM) model (i.e. whether a linear pathway is present in parallel to a nonlinear pathway in the elimination of phenytoin). The second objective was to ascertain whether including a linear pathway results in a meaningful improvement in the prediction of the dose-concentration relationship”",
+    "covariates": "Tested: - Included: race smoking status, age on VM",
+    "observations": "Same data was used as in (Valodia 1999 10051055). The linear portion of elimination improved the description of the data compared only including non-linear kinetics. It is unclear why the parameters are different from those reported earlier, given that the model is the same.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment model with parallel michaelis menten and linear elimination",
+    "equations": "Vm = (theta1*WT+theta3)*(theta4**RACE)*(theta5**SMK)*(theta7**ELD)*exp(eta1) Km = theta2*exp(eta2) CL = theta6*exp(eta3) Css = -(1/2)*(((Vm/CL)+Km-(DD/CL))-sqrt((((Vm/CL)+Km-(DD/CL))**2)+((4*DD*Km)/CL))) RACE is race (0 if black; 1 if colored) SMK is smoker (0 if not smoking, 1 if smoking) AGE is age (0 if younger than 65 years, 1 if older)",
+    "parameter_values": "theta1=2.91 theta2=7.31 theta3=228 theta4=1.07 theta5=1.09 theta6=2.14 theta7=0.96 omega1=- omega2=- omega3=-",
+    "validation": "Yes (cross-validation)/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "N: 332 (Black: 149; colored: 183) Age: 36.4±14.1 (15-82) WT: -",
+      "route": "oral",
+      "n_subjects": 332,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment model with parallel michaelis menten and linear elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 2.91,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Km",
+            "typical": 7.31,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 228,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.07,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.09,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "CL",
+            "typical": 2.14,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 0.96,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["race smoking status", "age on VM"],
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Valodia",
+      "year": "2000",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 332 (Black: 149; colored: 183) Age: 36.4±14.1 (15-82) WT: -",
+      "objective": "“to assess whether the MM+FO model provides a better fit to the phenytoin data than the Michaelis-Menten (MM) model (i.e. whether a linear pathway is present in parallel to a nonlinear pathway in the elimination of phenytoin). The second objective was to ascertain whether including a linear pathway results in a meaningful improvement in the prediction of the dose-concentration relationship”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["race smoking status", "age on VM"],
+      "raw": "Tested: - Included: race smoking status, age on VM"
+    },
+    "validation": {
+      "raw": "Yes (cross-validation)/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:31:48.558Z"
+}

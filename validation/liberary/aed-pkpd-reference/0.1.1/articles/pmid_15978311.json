@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_15978311",
+  "pmid": "15978311",
+  "title": "",
+  "abstract": "",
+  "first_author": "Carlsson",
+  "year": "2005",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_15978311_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/carlsson-2005-15978311.pdf",
+    "sha256": "eb9e8c3aa89426caebe86cd927ac66fe7dceb9a9ae518deaf1828b09421c649a"
+  },
+  "metadata_source": ""
+}

@@ -1,0 +1,56 @@
+---
+title: "Design criteria and optimisation choices"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Design criteria and optimisation choices}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+library(LibeRality)
+```
+
+LibeRality groups criteria by the decision they answer.
+
+| Question | Criteria |
+|---|---|
+| Estimate the full parameter vector | D, A, E |
+| Estimate selected parameters or contrasts | Ds, c, L, RSE, prediction variance |
+| Remain useful under uncertainty | Bayesian, robust, minimax, maximin, model average, precision probability |
+| Distinguish models | T, KL, weighted model discrimination |
+| Support a trial hypothesis | power, superiority, non-inferiority |
+| Support a dosing or endpoint decision | target attainment, correct-dose probability, expected utility |
+| Respect feasibility | cost, participant burden, and explicit constraints |
+| Balance objectives | normalised compound criterion or Pareto frontier |
+
+Bayesian and robust criteria average over the declared scenario distribution.
+Minimax/maximin retain the worst scenario in the correct optimisation direction.
+Prior information can be added as `prior_fim`; its row names are aligned to the
+estimated parameter names.
+
+## Choosing an optimiser
+
+| Design space | Suggested method |
+|---|---|
+| Smooth continuous variables | L-BFGS-B |
+| Small non-smooth continuous problem | Nelder-Mead |
+| Sampling times or a finite grid | coordinate exchange |
+| Mixed continuous, integer, discrete, or categorical | hybrid |
+| Difficult global problem | particle swarm (`pso`) |
+| Allocation weights | multiplicative or Fedorov-Wynn |
+| Several objectives without agreed utility | Pareto exploration |
+
+Constraints are evaluated independently of the scalar criterion and violations
+receive a configurable quadratic penalty during optimisation. Statistical
+constraints include maximum RSE, minimum power, and target/exposure attainment;
+operational constraints include sample separation, samples per subject, total
+subjects, allocation, duration, blood volume, and cost. Custom constraint
+functions are suitable for local trusted runs but are intentionally rejected by
+the typed remote-job wire format.
+
+Theoretical optimality is only one layer of design qualification. Examine
+matrix rank and conditioning, parameter/scenario sensitivity, optimiser
+stability across seeds, exact integer rounding, protocol feasibility, and
+empirical complete-trial operating characteristics before selecting a design.

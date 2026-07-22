@@ -1,0 +1,400 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_phb_8641326_m01",
+  "article_id": "pmid_8641326",
+  "pmid": "8641326",
+  "model_index": 1,
+  "compound_group": "PHB",
+  "family_id": "pmid_8641326",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHB/Supplement_PHB_v2.docx",
+      "sha256": "39bb55d9429e37117ffc07563feb43f6c8dd7efc1640282803c2fed77f0ba449",
+      "study_table": 1,
+      "study_row": 17,
+      "model_table": 2,
+      "model_row": 19
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHB/articles/botha-1995-8641326.pdf",
+      "sha256": "48ced5d3a81f62065fd337a4606bd942883b115ef95d21fbc283462e964408c5"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Botha 1995 8641326",
+    "population": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+    "model_type": "PK",
+    "objective": "“the final model can be used to predict the dose required to achieve a particular serum concentration in an individual patient”",
+    "covariates": "Tested: WT, race, gender, age, comedication with CBZ, PHT, or VPA on CL Included: WT, comedication with CBZ, PHT, or VPA on CL",
+    "observations": "One term is used for either/both CBZ and PHT influence on PHB CL. No goodness of fit was given. No effect of race and no significant difference in CL found with studies in other paediatric populations",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK",
+    "equations": "M=1 if(VPA==1) M=theta3 if(CBZ==1 | PHT==1) M=theta4 CL/F=exp(theta1*WT + theta2)*M*(1+eta1) Css=D/(CL*Tau) Cobs=Css*(1+eps1) CBZ: comedication with carbamazepine (yes=1, no=0) PHT: comedication with phenytoin (yes=1, no=0) VPA: comedication with valproate/valproic acid (yes=1, no=0) Eta and eps were said to be modelled additive, but reported as CV%, here as proportional",
+    "parameter_values": "theta1=0.029 theta2=-2.53 theta3=0.62 theta4=0.87 omega1=0.0328 sigma1=0.0324",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Determination of phenobarbitone population clearance values for South African children.",
+      "compound": "PHB",
+      "population": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+      "route": "oral",
+      "n_subjects": 32,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+        "n_total": 32,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 32
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 5.5,
+                    "sd": 3.2
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 17",
+                  "evidence": "5.5±3.2",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 20.4,
+                    "sd": 9.6
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 17",
+                  "evidence": "20.4±9.6",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 17",
+              "evidence": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 17",
+          "evidence": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 19",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "THETA2", "M"]
+          },
+          "description": "Simplified PK"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 0.029,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": -2.53,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "M",
+            "typical": 0.62,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "M",
+            "typical": 0.87,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0328,
+            "reported_metric": "variance",
+            "value": 0.0328,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.0324,
+            "reported_metric": "variance",
+            "value": 0.0324,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "comedication with CBZ", "PHT", "or VPA on CL"],
+      "residual_error": "M=1 if(VPA==1) M=theta3 if(CBZ==1 | PHT==1) M=theta4 CL/F=exp(theta1*WT + theta2)*M*(1+eta1) Css=D/(CL*Tau) Cobs=Css*(1+eps1) CBZ: comedication with carbamazepine (yes=1, no=0) PHT: comedication with phenytoin (yes=1, no=0) VPA: comedication with valproate/valproic acid (yes=1, no=0) Eta and eps were said to be modelled additive, but reported as CV%, here as proportional",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Botha",
+      "year": "1995",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+      "population_details": {
+        "raw": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+        "n_total": 32,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 32
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 5.5,
+                    "sd": 3.2
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 17",
+                  "evidence": "5.5±3.2",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 20.4,
+                    "sd": 9.6
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 17",
+                  "evidence": "20.4±9.6",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 17",
+              "evidence": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 17",
+          "evidence": "N: 32 (73% African, 27% indian) Age: 5.5±3.2 WT: 20.4±9.6",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 19",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“the final model can be used to predict the dose required to achieve a particular serum concentration in an individual patient”"
+    },
+    "covariates": {
+      "tested": ["WT", "race", "gender", "age", "comedication with CBZ", "PHT", "or VPA on CL"],
+      "included": ["WT", "comedication with CBZ", "PHT", "or VPA on CL"],
+      "raw": "Tested: WT, race, gender, age, comedication with CBZ, PHT, or VPA on CL Included: WT, comedication with CBZ, PHT, or VPA on CL"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:05:24.780Z"
+}

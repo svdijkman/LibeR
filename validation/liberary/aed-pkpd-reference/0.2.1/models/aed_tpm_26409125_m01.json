@@ -1,0 +1,495 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_tpm_26409125_m01",
+  "article_id": "pmid_26409125",
+  "pmid": "26409125",
+  "model_index": 1,
+  "compound_group": "TPM",
+  "family_id": "pmid_26409125",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/TPM/Supplement_TPM_v2.docx",
+      "sha256": "787967aa7c3412e38a96b3241a229e30daf1c8716a94187beb4eddc72e2c29d1",
+      "study_table": 1,
+      "study_row": 6,
+      "model_table": 2,
+      "model_row": 7
+    },
+    "publication_pdf": {
+      "path": "Supplements/TPM/articles/brittain-2015-26409125.pdf",
+      "sha256": "9d1437571d14b8b19be03b28cdcbc9b2cd16b476a786c4d3c84ae2ff2b3d36be"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Brittain 2015 26409125",
+    "population": "N: 62 Age: 19-65",
+    "model_type": "PK",
+    "objective": "“simulation was used to assess the impact of irregular dosing on topiramate (TPM) concentrations in noninduced (monotherapy/neutral cotherapy) and induced (adjunctive therapy with enzyme-inducing AEDs) states using a population pharmacokinetic (PK) model developed to predict steady-state plasma concentration–time profiles produced by once-daily Trokendi XR® and BID TPM-IR”",
+    "covariates": "Tested: - Included: EIAED (enzyme inducers) and WT on CL/F",
+    "observations": "Based on the simulations performed, dosing irregularities with once-daily Trokendi XR should pose no greater risk than with BID TPM-IR. In the event of a delayed or omitted Trokendi XR dose, TPM concentrations can be restored in noninduced and induced states by administering the delayed/omitted dose at any time during the next dosing interval or by adding the missed dose to the next scheduled dose",
+    "dose": "Multiple oral doses in healthy subjects",
+    "structure": "2-compartment model with first-order absorption and elimination",
+    "equations": "CL/F = (theta1*(AED-1) + theta15*AED)*((WT/70)**theta14)*exp(eta1) Vc/F = theta2*exp(eta2) Q = theta3*exp(eta3) Vp/F = theta4*exp(eta4) if (TRT = IR & DOSE = morning) Ka = theta5*exp(eta5) Tlag = theta6 F1 = theta7 if (TRT = IR & DOSE = evening) Ka = theta8*exp(eta6) Tlag = theta9 F1 = theta10 if (TRT = XR) Ka = theta11*exp(eta7) Tlag = theta12 F1 = theta13*exp(eta8) Notes: Code for covariate effects on CL/F was derived based on description provided in the parameter table (supplemental material) No information were provided on the error model used for the analysis",
+    "parameter_values": "Theta1 = 1.30 Theta2 = 42 Theta3 = 1.70 Theta4 = 528 Theta5 = 2.25 Theta6 = 0.16 Theta7 = 1 Theta8 = 0.396 Theta9 = 0.16 Theta10 = 1.25 Theta11= 0.0920 Theta12 = 0.14 Theta13 = 1.11 Theta14 = 0.577 Theta15 = 1.75 Omega1 = 0.039 Omega2 = 0.01 Omega3 = 0.833 Omega4 = 1.402 Omega5 = 0.931 Omega6 = 0.437 Omega7 = 0.526 Omega8 = 0.052",
+    "validation": "Yes (Bootstrap 500 samples) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "TPM",
+      "population": "N: 62 Age: 19-65",
+      "route": "oral",
+      "n_subjects": 62,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 62 Age: 19-65",
+        "n_total": 62,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 62
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 19,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 6",
+                  "evidence": "19-65",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 6",
+              "evidence": "N: 62 Age: 19-65",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 6",
+          "evidence": "N: 62 Age: 19-65",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Multiple oral doses in healthy subjects",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 7",
+            "evidence": "Multiple oral doses in healthy subjects",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 4,
+        "trans": 4,
+        "compartments": 2,
+        "description": "2-compartment model with first-order absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 2,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["THETA1", "VC/F", "Q", "VP/F", "KA", "TLAG", "F1", "THETA14", "THETA15"]
+          },
+          "description": "2-compartment model with first-order absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 4,
+            "trans": 4,
+            "status": "inferred",
+            "confidence": 0.82,
+            "rationale": "2-compartment extravascular input with linear elimination and unknown parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "2-compartment model with first-order absorption and elimination Multiple oral doses in healthy subjects",
+              "confidence": 0.82
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "THETA1",
+            "typical": 1.3,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vc/F",
+            "typical": 42,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Q",
+            "typical": 1.7,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vp/F",
+            "typical": 528,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 2.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Tlag",
+            "typical": 0.16,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "F1",
+            "typical": 1,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.396,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Tlag",
+            "typical": 0.16,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "F1",
+            "typical": 1.25,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 0.092,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Tlag",
+            "typical": 0.14,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "F1",
+            "typical": 1.11,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA14",
+            "typical": 0.577,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA15",
+            "typical": 1.75,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.039,
+            "reported_metric": "variance",
+            "value": 0.039,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Vc/F",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.01,
+            "reported_metric": "variance",
+            "value": 0.01,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "Q",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.833,
+            "reported_metric": "variance",
+            "value": 0.833,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "Vp/F",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.402,
+            "reported_metric": "variance",
+            "value": 1.402,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "Ka",
+            "eta_index": 5,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.931,
+            "reported_metric": "variance",
+            "value": 0.931,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 6",
+            "parameter": "Tlag",
+            "eta_index": 6,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(6) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.437,
+            "reported_metric": "variance",
+            "value": 0.437,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 7",
+            "parameter": "F1",
+            "eta_index": 7,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(7) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.526,
+            "reported_metric": "variance",
+            "value": 0.526,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 8",
+            "parameter": "Ka",
+            "eta_index": 8,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(8) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.052,
+            "reported_metric": "variance",
+            "value": 0.052,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": "EIAED (enzyme inducers) and WT on CL/F",
+      "residual_error": "CL/F = (theta1*(AED-1) + theta15*AED)*((WT/70)**theta14)*exp(eta1) Vc/F = theta2*exp(eta2) Q = theta3*exp(eta3) Vp/F = theta4*exp(eta4) if (TRT = IR & DOSE = morning) Ka = theta5*exp(eta5) Tlag = theta6 F1 = theta7 if (TRT = IR & DOSE = evening) Ka = theta8*exp(eta6) Tlag = theta9 F1 = theta10 if (TRT = XR) Ka = theta11*exp(eta7) Tlag = theta12 F1 = theta13*exp(eta8) Notes: Code for covariate effects on CL/F was derived based on description provided in the parameter table (supplemental material) No information were provided on the error model used for the analysis",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Brittain",
+      "year": "2015",
+      "dose": "Multiple oral doses in healthy subjects",
+      "population": "N: 62 Age: 19-65",
+      "population_details": {
+        "raw": "N: 62 Age: 19-65",
+        "n_total": 62,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 62
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 19,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 6",
+                  "evidence": "19-65",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 6",
+              "evidence": "N: 62 Age: 19-65",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 6",
+          "evidence": "N: 62 Age: 19-65",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": false,
+          "raw": "Multiple oral doses in healthy subjects",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 7",
+            "evidence": "Multiple oral doses in healthy subjects",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“simulation was used to assess the impact of irregular dosing on topiramate (TPM) concentrations in noninduced (monotherapy/neutral cotherapy) and induced (adjunctive therapy with enzyme-inducing AEDs) states using a population pharmacokinetic (PK) model developed to predict steady-state plasma concentration–time profiles produced by once-daily Trokendi XR® and BID TPM-IR”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": "EIAED (enzyme inducers) and WT on CL/F",
+      "raw": "Tested: - Included: EIAED (enzyme inducers) and WT on CL/F"
+    },
+    "validation": {
+      "raw": "Yes (Bootstrap 500 samples) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:05:26.766Z"
+}

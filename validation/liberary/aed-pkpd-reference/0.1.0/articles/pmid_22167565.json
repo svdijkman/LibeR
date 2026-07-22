@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_22167565",
+  "pmid": "22167565",
+  "title": "",
+  "abstract": "",
+  "first_author": "Williams",
+  "year": "2012",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_22167565_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/williams-2012-22167565.pdf",
+    "sha256": "f7a8c904efa77fdb9f79955b38b5aac699d8f18a747f9f257ca978b7c662badd"
+  },
+  "metadata_source": ""
+}

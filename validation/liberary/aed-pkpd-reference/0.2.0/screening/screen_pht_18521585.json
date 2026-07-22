@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_18521585",
+  "pmid": "18521585",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/fernandez-2008-18521585.pdf",
+    "sha256": "cc53d3cc1465cdcc8bfa5b8ec3bd54759e5a2c1e9ab01162b308727b90cb383b"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_22495532",
+  "pmid": "22495532",
+  "title": "A seven-day study of the pharmacokinetics of intravenous levetiracetam in neonates: marked changes in pharmacokinetics occur during the first week of life.",
+  "abstract": "",
+  "first_author": "Sharpe",
+  "year": "2012",
+  "compounds": "LVT",
+  "model_ids": "aed_lvt_22495532_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LVT/articles/sharpe-2012-22495532.pdf",
+    "sha256": "dfad3b3caf341cbf6d347e7f9018d602422de68c147c70c8fe4d91333c172b41"
+  },
+  "metadata_source": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23784346",
+  "pmid": "23784346",
+  "title": "",
+  "abstract": "",
+  "first_author": "Ibarra",
+  "year": "2013",
+  "compounds": "VPA",
+  "model_ids": "aed_vpa_23784346_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/VPA/articles/ibarra-2013-23784346.pdf",
+    "sha256": "80c43ada5a8ce50774a2d896304b37f5f22af276778806497c372f35f125877d"
+  },
+  "metadata_source": ""
+}

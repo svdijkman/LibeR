@@ -1,0 +1,602 @@
+{
+  "status": "needs_review",
+  "model_present": true,
+  "extraction": {
+    "title": "Population pharmacokinetics of Testdrug",
+    "compound": "Testdrug",
+    "population": "general",
+    "route": "oral",
+    "n_subjects": null,
+    "software": "NONMEM",
+    "estimation_method": "FOCEI",
+    "model_type": "two-compartment model with first-order absorption",
+    "structural_model": {
+      "advan": 2,
+      "trans": 1,
+      "compartments": 2,
+      "description": "oral administration, two-compartment model"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "CL",
+          "typical": 5,
+          "se": null,
+          "unit": "L/h"
+        },
+        {
+          "name": "V1",
+          "typical": 20,
+          "se": null,
+          "unit": "L"
+        },
+        {
+          "name": "Q",
+          "typical": 3,
+          "se": null,
+          "unit": "L/h"
+        },
+        {
+          "name": "V2",
+          "typical": 40,
+          "se": null,
+          "unit": "L"
+        },
+        {
+          "name": "KA",
+          "typical": 1.2,
+          "se": null,
+          "unit": "1/h"
+        }
+      ],
+      "omega": [
+        {
+          "description": "interindividual variance for CL",
+          "value": 0.09
+        },
+        {
+          "description": "interindividual variance for V1",
+          "value": 0.16
+        }
+      ],
+      "sigma": [
+        {
+          "description": "residual variability (proportional)",
+          "value": 0.04
+        }
+      ]
+    },
+    "covariates": [
+      "CL: (WT/70)^0.75"
+    ],
+    "residual_error": "proportional",
+    "confidence": {
+      "overall": 1,
+      "fields": {
+        "structure": 1,
+        "parameters": 1,
+        "population": 1,
+        "software": 1
+      }
+    },
+    "evidence_quotes": [
+      "A two-compartment oral model with first-order absorption was selected."
+    ],
+    "notes": "The paper does not provide specific numerical values for the parameters, but it provides typical values and their units."
+  },
+  "text": {
+    "available": true,
+    "lane": "text",
+    "result": {
+      "model_present": true,
+      "model_probability": 1,
+      "recoverability": {
+        "overall": 0.95,
+        "structure": 1,
+        "parameters": 0.85,
+        "variability": 0.9,
+        "covariates": 0.75,
+        "data": 1
+      },
+      "extraction": {
+        "title": "Population pharmacokinetics of Testdrug",
+        "compound": "Testdrug",
+        "population": "general",
+        "route": "oral",
+        "n_subjects": null,
+        "software": "NONMEM",
+        "estimation_method": "FOCEI",
+        "model_type": "two-compartment model with first-order absorption",
+        "structural_model": {
+          "advan": 2,
+          "trans": 1,
+          "compartments": 2,
+          "description": "oral administration, two-compartment model"
+        },
+        "parameters": {
+          "theta": [
+            {
+              "name": "CL",
+              "typical": 5,
+              "se": null,
+              "unit": "L/h"
+            },
+            {
+              "name": "V1",
+              "typical": 20,
+              "se": null,
+              "unit": "L"
+            },
+            {
+              "name": "Q",
+              "typical": 3,
+              "se": null,
+              "unit": "L/h"
+            },
+            {
+              "name": "V2",
+              "typical": 40,
+              "se": null,
+              "unit": "L"
+            },
+            {
+              "name": "KA",
+              "typical": 1.2,
+              "se": null,
+              "unit": "1/h"
+            }
+          ],
+          "omega": [
+            {
+              "description": "interindividual variance for CL",
+              "value": 0.09
+            },
+            {
+              "description": "interindividual variance for V1",
+              "value": 0.16
+            }
+          ],
+          "sigma": [
+            {
+              "description": "residual variability (proportional)",
+              "value": 0.04
+            }
+          ]
+        },
+        "covariates": [
+          "CL: (WT/70)^0.75"
+        ],
+        "residual_error": "proportional",
+        "confidence": {
+          "overall": 1,
+          "fields": {
+            "structure": 1,
+            "parameters": 1,
+            "population": 1,
+            "software": 1
+          }
+        },
+        "evidence_quotes": [
+          "A two-compartment oral model with first-order absorption was selected."
+        ],
+        "notes": "The paper does not provide specific numerical values for the parameters, but it provides typical values and their units."
+      },
+      "field_evidence": [
+        {
+          "field": "model_type",
+          "value": "two-compartment model with first-order absorption",
+          "source_locator": "Methods: A two-compartment oral model with first-order absorption was selected.",
+          "evidence": "A two-compartment oral model with first-order absorption was selected. CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.",
+          "confidence": 1
+        },
+        {
+          "field": "parameters",
+          "value": "CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.",
+          "source_locator": "CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.",
+          "evidence": "CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.",
+          "confidence": 1
+        },
+        {
+          "field": "interindividual_variance",
+          "value": "OMEGA(CL)=0.09 and OMEGA(V1)=0.16.",
+          "source_locator": "Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.",
+          "evidence": "Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.",
+          "confidence": 1
+        },
+        {
+          "field": "residual_variability",
+          "value": "SIGMA=0.04.",
+          "source_locator": "Residual variability used proportional SIGMA=0.04.",
+          "evidence": "Residual variability used proportional SIGMA=0.04.",
+          "confidence": 1
+        },
+        {
+          "field": "covariates",
+          "value": "(WT/70)^0.75",
+          "source_locator": "Body weight affected clearance using (WT/70)^0.75.",
+          "evidence": "Body weight affected clearance using (WT/70)^0.75.",
+          "confidence": 1
+        }
+      ],
+      "limitations": [
+        "The paper does not provide specific numerical values for the parameters, but it provides typical values and their units."
+      ]
+    },
+    "audit": {
+      "content": "{\n  \"model_present\": true,\n  \"model_probability\": 1.0,\n  \"recoverability\": {\n    \"overall\": 0.95,\n    \"structure\": 1.0,\n    \"parameters\": 0.85,\n    \"variability\": 0.9,\n    \"covariates\": 0.75,\n    \"data\": 1.0\n  },\n  \"extraction\": {\n    \"title\": \"Population pharmacokinetics of Testdrug\",\n    \"compound\": \"Testdrug\",\n    \"population\": \"general\",\n    \"route\": \"oral\",\n    \"n_subjects\": null,\n    \"software\": \"NONMEM\",\n    \"estimation_method\": \"FOCEI\",\n    \"model_type\": \"two-compartment model with first-order absorption\",\n    \"structural_model\": {\n      \"advan\": 2,\n      \"trans\": 1,\n      \"compartments\": 2,\n      \"description\": \"oral administration, two-compartment model\"\n    },\n    \"parameters\": {\n      \"theta\": [\n        {\"name\": \"CL\", \"typical\": 5.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V1\", \"typical\": 20.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"Q\", \"typical\": 3.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V2\", \"typical\": 40.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"KA\", \"typical\": 1.2, \"se\": null, \"unit\": \"1/h\"}\n      ],\n      \"omega\": [\n        {\"description\": \"interindividual variance for CL\", \"value\": 0.09},\n        {\"description\": \"interindividual variance for V1\", \"value\": 0.16}\n      ],\n      \"sigma\": [{\"description\": \"residual variability (proportional)\", \"value\": 0.04}]\n    },\n    \"covariates\": [\n      \"CL: (WT/70)^0.75\"\n    ],\n    \"residual_error\": \"proportional\",\n    \"confidence\": {\n      \"overall\": 1.0,\n      \"fields\": {\n        \"structure\": 1.0,\n        \"parameters\": 1.0,\n        \"population\": 1.0,\n        \"software\": 1.0\n      }\n    },\n    \"evidence_quotes\": [\n      \"A two-compartment oral model with first-order absorption was selected.\"\n    ],\n    \"notes\": \"The paper does not provide specific numerical values for the parameters, but it provides typical values and their units.\"\n  },\n  \"field_evidence\": [\n    {\n      \"field\": \"model_type\",\n      \"value\": \"two-compartment model with first-order absorption\",\n      \"source_locator\": \"Methods: A two-compartment oral model with first-order absorption was selected.\",\n      \"evidence\": \"A two-compartment oral model with first-order absorption was selected. CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"parameters\",\n      \"value\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"source_locator\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"evidence\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"interindividual_variance\",\n      \"value\": \"OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"source_locator\": \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"evidence\": \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"residual_variability\",\n      \"value\": \"SIGMA=0.04.\",\n      \"source_locator\": \"Residual variability used proportional SIGMA=0.04.\",\n      \"evidence\": \"Residual variability used proportional SIGMA=0.04.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"covariates\",\n      \"value\": \"(WT/70)^0.75\",\n      \"source_locator\": \"Body weight affected clearance using (WT/70)^0.75.\",\n      \"evidence\": \"Body weight affected clearance using (WT/70)^0.75.\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"limitations\": [\n    \"The paper does not provide specific numerical values for the parameters, but it provides typical values and their units.\"\n  ]\n}",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "role": "indexing",
+      "usage": {
+        "input_tokens": 249,
+        "output_tokens": 1196,
+        "total_duration_ns": 32172390000
+      },
+      "elapsed_seconds": 32.2173,
+      "created_at": "2026-07-16T07:49:31.369Z",
+      "lane": "text",
+      "prompt_version": "2.0.0",
+      "prompt_md5": "be59cc44263cf2005279b967ed664cd2",
+      "prompt_chars": 617,
+      "response": "{\n  \"model_present\": true,\n  \"model_probability\": 1.0,\n  \"recoverability\": {\n    \"overall\": 0.95,\n    \"structure\": 1.0,\n    \"parameters\": 0.85,\n    \"variability\": 0.9,\n    \"covariates\": 0.75,\n    \"data\": 1.0\n  },\n  \"extraction\": {\n    \"title\": \"Population pharmacokinetics of Testdrug\",\n    \"compound\": \"Testdrug\",\n    \"population\": \"general\",\n    \"route\": \"oral\",\n    \"n_subjects\": null,\n    \"software\": \"NONMEM\",\n    \"estimation_method\": \"FOCEI\",\n    \"model_type\": \"two-compartment model with first-order absorption\",\n    \"structural_model\": {\n      \"advan\": 2,\n      \"trans\": 1,\n      \"compartments\": 2,\n      \"description\": \"oral administration, two-compartment model\"\n    },\n    \"parameters\": {\n      \"theta\": [\n        {\"name\": \"CL\", \"typical\": 5.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V1\", \"typical\": 20.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"Q\", \"typical\": 3.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V2\", \"typical\": 40.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"KA\", \"typical\": 1.2, \"se\": null, \"unit\": \"1/h\"}\n      ],\n      \"omega\": [\n        {\"description\": \"interindividual variance for CL\", \"value\": 0.09},\n        {\"description\": \"interindividual variance for V1\", \"value\": 0.16}\n      ],\n      \"sigma\": [{\"description\": \"residual variability (proportional)\", \"value\": 0.04}]\n    },\n    \"covariates\": [\n      \"CL: (WT/70)^0.75\"\n    ],\n    \"residual_error\": \"proportional\",\n    \"confidence\": {\n      \"overall\": 1.0,\n      \"fields\": {\n        \"structure\": 1.0,\n        \"parameters\": 1.0,\n        \"population\": 1.0,\n        \"software\": 1.0\n      }\n    },\n    \"evidence_quotes\": [\n      \"A two-compartment oral model with first-order absorption was selected.\"\n    ],\n    \"notes\": \"The paper does not provide specific numerical values for the parameters, but it provides typical values and their units.\"\n  },\n  \"field_evidence\": [\n    {\n      \"field\": \"model_type\",\n      \"value\": \"two-compartment model with first-order absorption\",\n      \"source_locator\": \"Methods: A two-compartment oral model with first-order absorption was selected.\",\n      \"evidence\": \"A two-compartment oral model with first-order absorption was selected. CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"parameters\",\n      \"value\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"source_locator\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"evidence\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"interindividual_variance\",\n      \"value\": \"OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"source_locator\": \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"evidence\": \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"residual_variability\",\n      \"value\": \"SIGMA=0.04.\",\n      \"source_locator\": \"Residual variability used proportional SIGMA=0.04.\",\n      \"evidence\": \"Residual variability used proportional SIGMA=0.04.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"covariates\",\n      \"value\": \"(WT/70)^0.75\",\n      \"source_locator\": \"Body weight affected clearance using (WT/70)^0.75.\",\n      \"evidence\": \"Body weight affected clearance using (WT/70)^0.75.\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"limitations\": [\n    \"The paper does not provide specific numerical values for the parameters, but it provides typical values and their units.\"\n  ]\n}",
+      "source_sha256": "02d9dfc979629586dde495f9fa225aafd6c8d4981728e422dd3a29d6f40310a9",
+      "source_parser": "docling_standard"
+    }
+  },
+  "vision": {
+    "available": true,
+    "lane": "vision",
+    "result": {
+      "model_present": true,
+      "model_probability": 0.95,
+      "recoverability": {
+        "overall": 0.87,
+        "structure": 1,
+        "parameters": 0.92,
+        "variability": 0.83,
+        "covariates": 0.65,
+        "data": 0.45
+      },
+      "extraction": {
+        "title": "Population pharmacokinetics of Testdrug",
+        "compound": "Testdrug",
+        "population": null,
+        "route": "oral",
+        "n_subjects": null,
+        "software": "NONMEM FOCEI",
+        "estimation_method": "FOCEI",
+        "model_type": "nonlinear mixed-effects model",
+        "structural_model": {
+          "advan": 24,
+          "trans": 1,
+          "compartments": 2,
+          "description": "two-compartment oral model with first-order absorption"
+        },
+        "parameters": {
+          "theta": [
+            {
+              "name": "CL",
+              "typical": 5,
+              "se": null,
+              "unit": "L/h"
+            },
+            {
+              "name": "V1",
+              "typical": 20,
+              "se": null,
+              "unit": "L"
+            },
+            {
+              "name": "Q",
+              "typical": 3,
+              "se": null,
+              "unit": "L/h"
+            },
+            {
+              "name": "V2",
+              "typical": 40,
+              "se": null,
+              "unit": "L"
+            },
+            {
+              "name": "KA",
+              "typical": 1.2,
+              "se": null,
+              "unit": "1/h"
+            }
+          ],
+          "omega": [
+            {
+              "description": "interindividual variance on CL",
+              "value": 0.09
+            },
+            {
+              "description": "interindividual variance on V1",
+              "value": 0.16
+            }
+          ],
+          "sigma": [
+            {
+              "description": "proportional residual variability",
+              "value": 0.04
+            }
+          ]
+        },
+        "covariates": [
+          "body weight"
+        ],
+        "residual_error": "proportional",
+        "confidence": {
+          "overall": 1,
+          "fields": {
+            "structure": 0.95,
+            "parameters": 0.87,
+            "population": 0.62,
+            "software": 0.43
+          }
+        },
+        "evidence_quotes": [
+          "A nonlinear mixed-effects model was fitted with NONMEM FOCEI.",
+          "A two-compartment oral model with first-order absorption was selected.",
+          "CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.",
+          "Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.",
+          "Residual variability used proportional SIGMA=0.04.",
+          "Body weight affected clearance using (WT/70)^0.75."
+        ],
+        "notes": ""
+      },
+      "field_evidence": [
+        {
+          "field": "structure",
+          "value": "two-compartment oral model with first-order absorption",
+          "source_locator": "PDF page 1",
+          "evidence": "\"A two-compartment oral model with first-order absorption was selected.\"",
+          "confidence": 0.95
+        }
+      ],
+      "limitations": [
+        "No information on the number of subjects or data points."
+      ]
+    },
+    "audit": {
+      "content": "{\n  \"model_present\": true,\n  \"model_probability\": 0.95,\n  \"recoverability\": {\n    \"overall\": 0.87,\n    \"structure\": 1.0,\n    \"parameters\": 0.92,\n    \"variability\": 0.83,\n    \"covariates\": 0.65,\n    \"data\": 0.45\n  },\n  \"extraction\": {\n    \"title\": \"Population pharmacokinetics of Testdrug\",\n    \"compound\": \"Testdrug\",\n    \"population\": null,\n    \"route\": \"oral\",\n    \"n_subjects\": null,\n    \"software\": \"NONMEM FOCEI\",\"estimation_method\": \"FOCEI\",\"model_type\": \"nonlinear mixed-effects model\",\n    \"structural_model\": {\n      \"advan\": 24,\n      \"trans\": 1,\n      \"compartments\": 2,\n      \"description\": \"two-compartment oral model with first-order absorption\"\n    },\n    \"parameters\": {\n      \"theta\": [\n        {\"name\": \"CL\", \"typical\": 5.0,\"se\": null,\"unit\": \"L/h\"},\n        {\"name\": \"V1\", \"typical\": 20.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"Q\", \"typical\": 3.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V2\", \"typical\": 40.0,\"se\": null,\"unit\": \"L\"},\n        {\"name\": \"KA\", \"typical\": 1.2, \"se\": null, \"unit\": \"1/h\"}\n      ],\n      \"omega\": [\n        {\"description\": \"interindividual variance on CL\", \"value\": 0.09},\n        {\"description\": \"interindividual variance on V1\", \"value\": 0.16}\n      ],\n      \"sigma\": [\n        {\"description\": \"proportional residual variability\", \"value\": 0.04}\n      ]\n    },\n    \"covariates\": [\n      \"body weight\"\n    ],\n    \"residual_error\": \"proportional\",\n    \"confidence\": {\n      \"overall\": 1,\n      \"fields\": {\n        \"structure\": 0.95,\n        \"parameters\": 0.87,\n        \"population\": 0.62,\n        \"software\": 0.43\n      }\n    },\n    \"evidence_quotes\": [\n      \"A nonlinear mixed-effects model was fitted with NONMEM FOCEI.\",\n      \"A two-compartment oral model with first-order absorption was selected.\",\n      \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"Residual variability used proportional SIGMA=0.04.\",\n      \"Body weight affected clearance using (WT/70)^0.75.\"\n    ],\n    \"notes\": \"\"\n  },\n  \"field_evidence\": [\n    {\n      \"field\": \"structure\",\n      \"value\": \"two-compartment oral model with first-order absorption\",\"source_locator\":\"PDF page 1\",\"evidence\": \"\\\"A two-compartment oral model with first-order absorption was selected.\\\"\",\"confidence\":0.95}\n    ],\n    \"limitations\": [\n      \"No information on the number of subjects or data points.\"\n    ]\n  }",
+      "provider": "ollama",
+      "model": "qwen3.5:9b",
+      "role": "vision",
+      "usage": {
+        "input_tokens": 1268,
+        "output_tokens": 856,
+        "total_duration_ns": 46208525900
+      },
+      "elapsed_seconds": 46.2615,
+      "created_at": "2026-07-16T07:50:17.679Z",
+      "lane": "vision",
+      "prompt_version": "2.0.0",
+      "prompt_md5": "c8053465ea5aed98556d0b530414cac1",
+      "prompt_chars": 287,
+      "response": "{\n  \"model_present\": true,\n  \"model_probability\": 0.95,\n  \"recoverability\": {\n    \"overall\": 0.87,\n    \"structure\": 1.0,\n    \"parameters\": 0.92,\n    \"variability\": 0.83,\n    \"covariates\": 0.65,\n    \"data\": 0.45\n  },\n  \"extraction\": {\n    \"title\": \"Population pharmacokinetics of Testdrug\",\n    \"compound\": \"Testdrug\",\n    \"population\": null,\n    \"route\": \"oral\",\n    \"n_subjects\": null,\n    \"software\": \"NONMEM FOCEI\",\"estimation_method\": \"FOCEI\",\"model_type\": \"nonlinear mixed-effects model\",\n    \"structural_model\": {\n      \"advan\": 24,\n      \"trans\": 1,\n      \"compartments\": 2,\n      \"description\": \"two-compartment oral model with first-order absorption\"\n    },\n    \"parameters\": {\n      \"theta\": [\n        {\"name\": \"CL\", \"typical\": 5.0,\"se\": null,\"unit\": \"L/h\"},\n        {\"name\": \"V1\", \"typical\": 20.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"Q\", \"typical\": 3.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V2\", \"typical\": 40.0,\"se\": null,\"unit\": \"L\"},\n        {\"name\": \"KA\", \"typical\": 1.2, \"se\": null, \"unit\": \"1/h\"}\n      ],\n      \"omega\": [\n        {\"description\": \"interindividual variance on CL\", \"value\": 0.09},\n        {\"description\": \"interindividual variance on V1\", \"value\": 0.16}\n      ],\n      \"sigma\": [\n        {\"description\": \"proportional residual variability\", \"value\": 0.04}\n      ]\n    },\n    \"covariates\": [\n      \"body weight\"\n    ],\n    \"residual_error\": \"proportional\",\n    \"confidence\": {\n      \"overall\": 1,\n      \"fields\": {\n        \"structure\": 0.95,\n        \"parameters\": 0.87,\n        \"population\": 0.62,\n        \"software\": 0.43\n      }\n    },\n    \"evidence_quotes\": [\n      \"A nonlinear mixed-effects model was fitted with NONMEM FOCEI.\",\n      \"A two-compartment oral model with first-order absorption was selected.\",\n      \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"Residual variability used proportional SIGMA=0.04.\",\n      \"Body weight affected clearance using (WT/70)^0.75.\"\n    ],\n    \"notes\": \"\"\n  },\n  \"field_evidence\": [\n    {\n      \"field\": \"structure\",\n      \"value\": \"two-compartment oral model with first-order absorption\",\"source_locator\":\"PDF page 1\",\"evidence\": \"\\\"A two-compartment oral model with first-order absorption was selected.\\\"\",\"confidence\":0.95}\n    ],\n    \"limitations\": [\n      \"No information on the number of subjects or data points.\"\n    ]\n  }",
+      "source_sha256": "02d9dfc979629586dde495f9fa225aafd6c8d4981728e422dd3a29d6f40310a9",
+      "source_parser": "original_pdf_pages"
+    }
+  },
+  "comparison": {
+    "comparable": true,
+    "consistent": false,
+    "agreement": 0.5,
+    "compared_fields": 24,
+    "difference_count": 12,
+    "major_difference_count": 9,
+    "differences": [
+      {
+        "field": "covariates",
+        "text": "cl: (wt/70)^0.75",
+        "vision": "body weight",
+        "impact": "major"
+      },
+      {
+        "field": "model_type",
+        "text": "two-compartment model with first-order absorption",
+        "vision": "nonlinear mixed-effects model",
+        "impact": "minor"
+      },
+      {
+        "field": "omega.INTERINDIVIDUAL VARIANCE FOR CL",
+        "text": 0.09,
+        "vision": null,
+        "impact": "major"
+      },
+      {
+        "field": "omega.INTERINDIVIDUAL VARIANCE FOR V1",
+        "text": 0.16,
+        "vision": null,
+        "impact": "major"
+      },
+      {
+        "field": "omega.INTERINDIVIDUAL VARIANCE ON CL",
+        "text": null,
+        "vision": 0.09,
+        "impact": "major"
+      },
+      {
+        "field": "omega.INTERINDIVIDUAL VARIANCE ON V1",
+        "text": null,
+        "vision": 0.16,
+        "impact": "major"
+      },
+      {
+        "field": "population",
+        "text": "general",
+        "vision": null,
+        "impact": "minor"
+      },
+      {
+        "field": "sigma.PROPORTIONAL RESIDUAL VARIABILITY",
+        "text": null,
+        "vision": 0.04,
+        "impact": "major"
+      },
+      {
+        "field": "sigma.RESIDUAL VARIABILITY (PROPORTIONAL)",
+        "text": 0.04,
+        "vision": null,
+        "impact": "major"
+      },
+      {
+        "field": "software",
+        "text": "NONMEM",
+        "vision": "NONMEM FOCEI",
+        "impact": "minor"
+      },
+      {
+        "field": "structural.advan",
+        "text": 2,
+        "vision": 24,
+        "impact": "major"
+      },
+      {
+        "field": "structural.description",
+        "text": "oral administration, two-compartment model",
+        "vision": "two-compartment oral model with first-order absorption",
+        "impact": "major"
+      }
+    ]
+  },
+  "adjudication": {
+    "available": false,
+    "error": "ollama request failed (HTTP 400): {\"error\":\"{\\\"error\\\":{\\\"code\\\":400,\\\"message\\\":\\\"request (4243 tokens) exceeds the available context size (4096 tokens), try increasing it\\\",\\\"type\\\":\\\"exceed_context_size_error\\\",\\\"n_prompt_tokens\\\":4243,\\\"n_ctx\\\":4096}}\"}"
+  },
+  "independent_models": true,
+  "warning": "",
+  "audit": {
+    "schema_version": "1.2.0",
+    "prompt_version": "2.0.0",
+    "source_sha256": "02d9dfc979629586dde495f9fa225aafd6c8d4981728e422dd3a29d6f40310a9",
+    "text": {
+      "content": "{\n  \"model_present\": true,\n  \"model_probability\": 1.0,\n  \"recoverability\": {\n    \"overall\": 0.95,\n    \"structure\": 1.0,\n    \"parameters\": 0.85,\n    \"variability\": 0.9,\n    \"covariates\": 0.75,\n    \"data\": 1.0\n  },\n  \"extraction\": {\n    \"title\": \"Population pharmacokinetics of Testdrug\",\n    \"compound\": \"Testdrug\",\n    \"population\": \"general\",\n    \"route\": \"oral\",\n    \"n_subjects\": null,\n    \"software\": \"NONMEM\",\n    \"estimation_method\": \"FOCEI\",\n    \"model_type\": \"two-compartment model with first-order absorption\",\n    \"structural_model\": {\n      \"advan\": 2,\n      \"trans\": 1,\n      \"compartments\": 2,\n      \"description\": \"oral administration, two-compartment model\"\n    },\n    \"parameters\": {\n      \"theta\": [\n        {\"name\": \"CL\", \"typical\": 5.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V1\", \"typical\": 20.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"Q\", \"typical\": 3.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V2\", \"typical\": 40.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"KA\", \"typical\": 1.2, \"se\": null, \"unit\": \"1/h\"}\n      ],\n      \"omega\": [\n        {\"description\": \"interindividual variance for CL\", \"value\": 0.09},\n        {\"description\": \"interindividual variance for V1\", \"value\": 0.16}\n      ],\n      \"sigma\": [{\"description\": \"residual variability (proportional)\", \"value\": 0.04}]\n    },\n    \"covariates\": [\n      \"CL: (WT/70)^0.75\"\n    ],\n    \"residual_error\": \"proportional\",\n    \"confidence\": {\n      \"overall\": 1.0,\n      \"fields\": {\n        \"structure\": 1.0,\n        \"parameters\": 1.0,\n        \"population\": 1.0,\n        \"software\": 1.0\n      }\n    },\n    \"evidence_quotes\": [\n      \"A two-compartment oral model with first-order absorption was selected.\"\n    ],\n    \"notes\": \"The paper does not provide specific numerical values for the parameters, but it provides typical values and their units.\"\n  },\n  \"field_evidence\": [\n    {\n      \"field\": \"model_type\",\n      \"value\": \"two-compartment model with first-order absorption\",\n      \"source_locator\": \"Methods: A two-compartment oral model with first-order absorption was selected.\",\n      \"evidence\": \"A two-compartment oral model with first-order absorption was selected. CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"parameters\",\n      \"value\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"source_locator\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"evidence\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"interindividual_variance\",\n      \"value\": \"OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"source_locator\": \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"evidence\": \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"residual_variability\",\n      \"value\": \"SIGMA=0.04.\",\n      \"source_locator\": \"Residual variability used proportional SIGMA=0.04.\",\n      \"evidence\": \"Residual variability used proportional SIGMA=0.04.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"covariates\",\n      \"value\": \"(WT/70)^0.75\",\n      \"source_locator\": \"Body weight affected clearance using (WT/70)^0.75.\",\n      \"evidence\": \"Body weight affected clearance using (WT/70)^0.75.\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"limitations\": [\n    \"The paper does not provide specific numerical values for the parameters, but it provides typical values and their units.\"\n  ]\n}",
+      "provider": "ollama",
+      "model": "qwen2.5:7b-instruct",
+      "role": "indexing",
+      "usage": {
+        "input_tokens": 249,
+        "output_tokens": 1196,
+        "total_duration_ns": 32172390000
+      },
+      "elapsed_seconds": 32.2173,
+      "created_at": "2026-07-16T07:49:31.369Z",
+      "lane": "text",
+      "prompt_version": "2.0.0",
+      "prompt_md5": "be59cc44263cf2005279b967ed664cd2",
+      "prompt_chars": 617,
+      "response": "{\n  \"model_present\": true,\n  \"model_probability\": 1.0,\n  \"recoverability\": {\n    \"overall\": 0.95,\n    \"structure\": 1.0,\n    \"parameters\": 0.85,\n    \"variability\": 0.9,\n    \"covariates\": 0.75,\n    \"data\": 1.0\n  },\n  \"extraction\": {\n    \"title\": \"Population pharmacokinetics of Testdrug\",\n    \"compound\": \"Testdrug\",\n    \"population\": \"general\",\n    \"route\": \"oral\",\n    \"n_subjects\": null,\n    \"software\": \"NONMEM\",\n    \"estimation_method\": \"FOCEI\",\n    \"model_type\": \"two-compartment model with first-order absorption\",\n    \"structural_model\": {\n      \"advan\": 2,\n      \"trans\": 1,\n      \"compartments\": 2,\n      \"description\": \"oral administration, two-compartment model\"\n    },\n    \"parameters\": {\n      \"theta\": [\n        {\"name\": \"CL\", \"typical\": 5.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V1\", \"typical\": 20.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"Q\", \"typical\": 3.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V2\", \"typical\": 40.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"KA\", \"typical\": 1.2, \"se\": null, \"unit\": \"1/h\"}\n      ],\n      \"omega\": [\n        {\"description\": \"interindividual variance for CL\", \"value\": 0.09},\n        {\"description\": \"interindividual variance for V1\", \"value\": 0.16}\n      ],\n      \"sigma\": [{\"description\": \"residual variability (proportional)\", \"value\": 0.04}]\n    },\n    \"covariates\": [\n      \"CL: (WT/70)^0.75\"\n    ],\n    \"residual_error\": \"proportional\",\n    \"confidence\": {\n      \"overall\": 1.0,\n      \"fields\": {\n        \"structure\": 1.0,\n        \"parameters\": 1.0,\n        \"population\": 1.0,\n        \"software\": 1.0\n      }\n    },\n    \"evidence_quotes\": [\n      \"A two-compartment oral model with first-order absorption was selected.\"\n    ],\n    \"notes\": \"The paper does not provide specific numerical values for the parameters, but it provides typical values and their units.\"\n  },\n  \"field_evidence\": [\n    {\n      \"field\": \"model_type\",\n      \"value\": \"two-compartment model with first-order absorption\",\n      \"source_locator\": \"Methods: A two-compartment oral model with first-order absorption was selected.\",\n      \"evidence\": \"A two-compartment oral model with first-order absorption was selected. CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"parameters\",\n      \"value\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"source_locator\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"evidence\": \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"interindividual_variance\",\n      \"value\": \"OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"source_locator\": \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"evidence\": \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"residual_variability\",\n      \"value\": \"SIGMA=0.04.\",\n      \"source_locator\": \"Residual variability used proportional SIGMA=0.04.\",\n      \"evidence\": \"Residual variability used proportional SIGMA=0.04.\",\n      \"confidence\": 1.0\n    },\n    {\n      \"field\": \"covariates\",\n      \"value\": \"(WT/70)^0.75\",\n      \"source_locator\": \"Body weight affected clearance using (WT/70)^0.75.\",\n      \"evidence\": \"Body weight affected clearance using (WT/70)^0.75.\",\n      \"confidence\": 1.0\n    }\n  ],\n  \"limitations\": [\n    \"The paper does not provide specific numerical values for the parameters, but it provides typical values and their units.\"\n  ]\n}",
+      "source_sha256": "02d9dfc979629586dde495f9fa225aafd6c8d4981728e422dd3a29d6f40310a9",
+      "source_parser": "docling_standard"
+    },
+    "vision": {
+      "content": "{\n  \"model_present\": true,\n  \"model_probability\": 0.95,\n  \"recoverability\": {\n    \"overall\": 0.87,\n    \"structure\": 1.0,\n    \"parameters\": 0.92,\n    \"variability\": 0.83,\n    \"covariates\": 0.65,\n    \"data\": 0.45\n  },\n  \"extraction\": {\n    \"title\": \"Population pharmacokinetics of Testdrug\",\n    \"compound\": \"Testdrug\",\n    \"population\": null,\n    \"route\": \"oral\",\n    \"n_subjects\": null,\n    \"software\": \"NONMEM FOCEI\",\"estimation_method\": \"FOCEI\",\"model_type\": \"nonlinear mixed-effects model\",\n    \"structural_model\": {\n      \"advan\": 24,\n      \"trans\": 1,\n      \"compartments\": 2,\n      \"description\": \"two-compartment oral model with first-order absorption\"\n    },\n    \"parameters\": {\n      \"theta\": [\n        {\"name\": \"CL\", \"typical\": 5.0,\"se\": null,\"unit\": \"L/h\"},\n        {\"name\": \"V1\", \"typical\": 20.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"Q\", \"typical\": 3.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V2\", \"typical\": 40.0,\"se\": null,\"unit\": \"L\"},\n        {\"name\": \"KA\", \"typical\": 1.2, \"se\": null, \"unit\": \"1/h\"}\n      ],\n      \"omega\": [\n        {\"description\": \"interindividual variance on CL\", \"value\": 0.09},\n        {\"description\": \"interindividual variance on V1\", \"value\": 0.16}\n      ],\n      \"sigma\": [\n        {\"description\": \"proportional residual variability\", \"value\": 0.04}\n      ]\n    },\n    \"covariates\": [\n      \"body weight\"\n    ],\n    \"residual_error\": \"proportional\",\n    \"confidence\": {\n      \"overall\": 1,\n      \"fields\": {\n        \"structure\": 0.95,\n        \"parameters\": 0.87,\n        \"population\": 0.62,\n        \"software\": 0.43\n      }\n    },\n    \"evidence_quotes\": [\n      \"A nonlinear mixed-effects model was fitted with NONMEM FOCEI.\",\n      \"A two-compartment oral model with first-order absorption was selected.\",\n      \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"Residual variability used proportional SIGMA=0.04.\",\n      \"Body weight affected clearance using (WT/70)^0.75.\"\n    ],\n    \"notes\": \"\"\n  },\n  \"field_evidence\": [\n    {\n      \"field\": \"structure\",\n      \"value\": \"two-compartment oral model with first-order absorption\",\"source_locator\":\"PDF page 1\",\"evidence\": \"\\\"A two-compartment oral model with first-order absorption was selected.\\\"\",\"confidence\":0.95}\n    ],\n    \"limitations\": [\n      \"No information on the number of subjects or data points.\"\n    ]\n  }",
+      "provider": "ollama",
+      "model": "qwen3.5:9b",
+      "role": "vision",
+      "usage": {
+        "input_tokens": 1268,
+        "output_tokens": 856,
+        "total_duration_ns": 46208525900
+      },
+      "elapsed_seconds": 46.2615,
+      "created_at": "2026-07-16T07:50:17.679Z",
+      "lane": "vision",
+      "prompt_version": "2.0.0",
+      "prompt_md5": "c8053465ea5aed98556d0b530414cac1",
+      "prompt_chars": 287,
+      "response": "{\n  \"model_present\": true,\n  \"model_probability\": 0.95,\n  \"recoverability\": {\n    \"overall\": 0.87,\n    \"structure\": 1.0,\n    \"parameters\": 0.92,\n    \"variability\": 0.83,\n    \"covariates\": 0.65,\n    \"data\": 0.45\n  },\n  \"extraction\": {\n    \"title\": \"Population pharmacokinetics of Testdrug\",\n    \"compound\": \"Testdrug\",\n    \"population\": null,\n    \"route\": \"oral\",\n    \"n_subjects\": null,\n    \"software\": \"NONMEM FOCEI\",\"estimation_method\": \"FOCEI\",\"model_type\": \"nonlinear mixed-effects model\",\n    \"structural_model\": {\n      \"advan\": 24,\n      \"trans\": 1,\n      \"compartments\": 2,\n      \"description\": \"two-compartment oral model with first-order absorption\"\n    },\n    \"parameters\": {\n      \"theta\": [\n        {\"name\": \"CL\", \"typical\": 5.0,\"se\": null,\"unit\": \"L/h\"},\n        {\"name\": \"V1\", \"typical\": 20.0, \"se\": null, \"unit\": \"L\"},\n        {\"name\": \"Q\", \"typical\": 3.0, \"se\": null, \"unit\": \"L/h\"},\n        {\"name\": \"V2\", \"typical\": 40.0,\"se\": null,\"unit\": \"L\"},\n        {\"name\": \"KA\", \"typical\": 1.2, \"se\": null, \"unit\": \"1/h\"}\n      ],\n      \"omega\": [\n        {\"description\": \"interindividual variance on CL\", \"value\": 0.09},\n        {\"description\": \"interindividual variance on V1\", \"value\": 0.16}\n      ],\n      \"sigma\": [\n        {\"description\": \"proportional residual variability\", \"value\": 0.04}\n      ]\n    },\n    \"covariates\": [\n      \"body weight\"\n    ],\n    \"residual_error\": \"proportional\",\n    \"confidence\": {\n      \"overall\": 1,\n      \"fields\": {\n        \"structure\": 0.95,\n        \"parameters\": 0.87,\n        \"population\": 0.62,\n        \"software\": 0.43\n      }\n    },\n    \"evidence_quotes\": [\n      \"A nonlinear mixed-effects model was fitted with NONMEM FOCEI.\",\n      \"A two-compartment oral model with first-order absorption was selected.\",\n      \"CL = 5 L/h; V1 = 20 L; Q = 3 L/h; V2 = 40 L; KA = 1.2 1/h.\",\n      \"Interindividual variance: OMEGA(CL)=0.09 and OMEGA(V1)=0.16.\",\n      \"Residual variability used proportional SIGMA=0.04.\",\n      \"Body weight affected clearance using (WT/70)^0.75.\"\n    ],\n    \"notes\": \"\"\n  },\n  \"field_evidence\": [\n    {\n      \"field\": \"structure\",\n      \"value\": \"two-compartment oral model with first-order absorption\",\"source_locator\":\"PDF page 1\",\"evidence\": \"\\\"A two-compartment oral model with first-order absorption was selected.\\\"\",\"confidence\":0.95}\n    ],\n    \"limitations\": [\n      \"No information on the number of subjects or data points.\"\n    ]\n  }",
+      "source_sha256": "02d9dfc979629586dde495f9fa225aafd6c8d4981728e422dd3a29d6f40310a9",
+      "source_parser": "original_pdf_pages"
+    },
+    "comparison": {
+      "comparable": true,
+      "consistent": false,
+      "agreement": 0.5,
+      "compared_fields": 24,
+      "difference_count": 12,
+      "major_difference_count": 9,
+      "differences": [
+        {
+          "field": "covariates",
+          "text": "cl: (wt/70)^0.75",
+          "vision": "body weight",
+          "impact": "major"
+        },
+        {
+          "field": "model_type",
+          "text": "two-compartment model with first-order absorption",
+          "vision": "nonlinear mixed-effects model",
+          "impact": "minor"
+        },
+        {
+          "field": "omega.INTERINDIVIDUAL VARIANCE FOR CL",
+          "text": 0.09,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "omega.INTERINDIVIDUAL VARIANCE FOR V1",
+          "text": 0.16,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "omega.INTERINDIVIDUAL VARIANCE ON CL",
+          "text": null,
+          "vision": 0.09,
+          "impact": "major"
+        },
+        {
+          "field": "omega.INTERINDIVIDUAL VARIANCE ON V1",
+          "text": null,
+          "vision": 0.16,
+          "impact": "major"
+        },
+        {
+          "field": "population",
+          "text": "general",
+          "vision": null,
+          "impact": "minor"
+        },
+        {
+          "field": "sigma.PROPORTIONAL RESIDUAL VARIABILITY",
+          "text": null,
+          "vision": 0.04,
+          "impact": "major"
+        },
+        {
+          "field": "sigma.RESIDUAL VARIABILITY (PROPORTIONAL)",
+          "text": 0.04,
+          "vision": null,
+          "impact": "major"
+        },
+        {
+          "field": "software",
+          "text": "NONMEM",
+          "vision": "NONMEM FOCEI",
+          "impact": "minor"
+        },
+        {
+          "field": "structural.advan",
+          "text": 2,
+          "vision": 24,
+          "impact": "major"
+        },
+        {
+          "field": "structural.description",
+          "text": "oral administration, two-compartment model",
+          "vision": "two-compartment oral model with first-order absorption",
+          "impact": "major"
+        }
+      ]
+    },
+    "adjudication": {
+      "error": "ollama request failed (HTTP 400): {\"error\":\"{\\\"error\\\":{\\\"code\\\":400,\\\"message\\\":\\\"request (4243 tokens) exceeds the available context size (4096 tokens), try increasing it\\\",\\\"type\\\":\\\"exceed_context_size_error\\\",\\\"n_prompt_tokens\\\":4243,\\\"n_ctx\\\":4096}}\"}"
+    },
+    "independent_models": true,
+    "warning": ""
+  }
+}

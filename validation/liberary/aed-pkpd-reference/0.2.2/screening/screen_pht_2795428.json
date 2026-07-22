@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_2795428",
+  "pmid": "2795428",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/yukawa-1989-2795428.pdf",
+    "sha256": "072d4bd5e054c9442d30fb0ea65dba5f6c44496053f539e8ffb15f3d4fddc615"
+  }
+}

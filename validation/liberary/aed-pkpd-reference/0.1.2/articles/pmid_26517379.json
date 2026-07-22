@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_26517379",
+  "pmid": "26517379",
+  "title": "Comparing paediatric intravenous phenytoin doses using physiologically based pharmacokinetic (PBPK) modelling software.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/batchelor-2015-26517379.pdf",
+    "sha256": "ca49ab95f81d63936be1f6de689ee977906da87ec944911491072fba601b8784"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9333104",
+  "pmid": "9333104",
+  "title": "",
+  "abstract": "",
+  "first_author": "Odani",
+  "year": "1997",
+  "compounds": "PHT",
+  "model_ids": "aed_pht_9333104_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/odani-1997-9333104.pdf",
+    "sha256": "8bc1e663a43356a534812450472f964425f6345d89a985fd5518cbccd113d3c9"
+  },
+  "metadata_source": ""
+}

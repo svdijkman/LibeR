@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lvt_1917500_m01",
+  "article_id": "pmid_1917500",
+  "pmid": "1917500",
+  "model_index": 1,
+  "compound_group": "LVT",
+  "family_id": "pmid_1917500",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LVT/Supplement_LVT_v2.docx",
+      "sha256": "366f9c59b71d28cdbc53b4e37282f611af800ea34a400f4eb82946c22c5dd24b",
+      "study_table": 1,
+      "study_row": 10,
+      "model_table": 2,
+      "model_row": 7
+    },
+    "publication_pdf": {
+      "path": "",
+      "sha256": ""
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Cchun 2009 1917500",
+    "population": "N: 44 (France) Age: 10.7±3.1 (4.6-16.6) WT: 36.4±13.2 (16-65)",
+    "model_type": "PK",
+    "objective": "“to assess LEV PK in a pediatric population using a population approach to identify demographic and physiologic determinants of LEV concentration, including the effects of concomitant AEDs. The optimal pediatric dosing regimens were also defined to achieve plasma concentrations within a given target range.”",
+    "covariates": "Tested: time after dose, gender, age, WT, serum creatinine, comedication, creatinine clearance. Included: WT on CL and Vd",
+    "observations": "A lag in absorption of circa 15 minutes was observed. The VPC shows that the model does not fully capture the absorption kinetics, with the prediction intervals not including many peak concentrations. Otherwise it seems a decent fit for the amount of covariates used.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "CL/F=theta1* ((WT/33)**theta2)* (1+eta1) Vd/F=theta3*((WT/32)**theta4)* (1+eta2) Ka=theta5*(1+eta3) ALAG1=theta6 Cobs=Cipred*(1+eps1)",
+    "parameter_values": "theta1=2.47 theta2=0.89 theta3=21.9 theta4=0.93 theta5=3.83 theta6=0.283 omega1=0.059 omega1,2=0.028 omega2=0.0265 omega3=1.37 sigma1=0.0357",
+    "validation": "Yes (VPC of 1000) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "LVT",
+      "population": "N: 44 (France) Age: 10.7±3.1 (4.6-16.6) WT: 36.4±13.2 (16-65)",
+      "route": "oral",
+      "n_subjects": 44,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 2.47,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.89,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 21.9,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 0.93,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 3.83,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "ALAG1",
+            "typical": 0.283,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.059,
+            "reported_metric": "variance",
+            "value": 0.059,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0265,
+            "reported_metric": "variance",
+            "value": 0.0265,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "Vd/F",
+            "eta_index": 3,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 1.37,
+            "reported_metric": "variance",
+            "value": 1.37,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 2,
+            "col_eta": 1,
+            "reported_value": 0.028,
+            "reported_metric": "covariance",
+            "value": 0.028,
+            "conversion": "Appendix covariance retained verbatim; source-paper verification pending"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "combined",
+            "reported_value": 0.0357,
+            "reported_metric": "variance",
+            "value": 0.0357,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": "WT on CL and Vd",
+      "residual_error": "CL/F=theta1* ((WT/33)**theta2)* (1+eta1) Vd/F=theta3*((WT/32)**theta4)* (1+eta2) Ka=theta5*(1+eta3) ALAG1=theta6 Cobs=Cipred*(1+eps1)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Cchun",
+      "year": "2009",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 44 (France) Age: 10.7±3.1 (4.6-16.6) WT: 36.4±13.2 (16-65)",
+      "objective": "“to assess LEV PK in a pediatric population using a population approach to identify demographic and physiologic determinants of LEV concentration, including the effects of concomitant AEDs. The optimal pediatric dosing regimens were also defined to achieve plasma concentrations within a given target range.”"
+    },
+    "covariates": {
+      "tested": ["time after dose", "gender", "age", "WT", "serum creatinine", "comedication", "creatinine clearance."],
+      "included": "WT on CL and Vd",
+      "raw": "Tested: time after dose, gender, age, WT, serum creatinine, comedication, creatinine clearance. Included: WT on CL and Vd"
+    },
+    "validation": {
+      "raw": "Yes (VPC of 1000) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": ["publication_title_missing", "source_pdf_missing"]
+  },
+  "created_at": "2026-07-16T17:24:55.436Z"
+}

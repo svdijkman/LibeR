@@ -1,0 +1,690 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_7229908_m01",
+  "article_id": "pmid_7229908",
+  "pmid": "7229908",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_7229908",
+  "partition": "validation",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 46,
+      "model_table": 2,
+      "model_row": 51
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/sheiner-1980-7229908.pdf",
+      "sha256": "bbdf9158f9f4c68bad403491df875348ca29a15481a5a23dcb6b46d0d6f6136e"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Sheiner 1980 7229908",
+    "population": "Data culled from: [Vozeh, 1980, 7439207] N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790] N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797] N: 5 (UK) Age: - WT; - [Lund, 1975, 54824] N: 4 (Sweden) Age: - WT: -",
+    "model_type": "PK",
+    "objective": "“we attempt first to describe the ideas and methods currently available for estimating population pharmacokinetic parameters. Next, we contrast these methods by examining their parameter esitmates for the Michaelis-Menten model and a set of data concerning the drug phenytoin. Last, having found differences in the parameters estimated by the various methods, we attempt to elucidate the source of these differences by analysing simulated data so that estimates can be compared to “true” values.”",
+    "covariates": "Tested: Included: WT on Vm",
+    "observations": "Variability in PK parameters was overestimated using the two-stage approach when compared to the NONMEM estimations. Other parameter values were largely in line with more simplified estimation algorithms.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "Simplified PK",
+    "equations": "Vm=theta1*WT*exp(eta1) Km=theta2*exp(eta2) DD=((Vm*Css)/(F*(Km+Css)))+eps1 DD is daily dose in mg/kg",
+    "parameter_values": "theta1=7.22 theta2=4.44 omega1=0.0551 omega2=0.257 sigma1=0.250",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "Data culled from: [Vozeh, 1980, 7439207] N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790] N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797] N: 5 (UK) Age: - WT; - [Lund, 1975, 54824] N: 4 (Sweden) Age: - WT: -",
+      "route": "oral",
+      "n_subjects": 55,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "Data culled from: [Vozeh, 1980, 7439207] N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790] N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797] N: 5 (UK) Age: - WT; - [Lund, 1975, 54824] N: 4 (Sweden) Age: - WT: -",
+        "n_total": 55,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Data culled from: [Vozeh, 1980, 7439207]",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 32
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 43.5,
+                    "sd": 15.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 22,
+                    "maximum": 78
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "43.5±15.7 (22-78)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 70.2,
+                    "sd": 7.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 55,
+                    "maximum": 78
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "70.2±7.7 (55-78) [Richens, 1975, 9890790]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 46",
+              "evidence": "N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 14
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 17,
+                    "maximum": 46
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "-(17-46)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 1975,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "- [Richens, 1975, 49797]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 46",
+              "evidence": "N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_3",
+            "label": "cohort_3",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 5
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 46",
+              "evidence": "N: 5 (UK) Age: - WT; - [Lund, 1975, 54824]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_4",
+            "label": "cohort_4",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 4
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 46",
+              "evidence": "N: 4 (Sweden) Age: - WT: -",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 46",
+          "evidence": "Data culled from: [Vozeh, 1980, 7439207] N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790] N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797] N: 5 (UK) Age: - WT; - [Lund, 1975, 54824] N: 4 (Sweden) Age: - WT: -",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 51",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "Simplified PK",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["VM", "KM"]
+          },
+          "description": "Simplified PK"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "Simplified PK Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Vm",
+            "typical": 7.22,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Km",
+            "typical": 4.44,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Vm",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0551,
+            "reported_metric": "variance",
+            "value": 0.0551,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Km",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.257,
+            "reported_metric": "variance",
+            "value": 0.257,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 0.25,
+            "reported_metric": "variance",
+            "value": 0.25,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": "WT on Vm",
+      "residual_error": "Vm=theta1*WT*exp(eta1) Km=theta2*exp(eta2) DD=((Vm*Css)/(F*(Km+Css)))+eps1 DD is daily dose in mg/kg",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Sheiner",
+      "year": "1980",
+      "dose": "Steady-state oral doses in patients",
+      "population": "Data culled from: [Vozeh, 1980, 7439207] N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790] N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797] N: 5 (UK) Age: - WT; - [Lund, 1975, 54824] N: 4 (Sweden) Age: - WT: -",
+      "population_details": {
+        "raw": "Data culled from: [Vozeh, 1980, 7439207] N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790] N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797] N: 5 (UK) Age: - WT; - [Lund, 1975, 54824] N: 4 (Sweden) Age: - WT: -",
+        "n_total": 55,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Data culled from: [Vozeh, 1980, 7439207]",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 32
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 43.5,
+                    "sd": 15.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 22,
+                    "maximum": 78
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "43.5±15.7 (22-78)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 70.2,
+                    "sd": 7.7
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 55,
+                    "maximum": 78
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "70.2±7.7 (55-78) [Richens, 1975, 9890790]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 46",
+              "evidence": "N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 14
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 17,
+                    "maximum": 46
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "-(17-46)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "reported_center",
+                    "value": 1975,
+                    "statistic": "unknown"
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "- [Richens, 1975, 49797]",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 46",
+              "evidence": "N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_3",
+            "label": "cohort_3",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 5
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 46",
+              "evidence": "N: 5 (UK) Age: - WT; - [Lund, 1975, 54824]",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_4",
+            "label": "cohort_4",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 4
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 46",
+                  "evidence": "-",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 46",
+              "evidence": "N: 4 (Sweden) Age: - WT: -",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 46",
+          "evidence": "Data culled from: [Vozeh, 1980, 7439207] N: 32 (Switzerland) Age: 43.5±15.7 (22-78) WT: 70.2±7.7 (55-78) [Richens, 1975, 9890790] N: 14 (UK) Age: -(17-46) WT: - [Richens, 1975, 49797] N: 5 (UK) Age: - WT; - [Lund, 1975, 54824] N: 4 (Sweden) Age: - WT: -",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 51",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“we attempt first to describe the ideas and methods currently available for estimating population pharmacokinetic parameters. Next, we contrast these methods by examining their parameter esitmates for the Michaelis-Menten model and a set of data concerning the drug phenytoin. Last, having found differences in the parameters estimated by the various methods, we attempt to elucidate the source of these differences by analysing simulated data so that estimates can be compared to “true” values.”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": "WT on Vm",
+      "raw": "Tested: Included: WT on Vm"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T21:55:13.561Z"
+}

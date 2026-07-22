@@ -1,0 +1,235 @@
+args <- commandArgs(trailingOnly = TRUE)
+run_nonmem <- "--run" %in% args
+
+script_arg <- grep("^--file=", commandArgs(), value = TRUE)
+script <- if (length(script_arg)) sub("^--file=", "", script_arg[[1L]]) else "run-validation.R"
+fixture_dir <- normalizePath(dirname(script), winslash = "/", mustWork = TRUE)
+root <- normalizePath(file.path(fixture_dir, "..", ".."), winslash = "/", mustWork = TRUE)
+project_library <- file.path(root, ".lib")
+if (dir.exists(project_library)) .libPaths(unique(c(project_library, .libPaths())))
+
+if (!requireNamespace("LibeRation", quietly = TRUE)) {
+  stop("Install LibeRation before running NONMEM validation.", call. = FALSE)
+}
+
+run_execute <- function(model, expected_table) {
+  execute <- Sys.which("execute")
+  if (!nzchar(execute)) stop("PsN execute is not available in PATH.", call. = FALSE)
+  stamp <- format(Sys.time(), "%Y%m%dT%H%M%S", tz = "UTC")
+  directory <- paste0(
+    tools::file_path_sans_ext(model), "_run_", stamp, "_", Sys.getpid()
+  )
+  if (.Platform$OS.type == "windows") {
+    script <- sub("\\.bat$", "", execute, ignore.case = TRUE)
+    perl <- file.path(dirname(execute), "perl.exe")
+    if (!file.exists(perl)) perl <- Sys.which("perl")
+    if (!nzchar(perl) || !file.exists(script)) {
+      stop("The Windows PsN Perl launcher could not be resolved.", call. = FALSE)
+    }
+    portable_root <- dirname(dirname(dirname(execute)))
+    nonmem_paths <- c(
+      file.path(portable_root, "nm_7.3.0_g", "run"),
+      file.path(portable_root, "scripts"),
+      file.path(portable_root, "Perl", "bin"),
+      file.path(portable_root, "gfortran", "libexec", "gcc", "i586-pc-mingw32", "4.6.0"),
+      file.path(portable_root, "gfortran", "bin")
+    )
+    Sys.setenv(PATH = paste(c(nonmem_paths, Sys.getenv("PATH")), collapse = ";"))
+    status <- system2(perl, c(shQuote(script), paste0("-directory=", directory), model))
+  } else {
+    status <- system2(execute, c(paste0("-directory=", directory), model))
+  }
+  if (!identical(status, 0L)) stop("PsN execute returned status ", status, ".", call. = FALSE)
+  listing <- file.path(directory, "NM_run1", "psn.lst")
+  if (!file.exists(listing) || !file.exists(expected_table)) {
+    nmtran <- file.path(directory, "NM_run1", "nmtran_error.txt")
+    detail <- if (file.exists(nmtran)) paste(readLines(nmtran, warn = FALSE), collapse = "\n") else ""
+    stop("NONMEM execution did not complete. ", detail, call. = FALSE)
+  }
+  invisible(directory)
+}
+
+read_nonmem_table <- function(path) {
+  if (!file.exists(path)) stop("NONMEM did not publish expected table: ", path, call. = FALSE)
+  utils::read.table(path, skip = 1L, header = TRUE, check.names = FALSE)
+}
+
+old <- setwd(fixture_dir)
+on.exit(setwd(old), add = TRUE)
+
+columns <- c("ID", "TIME", "EVID", "AMT", "RATE", "CMT", "DV", "MDV")
+theta_table <- function(x) data.frame(THETA = seq_along(x), Value = x)
+omega_zero <- data.frame(OMEGA = 1, Value = 0, FIX = TRUE)
+
+validate_case <- function(name, model, tolerance, data_columns = columns) {
+  data_path <- paste0(tolower(name), ".dat")
+  model_path <- paste0(tolower(name), ".mod")
+  table_path <- paste0(tolower(name), ".tab")
+  if (run_nonmem || !file.exists(table_path)) run_execute(model_path, table_path)
+  data <- utils::read.table(data_path, col.names = data_columns)
+  n_subjects <- length(unique(data$ID))
+  eta <- matrix(0, n_subjects, nrow(model$OMEGAS))
+  liber <- LibeRation::nm_simulate(model, data, eta = eta)
+  nonmem <- read_nonmem_table(table_path)
+
+  key <- paste(nonmem$ID, nonmem$TIME, nonmem$EVID, sep = "/")
+  liber_key <- paste(liber$ID, liber$TIME, liber$EVID, sep = "/")
+  order <- match(liber_key, key)
+  if (anyNA(order)) stop(name, " NONMEM and LibeR event keys do not align.", call. = FALSE)
+  compare <- liber$EVID == 0L
+  difference <- liber$IPRED[compare] - nonmem$IPRED[order][compare]
+  maximum <- max(abs(difference))
+  if (!is.finite(maximum) || maximum > tolerance) {
+    stop(name, " NONMEM comparison failed; maximum absolute difference = ", maximum, call. = FALSE)
+  }
+  cat(sprintf(
+    "%s: PASS (max |LibeR - NONMEM| = %.9g; %d compared records)\n",
+    name, maximum, sum(compare)
+  ))
+}
+
+base_input <- columns
+validate_case("ADVAN1", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 1, TRANS = 2, DOSECMP = 1, OBSCMP = 1,
+  PRED = "CL=THETA(1)*exp(ETA(1))\nV=THETA(2)\nS1=V", ERROR = "Y=F",
+  THETAS = theta_table(c(2, 20)), OMEGAS = omega_zero
+), 1e-7)
+
+validate_case("ADVAN2", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 2, TRANS = 2, DOSECMP = 1, OBSCMP = 2,
+  PRED = "KA=THETA(1)\nCL=THETA(2)*exp(ETA(1))\nV=THETA(3)\nS2=V",
+  ERROR = "Y=F", THETAS = theta_table(c(1.5, 2, 20)), OMEGAS = omega_zero
+), 1e-7)
+
+validate_case("ADVAN3", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 3, TRANS = 4, DOSECMP = 1, OBSCMP = 1,
+  PRED = paste(
+    "CL=THETA(1)*exp(ETA(1))", "V1=THETA(2)", "Q=THETA(3)",
+    "V2=THETA(4)", "S1=V1", sep = "\n"
+  ),
+  ERROR = "Y=F", THETAS = theta_table(c(2, 20, 1, 10)), OMEGAS = omega_zero
+), 2e-7)
+
+validate_case("ADVAN4", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 4, TRANS = 4, DOSECMP = 1, OBSCMP = 2,
+  PRED = paste(
+    "KA=THETA(1)", "CL=THETA(2)*exp(ETA(1))", "VC=THETA(3)",
+    "Q=THETA(4)", "VP=THETA(5)", "S2=VC", sep = "\n"
+  ),
+  ERROR = "Y=F", THETAS = theta_table(c(1.5, 2, 20, 1, 10)), OMEGAS = omega_zero
+), 2e-7)
+
+validate_case("ADVAN11", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 11, TRANS = 4, DOSECMP = 1, OBSCMP = 1,
+  PRED = paste(
+    "CL=THETA(1)*exp(ETA(1))", "V1=THETA(2)", "Q2=THETA(3)",
+    "V2=THETA(4)", "Q3=THETA(5)", "V3=THETA(6)", "S1=V1", sep = "\n"
+  ),
+  ERROR = "Y=F", THETAS = theta_table(c(2, 20, 1, 10, 0.5, 30)),
+  OMEGAS = omega_zero
+), 3e-7)
+
+validate_case("ADVAN12", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 12, TRANS = 4, DOSECMP = 1, OBSCMP = 2,
+  PRED = paste(
+    "KA=THETA(1)", "CL=THETA(2)*exp(ETA(1))", "VC=THETA(3)",
+    "Q2=THETA(4)", "VP1=THETA(5)", "Q3=THETA(6)",
+    "VP2=THETA(7)", "S2=VC", sep = "\n"
+  ),
+  ERROR = "Y=F", THETAS = theta_table(c(1.5, 2, 20, 1, 10, 0.5, 30)),
+  OMEGAS = omega_zero
+), 3e-7)
+
+validate_case("ADVAN6", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 6, DOSECMP = 1, OBSCMP = 1,
+  PRED = "K=THETA(1)*exp(ETA(1))\nS1=THETA(2)",
+  DES = "DADT(1)=-K*A(1)", ERROR = "Y=F",
+  THETAS = theta_table(c(0.4, 20)), OMEGAS = omega_zero
+), 2e-7)
+
+validate_case("ADVAN13", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 13, DOSECMP = 1, OBSCMP = 2,
+  PRED = "KFAST=THETA(1)*exp(ETA(1))\nKSLOW=THETA(2)\nS2=1",
+  DES = "DADT(1)=-KFAST*A(1)\nDADT(2)=KFAST*A(1)-KSLOW*A(2)",
+  ERROR = "Y=F", THETAS = theta_table(c(1000, 1)), OMEGAS = omega_zero,
+  ODE_CONTROL = list(rtol = 2e-7, atol = 1e-10)
+), 2e-5)
+
+steady_state_input <- c(columns[1:6], "SS", "II", columns[7:8])
+validate_case("SSBOLUS", LibeRation::nm_model(
+  INPUT = steady_state_input, ADVAN = 1, TRANS = 2, DOSECMP = 1, OBSCMP = 1,
+  PRED = "CL=THETA(1)*exp(ETA(1))\nV=THETA(2)\nS1=V", ERROR = "Y=F",
+  THETAS = theta_table(c(2, 20)), OMEGAS = omega_zero
+), 1e-7, steady_state_input)
+
+validate_case("SSINFUSION", LibeRation::nm_model(
+  INPUT = steady_state_input, ADVAN = 1, TRANS = 2, DOSECMP = 1, OBSCMP = 1,
+  PRED = "CL=THETA(1)*exp(ETA(1))\nV=THETA(2)\nS1=V", ERROR = "Y=F",
+  THETAS = theta_table(c(2, 20)), OMEGAS = omega_zero
+), 2e-7, steady_state_input)
+
+validate_case("RATE1", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 1, TRANS = 2, DOSECMP = 1, OBSCMP = 1,
+  PRED = "CL=THETA(1)*exp(ETA(1));V=THETA(2);R1=THETA(3);S1=V",
+  ERROR = "Y=F", THETAS = theta_table(c(2, 20, 20)), OMEGAS = omega_zero
+), 2e-7)
+
+validate_case("RATE2", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 1, TRANS = 2, DOSECMP = 1, OBSCMP = 1,
+  PRED = "CL=THETA(1)*exp(ETA(1));V=THETA(2);D1=THETA(3);S1=V",
+  ERROR = "Y=F", THETAS = theta_table(c(2, 20, 5)), OMEGAS = omega_zero
+), 2e-7)
+
+validate_estimation <- function() {
+  if (run_nonmem || !file.exists("estimation.tab") || !file.exists("estimation.ext")) {
+    run_execute("estimation.mod", "estimation.tab")
+  }
+  data <- utils::read.table(
+    "estimation.dat", col.names = c("ID", "TIME", "EVID", "AMT", "CMT", "DV", "MDV"),
+    na.strings = "."
+  )
+  model <- LibeRation::nm_model(
+    INPUT = names(data), ADVAN = 1, TRANS = 2, DOSECMP = 1, OBSCMP = 1,
+    PRED = "CL=THETA(1)*exp(ETA(1));V=THETA(2);S1=V",
+    ERROR = "Y=F+ERR(1)",
+    THETAS = data.frame(THETA = 1:2, Value = c(1, 20), FIX = c(FALSE, TRUE)),
+    OMEGAS = data.frame(OMEGA = 1, Value = 0.1, FIX = TRUE),
+    SIGMAS = data.frame(SIGMA = 1, Value = 0.04, FIX = TRUE),
+    LIK_CONFIG = LibeRation::nm_lik_config(
+      error = "additive", sigma_parameterization = "variance"
+    )
+  )
+  fit <- LibeRation::nm_est(
+    model, data, method = "FOCEI", maxit = 300L, eta_maxit = 150L,
+    tolerance = 1e-8
+  )
+  extension <- readLines("estimation.ext", warn = FALSE)
+  header <- grep("^[[:space:]]*ITERATION", extension)[[1L]]
+  records <- extension[(header + 1L):length(extension)]
+  records <- records[nzchar(trimws(records)) & !grepl("^TABLE", trimws(records))]
+  parsed <- utils::read.table(
+    text = paste(c(extension[[header]], records), collapse = "\n"),
+    header = TRUE, check.names = FALSE
+  )
+  final <- parsed[parsed$ITERATION == -1000000000, , drop = FALSE]
+  if (nrow(final) != 1L) stop("Unable to identify the final NONMEM estimation record.", call. = FALSE)
+  nonmem_theta <- final$THETA1[[1L]]
+  table <- read_nonmem_table("estimation.tab")
+  eta_column <- grep("^ETA", names(table), value = TRUE)[[1L]]
+  nonmem_eta <- tapply(table[[eta_column]], table$ID, function(value) value[[1L]])
+  theta_difference <- abs(fit$theta[[1L]] - nonmem_theta)
+  eta_difference <- max(abs(fit$eta[, 1L] - unname(nonmem_eta)))
+  if (!is.finite(theta_difference) || theta_difference > 0.03 ||
+      !is.finite(eta_difference) || eta_difference > 0.08) {
+    stop(
+      "FOCEI NONMEM comparison failed; THETA difference = ", theta_difference,
+      ", ETA difference = ", eta_difference, ".", call. = FALSE
+    )
+  }
+  cat(sprintf(
+    "FOCEI estimation: PASS (|THETA1| difference %.6g; max |ETA1| difference %.6g)\n",
+    theta_difference, eta_difference
+  ))
+}
+
+validate_estimation()

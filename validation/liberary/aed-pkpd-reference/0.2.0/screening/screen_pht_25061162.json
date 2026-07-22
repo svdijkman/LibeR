@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_25061162",
+  "pmid": "25061162",
+  "compound_group": "PHT",
+  "partition": "validation",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/uchida-2014-25061162.pdf",
+    "sha256": "c50b937f8ceed9972f02d531bb91ae8e14cf60c66237dff4aabf3baf885409fa"
+  }
+}

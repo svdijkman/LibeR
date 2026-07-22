@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_clnz_11808828_m01",
+  "article_id": "pmid_11808828",
+  "pmid": "11808828",
+  "model_index": 1,
+  "compound_group": "CLNZ",
+  "family_id": "pmid_11808828",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CLNZ/Supplement_CLNZ_v2.docx",
+      "sha256": "8a86ad372678a0af7df31d49c867ac3bf54f743a07e499c4b8f66af913fb314c",
+      "study_table": 1,
+      "study_row": 4,
+      "model_table": 2,
+      "model_row": 5
+    },
+    "publication_pdf": {
+      "path": "Supplements/CLNZ/articles/yukawa-2002-11808828.pdf",
+      "sha256": "ae7f591f64a69ba58deffebd9b17247bed3933be2cb8e637f2d21597335ac863"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Yukawa 2002 11808828",
+    "population": "N: 137 (Japan) Age: ~10±~5 (0.3-28) WT: ~30±~23 (5.5-128.2)",
+    "model_type": "PK",
+    "objective": "“the population pharmacokinetic parameters estimated might assist the clinician in the individualization of clonazepam dosing regimens”",
+    "covariates": "Tested: WT, Age, CLNZ dose, gender, comedication of carbamazepine or valproic acid Included: WT, comedication of CBZ or VPA on CL, WT on Vd",
+    "observations": "Simplified PK model does not allow absorption/distribution phases. It is unclear how to interpret the impact of more than 1 comedication due to the mathematic description.",
+    "dose": "Steady state oral doses in patients",
+    "structure": "Simplified PK model",
+    "equations": "DIF=1 if(VPA==1 & CBZ!=1) DIF=(theta14^VPA) if(CBZ==1 & VPA!=1) DIF=(theta15^CBZ) if(VPA==1 & CBZ==1) DIF=theta12*(WT^theta13) CL=theta1*(WT**theta2)*DIF*(1+eta1) Cssipred=D/(CL*Tau) Cssobs=Cssipred*(1+eps1) Css=steady state concentrations D=CLNZ dose Tau=dosing interval VPA= comedication with VPA (1=yes, 0=no) CBZ= comedication with CBZ (1=yes, 0=no)",
+    "parameter_values": "theta1=0.159 theta2=-0.194 theta12=1.98 theta13=-0.102 theta14=1.12 theta15=1.22 omega1=0.0404 sigma1= 0.0346",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Pharmacoepidemiologic investigation of clonazepam relative clearance by mixed-effect modeling using routine clinical pharmacokinetic data in Japanese patients.",
+      "compound": "CLNZ",
+      "population": "N: 137 (Japan) Age: ~10±~5 (0.3-28) WT: ~30±~23 (5.5-128.2)",
+      "route": "oral",
+      "n_subjects": 137,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": null,
+        "description": "Simplified PK model"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.159,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": -0.194,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "DIF",
+            "typical": 1.98,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA13",
+            "typical": -0.102,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA14",
+            "typical": 1.12,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA15",
+            "typical": 1.22,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0404,
+            "reported_metric": "variance",
+            "value": 0.0404,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 0.0346,
+            "reported_metric": "variance",
+            "value": 0.0346,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT", "comedication of CBZ or VPA on CL", "WT on Vd"],
+      "residual_error": "DIF=1 if(VPA==1 & CBZ!=1) DIF=(theta14^VPA) if(CBZ==1 & VPA!=1) DIF=(theta15^CBZ) if(VPA==1 & CBZ==1) DIF=theta12*(WT^theta13) CL=theta1*(WT**theta2)*DIF*(1+eta1) Cssipred=D/(CL*Tau) Cssobs=Cssipred*(1+eps1) Css=steady state concentrations D=CLNZ dose Tau=dosing interval VPA= comedication with VPA (1=yes, 0=no) CBZ= comedication with CBZ (1=yes, 0=no)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Yukawa",
+      "year": "2002",
+      "dose": "Steady state oral doses in patients",
+      "population": "N: 137 (Japan) Age: ~10±~5 (0.3-28) WT: ~30±~23 (5.5-128.2)",
+      "objective": "“the population pharmacokinetic parameters estimated might assist the clinician in the individualization of clonazepam dosing regimens”"
+    },
+    "covariates": {
+      "tested": ["WT", "Age", "CLNZ dose", "gender", "comedication of carbamazepine or valproic acid"],
+      "included": ["WT", "comedication of CBZ or VPA on CL", "WT on Vd"],
+      "raw": "Tested: WT, Age, CLNZ dose, gender, comedication of carbamazepine or valproic acid Included: WT, comedication of CBZ or VPA on CL, WT on Vd"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:24:53.973Z"
+}

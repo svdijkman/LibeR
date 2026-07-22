@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_3409842",
+  "pmid": "3409842",
+  "title": "Relationship between dose and serum concentrations of carbamazepine, phenytoin, phenobarbital, and primidone in a Sri Lankan population compared with a European population.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": ["PHB", "PHT"],
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/excluded/peiris-1988-3409842.pdf",
+    "sha256": "a351748ac9803f3e87069f7ccaeed31f0ca76a6b61873f48e445c72be8c31bf3"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

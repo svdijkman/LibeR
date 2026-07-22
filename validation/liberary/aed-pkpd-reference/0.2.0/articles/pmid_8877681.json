@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_8877681",
+  "pmid": "8877681",
+  "title": "Detection of carbamazepine drug interaction by multiple peak approach screening using routine clinical pharmacokinetic data.",
+  "abstract": "",
+  "first_author": "Yukawa",
+  "year": "1996",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_8877681_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/yukawa-1996-8877681.pdf",
+    "sha256": "a2190e03b5563c237e755b93d8618465bf6f94621bb7910f452092ea35f70c91"
+  },
+  "metadata_source": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+}

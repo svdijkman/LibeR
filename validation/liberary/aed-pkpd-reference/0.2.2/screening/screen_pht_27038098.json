@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_27038098",
+  "pmid": "27038098",
+  "compound_group": "PHT",
+  "partition": "test",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/majid-2016-27038098.pdf",
+    "sha256": "13dbf7bfae5f9f1aae1313955578ac3f5687fe08c8efda4581e86a49ff5a0558"
+  }
+}

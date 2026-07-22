@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_23018530",
+  "pmid": "23018530",
+  "title": "",
+  "abstract": "",
+  "first_author": "Van Den Broek",
+  "year": "2012",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_23018530_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/vandenbroek-2012-23018530.pdf",
+    "sha256": "7e1532944a737e28eb69a60d05694a2469e3cf97d167a95fdae1b47c771418bf"
+  },
+  "metadata_source": ""
+}

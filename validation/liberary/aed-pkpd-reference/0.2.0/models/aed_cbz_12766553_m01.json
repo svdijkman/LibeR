@@ -1,0 +1,546 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_cbz_12766553_m01",
+  "article_id": "pmid_12766553",
+  "pmid": "12766553",
+  "model_index": 1,
+  "compound_group": "CBZ",
+  "family_id": "pmid_12766553",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/CBZ/Supplement_CBZ_v2.docx",
+      "sha256": "0d2ec13f9e7fc08ab529b8fc8d45eda7b5a87ad008d9c1931fa262a116bea1d4",
+      "study_table": 1,
+      "study_row": 21,
+      "model_table": 2,
+      "model_row": 22
+    },
+    "publication_pdf": {
+      "path": "Supplements/CBZ/articles/jiao-2003-12766553.pdf",
+      "sha256": "fe10a5ce39b4c3762577869df770a84265b4e0580018a0b9a639e007d2f467bd"
+    },
+    "metadata_csv": "Supplements/PHB/pubmed_result_eval_PHB.csv"
+  },
+  "raw": {
+    "citation": "Jiao 2003 12766553",
+    "population": "Index N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+    "model_type": "PK",
+    "objective": "“To define the pharmacokinetic profile of CBZ in Chinese epileptic patients to facilitate the dosing schedule by non-linear mixed-effect modelling (NONMEM) analysis.”",
+    "covariates": "WT, Dose, Age>65y, and comedication of phenytoin, phenobarbital and valproic acid dose >18 mg/kg/day on CL, WT on Vd",
+    "observations": "Patients that reached serum concentrations below expected (1 mg/L) were excluded. Some bias and over-predictions of individual concentrations. Comparison table of clearances from other studies and their findings is provided, showing very similar PK across different ethnicities, except perhaps south africans.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment, linear absorption and elimination separately done for CBZ and CBZE",
+    "equations": "CL/F=theta1*(Dose**theta2)*(WT**theta3) *(theta4**PHT) *(theta5**PHB) *(theta6**VPA) *(theta7**E)*(1+eta1) Vd/F=theta8*WT*(1+eta2) Ka=theta9 Cobs=Cipred+eps1 VPA=comedication with valproic acid >18 mg/kg/day (yes =1, no=0) PHT=comedication with phenytoin (yes =1, no=0) PHB=comedication with phenobarbital (yes =1, no=0) E=Age > 65 (yes=1, no=0)",
+    "parameter_values": "theta1=0.0734 theta2=0.406 theta3=0.694 theta4=1.45 theta5=1.17 theta6=1.21 theta7=1.91 theta8=0.849 theta9=1.2 omega1=0.0254 omega2=0.010 sigma1=0.975",
+    "validation": "No / Yes (population of 40 patients)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of carbamazepine in Chinese epilepsy patients.",
+      "compound": "CBZ",
+      "population": "Index N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+      "route": "oral",
+      "n_subjects": 625,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "Index N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+        "n_total": 625,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Index",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 585
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 1.2,
+                    "maximum": 85.1
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 21",
+                  "evidence": "23.3 (1.2-85.1)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 5,
+                    "maximum": 115
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 21",
+                  "evidence": "53 (5-115) Validation",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 21",
+              "evidence": "N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 40
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 7.4,
+                    "maximum": 72
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 21",
+                  "evidence": "26.2 (7.4-72)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 25,
+                    "maximum": 101
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 21",
+                  "evidence": "55.5 (25-101)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 21",
+              "evidence": "N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 21",
+          "evidence": "Index N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 22",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1 compartment, linear absorption and elimination separately done for CBZ and CBZE",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["CL/F", "THETA2", "THETA3", "THETA4", "THETA5", "THETA6", "THETA7", "VD/F", "KA"]
+          },
+          "description": "1 compartment, linear absorption and elimination separately done for CBZ and CBZE"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1 compartment, linear absorption and elimination separately done for CBZ and CBZE Steady-state oral doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 0.0734,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.406,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.694,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.45,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.17,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA6",
+            "typical": 1.21,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA7",
+            "typical": 1.91,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 0.849,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 1.2,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0254,
+            "reported_metric": "variance",
+            "value": 0.0254,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.01,
+            "reported_metric": "variance",
+            "value": 0.01,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "additive",
+            "reported_value": 0.975,
+            "reported_metric": "variance",
+            "value": 0.975,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": [],
+      "residual_error": "CL/F=theta1*(Dose**theta2)*(WT**theta3) *(theta4**PHT) *(theta5**PHB) *(theta6**VPA) *(theta7**E)*(1+eta1) Vd/F=theta8*WT*(1+eta2) Ka=theta9 Cobs=Cipred+eps1 VPA=comedication with valproic acid >18 mg/kg/day (yes =1, no=0) PHT=comedication with phenytoin (yes =1, no=0) PHB=comedication with phenobarbital (yes =1, no=0) E=Age > 65 (yes=1, no=0)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Jiao",
+      "year": "2003",
+      "dose": "Steady-state oral doses in patients",
+      "population": "Index N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+      "population_details": {
+        "raw": "Index N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+        "n_total": 625,
+        "cohorts": [
+          {
+            "id": "cohort_1",
+            "label": "Index",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 585
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 1.2,
+                    "maximum": 85.1
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 21",
+                  "evidence": "23.3 (1.2-85.1)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 5,
+                    "maximum": 115
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 21",
+                  "evidence": "53 (5-115) Validation",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 21",
+              "evidence": "N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation",
+              "confidence": 1
+            }
+          },
+          {
+            "id": "cohort_2",
+            "label": "cohort_2",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 40
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 7.4,
+                    "maximum": 72
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 21",
+                  "evidence": "26.2 (7.4-72)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 25,
+                    "maximum": 101
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 21",
+                  "evidence": "55.5 (25-101)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 21",
+              "evidence": "N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": "Total N is the sum of separately reported cohorts; overlap was not reported.",
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 21",
+          "evidence": "Index N: 585 (Chinese) Age: 23.3 (1.2-85.1) WT: 53 (5-115) Validation N: 40 (Chinese) Age: 26.2 (7.4-72) WT: 55.5 (25-101)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 22",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“To define the pharmacokinetic profile of CBZ in Chinese epileptic patients to facilitate the dosing schedule by non-linear mixed-effect modelling (NONMEM) analysis.”"
+    },
+    "covariates": {
+      "tested": ["WT", "Dose", "Age>65y", "and comedication of phenytoin", "phenobarbital and valproic acid dose >18 mg/kg/day on CL", "WT on Vd"],
+      "included": [],
+      "raw": "WT, Dose, Age>65y, and comedication of phenytoin, phenobarbital and valproic acid dose >18 mg/kg/day on CL, WT on Vd"
+    },
+    "validation": {
+      "raw": "No / Yes (population of 40 patients)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T21:55:06.976Z"
+}

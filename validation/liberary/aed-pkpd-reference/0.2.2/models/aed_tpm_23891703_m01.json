@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_tpm_23891703_m01",
+  "article_id": "pmid_23891703",
+  "pmid": "23891703",
+  "model_index": 1,
+  "compound_group": "TPM",
+  "family_id": "pmid_23891703",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/TPM/Supplement_TPM_v2.docx",
+      "sha256": "787967aa7c3412e38a96b3241a229e30daf1c8716a94187beb4eddc72e2c29d1",
+      "study_table": 1,
+      "study_row": 7,
+      "model_table": 2,
+      "model_row": 8
+    },
+    "publication_pdf": {
+      "path": "Supplements/TPM/articles/jovanovic-2013-23891703.pdf",
+      "sha256": "e9ee67a489969ae4b04bcb4eaeb4258046c4ab9caea0bb813b61d2461800fb2f"
+    },
+    "metadata_csv": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+  },
+  "raw": {
+    "citation": "Jovanovic 2013 23891703",
+    "population": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+    "model_type": "PK",
+    "objective": "“to evaluate the influence of demographic, biochemical parameters and treatment characteristics of patients on the PK variability of TPM”",
+    "covariates": "Tested: gender, TOB, co-therapy with LTG, LEV, VPA, CBZ, BDZ and RIS; WT, age, renal function (MDRD), liver enzymes (AST, ALP, CHO), BIL, ALB, PRO, dose of CBZ, VPA, LTG and LEV. Included: DCBZ and MDRD on CL/F and WT on V/F",
+    "observations": "A one-compartment model with first order absorption and elimination was used to fit the concentrationtime TPM data. Volume of distribution of TPM was estimated at 0.575 l/kg. Daily carbamazepine dose (DCBZ) and renal function estimated by Modification of diet in renal disease (MDRD) formula significantly influenced CL/F. Mean TPM CL/F during CBZ co-therapy was 2.46 l/h (increase of 60.8%).",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1-compartment model with first order absorption and elimination",
+    "equations": "CL/F = theta1*(1+theta2*DCBZ/1000)*exp(theta3*(MDRD-95.72))*exp(eta1) V/F = theta4*WT Ka = theta5 Cobs = Cipred*(1+eps1) Notes: based on literature data, Ka was fixed to 2 h-1 due to limited data collected during absorption phase",
+    "parameter_values": "Theta1 = 1.53 Theta2 = 0.476 Theta3 = 0.00476 Theta4 = 0.575 Theta5 = 2 Omega1 = 0.027 Sigma1 = 0.134",
+    "validation": "Yes (Bootstrap 1000 samples; pcPVC, NPC) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of topiramate in adult patients with epilepsy using nonlinear mixed effects modelling.",
+      "compound": "TPM",
+      "population": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+      "route": "oral",
+      "n_subjects": 78,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+        "n_total": 78,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 78
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 19,
+                    "maximum": 67
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "37.62 (19-67)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 46,
+                    "maximum": 113
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "75.19 (46-113)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 7",
+              "evidence": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 7",
+          "evidence": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 8",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1-compartment model with first order absorption and elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["CL/F", "THETA2", "THETA3", "V/F", "KA"]
+          },
+          "description": "1-compartment model with first order absorption and elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1-compartment model with first order absorption and elimination Steady-state oral doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 1.53,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA2",
+            "typical": 0.476,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA3",
+            "typical": 0.00476,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V/F",
+            "typical": 0.575,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Ka",
+            "typical": 2,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.027,
+            "reported_metric": "variance",
+            "value": 0.027,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.134,
+            "reported_metric": "variance",
+            "value": 0.134,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": "DCBZ and MDRD on CL/F and WT on V/F",
+      "residual_error": "CL/F = theta1*(1+theta2*DCBZ/1000)*exp(theta3*(MDRD-95.72))*exp(eta1) V/F = theta4*WT Ka = theta5 Cobs = Cipred*(1+eps1) Notes: based on literature data, Ka was fixed to 2 h-1 due to limited data collected during absorption phase",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Jovanovic",
+      "year": "2013",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+      "population_details": {
+        "raw": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+        "n_total": 78,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 78
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 19,
+                    "maximum": 67
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "37.62 (19-67)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 46,
+                    "maximum": 113
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 7",
+                  "evidence": "75.19 (46-113)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 7",
+              "evidence": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 7",
+          "evidence": "N: 78 (Serbia) Age: 37.62 (19-67) WT: 75.19 (46-113)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 8",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“to evaluate the influence of demographic, biochemical parameters and treatment characteristics of patients on the PK variability of TPM”"
+    },
+    "covariates": {
+      "tested": ["gender", "TOB", "co-therapy with LTG", "LEV", "VPA", "CBZ", "BDZ and RIS", "WT", "age", "renal function (MDRD)", "liver enzymes (AST", "ALP", "CHO)", "BIL", "ALB", "PRO", "dose of CBZ", "LTG and LEV."],
+      "included": "DCBZ and MDRD on CL/F and WT on V/F",
+      "raw": "Tested: gender, TOB, co-therapy with LTG, LEV, VPA, CBZ, BDZ and RIS; WT, age, renal function (MDRD), liver enzymes (AST, ALP, CHO), BIL, ALB, PRO, dose of CBZ, VPA, LTG and LEV. Included: DCBZ and MDRD on CL/F and WT on V/F"
+    },
+    "validation": {
+      "raw": "Yes (Bootstrap 1000 samples; pcPVC, NPC) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T22:22:57.710Z"
+}

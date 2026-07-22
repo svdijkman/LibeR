@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_2795428",
+  "pmid": "2795428",
+  "title": "Clinical utility of a new and simple technique for individualizing phenytoin dosage.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/yukawa-1989-2795428.pdf",
+    "sha256": "072d4bd5e054c9442d30fb0ea65dba5f6c44496053f539e8ffb15f3d4fddc615"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_10805060",
+  "pmid": "10805060",
+  "title": "CYP2C19 polymorphism effect on phenobarbitone. Pharmacokinetics in Japanese patients with epilepsy: analysis by population pharmacokinetics.",
+  "abstract": "",
+  "first_author": "Mamiya",
+  "year": "2000",
+  "compounds": "PHB",
+  "model_ids": "aed_phb_10805060_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHB/articles/mamiya-2000-10805060.pdf",
+    "sha256": "cda8bae5f5deae2f2ca77d18f17f2b0ae8f11ceca5d52162ce72e6abebb9c82d"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_18043476",
+  "pmid": "18043476",
+  "title": "Population pharmacokinetic model of carbamazepine derived from routine therapeutic drug monitoring data.",
+  "abstract": "",
+  "first_author": "Vucićević",
+  "year": "2007",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_18043476_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/vucicevic-2007-18043476.pdf",
+    "sha256": "0c6627e1621e4f03a7a205251c158a44f80a056b764ec0a376911dda3d5e99da"
+  },
+  "metadata_source": "Supplements/LMT/pubmed_result_eval_LMT.csv"
+}

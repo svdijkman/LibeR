@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_lmt_11802095_m01",
+  "article_id": "pmid_11802095",
+  "pmid": "11802095",
+  "model_index": 1,
+  "compound_group": "LMT",
+  "family_id": "pmid_11802095",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/LMT/Supplement_LMT_v2.docx",
+      "sha256": "68a9e8463ec1b149c52738428d498459c49d6b9cf68e1a26a85da3ba4695d6fc",
+      "study_table": 1,
+      "study_row": 22,
+      "model_table": 2,
+      "model_row": 19
+    },
+    "publication_pdf": {
+      "path": "Supplements/LMT/articles/chan-2001-11802095.pdf",
+      "sha256": "5c63c9fb90aab46120a1f78c690a3ff0568e96607e5b53e00e72583ba240b6e5"
+    },
+    "metadata_csv": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+  },
+  "raw": {
+    "citation": "Chan 2001 11802095",
+    "population": "N: 129 Age: 34.2 (17-71) WT: -",
+    "model_type": "PK",
+    "objective": "“to estimate the population pharmacokinetic parameters (apparent clearance [CL/F] and apparent volume of distribution [V/F]) for lamotrigine in a group of adult patients receiving the drug. We aimed to determine intersubject and intrasubject pharmacokinetic variability, and to investigate the influence of covariates on the pharmacokinetic parameters.”",
+    "covariates": "Tested: Age, gender, concomitant antiepileptic medications, and clinical site on CL and V Included: VPA and PHT on CL, although no values provided",
+    "observations": "The paper only states that the values of change in CL due to VPA/PHT comedication are in line with literature values, but are then not provided.",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "1 compartment with linear absorption and elimination",
+    "equations": "CL/F=theta1*(1+theta2*PHT)*(1+theta3*VPA)*(1+eta1) Vd/F=theta4*(1+eta2) Ka=theta5 Cobs=Cipred*(1+eps1) PHT/VPA: comedication with phenytoin/valproate (no=0, yes=1)",
+    "parameter_values": "theta1=2.14 theta2=Not given theta3=Not given theta4=78.1 theta5=Not given omega1=0.14 omega2=0.0043 sigma1=Not given",
+    "validation": "No / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "Population pharmacokinetics of lamotrigine.",
+      "compound": "LMT",
+      "population": "N: 129 Age: 34.2 (17-71) WT: -",
+      "route": "oral",
+      "n_subjects": 129,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment with linear absorption and elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 2.14,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd/F",
+            "typical": 78.1,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL/F",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.14,
+            "reported_metric": "variance",
+            "value": 0.14,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.0043,
+            "reported_metric": "variance",
+            "value": 0.0043,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": ["VPA and PHT on CL", "although no values provided"],
+      "residual_error": "CL/F=theta1*(1+theta2*PHT)*(1+theta3*VPA)*(1+eta1) Vd/F=theta4*(1+eta2) Ka=theta5 Cobs=Cipred*(1+eps1) PHT/VPA: comedication with phenytoin/valproate (no=0, yes=1)",
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Chan",
+      "year": "2001",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 129 Age: 34.2 (17-71) WT: -",
+      "objective": "“to estimate the population pharmacokinetic parameters (apparent clearance [CL/F] and apparent volume of distribution [V/F]) for lamotrigine in a group of adult patients receiving the drug. We aimed to determine intersubject and intrasubject pharmacokinetic variability, and to investigate the influence of covariates on the pharmacokinetic parameters.”"
+    },
+    "covariates": {
+      "tested": ["Age", "gender", "concomitant antiepileptic medications", "and clinical site on CL and V"],
+      "included": ["VPA and PHT on CL", "although no values provided"],
+      "raw": "Tested: Age, gender, concomitant antiepileptic medications, and clinical site on CL and V Included: VPA and PHT on CL, although no values provided"
+    },
+    "validation": {
+      "raw": "No / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": []
+  },
+  "created_at": "2026-07-16T17:23:11.584Z"
+}

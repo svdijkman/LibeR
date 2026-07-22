@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_tpm_26395889_m01",
+  "screening_id": null,
+  "article_id": "pmid_26395889",
+  "pmid": "26395889",
+  "source_pdf_sha256": "9ab833d3955ef56e1d3a7fea85de71e4bee0e9b7bf878708455ff30f9f8bdf63",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:45:14.001Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Modeling of Intravenous and Oral Topiramate and Its Effect on the Symbol-Digit Modalities Test in Adult Healthy Volunteers",
+    "compound": "Topiramate",
+    "population": "Healthy volunteers (19-55 years old)",
+    "route": "Oral, IV",
+    "n_subjects": 38,
+    "software": "NONMEM version 7.2",
+    "estimation_method": "Nonlinear mixed-effects modeling",
+    "model_type": "Pharmacokinetic-Pharmacodynamic (PK-PD) model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 1,
+      "description": "Single-compartment PK model with IV and oral administration"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "E0",
+          "typical": 59.3,
+          "se": 3.2,
+          "unit": "SDMT score"
+        },
+        {
+          "name": "Emax",
+          "typical": 0.51,
+          "se": 18.3,
+          "unit": "fraction"
+        },
+        {
+          "name": "EC50",
+          "typical": 2.85,
+          "se": 20.7,
+          "unit": "μg/mL"
+        },
+        {
+          "name": "INPT>1",
+          "typical": 1.07,
+          "se": 2.7,
+          "unit": "fraction"
+        },
+        {
+          "name": "age_effect",
+          "typical": -0.0113,
+          "se": 20.4,
+          "unit": "SDMT score per year"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Interindividual variability on baseline SDMT score",
+          "parameter": "IIV_baseline",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "exp(ETA(1))",
+          "variability_level": "iiv",
+          "reported_value": 18.3,
+          "reported_metric": "cv_percent",
+          "value": 0.2659,
+          "conversion": "sqrt(exp(0.183) - 1)"
+        },
+        {
+          "description": "Interindividual variability on EC50",
+          "parameter": "IIV_EC50",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "exp(ETA(2))",
+          "variability_level": "iiv",
+          "reported_value": 34.5,
+          "reported_metric": "cv_percent",
+          "value": 1.3896,
+          "conversion": "sqrt(exp(0.345) - 1)"
+        },
+        {
+          "description": "Interindividual variability on Emax",
+          "parameter": "IIV_Emax",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "exp(ETA(3))",
+          "variability_level": "iiv",
+          "reported_value": 19.9,
+          "reported_metric": "cv_percent",
+          "value": 1.2086,
+          "conversion": "sqrt(exp(0.199) - 1)"
+        },
+        {
+          "description": "Interindividual variability on INPT>1",
+          "parameter": "IIV_INPT>1",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "exp(ETA(4))",
+          "variability_level": "iiv",
+          "reported_value": 2.5,
+          "reported_metric": "cv_percent",
+          "value": 1.0954,
+          "conversion": "sqrt(exp(0.025) - 1)"
+        },
+        {
+          "description": "Interindividual variability on age effect",
+          "parameter": "IIV_age_effect",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "exp(ETA(5))",
+          "variability_level": "iiv",
+          "reported_value": 20.4,
+          "reported_metric": "cv_percent",
+          "value": 1.2369,
+          "conversion": "sqrt(exp(0.204) - 1)"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 5,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "unknown"
+        },
+        {
+          "row_eta": 2,
+          "col_eta": 3,
+          "reported_value": -0.1678,
+          "reported_metric": "correlation",
+          "value": -0.4599,
+          "conversion": "unknown"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual error for SDMT score",
+          "error_model": "proportional",
+          "reported_value": 16.2,
+          "reported_metric": "cv_percent",
+          "value": 0.162,
+          "conversion": "sqrt(exp(0.162) - 1)"
+        }
+      ]
+    },
+    "covariates": [
+      "age"
+    ],
+    "residual_error": "Proportional error model with %CV = 16.2%",
+    "confidence": {
+      "overall": 0.9,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.9,
+        "population": 0.9,
+        "software": 0.9
+      }
+    },
+    "evidence_quotes": [
+      "The population PK model of oral and IV topiramate used in this analysis has been previously described.",
+      "The relationship between topiramate plasma concentration and SDMT score change was explored using three basic functions: (1) linear, (2) exponential/log-linear, and (3) Emax as follows:"
+    ],
+    "notes": "The model includes a practice effect term NPT>1. The EC50 value is reported but not directly used in the structural equation."
+  },
+  "variants": {
+    "text": {
+      "title": "Modeling of Intravenous and Oral Topiramate and Its Effect on the Symbol-Digit Modalities Test in Adult Healthy Volunteers",
+      "compound": "Topiramate",
+      "population": "Healthy volunteers (19-55 years old)",
+      "route": "Oral, IV",
+      "n_subjects": 38,
+      "software": "NONMEM version 7.2",
+      "estimation_method": "Nonlinear mixed-effects modeling",
+      "model_type": "Pharmacokinetic-Pharmacodynamic (PK-PD) model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "Single-compartment PK model with IV and oral administration"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "E0",
+            "typical": 59.3,
+            "se": 3.2,
+            "unit": "SDMT score"
+          },
+          {
+            "name": "Emax",
+            "typical": 0.51,
+            "se": 18.3,
+            "unit": "fraction"
+          },
+          {
+            "name": "EC50",
+            "typical": 2.85,
+            "se": 20.7,
+            "unit": "μg/mL"
+          },
+          {
+            "name": "INPT>1",
+            "typical": 1.07,
+            "se": 2.7,
+            "unit": "fraction"
+          },
+          {
+            "name": "age_effect",
+            "typical": -0.0113,
+            "se": 20.4,
+            "unit": "SDMT score per year"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Interindividual variability on baseline SDMT score",
+            "parameter": "IIV_baseline",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "exp(ETA(1))",
+            "variability_level": "iiv",
+            "reported_value": 18.3,
+            "reported_metric": "cv_percent",
+            "value": 0.2659,
+            "conversion": "sqrt(exp(0.183) - 1)"
+          },
+          {
+            "description": "Interindividual variability on EC50",
+            "parameter": "IIV_EC50",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "exp(ETA(2))",
+            "variability_level": "iiv",
+            "reported_value": 34.5,
+            "reported_metric": "cv_percent",
+            "value": 1.3896,
+            "conversion": "sqrt(exp(0.345) - 1)"
+          },
+          {
+            "description": "Interindividual variability on Emax",
+            "parameter": "IIV_Emax",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "exp(ETA(3))",
+            "variability_level": "iiv",
+            "reported_value": 19.9,
+            "reported_metric": "cv_percent",
+            "value": 1.2086,
+            "conversion": "sqrt(exp(0.199) - 1)"
+          },
+          {
+            "description": "Interindividual variability on INPT>1",
+            "parameter": "IIV_INPT>1",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "exp(ETA(4))",
+            "variability_level": "iiv",
+            "reported_value": 2.5,
+            "reported_metric": "cv_percent",
+            "value": 1.0954,
+            "conversion": "sqrt(exp(0.025) - 1)"
+          },
+          {
+            "description": "Interindividual variability on age effect",
+            "parameter": "IIV_age_effect",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "exp(ETA(5))",
+            "variability_level": "iiv",
+            "reported_value": 20.4,
+            "reported_metric": "cv_percent",
+            "value": 1.2369,
+            "conversion": "sqrt(exp(0.204) - 1)"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 5,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "unknown"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 3,
+            "reported_value": -0.1678,
+            "reported_metric": "correlation",
+            "value": -0.4599,
+            "conversion": "unknown"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual error for SDMT score",
+            "error_model": "proportional",
+            "reported_value": 16.2,
+            "reported_metric": "cv_percent",
+            "value": 0.162,
+            "conversion": "sqrt(exp(0.162) - 1)"
+          }
+        ]
+      },
+      "covariates": [
+        "age"
+      ],
+      "residual_error": "Proportional error model with %CV = 16.2%",
+      "confidence": {
+        "overall": 0.9,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.9,
+          "population": 0.9,
+          "software": 0.9
+        }
+      },
+      "evidence_quotes": [
+        "The population PK model of oral and IV topiramate used in this analysis has been previously described.",
+        "The relationship between topiramate plasma concentration and SDMT score change was explored using three basic functions: (1) linear, (2) exponential/log-linear, and (3) Emax as follows:"
+      ],
+      "notes": "The model includes a practice effect term NPT>1. The EC50 value is reported but not directly used in the structural equation."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

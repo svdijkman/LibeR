@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_24700271",
+  "pmid": "24700271",
+  "title": "Changes in individual drug-independent system parameters during virtual paediatric pharmacokinetic trials: introducing time-varying physiology into a paediatric PBPK model.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/abduljalil-2014-24700271.pdf",
+    "sha256": "4337d658ba47da2009c0117483b9ec28a42e415e1210038889aaf74a6ef46929"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

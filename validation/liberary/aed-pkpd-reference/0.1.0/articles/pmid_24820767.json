@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_24820767",
+  "pmid": "24820767",
+  "title": "Correlation of the UGT1A4 gene polymorphism with serum concentration and therapeutic efficacy of lamotrigine in Han Chinese of Northern China.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "LMT",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/LMT/articles/excluded/chang-2014-24820767.pdf",
+    "sha256": "b60ab1eb36fa06f9fcd9c79feb93f8469f5b531898db9d8445ec044e6a9382c0"
+  },
+  "metadata_source": "Supplements/LMT/pubmed_result_eval_LMT.csv"
+}

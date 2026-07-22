@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_phb_15811169_m01",
+  "screening_id": null,
+  "article_id": "pmid_15811169",
+  "pmid": "15811169",
+  "source_pdf_sha256": "f3054ccb5a7784deec90416eca5e58407ad9c42685590525a3e9733dfbecceb8",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:38:42.113Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "Population pharmacokinetic investigation of phenobarbital by mixed effect modelling using routine clinical data in Japanese neonates and infants",
+    "compound": "phenobarbital",
+    "population": null,
+    "route": "oral, rectal (suppository)",
+    "n_subjects": 35,
+    "software": "NONMEM",
+    "estimation_method": "nonlinear mixed effects model",
+    "model_type": "structural and error models",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 1,
+      "description": "One-compartment open pharmacokinetic model with first-order elimination"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "CL/F",
+          "typical": 3.41,
+          "se": 2.34,
+          "unit": "mL/h/kg"
+        },
+        {
+          "name": "Vd/F",
+          "typical": 1.09,
+          "se": 0.87,
+          "unit": "L/kg"
+        },
+        {
+          "name": "F",
+          "typical": 0.406,
+          "se": 0.208,
+          "unit": null
+        }
+      ],
+      "omega": [
+        {
+          "description": "Interindividual variability in CL/F and Vd/F",
+          "parameter": "CL/F, Vd/F",
+          "eta_index": 1,
+          "eta_distribution": "log_normal",
+          "eta_expression": "h1 * TBW + h4 * PNA; h2 * TBW",
+          "variability_level": "iiv",
+          "reported_value": null,
+          "reported_metric": "cv_percent",
+          "value": 31.9,
+          "conversion": "sqrt(1 + (0.319^2))"
+        }
+      ],
+      "omega_covariance": [
+        {
+          "row_eta": 1,
+          "col_eta": 1,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "null"
+        },
+        {
+          "row_eta": 2,
+          "col_eta": 2,
+          "reported_value": null,
+          "reported_metric": "unknown",
+          "value": null,
+          "conversion": "null"
+        }
+      ],
+      "sigma": [
+        {
+          "description": "Residual variability in the model",
+          "error_model": "proportional",
+          "reported_value": 25.2,
+          "reported_metric": "cv_percent",
+          "value": 0.252,
+          "conversion": "sqrt(1 + (0.252^2))"
+        }
+      ]
+    },
+    "covariates": [
+      "TBW",
+      "PNA"
+    ],
+    "residual_error": "proportional",
+    "confidence": {
+      "overall": 0.9,
+      "fields": {
+        "structure": 0.85,
+        "parameters": 0.92,
+        "population": 0.88,
+        "software": 0.9
+      }
+    },
+    "evidence_quotes": [
+      "The most important variables for predicting phenobarbital clearance in this patient population were 31.9% and 53.9%, respectively, and the residual variability was 25.2% as a coefficient of variation."
+    ],
+    "notes": "The model does not provide specific values for OMEGA or SIGMA variances but reports CV percentages. The structural parameters are expressed in terms of TBW and PNA."
+  },
+  "variants": {
+    "text": {
+      "title": "Population pharmacokinetic investigation of phenobarbital by mixed effect modelling using routine clinical data in Japanese neonates and infants",
+      "compound": "phenobarbital",
+      "population": null,
+      "route": "oral, rectal (suppository)",
+      "n_subjects": 35,
+      "software": "NONMEM",
+      "estimation_method": "nonlinear mixed effects model",
+      "model_type": "structural and error models",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One-compartment open pharmacokinetic model with first-order elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL/F",
+            "typical": 3.41,
+            "se": 2.34,
+            "unit": "mL/h/kg"
+          },
+          {
+            "name": "Vd/F",
+            "typical": 1.09,
+            "se": 0.87,
+            "unit": "L/kg"
+          },
+          {
+            "name": "F",
+            "typical": 0.406,
+            "se": 0.208,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Interindividual variability in CL/F and Vd/F",
+            "parameter": "CL/F, Vd/F",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "h1 * TBW + h4 * PNA; h2 * TBW",
+            "variability_level": "iiv",
+            "reported_value": null,
+            "reported_metric": "cv_percent",
+            "value": 31.9,
+            "conversion": "sqrt(1 + (0.319^2))"
+          }
+        ],
+        "omega_covariance": [
+          {
+            "row_eta": 1,
+            "col_eta": 1,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "null"
+          },
+          {
+            "row_eta": 2,
+            "col_eta": 2,
+            "reported_value": null,
+            "reported_metric": "unknown",
+            "value": null,
+            "conversion": "null"
+          }
+        ],
+        "sigma": [
+          {
+            "description": "Residual variability in the model",
+            "error_model": "proportional",
+            "reported_value": 25.2,
+            "reported_metric": "cv_percent",
+            "value": 0.252,
+            "conversion": "sqrt(1 + (0.252^2))"
+          }
+        ]
+      },
+      "covariates": [
+        "TBW",
+        "PNA"
+      ],
+      "residual_error": "proportional",
+      "confidence": {
+        "overall": 0.9,
+        "fields": {
+          "structure": 0.85,
+          "parameters": 0.92,
+          "population": 0.88,
+          "software": 0.9
+        }
+      },
+      "evidence_quotes": [
+        "The most important variables for predicting phenobarbital clearance in this patient population were 31.9% and 53.9%, respectively, and the residual variability was 25.2% as a coefficient of variation."
+      ],
+      "notes": "The model does not provide specific values for OMEGA or SIGMA variances but reports CV percentages. The structural parameters are expressed in terms of TBW and PNA."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_23891703",
+  "pmid": "23891703",
+  "title": "Population pharmacokinetics of topiramate in adult patients with epilepsy using nonlinear mixed effects modelling.",
+  "abstract": "",
+  "first_author": "Jovanovic",
+  "year": "2013",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_23891703_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/jovanovic-2013-23891703.pdf",
+    "sha256": "e9ee67a489969ae4b04bcb4eaeb4258046c4ab9caea0bb813b61d2461800fb2f"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

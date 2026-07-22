@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_27236639",
+  "pmid": "27236639",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/goahua-2016-27236639.pdf",
+    "sha256": "0a31ff797a806858ace29d94125e63ef1c1f6eab6e3bc59c21e365228fc014cf"
+  }
+}

@@ -1,0 +1,420 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_17164696_m01",
+  "article_id": "pmid_17164696",
+  "pmid": "17164696",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_17164696",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 11,
+      "model_table": 2,
+      "model_row": 12
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/alzaabi-2006-17164696.pdf",
+      "sha256": "fa36e40e1d4a083ae9d12252debceb4ad647564f94322c7d879441656dc2f2a0"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Alza’abi 2006 17164696",
+    "population": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+    "model_type": "PK",
+    "objective": "“…to increase knowledge of PHT disposition by developing a population pharmacokinetic model of PHT using sparse, routine drug monitoring data obtained during intravenous and enteral administration of PHT of neonates and infants with seizures”",
+    "covariates": "Tested: WT, gestational age (GA), birth weight (BWT), postnatal age (PNA), SEX, Apgar score at 1 minute (APG1) and 5 minutes (APG5), albumin, creatinine Included: WT and PNA on CL, WT on V",
+    "observations": "The model uses linear elimination instead of michaelis menten elimination, which may result in underexposure or overexposure based on their predicted dosing regimen. An interoccasional variability in clearance was estimated, which may in part be the result of not using michaelis menten elimination. The mpact of interoccasional variability was almost as large as the actual interindividual variability, which could imply that at each occasion, an individual is different from the last occasion.",
+    "dose": "Steady-state oral and IV doses in patients",
+    "structure": "1-compartment model with zero-order infusion, first-order absorption and first-order elimination",
+    "equations": "CL=theta1*((WT/70)**0.75)*(1+theta5*(PNA-PNAm))*exp(eta1+eta3) V=theta2*(WT/70)*exp(eta2) KA=theta3 F1=theta4 Cobs=Cipred*exp(eps1)",
+    "parameter_values": "theta1=0.829 theta2=74.2 theta3=0.167 theta4=0.757 theta5=0.0692 omega1=0.439 omega2=0.358 omega3=0.259 sigma1=0.232",
+    "validation": "Yes (bootstrap of 500) / No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+      "route": "oral",
+      "n_subjects": 83,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+        "n_total": 83,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 83
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 123
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 11",
+                  "evidence": "(days): 11 (1-123)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 0.59,
+                    "maximum": 5.69
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 11",
+                  "evidence": "3.25 (0.59-5.69)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 11",
+              "evidence": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 11",
+          "evidence": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral and IV doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 12",
+            "evidence": "Steady-state oral and IV doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": 2,
+        "trans": 2,
+        "compartments": 1,
+        "description": "1-compartment model with zero-order infusion, first-order absorption and first-order elimination",
+        "canonical": {
+          "compartments": {
+            "count": 1,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "zero_order",
+            "depot": false
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "clearance_volume",
+            "parameters": ["CL", "V", "KA", "F1", "THETA5"]
+          },
+          "description": "1-compartment model with zero-order infusion, first-order absorption and first-order elimination"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": 2,
+            "trans": 2,
+            "status": "inferred",
+            "confidence": 0.95,
+            "rationale": "1-compartment extravascular input with linear elimination and clearance_volume parameterization.",
+            "evidence": {
+              "status": "inferred",
+              "source_locator": "",
+              "evidence": "1-compartment model with zero-order infusion, first-order absorption and first-order elimination Steady-state oral and IV doses in patients",
+              "confidence": 0.95
+            },
+            "alternatives": [],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.829,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 74.2,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "KA",
+            "typical": 0.167,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "F1",
+            "typical": 0.757,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 0.0692,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "CL",
+            "eta_index": 1,
+            "eta_distribution": "unknown",
+            "eta_expression": null,
+            "variability_level": "iiv",
+            "reported_value": 0.439,
+            "reported_metric": "variance",
+            "value": 0.439,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "V",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.358,
+            "reported_metric": "variance",
+            "value": 0.358,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "KA",
+            "eta_index": 3,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.259,
+            "reported_metric": "variance",
+            "value": 0.259,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "unknown",
+            "reported_value": 0.232,
+            "reported_metric": "variance",
+            "value": 0.232,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT and PNA on CL", "WT on V"],
+      "residual_error": "CL=theta1*((WT/70)**0.75)*(1+theta5*(PNA-PNAm))*exp(eta1+eta3) V=theta2*(WT/70)*exp(eta2) KA=theta3 F1=theta4 Cobs=Cipred*exp(eps1)",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Alza’abi",
+      "year": "2006",
+      "dose": "Steady-state oral and IV doses in patients",
+      "population": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+      "population_details": {
+        "raw": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+        "n_total": 83,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 83
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 123
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 11",
+                  "evidence": "(days): 11 (1-123)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "range",
+                    "minimum": 0.59,
+                    "maximum": 5.69
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 11",
+                  "evidence": "3.25 (0.59-5.69)",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 11",
+              "evidence": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 11",
+          "evidence": "N: 83 (Australia) Post-natal age (days): 11 (1-123) WT: 3.25 (0.59-5.69)",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral and IV doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 12",
+            "evidence": "Steady-state oral and IV doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“…to increase knowledge of PHT disposition by developing a population pharmacokinetic model of PHT using sparse, routine drug monitoring data obtained during intravenous and enteral administration of PHT of neonates and infants with seizures”"
+    },
+    "covariates": {
+      "tested": ["WT", "gestational age (GA)", "birth weight (BWT)", "postnatal age (PNA)", "SEX", "Apgar score at 1 minute (APG1) and 5 minutes (APG5)", "albumin", "creatinine"],
+      "included": ["WT and PNA on CL", "WT on V"],
+      "raw": "Tested: WT, gestational age (GA), birth weight (BWT), postnatal age (PNA), SEX, Apgar score at 1 minute (APG1) and 5 minutes (APG5), albumin, creatinine Included: WT and PNA on CL, WT on V"
+    },
+    "validation": {
+      "raw": "Yes (bootstrap of 500) / No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:05:25.550Z"
+}

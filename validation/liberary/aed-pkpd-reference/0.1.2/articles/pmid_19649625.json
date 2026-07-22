@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_19649625",
+  "pmid": "19649625",
+  "title": "Assessment of inter-individual variability in predicted phenytoin clearance.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "PHT",
+  "model_ids": [],
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/PHT/articles/excluded/polasek-2009-19649625.pdf",
+    "sha256": "d0d94534c3880fc4208a1c44506d6a4fed2372d445561d593b6894ff894b38c8"
+  },
+  "metadata_source": "Supplements/PHT/pubmed_result_eval_PHT.csv"
+}

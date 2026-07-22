@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0.0",
+  "task": "extraction",
+  "reference_partition": "test",
+  "target_absent_from_prompt": true,
+  "reference_id": "aed_cbz_27785404_m01",
+  "screening_id": null,
+  "article_id": "pmid_27785404",
+  "pmid": "27785404",
+  "source_pdf_sha256": "41567b1d332f7ab234799e03c9e935abad78a34dbe7d6447b4824daa026317dc",
+  "provider": "ollama",
+  "model": "qwen2.5:7b-instruct",
+  "endpoint_configuration": "ollama/qwen2.5:7b-instruct",
+  "created_at": "2026-07-16T17:45:54.709Z",
+  "status": "complete",
+  "error": null,
+  "prediction": {
+    "title": "The influence of CYP2C8*3 on carbamazepine serum concentration in epileptic pediatric patients",
+    "compound": "Carbamazepine",
+    "population": "Epileptic pediatric patients",
+    "route": null,
+    "n_subjects": 40,
+    "software": "NONMEM, version 7.3.0",
+    "estimation_method": "Nonlinear mixed-effect model (NLMEM)",
+    "model_type": "Population PK/PD model",
+    "structural_model": {
+      "advan": null,
+      "trans": null,
+      "compartments": 1,
+      "description": "One-compartment model with no absorption"
+    },
+    "parameters": {
+      "theta": [
+        {
+          "name": "CL",
+          "typical": 0.215,
+          "se": 0.0696,
+          "unit": "L/h"
+        }
+      ],
+      "omega": [
+        {
+          "description": "Inter-individual variability in clearance (CL)",
+          "parameter": "CL",
+          "eta_index": null,
+          "eta_distribution": "log_normal",
+          "eta_expression": "ETA(1)",
+          "variability_level": "iiv",
+          "reported_value": 0.0626,
+          "reported_metric": "variance",
+          "value": 0.00391576,
+          "conversion": "log(1 + (0.0626^2))"
+        }
+      ],
+      "omega_covariance": [],
+      "sigma": [
+        {
+          "description": "Residual error variance for the log-transformed concentration",
+          "error_model": "proportional",
+          "reported_value": 0.0249,
+          "reported_metric": "variance",
+          "value": 0.000619857,
+          "conversion": "log(1 + (0.0249^2))"
+        }
+      ]
+    },
+    "covariates": [
+      "SEX",
+      "DD"
+    ],
+    "residual_error": null,
+    "confidence": {
+      "overall": 0.85,
+      "fields": {
+        "structure": 0.9,
+        "parameters": 0.75,
+        "population": 0.8,
+        "software": 0.9
+      }
+    },
+    "evidence_quotes": [
+      "The aim of the present study was to investigate the distribution of CYP2C8 variants *3 and *5, as well as their effect on carbamazepine pharmacokinetic properties, in 40 epileptic pediatric patients on carbamazepine treatment.",
+      "The results indicated that the CYP2C8*3 polymorphism might not be of clinical importance for epilepsy treatment in pediatric populations."
+    ],
+    "notes": "The model does not include CYP2C8 genotype as a covariate, and the sample size is small. The study did not find significant effects of CYP2C8 genetic polymorphisms on carbamazepine clearance."
+  },
+  "variants": {
+    "text": {
+      "title": "The influence of CYP2C8*3 on carbamazepine serum concentration in epileptic pediatric patients",
+      "compound": "Carbamazepine",
+      "population": "Epileptic pediatric patients",
+      "route": null,
+      "n_subjects": 40,
+      "software": "NONMEM, version 7.3.0",
+      "estimation_method": "Nonlinear mixed-effect model (NLMEM)",
+      "model_type": "Population PK/PD model",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "One-compartment model with no absorption"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "CL",
+            "typical": 0.215,
+            "se": 0.0696,
+            "unit": "L/h"
+          }
+        ],
+        "omega": [
+          {
+            "description": "Inter-individual variability in clearance (CL)",
+            "parameter": "CL",
+            "eta_index": null,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1)",
+            "variability_level": "iiv",
+            "reported_value": 0.0626,
+            "reported_metric": "variance",
+            "value": 0.00391576,
+            "conversion": "log(1 + (0.0626^2))"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Residual error variance for the log-transformed concentration",
+            "error_model": "proportional",
+            "reported_value": 0.0249,
+            "reported_metric": "variance",
+            "value": 0.000619857,
+            "conversion": "log(1 + (0.0249^2))"
+          }
+        ]
+      },
+      "covariates": [
+        "SEX",
+        "DD"
+      ],
+      "residual_error": null,
+      "confidence": {
+        "overall": 0.85,
+        "fields": {
+          "structure": 0.9,
+          "parameters": 0.75,
+          "population": 0.8,
+          "software": 0.9
+        }
+      },
+      "evidence_quotes": [
+        "The aim of the present study was to investigate the distribution of CYP2C8 variants *3 and *5, as well as their effect on carbamazepine pharmacokinetic properties, in 40 epileptic pediatric patients on carbamazepine treatment.",
+        "The results indicated that the CYP2C8*3 polymorphism might not be of clinical importance for epilepsy treatment in pediatric populations."
+      ],
+      "notes": "The model does not include CYP2C8 genotype as a covariate, and the sample size is small. The study did not find significant effects of CYP2C8 genetic polymorphisms on carbamazepine clearance."
+    }
+  },
+  "pipeline": {
+    "mode": "text",
+    "assessed": false
+  }
+}

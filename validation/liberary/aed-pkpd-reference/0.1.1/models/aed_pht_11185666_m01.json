@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_11185666_m01",
+  "article_id": "pmid_11185666",
+  "pmid": "11185666",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_11185666",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 19,
+      "model_table": 2,
+      "model_row": 22
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/stowe-2000-11185666.pdf",
+      "sha256": "95b27581c746d5ed44cde5572d6ad6cc6dc61348c82cb91674be4d267e1f84a7"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Stowe 2000 11185666",
+    "population": "N: 10 (USA) Age: 7±2.5 (3.2-11.2) WT: 22.8±7.7 (14-38)",
+    "model_type": "PK",
+    "objective": "“first to evaluate phenytoin protein binding following severe, acute traumatic brain injury and second to determine if a pattern of induced oxidative metabolism is preceded by inhibition”",
+    "covariates": "Tested:- Included: WT on Vd and Vmax",
+    "observations": "Albumin is reduced in critically ill children, resulting in a higher unbound fraction of phenytoin. An empirical function was used to adjust for the increase in elimination over time, possibly due to more unbound phenytoin being available for metabolism in the liver.",
+    "dose": "Multiple iv doses in patients",
+    "structure": "1 compartment model with michaelis menten elimination",
+    "equations": "VmaxB=theta1*WT*exp(eta1) VmaxI=theta2*WT*exp(eta2) Kind=theta3*exp(eta3) Vmax_tvar=VmaxB+VmaxI*(1-exp(-Kind*time)) Vm=Vmax_tvar Km=theta4*exp(eta4) Vd=theta5*WT*exp(eta5) dA(1)/dt=–((Vm*A(1))/(Vd*(Km+A(1)))) Inter-individual variability here is calculated from reported mean and SD of estimated parameter values. Vmax_tvar is the time variant Vmax; VmaxB is Vmax at baseline; VmaxI is the time-dependent induced portion of Vmax, at rate Kind",
+    "parameter_values": "theta1=2.82 theta2=20.79 theta3=0.014 theta4=0.35 theta5=6.5 omega1=0.53 omega2=0.36 omega3=0.84 omega4=0.15 omega5=0.024",
+    "validation": "No/No"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "N: 10 (USA) Age: 7±2.5 (3.2-11.2) WT: 22.8±7.7 (14-38)",
+      "route": null,
+      "n_subjects": 10,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "compartments": 1,
+        "description": "1 compartment model with michaelis menten elimination"
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "VmaxB",
+            "typical": 2.82,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "VmaxI",
+            "typical": 20.79,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Kind",
+            "typical": 0.014,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Km",
+            "typical": 0.35,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Vd",
+            "typical": 6.5,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "VmaxB",
+            "eta_index": 1,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.53,
+            "reported_metric": "variance",
+            "value": 0.53,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "VmaxI",
+            "eta_index": 2,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.36,
+            "reported_metric": "variance",
+            "value": 0.36,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "Kind",
+            "eta_index": 3,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.84,
+            "reported_metric": "variance",
+            "value": 0.84,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 4",
+            "parameter": "Km",
+            "eta_index": 4,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(4) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.15,
+            "reported_metric": "variance",
+            "value": 0.15,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 5",
+            "parameter": "Vd",
+            "eta_index": 5,
+            "eta_distribution": "log_normal",
+            "eta_expression": "ETA(5) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.024,
+            "reported_metric": "variance",
+            "value": 0.024,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": []
+      },
+      "covariates": "WT on Vd and Vmax",
+      "residual_error": null,
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier."
+    },
+    "study": {
+      "first_author": "Stowe",
+      "year": "2000",
+      "dose": "Multiple iv doses in patients",
+      "population": "N: 10 (USA) Age: 7±2.5 (3.2-11.2) WT: 22.8±7.7 (14-38)",
+      "objective": "“first to evaluate phenytoin protein binding following severe, acute traumatic brain injury and second to determine if a pattern of induced oxidative metabolism is preceded by inhibition”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": "WT on Vd and Vmax",
+      "raw": "Tested:- Included: WT on Vd and Vmax"
+    },
+    "validation": {
+      "raw": "No/No"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T17:24:57.277Z"
+}

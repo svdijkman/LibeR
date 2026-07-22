@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.1.0",
+  "screening_id": "screen_pht_18463199",
+  "pmid": "18463199",
+  "compound_group": "PHT",
+  "partition": "train",
+  "relevant_model": false,
+  "recoverable_model": false,
+  "exclusion_reason": "explicitly_excluded_reason_unavailable",
+  "label_quality": "explicit_exclusion",
+  "source": {
+    "path": "Supplements/PHT/articles/excluded/lu-2008-18463199.pdf",
+    "sha256": "28c35c34629a47c02d9f2bbf31ab4892e9a2c65457e4045a8799ddab97d169d4"
+  }
+}

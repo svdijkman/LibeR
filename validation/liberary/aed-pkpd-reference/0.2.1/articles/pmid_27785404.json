@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "article_id": "pmid_27785404",
+  "pmid": "27785404",
+  "title": "The influence of CYP2C8*3 on carbamazepine serum concentration in epileptic pediatric patients.",
+  "abstract": "",
+  "first_author": "Milovanovic",
+  "year": "2016",
+  "compounds": "CBZ",
+  "model_ids": "aed_cbz_27785404_m01",
+  "partition": "test",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/0-milovanovic-2016-27785404.pdf",
+    "sha256": "41567b1d332f7ab234799e03c9e935abad78a34dbe7d6447b4824daa026317dc"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

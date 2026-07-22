@@ -1,0 +1,440 @@
+{
+  "schema_version": "1.1.0",
+  "corpus_id": "aed-pkpd-reference",
+  "reference_id": "aed_pht_8924916_m01",
+  "article_id": "pmid_8924916",
+  "pmid": "8924916",
+  "model_index": 1,
+  "compound_group": "PHT",
+  "family_id": "pmid_8924916",
+  "partition": "train",
+  "source": {
+    "appendix": {
+      "path": "Supplements/PHT/Supplement_PHT_v2.docx",
+      "sha256": "4bc7e32cebe035b482492fedaf372bdf148d741c3c4685292b2d1fa17800046f",
+      "study_table": 1,
+      "study_row": 32,
+      "model_table": 2,
+      "model_row": 36
+    },
+    "publication_pdf": {
+      "path": "Supplements/PHT/articles/odani-1996-8924916.pdf",
+      "sha256": "a7db111131a784ac3015e6dfd7394842b61d4460849bfbd418ab8782c3491383"
+    },
+    "metadata_csv": ""
+  },
+  "raw": {
+    "citation": "Odani 1996 8924916",
+    "population": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+    "model_type": "PK",
+    "objective": "“In the present study, we collected the routine therapeutic drug monitoring data of phenytoin to estimate the population pharmacokinetic parameters in Japanese epileptic patients”",
+    "covariates": "Tested: - Included: WT on Vm and Vd; ZNS on Km",
+    "observations": "Zonisamide increases PHT CL by 16%. The predictive quality of the model cannot be determined due to a lack of goodness-of-fit plots",
+    "dose": "Steady-state oral doses in patients",
+    "structure": "DDCL (Dose Dependent Clearance) model",
+    "equations": "SIZE=42*((WT/42)**theta4) Vm=theta1*SIZE*(1+eta1) Km=theta2*(theta5**ZNS)*(1+eta2) V=theta3*SIZE*(1+eta3) CL=(Vm-(DD/Tau))/Km Cipred=(D/V)*exp(-(CL/V)*time)/(1-exp(-(CL/V)*time)) Cobs=Cipred*(1+eps1) Formulae were converted from mg/day/kg to mg/day for ease of use. DD is the daily dose (mg/day); Tau is the dosing interval in hours",
+    "parameter_values": "theta1=9.8 theta2=9.19 theta3=1.23 theta4=1.463 theta5=1.16 omega1=0.023 omega2=0.098 omega3=0.21 sigma1=0.033",
+    "validation": "No/Yes (N=44; see Odani 1997 9333104)"
+  },
+  "reference": {
+    "extraction_target": {
+      "title": "",
+      "compound": "PHT",
+      "population": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+      "route": "oral",
+      "n_subjects": 116,
+      "software": null,
+      "estimation_method": null,
+      "model_type": "PK",
+      "population_details": {
+        "raw": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+        "n_total": 116,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 116
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 15.6,
+                    "sd": 6.6
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 37
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 32",
+                  "evidence": "15.6±6.6 (1-37)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 42.4,
+                    "sd": 16.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 32",
+                  "evidence": "42.4±16.5",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 32",
+              "evidence": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 32",
+          "evidence": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 36",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "structural_model": {
+        "advan": null,
+        "trans": null,
+        "description": "DDCL (Dose Dependent Clearance) model",
+        "canonical": {
+          "compartments": {
+            "count": null,
+            "names": []
+          },
+          "input": {
+            "route": "oral",
+            "process": "first_order",
+            "depot": true
+          },
+          "elimination": {
+            "type": "linear",
+            "from": "central"
+          },
+          "parameterization": {
+            "type": "unknown",
+            "parameters": ["VM", "KM", "V", "THETA4", "THETA5"]
+          },
+          "description": "DDCL (Dose Dependent Clearance) model"
+        },
+        "implementations": [
+          {
+            "engine": "NONMEM",
+            "advan": null,
+            "trans": null,
+            "status": "unresolved",
+            "confidence": 0.25,
+            "rationale": "The reported structure does not identify a unique built-in ADVAN/TRANS implementation.",
+            "evidence": {
+              "status": "unresolved",
+              "source_locator": "",
+              "evidence": "DDCL (Dose Dependent Clearance) model Steady-state oral doses in patients",
+              "confidence": 0.25
+            },
+            "alternatives": [
+              {
+                "advan": 6,
+                "trans": null,
+                "reason": "General ODE implementation"
+              },
+              {
+                "advan": 13,
+                "trans": null,
+                "reason": "Stiff/general ODE implementation when required"
+              }
+            ],
+            "review_required": true
+          }
+        ]
+      },
+      "parameters": {
+        "theta": [
+          {
+            "name": "Vm",
+            "typical": 9.8,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "Km",
+            "typical": 9.19,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "V",
+            "typical": 1.23,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA4",
+            "typical": 1.463,
+            "se": null,
+            "unit": null
+          },
+          {
+            "name": "THETA5",
+            "typical": 1.16,
+            "se": null,
+            "unit": null
+          }
+        ],
+        "omega": [
+          {
+            "description": "Appendix OMEGA for ETA 1",
+            "parameter": "Vm",
+            "eta_index": 1,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(1) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.023,
+            "reported_metric": "variance",
+            "value": 0.023,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 2",
+            "parameter": "Km",
+            "eta_index": 2,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(2) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.098,
+            "reported_metric": "variance",
+            "value": 0.098,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          },
+          {
+            "description": "Appendix OMEGA for ETA 3",
+            "parameter": "V",
+            "eta_index": 3,
+            "eta_distribution": "normal",
+            "eta_expression": "ETA(3) in appendix equation",
+            "variability_level": "iiv",
+            "reported_value": 0.21,
+            "reported_metric": "variance",
+            "value": 0.21,
+            "conversion": "Appendix NONMEM-scale OMEGA value retained verbatim; source-paper verification pending"
+          }
+        ],
+        "omega_covariance": [],
+        "sigma": [
+          {
+            "description": "Appendix SIGMA 1",
+            "error_model": "proportional",
+            "reported_value": 0.033,
+            "reported_metric": "variance",
+            "value": 0.033,
+            "conversion": "Appendix NONMEM-scale SIGMA value retained verbatim; source-paper verification pending"
+          }
+        ]
+      },
+      "covariates": ["WT on Vm and Vd", "ZNS on Km"],
+      "residual_error": "SIZE=42*((WT/42)**theta4) Vm=theta1*SIZE*(1+eta1) Km=theta2*(theta5**ZNS)*(1+eta2) V=theta3*SIZE*(1+eta3) CL=(Vm-(DD/Tau))/Km Cipred=(D/V)*exp(-(CL/V)*time)/(1-exp(-(CL/V)*time)) Cobs=Cipred*(1+eps1) Formulae were converted from mg/day/kg to mg/day for ease of use. DD is the daily dose (mg/day); Tau is the dosing interval in hours",
+      "reproduction_targets": [],
+      "confidence": {
+        "overall": 1,
+        "fields": {
+          "structure": 1,
+          "parameters": 1,
+          "population": 1,
+          "software": 0
+        }
+      },
+      "evidence_quotes": [],
+      "notes": "Appendix-derived silver reference; compare with the publication before promotion to a gold tier.",
+      "semantic_version": "1.0.0"
+    },
+    "study": {
+      "first_author": "Odani",
+      "year": "1996",
+      "dose": "Steady-state oral doses in patients",
+      "population": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+      "population_details": {
+        "raw": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+        "n_total": 116,
+        "cohorts": [
+          {
+            "id": "overall",
+            "label": "overall",
+            "role": "unspecified",
+            "n": {
+              "enrolled": null,
+              "dosed": null,
+              "analysed": 116
+            },
+            "health_status": "unspecified",
+            "country": null,
+            "descriptors": [
+              {
+                "name": "age",
+                "unit": "years",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 15.6,
+                    "sd": 6.6
+                  },
+                  {
+                    "type": "range",
+                    "minimum": 1,
+                    "maximum": 37
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 32",
+                  "evidence": "15.6±6.6 (1-37)",
+                  "confidence": 1
+                }
+              },
+              {
+                "name": "weight",
+                "unit": "kg",
+                "statistics": [
+                  {
+                    "type": "mean_sd",
+                    "mean": 42.4,
+                    "sd": 16.5
+                  }
+                ],
+                "categories": [],
+                "source": {
+                  "status": "reported",
+                  "source_locator": "appendix study row 32",
+                  "evidence": "42.4±16.5",
+                  "confidence": 1
+                }
+              }
+            ],
+            "pharmacogenetics": [],
+            "source": {
+              "status": "reported",
+              "source_locator": "appendix study row 32",
+              "evidence": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+              "confidence": 1
+            }
+          }
+        ],
+        "assumptions": [],
+        "source": {
+          "status": "reported",
+          "source_locator": "appendix study row 32",
+          "evidence": "N: 116 (Japanese) Age: 15.6±6.6 (1-37) WT: 42.4±16.5",
+          "confidence": 1
+        }
+      },
+      "dosing": [
+        {
+          "cohort_id": "overall",
+          "route": "oral",
+          "administration": "unspecified",
+          "amount": null,
+          "amount_unit": null,
+          "interval": null,
+          "interval_unit": null,
+          "duration": null,
+          "duration_unit": null,
+          "repetitions": null,
+          "steady_state": true,
+          "raw": "Steady-state oral doses in patients",
+          "source": {
+            "status": "reported",
+            "source_locator": "appendix model row 36",
+            "evidence": "Steady-state oral doses in patients",
+            "confidence": 1
+          }
+        }
+      ],
+      "objective": "“In the present study, we collected the routine therapeutic drug monitoring data of phenytoin to estimate the population pharmacokinetic parameters in Japanese epileptic patients”"
+    },
+    "covariates": {
+      "tested": [],
+      "included": ["WT on Vm and Vd", "ZNS on Km"],
+      "raw": "Tested: - Included: WT on Vm and Vd; ZNS on Km"
+    },
+    "validation": {
+      "raw": "No/Yes (N=44; see Odani 1997 9333104)"
+    }
+  },
+  "provenance": {
+    "status": "appendix_transcription",
+    "field_tiers": {
+      "article_identity": "B",
+      "study": "C",
+      "structure": "C",
+      "theta": "C",
+      "omega": "C",
+      "sigma": "C",
+      "covariates": "C",
+      "validation": "C"
+    },
+    "normalization": {
+      "omega": "Values labelled OMEGA in the appendix are retained as NONMEM variances; no CV reconversion is applied.",
+      "eta": "ETA distribution is inferred only when the appendix equation explicitly uses exp(ETA) or additive ETA.",
+      "implementation": "Canonical structure is normalized first; ADVAN/TRANS is then deterministically inferred with provenance and alternatives.",
+      "population": "Free-text cohorts and summary statistics are retained and additionally normalized into structured cohort descriptors.",
+      "source_text": "The appendix row is preserved verbatim in raw; normalized fields never replace it."
+    }
+  },
+  "quality": {
+    "tier": "C",
+    "review_status": "unreviewed",
+    "strict_score_eligible": false,
+    "training_eligible": false,
+    "issues": "publication_title_missing"
+  },
+  "created_at": "2026-07-16T22:05:26.081Z"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_9517367",
+  "pmid": "9517367",
+  "title": "A limited sampling method for the estimation of AUC and Cmax of carbamazepine and carbamazepine epoxide following a single and multiple dose of a sustained-release product.",
+  "abstract": "",
+  "first_author": "",
+  "year": "",
+  "compounds": "CBZ",
+  "model_ids": [],
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/CBZ/articles/exclude/mahmood-1998-9517367.pdf",
+    "sha256": "f83ddf6257533735df5a41c30790ab925b108e50756e8844deb5fa00650c318a"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

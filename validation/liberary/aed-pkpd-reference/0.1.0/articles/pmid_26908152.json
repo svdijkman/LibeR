@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "article_id": "pmid_26908152",
+  "pmid": "26908152",
+  "title": "Factors influencing topiramate clearance in adult patients with epilepsy: A population pharmacokinetic analysis.",
+  "abstract": "",
+  "first_author": "Bae",
+  "year": "2016",
+  "compounds": "TPM",
+  "model_ids": "aed_tpm_26908152_m01",
+  "partition": "train",
+  "publication_pdf": {
+    "path": "Supplements/TPM/articles/bae-2016-26908152.pdf",
+    "sha256": "0766de6f320412081e855679f3a0e726b86101d9a333e738658c4ae543232977"
+  },
+  "metadata_source": "Supplements/CBZ/pubmed_result_checked_CBZ.csv"
+}

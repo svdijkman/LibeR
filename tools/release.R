@@ -3,6 +3,28 @@ manifest <- jsonlite::fromJSON(file.path(root, "ecosystem.json"), simplifyVector
 packages <- names(manifest$packages)
 versions <- vapply(manifest$packages, `[[`, character(1), "version")
 
+# R CMD build may compile vignettes before R CMD INSTALL gets a chance to
+# configure the toolchain.  Make clean Windows release shells reproducible by
+# discovering Rtools explicitly instead of relying on an interactive PATH.
+if (.Platform$OS.type == "windows") {
+  rtools_roots <- unique(Filter(nzchar, c(
+    Sys.getenv("RTOOLS45_HOME"), Sys.getenv("RTOOLS_HOME"), "C:/rtools45"
+  )))
+  rtools_root <- rtools_roots[vapply(rtools_roots, function(path) {
+    file.exists(file.path(path, "x86_64-w64-mingw32.static.posix", "bin", "g++.exe"))
+  }, logical(1))][1L]
+  if (!is.na(rtools_root)) {
+    tool_paths <- normalizePath(c(
+      file.path(rtools_root, "x86_64-w64-mingw32.static.posix", "bin"),
+      file.path(rtools_root, "usr", "bin")
+    ), winslash = "/", mustWork = TRUE)
+    Sys.setenv(
+      PATH = paste(c(tool_paths, Sys.getenv("PATH")), collapse = .Platform$path.sep),
+      R_MAKEVARS_USER = file.path(root, "tools", "Makevars.rtools45")
+    )
+  }
+}
+
 actual <- vapply(packages, function(package) {
   read.dcf(file.path(root, package, "DESCRIPTION"))[[1L, "Version"]]
 }, character(1))

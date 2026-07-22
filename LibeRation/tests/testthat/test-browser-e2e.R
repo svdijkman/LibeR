@@ -3,7 +3,7 @@ test_that("real browser preserves full-page layout and modal reachability", {
   skip_if(Sys.getenv("LIBER_RUN_BROWSER_TESTS") != "true")
   root <- tempfile("liber-browser-")
   on.exit(unlink(root, recursive = TRUE, force = TRUE), add = TRUE)
-  app <- liber_gui(workspace = root, queue = FALSE, launch.browser = NULL)
+  app <- LibeRation::liber_gui(workspace = root, queue = FALSE, launch.browser = NULL)
   driver <- shinytest2::AppDriver$new(
     app, name = "liberation-layout", width = 1366, height = 768,
     load_timeout = 120000, seed = 20260722
@@ -32,14 +32,14 @@ test_that("real browser preserves full-page layout and modal reachability", {
   driver$run_js("document.querySelector('.lw-modal-close').click()")
 
   expect_true(driver$get_js(paste(
-    "(() => { const panel=document.querySelector('.lw-sidebar');",
+    "(() => { const panel=document.querySelector('.lw-page-host');",
     "if(!panel) return false; panel.scrollTop=panel.scrollHeight;",
     "return panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 2; })()"
   )))
 })
 
 test_that("large dataset remains metadata-only until explicitly requested", {
-  model <- nm_model(
+  model <- LibeRation::nm_model(
     INPUT = c("ID", "TIME", "EVID", "AMT"), ADVAN = 1,
     PRED = "CL=THETA(1);V=THETA(2);S1=V",
     THETAS = data.frame(THETA = 1:2, Value = c(2, 20))
@@ -48,7 +48,7 @@ test_that("large dataset remains metadata-only until explicitly requested", {
     ID = rep(seq_len(1000), each = 100), TIME = rep(seq(0, 24, length.out = 100), 1000),
     EVID = 0L, AMT = 0
   )
-  payload <- liber_workbench(model, data, data_payload = FALSE)$x$tag$attribs
+  payload <- LibeRation::liber_workbench(model, data, data_payload = FALSE)$x$tag$attribs
   expect_false(payload$dataset$payload_loaded)
   expect_length(payload$dataset$preview, 0L)
   expect_length(payload$dataset$plot_rows, 0L)

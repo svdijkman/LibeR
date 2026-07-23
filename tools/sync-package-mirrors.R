@@ -20,7 +20,7 @@ run <- function(command, arguments, directory = root, capture = FALSE) {
     command, arguments,
     stdout = if (capture) TRUE else "", stderr = if (capture) TRUE else ""
   )
-  status <- attr(output, "status")
+  status <- if (capture) attr(output, "status") else as.integer(output)
   if (is.null(status)) status <- 0L
   if (status != 0L) {
     stop(
@@ -56,6 +56,13 @@ for (package in packages) {
   clone <- file.path(stage, package)
   message("Synchronising ", package, " ", versions[[package]])
   run("git", c("clone", "--quiet", repository, shQuote(clone)))
+  run("git", c("config", "core.autocrlf", "false"), clone)
+  run("git", c("config", "user.name", shQuote("Sven C. van Dijkman")), clone)
+  run(
+    "git",
+    c("config", "user.email", "svdijkman@users.noreply.github.com"),
+    clone
+  )
 
   existing <- list.files(clone, all.files = TRUE, no.. = TRUE, full.names = TRUE)
   preserved <- file.path(clone, c(".git", ".github"))
@@ -77,12 +84,6 @@ for (package in packages) {
   run("git", c("add", "-A"), clone)
   changes <- run("git", c("status", "--porcelain=v1"), clone, capture = TRUE)
   if (length(changes)) {
-    run("git", c("config", "user.name", "Sven C. van Dijkman"), clone)
-    run(
-      "git",
-      c("config", "user.email", "svdijkman@users.noreply.github.com"),
-      clone
-    )
     run(
       "git",
       c(

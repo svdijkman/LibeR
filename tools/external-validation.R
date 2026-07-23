@@ -25,11 +25,7 @@ dir.create(dependency_library, recursive = TRUE, showWarnings = FALSE)
 .libPaths(c(runtime$path, dependency_library, .libPaths()))
 external_versions <- c(PopED = "0.7.0", PFIM = "7.0.3")
 installed_external <- vapply(names(external_versions), function(package) {
-  description <- tryCatch(
-    utils::packageDescription(package, lib.loc = dependency_library),
-    error = function(error) NULL
-  )
-  if (is.null(description)) NA_character_ else as.character(description$Version)
+  liber_validation_package_version(package, dependency_library)
 }, character(1))
 if (any(is.na(installed_external) | installed_external != external_versions)) {
   if (!requireNamespace("remotes", quietly = TRUE)) {
@@ -46,11 +42,7 @@ if (any(is.na(installed_external) | installed_external != external_versions)) {
   }
 }
 installed_external <- vapply(names(external_versions), function(package) {
-  description <- tryCatch(
-    utils::packageDescription(package, lib.loc = dependency_library),
-    error = function(error) NULL
-  )
-  if (is.null(description)) NA_character_ else as.character(description$Version)
+  liber_validation_package_version(package, dependency_library)
 }, character(1))
 if (!identical(unname(installed_external), unname(external_versions))) {
   stop(

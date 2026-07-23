@@ -57,8 +57,8 @@ install_one <- function(package) {
                                  shQuote(file.path(root, package))))
     if (!identical(status, 0L)) stop("Unable to install ", package, call. = FALSE)
   }
-  installed <- utils::packageDescription(package, lib.loc = temporary)
-  if (is.null(installed) || !identical(as.character(installed$Version), version)) {
+  installed <- liber_validation_package_version(package, temporary)
+  if (is.na(installed) || !identical(installed, version)) {
     stop("Installed validation package version mismatch for ", package, call. = FALSE)
   }
 }

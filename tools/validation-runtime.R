@@ -4,6 +4,17 @@ liber_validation_manifest <- function(root) {
   jsonlite::fromJSON(path, simplifyVector = FALSE)
 }
 
+liber_validation_package_version <- function(package, library) {
+  description <- suppressWarnings(tryCatch(
+    utils::packageDescription(package, lib.loc = library),
+    error = function(error) NULL
+  ))
+  if (!is.list(description) || length(description[["Version"]]) != 1L) {
+    return(NA_character_)
+  }
+  as.character(description[["Version"]])
+}
+
 liber_validation_git <- function(root) {
   run_git <- function(args) {
     output <- suppressWarnings(system2(
@@ -82,13 +93,10 @@ liber_validation_library <- function(root, packages,
   }
   selected <- normalizePath(candidates[[1L]], winslash = "/", mustWork = TRUE)
   expected <- vapply(manifest$packages[packages], `[[`, character(1), "version")
-  installed <- vapply(packages, function(package) {
-    description <- tryCatch(
-      utils::packageDescription(package, lib.loc = selected),
-      error = function(error) NULL
-    )
-    if (is.null(description)) NA_character_ else as.character(description$Version)
-  }, character(1))
+  installed <- vapply(
+    packages, liber_validation_package_version, character(1),
+    library = selected
+  )
   mismatch <- is.na(installed) | installed != expected
   if (any(mismatch)) {
     detail <- paste0(packages[mismatch], " expected ", expected[mismatch],

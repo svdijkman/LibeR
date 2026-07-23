@@ -48,6 +48,7 @@ test_that("GUI dove assets retain the high-fidelity branded artwork", {
 })
 
 test_that("all LibeRary GUI modes can be inspected without launching a browser", {
+  skip_if_not_installed("DT")
   expect_s3_class(ingest_shiny(launch.browser = NULL), "shiny.appobj")
   expect_s3_class(library_reference_shiny(launch.browser = NULL), "shiny.appobj")
 })

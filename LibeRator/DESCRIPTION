@@ -36,6 +36,7 @@ Suggests:
     LibeRary (>= 0.7.3),
     LibeRties (>= 0.7.1),
     rmarkdown,
+    shinytest2,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Config/testthat/edition: 3

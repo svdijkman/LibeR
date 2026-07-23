@@ -1,6 +1,10 @@
-#if defined(__GNUC__)
-#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#if defined(__GNUC__) && !defined(__clang__)
+// Eigen tracks this optimizer false positive as upstream issue #2304 and
+// suppresses it for GCC in its own test builds.
+#define LIBERALITY_GCC_DIAGNOSTIC(x) _Pragma(#x)
+LIBERALITY_GCC_DIAGNOSTIC(GCC diagnostic ignored "-Wmaybe-uninitialized")
 #endif
+
 #include <Rcpp.h>
 #include <LibeRtAD/eigen_r.hpp>
 
@@ -37,6 +41,10 @@ Eigen::MatrixXd symmetric_inverse(const Eigen::MatrixXd& input,
 }
 
 } // namespace
+
+#if defined(__GNUC__) && !defined(__clang__)
+#undef LIBERALITY_GCC_DIAGNOSTIC
+#endif
 
 // Assemble the expected information for a multivariate normal working model.
 // Dmu has one column per estimated parameter. dV contains the corresponding

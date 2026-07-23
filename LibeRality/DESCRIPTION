@@ -43,6 +43,7 @@ Suggests:
     PFIM (>= 7.0.3),
     PopED (>= 0.7.0),
     rmarkdown,
+    shinytest2,
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 SystemRequirements: C++17

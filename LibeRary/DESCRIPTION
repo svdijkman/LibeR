@@ -32,6 +32,7 @@ Suggests:
     rmarkdown,
     devtools,
     shiny,
+    shinytest2,
     testthat (>= 3.0.0),
     yaml
 VignetteBuilder: knitr

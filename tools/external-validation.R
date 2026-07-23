@@ -23,11 +23,44 @@ dependency_library <- file.path(
 )
 dir.create(dependency_library, recursive = TRUE, showWarnings = FALSE)
 .libPaths(c(runtime$path, dependency_library, .libPaths()))
-if (!all(vapply(c("PopED", "PFIM"), requireNamespace, logical(1), quietly = TRUE))) {
-  if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
-  pak::pkg_install(c("PopED", "PFIM"), lib = dependency_library,
-                   dependencies = c("Depends", "Imports", "LinkingTo"),
-                   upgrade = FALSE)
+external_versions <- c(PopED = "0.7.0", PFIM = "7.0.3")
+installed_external <- vapply(names(external_versions), function(package) {
+  description <- tryCatch(
+    utils::packageDescription(package, lib.loc = dependency_library),
+    error = function(error) NULL
+  )
+  if (is.null(description)) NA_character_ else as.character(description$Version)
+}, character(1))
+if (any(is.na(installed_external) | installed_external != external_versions)) {
+  if (!requireNamespace("remotes", quietly = TRUE)) {
+    utils::install.packages("remotes", lib = dependency_library)
+  }
+  for (package in names(external_versions)) {
+    if (!identical(installed_external[[package]], external_versions[[package]])) {
+      remotes::install_version(
+        package, version = external_versions[[package]],
+        lib = dependency_library, dependencies = NA, upgrade = "never",
+        quiet = TRUE
+      )
+    }
+  }
+}
+installed_external <- vapply(names(external_versions), function(package) {
+  description <- tryCatch(
+    utils::packageDescription(package, lib.loc = dependency_library),
+    error = function(error) NULL
+  )
+  if (is.null(description)) NA_character_ else as.character(description$Version)
+}, character(1))
+if (!identical(unname(installed_external), unname(external_versions))) {
+  stop(
+    "External validation dependency mismatch: ",
+    paste(
+      names(external_versions), "expected", external_versions,
+      "found", installed_external, collapse = "; "
+    ),
+    call. = FALSE
+  )
 }
 Sys.setenv(`_LIBERALITY_RUN_EXTERNAL_VALIDATION_` = "true")
 library("LibeRality", character.only = TRUE)

@@ -1,0 +1,52 @@
+name: Performance problem
+description: Report slow execution, high memory use, or an unresponsive GUI.
+title: "[Performance]: "
+labels: ["performance", "triage"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Compilation or startup
+        - Estimation core
+        - Covariance or uncertainty
+        - Simulation
+        - Local queue
+        - Remote queue
+        - GUI responsiveness
+        - Report or diagnostic generation
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions and hardware
+      placeholder: "Release, packages, R, OS, CPU, RAM and GPU if relevant"
+    validations:
+      required: true
+  - type: textarea
+    id: workload
+    attributes:
+      label: Workload
+      description: Include subjects, records, ETAs, states, method, iterations/samples, parallel workers, and seed.
+    validations:
+      required: true
+  - type: textarea
+    id: timings
+    attributes:
+      label: Measurements
+      description: Distinguish cold end-to-end, warm end-to-end, core time, peak memory, and GUI delay where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: support
+    attributes:
+      label: Redacted support bundle
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Data-safety confirmation
+      options:
+        - label: This report contains no patient-identifying data, credentials, or restricted publications.
+          required: true

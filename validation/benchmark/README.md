@@ -40,6 +40,12 @@ Profiles are:
 - `smoke`: harness check only (8 subjects, 4 samples per subject).
 - `quick`: development comparison (20 subjects, 7 samples per subject).
 - `standard`: more stable comparison (100 subjects, 7 samples per subject).
+- `large`: scalability profile (1,000 subjects, 7 samples per subject).
+- `very-large`: stress profile (5,000 subjects, 4 samples per subject).
+
+The large profiles additionally make worker-payload size, result-payload size,
+startup time, and peak R-heap use visible. They are opt-in and are not run on
+every commit.
 
 The default deterministic method set is FO, FOCE, FOCEI, and LAPLACE. Use
 `--methods=all` to add ITS, IMP, and SAEM, or provide a comma-separated subset.
@@ -74,7 +80,8 @@ Each result directory contains:
 
 - `REPORT.md`: concise paired timing report and interpretation limits.
 - `raw-results.csv`: every warm-up and measured result, timing phase, status,
-  estimates, convergence result, and simulation checksum.
+  estimates, convergence result, simulation checksum, payload sizes, and peak
+  R-heap use.
 - `summary.csv`: median/minimum/maximum measurements by engine and workload.
 - `paired-timing-comparison.csv`: NONMEM/LibeRation timing ratios.
 - `parameter-estimates.csv`: median estimates by method and engine.

@@ -1,0 +1,45 @@
+name: nightly-hardening
+
+on:
+  schedule:
+    - cron: "41 2 * * 3"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  large-study:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::jsonlite
+            any::openssl
+            any::testthat
+          dependencies: 'c("Depends", "Imports", "LinkingTo")'
+          install-pandoc: false
+      - name: Install package dependency graph
+        run: Rscript tools/install-local-stack.R
+      - name: Create exact validation library
+        run: Rscript tools/create-validation-library.R --source
+      - name: Run 1,000-subject cold workflow
+        run: >-
+          Rscript validation/benchmark/benchmark.R
+          --profile=large --methods=FO --engines=LIBERATION
+          --no-covariance --no-simulation --repeats=1 --warmups=0
+          --scenario=iv-bolus --output=validation/benchmark/results/nightly-large
+      - name: Enforce scale ceilings and complete measurements
+        run: >-
+          Rscript validation/benchmark/scale-gate.R
+          validation/benchmark/results/nightly-large/raw-results.csv
+      - name: Upload scale evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: nightly-large-${{ github.sha }}
+          path: validation/benchmark/results/nightly-large

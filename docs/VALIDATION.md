@@ -3,6 +3,12 @@
 Validation is layered so a defect cannot hide behind agreement between two
 paths sharing the same implementation.
 
+The versioned ecosystem capability declaration is installed at
+`LibeRation/inst/ecosystem/support-matrix.csv` and exposed through
+`LibeRation::liber_support_matrix()`. It distinguishes independently
+**validated**, internally **verified**, and **experimental** capabilities.
+`tools/support-matrix-check.R` is an ordinary CI gate.
+
 Published performance results are now **correctness gated**. A timing record is
 publishable only when `nm_validation_gate()` passes the declared objective,
 parameter, ETA, and prediction tolerances and at least three post-warm-up timing
@@ -52,6 +58,10 @@ largest relative Frobenius difference was `3.67e-11`, and the largest RSE
 difference was `3.79e-9` percentage points. LibeRality, PopED, and PFIM all
 selected the `0.1 h` candidate and agreed on the D-optimal log determinant to
 better than `3.1e-10`.
+
+The first hosted Linux PopED/PFIM workflow for the 0.8.3 consolidation also
+passed on 23 July 2026 and retained its matrices, comparisons, timings, and
+provenance as a GitHub Actions artifact.
 
 NONMEM tests are opt-in and skip with an explicit reason when `execute` is not
 available. Test fixtures contain generated data and model code, not proprietary

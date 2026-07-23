@@ -1,14 +1,9 @@
 citHeader("To cite LibeRality in publications, use:")
 
-citEntry(
-  entry = "Manual",
+bibentry(
+  bibtype = "Manual",
   title = "LibeRality: Model-Informed Optimal Clinical Trial Design",
   author = person("Sven C.", "van Dijkman"),
   year = "2026",
-  note = "R package version 0.2.1",
-  textVersion = paste(
-    "van Dijkman SC (2026).",
-    "LibeRality: Model-Informed Optimal Clinical Trial Design.",
-    "R package version 0.2.1."
-  )
+  note = paste("R package version", meta$Version)
 )

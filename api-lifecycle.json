@@ -9,7 +9,7 @@
   },
   "stable_contracts": {
     "LibeRtAD": ["ad_compile", "ad_engine_info", "ad_ir", "ad_load_tape"],
-    "LibeRation": ["nm_dataset", "nm_est", "nm_model", "nm_model_from_contract", "nm_model_to_contract", "nm_simulate", "nm_support_matrix"],
+    "LibeRation": ["liber_support_bundle", "liber_support_matrix", "nm_dataset", "nm_est", "nm_model", "nm_model_from_contract", "nm_model_to_contract", "nm_simulate", "nm_support_matrix"],
     "LibeRary": ["library_catalog_root", "library_get", "library_list", "library_model", "library_search", "library_validate"],
     "LibeRator": ["lator_assess", "lator_patient_add_event", "lator_patient_get", "lator_patient_new", "lator_patient_save", "lator_regimen_candidates", "lator_regimen_optimise", "lator_regimen_predict"],
     "LibeRality": ["lity_design", "lity_evaluate", "lity_optimise", "lity_to_liberation", "lity_validate"],

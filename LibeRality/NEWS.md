@@ -1,3 +1,9 @@
+# LibeRality 0.2.3
+
+- Publishes LibeRality in the LibeR 0.9 research-beta compatibility set with
+  PopED/PFIM-matched capabilities separated from internally verified advanced
+  design criteria.
+
 # LibeRality 0.2.2
 
 - Restores the established high-resolution LibeR dove and aligns the workbench

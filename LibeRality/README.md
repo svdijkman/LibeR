@@ -9,6 +9,11 @@ The package is intended for research and teaching. Its outputs support design
 decisions; they do not replace protocol, statistical, ethics, regulatory, or
 clinical review.
 
+LibeRality is distributed as part of the LibeR 0.9 research beta. Use the
+[ecosystem installer](../docs/INSTALL.md) and inspect
+`LibeRation::liber_support_matrix("LibeRality")` to see which design paths have
+matched PopED/PFIM and which currently have internal verification only.
+
 ## What it covers
 
 - Exact LibeRation/CppAD prediction sensitivities and native Eigen information

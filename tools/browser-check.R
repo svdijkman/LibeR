@@ -1,12 +1,20 @@
 root <- normalizePath(getwd(), winslash = "/", mustWork = TRUE)
-if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
+local_library <- Sys.getenv(
+  "LIBER_INSTALL_LIBRARY", file.path(root, ".testlib-browser")
+)
+dir.create(local_library, recursive = TRUE, showWarnings = FALSE)
+.libPaths(unique(c(local_library, .libPaths())))
+Sys.setenv(
+  LIBER_INSTALL_LIBRARY = local_library,
+  R_LIBS = paste(.libPaths(), collapse = .Platform$path.sep)
+)
 packages <- c("LibeRtAD", "LibeRation", "LibeRary", "LibeRator", "LibeRality", "LibeRties")
 if (!identical(tolower(Sys.getenv("LIBER_SKIP_INSTALL")), "true")) {
-  pak::pkg_install(
-    paste0("./", packages),
-    dependencies = c("Depends", "Imports", "LinkingTo"),
-    upgrade = FALSE
+  status <- system2(
+    file.path(R.home("bin"), "Rscript"),
+    file.path(root, "tools", "install-local-stack.R")
   )
+  if (!identical(status, 0L)) stop("Unable to install local package stack.")
 }
 required <- c("testthat", "shinytest2", "DT")
 missing <- required[!vapply(required, requireNamespace, logical(1), quietly = TRUE)]

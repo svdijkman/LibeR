@@ -1,0 +1,34 @@
+name: Feature request
+description: Propose a focused user need after checking the support matrix and roadmap.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Describe the workflow or scientific need rather than only the proposed control or algorithm.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation reference
+      description: Identify an analytic result, external tool, dataset, publication, or recovery design that could validate the addition.
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Intended use
+      options:
+        - Research or teaching
+        - Workflow convenience
+        - Performance or scalability
+        - Future clinical or regulatory scope
+    validations:
+      required: true

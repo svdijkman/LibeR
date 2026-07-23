@@ -1,0 +1,62 @@
+name: Numerical disagreement
+description: Report a discrepancy with NONMEM, PopED, PFIM, an analytic solution, or another independent implementation.
+title: "[Numerics]: "
+labels: ["numerical", "validation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Numerical disagreements receive priority. A faster result is not valid if it solves a materially different problem.
+  - type: dropdown
+    id: reference
+    attributes:
+      label: Independent reference
+      options:
+        - NONMEM
+        - PopED
+        - PFIM
+        - Closed-form or analytic calculation
+        - Published reference implementation
+        - Other independent software
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: LibeR and reference versions
+    validations:
+      required: true
+  - type: textarea
+    id: model
+    attributes:
+      label: Model and data design
+      description: Describe ADVAN/TRANS or solver, parameterisation, error model, dosing, sampling, subject count, seed, and method.
+    validations:
+      required: true
+  - type: textarea
+    id: comparison
+    attributes:
+      label: Quantitative comparison
+      description: Report objectives, estimates, gradients, predictions, uncertainty, and tolerances as applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal generated reproduction
+      render: r
+    validations:
+      required: true
+  - type: textarea
+    id: support
+    attributes:
+      label: Redacted support bundle
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: The compared models use equivalent parameterisations, likelihoods, datasets, seeds, and stopping criteria, or I have described every known difference.
+          required: true
+        - label: This report contains no patient-identifying data, credentials, or restricted publications.
+          required: true

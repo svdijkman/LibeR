@@ -61,11 +61,13 @@ probe and refuses a production start when the boundary is incomplete.
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md),
 [docs/VALIDATION.md](docs/VALIDATION.md), [docs/REMOTE.md](docs/REMOTE.md),
-[SECURITY.md](SECURITY.md), and [docs/RELEASE.md](docs/RELEASE.md).
+[SECURITY.md](SECURITY.md), [docs/RELEASE.md](docs/RELEASE.md), and the
+[0.9 research-beta programme](docs/RESEARCH-BETA.md).
 
 ## Install
 
-Use R 4.1 or newer and a C++17 toolchain. LibeRtAD bundles the exact official
+Use the [compatibility-checked installer](docs/INSTALL.md) for a released
+ecosystem set. Use R 4.1 or newer and a C++17 toolchain. LibeRtAD bundles the exact official
 CppAD 20260000.0 and Eigen 5.0.1 header releases, so neither needs to be
 installed separately. After installing the other declared R dependencies, install the packages in dependency order
 from the repository root:
@@ -79,7 +81,26 @@ R CMD INSTALL LibeRality
 R CMD INSTALL LibeRties
 ```
 
+After installation, verify the exact package set and inspect the declared
+scientific evidence tiers:
+
+```r
+LibeRation::liber_doctor(strict = TRUE)
+LibeRation::liber_support_matrix()
+```
+
+Create a redacted diagnostic archive for a bug report with
+`LibeRation::liber_support_bundle()`.
+
 ## Quick start
+
+Three runnable teaching workflows are installed with LibeRation: oral
+population PK simulation/FOCEI estimation, intermittent-infusion steady state,
+and an ODE-linked PK/effect-compartment model. Locate them with:
+
+```r
+system.file("examples", package = "LibeRation")
+```
 
 ```r
 library(LibeRation)

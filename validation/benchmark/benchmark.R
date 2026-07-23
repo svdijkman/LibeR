@@ -42,10 +42,17 @@ profiles <- list(
                saem_iterations = 60L, saem_burn = 20L),
   standard = list(subjects = 100L, times = c(0.5, 1, 2, 4, 8, 12, 24), simulations = 100L,
                   maxit = 200L, eta_maxit = 150L, imp_samples = 200L,
-                  saem_iterations = 200L, saem_burn = 60L)
+                  saem_iterations = 200L, saem_burn = 60L),
+  large = list(subjects = 1000L, times = c(0.5, 1, 2, 4, 8, 12, 24),
+               simulations = 100L, maxit = 100L, eta_maxit = 120L,
+               imp_samples = 100L, saem_iterations = 100L, saem_burn = 30L),
+  `very-large` = list(subjects = 5000L, times = c(1, 4, 12, 24),
+                      simulations = 25L, maxit = 50L, eta_maxit = 80L,
+                      imp_samples = 50L, saem_iterations = 60L, saem_burn = 20L)
 )
 if (!profile_name %in% names(profiles)) {
-  stop("Unknown profile. Use smoke, quick, or standard.", call. = FALSE)
+  stop("Unknown profile. Use smoke, quick, standard, large, or very-large.",
+       call. = FALSE)
 }
 profile <- profiles[[profile_name]]
 profile$subjects <- as.integer(option_value("subjects", profile$subjects))
@@ -336,6 +343,8 @@ empty_row <- function(engine, workload, method, repeat_index, measured) {
     status = "error", error = "", process_wall_seconds = NA_real_,
     worker_total_seconds = NA_real_, startup_seconds = NA_real_,
     core_seconds = NA_real_, fit_seconds = NA_real_, covariance_seconds = NA_real_,
+    peak_r_heap_mb = NA_real_, input_payload_bytes = NA_real_,
+    result_payload_bytes = NA_real_,
     process_cpu_seconds = NA_real_, timing_source = "", objective = NA_real_,
     convergence = NA_integer_, theta1 = NA_real_, theta2 = NA_real_,
     omega1 = NA_real_, sigma1 = NA_real_, output_rows = NA_integer_,
@@ -402,6 +411,7 @@ run_liberation <- function(workload, method, repeat_index, measured) {
   summary_path <- file.path(directory, "summary.rds")
   saveRDS(config, config_path, version = 3L)
   row <- empty_row("LibeRation", workload, method, repeat_index, measured)
+  row$input_payload_bytes <- unname(file.info(config_path)$size)
   started <- elapsed()
   status <- system2(
     file.path(R.home("bin"), if (.Platform$OS.type == "windows") "Rscript.exe" else "Rscript"),
@@ -421,6 +431,8 @@ run_liberation <- function(workload, method, repeat_index, measured) {
     row$core_seconds <- safe_number(metrics$engine_total_seconds)
     row$fit_seconds <- safe_number(metrics$fit_seconds)
     row$covariance_seconds <- safe_number(metrics$covariance_seconds)
+    row$peak_r_heap_mb <- safe_number(metrics$peak_r_heap_mb)
+    row$result_payload_bytes <- safe_number(file.info(summary_path)$size)
     row$timing_source <- "LibeRation elapsed time inside fresh R process"
     row$objective <- safe_number(summary$objective)
     row$convergence <- as.integer(summary$convergence %||% NA_integer_)
@@ -552,6 +564,9 @@ summaries <- lapply(split(measured, interaction(
     ),
     median_fit_seconds = stats::median(frame$fit_seconds, na.rm = TRUE),
     median_covariance_seconds = stats::median(frame$covariance_seconds, na.rm = TRUE),
+    median_peak_r_heap_mb = stats::median(frame$peak_r_heap_mb, na.rm = TRUE),
+    median_input_payload_mb = stats::median(frame$input_payload_bytes, na.rm = TRUE) / 1024^2,
+    median_result_payload_mb = stats::median(frame$result_payload_bytes, na.rm = TRUE) / 1024^2,
     optimizer_backend = paste(unique(frame$optimizer_backend[nzchar(frame$optimizer_backend)]),
                               collapse = "+"),
     objective_backend = paste(unique(frame$objective_backend[nzchar(frame$objective_backend)]),

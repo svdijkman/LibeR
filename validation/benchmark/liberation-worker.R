@@ -10,6 +10,7 @@ metrics_path <- normalizePath(args[[2L]], winslash = "/", mustWork = FALSE)
 summary_path <- normalizePath(args[[3L]], winslash = "/", mustWork = FALSE)
 
 elapsed <- function() unname(proc.time()[["elapsed"]])
+invisible(gc(reset = TRUE))
 process_started <- elapsed()
 config <- readRDS(config_path)
 if (length(config$library_paths)) {
@@ -121,7 +122,8 @@ metrics <- list(
   worker_total_seconds = as.numeric(elapsed() - process_started),
   fit_seconds = as.numeric(summary$fit_seconds %||% NA_real_),
   covariance_seconds = as.numeric(summary$covariance_seconds %||% NA_real_),
-  engine_total_seconds = as.numeric(summary$engine_total_seconds %||% core_seconds)
+  engine_total_seconds = as.numeric(summary$engine_total_seconds %||% core_seconds),
+  peak_r_heap_mb = as.numeric(sum(gc()[, 6L], na.rm = TRUE))
 )
 saveRDS(metrics, metrics_path, version = 3L)
 

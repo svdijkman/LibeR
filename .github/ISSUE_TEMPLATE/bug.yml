@@ -1,0 +1,58 @@
+name: Bug report
+description: Report a reproducible defect in a LibeR package or workflow.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing LibeR. Do not upload patient data, credentials, private publications, or an unredacted workspace.
+  - type: dropdown
+    id: package
+    attributes:
+      label: Package
+      options:
+        - LibeRtAD
+        - LibeRation
+        - LibeRties
+        - LibeRary
+        - LibeRator
+        - LibeRality
+        - Cross-package ecosystem
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Paste the release and package versions from `LibeRation::liber_doctor()`.
+      placeholder: "0.9.0-research-beta.1; LibeRation 0.9.0; R 4.6.0; Windows"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the observed and expected behaviour.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Use generated or fully anonymised data. Include the seed and estimation/simulation method where relevant.
+      render: r
+    validations:
+      required: true
+  - type: textarea
+    id: support
+    attributes:
+      label: Redacted support bundle
+      description: Drag the archive created by `LibeRation::liber_support_bundle()` here, or explain why it cannot be provided.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Data-safety confirmation
+      options:
+        - label: I have checked that this report contains no patient-identifying data, credentials, or restricted publications.
+          required: true

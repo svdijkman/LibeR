@@ -6,6 +6,11 @@ benchmark outputs, user workspaces, and deployment bundles are generated
 artefacts and are not source. `ecosystem.json` pins the package versions and
 wire/workspace contracts released together.
 
+The six individual package repositories are distribution mirrors. Their
+default branches and tags must be generated from the corresponding monorepo
+subdirectories; package-specific changes must never be committed only to a
+mirror.
+
 Every release must:
 
 1. pass package checks on Windows, Linux, and macOS;
@@ -16,6 +21,8 @@ Every release must:
 6. regenerate help, vignettes, manuals, source/binary archives, checksums, and
    the compatibility manifest; and
 7. be tagged from the exact source commit used to build the artefacts.
+8. validate and publish the ecosystem support matrix; and
+9. synchronize the six package mirrors from the tagged monorepo source.
 
 Use `Rscript tools/release.R` from a clean checkout. It refuses dirty source or
 a version mismatch between package DESCRIPTION files and `ecosystem.json`,
@@ -26,6 +33,18 @@ SHA-256 checksums. `LIBER_RELEASE_ALLOW_DIRTY=true` is available only for a
 non-publishable development build and is recorded as such. Release notes must
 name skipped external tools and must not promote experimental smoke tests to
 reference validation.
+
+After tagging and publishing the consolidated release, dry-run the mirror
+synchronisation with `Rscript tools/sync-package-mirrors.R`. Publish the exact
+package sources, tags, and per-package release assets with:
+
+```text
+Rscript tools/sync-package-mirrors.R --push --publish-releases
+```
+
+The command refuses a dirty tracked monorepo or an existing package tag. It
+preserves repository-specific `.github` metadata while replacing every package
+source file from the corresponding tagged monorepo subdirectory.
 
 Scientific validation uses a separate immutable library named from the
 consolidated release, Git commit, and dirty-source hash:

@@ -1,0 +1,43 @@
+name: GUI problem
+description: Report a layout, accessibility, responsiveness, or interaction defect.
+title: "[GUI]: "
+labels: ["gui", "triage"]
+body:
+  - type: dropdown
+    id: package
+    attributes:
+      label: GUI
+      options:
+        - LibeRtAD
+        - LibeRation
+        - LibeRties admin
+        - LibeRary catalogue
+        - LibeRary ingest
+        - LibeRator
+        - LibeRality
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Version, browser, operating system, and display size
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Interaction and expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or recording
+      description: Remove names, patient information, paths containing usernames, and private model content before attaching.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Data-safety confirmation
+      options:
+        - label: All visual material has been checked for patient data, credentials, personal paths, and private publications.
+          required: true

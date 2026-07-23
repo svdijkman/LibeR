@@ -18,13 +18,21 @@ jobs:
           use-public-rspm: true
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: |
-            any::pak
+          packages: |
             any::testthat
+            any::jsonlite
+            any::openssl
+            any::knitr
+            any::rmarkdown
+            any::sessioninfo
+          dependencies: 'c("Depends", "Imports", "LinkingTo")'
+          install-pandoc: true
+          install-quarto: false
       - name: Install source dependency graph
         run: >-
           Rscript -e "pak::pkg_install(c('./LibeRtAD', './LibeRation',
-          './LibeRality'), dependencies = TRUE, upgrade = FALSE)"
+          './LibeRality'), dependencies = c('Depends', 'Imports', 'LinkingTo'),
+          upgrade = FALSE)"
       - name: Validate exact ecosystem build against external engines
         env:
           LIBERALITY_EXTERNAL_REPETITIONS: "3"

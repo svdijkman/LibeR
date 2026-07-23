@@ -2,7 +2,11 @@ packages <- c("LibeRtAD", "LibeRation", "LibeRary", "LibeRator", "LibeRality", "
 root <- normalizePath(getwd(), winslash = "/", mustWork = TRUE)
 if (!identical(tolower(Sys.getenv("LIBER_SKIP_INSTALL")), "true")) {
   if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
-  pak::pkg_install(file.path(root, packages), dependencies = TRUE, upgrade = FALSE)
+  pak::pkg_install(
+    paste0("./", packages),
+    dependencies = c("Depends", "Imports", "LinkingTo"),
+    upgrade = FALSE
+  )
 }
 
 library(LibeRation)

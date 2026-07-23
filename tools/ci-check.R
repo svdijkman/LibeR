@@ -4,8 +4,12 @@ root <- normalizePath(getwd(), winslash = "/", mustWork = TRUE)
 if (!requireNamespace("pak", quietly = TRUE)) install.packages("pak")
 if (!requireNamespace("rcmdcheck", quietly = TRUE)) install.packages("rcmdcheck")
 
-local <- file.path(root, packages)
-pak::pkg_install(local, dependencies = TRUE, upgrade = FALSE)
+local <- paste0("./", packages)
+pak::pkg_install(
+  local,
+  dependencies = c("Depends", "Imports", "LinkingTo"),
+  upgrade = FALSE
+)
 
 failures <- list()
 for (package in packages) {

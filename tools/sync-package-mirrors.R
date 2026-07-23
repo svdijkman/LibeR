@@ -72,14 +72,41 @@ for (package in packages) {
   )
   if (length(remove)) unlink(remove, recursive = TRUE, force = TRUE)
 
-  source <- file.path(root, package)
-  entries <- list.files(source, all.files = TRUE, no.. = TRUE, full.names = TRUE)
-  copied <- file.copy(
-    entries, clone, recursive = TRUE, copy.mode = TRUE, copy.date = TRUE
+  tracked <- run(
+    "git", c("ls-files", "--", package), root, capture = TRUE
   )
-  if (!all(copied)) {
-    stop("Unable to copy ", package, " into its mirror staging clone.",
+  tracked <- tracked[nzchar(tracked)]
+  if (!length(tracked)) {
+    stop("No tracked source files were found for ", package, ".",
          call. = FALSE)
+  }
+  package_prefix <- paste0(package, "/")
+  if (any(!startsWith(tracked, package_prefix))) {
+    stop("Unexpected tracked path while staging ", package, ".", call. = FALSE)
+  }
+  relative <- substring(tracked, nchar(package_prefix) + 1L)
+  generated <- relative[
+    grepl(
+      "(^|/)src/.*\\.(o|obj|so|dll|a|def)$|(^|/)src/symbols\\.rds$",
+      relative, ignore.case = TRUE
+    )
+  ]
+  if (length(generated)) {
+    stop(
+      "Tracked generated native artifacts are not publishable for ", package,
+      ": ", paste(generated, collapse = ", "), call. = FALSE
+    )
+  }
+  for (index in seq_along(tracked)) {
+    from <- file.path(root, tracked[[index]])
+    to <- file.path(clone, relative[[index]])
+    dir.create(dirname(to), recursive = TRUE, showWarnings = FALSE)
+    if (!file.copy(
+      from, to, overwrite = TRUE, copy.mode = TRUE, copy.date = TRUE
+    )) {
+      stop("Unable to copy ", tracked[[index]], " into the mirror clone.",
+           call. = FALSE)
+    }
   }
   run("git", c("add", "-A"), clone)
   changes <- run("git", c("status", "--porcelain=v1"), clone, capture = TRUE)
@@ -111,18 +138,28 @@ for (package in packages) {
       "git", c("ls-remote", "--tags", "origin", paste0("refs/tags/", tag)),
       clone, capture = TRUE
     )
-    if (length(remote_tag)) {
-      stop("Remote tag already exists for ", package, ": ", tag,
-           call. = FALSE)
+    tag_exists <- length(remote_tag) > 0L
+    if (tag_exists) {
+      tagged_commit <- trimws(
+        run("git", c("rev-list", "-n", "1", tag), clone, capture = TRUE)[[1L]]
+      )
+      if (!identical(tagged_commit, mirror_commit)) {
+        stop(
+          "Remote tag ", tag, " for ", package,
+          " points to a different source commit.", call. = FALSE
+        )
+      }
+      message("  existing tag ", tag, " already matches the mirror source")
+    } else {
+      run(
+        "git", c("tag", "-a", tag, "-m",
+                 shQuote(paste0(package, " ", versions[[package]]))),
+        clone
+      )
+      run("git", c("push", "origin", tag), clone)
     }
-    run(
-      "git", c("tag", "-a", tag, "-m",
-               shQuote(paste0(package, " ", versions[[package]]))),
-      clone
-    )
-    run("git", c("push", "origin", tag), clone)
 
-    if (publish) {
+    if (publish && !tag_exists) {
       release_dir <- file.path(root, "releases", manifest$release)
       assets <- file.path(
         release_dir,

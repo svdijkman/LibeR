@@ -1,0 +1,7 @@
+src/*.o
+src/*.obj
+src/*.so
+src/*.dll
+src/*.a
+src/*.def
+src/symbols.rds

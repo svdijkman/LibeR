@@ -1,3 +1,9 @@
+# LibeRality 0.2.4
+
+- Removes generated native build products from the standalone source mirror
+  and adds cross-platform publication safeguards after Linux deployment
+  exposed an incompatible Windows object file.
+
 # LibeRality 0.2.3
 
 - Publishes LibeRality in the LibeR 0.9 research-beta compatibility set with

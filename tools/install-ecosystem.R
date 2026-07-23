@@ -1,11 +1,11 @@
 # Install one exact LibeR compatibility set from a consolidated GitHub release.
 #
 # From a trusted R session:
-# source("https://raw.githubusercontent.com/svdijkman/LibeR/v0.9.0-research-beta.1/tools/install-ecosystem.R")
+# source("https://raw.githubusercontent.com/svdijkman/LibeR/v0.9.0-research-beta.2/tools/install-ecosystem.R")
 # liber_install()
 
 liber_install <- function(
-    tag = "v0.9.0-research-beta.1",
+    tag = "v0.9.0-research-beta.2",
     library = .libPaths()[[1L]],
     binary = FALSE,
     repository = "svdijkman/LibeR") {

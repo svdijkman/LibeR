@@ -8,7 +8,7 @@ versions from different release dates.
 Run the installer from the release tag you intend to install:
 
 ```r
-source("https://raw.githubusercontent.com/svdijkman/LibeR/v0.9.0-research-beta.2/tools/install-ecosystem.R")
+source("https://raw.githubusercontent.com/svdijkman/LibeR/v0.9.0-research-beta.3/tools/install-ecosystem.R")
 liber_install()
 ```
 

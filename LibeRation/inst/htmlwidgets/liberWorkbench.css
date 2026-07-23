@@ -10,7 +10,7 @@
   box-sizing: border-box;
   width: 100%; height: 100%; min-height: 0;
   display: grid; grid-template-rows: 48px 42px auto minmax(0, 1fr) 25px;
-  overflow: hidden; font-family: "Segoe UI", Inter, Arial, sans-serif; font-size: 12px;
+  overflow: hidden; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px;
   color: var(--lw-text); background: var(--lw-bg);
 }
 .lw-legacy-shell * { box-sizing: border-box; }
@@ -221,4 +221,17 @@
 @media (max-width: 860px) {
   .lw-legacy-shell { min-height: 0; overflow: hidden; }.lw-page-host { overflow: auto; }.lw-home-grid { display: flex; flex-direction: column; }.lw-project-sidebar, .lw-center-panel, .lw-results-panel { min-height: 420px; height: auto; }.lw-editor-grid, .lw-editor-grid-three, .lw-editor-grid-four, .lw-parameter-grid, .lw-diagnostic-grid, .lw-form-grid, .lw-form-grid-two, .lw-choice-cards, .lw-vpc-strata-grid, .lw-comparison-plot-grid { grid-template-columns: 1fr; }.lw-data-page { grid-template-columns: 1fr; }.lw-data-controls { max-height: none; }.lw-app-header > div:first-child span, .lw-workspace-path { display: none; }
   .lw-diagram-main,.lw-report-designer,.lw-ai-settings-grid { grid-template-columns:1fr; }.lw-diagram-inspector { border-left:0; border-top:1px solid var(--lw-line); }.lw-report-designer-toolbar { grid-template-columns:1fr 1fr; }.lw-report-palette { flex-direction:row; flex-wrap:wrap; }.lw-report-block { grid-template-columns:30px minmax(100px,1fr) auto auto; }.lw-report-block > select,.lw-report-source { grid-column:2 / -1; }
+}
+
+.lw-legacy-shell button:focus-visible,
+.lw-legacy-shell select:focus-visible,
+.lw-legacy-shell input:focus-visible,
+.lw-legacy-shell textarea:focus-visible,
+.lw-legacy-shell [tabindex]:focus-visible {
+  outline: 2px solid var(--lw-blue-bright);
+  outline-offset: 2px;
+}
+
+.lw-theme-toggle input:focus-visible + i {
+  outline-color: #fff;
 }

@@ -57,6 +57,8 @@ llm_role_control <- function(role, title, choices, selected) {
   )
 }
 
+package_version <- as.character(utils::packageVersion("LibeRary"))
+
 ui <- fluidPage(
   tags$head(
     tags$title("LibeRary"),
@@ -65,11 +67,16 @@ ui <- fluidPage(
       (function() {
         function boot() {
           try {
-            if (localStorage.getItem('liberaryIngestDarkTheme') !== '0') {
-              document.body.classList.add('theme-dark');
+            var shared = localStorage.getItem('liber.theme');
+            var legacy = localStorage.getItem('liberaryIngestDarkTheme');
+            var dark = shared === 'dark' || (shared !== 'light' && legacy === '1');
+            if (shared !== 'dark' && shared !== 'light' && legacy !== '1' && legacy !== '0') {
+              dark = matchMedia('(prefers-color-scheme: dark)').matches;
             }
+            document.documentElement.setAttribute('data-liber-theme', dark ? 'dark' : 'light');
+            if (dark) document.body.classList.add('theme-dark');
           } catch (e) {
-            document.body.classList.add('theme-dark');
+            if (matchMedia('(prefers-color-scheme: dark)').matches) document.body.classList.add('theme-dark');
           }
         }
         if (document.body) boot();
@@ -261,6 +268,16 @@ ui <- fluidPage(
     }
     .ingest-brand { display: flex; align-items: center; gap: 10px; }
     .ingest-brand img { width: 34px; height: 34px; }
+    .ingest-header-actions { display: flex; align-items: center; gap: 16px; }
+    .ingest-version-pill {
+      padding: 3px 9px;
+      border: 1px solid var(--ingest-border);
+      border-radius: 999px;
+      color: var(--ingest-muted);
+      background: var(--ingest-surface-2);
+      font-size: 11px;
+      font-weight: 700;
+    }
     .theme-toggle-wrap {
       display: flex;
       align-items: center;
@@ -386,6 +403,31 @@ ui <- fluidPage(
     @media (max-width: 1050px) {
       .llm-role-controls { grid-template-columns: 1fr 1fr 34px; }
     }
+    .ingest-settings-group {
+      margin: 0 0 10px;
+      padding: 0 10px 8px;
+      border: 1px solid var(--ingest-border);
+      border-radius: 7px;
+      background: var(--ingest-surface);
+    }
+    .ingest-settings-group > summary {
+      margin: 0 -10px 8px;
+      padding: 9px 10px;
+      color: var(--ingest-text);
+      background: var(--ingest-surface-2);
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: 650;
+    }
+    .ingest-settings-group[open] > summary {
+      border-bottom: 1px solid var(--ingest-border);
+      border-radius: 7px 7px 0 0;
+    }
+    body button:focus-visible, body a:focus-visible, body select:focus-visible,
+    body input:focus-visible, body textarea:focus-visible, body summary:focus-visible {
+      outline: 2px solid var(--ingest-accent);
+      outline-offset: 2px;
+    }
   ")),
     tags$script(src = "ingest-gui.js")
   ),
@@ -394,13 +436,17 @@ ui <- fluidPage(
     tags$div(class = "ingest-brand", tags$img(src = "favicon.svg", alt = "LibeR"),
              tags$h2("LibeRary - literature pipeline")),
     tags$div(
-      class = "theme-toggle-wrap",
-      tags$span(class = "theme-toggle-label", id = "theme_label", "Dark"),
-      tags$label(
-        class = "theme-switch",
-        `aria-label` = "Toggle dark theme",
-        tags$input(type = "checkbox", id = "theme_toggle", checked = NA),
-        tags$span(class = "theme-slider")
+      class = "ingest-header-actions",
+      tags$span(class = "ingest-version-pill", paste0("v", package_version)),
+      tags$div(
+        class = "theme-toggle-wrap",
+        tags$span(class = "theme-toggle-label", id = "theme_label", "Dark"),
+        tags$label(
+          class = "theme-switch",
+          `aria-label` = "Toggle dark theme",
+          tags$input(type = "checkbox", id = "theme_toggle", checked = NA),
+          tags$span(class = "theme-slider")
+        )
       )
     )
   ),
@@ -409,44 +455,55 @@ ui <- fluidPage(
       4,
       wellPanel(
         h4("Settings"),
-        textInput("entrez_email", "NCBI / Unpaywall email", value = default_entrez_email),
-        passwordInput(
-          "entrez_api_key",
-          "NCBI API key (optional; this session only)",
-          value = default_entrez_api_key,
-          placeholder = "Not required at 3 requests/second or less"
+        tags$details(
+          class = "ingest-settings-group", open = "open",
+          tags$summary("Connection & storage"),
+          textInput("entrez_email", "NCBI / Unpaywall email", value = default_entrez_email),
+          passwordInput(
+            "entrez_api_key",
+            "NCBI API key (optional; this session only)",
+            value = default_entrez_api_key,
+            placeholder = "Not required at 3 requests/second or less"
+          ),
+          helpText("Email and non-secret settings persist automatically. The API key is read from ENTREZ_KEY or entered for this session; it is never written to the YAML file."),
+          textInput("config_path", "Config YAML", value = default_config_path),
+          textInput("data_dir", "Persistent data directory", value = default_data_dir)
         ),
-        helpText("Email and non-secret settings persist automatically. The API key is read from ENTREZ_KEY or entered for this session; it is never written to the YAML file."),
-        textInput("config_path", "Config YAML", value = default_config_path),
-        textInput("data_dir", "Persistent data directory", value = default_data_dir),
-        llm_role_control(
+        tags$details(
+          class = "ingest-settings-group", open = "open",
+          tags$summary("Language models"),
+          llm_role_control(
           "triage", "Abstract triage",
           c("Same as indexing" = "same", provider_choices),
           default_cfg$llm$triage$provider %||% "same"
-        ),
-        llm_role_control(
+          ),
+          llm_role_control(
           "indexing", "Investigation & synthesis", provider_choices,
           default_cfg$llm$indexing$provider %||% "ollama"
-        ),
-        llm_role_control(
+          ),
+          llm_role_control(
           "vision", "PDF extraction & verification",
           c("Same as investigation" = "same", provider_choices),
           default_cfg$llm$vision$provider %||% "same"
-        ),
-        llm_role_control(
+          ),
+          llm_role_control(
           "adjudication", "Discrepancy adjudication",
           c("Same as text extraction" = "same", provider_choices),
           default_cfg$llm$adjudication$provider %||% "same"
-        ),
-        llm_role_control(
+          ),
+          llm_role_control(
           "assessment", "Skeptical evidence review",
           c("Same as indexing" = "same", provider_choices),
           default_cfg$llm$assessment$provider %||% "same"
+          ),
+          actionButton("refresh_models", "Refresh available models", class = "btn-default btn-sm"),
+          actionButton("save_settings", "Save settings", class = "btn-default btn-sm"),
+          span(class = "text-muted", style = "display:block;margin-top:6px;", "Settings are also saved automatically before each job.")
         ),
-        actionButton("refresh_models", "Refresh available models", class = "btn-default btn-sm"),
-        actionButton("save_settings", "Save settings", class = "btn-default btn-sm"),
-        span(class = "text-muted", style = "display:block;margin-top:6px;", "Settings are also saved automatically before each job."),
-        fluidRow(
+        tags$details(
+          class = "ingest-settings-group",
+          tags$summary("Runtime & extraction policy"),
+          fluidRow(
           column(6, numericInput("ollama_num_ctx", "Ollama context", value = default_cfg$ollama$num_ctx,
                                  min = 4096, max = 65536, step = 4096)),
           column(6, numericInput("ollama_num_predict", "Maximum output tokens",
@@ -502,12 +559,13 @@ ui <- fluidPage(
         hr(),
         p(class = "text-muted", "Provider status:"),
         textOutput("llm_status", inline = TRUE),
-        tags$div(
-          class = "repository-danger-zone",
-          h4("Repository maintenance"),
-          helpText("Permanently remove all catalog entries, PDFs, parsed documents, manifests, caches, triage records, and logs. Saved settings are retained."),
-          actionButton("wipe_repository_open", "Wipe repository...", icon = icon("trash"),
-                       class = "btn-danger btn-sm")
+          tags$div(
+            class = "repository-danger-zone",
+            h4("Repository maintenance"),
+            helpText("Permanently remove all catalog entries, PDFs, parsed documents, manifests, caches, triage records, and logs. Saved settings are retained."),
+            actionButton("wipe_repository_open", "Wipe repository...", icon = icon("trash"),
+                         class = "btn-danger btn-sm")
+          )
         )
       )
     ),

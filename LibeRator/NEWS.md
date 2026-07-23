@@ -1,3 +1,11 @@
+# LibeRator 0.2.5
+
+- Consolidates the teal clinical-research identity into semantic brand tokens,
+  adds the LibeR dove and version to workspace unlock, and shares theme
+  preference with the rest of the ecosystem.
+- Adds focus-managed dialogs and responsive drawers so patient navigation and
+  assessment controls remain reachable on narrow displays.
+
 # LibeRator 0.2.4
 
 - Adds deterministic analytic validation of longitudinal assimilation,

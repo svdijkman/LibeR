@@ -1,3 +1,11 @@
+# LibeRtAD 0.7.8
+
+- Aligns the benchmark workbench with the LibeR design system, shared
+  light/dark theme preference, compact vector dove branding, and visible
+  keyboard focus.
+- Replaces hidden narrow-screen navigation and configuration panels with
+  accessible responsive drawers.
+
 # LibeRtAD 0.7.7
 
 - Adds measured sparse-Hessian selection with cached CppAD sparsity/coloring

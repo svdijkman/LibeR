@@ -1,3 +1,10 @@
+# LibeRation 0.8.3
+
+- Adds keyboard-safe dialogs with Escape handling, focus containment, and
+  focus restoration, plus consistent focus indicators throughout the GUI.
+- Uses the ecosystem-wide theme preference and a compact transparent vector
+  dove favicon without changing the established LibeRation layout.
+
 # LibeRation 0.8.2
 
 - Moves HMC and NUTS trajectory generation, dual averaging, diagonal mass

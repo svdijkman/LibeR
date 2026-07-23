@@ -1,7 +1,6 @@
 dependencies:
   - name: liberality-workbench-style
-    version: 0.1.0
+    version: 0.2.2
     src: htmlwidgets
     stylesheet:
       - liberalityWorkbench.css
-

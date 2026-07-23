@@ -1,3 +1,13 @@
+# LibeRary 0.7.4
+
+- Aligns catalogue, ingestion, and reference-review headers, theme
+  persistence, package-version labels, focus indicators, and compact forest
+  green dove assets.
+- Groups ingestion settings into collapsible connection, model, and runtime
+  sections so the working pipeline remains visible on smaller displays.
+- Makes catalogue, ingestion, and reference-review launchers consistently
+  return a Shiny application when `launch.browser = NULL`.
+
 # LibeRary 0.7.3
 
 - Adds a fail-closed reference-corpus release gate that admits only independent

@@ -1,3 +1,8 @@
+# LibeRality 0.2.2
+
+- Adds the shared LibeR theme preference, accessible focus-managed dialogs,
+  consistent keyboard focus, and a compact transparent amber dove asset.
+
 # LibeRality 0.2.1
 
 - Expands analytic information-matrix and design-criterion regression coverage

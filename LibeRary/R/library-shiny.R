@@ -115,7 +115,9 @@ library_reference_shiny <- function(corpus = NULL, predictions = NULL,
   if (!is.null(source_dir) && nzchar(source_dir)) {
     Sys.setenv(LIBERARY_REFERENCE_SOURCE = normalizePath(source_dir, winslash = "/", mustWork = FALSE))
   }
-  shiny::runApp(app_dir, host = host, port = port, launch.browser = launch.browser)
+  app <- shiny::shinyAppDir(app_dir)
+  if (is.null(launch.browser)) return(app)
+  shiny::runApp(app, host = host, port = port, launch.browser = launch.browser)
 }
 
 #' @keywords internal

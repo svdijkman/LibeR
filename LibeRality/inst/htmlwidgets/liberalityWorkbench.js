@@ -5,17 +5,54 @@
   function val(x, fallback) { return x === undefined || x === null || x === "" ? fallback : x; }
   function num(x) { var n = Number(x); return isFinite(n) ? n : null; }
   function fmt(x, digits) { var n = Number(x); digits = typeof digits === "number" ? digits : 3; return isFinite(n) ? n.toFixed(digits).replace(/\.0+$/, "") : "--"; }
+  function initialDarkTheme(legacyKey) {
+    try {
+      var shared = localStorage.getItem("liber.theme");
+      if (shared === "dark" || shared === "light") return shared === "dark";
+      var legacy = localStorage.getItem(legacyKey);
+      if (legacy === "dark" || legacy === "1") return true;
+      if (legacy === "light" || legacy === "0") return false;
+    } catch (_) {}
+    return !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  }
+  function storeTheme(dark, legacyKey) {
+    try {
+      localStorage.setItem("liber.theme", dark ? "dark" : "light");
+      localStorage.setItem(legacyKey, dark ? "dark" : "light");
+      document.documentElement.setAttribute("data-liber-theme", dark ? "dark" : "light");
+    } catch (_) {}
+  }
+  function useDialogFocus(onClose) {
+    var dialog = React.useRef(null), close = React.useRef(onClose);
+    close.current = onClose;
+    React.useEffect(function () {
+      var prior = document.activeElement, node = dialog.current;
+      function items() { return node ? Array.prototype.slice.call(node.querySelectorAll('button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),a[href],[tabindex]:not([tabindex="-1"])')) : []; }
+      function keydown(event) {
+        if (event.key === "Escape") { event.preventDefault(); close.current(); return; }
+        if (event.key !== "Tab" || !node) return;
+        var candidates = items();
+        if (!candidates.length) { event.preventDefault(); node.focus(); return; }
+        if (event.shiftKey && document.activeElement === candidates[0]) { event.preventDefault(); candidates[candidates.length - 1].focus(); }
+        else if (!event.shiftKey && document.activeElement === candidates[candidates.length - 1]) { event.preventDefault(); candidates[0].focus(); }
+      }
+      document.addEventListener("keydown", keydown);
+      window.setTimeout(function () { var candidates = items(); (candidates[0] || node).focus(); }, 0);
+      return function () { document.removeEventListener("keydown", keydown); if (prior && prior.focus) prior.focus(); };
+    }, []);
+    return dialog;
+  }
   function emit(props, action, detail) {
     if (!window.Shiny || !window.Shiny.setInputValue) return;
     window.Shiny.setInputValue((props.inputId || "liberality_workbench") + "_event",
       Object.assign({ action: action, nonce: Date.now() }, detail || {}), { priority: "event" });
   }
-  function Button(p) { return e("button", { type: "button", className: "ly-button " + val(p.className, ""), disabled: !!p.disabled, title: p.title, onClick: p.onClick }, p.icon ? e("span", { className: "ly-button-icon", "aria-hidden": "true" }, p.icon) : null, p.children); }
+  function Button(p) { return e("button", { type: "button", className: "ly-button " + val(p.className, ""), disabled: !!p.disabled, title: p.title, "aria-label": p.ariaLabel || p.title, onClick: p.onClick }, p.icon ? e("span", { className: "ly-button-icon", "aria-hidden": "true" }, p.icon) : null, p.children); }
   function Badge(p) { return e("span", { className: "ly-badge ly-badge-" + val(p.tone, "neutral") }, p.children); }
   function Panel(p) { return e("section", { className: "ly-panel " + val(p.className, "") }, e("header", { className: "ly-panel-head" }, e("div", null, e("strong", null, p.title), p.subtitle ? e("span", null, p.subtitle) : null), p.actions || null), e("div", { className: "ly-panel-body" }, p.children)); }
   function Empty(p) { return e("div", { className: "ly-empty" }, e("span", null, val(p.icon, "◇")), e("strong", null, p.title), e("p", null, p.detail)); }
   function Logo() { return e("svg", { className: "ly-logo", viewBox: "0 0 128 128", "aria-hidden": "true" }, e("circle", { cx: 64, cy: 64, r: 57, fill: "currentColor" }), e("path", { d: "M29 72c17-4 24-17 30-36 6 13 15 20 32 21-8 5-13 10-17 18 10-4 18-4 26 0-13 2-23 8-31 19-11-9-22-14-40-14 6-2 11-5 15-9-6 2-11 2-15 1Z", fill: "white" }), e("circle", { cx: 72, cy: 54, r: 2.5, fill: "#6d4611" })); }
-  function Modal(p) { return e("div", { className: "ly-modal-layer", onMouseDown: function (x) { if (x.target === x.currentTarget) p.onClose(); } }, e("section", { className: "ly-modal", role: "dialog", "aria-modal": "true" }, e("header", null, e("div", null, e("strong", null, p.title), p.subtitle ? e("span", null, p.subtitle) : null), e(Button, { className: "ly-icon", onClick: p.onClose }, "×")), e("div", { className: "ly-modal-body" }, p.children))); }
+  function Modal(p) { var dialog = useDialogFocus(p.onClose); return e("div", { className: "ly-modal-layer", onMouseDown: function (x) { if (x.target === x.currentTarget) p.onClose(); } }, e("section", { ref: dialog, tabIndex: -1, className: "ly-modal", role: "dialog", "aria-modal": "true", "aria-label": p.title }, e("header", null, e("div", null, e("strong", null, p.title), p.subtitle ? e("span", null, p.subtitle) : null), e(Button, { className: "ly-icon", ariaLabel: "Close", onClick: p.onClose }, "×")), e("div", { className: "ly-modal-body" }, p.children))); }
   function Field(p) { return e("label", { className: "ly-field " + val(p.className, "") }, e("span", null, p.label), p.children, p.help ? e("small", null, p.help) : null); }
   function Status(p) { var s = p.status || {}; return e("div", { className: "ly-status ly-status-" + val(s.level, "info") }, e("i", null), e("span", null, val(s.text, "Ready"))); }
   function Metric(p) { return e("div", { className: "ly-metric" }, e("span", null, p.label), e("strong", null, p.value), p.detail ? e("small", null, p.detail) : null); }
@@ -65,9 +102,9 @@
   function BarChart(p) { var rows = list(p.rows).filter(function (r) { return num(r[p.valueKey]) !== null; }); if (!rows.length) return e(Empty, { title: "No precision results", detail: "Evaluate the design first." }); var max = Math.max.apply(null, rows.map(function (r) { return Math.abs(Number(r[p.valueKey])); }).concat([1])); return e("div", { className: "ly-bars" }, rows.map(function (r) { var width = Math.min(100, Math.abs(Number(r[p.valueKey])) / max * 100); return e("div", { className: "ly-bar-row", key: r.parameter || r.name }, e("span", null, r.parameter || r.name), e("div", null, e("i", { style: { width: width + "%" } })), e("strong", null, fmt(r[p.valueKey], 2) + val(p.suffix, ""))); })); }
   function TracePlot(p) { var rows = list(p.rows).filter(function (r) { return num(r.criterion) !== null; }); if (!rows.length) return e(Empty, { title: "No optimisation trace", detail: "Run an optimisation to inspect convergence." }); var vals = rows.map(function (r) { return Number(r.criterion); }), min = Math.min.apply(null, vals), max = Math.max.apply(null, vals); if (max === min) max = min + 1; function x(i) { return 50 + i / Math.max(1, rows.length - 1) * 810; } function y(v) { return 220 - (v - min) / (max - min) * 165; } var path = vals.map(function (v, i) { return (i ? "L" : "M") + x(i) + " " + y(v); }).join(" "); return e("div", { className: "ly-chart" }, e("svg", { viewBox: "0 0 900 260" }, e("line", { x1: 50, y1: 220, x2: 860, y2: 220, className: "ly-axis" }), e("path", { d: path, className: "ly-trace" }), e("text", { x: 55, y: 42, className: "ly-chart-label" }, fmt(max, 3)), e("text", { x: 55, y: 238, className: "ly-chart-label" }, fmt(min, 3)))); }
   function App(props) {
-    var stored = false; try { stored = localStorage.getItem("LibeRality.theme") === "dark"; } catch (_) {}
+    var stored = initialDarkTheme("LibeRality.theme");
     var dark = React.useState(stored), tab = React.useState("overview"), modal = React.useState(null), selectedArm = React.useState(list(props.arms)[0] ? props.arms[0].id : null);
-    React.useEffect(function () { try { localStorage.setItem("LibeRality.theme", dark[0] ? "dark" : "light"); } catch (_) {} }, [dark[0]]);
+    React.useEffect(function () { storeTheme(dark[0], "LibeRality.theme"); }, [dark[0]]);
     var design = props.design || {}, evaluation = props.evaluation || {}, info = evaluation.information || {}, optimisation = props.optimisation || {}, simulation = props.simulation;
     var arm = list(props.arms).filter(function (x) { return x.id === selectedArm[0]; })[0] || list(props.arms)[0];
     var tabs = [["overview", "Overview"], ["schedule", "Schedule"], ["precision", "Precision"], ["robustness", "Robustness"], ["optimisation", "Optimisation"], ["simulation", "Simulation"]];

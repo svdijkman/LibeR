@@ -1,3 +1,9 @@
+# LibeRties 0.7.2
+
+- Aligns server administration theme persistence, version labelling,
+  typography, keyboard focus, and compact red dove branding with the client
+  applications.
+
 # LibeRties 0.7.1
 
 - Requires measured OS/container isolation evidence in production instead of

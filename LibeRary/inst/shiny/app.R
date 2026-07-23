@@ -80,6 +80,8 @@ status_filter_choices <- c(
   )
 }
 
+package_version <- as.character(utils::packageVersion("LibeRary"))
+
 ui <- fluidPage(
   tags$head(
     tags$title("LibeRary"),
@@ -88,11 +90,16 @@ ui <- fluidPage(
       (function() {
         function boot() {
           try {
-            if (localStorage.getItem('libeRaryDarkTheme') !== '0') {
-              document.body.classList.add('theme-dark');
+            var shared = localStorage.getItem('liber.theme');
+            var legacy = localStorage.getItem('libeRaryDarkTheme');
+            var dark = shared === 'dark' || (shared !== 'light' && legacy === '1');
+            if (shared !== 'dark' && shared !== 'light' && legacy !== '1' && legacy !== '0') {
+              dark = matchMedia('(prefers-color-scheme: dark)').matches;
             }
+            document.documentElement.setAttribute('data-liber-theme', dark ? 'dark' : 'light');
+            if (dark) document.body.classList.add('theme-dark');
           } catch (e) {
-            document.body.classList.add('theme-dark');
+            if (matchMedia('(prefers-color-scheme: dark)').matches) document.body.classList.add('theme-dark');
           }
         }
         if (document.body) boot();
@@ -196,6 +203,16 @@ ui <- fluidPage(
       max-width: 45%;
       text-align: right;
       word-break: break-all;
+    }
+    .lib-header-actions { display: flex; align-items: center; gap: 16px; }
+    .lib-version-pill {
+      padding: 3px 9px;
+      border: 1px solid var(--lib-border);
+      border-radius: 999px;
+      color: var(--lib-muted);
+      background: var(--lib-surface-2);
+      font-size: 11px;
+      font-weight: 700;
     }
     .theme-toggle-wrap {
       display: flex;
@@ -326,6 +343,11 @@ ui <- fluidPage(
     body.theme-dark .dataTables_paginate {
       color: var(--lib-muted) !important;
     }
+    body button:focus-visible, body a:focus-visible, body select:focus-visible,
+    body input:focus-visible, body textarea:focus-visible {
+      outline: 2px solid var(--lib-accent);
+      outline-offset: 2px;
+    }
     ")),
     tags$script(src = "library-gui.js")
   ),
@@ -340,13 +362,17 @@ ui <- fluidPage(
       )
     ),
     tags$div(
-      class = "theme-toggle-wrap",
-      tags$span(class = "theme-toggle-label", id = "theme_label", "Dark"),
-      tags$label(
-        class = "theme-switch",
-        `aria-label` = "Toggle dark theme",
-        tags$input(type = "checkbox", id = "theme_toggle", checked = NA),
-        tags$span(class = "theme-slider")
+      class = "lib-header-actions",
+      tags$span(class = "lib-version-pill", paste0("v", package_version)),
+      tags$div(
+        class = "theme-toggle-wrap",
+        tags$span(class = "theme-toggle-label", id = "theme_label", "Dark"),
+        tags$label(
+          class = "theme-switch",
+          `aria-label` = "Toggle dark theme",
+          tags$input(type = "checkbox", id = "theme_toggle", checked = NA),
+          tags$span(class = "theme-slider")
+        )
       )
     )
   ),

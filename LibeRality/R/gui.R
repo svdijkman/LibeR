@@ -56,7 +56,10 @@ liberality_gui <- function(design = NULL, criterion = lity_criterion_D(), queue 
     htmltools::tags$head(
       htmltools::tags$title("LibeRality"),
       if (nzchar(favicon_href)) htmltools::tags$link(rel = "icon", type = "image/svg+xml", href = favicon_href),
-      htmltools::tags$style("html,body{margin:0;min-height:100%;background:#f8f5ef;font-family:Inter,Segoe UI,sans-serif}")
+      htmltools::tags$script(htmltools::HTML(
+        "(function(){try{var t=localStorage.getItem('liber.theme');if(t!=='dark'&&t!=='light'){var l=localStorage.getItem('LibeRality.theme');t=l==='dark'?'dark':l==='light'?'light':(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');}document.documentElement.setAttribute('data-liber-theme',t);}catch(e){}})();"
+      )),
+      htmltools::tags$style("html,body{margin:0;min-height:100%;background:#f8f5ef;font-family:'Segoe UI',Arial,sans-serif}html[data-liber-theme='dark'] body{background:#20201e}")
     ),
     htmltools::tags$body(liberalityWorkbenchOutput("liberality_workbench"))
   )

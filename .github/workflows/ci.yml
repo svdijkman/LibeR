@@ -2,6 +2,9 @@ name: ecosystem-ci
 
 on:
   push:
+    branches:
+      - main
+      - "codex/**"
   pull_request:
   workflow_dispatch:
 
@@ -9,7 +12,9 @@ permissions:
   contents: read
 
 concurrency:
-  group: ecosystem-ci-${{ github.workflow }}-${{ github.ref }}
+  # Publishing the same commit to a release branch and main should validate
+  # once; annotated release tags are excluded by the branch filter above.
+  group: ecosystem-ci-${{ github.workflow }}-${{ github.sha }}
   cancel-in-progress: true
 
 jobs:

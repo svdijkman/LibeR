@@ -13,4 +13,8 @@ test_that("design GUI retains shared theme and accessible dialogs", {
   expect_match(script, 'event\\.key === "Escape"')
   expect_match(script, '"aria-label": p.title', fixed = TRUE)
   expect_match(css, "focus-visible", fixed = TRUE)
+  expect_match(css, ".ly-header{height:58px", fixed = TRUE)
+  expect_match(css, ".ly-status{height:32px", fixed = TRUE)
+  expect_match(css, ".ly-brand img,.ly-logo{width:42px;height:42px", fixed = TRUE)
+  expect_match(css, ".ly-panel{background:var(--ly-surface);border:1px solid var(--ly-border);border-radius:10px", fixed = TRUE)
 })

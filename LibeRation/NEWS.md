@@ -1,9 +1,11 @@
 # LibeRation 0.8.3
 
+- Restores the established high-resolution LibeR dove and visibly aligns the
+  workbench header, controls, panels, and dialog geometry with the ecosystem.
 - Adds keyboard-safe dialogs with Escape handling, focus containment, and
   focus restoration, plus consistent focus indicators throughout the GUI.
-- Uses the ecosystem-wide theme preference and a compact transparent vector
-  dove favicon without changing the established LibeRation layout.
+- Uses the ecosystem-wide theme preference and a transparent package-coloured
+  dove favicon.
 
 # LibeRation 0.8.2
 

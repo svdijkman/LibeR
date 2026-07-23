@@ -1,7 +1,9 @@
 # LibeRties 0.7.2
 
+- Restores the established high-resolution LibeR dove and aligns cards,
+  controls, panels, and shadows with the client workbenches.
 - Aligns server administration theme persistence, version labelling,
-  typography, keyboard focus, and compact red dove branding with the client
+  typography, keyboard focus, and transparent red dove branding with the client
   applications.
 
 # LibeRties 0.7.1

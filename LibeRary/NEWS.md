@@ -1,7 +1,9 @@
 # LibeRary 0.7.4
 
+- Restores the established high-resolution LibeR dove and visibly harmonises
+  the catalogue, ingestion, and reference-review shells, panels, and controls.
 - Aligns catalogue, ingestion, and reference-review headers, theme
-  persistence, package-version labels, focus indicators, and compact forest
+  persistence, package-version labels, focus indicators, and transparent forest
   green dove assets.
 - Groups ingestion settings into collapsible connection, model, and runtime
   sections so the working pipeline remains visible on smaller displays.

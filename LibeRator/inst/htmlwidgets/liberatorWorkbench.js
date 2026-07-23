@@ -58,10 +58,7 @@
   function Panel(props) { return e("section", { className: "lr-panel " + value(props.className, "") },
     e("header", { className: "lr-panel-head" }, e("div", null, e("strong", null, props.title), props.subtitle ? e("span", null, props.subtitle) : null), props.actions || null),
     e("div", { className: "lr-panel-body" }, props.children)); }
-  function Logo() { return e("svg", { viewBox: "0 0 128 128", className: "lr-logo", "aria-hidden": "true" },
-    e("circle", { cx: 64, cy: 64, r: 57, fill: "currentColor" }),
-    e("path", { d: "M29 72c17-4 24-17 30-36 6 13 15 20 32 21-8 5-13 10-17 18 10-4 18-4 26 0-13 2-23 8-31 19-11-9-22-14-40-14 6-2 11-5 15-9-6 2-11 2-15 1Z", fill: "white" }),
-    e("circle", { cx: 72, cy: 54, r: 2.5, fill: "#124f53" })); }
+  function Logo() { return e("span", { className: "lr-logo lr-logo-fallback", "aria-hidden": "true" }, "L"); }
   function ThemeSwitch(props) { return e("label", { className: "lr-theme-switch", title: "Switch colour theme" },
     e("span", null, props.dark ? "Dark" : "Light"), e("input", { type: "checkbox", checked: props.dark, onChange: props.onChange }), e("i", null)); }
 

@@ -1,7 +1,9 @@
 # LibeRtAD 0.7.8
 
+- Restores the established high-resolution LibeR dove artwork in the purple
+  benchmark workbench and browser favicon.
 - Aligns the benchmark workbench with the LibeR design system, shared
-  light/dark theme preference, compact vector dove branding, and visible
+  light/dark theme preference, transparent dove branding, and visible
   keyboard focus.
 - Replaces hidden narrow-screen navigation and configuration panels with
   accessible responsive drawers.

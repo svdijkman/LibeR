@@ -15,4 +15,11 @@ test_that("benchmark GUI retains shared theme and responsive controls", {
   expect_match(css, "\\.ad-sidebar\\.open")
   expect_match(css, "\\.ad-config\\.open")
   expect_match(css, "focus-visible", fixed = TRUE)
+  expect_match(
+    css,
+    "grid-template-rows:58px 32px minmax(0,1fr) 27px",
+    fixed = TRUE
+  )
+  expect_match(css, ".ad-logo{width:42px;height:42px", fixed = TRUE)
+  expect_match(css, ".ad-panel{margin-bottom:11px;border:1px solid var(--line);border-radius:10px", fixed = TRUE)
 })

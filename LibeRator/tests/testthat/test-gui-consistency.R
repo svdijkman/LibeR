@@ -13,12 +13,25 @@ test_that("therapeutic GUI retains shared theme, dove, and responsive controls",
   ), collapse = "\n")
 
   expect_match(script, 'localStorage\\.getItem\\("liber\\.theme"\\)')
-  expect_match(script, "M29 72c17-4", fixed = TRUE)
+  favicon <- paste(readLines(
+    system.file("assets", "favicon.svg", package = "LibeRator"),
+    warn = FALSE
+  ), collapse = "")
+  expect_match(favicon, 'id="liberator-dove"', fixed = TRUE)
+  expect_match(favicon, "data:image/png;base64,", fixed = TRUE)
   expect_match(script, "lr-sidebar-toggle", fixed = TRUE)
   expect_match(script, "lr-rail-toggle", fixed = TRUE)
   expect_match(script, "useDialogFocus", fixed = TRUE)
   expect_match(base_css, "--brand:", fixed = TRUE)
   expect_false(grepl("--purple", paste(base_css, extras_css)))
+  expect_match(
+    base_css,
+    "grid-template-rows:58px 32px minmax(0,1fr) 27px",
+    fixed = TRUE
+  )
+  expect_match(base_css, ".lr-logo{width:42px;height:42px", fixed = TRUE)
+  expect_match(base_css, ".lr-button{min-height:32px", fixed = TRUE)
+  expect_match(base_css, ".lr-panel{margin-bottom:10px;border:1px solid var(--line);border-radius:10px", fixed = TRUE)
   expect_match(extras_css, "\\.lr-sidebar\\.open")
   expect_match(extras_css, "\\.lr-right\\.open")
 })

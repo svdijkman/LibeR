@@ -1,7 +1,9 @@
 # LibeRality 0.2.2
 
+- Restores the established high-resolution LibeR dove and aligns the workbench
+  header, typography, controls, panels, and spacing with the shared shell.
 - Adds the shared LibeR theme preference, accessible focus-managed dialogs,
-  consistent keyboard focus, and a compact transparent amber dove asset.
+  consistent keyboard focus, and a transparent amber dove asset.
 
 # LibeRality 0.2.1
 

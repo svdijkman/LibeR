@@ -110,6 +110,7 @@ ui <- fluidPage(
     :root {
       --lib-bg: #f4f8f5;
       --lib-surface: #ffffff;
+      --lib-surface-2: #f8fbf9;
       --lib-text: #1e2b23;
       --lib-muted: #63746a;
       --lib-border: #d5e3da;
@@ -118,10 +119,12 @@ ui <- fluidPage(
       --lib-code-fg: #1e2b23;
       --lib-accent: #236a45;
       --lib-accent-hover: #184e34;
+      --lib-shadow: rgba(20,70,43,.10);
     }
     body.theme-dark {
       --lib-bg: #10271e;
       --lib-surface: #18382b;
+      --lib-surface-2: #214936;
       --lib-text: #f1faf5;
       --lib-muted: #b7d0c3;
       --lib-border: #3b6f58;
@@ -130,12 +133,22 @@ ui <- fluidPage(
       --lib-code-fg: #e4f3eb;
       --lib-accent: #65d39b;
       --lib-accent-hover: #86e2b0;
+      --lib-shadow: rgba(0,0,0,.28);
     }
     body {
       background-color: var(--lib-bg);
       color: var(--lib-text);
+      font: 12px/1.45 'Segoe UI', Arial, sans-serif;
       transition: background-color 0.2s, color 0.2s;
     }
+    .container-fluid { padding: 0 15px 18px; }
+    .well {
+      border: 1px solid var(--lib-border);
+      border-radius: 10px;
+      box-shadow: 0 2px 7px var(--lib-shadow);
+    }
+    .form-control, .selectize-input { min-height: 34px; border-radius: 7px; }
+    .btn { min-height: 32px; border-radius: 7px; font-size: 12px; font-weight: 650; }
     .well, .tab-content, .nav-tabs > li.active > a,
     .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       background-color: var(--lib-surface) !important;
@@ -190,28 +203,35 @@ ui <- fluidPage(
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 0 0 16px 0;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--lib-border);
+      min-height: 58px;
+      margin: 0 -15px 13px;
+      padding: 0 17px;
+      color: #fff;
+      background: linear-gradient(105deg, #174c32, #28744d);
+      border-bottom: 1px solid rgba(255,255,255,.15);
+      box-shadow: 0 2px 9px rgba(12,54,33,.24);
     }
-    .lib-header h2 { margin: 0; font-size: 26px; font-weight: 600; }
-    .lib-brand { display: flex; align-items: center; gap: 10px; }
-    .lib-brand img { width: 34px; height: 34px; }
+    .lib-header h2 { margin: 0; font-size: 19px; font-weight: 700; letter-spacing: .2px; }
+    .lib-brand { display: flex; align-items: center; gap: 11px; }
+    .lib-brand img { width: 42px; height: 42px; filter: drop-shadow(0 2px 3px rgba(0,0,0,.2)); }
+    .lib-brand-text { display: flex; flex-direction: column; }
+    .lib-brand-text p { margin: 1px 0 0; font-size: 10px; opacity: .82; }
     .lib-header-meta {
-      font-size: 11px;
-      color: var(--lib-muted);
-      max-width: 45%;
-      text-align: right;
-      word-break: break-all;
+      max-width: min(380px, 30vw);
+      overflow: hidden;
+      color: rgba(255,255,255,.78);
+      font-size: 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
-    .lib-header-actions { display: flex; align-items: center; gap: 16px; }
+    .lib-header-actions { display: flex; align-items: center; gap: 12px; min-width: 0; }
     .lib-version-pill {
-      padding: 3px 9px;
-      border: 1px solid var(--lib-border);
+      padding: 3px 8px;
+      border: 1px solid rgba(255,255,255,.28);
       border-radius: 999px;
-      color: var(--lib-muted);
-      background: var(--lib-surface-2);
-      font-size: 11px;
+      color: #fff;
+      background: rgba(255,255,255,.10);
+      font-size: 9px;
       font-weight: 700;
     }
     .theme-toggle-wrap {
@@ -222,8 +242,8 @@ ui <- fluidPage(
     }
     .theme-toggle-label {
       font-size: 12px;
-      color: var(--lib-muted);
-      min-width: 32px;
+      color: rgba(255,255,255,.86);
+      min-width: 30px;
       text-align: right;
     }
     .theme-switch {
@@ -256,11 +276,17 @@ ui <- fluidPage(
     }
     .theme-switch input:checked + .theme-slider { background-color: var(--lib-accent); }
     .theme-switch input:checked + .theme-slider:before { transform: translateX(18px); }
-    .lib-detail-panel {
+    .lib-workbench-row { margin: 0 -7px; }
+    .lib-workbench-row > div { padding: 0 7px; }
+    .lib-catalog-panel, .lib-detail-panel {
       border: 1px solid var(--lib-border);
-      border-radius: 4px;
+      border-radius: 10px;
       background: var(--lib-surface);
       padding: 12px 14px;
+      box-shadow: 0 2px 7px var(--lib-shadow);
+    }
+    .lib-catalog-panel { min-height: 420px; }
+    .lib-detail-panel {
       min-height: 320px;
       max-height: calc(100vh - 220px);
       overflow-y: auto;
@@ -348,6 +374,10 @@ ui <- fluidPage(
       outline: 2px solid var(--lib-accent);
       outline-offset: 2px;
     }
+    @media (max-width: 900px) {
+      .lib-header-meta { display: none; }
+      .lib-workbench-row > div { margin-bottom: 12px; }
+    }
     ")),
     tags$script(src = "library-gui.js")
   ),
@@ -357,12 +387,14 @@ ui <- fluidPage(
       class = "lib-brand",
       tags$img(src = "favicon.svg", alt = "LibeR"),
       tags$div(
+        class = "lib-brand-text",
         tags$h2("LibeRary"),
-        tags$div(class = "lib-header-meta", textOutput("catalog_path_display", inline = TRUE))
+        tags$p("Pharmacometric model catalog")
       )
     ),
     tags$div(
       class = "lib-header-actions",
+      tags$div(class = "lib-header-meta", textOutput("catalog_path_display", inline = TRUE)),
       tags$span(class = "lib-version-pill", paste0("v", package_version)),
       tags$div(
         class = "theme-toggle-wrap",
@@ -377,6 +409,7 @@ ui <- fluidPage(
     )
   ),
   fluidRow(
+    class = "lib-workbench-row",
     column(
       3L,
       wellPanel(
@@ -407,8 +440,11 @@ ui <- fluidPage(
     ),
     column(
       5L,
-      div(class = "lib-count-badge", textOutput("entry_count")),
-      DTOutput("catalog_table")
+      div(
+        class = "lib-catalog-panel",
+        div(class = "lib-count-badge", textOutput("entry_count")),
+        DTOutput("catalog_table")
+      )
     ),
     column(
       4L,

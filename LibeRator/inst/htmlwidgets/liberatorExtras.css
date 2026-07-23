@@ -119,7 +119,7 @@
     display: block;
     position: fixed;
     z-index: 35;
-    top: 89px;
+    top: 90px;
     right: 0;
     bottom: 27px;
     width: min(320px, 88vw);
@@ -136,7 +136,7 @@
     display: block;
     position: fixed;
     z-index: 30;
-    inset: 89px 0 27px;
+    inset: 90px 0 27px;
     border: 0;
     background: rgba(7, 33, 35, 0.5);
   }
@@ -156,7 +156,7 @@
     display: block;
     position: fixed;
     z-index: 35;
-    top: 89px;
+    top: 90px;
     left: 0;
     bottom: 27px;
     width: min(285px, 88vw);

@@ -87,6 +87,7 @@ ui <- fluidPage(
     :root {
       --ingest-bg: #f4f8f5;
       --ingest-surface: #ffffff;
+      --ingest-surface-2: #f8fbf9;
       --ingest-text: #1e2b23;
       --ingest-muted: #63746a;
       --ingest-border: #d5e3da;
@@ -98,10 +99,12 @@ ui <- fluidPage(
       --ingest-accent-hover: #184e34;
       --ingest-accent-soft: #e6f1ea;
       --ingest-accent-text: #184e34;
+      --ingest-shadow: rgba(20,70,43,.10);
     }
     body.theme-dark {
       --ingest-bg: #10271e;
       --ingest-surface: #18382b;
+      --ingest-surface-2: #214936;
       --ingest-text: #f1faf5;
       --ingest-muted: #b7d0c3;
       --ingest-border: #3b6f58;
@@ -113,20 +116,31 @@ ui <- fluidPage(
       --ingest-accent-hover: #86e2b0;
       --ingest-accent-soft: #2b5e48;
       --ingest-accent-text: #d0f5e0;
+      --ingest-shadow: rgba(0,0,0,.28);
     }
     body {
       background-color: var(--ingest-bg);
       color: var(--ingest-text);
+      font: 12px/1.45 'Segoe UI', Arial, sans-serif;
       transition: background-color 0.2s, color 0.2s;
     }
+    .container-fluid { padding: 0 15px 18px; }
+    .well, .tab-content {
+      border: 1px solid var(--ingest-border);
+      border-radius: 10px;
+      box-shadow: 0 2px 7px var(--ingest-shadow);
+    }
+    .form-control, .selectize-input { min-height: 34px; border-radius: 7px; }
+    .btn { min-height: 32px; border-radius: 7px; font-size: 12px; font-weight: 650; }
     .well, .tab-content, .nav-tabs > li.active > a,
     .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       background-color: var(--ingest-surface) !important;
       color: var(--ingest-text) !important;
       border-color: var(--ingest-border) !important;
     }
-    .nav-tabs > li > a { color: var(--ingest-muted); }
-    .nav-tabs > li.active > a { border-top: 3px solid var(--ingest-accent) !important; }
+    .nav-tabs { min-height: 42px; padding: 0 13px; background: var(--ingest-surface-2); border: 0; border-bottom: 1px solid var(--ingest-border); border-radius: 10px 10px 0 0; }
+    .nav-tabs > li > a { min-height: 42px; margin: 0; padding: 11px 15px 8px; color: var(--ingest-muted); border: 0 !important; border-bottom: 3px solid transparent !important; background: transparent !important; font-weight: 650; }
+    .nav-tabs > li.active > a { color: var(--ingest-accent); border-bottom-color: var(--ingest-accent) !important; }
     .form-control, textarea.form-control, .selectize-input {
       background-color: var(--ingest-input-bg);
       color: var(--ingest-text);
@@ -257,25 +271,32 @@ ui <- fluidPage(
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 0 0 18px 0;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--ingest-border);
+      min-height: 58px;
+      margin: 0 -15px 13px;
+      padding: 0 17px;
+      color: #fff;
+      background: linear-gradient(105deg, #174c32, #28744d);
+      border-bottom: 1px solid rgba(255,255,255,.15);
+      box-shadow: 0 2px 9px rgba(12,54,33,.24);
     }
     .ingest-header h2 {
       margin: 0;
-      font-size: 26px;
-      font-weight: 600;
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: .2px;
     }
-    .ingest-brand { display: flex; align-items: center; gap: 10px; }
-    .ingest-brand img { width: 34px; height: 34px; }
-    .ingest-header-actions { display: flex; align-items: center; gap: 16px; }
+    .ingest-brand { display: flex; align-items: center; gap: 11px; }
+    .ingest-brand img { width: 42px; height: 42px; filter: drop-shadow(0 2px 3px rgba(0,0,0,.2)); }
+    .ingest-brand-text { display: flex; flex-direction: column; }
+    .ingest-brand-text p { margin: 1px 0 0; font-size: 10px; opacity: .82; }
+    .ingest-header-actions { display: flex; align-items: center; gap: 12px; }
     .ingest-version-pill {
       padding: 3px 9px;
-      border: 1px solid var(--ingest-border);
+      border: 1px solid rgba(255,255,255,.28);
       border-radius: 999px;
-      color: var(--ingest-muted);
-      background: var(--ingest-surface-2);
-      font-size: 11px;
+      color: #fff;
+      background: rgba(255,255,255,.10);
+      font-size: 9px;
       font-weight: 700;
     }
     .theme-toggle-wrap {
@@ -286,8 +307,8 @@ ui <- fluidPage(
     }
     .theme-toggle-label {
       font-size: 12px;
-      color: var(--ingest-muted);
-      min-width: 32px;
+      color: rgba(255,255,255,.86);
+      min-width: 30px;
       text-align: right;
     }
     .theme-switch {
@@ -330,7 +351,7 @@ ui <- fluidPage(
     }
     .llm-role-block {
       border: 1px solid var(--ingest-border);
-      border-radius: 5px;
+      border-radius: 10px;
       padding: 7px 8px 8px;
       margin-bottom: 7px;
       background: var(--ingest-surface);
@@ -362,7 +383,7 @@ ui <- fluidPage(
     .modal-header, .modal-footer { border-color: var(--ingest-border); }
     .lib-detail-panel {
       border: 1px solid var(--ingest-border);
-      border-radius: 5px;
+      border-radius: 10px;
       background: var(--ingest-surface);
       padding: 12px 14px;
       min-height: 320px;
@@ -428,13 +449,26 @@ ui <- fluidPage(
       outline: 2px solid var(--ingest-accent);
       outline-offset: 2px;
     }
+    .ingest-workbench-row { margin: 0 -7px; }
+    .ingest-workbench-row > div { padding: 0 7px; }
+    @media (max-width: 900px) {
+      .ingest-workbench-row > div { margin-bottom: 12px; }
+      .ingest-header h2 { font-size: 17px; }
+    }
   ")),
     tags$script(src = "ingest-gui.js")
   ),
   tags$div(
     class = "ingest-header",
-    tags$div(class = "ingest-brand", tags$img(src = "favicon.svg", alt = "LibeR"),
-             tags$h2("LibeRary - literature pipeline")),
+    tags$div(
+      class = "ingest-brand",
+      tags$img(src = "favicon.svg", alt = "LibeRary"),
+      tags$div(
+        class = "ingest-brand-text",
+        tags$h2("LibeRary"),
+        tags$p("Literature discovery and model extraction")
+      )
+    ),
     tags$div(
       class = "ingest-header-actions",
       tags$span(class = "ingest-version-pill", paste0("v", package_version)),
@@ -662,6 +696,7 @@ ui <- fluidPage(
   ),
   hr(),
   fluidRow(
+    class = "ingest-workbench-row",
     column(
       12,
       div(

@@ -1,5 +1,7 @@
 # LibeRator 0.2.5
 
+- Restores the established high-resolution LibeR dove and applies the shared
+  58 px header/32 px message-bar geometry.
 - Consolidates the teal clinical-research identity into semantic brand tokens,
   adds the LibeR dove and version to workspace unlock, and shares theme
   preference with the rest of the ecosystem.

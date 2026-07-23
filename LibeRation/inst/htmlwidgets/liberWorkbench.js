@@ -1629,8 +1629,8 @@
     function changeRibbon(next){ribbon[1](next);emit(props,"page_change",{page:next});}
     var ribbonItems = [{id:"home",label:"Home"},{id:"jobs",label:"Jobs"},{id:"data",label:"Data"}];
     return e("div", { className: "lw-legacy-shell " + (theme[0] ? "theme-dark" : "theme-light") },
-      e("header", { className: "lw-app-header" }, e("div", null, props.server&&props.server.icon?e("img",{className:"lw-app-icon",src:props.server.icon,alt:""}):null, e("strong", null, "LibeRation"), e("span", {className:"lw-app-version"}, "v"+value(props.server&&props.server.package_version,"unknown")), e("span", null, "Population PK/PD modelling")),
-        e("div", { className: "lw-app-header-right" },e(AIActivation,props), e("label", { className: "lw-theme-toggle" }, e("span", null, theme[0] ? "Dark" : "Light"), e("input", { type: "checkbox", checked: theme[0], onChange: toggleTheme }), e("i", null)), e("span", { className: "lw-workspace-path" }, value(props.workspace && props.workspace.path, "No workspace selected")))),
+      e("header", { className: "lw-app-header" }, e("div", {className:"lw-app-brand"}, props.server&&props.server.icon?e("img",{className:"lw-app-icon",src:props.server.icon,alt:""}):null, e("div",{className:"lw-app-title"},e("strong", null, "LibeRation"), e("span", null, "Population PK/PD modelling"))),
+        e("div", { className: "lw-app-header-right" },e(AIActivation,props), e("span", {className:"lw-app-version"}, "v"+value(props.server&&props.server.package_version,"unknown")), e("label", { className: "lw-theme-toggle" }, e("span", null, theme[0] ? "Dark" : "Light"), e("input", { type: "checkbox", checked: theme[0], onChange: toggleTheme }), e("i", null)), e("span", { className: "lw-workspace-path" }, value(props.workspace && props.workspace.path, "No workspace selected")))),
       e("div", { className: "lw-ribbon" }, e(Tabs, { value: ribbon[0], onChange: changeRibbon, items: ribbonItems, className: "lw-ribbon-tabs" })),
       e(LogBanner, props),
       e("div", { className: "lw-page-host" }, ribbon[0] === "home" ? e(HomePage, props) : ribbon[0] === "jobs" ? e(JobsPage, props) : e(DataPage, props)),

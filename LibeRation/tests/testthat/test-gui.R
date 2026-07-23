@@ -540,15 +540,14 @@ test_that("GUI example datasets contain reproducible between-subject variability
   expect_equal(attr(first, "simulation_eta"), attr(second, "simulation_eta"))
 })
 
-test_that("GUI uses the compact blue LibeRation dove favicon", {
+test_that("GUI uses the high-fidelity blue LibeRation dove favicon", {
   favicon_path <- system.file("assets", "favicon.svg", package = "LibeRation")
   expect_true(file.exists(favicon_path))
   favicon <- paste(readLines(favicon_path, warn = FALSE), collapse = "\n")
-  expect_lt(file.info(favicon_path)$size, 4096)
+  expect_lt(file.info(favicon_path)$size, 300000)
   expect_match(favicon, 'id="liberation-dove"', fixed = TRUE)
-  expect_match(favicon, 'fill="#4d7fa8"', fixed = TRUE)
-  expect_match(favicon, "<path", fixed = TRUE)
-  expect_false(grepl("base64", favicon, fixed = TRUE))
+  expect_match(favicon, 'width="512"', fixed = TRUE)
+  expect_match(favicon, "data:image/png;base64,", fixed = TRUE)
 })
 
 test_that("GUI parameter names support models without random effects", {

@@ -13,4 +13,8 @@ test_that("modelling GUI retains shared theme and accessible dialogs", {
   expect_match(script, 'event\\.key === "Escape"')
   expect_match(script, '"aria-label": props.title', fixed = TRUE)
   expect_match(css, "focus-visible", fixed = TRUE)
+  expect_match(css, "grid-template-rows: 58px 42px 32px", fixed = TRUE)
+  expect_match(css, ".lw-app-icon { width: 42px; height: 42px", fixed = TRUE)
+  expect_match(css, ".lw-button { min-height: 32px", fixed = TRUE)
+  expect_match(css, "border-radius: 10px", fixed = TRUE)
 })

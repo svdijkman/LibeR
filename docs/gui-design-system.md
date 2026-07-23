@@ -30,9 +30,23 @@ recognisably related without erasing their product identities.
 | LibeRality | Optimal design | Warm amber |
 | LibeRator | Therapeutic research and teaching | Clinical teal |
 
-The dove geometry is shared. Only its circle and eye colours vary. Favicon SVGs
-must remain true vectors, transparent outside the circle, and below 4 KiB.
-Run `tools/rebuild-favicons.ps1` to reproduce all variants.
+The dove artwork is shared and must be derived from the established
+high-resolution source in `tools/assets/liber-dove-source.svg`; improvised
+substitute paths are not acceptable. Only the package accent colour varies.
+The generated SVG containers embed a high-quality 512 px rendering, remain
+transparent outside the circle, and stay below 300 KiB. Run
+`tools/rebuild-favicons.ps1` to reproduce every package variant.
+
+## Geometry and component rhythm
+
+- Desktop product headers are 58 px high; status/message bars are 32 px.
+- Header logos are 42 px square, product names are 19 px, and descriptors are
+  10 px.
+- Standard controls are 32-34 px high with a 7 px corner radius.
+- Workspace panels use a 10 px corner radius, a restrained 2 px/7 px shadow,
+  and 12-13 px content spacing.
+- Product colour changes identity, not hierarchy: shell geometry, typography,
+  focus treatment, destructive actions, and information density remain shared.
 
 ## Theme contract
 

@@ -221,6 +221,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// liberation_prediction_tape_info
+Rcpp::List liberation_prediction_tape_info(SEXP tape_pointer);
+RcppExport SEXP _LibeRation_liberation_prediction_tape_info(SEXP tape_pointerSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type tape_pointer(tape_pointerSEXP);
+    rcpp_result_gen = Rcpp::wrap(liberation_prediction_tape_info(tape_pointer));
+    return rcpp_result_gen;
+END_RCPP
+}
 // liberation_prediction_tape_new_dynamic
 Rcpp::NumericVector liberation_prediction_tape_new_dynamic(SEXP tape_pointer, const Rcpp::DataFrame& data);
 RcppExport SEXP _LibeRation_liberation_prediction_tape_new_dynamic(SEXP tape_pointerSEXP, SEXP dataSEXP) {
@@ -346,6 +357,55 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< bool >::type gradient(gradientSEXP);
     Rcpp::traits::input_parameter< bool >::type hessian(hessianSEXP);
     rcpp_result_gen = Rcpp::wrap(liberation_objective_tape_eval(tape_pointer, point, gradient, hessian));
+    return rcpp_result_gen;
+END_RCPP
+}
+// liberation_objective_tape_info
+Rcpp::List liberation_objective_tape_info(SEXP tape_pointer);
+RcppExport SEXP _LibeRation_liberation_objective_tape_info(SEXP tape_pointerSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type tape_pointer(tape_pointerSEXP);
+    rcpp_result_gen = Rcpp::wrap(liberation_objective_tape_info(tape_pointer));
+    return rcpp_result_gen;
+END_RCPP
+}
+// liberation_hmc_target_eval
+Rcpp::List liberation_hmc_target_eval(SEXP tape_pointer, const Rcpp::NumericVector& q, const Rcpp::List& config);
+RcppExport SEXP _LibeRation_liberation_hmc_target_eval(SEXP tape_pointerSEXP, SEXP qSEXP, SEXP configSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type tape_pointer(tape_pointerSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::NumericVector& >::type q(qSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::List& >::type config(configSEXP);
+    rcpp_result_gen = Rcpp::wrap(liberation_hmc_target_eval(tape_pointer, q, config));
+    return rcpp_result_gen;
+END_RCPP
+}
+// liberation_hmc_sample
+Rcpp::List liberation_hmc_sample(SEXP tape_pointer, const Rcpp::List& config, const std::string& method, int n_warmup, int n_sample, int n_thin, int n_chains, double seed, double step_size, double target_acceptance, bool adapt_mass, int n_leapfrog, int max_depth, double divergence_threshold, int print_every);
+RcppExport SEXP _LibeRation_liberation_hmc_sample(SEXP tape_pointerSEXP, SEXP configSEXP, SEXP methodSEXP, SEXP n_warmupSEXP, SEXP n_sampleSEXP, SEXP n_thinSEXP, SEXP n_chainsSEXP, SEXP seedSEXP, SEXP step_sizeSEXP, SEXP target_acceptanceSEXP, SEXP adapt_massSEXP, SEXP n_leapfrogSEXP, SEXP max_depthSEXP, SEXP divergence_thresholdSEXP, SEXP print_everySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type tape_pointer(tape_pointerSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::List& >::type config(configSEXP);
+    Rcpp::traits::input_parameter< const std::string& >::type method(methodSEXP);
+    Rcpp::traits::input_parameter< int >::type n_warmup(n_warmupSEXP);
+    Rcpp::traits::input_parameter< int >::type n_sample(n_sampleSEXP);
+    Rcpp::traits::input_parameter< int >::type n_thin(n_thinSEXP);
+    Rcpp::traits::input_parameter< int >::type n_chains(n_chainsSEXP);
+    Rcpp::traits::input_parameter< double >::type seed(seedSEXP);
+    Rcpp::traits::input_parameter< double >::type step_size(step_sizeSEXP);
+    Rcpp::traits::input_parameter< double >::type target_acceptance(target_acceptanceSEXP);
+    Rcpp::traits::input_parameter< bool >::type adapt_mass(adapt_massSEXP);
+    Rcpp::traits::input_parameter< int >::type n_leapfrog(n_leapfrogSEXP);
+    Rcpp::traits::input_parameter< int >::type max_depth(max_depthSEXP);
+    Rcpp::traits::input_parameter< double >::type divergence_threshold(divergence_thresholdSEXP);
+    Rcpp::traits::input_parameter< int >::type print_every(print_everySEXP);
+    rcpp_result_gen = Rcpp::wrap(liberation_hmc_sample(tape_pointer, config, method, n_warmup, n_sample, n_thin, n_chains, seed, step_size, target_acceptance, adapt_mass, n_leapfrog, max_depth, divergence_threshold, print_every));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -514,6 +574,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_LibeRation_liberation_matrix_exp", (DL_FUNC) &_LibeRation_liberation_matrix_exp, 2},
     {"_LibeRation_liberation_advan_matrix", (DL_FUNC) &_LibeRation_liberation_advan_matrix, 2},
     {"_LibeRation_liberation_prediction_tape_create", (DL_FUNC) &_LibeRation_liberation_prediction_tape_create, 5},
+    {"_LibeRation_liberation_prediction_tape_info", (DL_FUNC) &_LibeRation_liberation_prediction_tape_info, 1},
     {"_LibeRation_liberation_prediction_tape_new_dynamic", (DL_FUNC) &_LibeRation_liberation_prediction_tape_new_dynamic, 2},
     {"_LibeRation_liberation_fo_tape_new_dynamic", (DL_FUNC) &_LibeRation_liberation_fo_tape_new_dynamic, 2},
     {"_LibeRation_liberation_prediction_tape_eval", (DL_FUNC) &_LibeRation_liberation_prediction_tape_eval, 3},
@@ -523,6 +584,9 @@ static const R_CallMethodDef CallEntries[] = {
     {"_LibeRation_liberation_curvature_tape_create", (DL_FUNC) &_LibeRation_liberation_curvature_tape_create, 9},
     {"_LibeRation_liberation_objective_tape_create", (DL_FUNC) &_LibeRation_liberation_objective_tape_create, 7},
     {"_LibeRation_liberation_objective_tape_eval", (DL_FUNC) &_LibeRation_liberation_objective_tape_eval, 4},
+    {"_LibeRation_liberation_objective_tape_info", (DL_FUNC) &_LibeRation_liberation_objective_tape_info, 1},
+    {"_LibeRation_liberation_hmc_target_eval", (DL_FUNC) &_LibeRation_liberation_hmc_target_eval, 3},
+    {"_LibeRation_liberation_hmc_sample", (DL_FUNC) &_LibeRation_liberation_hmc_sample, 15},
     {"_LibeRation_liberation_objective_tape_eta_values", (DL_FUNC) &_LibeRation_liberation_objective_tape_eta_values, 4},
     {"_LibeRation_liberation_objective_tape_collection_values", (DL_FUNC) &_LibeRation_liberation_objective_tape_collection_values, 2},
     {"_LibeRation_liberation_objective_tape_collection_gradients", (DL_FUNC) &_LibeRation_liberation_objective_tape_collection_gradients, 2},

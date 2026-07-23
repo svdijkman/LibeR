@@ -1,3 +1,13 @@
+# LibeRtAD 0.7.7
+
+- Adds measured sparse-Hessian selection with cached CppAD sparsity/coloring
+  work and retains dense directional sweeps for small or dense objectives.
+- Reports tape memory proxies and CppAD allocator state, with lifetime stress
+  tests proving pointer finalizers release repeatedly recorded tapes.
+- Expands domain/nonsmooth/high-dimensional derivative regression coverage and
+  adds a reproducible, gracefully skipping LibeRtAD/TMB/CmdStan benchmark
+  harness.
+
 # LibeRtAD 0.7.6
 
 - Adds randomized value, derivative, and conditional-expression property tests.

@@ -9,6 +9,7 @@
 **/src/*.so
 **/src/*.dll
 **/src/*.a
+**/src/symbols.rds
 node_modules/
 dist/
 .lib/
@@ -19,6 +20,7 @@ dist/
 .publish/
 workspace/
 validation/benchmark/results/
+validation/ad-backends/results/
 validation/nonmem/results/
 validation/liberator/results/
 validation/liberality/external/results/

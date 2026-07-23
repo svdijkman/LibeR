@@ -61,6 +61,10 @@
     .Call(`_LibeRation_liberation_prediction_tape_create`, engine_pointer, data, theta, eta, sigma)
 }
 
+.liberation_prediction_tape_info <- function(tape_pointer) {
+    .Call(`_LibeRation_liberation_prediction_tape_info`, tape_pointer)
+}
+
 .liberation_prediction_tape_new_dynamic <- function(tape_pointer, data) {
     .Call(`_LibeRation_liberation_prediction_tape_new_dynamic`, tape_pointer, data)
 }
@@ -95,6 +99,18 @@
 
 .liberation_objective_tape_eval <- function(tape_pointer, point, gradient = TRUE, hessian = FALSE) {
     .Call(`_LibeRation_liberation_objective_tape_eval`, tape_pointer, point, gradient, hessian)
+}
+
+.liberation_objective_tape_info <- function(tape_pointer) {
+    .Call(`_LibeRation_liberation_objective_tape_info`, tape_pointer)
+}
+
+.liberation_hmc_target_eval <- function(tape_pointer, q, config) {
+    .Call(`_LibeRation_liberation_hmc_target_eval`, tape_pointer, q, config)
+}
+
+.liberation_hmc_sample <- function(tape_pointer, config, method, n_warmup, n_sample, n_thin, n_chains, seed, step_size, target_acceptance, adapt_mass, n_leapfrog, max_depth, divergence_threshold, print_every) {
+    .Call(`_LibeRation_liberation_hmc_sample`, tape_pointer, config, method, n_warmup, n_sample, n_thin, n_chains, seed, step_size, target_acceptance, adapt_mass, n_leapfrog, max_depth, divergence_threshold, print_every)
 }
 
 .liberation_objective_tape_eta_values <- function(tape_pointer, point, eta_positions, eta) {

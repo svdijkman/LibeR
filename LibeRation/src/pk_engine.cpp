@@ -3,6 +3,7 @@
 
 #include <Rcpp.h>
 #include <LibeRtAD/eigen_r.hpp>
+#include <LibeRtAD/sparse_hessian.hpp>
 #include <unsupported/Eigen/MatrixFunctions>
 #include <LibeRtAD/program.hpp>
 #include "eigen_solver.h"
@@ -15,6 +16,7 @@
 #include <memory>
 #include <numeric>
 #include <queue>
+#include <random>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -3447,6 +3449,7 @@ struct ObjectiveTape {
   std::vector<int> structural_dvid;
   std::vector<double> dynamic_values;
   int n_rows = 0;
+  libertad::SparseHessianCache hessian_cache;
 };
 
 class TapePathChange : public std::runtime_error {
@@ -8007,6 +8010,8 @@ Rcpp::NumericVector kalman_simulate(
   return simulated;
 }
 
+#include "hmc_sampler.h"
+
 }  // namespace liberation
 
 // [[Rcpp::export(name = ".liberation_population_objective_create")]]
@@ -8176,6 +8181,47 @@ SEXP liberation_prediction_tape_create(
   pointer.attr("operation_count") = static_cast<double>(pointer->operation_count);
   pointer.attr("variable_count") = static_cast<double>(pointer->variable_count);
   return pointer;
+}
+
+// [[Rcpp::export(name = ".liberation_prediction_tape_info")]]
+Rcpp::List liberation_prediction_tape_info(SEXP tape_pointer) {
+  Rcpp::XPtr<liberation::PredictionTape> tape(tape_pointer);
+  const std::size_t taylor_bytes =
+    tape->fun.size_var() * tape->fun.size_order() *
+    std::max<std::size_t>(tape->fun.size_direction(), 1U) * sizeof(double);
+  const std::size_t resident_proxy = tape->fun.size_op_seq() +
+    tape->fun.size_random() + tape->fun.size_forward_bool() +
+    tape->fun.size_forward_set() + taylor_bytes;
+  return Rcpp::List::create(
+    Rcpp::Named("operations") = static_cast<double>(tape->fun.size_op()),
+    Rcpp::Named("operator_arguments") =
+      static_cast<double>(tape->fun.size_op_arg()),
+    Rcpp::Named("variables") = static_cast<double>(tape->fun.size_var()),
+    Rcpp::Named("parameters") = static_cast<double>(tape->fun.size_par()),
+    Rcpp::Named("dynamic_independent") =
+      static_cast<double>(tape->fun.size_dyn_ind()),
+    Rcpp::Named("dynamic_parameters") =
+      static_cast<double>(tape->fun.size_dyn_par()),
+    Rcpp::Named("dynamic_arguments") =
+      static_cast<double>(tape->fun.size_dyn_arg()),
+    Rcpp::Named("taylor_orders") =
+      static_cast<double>(tape->fun.size_order()),
+    Rcpp::Named("taylor_directions") =
+      static_cast<double>(tape->fun.size_direction()),
+    Rcpp::Named("operation_sequence_bytes") =
+      static_cast<double>(tape->fun.size_op_seq()),
+    Rcpp::Named("random_access_bytes") =
+      static_cast<double>(tape->fun.size_random()),
+    Rcpp::Named("forward_sparsity_bytes") = static_cast<double>(
+      tape->fun.size_forward_bool() + tape->fun.size_forward_set()),
+    Rcpp::Named("taylor_bytes_proxy") = static_cast<double>(taylor_bytes),
+    Rcpp::Named("resident_bytes_proxy") =
+      static_cast<double>(resident_proxy),
+    Rcpp::Named("propagation_kernel") = tape->propagation_kernel,
+    Rcpp::Named("derivative_strategy") = tape->derivative_strategy,
+    Rcpp::Named("jacobian_nonzeros") =
+      static_cast<double>(tape->jacobian_nonzeros)
+  );
 }
 
 // [[Rcpp::export(name = ".liberation_prediction_tape_new_dynamic")]]
@@ -8396,15 +8442,29 @@ Rcpp::List liberation_objective_tape_eval(
   if (hessian) {
     const std::size_t n = tape->domain_names.size();
     Rcpp::NumericMatrix output(n, n);
-    std::vector<double> direction(n, 0.0);
-    std::vector<double> weight(1, 1.0);
-    for (std::size_t column = 0; column < n; ++column) {
-      direction[column] = 1.0;
-      tape->fun.Forward(1, direction, messages);
-      direction[column] = 0.0;
-      std::vector<double> reverse = tape->fun.Reverse(2, weight);
+    libertad::analyse_hessian_sparsity(
+      tape->fun, tape->hessian_cache);
+    if (tape->hessian_cache.use_sparse) {
+      const std::vector<double> values = libertad::sparse_hessian(
+        tape->fun, x, tape->hessian_cache);
+      liberation::require_unchanged_path(
+        tape->fun, "sparse objective Hessian evaluation");
       for (std::size_t row = 0; row < n; ++row) {
-        output(row, column) = reverse[row * 2 + 1];
+        for (std::size_t column = 0; column < n; ++column) {
+          output(row, column) = values[row * n + column];
+        }
+      }
+    } else {
+      std::vector<double> direction(n, 0.0);
+      std::vector<double> weight(1, 1.0);
+      for (std::size_t column = 0; column < n; ++column) {
+        direction[column] = 1.0;
+        tape->fun.Forward(1, direction, messages);
+        direction[column] = 0.0;
+        std::vector<double> reverse = tape->fun.Reverse(2, weight);
+        for (std::size_t row = 0; row < n; ++row) {
+          output(row, column) = reverse[row * 2 + 1];
+        }
       }
     }
     output.attr("dimnames") = Rcpp::List::create(
@@ -8413,6 +8473,68 @@ Rcpp::List liberation_objective_tape_eval(
   }
   result.attr("domain") = Rcpp::wrap(tape->domain_names);
   return result;
+}
+
+// [[Rcpp::export(name = ".liberation_objective_tape_info")]]
+Rcpp::List liberation_objective_tape_info(SEXP tape_pointer) {
+  Rcpp::XPtr<liberation::ObjectiveTape> tape(tape_pointer);
+  const std::size_t taylor_bytes =
+    tape->fun.size_var() * tape->fun.size_order() *
+    std::max<std::size_t>(tape->fun.size_direction(), 1U) * sizeof(double);
+  return Rcpp::List::create(
+    Rcpp::Named("operations") = static_cast<double>(tape->fun.size_op()),
+    Rcpp::Named("operator_arguments") =
+      static_cast<double>(tape->fun.size_op_arg()),
+    Rcpp::Named("variables") = static_cast<double>(tape->fun.size_var()),
+    Rcpp::Named("parameters") = static_cast<double>(tape->fun.size_par()),
+    Rcpp::Named("dynamic_independent") =
+      static_cast<double>(tape->fun.size_dyn_ind()),
+    Rcpp::Named("dynamic_parameters") =
+      static_cast<double>(tape->fun.size_dyn_par()),
+    Rcpp::Named("operation_sequence_bytes") =
+      static_cast<double>(tape->fun.size_op_seq()),
+    Rcpp::Named("random_access_bytes") =
+      static_cast<double>(tape->fun.size_random()),
+    Rcpp::Named("forward_sparsity_bytes") = static_cast<double>(
+      tape->fun.size_forward_bool() + tape->fun.size_forward_set()),
+    Rcpp::Named("taylor_bytes_proxy") = static_cast<double>(taylor_bytes),
+    Rcpp::Named("hessian_strategy") = tape->hessian_cache.strategy,
+    Rcpp::Named("hessian_nonzeros") =
+      static_cast<double>(tape->hessian_cache.nonzeros),
+    Rcpp::Named("hessian_density") = tape->hessian_cache.density,
+    Rcpp::Named("hessian_sweeps") =
+      static_cast<double>(tape->hessian_cache.sweeps),
+    Rcpp::Named("resident_bytes_proxy") = static_cast<double>(
+      tape->fun.size_op_seq() + tape->fun.size_random() +
+      tape->fun.size_forward_bool() + tape->fun.size_forward_set() +
+      taylor_bytes)
+  );
+}
+
+// [[Rcpp::export(name = ".liberation_hmc_target_eval")]]
+Rcpp::List liberation_hmc_target_eval(
+    SEXP tape_pointer, const Rcpp::NumericVector& q,
+    const Rcpp::List& config) {
+  Rcpp::XPtr<liberation::ObjectiveTape> tape(tape_pointer);
+  return liberation::native_hmc_target_eval(*tape, q, config);
+}
+
+// [[Rcpp::export(name = ".liberation_hmc_sample")]]
+Rcpp::List liberation_hmc_sample(
+    SEXP tape_pointer, const Rcpp::List& config, const std::string& method,
+    int n_warmup, int n_sample, int n_thin, int n_chains, double seed,
+    double step_size, double target_acceptance, bool adapt_mass,
+    int n_leapfrog, int max_depth, double divergence_threshold,
+    int print_every) {
+  if (!std::isfinite(seed) || seed < 0.0) {
+    Rcpp::stop("Native HMC seed must be a non-negative finite number.");
+  }
+  Rcpp::XPtr<liberation::ObjectiveTape> tape(tape_pointer);
+  return liberation::native_hmc_sample(
+    *tape, config, method, n_warmup, n_sample, n_thin, n_chains,
+    static_cast<std::uint64_t>(seed), step_size, target_acceptance,
+    adapt_mass, n_leapfrog, max_depth, divergence_threshold, print_every
+  );
 }
 
 // [[Rcpp::export(name = ".liberation_objective_tape_eta_values")]]

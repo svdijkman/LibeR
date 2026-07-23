@@ -57,6 +57,31 @@ Eigen 5.0.1 header snapshots directly; the console adapter prevents CppAD from l
 `std::cout` into either package and keeps all native output within R's console
 API.
 
+## Concurrency contract
+
+LibeR's supported parallel unit is an **R process**, not a shared mutable AD
+tape. PSOCK workers and LibeRties job workers receive serializable model/data
+contracts and construct their own C++ programs, CppAD tapes, optimizer work,
+and RNG streams. Concurrent independent R processes are therefore isolated;
+the regression suite launches simultaneous fits to enforce this contract.
+
+An `ADModel`, LibeRation prediction tape, objective tape, or evaluator must
+only be used by the R thread that owns its external pointer. `ADFun` evaluation
+updates internal Taylor and sparsity work buffers, so the same pointer must
+not be called concurrently from OpenMP threads or another native thread.
+CppAD `parallel_setup()` is deliberately not enabled globally: it requires
+correct application-specific thread-number and in-parallel callbacks and
+would not make an existing mutable tape safe to share. Future native
+thread-parallel kernels must allocate one tape/work object per thread and
+install those callbacks within a scoped runtime.
+
+R options are configuration read at model compilation or job construction,
+not storage for active tapes. Per-fit caches and mutable estimator state live
+in execution-local environments; GUI/server state is owned by its R6 or Shiny
+session. Worker initialization currently uses a single private worker-state
+binding inside each disposable PSOCK process and never shares it across
+processes.
+
 `LibeRtAD/eigen.hpp` establishes one include order for both libraries and uses
 CppAD's upstream `cppad/example/cppad_eigen.hpp` scalar adapter. LibeRation then
 instantiates Eigen containers with CppAD scalars without RcppEigenAD or

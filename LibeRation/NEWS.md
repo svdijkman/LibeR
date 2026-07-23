@@ -1,3 +1,17 @@
+# LibeRation 0.8.2
+
+- Moves HMC and NUTS trajectory generation, dual averaging, diagonal mass
+  adaptation, and posterior transformation into C++, with an explicit R
+  reference fallback and target/gradient equivalence tests covering priors and
+  full OMEGA Cholesky parameters.
+- Adds persistent prediction/objective tape-size telemetry, nonlinear ODE
+  tolerance profiling, and measured checkpoint decision support without
+  silently changing the production solver.
+- Reuses LibeRtAD's cached sparse-Hessian path for sufficiently large sparse
+  full objectives while retaining the dense route elsewhere.
+- Defines and tests process-isolated parallel execution; PSOCK workers now
+  retain one private worker-state object instead of multiple global bindings.
+
 # LibeRation 0.8.1
 
 - Corrects covariance scaling for NONMEM and likelihood Hessian conventions and

@@ -19,6 +19,8 @@ dist/
 .publish/
 workspace/
 validation/benchmark/results/
+validation/nonmem/results/
+validation/liberator/results/
 validation/liberality/external/results/
 validation/liberary-installed-lib/
 validation/liberary-gui-home/
@@ -40,6 +42,8 @@ tools/pandoc-*.zip
 .release-lib/
 .release-verify/
 .release-buildlib/
+.validation-libraries/
+.architecture-lib/
 .consolidation-lib/
 .renv-cache/
 .shinyapps-lib/

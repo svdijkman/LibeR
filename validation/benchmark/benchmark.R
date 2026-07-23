@@ -6,9 +6,6 @@ script_path <- if (length(script_arg)) sub("^--file=", "", script_arg[[1L]]) els
   file.path("validation", "benchmark", "benchmark.R")
 benchmark_dir <- normalizePath(dirname(script_path), winslash = "/", mustWork = TRUE)
 root <- normalizePath(file.path(benchmark_dir, "..", ".."), winslash = "/", mustWork = TRUE)
-local_libraries <- c(file.path(root, ".testlib"), file.path(root, ".lib"))
-local_libraries <- local_libraries[dir.exists(local_libraries)]
-.libPaths(unique(c(local_libraries, .libPaths())))
 
 option_value <- function(name, default = NULL) {
   prefix <- paste0("--", name, "=")
@@ -27,6 +24,12 @@ split_option <- function(value) {
   value <- trimws(strsplit(as.character(value), ",", fixed = TRUE)[[1L]])
   toupper(value[nzchar(value)])
 }
+
+source(file.path(root, "tools", "validation-runtime.R"), local = TRUE)
+validation_runtime <- liber_validation_library(
+  root, c("LibeRtAD", "LibeRation"),
+  library = option_value("library", Sys.getenv("LIBER_VALIDATION_LIBRARY", ""))
+)
 
 profile_name <- tolower(option_value("profile", "quick"))
 scenario_name <- tolower(option_value("scenario", "iv-bolus"))
@@ -147,6 +150,29 @@ utils::write.table(
   col.names = FALSE, quote = FALSE, na = "."
 )
 saveRDS(list(model = model, data = data), file.path(fixture_dir, "fixture.rds"), version = 3L)
+git_state <- liber_validation_git(root)
+validation_provenance <- liber_validation_provenance(
+  root = root, packages = c("LibeRtAD", "LibeRation"),
+  library = validation_runtime$path,
+  inputs = c(
+    file.path(root, "ecosystem.json"),
+    file.path(benchmark_dir, "benchmark.R"),
+    file.path(benchmark_dir, "liberation-worker.R"),
+    file.path(benchmark_dir, "scenarios.R"),
+    file.path(fixture_dir, "benchmark.dat"),
+    file.path(fixture_dir, "fixture.rds")
+  ),
+  seeds = list(simulation = seed),
+  tolerances = list(estimation = 1e-6),
+  dependencies = c("Rcpp", "jsonlite", "openssl"),
+  metadata = list(
+    profile = profile_name, scenario = scenario_name, methods = as.list(methods),
+    engines = as.list(engines), repeats = repeats, warmups = warmups,
+    covariance = include_covariance, simulation = run_simulation,
+    optimizer_backend = optimizer_backend, population_objective = population_objective
+  ),
+  output = file.path(output_root, "provenance.json")
+)
 
 method_covariance <- function(method) {
   isTRUE(include_covariance) && method %in% c("FO", "FOCE", "FOCEI", "LAPLACE", "ITS", "IMP")
@@ -298,6 +324,11 @@ empty_row <- function(engine, workload, method, repeat_index, measured) {
   data.frame(
     engine = engine, workload = workload, method = method, profile = profile_name,
     scenario = scenario_name,
+    release = liber_validation_manifest(root)$release,
+    git_commit = git_state$commit,
+    libertad_version = as.character(utils::packageVersion("LibeRtAD")),
+    liberation_version = as.character(utils::packageVersion("LibeRation")),
+    validation_library = validation_runtime$path,
     repetition = as.integer(repeat_index), measured = isTRUE(measured),
     subjects = profile$subjects, input_records = nrow(data),
     simulation_replicates = if (workload == "simulation") profile$simulations else 1L,
@@ -333,7 +364,12 @@ same_run <- function(row, engine, workload, method, repeat_index, measured) {
     identical(as.character(row$workload[[1L]]), workload) &&
     identical(as.character(row$method[[1L]]), method) &&
     identical(as.integer(row$repetition[[1L]]), as.integer(repeat_index)) &&
-    identical(as.logical(row$measured[[1L]]), isTRUE(measured))
+    identical(as.logical(row$measured[[1L]]), isTRUE(measured)) &&
+    "git_commit" %in% names(row) &&
+    identical(as.character(row$git_commit[[1L]]), git_state$commit) &&
+    "liberation_version" %in% names(row) &&
+    identical(as.character(row$liberation_version[[1L]]),
+              as.character(utils::packageVersion("LibeRation")))
 }
 append_row <- function(row) {
   if (length(raw_rows)) {
@@ -353,7 +389,8 @@ run_liberation <- function(workload, method, repeat_index, measured) {
   dir.create(directory, recursive = TRUE, showWarnings = FALSE)
   config <- list(
     workload = workload, method = method, model = model, data = data,
-    library_paths = .libPaths(),
+    library_paths = unique(c(validation_runtime$path, .libPaths())),
+    expected_versions = validation_runtime$expected,
     cpp_population_objective = identical(population_objective, "cpp"),
     arguments = if (workload == "estimation") liberation_arguments(method) else list(
       nsim = profile$simulations, random_effects = TRUE, residual = TRUE,
@@ -658,6 +695,11 @@ report <- c(
   paste0("- CPU: ", Sys.getenv("PROCESSOR_IDENTIFIER", unset = "not reported")),
   paste0("- R: ", R.version.string),
   paste0("- LibeRation: ", as.character(utils::packageVersion("LibeRation"))),
+  paste0("- LibeRtAD: ", as.character(utils::packageVersion("LibeRtAD"))),
+  paste0("- Ecosystem release: `", liber_validation_manifest(root)$release, "`."),
+  paste0("- Git commit: `", git_state$commit, "`."),
+  paste0("- Tracked worktree clean: ", git_state$tracked_worktree_clean, "."),
+  paste0("- Validation library: `", validation_runtime$path, "`."),
   paste0("- PsN execute: `", execute_path, "`"), "",
   "## Interpretation limits", "",
   "- These are matched workflow benchmarks, not proof of mathematical equivalence. Parameter outputs are retained in `raw-results.csv` for sanity checking.",
@@ -678,6 +720,11 @@ metadata <- list(
   covariance = include_covariance, simulation = run_simulation, seed = seed,
   system = Sys.info(), r_version = R.version.string,
   liberation_version = as.character(utils::packageVersion("LibeRation")),
+  libertad_version = as.character(utils::packageVersion("LibeRtAD")),
+  release = liber_validation_manifest(root)$release,
+  git = git_state,
+  validation_library = validation_runtime$path,
+  provenance_sha256 = liber_validation_sha256(file.path(output_root, "provenance.json")),
   execute = unname(execute_path), library_paths = .libPaths()
 )
 saveRDS(metadata, file.path(output_root, "metadata.rds"), version = 3L)

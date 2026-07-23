@@ -1,3 +1,9 @@
+# LibeRality 0.2.1
+
+- Expands analytic information-matrix and design-criterion regression coverage
+  and runs all maintained PopED/PFIM external-validation fixtures repeatedly.
+- Adds a runnable example and browser-level workbench startup coverage.
+
 # LibeRality 0.2.0
 
 - Adds a public typed-contract restore boundary for safe LibeRties result

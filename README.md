@@ -16,7 +16,7 @@ workflow and a single C++ numerical runtime.
 - **LibeRator** (Adaptive Therapeutic Optimisation and Recommendation) owns
   encrypted longitudinal patient evidence, Bayesian individualisation,
   time-varying patient states, versioned therapeutic endpoints, and
-  uncertainty-aware regimen comparison. Version 0.1.0 is for research and
+  uncertainty-aware regimen comparison. LibeRator remains for research and
   teaching, with a security and governance architecture intended for later
   clinical hardening.
 - **LibeRality** owns model-informed optimal clinical trial design: expected
@@ -49,13 +49,15 @@ simulation runs.
 
 LibeRties provides durable local workers and an authenticated typed-JSON remote
 API with tenant-derived namespaces, scoped/expiring credentials, an
-administrative audit chain, optional authenticated at-rest encryption,
+administrative audit chain, optional authenticated at-rest encryption (including
+terminal worker logs),
 cryptographic integrity checks, restart recovery, quotas, state-transition
 locking, and monitored wall-time, CPU, process-tree memory, payload, result,
 and storage limits. The built-in worker is a **restricted subprocess, not a
 hostile-code sandbox**. Production deployments must add TLS termination and
-host-level OS-account or container isolation; `ls_server_preflight()` refuses
-a production start when the declared boundary is incomplete.
+host-level OS-account or container isolation; `ls_server_preflight()` requires
+measured Linux container/cgroup evidence or a deployment-integrated isolation
+probe and refuses a production start when the boundary is incomplete.
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md),
 [docs/VALIDATION.md](docs/VALIDATION.md), [docs/REMOTE.md](docs/REMOTE.md),

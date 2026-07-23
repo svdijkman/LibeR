@@ -29,7 +29,8 @@ estimates is a failed validation, not a speed result.
 
 ## LibeRality external optimal-design validation
 
-`validation/liberality/external/run-validation.R` independently constructs
+`tools/external-validation.R` creates a version-exact isolated LibeR stack and
+then independently constructs
 matched population-FO designs in LibeRality, PopED 0.7.0, and PFIM 7.0.3. The
 suite compares complete Fisher matrices after transforming PFIM residual-error
 standard deviations to LibeRality's variance scale. It additionally compares
@@ -86,17 +87,23 @@ The July 2026 Windows benchmark produced:
 | ADVAN1 modelled duration (`RATE=-2`, `D1`) | 4.35503544e-9 | 6 |
 
 The compact FOCEI benchmark estimates clearance with fixed residual and random
-effect variances, then compares the final fixed effect and every subject ETA.
-Against NONMEM 7.3, the July 2026 benchmark gave an absolute THETA1 difference
-of `1.28471e-4` and a maximum ETA1 difference of `7.29743e-5`.
+effect variances, then compares the final fixed effect, every subject ETA, and
+the covariance-step standard error. Against NONMEM 7.3, the July 2026 benchmark
+gave absolute differences of `1.33651e-4` for THETA1, `6.07381e-5` for ETA1,
+and `3.04130e-3` for the THETA1 standard error.
 
-Run the benchmark from `validation/nonmem` after installing the three local
-packages:
+Create the exact isolated stack and run the benchmark from the repository root:
 
-```r
-Rscript run-validation.R --run
+```text
+Rscript tools/create-validation-library.R --source
+Rscript validation/nonmem/run-validation.R --run
 ```
 
 Without `--run`, existing NONMEM tables are reused. The runner still checks
 record alignment and numerical tolerances, and it fails if PsN reports success
 without producing a NONMEM listing and the expected table.
+
+LibeRator has a separate deterministic analytic virtual-patient runner at
+`validation/liberator/run-validation.R`. LibeRary's strict corpus gate is
+documented in `validation/liberary/README.md`; machine-generated Tier C/D data
+can support development but cannot qualify a release as gold-standard evidence.

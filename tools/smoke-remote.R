@@ -2,8 +2,10 @@ args <- commandArgs(trailingOnly = FALSE)
 file_arg <- grep("^--file=", args, value = TRUE)
 script <- if (length(file_arg)) sub("^--file=", "", file_arg[[1L]]) else "tools/smoke-remote.R"
 root <- normalizePath(file.path(dirname(script), ".."), winslash = "/", mustWork = TRUE)
-project_library <- file.path(root, ".lib")
-.libPaths(unique(c(project_library, .libPaths())))
+source(file.path(root, "tools", "validation-runtime.R"), local = TRUE)
+validation_runtime <- liber_validation_library(
+  root, c("LibeRtAD", "LibeRation", "LibeRties")
+)
 
 library(LibeRties)
 server_root <- tempfile("liberties-http-")

@@ -87,6 +87,9 @@ Rscript tools/smoke-remote.R
   API operations derive the user from the bearer token.
 - Scoped, optionally expiring bearer tokens and request throttling constrain
   access; user/token administration is retained in a hash-chained audit log.
+- Forwarded client addresses are ignored unless the immediate peer is in the
+  policy's exact/CIDR `trusted_proxies` allowlist. Rate-limit identities are
+  pruned every minute and capped by `max_rate_limit_keys`.
 - Queue, payload, result-download, storage, wall-time, CPU-time, complete
   process-tree size, and resident memory limits are enforced per tenant and
   recorded in job provenance.
@@ -94,6 +97,9 @@ Rscript tools/smoke-remote.R
   resource failure cannot be overwritten by a late worker completion.
 - API responses disable caching and framing. Cross-origin access is not enabled
   by default.
+- Remote logs redact common bearer/API-key/password/email forms and enforce
+  line/byte response ceilings. With encrypted storage, plaintext live streams
+  are sealed into authenticated encrypted archives when a job becomes terminal.
 
 For a remote deployment, keep the R service on a private/loopback interface and
 terminate TLS at a maintained reverse proxy. `ls_server_preflight()` checks the
@@ -104,4 +110,25 @@ environment, job-specific working directory, and tenant-specific storage.
 Resource monitoring also survives queue-controller restarts by verifying PID
 creation times before acting on a recovered worker. Production hosting must
 still add OS-account or container isolation; an R subprocess alone is not
-claimed as a hostile-code sandbox.
+claimed as a hostile-code sandbox. Production preflight accepts automatic
+Linux container/cgroup evidence or a deployment-integrated `isolation_probe`;
+the descriptive `LIBERTIES_OS_ISOLATION` variable does not satisfy the check.
+
+Example proxy-aware policy:
+
+```r
+policy <- ls_security_policy(
+  production = TRUE,
+  trusted_proxies = c("127.0.0.1", "10.20.0.0/16"),
+  requests_per_minute = 120,
+  max_rate_limit_keys = 10000
+)
+ls_run_api(
+  root, host = "127.0.0.1", behind_tls_proxy = TRUE,
+  policy = policy,
+  isolation_probe = function() deployment_sandbox_status()
+)
+```
+
+The probe must return `list(active = TRUE, provider = ..., evidence = ...)`
+only after checking the real service/container boundary.

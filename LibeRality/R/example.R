@@ -3,6 +3,10 @@
 #' Creates a two-arm oral PK design with sampling-time and allocation variables,
 #' parameter uncertainty, operational constraints, and representative criteria.
 #' @return A list containing model, design, and criteria.
+#' @examples
+#' example <- lity_example()
+#' result <- lity_evaluate(example$design, lity_criterion_D())
+#' result$criterion
 #' @export
 lity_example <- function() {
   model <- LibeRation::nm_model(
@@ -74,4 +78,3 @@ lity_example <- function() {
   )
   list(model = model, design = design, criteria = criteria)
 }
-

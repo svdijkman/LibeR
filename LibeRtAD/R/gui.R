@@ -196,6 +196,7 @@ libertad_gui <- function(benchmark_root = NULL, host = "127.0.0.1", port = NULL,
     session$onSessionEnded(function() .ad_gui_stop_process(state))
   }
   app <- shiny::shinyApp(ui, server)
+  if (is.null(launch.browser)) return(app)
   shiny::runApp(app, host = host, port = port, launch.browser = launch.browser)
   invisible(app)
 }

@@ -5,8 +5,16 @@ script_arg <- grep("^--file=", commandArgs(), value = TRUE)
 script <- if (length(script_arg)) sub("^--file=", "", script_arg[[1L]]) else "run-validation.R"
 fixture_dir <- normalizePath(dirname(script), winslash = "/", mustWork = TRUE)
 root <- normalizePath(file.path(fixture_dir, "..", ".."), winslash = "/", mustWork = TRUE)
-project_library <- file.path(root, ".lib")
-if (dir.exists(project_library)) .libPaths(unique(c(project_library, .libPaths())))
+source(file.path(root, "tools", "validation-runtime.R"), local = TRUE)
+option_value <- function(name, default = NULL) {
+  prefix <- paste0("--", name, "=")
+  value <- args[startsWith(args, prefix)]
+  if (!length(value)) default else sub(prefix, "", value[[length(value)]], fixed = TRUE)
+}
+validation_runtime <- liber_validation_library(
+  root, c("LibeRtAD", "LibeRation"),
+  library = option_value("library", Sys.getenv("LIBER_VALIDATION_LIBRARY", ""))
+)
 
 if (!requireNamespace("LibeRation", quietly = TRUE)) {
   stop("Install LibeRation before running NONMEM validation.", call. = FALSE)
@@ -60,6 +68,7 @@ on.exit(setwd(old), add = TRUE)
 columns <- c("ID", "TIME", "EVID", "AMT", "RATE", "CMT", "DV", "MDV")
 theta_table <- function(x) data.frame(THETA = seq_along(x), Value = x)
 omega_zero <- data.frame(OMEGA = 1, Value = 0, FIX = TRUE)
+validation_results <- list()
 
 validate_case <- function(name, model, tolerance, data_columns = columns) {
   data_path <- paste0(tolower(name), ".dat")
@@ -86,6 +95,13 @@ validate_case <- function(name, model, tolerance, data_columns = columns) {
     "%s: PASS (max |LibeR - NONMEM| = %.9g; %d compared records)\n",
     name, maximum, sum(compare)
   ))
+  validation_results[[name]] <<- data.frame(
+    case = name, kind = "prediction", passed = TRUE,
+    maximum_absolute_difference = maximum, compared_records = sum(compare),
+    theta_difference = NA_real_, eta_difference = NA_real_,
+    covariance_se_difference = NA_real_,
+    tolerance = tolerance, stringsAsFactors = FALSE
+  )
 }
 
 base_input <- columns
@@ -201,7 +217,7 @@ validate_estimation <- function() {
   )
   fit <- LibeRation::nm_est(
     model, data, method = "FOCEI", maxit = 300L, eta_maxit = 150L,
-    tolerance = 1e-8
+    tolerance = 1e-8, covariance = TRUE, covariance_type = "hessian"
   )
   extension <- readLines("estimation.ext", warn = FALSE)
   header <- grep("^[[:space:]]*ITERATION", extension)[[1L]]
@@ -214,22 +230,76 @@ validate_estimation <- function() {
   final <- parsed[parsed$ITERATION == -1000000000, , drop = FALSE]
   if (nrow(final) != 1L) stop("Unable to identify the final NONMEM estimation record.", call. = FALSE)
   nonmem_theta <- final$THETA1[[1L]]
+  standard_error <- parsed[parsed$ITERATION == -1000000001, , drop = FALSE]
+  if (nrow(standard_error) != 1L) {
+    stop("Unable to identify the NONMEM standard-error record.", call. = FALSE)
+  }
+  nonmem_se <- standard_error$THETA1[[1L]]
+  liber_se <- unname(fit$covariance$se[["THETA1"]])
   table <- read_nonmem_table("estimation.tab")
   eta_column <- grep("^ETA", names(table), value = TRUE)[[1L]]
   nonmem_eta <- tapply(table[[eta_column]], table$ID, function(value) value[[1L]])
   theta_difference <- abs(fit$theta[[1L]] - nonmem_theta)
   eta_difference <- max(abs(fit$eta[, 1L] - unname(nonmem_eta)))
+  covariance_se_difference <- abs(liber_se - nonmem_se)
   if (!is.finite(theta_difference) || theta_difference > 0.03 ||
-      !is.finite(eta_difference) || eta_difference > 0.08) {
+      !is.finite(eta_difference) || eta_difference > 0.08 ||
+      !is.finite(covariance_se_difference) || covariance_se_difference > 0.01) {
     stop(
       "FOCEI NONMEM comparison failed; THETA difference = ", theta_difference,
-      ", ETA difference = ", eta_difference, ".", call. = FALSE
+      ", ETA difference = ", eta_difference,
+      ", covariance SE difference = ", covariance_se_difference, ".", call. = FALSE
     )
   }
   cat(sprintf(
-    "FOCEI estimation: PASS (|THETA1| difference %.6g; max |ETA1| difference %.6g)\n",
-    theta_difference, eta_difference
+    paste0("FOCEI estimation: PASS (|THETA1| difference %.6g; ",
+           "max |ETA1| difference %.6g; |SE| difference %.6g)\n"),
+    theta_difference, eta_difference, covariance_se_difference
   ))
+  validation_results[["FOCEI estimation"]] <<- data.frame(
+    case = "FOCEI", kind = "estimation", passed = TRUE,
+    maximum_absolute_difference = NA_real_, compared_records = length(nonmem_eta),
+    theta_difference = theta_difference, eta_difference = eta_difference,
+    covariance_se_difference = covariance_se_difference,
+    tolerance = max(0.03, 0.08), stringsAsFactors = FALSE
+  )
 }
 
 validate_estimation()
+
+stamp <- format(Sys.time(), "%Y%m%dT%H%M%S", tz = "UTC")
+output <- option_value("output", file.path(fixture_dir, "results", stamp))
+if (!grepl("^(?:[A-Za-z]:[/\\\\]|/)", output, perl = TRUE)) {
+  output <- file.path(root, output)
+}
+dir.create(output, recursive = TRUE, showWarnings = FALSE)
+results <- do.call(rbind, validation_results)
+utils::write.csv(results, file.path(output, "comparisons.csv"), row.names = FALSE)
+evidence_inputs <- list.files(
+  fixture_dir, pattern = "[.](dat|mod|tab|ext)$", full.names = TRUE
+)
+provenance <- liber_validation_provenance(
+  root = root, packages = c("LibeRtAD", "LibeRation"),
+  library = validation_runtime$path,
+  inputs = evidence_inputs,
+  seeds = list(),
+  tolerances = list(
+    prediction = stats::setNames(as.list(results$tolerance[results$kind == "prediction"]),
+                                 results$case[results$kind == "prediction"]),
+    focei_theta = 0.03, focei_eta = 0.08, focei_covariance_se = 0.01
+  ),
+  dependencies = c("Rcpp", "jsonlite", "openssl"),
+  metadata = list(
+    nonmem_executed = run_nonmem,
+    execute = unname(Sys.which("execute")),
+    cases = nrow(results), all_passed = all(results$passed)
+  ),
+  output = file.path(output, "provenance.json")
+)
+jsonlite::write_json(
+  list(schema = "liber.nonmem-validation/1", passed = all(results$passed),
+       comparisons = split(results, seq_len(nrow(results))), provenance = provenance),
+  file.path(output, "summary.json"), auto_unbox = TRUE, pretty = TRUE,
+  null = "null", digits = 17
+)
+cat("Validation evidence:", normalizePath(output, winslash = "/"), "\n")

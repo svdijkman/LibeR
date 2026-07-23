@@ -16,6 +16,21 @@ if (length(config$library_paths)) {
   .libPaths(unique(c(config$library_paths, .libPaths())))
 }
 suppressPackageStartupMessages(library(LibeRation))
+if (length(config$expected_versions)) {
+  actual_versions <- vapply(names(config$expected_versions), function(package) {
+    as.character(utils::packageVersion(package))
+  }, character(1))
+  expected_versions <- unlist(config$expected_versions, use.names = TRUE)
+  mismatch <- actual_versions != expected_versions[names(actual_versions)]
+  if (any(mismatch)) {
+    stop(
+      "Benchmark worker package version mismatch: ",
+      paste0(names(actual_versions)[mismatch], " expected ",
+             expected_versions[names(actual_versions)[mismatch]], ", found ",
+             actual_versions[mismatch], collapse = "; "), call. = FALSE
+    )
+  }
+}
 options(
   LibeRation.cpp_population_objective = isTRUE(
     config$cpp_population_objective %||% TRUE

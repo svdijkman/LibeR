@@ -64,8 +64,10 @@ library_shiny <- function(
     Sys.setenv(LIBERARY_CATALOG = normalizePath(catalog, winslash = "/", mustWork = FALSE))
   }
 
+  app <- shiny::shinyAppDir(app_dir)
+  if (is.null(launch.browser)) return(app)
   shiny::runApp(
-    app_dir,
+    app,
     host = host,
     port = port,
     launch.browser = launch.browser

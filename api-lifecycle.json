@@ -1,0 +1,22 @@
+{
+  "schema": "liber.api-lifecycle/1",
+  "policy": {
+    "default": "evolving",
+    "stable_contract": "Compatibility is maintained within the consolidated release line.",
+    "evolving": "Public pre-1.0 API; changes require NEWS and migration guidance.",
+    "experimental": "Research prototype; signature and semantics may change without compatibility guarantees.",
+    "deprecated": "Retained temporarily with a documented replacement and removal release."
+  },
+  "stable_contracts": {
+    "LibeRtAD": ["ad_compile", "ad_engine_info", "ad_ir", "ad_load_tape"],
+    "LibeRation": ["nm_dataset", "nm_est", "nm_model", "nm_model_from_contract", "nm_model_to_contract", "nm_simulate", "nm_support_matrix"],
+    "LibeRary": ["library_catalog_root", "library_get", "library_list", "library_model", "library_search", "library_validate"],
+    "LibeRator": ["lator_assess", "lator_patient_add_event", "lator_patient_get", "lator_patient_new", "lator_patient_save", "lator_regimen_candidates", "lator_regimen_optimise", "lator_regimen_predict"],
+    "LibeRality": ["lity_design", "lity_evaluate", "lity_optimise", "lity_to_liberation", "lity_validate"],
+    "LibeRties": ["ls_job", "ls_job_decode", "ls_job_encode", "ls_result_decode", "ls_result_encode", "ls_security_policy", "ls_server_preflight"]
+  },
+  "experimental": {
+    "LibeRation": ["nm_component", "nm_component_code", "nm_dae_config", "nm_dde_config", "nm_experimental_config", "nm_factorial_chain", "nm_factorial_hmm_config", "nm_qsp_model", "nm_qsp_system", "nm_switching_state_space_config"]
+  },
+  "deprecated": {}
+}

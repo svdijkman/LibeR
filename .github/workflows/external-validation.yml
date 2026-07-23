@@ -21,7 +21,13 @@ jobs:
           extra-packages: |
             any::pak
             any::testthat
-      - name: Install ecosystem and external engines
+      - name: Install source dependency graph
+        run: >-
+          Rscript -e "pak::pkg_install(c('./LibeRtAD', './LibeRation',
+          './LibeRality'), dependencies = TRUE, upgrade = FALSE)"
+      - name: Validate exact ecosystem build against external engines
+        env:
+          LIBERALITY_EXTERNAL_REPETITIONS: "3"
         run: Rscript tools/external-validation.R
       - name: Upload validation evidence
         uses: actions/upload-artifact@v4

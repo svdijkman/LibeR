@@ -1,3 +1,11 @@
+# LibeRties 0.7.1
+
+- Requires measured OS/container isolation evidence in production instead of
+  trusting an environment label, and applies trusted-proxy-aware client IPs.
+- Bounds rate-limit state and returned logs, redacts common secrets, and
+  encrypts terminal worker logs at rest when queue encryption is configured.
+- Adds malformed-contract fuzz coverage and browser-level admin GUI coverage.
+
 # LibeRties 0.7.0
 
 - Upgrades typed jobs and results to wire contract v2, while retaining read

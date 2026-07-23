@@ -1,3 +1,10 @@
+# LibeRary 0.7.3
+
+- Adds a fail-closed reference-corpus release gate that admits only independent
+  Tier A/B evidence and never treats machine-generated silver data as gold.
+- Adds browser startup coverage and makes the catalogue GUI return a Shiny app
+  without launching a browser when requested.
+
 # LibeRary 0.7.2
 
 - Quarantines automated catalogue output: ingestion can publish only

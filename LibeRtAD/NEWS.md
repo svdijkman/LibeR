@@ -1,3 +1,10 @@
+# LibeRtAD 0.7.6
+
+- Adds randomized value, derivative, and conditional-expression property tests.
+- Makes CppAD temporary-file handling safe in debug R builds and converts CppAD
+  assertion exits into catchable R errors instead of terminating the session.
+- Adds browser-level GUI startup coverage and a non-launching app return path.
+
 # LibeRtAD 0.7.5
 
 - Adds ecosystem compatibility metadata, continuous-integration coverage, and

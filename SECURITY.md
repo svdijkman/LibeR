@@ -16,7 +16,11 @@ tokens, request throttling, authenticated at-rest storage encryption, and an
 external OS-account/container sandbox. LibeRties' built-in restricted R
 subprocess is defense in depth, not a hostile-code isolation boundary. Run
 `LibeRties::ls_server_preflight(..., strict = TRUE)` before starting a
-production service and preserve the audit log outside the worker namespace.
+production service, provide a probe connected to the actual sandbox on
+platforms without built-in detection, configure the exact trusted proxy
+addresses, and preserve the audit log outside the worker namespace. A
+deployment label or forwarded header from an untrusted peer is never accepted
+as security evidence.
 
 Patient-facing deployments additionally require a jurisdiction-specific threat
 model, identity/access management, backup and recovery validation, key

@@ -10,6 +10,24 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// liberation_native_optimizer
+Rcpp::List liberation_native_optimizer(const Rcpp::Function& objective, const Rcpp::Function& gradient, const Rcpp::NumericVector& start, const Rcpp::NumericVector& lower, const Rcpp::NumericVector& upper, int maxit, double tolerance, int trace);
+RcppExport SEXP _LibeRation_liberation_native_optimizer(SEXP objectiveSEXP, SEXP gradientSEXP, SEXP startSEXP, SEXP lowerSEXP, SEXP upperSEXP, SEXP maxitSEXP, SEXP toleranceSEXP, SEXP traceSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const Rcpp::Function& >::type objective(objectiveSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::Function& >::type gradient(gradientSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::NumericVector& >::type start(startSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::NumericVector& >::type lower(lowerSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::NumericVector& >::type upper(upperSEXP);
+    Rcpp::traits::input_parameter< int >::type maxit(maxitSEXP);
+    Rcpp::traits::input_parameter< double >::type tolerance(toleranceSEXP);
+    Rcpp::traits::input_parameter< int >::type trace(traceSEXP);
+    rcpp_result_gen = Rcpp::wrap(liberation_native_optimizer(objective, gradient, start, lower, upper, maxit, tolerance, trace));
+    return rcpp_result_gen;
+END_RCPP
+}
 // liberation_population_objective_create
 SEXP liberation_population_objective_create(SEXP engine_pointer, const Rcpp::List& subject_data, const Rcpp::List& primary_tape_pointers, const Rcpp::List& curvature_tape_pointers, const Rcpp::List& config);
 RcppExport SEXP _LibeRation_liberation_population_objective_create(SEXP engine_pointerSEXP, SEXP subject_dataSEXP, SEXP primary_tape_pointersSEXP, SEXP curvature_tape_pointersSEXP, SEXP configSEXP) {
@@ -464,24 +482,6 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// liberation_native_optimizer
-Rcpp::List liberation_native_optimizer(const Rcpp::Function& objective, const Rcpp::Function& gradient, const Rcpp::NumericVector& start, const Rcpp::NumericVector& lower, const Rcpp::NumericVector& upper, int maxit, double tolerance, int trace);
-RcppExport SEXP _LibeRation_liberation_native_optimizer(SEXP objectiveSEXP, SEXP gradientSEXP, SEXP startSEXP, SEXP lowerSEXP, SEXP upperSEXP, SEXP maxitSEXP, SEXP toleranceSEXP, SEXP traceSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const Rcpp::Function& >::type objective(objectiveSEXP);
-    Rcpp::traits::input_parameter< const Rcpp::Function& >::type gradient(gradientSEXP);
-    Rcpp::traits::input_parameter< const Rcpp::NumericVector& >::type start(startSEXP);
-    Rcpp::traits::input_parameter< const Rcpp::NumericVector& >::type lower(lowerSEXP);
-    Rcpp::traits::input_parameter< const Rcpp::NumericVector& >::type upper(upperSEXP);
-    Rcpp::traits::input_parameter< int >::type maxit(maxitSEXP);
-    Rcpp::traits::input_parameter< double >::type tolerance(toleranceSEXP);
-    Rcpp::traits::input_parameter< int >::type trace(traceSEXP);
-    rcpp_result_gen = Rcpp::wrap(liberation_native_optimizer(objective, gradient, start, lower, upper, maxit, tolerance, trace));
-    return rcpp_result_gen;
-END_RCPP
-}
 // liberation_mixture_component_nll
 Rcpp::NumericMatrix liberation_mixture_component_nll(SEXP engine_pointer, const Rcpp::DataFrame& data, const Rcpp::NumericVector& theta, const Rcpp::NumericMatrix& eta, const Rcpp::NumericVector& sigma);
 RcppExport SEXP _LibeRation_liberation_mixture_component_nll(SEXP engine_pointerSEXP, SEXP dataSEXP, SEXP thetaSEXP, SEXP etaSEXP, SEXP sigmaSEXP) {
@@ -499,6 +499,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_LibeRation_liberation_native_optimizer", (DL_FUNC) &_LibeRation_liberation_native_optimizer, 8},
     {"_LibeRation_liberation_population_objective_create", (DL_FUNC) &_LibeRation_liberation_population_objective_create, 5},
     {"_LibeRation_liberation_population_objective_value", (DL_FUNC) &_LibeRation_liberation_population_objective_value, 2},
     {"_LibeRation_liberation_population_objective_gradient", (DL_FUNC) &_LibeRation_liberation_population_objective_gradient, 2},
@@ -531,7 +532,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_LibeRation_liberation_objective_tape_eta_modes", (DL_FUNC) &_LibeRation_liberation_objective_tape_eta_modes, 7},
     {"_LibeRation_liberation_objective_tape_point_gradients", (DL_FUNC) &_LibeRation_liberation_objective_tape_point_gradients, 2},
     {"_LibeRation_liberation_objective_tape_eta_metropolis", (DL_FUNC) &_LibeRation_liberation_objective_tape_eta_metropolis, 9},
-    {"_LibeRation_liberation_native_optimizer", (DL_FUNC) &_LibeRation_liberation_native_optimizer, 8},
     {"_LibeRation_liberation_mixture_component_nll", (DL_FUNC) &_LibeRation_liberation_mixture_component_nll, 5},
     {NULL, NULL, 0}
 };

@@ -1,3 +1,13 @@
+# LibeRation 0.8.1
+
+- Corrects covariance scaling for NONMEM and likelihood Hessian conventions and
+  validates covariance standard errors against paired NONMEM runs.
+- Extracts the native optimizer into a dedicated compilation unit, enables
+  large Windows object files, and adds randomized ADVAN and parameter-bound
+  property tests.
+- Adds release-qualified capability metadata and reproducible validation
+  provenance for analytical ADVAN, steady-state, ODE, FO, and FOCEI paths.
+
 # LibeRation 0.8.0
 
 - Adds a versioned semantic model contract used by LibeRties so advanced HMM,

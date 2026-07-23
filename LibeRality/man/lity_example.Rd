@@ -13,3 +13,8 @@ A list containing model, design, and criteria.
 Creates a two-arm oral PK design with sampling-time and allocation variables,
 parameter uncertainty, operational constraints, and representative criteria.
 }
+\examples{
+example <- lity_example()
+result <- lity_evaluate(example$design, lity_criterion_D())
+result$criterion
+}

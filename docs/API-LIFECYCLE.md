@@ -1,13 +1,20 @@
 # Public API lifecycle
 
-Only exported functions documented in a package manual are public API.
-Unexported functions, R6 private members, widget payload fields, and C++ headers
-outside the installed `LibeRtAD` interface are internal and may change between
-minor releases.
+The LibeR packages are pre-1.0, but their public surface is no longer treated
+as one undifferentiated compatibility promise. `api-lifecycle.json` classifies
+every exported symbol when `tools/api-inventory.R` runs:
 
-Breaking changes to exported functions, semantic model contracts, job/result
-wire formats, or durable workspace schemas require a major/minor compatibility
-set, a reader/migration path for the previous version, and explicit NEWS
-entries. Deprecations should warn for at least one compatibility release before
-removal. Contract fixtures in LibeRation, LibeRality, and LibeRties are the
-executable specification for cross-package interoperability.
+- **stable-contract**: cross-package or commonly scripted interfaces whose
+  compatibility is maintained within a consolidated release line;
+- **evolving**: supported public pre-1.0 interfaces whose changes require NEWS
+  entries and migration guidance;
+- **experimental**: explicitly research-only families that may change as their
+  numerical contract matures;
+- **deprecated**: transitional interfaces with a documented replacement and
+  removal target.
+
+The generated CSV/JSON inventory is release evidence. Configuration is checked
+against each package's actual NAMESPACE, so renamed or removed classified
+symbols fail the inventory build instead of silently disappearing. Feature
+validation status remains separate and is reported by
+`LibeRation::nm_support_matrix()`.

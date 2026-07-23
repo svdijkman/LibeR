@@ -17,8 +17,22 @@ Every release must:
    the compatibility manifest; and
 7. be tagged from the exact source commit used to build the artefacts.
 
-Use `Rscript tools/release.R` from a clean checkout. It refuses a version
-mismatch between package DESCRIPTION files and `ecosystem.json`, builds into a
-release-specific directory, and writes SHA-256 checksums. Release notes must
+Use `Rscript tools/release.R` from a clean checkout. It refuses dirty source or
+a version mismatch between package DESCRIPTION files and `ecosystem.json`,
+installs all six packages into an isolated release library, checks every source
+archive against that exact stack, and emits source/Windows artifacts, API
+lifecycle inventory, per-package check logs, a release-evidence manifest, and
+SHA-256 checksums. `LIBER_RELEASE_ALLOW_DIRTY=true` is available only for a
+non-publishable development build and is recorded as such. Release notes must
 name skipped external tools and must not promote experimental smoke tests to
 reference validation.
+
+Scientific validation uses a separate immutable library named from the
+consolidated release, Git commit, and dirty-source hash:
+
+```text
+Rscript tools/create-validation-library.R --source
+```
+
+Validation runners reject libraries whose package versions or recorded source
+provenance do not match the current checkout.

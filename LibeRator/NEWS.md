@@ -1,3 +1,9 @@
+# LibeRator 0.2.4
+
+- Adds deterministic analytic validation of longitudinal assimilation,
+  regimen selection, and future prediction for a virtual patient.
+- Adds a runnable teaching example and browser-level workbench startup coverage.
+
 # LibeRator 0.2.3
 
 - Aligns package contracts and compatibility metadata with the versioned

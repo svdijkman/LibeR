@@ -59,6 +59,7 @@ jobs:
           extra-packages: |
             any::pak
             any::shinytest2
+            any::DT
       - name: Run browser-level GUI regression tests
         env:
           LIBER_RUN_BROWSER_TESTS: "true"

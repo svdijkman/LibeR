@@ -17,7 +17,9 @@ liber_validation_git <- function(root) {
   status <- run_git(c("status", "--porcelain=v1", "--untracked-files=all"))
   difference <- run_git(c("diff", "--binary", "HEAD", "--"))
   status_lines <- if (nzchar(status)) strsplit(status, "\n", fixed = TRUE)[[1L]] else character()
-  untracked <- substring(status_lines[startsWith(status_lines, "?? ")], 4L)
+  untracked_status <- status_lines[startsWith(status_lines, "?? ")]
+  tracked_status <- status_lines[!startsWith(status_lines, "?? ")]
+  untracked <- substring(untracked_status, 4L)
   untracked <- file.path(root, untracked)
   untracked <- untracked[file.exists(untracked) & !dir.exists(untracked)]
   untracked_hashes <- if (length(untracked)) vapply(untracked, liber_validation_sha256, character(1)) else character()
@@ -30,8 +32,9 @@ liber_validation_git <- function(root) {
   } else NA_character_
   list(
     commit = if (nzchar(commit)) commit else NA_character_,
-    tracked_worktree_clean = !nzchar(trimws(status)),
-    tracked_status = status_lines,
+    tracked_worktree_clean = !length(tracked_status),
+    tracked_status = tracked_status,
+    untracked_status = untracked_status,
     tracked_diff_sha256 = difference_hash
   )
 }

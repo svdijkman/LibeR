@@ -70,11 +70,33 @@ theta_table <- function(x) data.frame(THETA = seq_along(x), Value = x)
 omega_zero <- data.frame(OMEGA = 1, Value = 0, FIX = TRUE)
 validation_results <- list()
 
-validate_case <- function(name, model, tolerance, data_columns = columns) {
+validate_case <- function(name, model, tolerance, data_columns = columns,
+                          allow_unavailable = FALSE) {
   data_path <- paste0(tolower(name), ".dat")
   model_path <- paste0(tolower(name), ".mod")
   table_path <- paste0(tolower(name), ".tab")
-  if (run_nonmem || !file.exists(table_path)) run_execute(model_path, table_path)
+  if (run_nonmem || !file.exists(table_path)) {
+    execution_error <- tryCatch({
+      run_execute(model_path, table_path)
+      NULL
+    }, error = identity)
+    if (!is.null(execution_error)) {
+      detail <- conditionMessage(execution_error)
+      unavailable <- isTRUE(allow_unavailable) &&
+        grepl("UNKNOWN SUBROUTINE", detail, ignore.case = TRUE)
+      if (!unavailable) stop(execution_error)
+      cat(name, ": NOT RUN (installed NONMEM does not provide this ADVAN)\n", sep = "")
+      validation_results[[name]] <<- data.frame(
+        case = name, kind = "prediction", passed = NA,
+        maximum_absolute_difference = NA_real_, compared_records = 0L,
+        theta_difference = NA_real_, eta_difference = NA_real_,
+        covariance_se_difference = NA_real_,
+        tolerance = tolerance, status = "not-run",
+        detail = detail, stringsAsFactors = FALSE
+      )
+      return(invisible(NULL))
+    }
+  }
   data <- utils::read.table(data_path, col.names = data_columns)
   n_subjects <- length(unique(data$ID))
   eta <- matrix(0, n_subjects, nrow(model$OMEGAS))
@@ -100,7 +122,8 @@ validate_case <- function(name, model, tolerance, data_columns = columns) {
     maximum_absolute_difference = maximum, compared_records = sum(compare),
     theta_difference = NA_real_, eta_difference = NA_real_,
     covariance_se_difference = NA_real_,
-    tolerance = tolerance, stringsAsFactors = FALSE
+    tolerance = tolerance, status = "passed", detail = "",
+    stringsAsFactors = FALSE
   )
 }
 
@@ -135,6 +158,59 @@ validate_case("ADVAN4", LibeRation::nm_model(
   ERROR = "Y=F", THETAS = theta_table(c(1.5, 2, 20, 1, 10)), OMEGAS = omega_zero
 ), 2e-7)
 
+linear_graph <- LibeRation::nm_matrix_model(
+  data.frame(id = 1:2, name = c("CENTRAL", "PERIPHERAL")),
+  data.frame(
+    from = c(1L, 1L, 2L), to = c(0L, 2L, 1L), type = "rate",
+    parameter = c("K10", "K12", "K21")
+  )
+)
+for (advan in c(5L, 7L)) {
+  validate_case(paste0("ADVAN", advan), LibeRation::nm_model(
+    INPUT = base_input, ADVAN = advan, TRANS = 1, DOSECMP = 1, OBSCMP = 1,
+    PRED = paste(
+      "K10=THETA(1)*exp(ETA(1))", "K12=THETA(2)", "K21=THETA(3)",
+      "S1=THETA(4)", sep = "\n"
+    ),
+    ERROR = "Y=F", THETAS = theta_table(c(.2, .1, .05, 20)),
+    OMEGAS = omega_zero, GRAPH = linear_graph
+  ), 3e-7)
+}
+
+stiff_model <- function(advan) LibeRation::nm_model(
+  INPUT = base_input, ADVAN = advan, DOSECMP = 1, OBSCMP = 2,
+  PRED = "KFAST=THETA(1)*exp(ETA(1))\nKSLOW=THETA(2)\nS2=1",
+  DES = "DADT(1)=-KFAST*A(1)\nDADT(2)=KFAST*A(1)-KSLOW*A(2)",
+  ERROR = "Y=F", THETAS = theta_table(c(1000, 1)), OMEGAS = omega_zero,
+  ODE_CONTROL = list(rtol = 2e-7, atol = 1e-10)
+)
+for (advan in c(8L, 9L)) {
+  validate_case(paste0("ADVAN", advan), stiff_model(advan), 2e-5)
+}
+
+validate_case("ADVAN9EQ", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 9, TRANS = 1, DOSECMP = 1, OBSCMP = 1,
+  PRED = paste(
+    "K=THETA(1)*exp(ETA(1))", "BIND=THETA(2)", "S1=THETA(3)",
+    sep = "\n"
+  ),
+  DES = "DADT(1)=-K*FREE",
+  ALG = "RES(1)=FREE-A(1)/(1+BIND)",
+  DAE_CONFIG = LibeRation::nm_dae_config("FREE", initial = 0),
+  EXPERIMENTAL = LibeRation::nm_experimental_config(
+    enabled = TRUE, label = "ADVAN9 equilibrium validation"
+  ),
+  ERROR = "Y=F", THETAS = theta_table(c(.4, 1, 20)),
+  OMEGAS = omega_zero, ODE_CONTROL = list(rtol = 2e-7, atol = 1e-10)
+), 2e-5)
+
+validate_case("ADVAN10", LibeRation::nm_model(
+  INPUT = base_input, ADVAN = 10, TRANS = 1, DOSECMP = 1, OBSCMP = 1,
+  PRED = "VM=THETA(1)*exp(ETA(1))\nKM=THETA(2)\nS1=THETA(3)",
+  ERROR = "Y=F", THETAS = theta_table(c(20, 50, 20)), OMEGAS = omega_zero,
+  ODE_CONTROL = list(rtol = 1e-9, atol = 1e-11)
+), 2e-6)
+
 validate_case("ADVAN11", LibeRation::nm_model(
   INPUT = base_input, ADVAN = 11, TRANS = 4, DOSECMP = 1, OBSCMP = 1,
   PRED = paste(
@@ -163,13 +239,9 @@ validate_case("ADVAN6", LibeRation::nm_model(
   THETAS = theta_table(c(0.4, 20)), OMEGAS = omega_zero
 ), 2e-7)
 
-validate_case("ADVAN13", LibeRation::nm_model(
-  INPUT = base_input, ADVAN = 13, DOSECMP = 1, OBSCMP = 2,
-  PRED = "KFAST=THETA(1)*exp(ETA(1))\nKSLOW=THETA(2)\nS2=1",
-  DES = "DADT(1)=-KFAST*A(1)\nDADT(2)=KFAST*A(1)-KSLOW*A(2)",
-  ERROR = "Y=F", THETAS = theta_table(c(1000, 1)), OMEGAS = omega_zero,
-  ODE_CONTROL = list(rtol = 2e-7, atol = 1e-10)
-), 2e-5)
+validate_case("ADVAN13", stiff_model(13), 2e-5)
+
+validate_case("ADVAN14", stiff_model(14), 2e-5, allow_unavailable = TRUE)
 
 steady_state_input <- c(columns[1:6], "SS", "II", columns[7:8])
 validate_case("SSBOLUS", LibeRation::nm_model(
@@ -261,7 +333,8 @@ validate_estimation <- function() {
     maximum_absolute_difference = NA_real_, compared_records = length(nonmem_eta),
     theta_difference = theta_difference, eta_difference = eta_difference,
     covariance_se_difference = covariance_se_difference,
-    tolerance = max(0.03, 0.08), stringsAsFactors = FALSE
+    tolerance = max(0.03, 0.08), status = "passed", detail = "",
+    stringsAsFactors = FALSE
   )
 }
 
@@ -275,6 +348,9 @@ if (!grepl("^(?:[A-Za-z]:[/\\\\]|/)", output, perl = TRUE)) {
 dir.create(output, recursive = TRUE, showWarnings = FALSE)
 results <- do.call(rbind, validation_results)
 utils::write.csv(results, file.path(output, "comparisons.csv"), row.names = FALSE)
+executed <- !is.na(results$passed)
+all_executed_passed <- any(executed) && all(results$passed[executed])
+complete <- all(executed)
 evidence_inputs <- list.files(
   fixture_dir, pattern = "[.](dat|mod|tab|ext)$", full.names = TRUE
 )
@@ -292,12 +368,15 @@ provenance <- liber_validation_provenance(
   metadata = list(
     nonmem_executed = run_nonmem,
     execute = unname(Sys.which("execute")),
-    cases = nrow(results), all_passed = all(results$passed)
+    cases = nrow(results), executed_cases = sum(executed),
+    all_executed_passed = all_executed_passed,
+    complete = complete
   ),
   output = file.path(output, "provenance.json")
 )
 jsonlite::write_json(
-  list(schema = "liber.nonmem-validation/1", passed = all(results$passed),
+  list(schema = "liber.nonmem-validation/1", passed = all_executed_passed,
+       complete = complete,
        comparisons = split(results, seq_len(nrow(results))), provenance = provenance),
   file.path(output, "summary.json"), auto_unbox = TRUE, pretty = TRUE,
   null = "null", digits = 17

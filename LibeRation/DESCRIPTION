@@ -1,15 +1,16 @@
 Package: LibeRation
 Type: Package
 Title: Population Pharmacometric Simulation and Estimation
-Version: 0.9.2
+Version: 0.9.3
 Authors@R: person("Sven C.", "van Dijkman",
     email = "svdijkman@users.noreply.github.com", role = c("aut", "cre"))
 Author: Sven C. van Dijkman [aut, cre]
 Maintainer: Sven C. van Dijkman <svdijkman@users.noreply.github.com>
 Description: NONMEM-compatible population PK/PD model specification,
     simulation, estimation, diagnostics, and graphical workflow management
-    with one C++ numerical runtime. Implements ADVAN1-4, ADVAN6, ADVAN11-13,
-    arbitrary linear matrix propagation, analytical and nonlinear periodic
+    with one C++ numerical runtime. Implements ADVAN1-14 through analytical,
+    arbitrary linear matrix, explicit/stiff ODE, Michaelis-Menten, and
+    equilibrium-DAE paths, plus analytical and nonlinear periodic
     steady state, exact automatic differentiation, thirteen population
     estimation methods, declarative continuous, categorical, count,
     event-time, competing-risk, arbitrary-state continuous-time and

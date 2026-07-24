@@ -104,7 +104,8 @@ without the affine augmentation used by arbitrary matrix graphs. Non-zero
 inputs are propagated with a `phi_1` series for short intervals and an exact
 linear affine solve otherwise. Repeated-rate limits use `sinh(z)/z` series, so
 the kernels do not introduce singular differences of exponentials. Arbitrary
-matrix graphs continue to use the general matrix-exponential path.
+matrix graphs, including the ADVAN5/7 contracts, continue to use the general
+matrix-exponential path.
 
 Kernel selection is fixed when a persistent CppAD tape is recorded. Tape
 metadata reports the selected propagation kernel and its optimized operation
@@ -123,12 +124,17 @@ silently truncating an infinite-dose superposition.
 
 ADVAN6 compiles `$DES` assignments to the same scalar expression IR used by the
 parameter model and integrates them with an adaptive Dormand-Prince 5(4)
-method. ADVAN13 uses adaptive step-doubled implicit trapezoidal integration
-with a numerically assembled Newton Jacobian, providing an A-stable path for
-stiff systems. Both solvers split integration intervals at infusion stops and
-apply bolus, reset, and compartment events in the shared C++ event engine.
+method. ADVAN10 uses that path with its standard integrated VM/KM
+Michaelis--Menten equation. ADVAN8/9/13/14 use adaptive step-doubled implicit
+trapezoidal integration with a numerically assembled Newton Jacobian, providing
+an A-stable path for stiff systems. ADVAN9 can additionally solve semi-explicit
+index-1 equilibrium constraints on the CppAD tape. These are NONMEM-compatible
+model and event contracts; they do not claim algorithm identity with NONMEM's
+solver implementations. All paths split integration intervals at infusion
+stops and apply bolus, reset, and compartment events in the shared C++ event
+engine.
 
-ADVAN6/13 periodic steady state uses a converged periodic shooting solve for
+Nonlinear periodic steady state uses a converged periodic shooting solve for
 bolus and finite/overlapping infusion regimens. The entire accepted shooting
 trajectory remains on the scalar-generic AD tape, including modelled infusion
 duration boundaries. Failure to reach the periodic fixed point is diagnosed;
@@ -265,11 +271,18 @@ LibeRary, avoiding a required dependency cycle.
 Remote jobs cross the HTTP boundary through `liber.job.wire/2`, a typed JSON
 format that rejects functions, calls, environments, and external pointers. The
 server discards any client-side compiled representation and rebuilds expression
-IR from the versioned `liberation.model/2` contract through `nm_model()`. Wire
+IR from the versioned `liberation.model/3` contract through `nm_model()`. Wire
 version 1 remains readable for queue migration but is never emitted by new
 clients. RDS remains an internal durable-queue format only, after
 authentication and validation, and may be authenticated-encrypted at rest with
 a server-owned key.
+
+Model contract v3 retains separate `$PK` and `$PRED` sources plus one of three
+execution modes. The conventional path is `$PK -> ADVAN/$DES -> $ERROR`; the
+direct path is `$PRED -> $ERROR`; and the combined LibeRation extension is
+`$PK -> ADVAN/$DES -> post-ADVAN $PRED -> $ERROR`. The last stage consumes the
+raw prediction as `F_ADVAN` and remains part of the same double/CppAD event
+engine, including dynamic covariate inputs and generated-output selection.
 
 `library_triage`, `library_parse`, `library_index`, `library_dual_extract`,
 `library_assess`, and `library_adjudicate` use the same wire envelope but have a

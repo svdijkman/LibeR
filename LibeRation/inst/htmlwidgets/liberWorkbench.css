@@ -181,6 +181,7 @@
 .lw-outcome-banner { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
 .lw-outcome-banner small { flex-basis:100%; color:var(--lw-muted); }
 .lw-control-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px; }.lw-columns-button { margin-top: 14px; }
+.lw-model-mode { display: grid; gap: 7px; padding: 10px 12px; border: 1px solid var(--lw-line); border-radius: 5px; background: var(--lw-surface-2); }.lw-model-mode-label { color: var(--lw-text); font-size: 11px; font-weight: 700; }.lw-model-mode .lw-choice-row { gap: 9px 18px; }
 .lw-editor-grid { flex: 1; min-height: 240px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }.lw-editor-grid-three { grid-template-columns: repeat(3, 1fr); }.lw-editor-grid-four { grid-template-columns: repeat(2, 1fr); }
 .lw-editor-box { min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--lw-line); background: var(--lw-input); }.lw-editor-box h5, .lw-parameter-block h5 { margin: 0; padding: 5px 8px; color: var(--lw-muted); background: var(--lw-surface-2); border-bottom: 1px solid var(--lw-line); font-size: 10px; }
 .lw-code-editor { position: relative; flex: 1; min-height: 180px; overflow: hidden; background: var(--lw-code-bg); }

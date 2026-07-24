@@ -355,6 +355,32 @@ test_that("draft validation synchronizes THETA ETA and residual parameter tables
                data.frame(ROW = c(1L, 2L, 2L), COL = c(1L, 1L, 2L)))
 })
 
+test_that("GUI preserves separate PK and PRED drafts and validates combined parameters", {
+  model <- LibeRation:::.liber_model_template(1L)
+  combined <- LibeRation:::.liber_model_from_event(model, list(
+    pred_mode = "pk_pred",
+    pk_source = model$PRED,
+    pred_source = "ADJUST=THETA(3)*exp(ETA(2));F=F_ADVAN*ADJUST"
+  ))
+  expect_identical(combined$PRED_MODE, "pk_pred")
+  expect_identical(combined$PK_SOURCE, model$PRED)
+  expect_match(combined$PRED_SOURCE, "F_ADVAN", fixed = TRUE)
+  expect_equal(nrow(combined$THETAS), 3L)
+  expect_equal(combined$n_eta, 2L)
+
+  direct <- LibeRation:::.liber_model_from_event(combined, list(
+    pred_mode = "pred",
+    pred_source = "F=THETA(1)*TIME"
+  ))
+  expect_identical(direct$PRED_MODE, "pred")
+  expect_identical(direct$PK_SOURCE, model$PRED)
+  expect_identical(direct$PRED_SOURCE, "F=THETA(1)*TIME")
+  payload <- LibeRation:::.liber_gui_model(direct)
+  expect_identical(payload$pred_mode, "pred")
+  expect_identical(payload$pk_source, model$PRED)
+  expect_identical(payload$pred_source, "F=THETA(1)*TIME")
+})
+
 test_that("GUI parameter estimates use THETA OMEGA SIGMA presentation order", {
   values <- LibeRation:::.liber_gui_parameter_values(list(
     theta = c(1, 2), omega = c(0.1, 0.2), sigma = 0.3
@@ -562,7 +588,7 @@ test_that("GUI parameter names support models without random effects", {
 })
 
 test_that("all supported ADVAN templates are valid models", {
-  for (advan in c(1L, 2L, 3L, 4L, 6L, 11L, 12L, 13L)) {
+  for (advan in 1:14) {
     expect_s3_class(LibeRation:::.liber_model_template(advan), "nm_model")
   }
   ode <- LibeRation:::.liber_model_template(13L, n_state = 4L, problem = "Four-state ODE")

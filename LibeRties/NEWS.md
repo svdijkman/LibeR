@@ -1,5 +1,8 @@
 # LibeRties 0.7.4
 
+- Uses LibeRation model contract v3 so direct `$PRED` and combined
+  `$PK -> ADVAN -> $PRED` jobs retain both editable sources and their
+  execution mode across local and remote workers.
 - Makes queue status reads resilient to the brief Windows atomic-write
   rotation window where `metadata.rds` has moved to its durable previous
   generation, eliminating a rare `Unknown job id` race in active workers.

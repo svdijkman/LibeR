@@ -115,7 +115,7 @@ ls_queue_capabilities <- function() {
     contract = "liber.job/1",
     wire_contract = "liber.job.wire/2",
     result_contract = "liber.result.wire/2",
-    model_contract = "liberation.model/2",
+    model_contract = "liberation.model/3",
     job_types = c("simulate", "estimate", "estimate_sequence", "individualise", "regimen", "optimal_design",
                   "library_triage", "library_parse",
                   "library_index", "library_dual_extract", "library_assess",

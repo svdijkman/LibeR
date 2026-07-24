@@ -245,6 +245,7 @@ test_that("ITS and IMP use the exact conditional objective", {
   expect_true(is.finite(imp$objective))
   expect_equal(imp$diagnostics$n_imp, 20)
   expect_equal(imp$diagnostics$imp_gradient, "score")
+  expect_true(is.logical(imp$diagnostics$finite_crn_fallback))
 })
 
 test_that("GQ integrates the exact joint objective deterministically", {
@@ -411,6 +412,7 @@ test_that("SAEM and BAYES return reproducible stochastic diagnostics", {
   expect_true(all(saem$diagnostics$step_scale_trace > 0))
   expect_equal(nrow(bayes$chain), 10)
   expect_true(all(is.finite(bayes$posterior$mean)))
+  expect_true(is.finite(bayes$objective))
   expect_true(bayes$diagnostics$eta_acceptance >= 0 &&
                 bayes$diagnostics$eta_acceptance <= 1)
 })

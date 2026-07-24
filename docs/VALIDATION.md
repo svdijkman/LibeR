@@ -21,8 +21,9 @@ estimates is a failed validation, not a speed result.
    accumulation ratios, equal-rate limits, and mass balance.
 2. **Backend cross-checks**: optimized ADVAN predictions against the independent
    matrix backend across randomized parameters, routes, and event schedules.
-   ADVAN6 is checked against closed forms, and ADVAN13 against deliberately
-   stiff linear systems with known solutions.
+   ADVAN6/10 are checked against integrated equations, ADVAN8/13/14 against
+   deliberately stiff systems, and ADVAN9 against both stiff and equilibrium
+   DAE systems with known solutions.
 3. **Derivative checks**: AD Jacobians/Hessians against high-accuracy finite
    differences, including nearly coincident rates and steady-state solves.
 4. **NONMEM/PsN comparisons**: generated control streams run through `execute`
@@ -32,6 +33,186 @@ estimates is a failed validation, not a speed result.
    IOV, BLQ/censoring, and priors each receive deterministic compact fixtures.
 6. **Queue parity**: the same serialized job must produce equivalent local and
    LibeRties-worker results, with package/version fingerprints recorded.
+
+## Estimation-method validation
+
+`validation/estimation-methods/run-validation.R` is the release gate for every
+algorithm exposed by `nm_est()`: FO, FOCE, FOCEI, Laplace, ITS, GQ, IMP, SAEM,
+BAYES, HMC, NUTS, NPML, and NPAG. A returned fit is not sufficient evidence;
+each method has numerical and diagnostic acceptance criteria recorded in
+`validation/estimation-methods/methods.csv`.
+
+FO, FOCE, FOCEI, and Laplace use direct matched NONMEM 7.3 controls. ITS, IMP,
+and SAEM use aligned NONMEM controls and independent checks appropriate to
+their finite stochastic runs. GQ is checked against adaptive base-R integration
+of the one-dimensional subject likelihood. BAYES, HMC, and NUTS are checked
+against an independently normalized marginal posterior, with sampler
+diagnostics gated where applicable. NPML and NPAG are checked against an
+independent fixed/adaptive-support EM calculation.
+
+The 24 July 2026 Windows release-profile campaign passed every declared check
+for all 13 methods. The largest direct deterministic NONMEM THETA difference
+was `1.34e-4`; ITS differed by `5.10e-3`. Decision-grade 3,000-sample NONMEM
+IMP differed by `2.19e-2`, while LibeRation IMP differed from the independently
+integrated marginal optimum by `1.90e-5`. SAEM differed from NONMEM by
+`5.52e-4`. GQ matched the exact marginal optimum within `1.45e-8`; the largest
+HMC/NUTS posterior-quantile difference was `3.07e-2`. NPML support weights
+agreed within `3.45e-12`, and the NPAG likelihood improvement agreed within
+`5.87e-9`.
+
+Run the portable independent-reference campaign:
+
+```text
+Rscript tools/create-validation-library.R --source
+Rscript validation/estimation-methods/run-validation.R
+```
+
+Run the complete local release gate, including PsN/NONMEM:
+
+```text
+Rscript validation/estimation-methods/run-validation.R --run-nonmem
+```
+
+Without `--run-nonmem`, direct/aligned NONMEM rows remain explicitly
+`not-run`, and the result is not marked complete.
+
+## Non-PK likelihood and latent-state validation
+
+`validation/nonpk/run-validation.R` is the evidence-producing campaign for
+categorical, count, event-time, observed/hidden Markov, and Gaussian
+state-space models. It does not use continuous PK predictions as a proxy for
+these families.
+
+The release gate uses independent mathematical references wherever possible:
+
+- Bernoulli, categorical, Poisson, and negative-binomial likelihoods are
+  checked against normalized base-R probabilities.
+- TTE, recurrent-event, and competing-risk objectives are checked against
+  independently factorized piecewise-exponential/counting-process
+  likelihoods.
+- Observed discrete Markov likelihoods are checked by direct transition
+  factorization; two-state CTMC transitions use the analytic matrix
+  exponential rather than LibeRation's matrix routine.
+- HMM likelihoods, retrospective smoothing probabilities, and Viterbi paths
+  are checked by exhaustive enumeration of every latent state path. CT-HMM
+  likelihoods use an analytic two-state transition and an independent forward
+  recursion.
+- The linear Gaussian state-space objective, filtered means, variances, and
+  exact AD gradient are checked against a separate scalar Kalman recursion and
+  central finite differences.
+
+For faithful overlap, generated NONMEM 7.3 `LIKELIHOOD` fixtures additionally
+compare every row likelihood and the total objective for Bernoulli,
+interval-TTE, and observed Markov models. There is no first-class NONMEM
+reference result for LibeRation's smoothing/Viterbi, CT-HMM, particle-filter,
+or nonlinear state-space outputs; those are not mislabeled as NONMEM
+comparisons.
+
+The July 2026 Windows campaign passed 25 independent deterministic comparisons
+and six direct NONMEM comparisons. The largest direct NONMEM row-likelihood
+difference was `2.08e-10`, and the largest total-objective difference was
+`3.73e-9`. The largest exact-reference HMM probability difference was
+`2.50e-16`; the Viterbi path agreed exactly.
+
+Run the exact source-built campaign from the repository root:
+
+```text
+Rscript tools/create-validation-library.R --source
+Rscript validation/nonpk/run-validation.R --run-nonmem
+```
+
+`--skip-nonmem` produces portable independent-reference evidence. Particle and
+switching-state families retain verified status pending broader
+simulation-calibration campaigns; computational validation is not clinical
+qualification.
+
+## Experimental numerical-family validation
+
+`validation/experimental-families/run-validation.R` is the evidence-producing
+campaign for the canonical numerical contracts underlying SDE, DDE, nonlinear
+index-1 DAE, QSP reaction-network, and offline hybrid-component models. These
+families have no single universal external reference engine, so the campaign
+uses independently derived analytic solutions, convergence laws,
+conservation/metamorphic properties, finite-difference derivatives, and seeded
+Monte Carlo calibration:
+
+- an exact Ornstein--Uhlenbeck transition and independent scalar Kalman
+  recursion test SDE likelihoods, gradients, EKF/UKF equivalence, and
+  fixed-step Euler/Milstein simulation moments;
+- a closed-form two-interval method-of-steps solution tests a smooth-history
+  linear DDE, second-order refinement, and the parameterized-delay derivative;
+- a nonlinear algebraic constraint with an analytic reduced solution tests
+  index-1 DAE predictions and implicit sensitivities;
+- a closed-form irreversible two-species reaction tests QSP amounts,
+  parameter sensitivity, and mass conservation; and
+- independent dense-network, spline, and Gaussian-process calculations test
+  hybrid outputs, likelihoods, gradients, and learned dynamics.
+
+The July 2026 Windows campaign passed all 19 comparisons. Representative
+maximum absolute differences were `1.01e-3` for the finest discretized OU
+objective, `1.58e-6` for its AD gradient, `4.21e-8` for the DDE trajectory,
+`1.75e-4` for DDE sensitivities, `7.78e-10` for the DAE sensitivity,
+`5.25e-8` for the QSP sensitivity, and `7.17e-10` for the hybrid likelihood
+gradient. The seeded SDE terminal mean and variance differed from their
+fixed-step theoretical moments by `2.16e-3` and `1.29e-3`, within the declared
+six-standard-error calibration limits.
+
+Run the exact source-built campaign from the repository root:
+
+```text
+Rscript tools/create-validation-library.R --source
+Rscript validation/experimental-families/run-validation.R
+```
+
+The evidence claim is deliberately narrow. Delay sensitivities are validated
+for continuous histories in this canonical campaign. General nonlinear or
+large systems still require dimension- and application-specific evidence.
+
+### Experimental-family edge campaign
+
+`validation/edge-families/run-validation.R` widens the numerical envelope with
+27 deliberately difficult comparisons:
+
+- geometric Brownian motion checks exact fixed-step Euler and diagonal
+  Milstein moments, while a nonlinear logistic SDE is compared with an
+  independent 50,000-path Milstein implementation;
+- a seeded particle SDE likelihood is checked for resolution convergence to a
+  discrete scalar Kalman reference. Its AD gradient is compared on a
+  fixed-ancestry path because resampling is a discrete, non-smooth operation;
+- closed-form superposition checks parameterized delays crossing two separate
+  bolus discontinuities, and a high-rate smooth-history DDE checks stiff
+  trajectories and sensitivities;
+- analytic reductions check a six-block nonlinear DAE and a coupled,
+  high-rate index-1 DAE;
+- exact Erlang and reversible-reaction laws check a ten-species QSP chain, a
+  stiff reversible system, mass conservation, sensitivities, and compact
+  parameter recovery; and
+- direct calculations check stable softplus values at `-1000` and `1000`,
+  ReLU branches, spline boundaries/extrapolation, an anisotropic
+  Gaussian-process component, combined gradients, and rejection of a modified
+  immutable component payload.
+
+The July 2026 Windows edge campaign passed all 27 comparisons. The largest
+particle-likelihood difference was `3.24e-2`; the largest nonlinear SDE
+Monte Carlo moment difference was `9.76e-3`. The delayed-event DDE trajectory
+and delay-sensitivity differences were `5.45e-9` and `9.19e-5`; the largest
+stiff-DDE sensitivity difference was `3.88e-3`. DAE, QSP, recovery, and hybrid
+deterministic differences were all below `8e-9`, apart from their declared
+stochastic checks.
+
+Run both numerical-family campaigns against one exact source build:
+
+```text
+Rscript tools/create-validation-library.R --source
+Rscript validation/experimental-families/run-validation.R
+Rscript validation/edge-families/run-validation.R
+```
+
+Delayed discontinuities are handled by retaining left/right history states,
+splitting integration at parameterized delayed-event boundaries, and carrying
+the right-limit sensitivity across observation records. Passing these fixtures
+does not imply unlimited scaling: arbitrary very-large, strongly nonlinear,
+application-specific, or clinical systems still require their own validation.
 
 ## LibeRality external optimal-design validation
 
@@ -87,14 +268,26 @@ The July 2026 Windows benchmark produced:
 | ADVAN2 | 2.99838998e-9 | 6 |
 | ADVAN3 | 4.42779680e-9 | 6 |
 | ADVAN4 | 1.09334830e-9 | 6 |
+| ADVAN5 | 3.16553717e-9 | 6 |
+| ADVAN6 | 3.30286110e-9 | 6 |
+| ADVAN7 | 3.16553717e-9 | 6 |
+| ADVAN8 | 1.38853029e-9 | 6 |
+| ADVAN9 (stiff, no equilibrium compartment) | 1.38853029e-9 | 6 |
+| ADVAN9 (equilibrium compartment) | 9.34286026e-9 | 6 |
+| ADVAN10 | 5.07415976e-9 | 6 |
 | ADVAN11 | 4.55660842e-9 | 6 |
 | ADVAN12 | 1.91085725e-9 | 6 |
-| ADVAN6 | 3.30286110e-9 | 6 |
 | ADVAN13 | 7.83511256e-10 | 6 |
 | ADVAN1 repeated bolus steady state | 3.46666562e-9 | 4 |
 | ADVAN1 intermittent-infusion steady state | 3.99814670e-9 | 6 |
 | ADVAN1 modelled rate (`RATE=-1`, `R1`) | 4.35503544e-9 | 6 |
 | ADVAN1 modelled duration (`RATE=-2`, `D1`) | 4.35503544e-9 | 6 |
+
+ADVAN14 is implemented and internally checked against the same stiff system,
+but it is not marked externally validated: the available NONMEM 7.3
+installation reports ADVAN14 as an unknown subroutine. The runner records that
+case as `not-run` and keeps `complete = false`; it never converts the missing
+reference into a pass. A paired ADVAN14 result requires NONMEM 7.4 or newer.
 
 The compact FOCEI benchmark estimates clearance with fixed residual and random
 effect variances, then compares the final fixed effect, every subject ETA, and

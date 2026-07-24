@@ -161,6 +161,11 @@
     n_state = model$n_state,
     dose_cmp = model$DOSECMP,
     obs_cmp = model$OBSCMP,
+    pred_mode = model$PRED_MODE %||% "pk",
+    pk_source = model$PK_SOURCE %||%
+      if ((model$PRED_MODE %||% "pk") %in% c("pk", "pk_pred")) model$PRED else "",
+    pred_source = model$PRED_SOURCE %||%
+      if (identical(model$PRED_MODE %||% "pk", "pred")) model$PRED else "",
     pred = model$PRED,
     error = model$ERROR,
     des = model$DES,
@@ -864,11 +869,16 @@
     summary$model <- list(
       name = attr(model, "name", exact = TRUE) %||% paste0("ADVAN", model$ADVAN, " model"),
       advan = model$ADVAN, trans = model$TRANS, solver = model$SOLVER,
+      pred_mode = model$PRED_MODE %||% "pk",
       language = model$LANGUAGE, omega_structure = model$LIK_CONFIG$omega %||% "diagonal",
       theta_definitions = .liber_gui_rows(model$THETAS),
       omega_definitions = .liber_gui_rows(model$OMEGAS),
       sigma_definitions = .liber_gui_rows(model$SIGMAS),
       pred = as.character(model$PRED %||% ""),
+      pk_source = as.character(model$PK_SOURCE %||%
+        if ((model$PRED_MODE %||% "pk") %in% c("pk", "pk_pred")) model$PRED else ""),
+      pred_source = as.character(model$PRED_SOURCE %||%
+        if (identical(model$PRED_MODE %||% "pk", "pred")) model$PRED else ""),
       des = as.character(model$DES %||% ""),
       error = as.character(model$ERROR %||% "")
     )
@@ -1512,7 +1522,11 @@ renderLiberWorkbench <- function(expr, env = parent.frame(), quoted = FALSE) {
 }
 
 .liber_model_parameter_requirements <- function(arguments) {
-  code <- unname(unlist(arguments[c("PRED", "DES", "ALG", "ERROR")], use.names = FALSE))
+  fields <- c("PRED", "DES", "ALG", "ERROR")
+  if (identical(arguments$PRED_MODE %||% "pk", "pk_pred")) {
+    fields <- c(fields, "PRED_SOURCE")
+  }
+  code <- unname(unlist(arguments[fields], use.names = FALSE))
   list(
     theta = .liber_code_reference_max(code, "THETA"),
     eta = .liber_code_reference_max(code, "ETA"),
@@ -1597,9 +1611,31 @@ renderLiberWorkbench <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!inherits(model, "nm_model")) .nm_stop("Load a model before editing it.")
   arguments <- model[intersect(names(model), names(formals(nm_model)))]
   old_advan <- model$ADVAN
+  pred_mode <- as.character(event$pred_mode %||% model$PRED_MODE %||% "pk")[[1L]]
+  if (!pred_mode %in% c("pk", "pred", "pk_pred")) {
+    .nm_stop("Model definition mode must be 'pk', 'pred', or 'pk_pred'.")
+  }
   arguments$ADVAN <- as.integer(event$advan %||% old_advan)
   arguments$TRANS <- as.integer(event$trans %||% model$TRANS)
-  arguments$PRED <- as.character(event$pred %||% model$PRED)
+  pk_source <- as.character(event$pk_source %||% model$PK_SOURCE %||%
+    if ((model$PRED_MODE %||% "pk") %in% c("pk", "pk_pred")) model$PRED else "")
+  pred_source <- as.character(event$pred_source %||% model$PRED_SOURCE %||%
+    if (identical(model$PRED_MODE %||% "pk", "pred")) model$PRED else "")
+  legacy_event_source <- event[["pred", exact = TRUE]]
+  if (!is.null(legacy_event_source)) {
+    if (pred_mode %in% c("pk", "pk_pred") &&
+        is.null(event[["pk_source", exact = TRUE]])) {
+      pk_source <- as.character(legacy_event_source)
+    }
+    if (identical(pred_mode, "pred") &&
+        is.null(event[["pred_source", exact = TRUE]])) {
+      pred_source <- as.character(legacy_event_source)
+    }
+  }
+  arguments$PRED_MODE <- pred_mode
+  arguments$PK_SOURCE <- pk_source
+  arguments$PRED_SOURCE <- pred_source
+  arguments$PRED <- if (identical(pred_mode, "pred")) pred_source else pk_source
   arguments$ERROR <- as.character(event$error %||% model$ERROR)
   arguments$DES <- as.character(event$des %||% model$DES)
   arguments$ALG <- as.character(event$alg %||% model$ALG %||% "")
@@ -1639,11 +1675,21 @@ renderLiberWorkbench <- function(expr, env = parent.frame(), quoted = FALSE) {
   arguments$LIK_CONFIG <- .nm_lik_config(
     likelihood, likelihood$error, as.integer(likelihood$iov %||% model$IOV)
   )
-  if (!identical(arguments$ADVAN, old_advan)) arguments$GRAPH <- NULL
+  if (!identical(arguments$ADVAN, old_advan) ||
+      !identical(pred_mode, model$PRED_MODE %||% "pk")) {
+    arguments$GRAPH <- NULL
+  }
   arguments$ERROR_TYPE <- "auto"
   edited <- do.call(nm_model, arguments)
-  requested_states <- as.integer(event$n_state %||% edited$n_state)
-  if (edited$ADVAN %in% c(6L, 13L) && requested_states != edited$n_state) {
+  route_changed_from_direct <- identical(model$PRED_MODE %||% "pk", "pred") &&
+    !identical(pred_mode, "pred")
+  requested_states <- if (route_changed_from_direct) {
+    edited$n_state
+  } else {
+    as.integer(event$n_state %||% edited$n_state)
+  }
+  if (edited$ADVAN %in% c(6L, 8L, 9L, 13L, 14L) &&
+      requested_states != edited$n_state) {
     .nm_stop(
       "The compartment count is derived from $DES. Define DADT(1) through DADT(",
       requested_states, ") to use that count."
@@ -1754,10 +1800,62 @@ renderLiberWorkbench <- function(expr, env = parent.frame(), quoted = FALSE) {
       pred = "KA = THETA(1) * exp(ETA(1))\nCL = THETA(2) * exp(ETA(2))\nV1 = THETA(3) * exp(ETA(3))\nQ = THETA(4)\nV2 = THETA(5)\nS2 = V1",
       des = "", eta = 3L
     ),
+    `5` = list(
+      trans = 1L, values = c(0.2, 0.1, 0.05, 20),
+      pred = paste(
+        "K10 = THETA(1) * exp(ETA(1))", "K12 = THETA(2)",
+        "K21 = THETA(3)", "V = THETA(4) * exp(ETA(2))", "S1 = V",
+        sep = "\n"
+      ),
+      des = "", eta = 2L,
+      graph = nm_matrix_model(
+        data.frame(id = 1:2, name = c("CENTRAL", "PERIPHERAL")),
+        data.frame(
+          from = c(1L, 1L, 2L), to = c(0L, 2L, 1L),
+          type = "rate", parameter = c("K10", "K12", "K21")
+        )
+      )
+    ),
     `6` = list(
       trans = 1L, values = c(5, 50),
       pred = "CL = THETA(1) * exp(ETA(1))\nV = THETA(2) * exp(ETA(2))\nK = CL / V\nS1 = V",
       des = "DADT(1) = -K * A(1)", eta = 2L
+    ),
+    `7` = list(
+      trans = 1L, values = c(0.2, 0.1, 0.05, 20),
+      pred = paste(
+        "K10 = THETA(1) * exp(ETA(1))", "K12 = THETA(2)",
+        "K21 = THETA(3)", "V = THETA(4) * exp(ETA(2))", "S1 = V",
+        sep = "\n"
+      ),
+      des = "", eta = 2L,
+      graph = nm_matrix_model(
+        data.frame(id = 1:2, name = c("CENTRAL", "PERIPHERAL")),
+        data.frame(
+          from = c(1L, 1L, 2L), to = c(0L, 2L, 1L),
+          type = "rate", parameter = c("K10", "K12", "K21")
+        )
+      )
+    ),
+    `8` = list(
+      trans = 1L, values = c(1000, 1),
+      pred = "KFAST = THETA(1) * exp(ETA(1))\nKSLOW = THETA(2)\nS2 = 1",
+      des = "DADT(1) = -KFAST * A(1)\nDADT(2) = KFAST * A(1) - KSLOW * A(2)",
+      eta = 1L, obs = 2L
+    ),
+    `9` = list(
+      trans = 1L, values = c(1000, 1),
+      pred = "KFAST = THETA(1) * exp(ETA(1))\nKSLOW = THETA(2)\nS2 = 1",
+      des = "DADT(1) = -KFAST * A(1)\nDADT(2) = KFAST * A(1) - KSLOW * A(2)",
+      eta = 1L, obs = 2L
+    ),
+    `10` = list(
+      trans = 1L, values = c(20, 50, 20),
+      pred = paste(
+        "VM = THETA(1) * exp(ETA(1))", "KM = THETA(2) * exp(ETA(2))",
+        "V = THETA(3)", "S1 = V", sep = "\n"
+      ),
+      des = "", eta = 2L
     ),
     `11` = list(
       trans = 4L, values = c(5, 20, 8, 40, 4, 80),
@@ -1779,16 +1877,27 @@ renderLiberWorkbench <- function(expr, env = parent.frame(), quoted = FALSE) {
       des = "DADT(1) = -(K10 + K12) * A(1) + K21 * A(2)\nDADT(2) = K12 * A(1) - K21 * A(2)",
       eta = 2L
     ),
+    `14` = list(
+      trans = 1L, values = c(5, 30, 8, 70),
+      pred = paste(
+        "CL = THETA(1) * exp(ETA(1))", "V1 = THETA(2) * exp(ETA(2))",
+        "Q = THETA(3)", "V2 = THETA(4)", "K10 = CL / V1",
+        "K12 = Q / V1", "K21 = Q / V2", "S1 = V1", sep = "\n"
+      ),
+      des = "DADT(1) = -(K10 + K12) * A(1) + K21 * A(2)\nDADT(2) = K12 * A(1) - K21 * A(2)",
+      eta = 2L
+    ),
     .nm_stop("No GUI template is available for ADVAN", advan, ".")
   )
-  if (!is.null(trans) && !advan %in% c(6L, 13L)) {
+  ode_advan <- c(6L, 8L, 9L, 13L, 14L)
+  if (!is.null(trans) && !advan %in% ode_advan) {
     trans <- as.integer(trans)
     if (length(trans) != 1L || is.na(trans) || !trans %in% 1:6) {
       .nm_stop("`trans` must be an integer from 1 through 6.")
     }
     specification$trans <- trans
   }
-  if (advan %in% c(6L, 13L) && !is.null(n_state)) {
+  if (advan %in% ode_advan && !is.null(n_state)) {
     n_state <- as.integer(n_state)
     if (length(n_state) != 1L || is.na(n_state) || n_state < 1L || n_state > 20L) {
       .nm_stop("ODE templates support between 1 and 20 compartments.")
@@ -1807,13 +1916,15 @@ renderLiberWorkbench <- function(expr, env = parent.frame(), quoted = FALSE) {
       specification$eta <- 2L
     }
   }
-  observation_compartment <- if (advan %in% c(2L, 4L, 12L)) 2L else 1L
+  observation_compartment <- specification$obs %||%
+    if (advan %in% c(2L, 4L, 12L)) 2L else 1L
   model <- nm_model(
     INPUT = input, ADVAN = advan, TRANS = specification$trans,
     DOSECMP = 1L, OBSCMP = observation_compartment,
     PRED = specification$pred, DES = specification$des,
     ERROR = "Y = F + ERR(1)", THETAS = theta(specification$values),
-    OMEGAS = omega(specification$eta), SIGMAS = sigma
+    OMEGAS = omega(specification$eta), SIGMAS = sigma,
+    GRAPH = specification$graph %||% NULL
   )
   problem <- trimws(as.character(problem %||% ""))
   attr(model, "name") <- if (nzchar(problem)) problem else paste0("ADVAN", advan, " model")

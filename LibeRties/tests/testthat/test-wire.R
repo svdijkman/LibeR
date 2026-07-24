@@ -24,7 +24,7 @@ test_that("JSON wire jobs rebuild models rather than trusting expression IR", {
   )
 })
 
-test_that("wire v2 retains first-class advanced model semantics", {
+test_that("wire v3 retains first-class advanced model semantics", {
   skip_if_not_installed("LibeRation", minimum_version = "0.8.0")
   model <- LibeRation::nm_model(
     INPUT = c("ID", "TIME", "DV", "MDV", "DVID"), ADVAN = 1,
@@ -45,6 +45,29 @@ test_that("wire v2 retains first-class advanced model semantics", {
   expect_s3_class(rebuilt$model$HMM_CONFIG, "nm_hmm_config")
   expect_equal(rebuilt$model$HMM_CONFIG$transition, model$HMM_CONFIG$transition)
   expect_identical(rebuilt$model$HMM_CONFIG$states, c("low", "high"))
+})
+
+test_that("wire v3 preserves combined PK and post-ADVAN PRED execution", {
+  skip_if_not_installed("LibeRation", minimum_version = "0.9.3")
+  model <- LibeRation::nm_model(
+    INPUT = c("ID", "TIME", "EVID", "AMT"), ADVAN = 1,
+    PRED_MODE = "pk_pred",
+    PK_SOURCE = "CL=THETA(1);V=THETA(2);S1=V",
+    PRED_SOURCE = "F=F_ADVAN+A(1)/100",
+    THETAS = data.frame(THETA = 1:2, Value = c(2, 20))
+  )
+  data <- data.frame(
+    ID = 1, TIME = c(0, 1), EVID = c(1L, 0L), AMT = c(100, 0)
+  )
+  rebuilt <- ls_job_decode(ls_job_encode(ls_job("simulate", model, data)))
+  expect_identical(rebuilt$model$PRED_MODE, "pk_pred")
+  expect_identical(rebuilt$model$PK_SOURCE, model$PK_SOURCE)
+  expect_identical(rebuilt$model$PRED_SOURCE, model$PRED_SOURCE)
+  expect_equal(
+    LibeRation::nm_simulate(rebuilt$model, rebuilt$data)$IPRED,
+    LibeRation::nm_simulate(model, data)$IPRED,
+    tolerance = 1e-12
+  )
 })
 
 test_that("wire transport preserves sequential estimation stages and outputs", {

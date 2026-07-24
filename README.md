@@ -24,8 +24,9 @@ workflow and a single C++ numerical runtime.
   constrained mixed-variable optimisation, Pareto analysis, complete-trial
   simulation, and an amber React workbench.
 
-The implementation covers ADVAN1-4/11/12, arbitrary linear matrix models,
-ADVAN6 adaptive RK45 integration, ADVAN13 stiff implicit integration,
+The implementation covers ADVAN1-14 using analytical kernels, arbitrary linear
+matrix models, adaptive explicit and stiff implicit integration,
+Michaelis--Menten elimination, and equilibrium DAE constraints,
 analytical and nonlinear periodic steady state, overlapping infusions,
 ADDL/II, and NONMEM modelled infusion rate/duration conventions. Exact CppAD
 tapes cover prediction, likelihood, gradients, Jacobians, and Hessians.

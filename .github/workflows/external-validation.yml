@@ -9,6 +9,45 @@ permissions:
   contents: read
 
 jobs:
+  nonpk-likelihoods:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::testthat
+            any::jsonlite
+            any::openssl
+            any::knitr
+            any::rmarkdown
+            any::sessioninfo
+          dependencies: 'c("Depends", "Imports", "LinkingTo")'
+          install-pandoc: true
+          install-quarto: false
+      - name: Create exact source-built validation library
+        run: Rscript tools/create-validation-library.R --source
+      - name: Validate every estimation algorithm
+        run: Rscript validation/estimation-methods/run-validation.R
+      - name: Validate non-PK likelihood and latent-state families
+        run: Rscript validation/nonpk/run-validation.R --skip-nonmem
+      - name: Validate experimental numerical families
+        run: Rscript validation/experimental-families/run-validation.R
+      - name: Validate experimental numerical edge families
+        run: Rscript validation/edge-families/run-validation.R
+      - name: Upload model-family validation evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-family-validation-${{ github.sha }}
+          path: |
+            validation/estimation-methods/results
+            validation/nonpk/results
+            validation/experimental-families/results
+            validation/edge-families/results
+
   poped-pfim:
     runs-on: ubuntu-latest
     steps:

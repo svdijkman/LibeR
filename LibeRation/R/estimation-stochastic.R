@@ -523,6 +523,42 @@
     map, objective, maxit, tolerance, trace, print_every,
     gradient = gradient, optimizer_backend = optimizer_backend
   )
+  fallback <- NULL
+  if (imp_gradient == "score" &&
+      !identical(as.integer(optimizer$convergence), 0L)) {
+    # The normalized importance-score gradient deliberately omits proposal
+    # derivatives. It is an efficient search direction but is not the exact
+    # derivative of the finite common-random-number objective, so L-BFGS-B can
+    # report an abnormal line-search termination after reaching its vicinity.
+    # Finish such runs against the exact finite-CRN objective without an
+    # analytic gradient. This retains the practical fast path while ensuring
+    # that a completed fit has an optimizer convergence result it can defend.
+    fallback_map <- map
+    # Restart from the declared model initial values. At an abnormal L-BFGS-B
+    # line-search endpoint the finite-difference perturbations can be below the
+    # local numerical resolution, reproducing the same status even though a
+    # clean finite-CRN search converges normally.
+    fallback_map$start <- map$start
+    fallback <- .nm_outer_optim(
+      fallback_map, objective, maxit, tolerance, trace, print_every,
+      gradient = NULL, optimizer_backend = "r"
+    )
+    if (identical(as.integer(fallback$convergence), 0L) &&
+        is.finite(fallback$value) &&
+        fallback$value <= optimizer$value +
+          tolerance * max(abs(optimizer$value), 1)) {
+      fallback$score_search <- list(
+        convergence = optimizer$convergence, value = optimizer$value,
+        par = optimizer$par, backend = optimizer$backend,
+        objective_evaluations = optimizer$objective_evaluations,
+        gradient_evaluations = optimizer$gradient_evaluations
+      )
+      fallback$backend <- paste0(
+        optimizer$backend, "+", fallback$backend, "-finite-crn-fallback"
+      )
+      optimizer <- fallback
+    }
+  }
   parameters <- map$decode(optimizer$par)
   modes <- .nm_subject_modes(
     context, parameters, maxit = eta_maxit, tolerance = tolerance,
@@ -533,8 +569,15 @@
     diagnostics = list(
       n_imp = n_imp, seed = seed, eta_maxit = eta_maxit,
       common_random_numbers = TRUE, imp_gradient = imp_gradient,
+      finite_crn_fallback = !is.null(optimizer$score_search),
       population_gradient = if (imp_gradient == "score") {
-        "normalized importance-score CppAD gradient (proposal derivative omitted)"
+        paste0(
+          "normalized importance-score CppAD gradient (proposal derivative ",
+          "omitted)",
+          if (!is.null(optimizer$score_search)) {
+            " with exact finite-CRN derivative-free convergence fallback"
+          } else ""
+        )
       } else "finite common-random-number objective"
     )
   )
@@ -1106,7 +1149,7 @@
     colMeans(chain[, eta_start + seq_len(context$n_subjects * context$n_eta), drop = FALSE]),
     context$n_subjects, context$n_eta, byrow = TRUE
   ) else matrix(numeric(), context$n_subjects, 0L)
-  final_state <- list(parameters = parameters, eta = eta)
+  final_state <- .nm_bayes_state(map, map$encode(parameters), eta)
   final_objective <- -2 * log_posterior(final_state)
   modes <- lapply(seq_len(context$n_subjects), function(subject) {
     list(par = eta[subject, ], convergence = 0L, jitter = 0)

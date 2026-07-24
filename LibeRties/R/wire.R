@@ -155,11 +155,11 @@
   if (!requireNamespace("LibeRation", quietly = TRUE)) {
     .ls_stop("LibeRation is required to serialize a remote model.")
   }
-  if (utils::packageVersion("LibeRation") < "0.8.1") {
-    .ls_stop("Remote model contract v2 requires LibeRation 0.8.1 or newer.")
+  if (utils::packageVersion("LibeRation") < "0.9.3") {
+    .ls_stop("Remote model contract v3 requires LibeRation 0.9.3 or newer.")
   }
   tryCatch(
-    LibeRation::nm_model_to_contract(model, version = 2L),
+    LibeRation::nm_model_to_contract(model, version = 3L),
     error = function(e) .ls_stop("Remote model serialization failed: ", conditionMessage(e))
   )
 }

@@ -49,6 +49,11 @@ using Vector = Eigen::VectorXd;
 #include "pk_engine_ad_propagation.h"
 #include "pk_engine_likelihood.h"
 #include "pk_engine_population.h"
+#include "pk_engine_stochastic_support.h"
+#include "pk_engine_stochastic_eta_context.h"
+#include "pk_engine_quadrature.h"
+#include "pk_engine_saem_context.h"
+#include "pk_engine_weighted_eta_context.h"
 #include "pk_engine_saem.h"
 #include "pk_engine_state_space.h"
 

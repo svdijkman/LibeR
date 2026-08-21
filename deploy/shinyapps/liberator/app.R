@@ -7,6 +7,7 @@ library(LibeRator)
 lator_gui(
   path = file.path(tempdir(), "LibeRator-shinyapps"),
   session_workspace = TRUE,
+  auto_unlock_session = TRUE,
   teaching_example = TRUE,
   launch.browser = NULL
 )

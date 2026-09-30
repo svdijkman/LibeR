@@ -5,6 +5,8 @@
 # liber_install()
 # Windows automatically uses matching binaries; force compilation with binary = FALSE.
 # A pinned compatibility set can be selected with tag = "v...".
+# For the September 2026 compatibility set: tag = "v0.9.0-research-beta.21".
+# The default remains automatic discovery, not this example pin.
 
 .liber_binary_compatible <- function(built, r_version = getRversion(),
                                      platform = R.version$platform) {

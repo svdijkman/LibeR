@@ -3,6 +3,45 @@
 # From a trusted R session:
 # source("https://raw.githubusercontent.com/svdijkman/LibeR/main/tools/install-ecosystem.R")
 # liber_install()
+# Windows automatically uses matching binaries; force compilation with binary = FALSE.
+# A pinned compatibility set can be selected with tag = "v...".
+
+.liber_binary_compatible <- function(built, r_version = getRversion(),
+                                     platform = R.version$platform) {
+  if (length(built) != 1L || is.na(built) || !nzchar(built)) return(FALSE)
+  fields <- trimws(strsplit(built, ";", fixed = TRUE)[[1L]])
+  if (length(fields) < 2L || !grepl("^R [0-9]+\\.[0-9]+", fields[[1L]])) {
+    return(FALSE)
+  }
+  series <- function(x) paste(head(strsplit(as.character(x), ".", fixed = TRUE)[[1L]], 2L), collapse = ".")
+  identical(series(sub("^R ", "", fields[[1L]])), series(r_version)) &&
+    (identical(fields[[2L]], platform) ||
+       (!nzchar(fields[[2L]]) && length(fields) >= 4L && identical(fields[[4L]], "windows")))
+}
+
+.liber_check_archive <- function(path, package, version, binary) {
+  member <- paste0(package, "/DESCRIPTION")
+  stage <- tempfile("liber-archive-check-")
+  dir.create(stage)
+  on.exit(unlink(stage, recursive = TRUE, force = TRUE), add = TRUE)
+  if (binary) {
+    entries <- utils::unzip(path, list = TRUE)$Name
+    if (sum(entries == member) != 1L) stop("Invalid package archive: ", basename(path), call. = FALSE)
+    utils::unzip(path, files = member, exdir = stage)
+  } else {
+    entries <- utils::untar(path, list = TRUE)
+    if (sum(entries == member) != 1L) stop("Invalid package archive: ", basename(path), call. = FALSE)
+    utils::untar(path, files = member, exdir = stage)
+  }
+  description <- read.dcf(file.path(stage, member))
+  if (!identical(unname(description[1L, "Package"]), package) ||
+      !identical(unname(description[1L, "Version"]), version)) {
+    stop("Archive contents do not match the release manifest: ", basename(path), call. = FALSE)
+  }
+  if (!binary) return(TRUE)
+  "Built" %in% colnames(description) &&
+    .liber_binary_compatible(unname(description[1L, "Built"]))
+}
 
 .liber_configure_repositories <- function() {
   mirror <- Sys.getenv("LIBER_CRAN_MIRROR", "https://cloud.r-project.org")
@@ -105,10 +144,16 @@ liber_install <- function(
     tag = NULL,
     channel = Sys.getenv("LIBER_RELEASE_CHANNEL", "latest"),
     library = .libPaths()[[1L]],
-    binary = FALSE,
+    binary = NULL,
     repository = "svdijkman/LibeR") {
   if (getRversion() < "4.1.0") stop("LibeR requires R 4.1 or newer.", call. = FALSE)
   channel <- match.arg(channel, c("latest", "stable", "prerelease"))
+  if (!is.null(binary) && (!is.logical(binary) || length(binary) != 1L || is.na(binary))) {
+    stop("binary must be NULL (automatic), TRUE, or FALSE.", call. = FALSE)
+  }
+  old_timeout <- getOption("timeout")
+  options(timeout = max(600, old_timeout))
+  on.exit(options(timeout = old_timeout), add = TRUE)
   library <- path.expand(library)
   if (!dir.exists(library) && !dir.create(library, recursive = TRUE, showWarnings = FALSE)) {
     stop("Unable to create R library: ", library, call. = FALSE)
@@ -144,6 +189,11 @@ liber_install <- function(
   manifest <- jsonlite::fromJSON(manifest_path, simplifyVector = FALSE)
   packages <- names(manifest$packages)
   versions <- vapply(manifest$packages, `[[`, character(1), "version")
+  loaded <- intersect(packages, loadedNamespaces())
+  if (length(loaded)) {
+    stop("Restart R before installing LibeR; these packages are already loaded: ",
+         paste(loaded, collapse = ", "), call. = FALSE)
+  }
 
   stage <- tempfile("liber-install-")
   dir.create(stage, recursive = TRUE, showWarnings = FALSE)
@@ -187,22 +237,10 @@ liber_install <- function(
          call. = FALSE)
   }
 
-  use_binary <- isTRUE(binary) && .Platform$OS.type == "windows"
+  use_binary <- !identical(binary, FALSE) && .Platform$OS.type == "windows"
   if (isTRUE(binary) && !use_binary) {
     warning("Precompiled LibeR archives are Windows-specific; using source packages.",
             call. = FALSE)
-  }
-  r_series <- paste(
-    R.version$major,
-    strsplit(R.version$minor, ".", fixed = TRUE)[[1L]][[1L]],
-    sep = "."
-  )
-  if (use_binary && !identical(r_series, "4.6")) {
-    warning(
-      "The published Windows binaries target the R 4.6.x series; using source ",
-      "packages for this R version.", call. = FALSE
-    )
-    use_binary <- FALSE
   }
   extension <- if (use_binary) ".zip" else ".tar.gz"
   release_root <- paste0(
@@ -215,14 +253,28 @@ liber_install <- function(
     stage, paste0(packages, "_", unname(versions[packages]), extension)
   )
 
+  compatible <- logical(length(packages))
   for (index in seq_along(packages)) {
-    message(
-      "Installing ", packages[[index]], " ", versions[[packages[[index]]]],
-      " from ", tag
-    )
     utils::download.file(
       archives[[index]], archive_files[[index]], mode = "wb", quiet = FALSE
     )
+    compatible[[index]] <- .liber_check_archive(
+      archive_files[[index]], packages[[index]], versions[[index]], use_binary
+    )
+  }
+  if (use_binary && !all(compatible)) {
+    message("Windows binaries do not match this R series/platform; downloading source packages.")
+    use_binary <- FALSE
+    archive_files <- sub("\\.zip$", ".tar.gz", archive_files)
+    archives <- sub("\\.zip$", ".tar.gz", archives)
+    for (index in seq_along(packages)) {
+      utils::download.file(archives[[index]], archive_files[[index]], mode = "wb", quiet = FALSE)
+      .liber_check_archive(archive_files[[index]], packages[[index]], versions[[index]], FALSE)
+    }
+  }
+  message("All package archives downloaded and checked; starting installation.")
+  for (index in seq_along(packages)) {
+    message("Installing ", packages[[index]], " ", versions[[index]], " from ", tag)
     utils::install.packages(
       archive_files[[index]], lib = library, repos = NULL,
       type = if (use_binary) "win.binary" else "source",

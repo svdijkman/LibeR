@@ -67,5 +67,16 @@ stopifnot(
 
 message("Installer mirror and release-channel checks passed.")
 
+stopifnot(
+  installer$.liber_binary_compatible("R 4.6.0; x86_64-w64-mingw32; 2026-08-11; windows", "4.6.1", "x86_64-w64-mingw32"),
+  !installer$.liber_binary_compatible("R 4.6.0; x86_64-w64-mingw32; 2026-08-11; windows", "4.5.1", "x86_64-w64-mingw32"),
+  !installer$.liber_binary_compatible("R 4.6.0; x86_64-w64-mingw32; 2026-08-11; windows", "4.6.0", "aarch64-apple-darwin20"),
+  !installer$.liber_binary_compatible(NA_character_),
+  !installer$.liber_binary_compatible("invalid"),
+  installer$.liber_binary_compatible("R 4.6.0; ; 2026-08-11; windows", "4.6.0", "x86_64-w64-mingw32"),
+  is.null(formals(installer$liber_install)$binary)
+)
+message("Installer automatic binary compatibility checks passed.")
+
 source(file.path(root, "installer", "tests", "check-installer.R"))
 liber_installer_layout_check(root)
